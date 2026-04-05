@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapping the Jagged Frontier (Part I: Theory)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 19px;
+      line-height: 1.75;
+      color: #1a1a1a;
+      background-color: #faf9f6;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    h1 {
+      font-size: 2.4em;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.3em;
+      color: #111;
+    }
+
+    h1 .part {
+      display: block;
+      font-size: 0.55em;
+      font-weight: 400;
+      font-style: italic;
+      color: #555;
+      margin-top: 0.15em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      font-weight: 700;
+      margin-top: 2em;
+      margin-bottom: 0.6em;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 1.2em;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .lead {
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    figure {
+      margin: 2em 0;
+      text-align: center;
+    }
+
+    figure .placeholder {
+      width: 100%;
+      min-height: 260px;
+      background: #eee;
+      border: 1px dashed #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-style: italic;
+      font-size: 0.9em;
+    }
+
+    figcaption {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 0.6em;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .drop-cap::first-letter {
+      float: left;
+      font-size: 3.4em;
+      line-height: 0.8;
+      padding-right: 0.08em;
+      margin-top: 0.05em;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .separator {
+      text-align: center;
+      margin: 2.5em 0;
+      color: #aaa;
+      font-size: 1.4em;
+      letter-spacing: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mapping the Jagged Frontier <span class="part">(Part I: Theory)</span></h1>
+    </header>
+
+    <p class="lead drop-cap">Anyone who has ever prompted a language model or launched a coding agent has experienced this. You ask Claude Code to implement a full-stack app and it delivers a genuinely impressive prototype; then Sonnet, upon being asked whether you should walk or drive to the car wash that&rsquo;s ten minutes away on foot, cheerfully recommends a nice stroll. Already in 2023, Ethan Mollick and his colleagues at MIT Sloan gave this phenomenon of high (and often unpredictable) variability a name, <em>the jagged frontier</em>, which they defined as &ldquo;the nonintuitive strengths and weaknesses of AI performance relative to human performance, and how it is changing over time,&rdquo; but the idea that automation doesn&rsquo;t progress uniformly and predictably is even older. Moravec&rsquo;s paradox, the observation that reasoning tasks we consider &ldquo;hard&rdquo; are often computationally cheap, while sensorimotor tasks we consider &ldquo;easy&rdquo; are enormously expensive, dates to the 1980s. Large language models have worsened this paradox rather than resolving it. Tasks that feel like they should be trivially automatable, such as common-sense reasoning or basic spatial inference, remain stubbornly out of reach; meanwhile, tasks that feel like they should require deep expertise&mdash;from writing legal memos to synthesizing large bodies of research&mdash;fall well within the frontier.</p>
+
+    <p>So, what does the frontier look like today? Picture it as a jagged, blobby shape, sometimes extending far beyond human capability, sometimes falling embarrassingly short. Only the most fanatic detractors of LLMs will not concede that capabilities haven&rsquo;t been substantially improving since their early days, and I don&rsquo;t care for restating the whole argument here. My objective instead is to examine the nature of this frontier, and how it is likely to evolve over time to affect the way humans live and work in the economy of today and tomorrow.</p>
+
+    <figure>
+      <div class="placeholder">[Figure: The jagged frontier, illustrated by Nano Banana]</div>
+      <figcaption>The jagged frontier, illustrated by Nano Banana. Are graphic designers safe for now?</figcaption>
+    </figure>
+
+    <p>As an intuition pump, think of compute as what expands the border, giving you more area to play with. After all, compute has been the single most reliable driver of progress since the dawn of the deep learning era; throwing more compute at a model, whether during training or at inference time, generally makes it better without regressing on things it could already do. Data determines the direction of that expansion, where &ldquo;direction&rdquo; encodes, in some loose sense, a particular domain, task, or capability. And algorithms are what enable the expansion to happen at all, in different ways depending on what they&rsquo;re doing under the hood. Scaling all three has pushed the frontier outward dramatically, but it has not smoothed out the jaggedness. In fact, some recent developments are likely to have made it worse: reinforcement learning with verifiable rewards, for example, makes the models much better at tasks that have, well, (automatically) verifiable rewards, but doesn&rsquo;t seem to generalize very well, making the frontier even more spiky and hard to judge.</p>
+
+    <h2>Sitting on the Bench</h2>
+
+    <p class="drop-cap">So how can we know where the frontier lies? A natural instinct is to look at benchmarks. But there&rsquo;s a few, by-now-well-known problems with that. First off, benchmarks are at best a shadow of the real economy, and a partial one at that. Almost all benchmarks out there mostly test coding, math, or general knowledge. The chart below, borrowed from a fresh paper from CMU and Stanford, shows the stark mismatch: thousands of benchmark tasks target computer and mathematical occupations, while occupation groups that collectively employ tens of millions of workers and represent vast shares of GDP have essentially zero dedicated benchmark coverage.</p>
+
+    <figure>
+      <div class="placeholder">[Figure: Benchmark coverage mismatch &mdash; CMU &amp; Stanford]</div>
+      <figcaption>Benchmark task distribution vs. actual employment, from CMU and Stanford.</figcaption>
+    </figure>
+
+    <p>Even setting this coverage gap aside, benchmarks are only imperfect windows into real-world job performance. Among several issues, they only test isolated skills under controlled conditions, which is not how work actually happens; their scores are vulnerable to data contamination and Goodharting, where models (or their developers) optimise for the metric itself rather than the underlying capability it was meant to proxy; they typically evaluate single-step, single-turn performance rather than the realistic sequential tasks that define most occupations; they often only measure whether a model can produce a correct output but rarely whether it does so reliably across repeated attempts, or what happens when it doesn&rsquo;t; and they operate in a vacuum, where a task like &ldquo;scheduling a meeting&rdquo; might look trivial but would in practice require detailed knowledge of participants&rsquo; preferences and habits, organisational norms, and context-sensitive judgment calls. In short, benchmarks provide a signal, but there is too much noise for them to stand on their own as a reliable measure of AI&rsquo;s actual progress in the workplace.</p>
+
+    <h2>Exposing Exposure</h2>
+
+    <p class="drop-cap">If benchmarks can&rsquo;t reliably map the frontier, what can? There are broadly two approaches that complement each other. The first is simply to look at data coming in from the workplace. Rather than trying to predict what AI could automate, you observe what it <em>is</em> automating, or at least where its effects are starting to show up in economic data. There are some early attempts at this kind of measurement, though most focus on aggregate indicators (think GDP growth, total factor productivity, broad employment trends) which are too coarse to tell you much about which specific tasks or roles are being affected. Ex-post analysis has a clear virtue, in that when it is done properly with fancy statistics and all, it&rsquo;s pretty hard to dispute. But it also has an obvious limitation, which for those who understand a bit of Latin is right there in the name: by the time the data confirms a trend, the trend has already occurred. This is useful for understanding the course we&rsquo;re on, but it doesn&rsquo;t quite help with forecasting, and forecasting is what policymakers, educators, and firms actually need if they want to get ahead of the disruption rather than react to it.</p>
+
+    <p>The alternative is to try and get ahead of the curve. Instead of waiting for the data to arrive, you build a framework that tries to assess in advance how susceptible different tasks and occupations are to AI automation. Economists have come up with many such frameworks (in fact, quite possibly too many, and often in disagreement with one another). There now exists a genuine plethora of exposure rubrics, each attempting to score how much each occupation is &ldquo;exposed&rdquo; to AI. This terminology is worth pausing on. Researchers use the word <em>exposure</em> rather than <em>automation</em> or <em>displacement</em> deliberately, because nobody wants to claim they&rsquo;re making hard predictions about what will actually happen. Establishing that a task <em>can</em> be performed by an AI system, or will be performable soon, is very different from saying the task <em>will</em> be automated in practice, let alone that it will be automated consistently, at scale, across the whole economy. Exposure scores, then, are not forecasts, but a starting point: a structured assessment of technical susceptibility, and what happens downstream depends on economics, culture, and institutions. But you can&rsquo;t model the downstream dynamics without first mapping the frontier. And that requires two things: a way of decomposing jobs into their constituent parts, and a way of scoring each part.</p>
+
+    <h2>The Task Ahead</h2>
+
+    <p class="drop-cap">The most useful decomposition comes from task-based models, which have been the workhorse of labour economics since Autor, Levy, and Murnane, with important extensions by Acemoglu and Restrepo. The core idea is that a job is not a single thing that either gets automated or doesn&rsquo;t, but is in fact a bundle of tasks, each with a distinct role and characteristics, and therefore largely complementary to each other in the production process. A radiologist reads scans, consults with patients, writes reports, supervises technicians, and stays current with the literature. Automation might handle some of these tasks well, others partially, and others not at all. The impact on the occupation as a whole depends on the mix: which tasks are automatable, how central they are to the role, and how workflows get restructured around the remaining human tasks.</p>
+
+    <figure>
+      <div class="placeholder">[Figure: Task-based model illustration by Nano Banana]</div>
+      <figcaption>Illustration of production in a task-based model, and also another reminder that the frontier is indeed jagged: Nano Banana here apparently grasps labour economics better than how puzzles are supposed to work.</figcaption>
+    </figure>
+
+    <p>The scoring comes from a rubric. Here, the most influential recent contribution is by Eloundou et al., which built on earlier work by Brynjolfsson et al. on classifying tasks by their suitability for machine learning. The methodology, at a high level, works like this: take the O*NET database of occupational tasks, and for each task, ask whether it could be performed or substantially accelerated by a GPT-4-class language model, either directly or with the aid of near-future software tools built on top of one. Aggregate the task-level scores up to occupations, and <em>voil&agrave;</em>, you get an exposure profile for the entire economy. Their study was an important contribution, and it correctly anticipated several patterns that have since begun to show up in practice, but it also has limitations. In AI terms, it is quite ancient, as it was published in 2023, before the current wave of agentic systems, before tool use and multi-step planning became standard capabilities, and before code execution and computer use moved from prototypes to products. Its definition of exposure is in terms of uplift, or &ldquo;when GPT-4-like systems can boost productivity on this task by &gt;50%,&rdquo; according to the professionals (and GPT-4 itself); this is a reasonable choice, as uplift is relatively experimentally accessible, but it is also a static snapshot of what capabilities looked like at that specific time, rather than a time-varying forecast.</p>
+
+    <p>More fundamentally, the rubric asks a binary question&mdash;is this task exposed or not?&mdash;without pausing to ask <em>why</em>. Two tasks can both be classified as &ldquo;exposed&rdquo; for different reasons, and those reasons have different implications for how quickly and completely automation will actually proceed. This is the gap that our research tries to fill. Rather than asking &ldquo;is this task exposed?&rdquo;, we ask <em>along which dimensions</em>, and we decompose exposure into a set of empirically motivated axes that capture the distinct reasons a task might resist automation.</p>
+
+    <div class="separator">&bull; &bull; &bull;</div>
+  </div>
+</body>
+</html>
