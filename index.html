@@ -106,6 +106,79 @@
       font-size: 1.4em;
       letter-spacing: 0.5em;
     }
+
+    /* Interactive image */
+    .interactive-figure {
+      margin: 2.5em 0;
+      text-align: center;
+    }
+
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    .image-wrapper img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      transition: background 0.15s;
+    }
+
+    .hotspot:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .hotspot.active {
+      background: rgba(255, 255, 255, 0.35);
+      outline: 2px solid #fff;
+      outline-offset: -2px;
+    }
+
+    /* Expandable sections */
+    .dimension-section {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      border-left: 3px solid #3a7cc0;
+      margin: 0 0 0 0;
+      padding: 0 0 0 20px;
+    }
+
+    .dimension-section.open {
+      max-height: 8000px;
+      opacity: 1;
+      padding: 16px 0 16px 20px;
+      margin: 1em 0;
+    }
+
+    .dimension-section h3 {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #2a6496;
+      margin-bottom: 0.6em;
+    }
+
+    .dimension-section p {
+      margin-bottom: 1em;
+    }
+
+    .click-hint {
+      font-size: 0.85em;
+      color: #888;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.5em;
+    }
   </style>
 </head>
 <body>
@@ -156,6 +229,179 @@
     <p>More fundamentally, the rubric asks a binary question&mdash;is this task exposed or not?&mdash;without pausing to ask <em>why</em>. Two tasks can both be classified as &ldquo;exposed&rdquo; for different reasons, and those reasons have different implications for how quickly and completely automation will actually proceed. This is the gap that our research tries to fill. Rather than asking &ldquo;is this task exposed?&rdquo;, we ask <em>along which dimensions</em>, and we decompose exposure into a set of empirically motivated axes that capture the distinct reasons a task might resist automation.</p>
 
     <div class="separator">&bull; &bull; &bull;</div>
+
+    <!-- Interactive bottleneck image -->
+    <div class="interactive-figure">
+      <div class="image-wrapper" id="imageWrapper">
+        <img src="bottlenecks.png" alt="Bottleneck dimensions rubric" id="bottleneckImg">
+        <!-- Hotspots will be positioned via JS after image loads -->
+      </div>
+      <p class="click-hint">Click a blue box to expand its section below.</p>
+    </div>
+
+    <!-- Expandable sections -->
+    <div id="sections">
+
+      <div class="dimension-section" id="sec-distributional-coverage">
+        <h3>Taking (distributional) cover</h3>
+        <p>Machine learning, and therefore our rubric, begins with data. The first and most consequential stage is pretraining, the phase where the model ingests an enormous text corpus and learns, through next-token prediction, to compress the statistical structure of language into its weights. Pretraining is where the model acquires the vast majority of its knowledge: the model learns to predict what comes next, and in doing so, it learns syntax, facts, reasoning patterns, style, domain knowledge, and a great deal else, all entangled together in billions of parameters. A task that is well-represented in these online corpora is therefore more likely to fall inside the jagged frontier, but sheer volume isn&rsquo;t all that matters: in order for the model to learn effectively, the data needs to be as close as possible to actual demonstrations, with step-by-step guides, worked examples, expert reasoning traces, instructional walkthroughs, and so on.</p>
+        <p>Take, for instance, mathematics. The ArXiv contains hundreds of thousands of papers, at first glance a veritable treasure trove. But maths papers are to actual mathematical research what a showroom car is to the garage where it was built: real research is a mess of blackboard scribbles, calculations in margins, half-baked conjectures tested and discarded, lengthy arguments with colleagues (and with yourself in the shower), dead ends pursued for weeks before being abandoned, almost none of which finds its way into the final paper, which is a polished artefact optimised for verification and citation rather than for teaching a naive learner how to do the thing (as many new grad students regret to find out). A model trained on the arXiv will know an extraordinary amount of mathematics, but generalising from polished proofs to the messy, creative process of producing new ones is a different challenge entirely, and one where the training data provides much weaker signal.</p>
+        <p>This is a thorny problem, because like most of science maths research frequently happens (almost by definition) out of distribution, with each new theorem potentially requiring novel insights beyond routine calculations. More broadly, we can think of an O*NET task as a superset of concrete instances. A task statement such as &ldquo;coding&rdquo; isn&rsquo;t terribly informative of what your day at work might actually entail, since it could refer to anything from implementing a simple sorting function to refactoring a gigantic repository. The distribution of concrete instances for a given task may be fat-tailed, with long tails in every direction representing the chance that something comes out of left field to challenge you, or relatively peaked around a few typical, routine cases. The amount of quality of data relating to a task matters insofar as it covers a good chunk of this distribution. While there is still some debate surrounding the generalization abilities of LLMs, it is quite undeniable at this point that they are quite capable of solving unseen challenges (consider as evidence GPT&rsquo;s and Gemini&rsquo;s gold medals at the most recent IMO, or the fact that such models are being more and more often used to derive novel results in physics and mathematics); however, generalisation cannot happen when the distance between training and test distributions is insurmountably large.</p>
+        <p>If ample, high-quality demonstrations of a task are not already available online, not all hope is lost. Through supervised fine-tuning, patches can be applied to uncovered regions, provided it is possible to construct (label, example) pairs either synthetically or by hiring human experts. In some domains reinforcement learning also helps, wherever human feedback is effective or rewards can be assigned automatically and cheaply on scalably generated tasks. Reinforcement learning from verifiable rewards is, in fact, exactly what unlocked the recent large improvements in mathematics and coding for reasoning models, leading to a proliferation of startups that supply labs with RL environments and reward signals for specific, economically valuable tasks. Therefore, the more relevant question for our rubric is: given the demonstrations present in the pretraining corpora, together with targeted post-training, is the distribution of task instances sufficiently well-represented to allow the model to handle the bulk of what a human worker would encounter in practice?</p>
+      </div>
+
+      <div class="dimension-section" id="sec-tacit-knowledge">
+        <h3>Try, don&rsquo;t show: the role of tacit knowledge</h3>
+        <p>While some tasks are challenging because of insufficient data, others may not admit usable data even in principle, at least not in a format digestible by language models, however heavily augmented. The obstacle is tacit knowledge. Tacit knowledge lives in the crooks and nannies between words, that resists extraction and articulation in verbal or written form, and that can often be gained only through direct experience. Intuition, insight, and seasoned judgment all fall under this umbrella. Codified knowledge (procedures, rules, factual relationships, and so on) is precisely what language models can acquire at scale through pretraining and fine-tuning; tacit knowledge is, almost by definition, what they do not.</p>
+        <p>The idea was first formalised in a seminal philosophical treatise by Polanyi, who critiqued what he called the &ldquo;ideal of impersonal, detached objectivity&rdquo; in science: even scientific discovery, he argued, depends on hunches, aesthetic judgments, and skilled perception that cannot be reduced to explicit method. The point generalises beyond science. For many economically valuable tasks, competent performance depends on pattern recognition, situational calibration, and context-sensitive judgment that language captures only partially, if at all. Repeatedly performing a task makes you much better at it, even if you have carefully read and memorised a tutorial beforehand, in ways that would often be hard to retell someone else. Multimodal data might help narrow the gap, but only to an extent&mdash;after all a picture may be worth a thousand words, but experience is the teacher whose lessons actually stick.</p>
+        <p>Tacit knowledge barriers have been surmounted before, typically through self-play and autonomous exploration rather than pure imitation learning. Early approaches to teaching games such as chess or go to machines relied heavily on hand-crafted examples and expert demonstrations, much as early vision models relied on manual feature engineering. It was only when systems were allowed to learn from experience by playing millions of games against themselves that they broke through, with the added benefit of not being bounded by the ceiling of human performance, as AlphaGo&rsquo;s move 37 memorably demonstrated to the world.</p>
+        <p>Can reinforcement learning always compensate? Not necessarily, due to the problem of reward specification. RL can help a model internalise judgment, but only when the relevant discrimination can be exposed through a sufficiently faithful reward signal or evaluator. Where the tacit component is sparse, delayed, normative, or only partially observable, RL does not so much remove the bottleneck as relocate it into the equally difficult problem of designing the reward function itself. Tacit knowledge thus functions both as a ceiling on what text-centric pretraining and instruction-based supervision can achieve alone, and as a filter on where experiential training methods can make further inroads.</p>
+        <p>In the absence of full-blown experiential learning, a number of proposals are emerging to capture as much tacit knowledge as possible at the source. One approach involves equipping willing laboratories (who are not traditionally difficult to convince, provided a sufficiently generous grant lands in their coffers) with microphones, cameras, and sensors on every instrument, recording the messy, unscripted reality of research as it happens. The corporate analogue is, if anything, easier to imagine and more Orwellian in flavour: every meeting, call, click, and draft monitored and recorded, compressed into training data for the automated workers and scientists of the future. How much tacit knowledge such surveillance-by-design can actually recover remains speculative&mdash;it is one thing to record a master surgeon&rsquo;s hand movements, quite another to distill from the footage whatever it is that makes them a master&hellip; but it likely won&rsquo;t stop the labs (or someone else for them) from trying.</p>
+      </div>
+
+      <div class="dimension-section" id="sec-long-term-memory">
+        <h3>Long-term memory, or how AI can&rsquo;t escape Alzheimer</h3>
+        <p>Whether knowledge is acquired from experience or from text-based training, it counts for little if it is promptly forgotten. Under the current transformer-based paradigm, memory does not persist beyond the context window a language model enjoys in a single session; once that window closes, the state is wiped clean. Any task that requires keeping track of information across sessions quickly runs into this wall.</p>
+        <p>Examples of this cut across nearly every occupation. A financial adviser who cannot recall a client&rsquo;s risk tolerance from a previous meeting is not much of an adviser; an employee who receives explicit feedback from a manager is expected to retain and act on it; a recurring customer&rsquo;s preferences, either explicit or inferred, should inform decisions in subsequent iterations. Much of what makes someone good at their job is not raw skill but accumulated context: preferences revealed over time, lessons extracted from past mistakes, and relationships built through repeated interaction.</p>
+        <p>Fine-tuning can help to some extent: a model can be periodically retrained on new data to absorb updated knowledge. But even when possible, fine-tuning is expensive and haunted by the problem of catastrophic forgetting, the well-documented tendency for neural networks to overwrite what they previously knew when trained on new information. This fragility has led some commentators, Dwarkesh Patel among them, to flag memory as one of the principal reasons for near-term scepticism about AI&rsquo;s economic impact. The concern has since helped elevate continual learning (or online or lifelong learning) into one of the field&rsquo;s most active research frontiers, precisely because the problem is so consequential and so far from solved.</p>
+        <p>It is worth remembering, however, that human memory is also deeply imperfect, perhaps instructively so. We do not record experience verbatim. The same reward signals that drive learning also shape which memories are consolidated and which are discarded: a piece of feedback that carries real consequences is far more likely to stick than one delivered in passing. Human memory is lossy compression, shaped by relevance and reinforcement, not a transcript.</p>
+        <p>Where biological memory falls short, people compensate with external tools from notebooks and calendars to CRMs and institutional documentation. Language model agents can do the same, and already do: Claude Code, for instance, maintains a CLAUDE.md file that functions as a persistent scratchpad, allowing the model to read and update its own notes across sessions. But the approach has limits: deciding what to write down, how to organise it, and when to retrieve it are judgment calls that often circle back to the problem of tacit knowledge. A seasoned employee knows instinctively which details from a meeting are worth remembering and which can be safely forgotten; an agent writing to a memory file must make that same discrimination explicitly, without the benefit of the intuition that makes it easy. External memory, in other words, does not eliminate the problem so much as reframe it: the bottleneck shifts from storage to curation, and curation is hard to do well without the very contextual judgment that memory was supposed to provide.</p>
+      </div>
+
+      <div class="dimension-section" id="sec-sequential-coherence">
+        <h3>Time horizons, reasoning and sequential coherence</h3>
+        <p>Everyone and their AGI-pilled grandma has seen this graph by now, but its importance warrants a brief recap for the uninitiated. In March 2025, the research nonprofit METR asked the question: how long a task can an AI model actually do? To answer that, they built a suite of software engineering challenges spanning everything from seconds-long fixes to multi-hour projects, timed skilled developers on each one, ran frontier models through the same tasks, and fitted a curve. The point on the time axis where a model&rsquo;s success rate drops to 50% is what they call its time horizon. The headline result wasn&rsquo;t the number itself (which comes with error bars wide enough to drive a truck through) but the trend line: frontier time horizons have been doubling roughly every seven months since 2019, and recent models suggest the pace may be picking up.</p>
+        <p>The METR framework has since become something of a lodestar for AI forecasting, playing a central role in modelling efforts by groups like the AI Futures Project and the OECD foresight team. The logic is straightforward: if you can assign a time horizon to every task in a task-based economic model, you can extrapolate from the METR trend to estimate when each task will fall within reach of automated systems; as the trend line marches upward, the pool of vulnerable tasks expands on a predictable schedule.</p>
+        <p>What the time horizon proxies is two distinct sources of difficulty, entangled in a single number. The first is something we might call sequential coherence, a concept formalized in a LessWrong post as &ldquo;an AI system&rsquo;s ability to maintain consistent performance quality across extended sequences of steps or interactions.&rdquo; Current AI systems can often solve individual problems impressively, but performance tends to degrade as you chain more steps together, not because each step gets harder, but because the probability of failing at some step compounds; a model might be perfectly capable of performing each individual step of a complex workflow but fail catastrophically when those steps need to be chained together over an extended sequence with no human checkpoint in between. The second source of difficulty is per-step depth: how hard any individual step is in isolation, independent of how many steps surround it. A task can take hours not because it involves a long chain of operations, but because one step requires searching a vast space of approaches with little intermediate feedback before finding the right insight or creative leap. These two dimensions are largely independent and imply different automation trajectories. Sequential coherence problems yield to better scaffolding and error recovery; per-step depth problems require raw improvements in reasoning capability, and no amount of decomposition helps, because it is difficult to decompose an insight into sub-insights.</p>
+      </div>
+
+      <div class="dimension-section" id="sec-working-memory">
+        <h3>Working memory</h3>
+        <p>If long-term memory is about retaining lessons across sessions, working memory is about holding enough information within a single session to reason effectively over it. For transformer-based language models, this capacity is defined by the context window, the maximum number of tokens the model can attend to at once. Everything the model needs to know in order to respond must fit inside this window; anything that falls outside it simply does not exist for the model.</p>
+        <p>Context windows have expanded dramatically over the years. In 2018, GPT-1 operated with 512 tokens, roughly a page of text. By early 2023, most models worked with somewhere between 4,000 and 8,000 tokens. Then the pace accelerated: 128,000 tokens with GPT-4 Turbo, 200,000 with Claude 3, a million with Gemini 1.5 Pro, and by 2025, claims of up to ten million tokens from Meta&rsquo;s Llama 4 Scout. Epoch AI estimates that since mid-2023, the longest context windows have been growing at roughly 30x per year. A million tokens is approximately 750,000 words, enough to ingest an entire codebase, a shelf of legal contracts, or several novels in a single pass.</p>
+        <p>But context windows are not free, and scaling them is harder than the headline numbers suggest. In a standard transformer, every token must attend to every other token, producing a computational cost that scales quadratically with sequence length: doubling the context window quadruples the compute required. What&rsquo;s more is that tokens do not straightforwardly mean better performance as the well-known &ldquo;lost in the middle&rdquo; phenomenon shows: models attend strongly to information placed at the beginning and end of the context but perform markedly worse on information placed in the middle. Beyond positional effects, there is the simpler problem of attention dilution: as the context fills with more tokens, the model&rsquo;s finite attention budget is spread thinner, and information that would have been highly salient in a short context can become functionally invisible in a long one.</p>
+        <p>Modern agentic systems deal with these limitations through what amounts to a digital analogue of cognitive load management: regular compression. Claude Code, for instance, employs a multi-layered compaction strategy. As the context fills during a long coding session, the system first trims verbose tool outputs, then summarises older conversation turns, and finally, if needed, compresses the entire history into a condensed summary that strives to preserve key decisions and the current state of work.</p>
+        <p>The analogy to human cognition is imperfect but illuminating. A person working on a complex project does not hold every detail in active attention simultaneously. Instead, they maintain a compressed, prioritised representation of the overall state&mdash;the gist, the open questions, the immediate next steps&mdash;and reach for specific details only when needed, by re-reading a document, checking a notebook, or asking a colleague. Compaction in AI agents is an engineered approximation of this process: the system decides what is worth retaining in the active summary and what can be offloaded or discarded, gambling that the summary preserves enough signal for continued effective work. The gamble does not always pay off. Users of long-running Claude Code sessions report a characteristic failure mode: after compaction, the agent &ldquo;forgets&rdquo; critical constraints established early in the conversation&mdash;architectural decisions, access control rules, stylistic preferences&mdash;because the summarisation process judged them less salient than more recent activity. The foundational context that was laid down first is exactly what is most vulnerable to compression, an ironic inversion of what a careful worker would prioritise.</p>
+        <p>The upshot is that working memory remains a genuine bottleneck, even as context windows expand. The constraint is not simply one of capacity&mdash;how many tokens can fit&mdash;but of effective utilisation: how well the model can attend to, retrieve from, and reason over a large body of simultaneously available information. Tasks that require integrating evidence scattered across a long context, holding multiple constraints in tension, or maintaining coherence across a complex multi-step plan all push against these limits in ways that raw token counts do not capture. For any task where the relevant working state exceeds what can be reliably held and manipulated within a single context window, performance will degrade&mdash;and the longer and more complex the task, the more severe the degradation is likely to be.</p>
+      </div>
+
+      <div class="dimension-section" id="sec-multimodal">
+        <h3>Multimodality</h3>
+        <p>Although new paradigms for natively multimodal pretraining are emerging&mdash;training on interleaved text, image, video, and action-conditioned data from the ground up rather than bolting perceptual modules onto a text-pretrained backbone&mdash;the vast majority of frontier model capability still derives from text-only pretraining. This wouldn&rsquo;t matter much if every job were a text-in-text-out affair, but a great number of occupations (even in the digital realm) require engaging with the visual or auditory world, from a dermatologist examining a mole to an audio engineer mixing a track or a film editor cutting a scene. These tasks demand perceptual and generation abilities that current models cannot always match.</p>
+        <p>The gap is not uniform across modalities. Vision-language understanding is relatively mature: models can describe images, answer questions about them, and in some contexts approach human-level accuracy. Audio processing is progressing rapidly, with transcription and voice synthesis already production-grade for many use cases. Video understanding and generation, on the other hand, remain substantially behind; parsing temporal structure, tracking objects across frames, and generating coherent moving images are all problems where the state of the art is improving fast but still falls well short of what many tasks require.</p>
+        <p>The trajectory from early vision-language adapters&mdash;essentially a language model squinting at images through a borrowed encoder&mdash;to natively multimodal systems like Gemini&rsquo;s integrated image generation architecture illustrates both the pace of progress and the distance still to cover. We are moving from systems that treat non-text modalities as an afterthought to systems that are designed from the start to think in images, sounds, and text simultaneously. But we are not there yet, and for any task where the core difficulty lives in a non-text modality, the gap between what the model can do and what the task demands may be the binding constraint.</p>
+        <p>Multimodal capability measures exactly this gap: the distance between the non-text perception and generation a task demands and what current LLM-based agents can actually deliver. For each relevant modality, perception (interpreting non-text inputs) and generation (producing non-text outputs) are scored separately, since the two directions are often in very different places. A model might be excellent at describing what it sees in a photograph but poor at generating a photograph that meets a specific brief, or fluent at transcribing speech but clumsy at synthesising it with the right prosody and emotional register. Collapsing these into a single score would obscure exactly the distinctions that matter for predicting which tasks are within reach and which are not.</p>
+      </div>
+
+      <div class="dimension-section" id="sec-inference-speed">
+        <h3>Good models finish fast: inference speed and the latency tradeoff</h3>
+        <p>Today&rsquo;s frontier systems operate along an explicit latency&ndash;quality tradeoff. Lightweight models provide fast responses at lower cost, while reasoning-oriented systems improve quality by spending more inference-time computation, generating internal chains of thought, calling tools, and deliberating across multiple steps before producing a final answer. Vendors increasingly expose this tradeoff directly: model routing architectures allocate incoming queries between fast-response and deeper-reasoning systems based on estimated difficulty, and many providers offer a reasoning effort parameter that lets users dial the tradeoff for a single model: set it to &ldquo;low&rdquo; and the model spends fewer tokens on internal deliberation, responding quickly but with less thorough reasoning; set it to &ldquo;high&rdquo; and it allocates substantially more computation to its chain of thought before answering.</p>
+        <p>This tradeoff between training-time and inference-time compute is not merely a product design choice; it reflects a deeper structural property that Epoch AI has characterised in detail. In general, it is possible to obtain equivalent model performance either by spending more compute at training time (producing a more capable model that can answer cheaply) or by spending more at inference time (using a cheaper model that thinks harder per query). The two are, within limits, substitutable: roughly one order of magnitude of compute can be shifted in either direction across several techniques&mdash;chain of thought, repeated sampling, model scaling, pruning&mdash;which can often be stacked. The relationship between capability and cost is hence not fixed at the moment of deployment. A task that is prohibitively expensive to automate today, because it requires an expensive frontier model running at high reasoning effort, may become cheap tomorrow&mdash;not because the task got easier, but because improvements in inference efficiency, model distillation, or architecture shifts reduced the compute required to reach the same quality threshold. Epoch estimates that the cost to reach a fixed level of LLM performance has been falling by roughly two orders of magnitude per year, a rate that, if sustained, rapidly reshapes the economics of automation.</p>
+        <p>This matters for our framework because a task&rsquo;s automation exposure depends not only on whether a model can perform it reliably, but also on whether successful performance can be achieved within the response-time envelope the task allows. At one end are fully asynchronous tasks where minutes or hours of deliberation per step are acceptable or even expected, such as report writing, research analysis, document review, due diligence; at the other end are tasks that require rapid turn-taking or immediate reaction, such as simultaneous interpretation, live customer interactions, or real-time operational control. Tasks with loose latency budgets are more exposed to progress in inference-time scaling, because models can spend substantial computation per step without violating user expectations. Tasks with tight latency budgets are more resistant, not necessarily because they require less intelligence, but because they leave little room to buy quality through slower reasoning.</p>
+        <p>This is especially binding for tasks that require both high quality and low latency simultaneously. In such cases, simply allocating more test-time compute is not a viable path to automation, because the workflow cannot absorb slower responses even when they would improve accuracy. The relevant frontier is therefore not just &ldquo;more compute, better answers,&rdquo; but better answers at fixed latency&mdash;or better still, the same answers faster. Progress on these tasks depends more heavily on improvements in inference efficiency, hardware acceleration, and architectural innovation than on test-time scaling alone. Diffusion language models, which generate multiple tokens in parallel via iterative denoising rather than one at a time, represent one such architectural bet: recent work has demonstrated inference speeds exceeding those of comparably sized autoregressive models, though the quality&ndash;speed tradeoff remains an active area of research and the ecosystem is far less mature. Speculative decoding, multi-token prediction, and quality-preserving distillation of reasoning into smaller, faster models all push in the same direction&mdash;collapsing the latency cost of intelligence, and thereby expanding the set of tasks for which automation becomes practical within real-world time constraints.</p>
+      </div>
+
+      <div class="dimension-section" id="sec-output-verifiability">
+        <h3>Output Verifiability</h3>
+        <p><em>Coming soon.</em></p>
+      </div>
+
+      <div class="dimension-section" id="sec-assurance-threshold">
+        <h3>Assurance Threshold</h3>
+        <p>AI models fail often. Humans also fail a good amount. Luckily, in many low-stakes situations it is possible to simply try again (with limits: <em>errare humanum (et AI) est, perseverare diabolicum</em>).</p>
+        <p>METR reports their time horizons at a given reliability level, with the absolute value of those horizons dropping considerably for every boost in reliability. The headline horizon is at 50% reliability, meaning that the models will succeed at tasks that are at the frontier of their capabilities roughly half of the time. But is 50% reliability on a given task enough? That depends largely on how consequential a potential error is. The key questions are: Can you retry, or do errors propagate instantly? If retry is possible, how easily can the error actually be caught in time? And if it isn&rsquo;t caught in time, what happens?</p>
+        <p>For an AI that drafts internal meeting summaries, a few mistakes are a minor annoyance. Nobody&rsquo;s day is ruined. But for an AI making triage decisions in an emergency department, or flagging transactions in a systemic-risk context, the tolerance for failure drops to near zero. We therefore define an assurance threshold linked to the consequence of error. This is closely related to the O*NET &ldquo;consequence of error&rdquo; variable, but scored at the task level rather than the occupation level.</p>
+        <p>A doctor works in a highly consequential profession, but not everything a doctor does carries the same risk. Prescribing medication has high modal risk&mdash;a wrong dosage or drug interaction can cause direct harm. Logging patient data, by contrast, mostly leads to minor clerical errors, but some could be catastrophic (e.g., recording the wrong disease, leading to a misguided treatment plan downstream).</p>
+        <p>This points to a useful distinction between modal risk and tail risk. Modal risk captures the typical severity when something goes wrong. Tail risk captures the rare but extreme failures. A task can have low modal risk yet serious tail risk&mdash;and systems need to be evaluated against both.</p>
+      </div>
+
+      <div class="dimension-section" id="sec-specification-ambiguity">
+        <h3>Specification Ambiguity</h3>
+        <p><em>Coming soon.</em></p>
+      </div>
+
+      <div class="dimension-section" id="sec-stakeholder-acceptance">
+        <h3>Counterpart acceptance</h3>
+        <p>I don&rsquo;t think an AI would be able to sell my grandpa a vacuum cleaner; not necessarily because the AI couldn&rsquo;t deliver a good pitch, but because my grandpa would hang up the moment he realised he wasn&rsquo;t talking to a person. And a sale that the counterparty refuses to engage with has failed from the start, regardless of how skilled the salesman might be. This is a problem that cuts across a surprising number of occupations. Even when an LLM-based agent can perform a task competently, deployment may flounder if the humans on the other side of the interaction won&rsquo;t play along. Language models have become more persuasive than humans in controlled settings, but controlled settings don&rsquo;t have a grandpa on the other end of the line. The degree to which human resistance to interacting with an AI agent degrades a task&rsquo;s outcomes net of whatever the agent&rsquo;s demonstrated quality can do to overcome that resistance is what we call the sociotechnical bottleneck of counterpart acceptance. The construct is deliberately narrow: we&rsquo;re not trying to measure public opinion about AI, or aggregate trust surveys, or whether people tell pollsters they&rsquo;d prefer a human. The question is whether, for a specific task in a specific occupational context, counterpart behaviour would materially change in ways that undermine the task&rsquo;s objectives if the counterpart knew the performer was an AI.</p>
+        <p>What people say and what people do are often wildly different things. Patients express discomfort with AI-generated medical advice while relying on symptom-checkers every time they feel a twinge. Consumers report distrust of algorithmic recommendations while exhibiting identical purchasing behaviour to those who were never told an algorithm was involved. The literature on algorithm aversion has documented in detail the tendency to abandon an algorithmic forecaster after seeing it err, even when it outperforms human forecasters, but so has the opposite phenomenon, algorithm appreciation, where people in certain contexts actually defer more to algorithmic advice than to human advice. The picture is messy, and the only way to cut through it is to focus on what people actually do when they encounter an AI in a specific task, not what they say they&rsquo;d do in the abstract.</p>
+        <p>When that happens, several things can go wrong. The most direct mechanism is legitimacy withdrawal: counterparts refuse to accept decisions or advice from a non-human because the social role demands a personally accountable human. A patient might reject a therapeutic recommendation not because it is wrong but because it comes from a machine; a subordinate might disregard automated performance feedback not because it is inaccurate but because being evaluated by a machine feels demeaning in a way that being evaluated by a mediocre human boss somehow does not. The authority to judge, advise, or decide is, in many contexts, inseparable from the perception that the entity doing it has something at stake. A subtler problem is strategic adaptation: when people know they are dealing with an AI, the cooperative fiction that underlies many professional interactions (the assumption that both parties are playing by the same social rules) can quietly collapse. Negotiators adopt extreme anchoring tactics they would never try with a human, students game an AI tutor&rsquo;s feedback loops rather than actually learning. Then there is perhaps the hardest problem: some tasks require not just competent performance but the perception of being heard or cared about, and they lose their effectiveness when performed by an agent that counterparts believe feels nothing.</p>
+        <p>None of this is set in stone. Counterpart acceptance is not a fixed property of the task&mdash;it shifts with demonstrated quality. If an AI legal assistant consistently produces better contract drafts than junior associates, attorneys will come around despite their initial scepticism. If an AI tutor demonstrably improves student outcomes, parents might override their preference for a human teacher. The bottleneck binds only when resistance persists despite adequate performance, or when the domain is one where performance quality simply cannot compensate for the perceived absence of a human on the other end, as may be true of therapy, spiritual counsel, or end-of-life care.</p>
+        <p>The trajectory of this bottleneck is among the most uncertain in the rubric. Acceptance is normalising fast in some domains while remaining deeply entrenched in others, and the variation across jurisdictions, demographics, and generations is enormous. My grandpa is not an early adopter. But his grandchildren might not share his reservations, and the line between &ldquo;I&rsquo;d never trust a machine with that&rdquo; and &ldquo;wait, that was a machine?&rdquo; has a way of moving faster than anyone expects.</p>
+      </div>
+
+      <div class="dimension-section" id="sec-regulatory">
+        <h3>Regulatory constraint</h3>
+        <p>The preceding dimensions ask whether an LLM-based agent can perform a task competently and whether it would be accepted in practice. This one asks a prior question: whether the agent is permitted to perform it at all. It doesn&rsquo;t matter if a system can flawlessly draft a will, read a radiograph, or approve a mortgage application if the law requires a licensed attorney, a board-certified radiologist, or a credentialed loan officer to sign off.</p>
+        <p>The most straightforward constraint is professional licensure. A huge number of occupational tasks are legally reserved for holders of specific credentials&mdash;a medical license, a bar admission, a CPA certificate, an engineering seal&mdash;and in virtually every jurisdiction, these credentials are defined as attributes of natural persons. An LLM cannot hold a medical license, cannot be admitted to the bar, and cannot stamp engineering drawings. The constraint is binary in principle but admits workarounds in practice: a radiologist who reviews and countersigns an AI-generated read is operating within the law; the same AI generating the same read without the radiologist is not. The technical output is identical. The legal status is completely different.</p>
+        <p>Licensure is only the sharpest edge, though. A broader constraint is mandatory human decision-making. The EU AI Act requires meaningful human oversight for consequential decisions in employment, credit, law enforcement, and education. US financial regulation requires that adverse credit decisions be explainable by an accountable decision-maker. Administrative law in multiple jurisdictions prohibits delegating discretionary governmental authority to automated systems without human review. The common thread is not that AI cannot contribute to the decision&mdash;it can, and increasingly does&mdash;but that it cannot be the final decision-maker.</p>
+        <p>Even where no explicit prohibition exists, the absence of a viable liability framework can be just as effective at blocking deployment. If an autonomous AI agent causes harm, who bears responsibility&mdash;the developer, the deployer, the supervising professional, the end user? In most jurisdictions, for most task types, the answer is unclear, and uncertainty about liability functions as a de facto prohibition. Risk-averse organisations will not deploy agents for consequential tasks if they cannot determine who will be holding the bag when something goes wrong. The history of autonomous vehicles is instructive: technical capability outran the liability framework by years, and the deployment bottleneck was not the car&rsquo;s ability to drive but the legal system&rsquo;s ability to decide who was at fault when it didn&rsquo;t.</p>
+        <p>Finally, there is sector-specific regulation. Agencies like the FDA, FAA, and SEC impose domain-specific requirements on how tasks must be performed, documented, and audited&mdash;requirements designed around human performers and institutional workflows. Adapting these frameworks to accommodate autonomous AI requires rulemaking processes that are slow, contested, and jurisdiction-specific. The FDA is not going to wake up one morning and decide that an AI can approve a drug application. This will unfold over years, possibly decades, at wildly different speeds across sectors and countries.</p>
+      </div>
+
+    </div><!-- /sections -->
   </div>
+
+  <script>
+    // Hotspot definitions: percentage-based coordinates relative to image
+    // Mapped from pixel coords on 654x726 image
+    const hotspots = [
+      { id: 'sec-distributional-coverage', label: 'Distributional Coverage', x: 7.5, y: 3.3, w: 29.4, h: 6.6 },
+      { id: 'sec-tacit-knowledge',         label: 'Tacit Knowledge',        x: 11.5, y: 11.3, w: 25.4, h: 6.6 },
+      { id: 'sec-long-term-memory',        label: 'Long-Term Memory',       x: 11.5, y: 19.3, w: 25.4, h: 6.6 },
+      { id: 'sec-sequential-coherence',    label: 'Sequential Coherence',   x: 11.5, y: 27.4, w: 25.4, h: 6.6 },
+      { id: 'sec-working-memory',          label: 'Working Memory',         x: 11.5, y: 35.4, w: 25.4, h: 6.6 },
+      { id: 'sec-multimodal',              label: 'Multimodal Requirements', x: 11.5, y: 43.4, w: 25.4, h: 6.6 },
+      { id: 'sec-inference-speed',         label: 'Inference Speed',        x: 11.5, y: 51.4, w: 25.4, h: 6.6 },
+      { id: 'sec-output-verifiability',    label: 'Output Verifiability',   x: 11.5, y: 59.5, w: 25.4, h: 6.5 },
+      { id: 'sec-assurance-threshold',     label: 'Assurance Threshold',    x: 11.5, y: 67.5, w: 25.4, h: 6.5 },
+      { id: 'sec-specification-ambiguity', label: 'Specification Ambiguity', x: 11.5, y: 75.5, w: 25.4, h: 6.5 },
+      { id: 'sec-stakeholder-acceptance',  label: 'Stakeholder Acceptance', x: 11.5, y: 83.5, w: 25.4, h: 6.5 },
+      { id: 'sec-regulatory',             label: 'Regulatory & Legal',     x: 11.5, y: 91.5, w: 25.4, h: 6.5 },
+    ];
+
+    const wrapper = document.getElementById('imageWrapper');
+    const img = document.getElementById('bottleneckImg');
+
+    function createHotspots() {
+      // Remove existing hotspots
+      wrapper.querySelectorAll('.hotspot').forEach(el => el.remove());
+
+      hotspots.forEach(h => {
+        const btn = document.createElement('button');
+        btn.className = 'hotspot';
+        btn.title = h.label;
+        btn.setAttribute('aria-label', h.label);
+        btn.style.left = h.x + '%';
+        btn.style.top = h.y + '%';
+        btn.style.width = h.w + '%';
+        btn.style.height = h.h + '%';
+        btn.addEventListener('click', () => toggleSection(h.id, btn));
+        wrapper.appendChild(btn);
+      });
+    }
+
+    function toggleSection(sectionId, btn) {
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+
+      const isOpen = section.classList.contains('open');
+
+      // Close all sections and deactivate all hotspots
+      document.querySelectorAll('.dimension-section.open').forEach(s => s.classList.remove('open'));
+      document.querySelectorAll('.hotspot.active').forEach(b => b.classList.remove('active'));
+
+      // If it wasn't open, open it and scroll to it
+      if (!isOpen) {
+        section.classList.add('open');
+        btn.classList.add('active');
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+
+    img.addEventListener('load', createHotspots);
+    if (img.complete) createHotspots();
+  </script>
 </body>
 </html>
