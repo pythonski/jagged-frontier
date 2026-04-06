@@ -391,13 +391,10 @@
       document.querySelectorAll('.dimension-section.open').forEach(s => s.classList.remove('open'));
       document.querySelectorAll('.hotspot.active').forEach(b => b.classList.remove('active'));
 
-      // If it wasn't open, open it and scroll to it
+      // If it wasn't open, open it
       if (!isOpen) {
         section.classList.add('open');
         btn.classList.add('active');
-        setTimeout(() => {
-          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
       }
     }
 
