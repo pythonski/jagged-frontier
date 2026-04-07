@@ -66,6 +66,22 @@
     .rb-table .b1 { color: #f0ad4e; }
     .rb-table .b2 { color: #d9534f; }
     .rb-table .r0 { color: #bbb; }
+
+    /* Weight controls */
+    .weight-panel { background: #f5f7fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px 24px; margin: 16px 0 24px; }
+    .weight-panel summary { cursor: pointer; font-weight: 700; font-size: 1.05em; color: #2a6496; user-select: none; }
+    .weight-panel summary:hover { color: #1d4e78; }
+    .preset-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+    .preset-btn { font-family: inherit; font-size: 13px; padding: 6px 14px; border: 1px solid #ccc; border-radius: 5px; background: #fff; cursor: pointer; transition: all 0.15s; }
+    .preset-btn:hover { background: #e8eef5; border-color: #2a6496; }
+    .preset-btn.active { background: #2a6496; color: #fff; border-color: #2a6496; }
+    .lambda-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; margin: 12px 0; }
+    .lambda-row { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+    .lambda-row label { min-width: 130px; color: #555; }
+    .lambda-row input[type=range] { flex: 1; min-width: 80px; accent-color: #2a6496; }
+    .lambda-row .lambda-val { min-width: 32px; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: #2a6496; }
+    .recalc-btn { font-family: inherit; font-size: 15px; padding: 10px 28px; background: #2a6496; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; margin-top: 8px; transition: background 0.15s; }
+    .recalc-btn:hover { background: #1d4e78; }
   </style>
 </head>
 <body>
@@ -81,6 +97,17 @@
     <div class="panel active" id="panel-overall">
       <h1>Bottleneck Rubric Dashboard <small>GPT-5.3 Scores</small></h1>
       <p>Task-level automation-resistance scores across 11 bottleneck dimensions (excluding Output Verifiability), computed on O*NET tasks using the requirement-weighted geometric mean formula.</p>
+
+      <details class="weight-panel" id="weight-panel">
+        <summary>Dimension weights (λ)</summary>
+        <p style="font-size:14px; color:#666; margin:8px 0 4px;">
+          Adjust λ<sub>d</sub> to change each dimension's influence on the aggregate score.
+          The normalised weight is w̃<sub>td</sub> = λ<sub>d</sub> R<sub>td</sub> / Σ λ<sub>j</sub> R<sub>tj</sub>.
+        </p>
+        <div class="preset-row" id="preset-row"></div>
+        <div class="lambda-grid" id="lambda-grid"></div>
+        <button class="recalc-btn" id="btn-recalc">Recalculate</button>
+      </details>
 
       <h3>Headline Numbers</h3>
       <div class="card-row" id="headline-cards"></div>
@@ -157,6 +184,18 @@
 
     let DATA = [];
 
+    // ── Dimension weights (λ) ──
+    const LAMBDAS = {};
+    DIMS.forEach(d => LAMBDAS[d.n] = 1.0);
+
+    const PRESETS = [
+      { name: 'Equal',               desc: 'All λ = 1',                         w: () => { DIMS.forEach(d => LAMBDAS[d.n] = 1); } },
+      { name: 'Downweight social',   desc: 'Acceptance & Regulatory at 0.25',   w: () => { DIMS.forEach(d => LAMBDAS[d.n] = 1); LAMBDAS[11] = 0.25; LAMBDAS[12] = 0.25; } },
+      { name: 'Technical only',      desc: 'Zero out Reliability, Acceptance, Regulatory', w: () => { DIMS.forEach(d => LAMBDAS[d.n] = 1); LAMBDAS[10] = 0; LAMBDAS[11] = 0; LAMBDAS[12] = 0; } },
+      { name: 'Capability only',     desc: 'Dims 1–8 only (pure AI gaps)',      w: () => { DIMS.forEach(d => LAMBDAS[d.n] = d.n <= 8 ? 1 : 0); } },
+      { name: 'Emphasise tacit',     desc: 'Double weight on Tacit Knowledge & Spec. Ambiguity', w: () => { DIMS.forEach(d => LAMBDAS[d.n] = 1); LAMBDAS[2] = 2; LAMBDAS[3] = 2; } },
+    ];
+
     // ── Parse helpers ──
     function rCol(d) { return `R_${d.n}`; }
     function bCol(d) { return `B_${d.n}`; }
@@ -172,19 +211,19 @@
     function median(arr) { const s = [...arr].sort((a,b) => a-b); const m = Math.floor(s.length/2); return s.length % 2 ? s[m] : (s[m-1]+s[m])/2; }
     function quantile(arr, q) { const s = [...arr].sort((a,b) => a-b); const p = (s.length-1)*q; const lo = Math.floor(p); return s[lo] + (p-lo)*(s[lo+1]-s[lo] || 0); }
 
-    // ── Epsilon-safe geometric mean ──
+    // ── Epsilon-safe geometric mean with lambdas ──
     function geomExposureEps(row) {
       const eps = 0.01;
-      let sumR = 0;
-      for (const d of DIMS) sumR += getR(row, d);
-      if (sumR === 0) return 1;
+      let sumLR = 0;
+      for (const d of DIMS) sumLR += LAMBDAS[d.n] * getR(row, d);
+      if (sumLR === 0) return 1;
       let logSum = 0;
       for (const d of DIMS) {
-        const r = getR(row, d);
-        if (r === 0) continue;
+        const lr = LAMBDAS[d.n] * getR(row, d);
+        if (lr === 0) continue;
         const b = getB(row, d);
         const a = eps + (1 - b / 2);
-        logSum += (r / sumR) * Math.log(a);
+        logSum += (lr / sumLR) * Math.log(a);
       }
       return Math.exp(logSum);
     }
@@ -240,65 +279,128 @@
       });
     }
 
+    // ── Weight UI ──
+    let activePreset = 0; // index into PRESETS
+
+    function buildWeightUI() {
+      // Preset buttons
+      const presetRow = document.getElementById('preset-row');
+      PRESETS.forEach((p, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'preset-btn' + (i === 0 ? ' active' : '');
+        btn.textContent = p.name;
+        btn.title = p.desc;
+        btn.addEventListener('click', () => {
+          p.w();
+          activePreset = i;
+          syncSlidersFromLambdas();
+          presetRow.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+        presetRow.appendChild(btn);
+      });
+
+      // Lambda sliders
+      const grid = document.getElementById('lambda-grid');
+      DIMS.forEach(d => {
+        const row = document.createElement('div');
+        row.className = 'lambda-row';
+        row.innerHTML = `
+          <label>λ<sub>${d.n}</sub> ${d.short}</label>
+          <input type="range" min="0" max="2" step="0.25" value="1" id="slider-${d.n}">
+          <span class="lambda-val" id="lval-${d.n}">1.00</span>
+        `;
+        grid.appendChild(row);
+        const slider = row.querySelector('input');
+        const valSpan = row.querySelector('.lambda-val');
+        slider.addEventListener('input', () => {
+          LAMBDAS[d.n] = parseFloat(slider.value);
+          valSpan.textContent = LAMBDAS[d.n].toFixed(2);
+          // Clear active preset highlight (custom config)
+          presetRow.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+        });
+      });
+
+      // Recalculate button
+      document.getElementById('btn-recalc').addEventListener('click', renderOverall);
+    }
+
+    function syncSlidersFromLambdas() {
+      DIMS.forEach(d => {
+        const slider = document.getElementById(`slider-${d.n}`);
+        const valSpan = document.getElementById(`lval-${d.n}`);
+        if (slider) { slider.value = LAMBDAS[d.n]; valSpan.textContent = LAMBDAS[d.n].toFixed(2); }
+      });
+    }
+
+    // ── Chart instance tracking for re-render ──
+    const overallCharts = {};
+    function makeOrReplace(id, config) {
+      if (overallCharts[id]) overallCharts[id].destroy();
+      overallCharts[id] = new Chart(document.getElementById(id), config);
+    }
+
     // ── Overall panel ──
     function renderOverall() {
       const n = DATA.length;
+
+      // Active dims = those with λ > 0
+      const activeDims = DIMS.filter(d => LAMBDAS[d.n] > 0);
 
       // Use epsilon-safe formula throughout
       const automabilities = DATA.map(geomExposureEps);
       const medianAuto = median(automabilities);
 
-      // % with no severe (B=2) bottleneck on any required dimension
+      // % with no severe (B=2) bottleneck on any active required dimension
       const noSevereCount = DATA.filter(row => {
-        return !DIMS.some(d => getR(row, d) > 0 && getB(row, d) === 2);
+        return !activeDims.some(d => getR(row, d) > 0 && getB(row, d) === 2);
       }).length;
       const noSeverePct = (noSevereCount / n * 100);
 
-      // % with no bottleneck at all (all B=0 where R>0)
+      // % with no bottleneck at all (all B=0 where R>0) on active dims
       const noBottleneckCount = DATA.filter(row => {
-        return !DIMS.some(d => getR(row, d) > 0 && getB(row, d) > 0);
+        return !activeDims.some(d => getR(row, d) > 0 && getB(row, d) > 0);
       }).length;
       const noBottleneckPct = (noBottleneckCount / n * 100);
 
-      // Mean number of relevant dimensions (R>0) per task
-      const relevantDims = DATA.map(row => DIMS.filter(d => getR(row, d) > 0).length);
+      // Mean number of relevant active dimensions (R>0) per task
+      const relevantDims = DATA.map(row => activeDims.filter(d => getR(row, d) > 0).length);
       const meanRelevant = mean(relevantDims);
 
-      // % of tasks with high relevance breadth (R>0 on 8+ dims)
-      const highRelevanceCount = relevantDims.filter(r => r >= 8).length;
-      const highRelevancePct = (highRelevanceCount / n * 100);
+      // Active dim count
+      const nActive = activeDims.length;
 
       // Headline cards
       document.getElementById('headline-cards').innerHTML = `
-        <div class="card"><div class="label">Tasks Scored</div><div class="value">${n.toLocaleString()}</div></div>
-        <div class="card"><div class="label">Median Automability</div><div class="value">${medianAuto.toFixed(3)}</div><div class="sub">geom. mean, ε-safe</div></div>
-        <div class="card"><div class="label">No Severe Bottleneck</div><div class="value">${noSeverePct.toFixed(1)}%</div><div class="sub">no B=2 on any required dim</div></div>
+        <div class="card"><div class="label">Tasks Scored</div><div class="value">${n.toLocaleString()}</div><div class="sub">${nActive} of 11 dims active</div></div>
+        <div class="card"><div class="label">Median Automability</div><div class="value">${medianAuto.toFixed(3)}</div><div class="sub">λ-weighted geom. mean, ε-safe</div></div>
+        <div class="card"><div class="label">No Severe Bottleneck</div><div class="value">${noSeverePct.toFixed(1)}%</div><div class="sub">no B=2 on any active dim</div></div>
         <div class="card"><div class="label">Fully Unblocked</div><div class="value">${noBottleneckPct.toFixed(1)}%</div><div class="sub">all B=0 where R&gt;0</div></div>
-        <div class="card"><div class="label">Avg. Relevant Dims</div><div class="value">${meanRelevant.toFixed(1)}</div><div class="sub">dims with R&gt;0 per task</div></div>
-        <div class="card"><div class="label">Broad Relevance</div><div class="value">${highRelevancePct.toFixed(1)}%</div><div class="sub">R&gt;0 on 8+ dimensions</div></div>
+        <div class="card"><div class="label">Mean Automability</div><div class="value">${mean(automabilities).toFixed(3)}</div><div class="sub">across all tasks</div></div>
+        <div class="card"><div class="label">Avg. Active Dims</div><div class="value">${meanRelevant.toFixed(1)}</div><div class="sub">dims with λ&gt;0 and R&gt;0</div></div>
       `;
 
       // Automability histogram (epsilon-safe)
       const bins = 20;
       const counts = new Array(bins).fill(0);
       automabilities.forEach(e => { const i = Math.min(Math.floor(e * bins), bins - 1); counts[i]++; });
-      new Chart(document.getElementById('chart-exposure-hist'), {
+      makeOrReplace('chart-exposure-hist', {
         type: 'bar',
         data: { labels: counts.map((_, i) => (i/bins).toFixed(2)), datasets: [{ data: counts, backgroundColor: 'rgba(42,100,150,0.6)', borderColor: 'rgba(42,100,150,1)', borderWidth: 1 }] },
         options: { plugins: { legend: { display: false } }, scales: { x: { title: { display: true, text: 'Automability (ε-safe)' } }, y: { title: { display: true, text: 'Tasks' } } } }
       });
 
-      // Mean B by dimension
-      const meanBs = DIMS.map(d => ({ short: d.short, val: mean(DATA.map(r => getB(r, d))) })).sort((a, b) => b.val - a.val);
-      new Chart(document.getElementById('chart-mean-b'), {
+      // Mean B by dimension (only active)
+      const meanBs = activeDims.map(d => ({ short: d.short, val: mean(DATA.map(r => getB(r, d))), lam: LAMBDAS[d.n] })).sort((a, b) => b.val - a.val);
+      makeOrReplace('chart-mean-b', {
         type: 'bar',
-        data: { labels: meanBs.map(x => x.short), datasets: [{ data: meanBs.map(x => x.val), backgroundColor: 'rgba(42,100,150,0.7)' }] },
+        data: { labels: meanBs.map(x => `${x.short} (λ=${x.lam})`), datasets: [{ data: meanBs.map(x => x.val), backgroundColor: 'rgba(42,100,150,0.7)' }] },
         options: { indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { min: 0, max: 2, title: { display: true, text: 'Mean B (0-2)' } } } }
       });
 
-      // R vs B scatter
-      const scatterData = DIMS.map(d => ({ x: mean(DATA.map(r => getR(r, d))), y: mean(DATA.map(r => getB(r, d))), label: d.short }));
-      new Chart(document.getElementById('chart-r-vs-b'), {
+      // R vs B scatter (only active)
+      const scatterData = activeDims.map(d => ({ x: mean(DATA.map(r => getR(r, d))), y: mean(DATA.map(r => getB(r, d))), label: d.short }));
+      makeOrReplace('chart-r-vs-b', {
         type: 'scatter',
         data: { datasets: [{ data: scatterData, backgroundColor: 'rgba(42,100,150,0.8)', pointRadius: 7 }] },
         options: {
@@ -323,7 +425,7 @@
       const socQ1 = socKeys.map(k => quantile(socGroups[k], 0.25));
       const socQ3 = socKeys.map(k => quantile(socGroups[k], 0.75));
 
-      new Chart(document.getElementById('chart-exposure-soc'), {
+      makeOrReplace('chart-exposure-soc', {
         type: 'bar',
         data: {
           labels: socLabels,
@@ -538,6 +640,7 @@
       complete: function(results) {
         DATA = results.data;
         buildDimPanels();
+        buildWeightUI();
         setupNav();
         renderOverall();
         DIMS.forEach(renderDimPanel);
