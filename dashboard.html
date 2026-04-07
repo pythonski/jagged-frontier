@@ -511,21 +511,21 @@
         </tr>`;
       }).join('');
 
-      // Radar chart
+      // Radar chart — R as-is (0-2), B inverted as automability (1 - B/2), clamped to [0,1]
       if (taskRadarChart) taskRadarChart.destroy();
-      const rVals = DIMS.map(d => getR(row, d));
-      const bVals = DIMS.map(d => getB(row, d));
+      const rVals = DIMS.map(d => Math.min(getR(row, d) / 2, 1));  // normalize R to 0-1
+      const autoVals = DIMS.map(d => Math.max(0, Math.min(1, 1 - getB(row, d) / 2)));  // 1 - B/2
       taskRadarChart = new Chart(document.getElementById('chart-task-radar'), {
         type: 'radar',
         data: {
           labels: DIMS.map(d => d.short),
           datasets: [
-            { label: 'Requirement (R)', data: rVals, backgroundColor: 'rgba(42,100,150,0.15)', borderColor: 'rgba(42,100,150,0.8)', borderWidth: 2, pointRadius: 3 },
-            { label: 'Bottleneck (B)', data: bVals, backgroundColor: 'rgba(217,83,79,0.15)', borderColor: 'rgba(217,83,79,0.8)', borderWidth: 2, pointRadius: 3 },
+            { label: 'Requirement (R/2)', data: rVals, backgroundColor: 'rgba(42,100,150,0.15)', borderColor: 'rgba(42,100,150,0.8)', borderWidth: 2, pointRadius: 3 },
+            { label: 'Automability (1−B/2)', data: autoVals, backgroundColor: 'rgba(91,184,91,0.15)', borderColor: 'rgba(91,184,91,0.8)', borderWidth: 2, pointRadius: 3 },
           ]
         },
         options: {
-          scales: { r: { min: 0, max: 2, ticks: { stepSize: 1 } } },
+          scales: { r: { min: 0, max: 1, ticks: { stepSize: 0.5 } } },
           plugins: { legend: { position: 'bottom' } }
         }
       });
