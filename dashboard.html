@@ -162,9 +162,9 @@
     function bCol(d) { return `dim${d.n}_${d.key}_B`; }
     function getR(row, d) { return parseFloat(row[rCol(d)]) || 0; }
     function getRawB(row, d) { return parseFloat(row[bCol(d)]) || 0; }
-    // B=0 when R=0, and dim 12 is R-only (no B in data)
+    // B=0 when R=0; dim 12 is R-only: R itself is the bottleneck
     function getB(row, d) {
-      if (d.n === 12) return 0;
+      if (d.n === 12) return getR(row, d); // regulatory R = B
       return getR(row, d) === 0 ? 0 : getRawB(row, d);
     }
     function getExposure(row) { return parseFloat(row.exposure); }
