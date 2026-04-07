@@ -160,14 +160,13 @@
     // ── Parse helpers ──
     function rCol(d) { return `dim${d.n}_${d.key}_R`; }
     function bCol(d) { return `dim${d.n}_${d.key}_B`; }
-    // Dims 11 (Counterpart Acceptance) is B-only: use B as R
-    // Dim 12 (Regulatory) is R-only: B comes from R column conceptually but CSV has B col
-    function getR(row, d) {
-      if (d.n === 11) return parseFloat(row[bCol(d)]) || 0; // B-only dim: R = B
-      return parseFloat(row[rCol(d)]) || 0;
-    }
+    function getR(row, d) { return parseFloat(row[rCol(d)]) || 0; }
     function getRawB(row, d) { return parseFloat(row[bCol(d)]) || 0; }
-    function getB(row, d) { return getR(row, d) === 0 ? 0 : getRawB(row, d); }
+    // B=0 when R=0, and dim 12 is R-only (no B in data)
+    function getB(row, d) {
+      if (d.n === 12) return 0;
+      return getR(row, d) === 0 ? 0 : getRawB(row, d);
+    }
     function getExposure(row) { return parseFloat(row.exposure); }
     function mean(arr) { return arr.reduce((a, b) => a + b, 0) / arr.length; }
     function median(arr) { const s = [...arr].sort((a,b) => a-b); const m = Math.floor(s.length/2); return s.length % 2 ? s[m] : (s[m-1]+s[m])/2; }
