@@ -80,7 +80,7 @@
   <div class="main" id="main">
     <div class="panel active" id="panel-overall">
       <h1>Bottleneck Rubric Dashboard <small>GPT-5.3 Scores</small></h1>
-      <p>Task-level automation-resistance scores across 12 bottleneck dimensions, computed on O*NET tasks using the requirement-weighted geometric mean formula.</p>
+      <p>Task-level automation-resistance scores across 11 bottleneck dimensions (excluding Output Verifiability), computed on O*NET tasks using the requirement-weighted geometric mean formula.</p>
 
       <h3>Headline Numbers</h3>
       <div class="card-row" id="headline-cards"></div>
@@ -167,7 +167,7 @@
       if (d.n === 12) return getR(row, d); // regulatory R = B
       return getR(row, d) === 0 ? 0 : getRawB(row, d);
     }
-    function getExposure(row) { return parseFloat(row.geom_automability_eps); }
+
     function mean(arr) { return arr.reduce((a, b) => a + b, 0) / arr.length; }
     function median(arr) { const s = [...arr].sort((a,b) => a-b); const m = Math.floor(s.length/2); return s.length % 2 ? s[m] : (s[m-1]+s[m])/2; }
     function quantile(arr, q) { const s = [...arr].sort((a,b) => a-b); const p = (s.length-1)*q; const lo = Math.floor(p); return s[lo] + (p-lo)*(s[lo+1]-s[lo] || 0); }
@@ -336,7 +336,7 @@
         options: {
           indexAxis: 'y',
           plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => { const k = socKeys[ctx.dataIndex]; return `Median: ${median(socGroups[k]).toFixed(3)}`; } } } },
-          scales: { x: { stacked: true, min: 0, max: 1, title: { display: true, text: 'Exposure' } }, y: { stacked: true } }
+          scales: { x: { stacked: true, min: 0, max: 1, title: { display: true, text: 'Automability (ε-safe)' } }, y: { stacked: true } }
         }
       });
     }
