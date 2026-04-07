@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bottleneck Rubric Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'EB Garamond', Garamond, serif; font-size: 17px; color: #1a1a1a; background: #fff; display: flex; min-height: 100vh; }
+
+    /* Sidebar */
+    .sidebar { width: 260px; min-height: 100vh; background: #f5f7fa; border-right: 1px solid #e0e0e0; padding: 20px 0; position: fixed; top: 0; left: 0; overflow-y: auto; }
+    .sidebar h2 { font-size: 1.1em; padding: 0 16px 12px; color: #333; border-bottom: 1px solid #ddd; margin-bottom: 8px; }
+    .sidebar a { display: block; padding: 8px 16px; color: #666; text-decoration: none; font-size: 15px; border-left: 3px solid transparent; transition: all 0.15s; }
+    .sidebar a:hover { color: #333; background: #eef1f5; }
+    .sidebar a.active { color: #2a6496; border-left-color: #2a6496; font-weight: 700; background: #e8eef5; }
+    .sidebar .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #999; padding: 14px 16px 4px; }
+    .sidebar .back-link { font-size: 13px; color: #888; padding: 6px 16px 16px; border-bottom: 1px solid #ddd; margin-bottom: 8px; }
+    .sidebar .back-link:hover { color: #2a6496; }
+
+    /* Main */
+    .main { margin-left: 260px; flex: 1; padding: 30px 40px 60px; max-width: 1100px; }
+    h1 { font-size: 2em; margin-bottom: 0.3em; }
+    h1 small { font-size: 0.5em; color: #888; font-weight: 400; }
+    h3 { font-size: 1.4em; margin: 1.2em 0 0.5em; color: #222; }
+    p { margin-bottom: 1em; line-height: 1.5; }
+
+    /* Cards */
+    .card-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+    .card { background: #f8f9fb; border: 1px solid #e4e8ec; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 160px; }
+    .card .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #888; margin-bottom: 4px; }
+    .card .value { font-size: 2em; font-weight: 700; color: #2a6496; }
+    .card .sub { font-size: 13px; color: #999; margin-top: 2px; }
+
+    /* Charts */
+    .chart-container { position: relative; margin: 20px 0 30px; max-width: 800px; }
+    .chart-container.wide { max-width: 100%; }
+    .chart-container canvas { max-height: 400px; }
+
+    /* Table */
+    table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 12px 0 24px; }
+    th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid #eee; }
+    th { font-weight: 700; color: #555; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+    /* Tab panels */
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    .dim-description { font-style: italic; color: #666; margin-bottom: 1em; font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" id="sidebar">
+    <a href="index.html" class="back-link">&larr; Back to article</a>
+    <h2>Dashboard</h2>
+    <a href="#" data-panel="overall" class="active">Overall</a>
+    <div class="section-label">Dimensions</div>
+  </nav>
+
+  <div class="main" id="main">
+    <div class="panel active" id="panel-overall">
+      <h1>Bottleneck Rubric Dashboard <small>GPT-5.3 Scores</small></h1>
+      <p>Task-level automation-resistance scores across 12 bottleneck dimensions, computed on O*NET tasks using the requirement-weighted geometric mean formula.</p>
+
+      <h3>Headline Numbers</h3>
+      <div class="card-row" id="headline-cards"></div>
+
+      <h3>Exposure Distribution</h3>
+      <div class="chart-container"><canvas id="chart-exposure-hist"></canvas></div>
+
+      <h3>Mean Bottleneck (B) by Dimension</h3>
+      <div class="chart-container"><canvas id="chart-mean-b"></canvas></div>
+
+      <h3>Mean Requirement (R) vs Bottleneck (B)</h3>
+      <div class="chart-container"><canvas id="chart-r-vs-b"></canvas></div>
+
+      <h3>Exposure by Occupation Group</h3>
+      <div class="chart-container wide"><canvas id="chart-exposure-soc"></canvas></div>
+    </div>
+  </div>
+
+  <script>
+    // ── Dimension metadata ──
+    const DIMS = [
+      { n: 1,  key: 'Distributional Coverage',       short: 'Distrib. Coverage' },
+      { n: 2,  key: 'Tacit Knowledge',                short: 'Tacit Knowledge' },
+      { n: 3,  key: 'Specification Ambiguity',         short: 'Spec. Ambiguity' },
+      { n: 4,  key: 'Sequential Coherence',            short: 'Seq. Coherence' },
+      { n: 5,  key: 'Working Memory',                  short: 'Working Memory' },
+      { n: 6,  key: 'Long-Term Memory',                short: 'Long-Term Memory' },
+      { n: 7,  key: 'Multimodal Demand',               short: 'Multimodal' },
+      { n: 8,  key: 'Inference Speed',                 short: 'Inference Speed' },
+      { n: 9,  key: 'Output Verifiability',            short: 'Verifiability' },
+      { n: 10, key: 'Reliability Threshold',           short: 'Reliability' },
+      { n: 11, key: 'Counterpart Acceptance',          short: 'Acceptance' },
+      { n: 12, key: 'Regulatory & Legal Constraints',  short: 'Regulatory' },
+    ];
+
+    const SOC_LABELS = {
+      '11': 'Management', '13': 'Business & Financial', '15': 'Computer & Math',
+      '17': 'Architecture & Eng.', '19': 'Life/Phys/Social Sci.', '21': 'Community & Social',
+      '23': 'Legal', '25': 'Education & Library', '27': 'Arts & Media',
+      '29': 'Healthcare Practitioners', '31': 'Healthcare Support', '33': 'Protective Service',
+      '35': 'Food Preparation', '37': 'Maintenance & Grounds', '39': 'Personal Care',
+      '41': 'Sales', '43': 'Office & Admin', '45': 'Farming & Fishing',
+      '47': 'Construction', '49': 'Repair & Maintenance', '51': 'Production', '53': 'Transportation',
+    };
+
+    let DATA = [];
+
+    // ── Parse helpers ──
+    function rCol(d) { return `dim${d.n}_${d.key}_R`; }
+    function bCol(d) { return `dim${d.n}_${d.key}_B`; }
+    function getR(row, d) { return parseFloat(row[rCol(d)]) || 0; }
+    function getB(row, d) { return parseFloat(row[bCol(d)]) || 0; }
+    function getExposure(row) { return parseFloat(row.exposure); }
+    function mean(arr) { return arr.reduce((a, b) => a + b, 0) / arr.length; }
+    function median(arr) { const s = [...arr].sort((a,b) => a-b); const m = Math.floor(s.length/2); return s.length % 2 ? s[m] : (s[m-1]+s[m])/2; }
+    function quantile(arr, q) { const s = [...arr].sort((a,b) => a-b); const p = (s.length-1)*q; const lo = Math.floor(p); return s[lo] + (p-lo)*(s[lo+1]-s[lo] || 0); }
+
+    // ── Epsilon-safe geometric mean ──
+    function geomExposureEps(row) {
+      const eps = 0.01;
+      let sumR = 0;
+      for (const d of DIMS) sumR += getR(row, d);
+      if (sumR === 0) return 1;
+      let logSum = 0;
+      for (const d of DIMS) {
+        const r = getR(row, d);
+        if (r === 0) continue;
+        const b = getB(row, d);
+        const a = eps + (1 - b / 2);
+        logSum += (r / sumR) * Math.log(a);
+      }
+      return Math.exp(logSum);
+    }
+
+    // ── Chart defaults ──
+    Chart.defaults.font.family = "'EB Garamond', Garamond, serif";
+    Chart.defaults.font.size = 14;
+    Chart.defaults.color = '#555';
+
+    // ── Build sidebar dimension links + panels ──
+    function buildDimPanels() {
+      const sidebar = document.getElementById('sidebar');
+      const main = document.getElementById('main');
+
+      DIMS.forEach(d => {
+        // Sidebar link
+        const a = document.createElement('a');
+        a.href = '#';
+        a.dataset.panel = `dim-${d.n}`;
+        a.textContent = d.short;
+        sidebar.appendChild(a);
+
+        // Panel
+        const panel = document.createElement('div');
+        panel.className = 'panel';
+        panel.id = `panel-dim-${d.n}`;
+        panel.innerHTML = `
+          <h1>${d.key}</h1>
+          <div class="card-row" id="cards-dim-${d.n}"></div>
+          <h3>B Score Distribution</h3>
+          <div class="chart-container"><canvas id="chart-b-dist-${d.n}"></canvas></div>
+          <h3>R Score Distribution</h3>
+          <div class="chart-container"><canvas id="chart-r-dist-${d.n}"></canvas></div>
+          <h3>B by Occupation Group</h3>
+          <div class="chart-container wide"><canvas id="chart-b-soc-${d.n}"></canvas></div>
+          <h3>Top 10 Most Bottlenecked Tasks</h3>
+          <table id="table-top-${d.n}"><thead><tr><th>Occupation</th><th>Task</th><th class="num">R</th><th class="num">B</th></tr></thead><tbody></tbody></table>
+        `;
+        main.appendChild(panel);
+      });
+    }
+
+    // ── Navigation ──
+    function setupNav() {
+      document.querySelectorAll('.sidebar a[data-panel]').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          document.querySelectorAll('.sidebar a').forEach(l => l.classList.remove('active'));
+          a.classList.add('active');
+          document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+          document.getElementById('panel-' + a.dataset.panel).classList.add('active');
+        });
+      });
+    }
+
+    // ── Overall panel ──
+    function renderOverall() {
+      const exposures = DATA.map(getExposure).filter(e => !isNaN(e));
+      const n = DATA.length;
+      const meanExp = mean(exposures);
+      const medianExp = median(exposures);
+      const zeroCount = exposures.filter(e => e === 0).length;
+      const highCount = exposures.filter(e => e > 0.7).length;
+
+      // Headline cards
+      document.getElementById('headline-cards').innerHTML = `
+        <div class="card"><div class="label">Tasks Scored</div><div class="value">${n.toLocaleString()}</div></div>
+        <div class="card"><div class="label">Mean Exposure</div><div class="value">${meanExp.toFixed(3)}</div><div class="sub">weighted geom. mean</div></div>
+        <div class="card"><div class="label">Median Exposure</div><div class="value">${medianExp.toFixed(3)}</div></div>
+        <div class="card"><div class="label">Fully Blocked</div><div class="value">${zeroCount}</div><div class="sub">exposure = 0</div></div>
+        <div class="card"><div class="label">Highly Exposed</div><div class="value">${highCount}</div><div class="sub">exposure &gt; 0.7</div></div>
+      `;
+
+      // Exposure histogram
+      const bins = 20;
+      const counts = new Array(bins).fill(0);
+      exposures.forEach(e => { const i = Math.min(Math.floor(e * bins), bins - 1); counts[i]++; });
+      new Chart(document.getElementById('chart-exposure-hist'), {
+        type: 'bar',
+        data: { labels: counts.map((_, i) => (i/bins).toFixed(2)), datasets: [{ data: counts, backgroundColor: 'rgba(42,100,150,0.6)', borderColor: 'rgba(42,100,150,1)', borderWidth: 1 }] },
+        options: { plugins: { legend: { display: false } }, scales: { x: { title: { display: true, text: 'Exposure Score' } }, y: { title: { display: true, text: 'Tasks' } } } }
+      });
+
+      // Mean B by dimension
+      const meanBs = DIMS.map(d => ({ short: d.short, val: mean(DATA.map(r => getB(r, d))) })).sort((a, b) => b.val - a.val);
+      new Chart(document.getElementById('chart-mean-b'), {
+        type: 'bar',
+        data: { labels: meanBs.map(x => x.short), datasets: [{ data: meanBs.map(x => x.val), backgroundColor: 'rgba(42,100,150,0.7)' }] },
+        options: { indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { min: 0, max: 2, title: { display: true, text: 'Mean B (0-2)' } } } }
+      });
+
+      // R vs B scatter
+      const scatterData = DIMS.map(d => ({ x: mean(DATA.map(r => getR(r, d))), y: mean(DATA.map(r => getB(r, d))), label: d.short }));
+      new Chart(document.getElementById('chart-r-vs-b'), {
+        type: 'scatter',
+        data: { datasets: [{ data: scatterData, backgroundColor: 'rgba(42,100,150,0.8)', pointRadius: 7 }] },
+        options: {
+          plugins: {
+            legend: { display: false },
+            tooltip: { callbacks: { label: ctx => `${scatterData[ctx.dataIndex].label}: R=${ctx.parsed.x.toFixed(2)}, B=${ctx.parsed.y.toFixed(2)}` } }
+          },
+          scales: { x: { min: 0, max: 2, title: { display: true, text: 'Mean R' } }, y: { min: 0, max: 2, title: { display: true, text: 'Mean B' } } }
+        }
+      });
+
+      // Exposure by SOC
+      const socGroups = {};
+      DATA.forEach(r => {
+        const mg = r.onet_soc_code.substring(0, 2);
+        if (!socGroups[mg]) socGroups[mg] = [];
+        const e = getExposure(r);
+        if (!isNaN(e)) socGroups[mg].push(e);
+      });
+      const socKeys = Object.keys(socGroups).sort();
+      const socLabels = socKeys.map(k => SOC_LABELS[k] || k);
+      const socMedians = socKeys.map(k => median(socGroups[k]));
+      const socQ1 = socKeys.map(k => quantile(socGroups[k], 0.25));
+      const socQ3 = socKeys.map(k => quantile(socGroups[k], 0.75));
+
+      new Chart(document.getElementById('chart-exposure-soc'), {
+        type: 'bar',
+        data: {
+          labels: socLabels,
+          datasets: [
+            { label: 'Q1', data: socQ1, backgroundColor: 'rgba(42,100,150,0.2)' },
+            { label: 'Median', data: socMedians.map((m, i) => m - socQ1[i]), backgroundColor: 'rgba(42,100,150,0.5)' },
+            { label: 'Q3', data: socQ3.map((q, i) => q - socMedians[i]), backgroundColor: 'rgba(42,100,150,0.2)' },
+          ]
+        },
+        options: {
+          indexAxis: 'y',
+          plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => { const k = socKeys[ctx.dataIndex]; return `Median: ${median(socGroups[k]).toFixed(3)}`; } } } },
+          scales: { x: { stacked: true, min: 0, max: 1, title: { display: true, text: 'Exposure' } }, y: { stacked: true } }
+        }
+      });
+    }
+
+    // ── Dimension panels ──
+    function renderDimPanel(d) {
+      const rs = DATA.map(r => getR(r, d));
+      const bs = DATA.map(r => getB(r, d));
+      const meanR = mean(rs);
+      const meanB = mean(bs);
+
+      // Epsilon-safe geom mean for this dim only
+      const validBs = bs.filter((_, i) => rs[i] > 0);
+      const eps = 0.01;
+      const geomAuto = validBs.length > 0 ? Math.exp(mean(validBs.map(b => Math.log(eps + (1 - b/2))))) : 1;
+
+      // Cards
+      document.getElementById(`cards-dim-${d.n}`).innerHTML = `
+        <div class="card"><div class="label">Mean R</div><div class="value">${meanR.toFixed(2)}</div></div>
+        <div class="card"><div class="label">Mean B</div><div class="value">${meanB.toFixed(2)}</div></div>
+        <div class="card"><div class="label">Geom. Automability (ε)</div><div class="value">${geomAuto.toFixed(3)}</div></div>
+        <div class="card"><div class="label">B=0 (no bottleneck)</div><div class="value">${bs.filter(b => b===0).length}</div></div>
+        <div class="card"><div class="label">B=2 (severe)</div><div class="value">${bs.filter(b => b===2).length}</div></div>
+      `;
+
+      // B distribution
+      const bCounts = [0, 0, 0];
+      bs.forEach(b => { if (b >= 0 && b <= 2) bCounts[b]++; });
+      new Chart(document.getElementById(`chart-b-dist-${d.n}`), {
+        type: 'bar',
+        data: { labels: ['0 (none)', '1 (moderate)', '2 (severe)'], datasets: [{ data: bCounts, backgroundColor: ['#6bbd6b', '#f0ad4e', '#d9534f'] }] },
+        options: { plugins: { legend: { display: false } }, scales: { y: { title: { display: true, text: 'Tasks' } } } }
+      });
+
+      // R distribution
+      const rCounts = [0, 0, 0];
+      rs.forEach(r => { if (r >= 0 && r <= 2) rCounts[r]++; });
+      new Chart(document.getElementById(`chart-r-dist-${d.n}`), {
+        type: 'bar',
+        data: { labels: ['0 (not required)', '1 (moderate)', '2 (high)'], datasets: [{ data: rCounts, backgroundColor: ['#aaa', '#7cb5d6', '#2a6496'] }] },
+        options: { plugins: { legend: { display: false } }, scales: { y: { title: { display: true, text: 'Tasks' } } } }
+      });
+
+      // B by SOC
+      const socB = {};
+      DATA.forEach(r => {
+        const mg = r.onet_soc_code.substring(0, 2);
+        if (!socB[mg]) socB[mg] = [];
+        socB[mg].push(getB(r, d));
+      });
+      const sKeys = Object.keys(socB).sort();
+      new Chart(document.getElementById(`chart-b-soc-${d.n}`), {
+        type: 'bar',
+        data: { labels: sKeys.map(k => SOC_LABELS[k] || k), datasets: [{ data: sKeys.map(k => mean(socB[k])), backgroundColor: 'rgba(42,100,150,0.6)' }] },
+        options: { indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { min: 0, max: 2, title: { display: true, text: 'Mean B' } } } }
+      });
+
+      // Top 10 most bottlenecked
+      const sorted = DATA.map(r => ({ occ: r.occupation_title, task: r.task_statement, r: getR(r, d), b: getB(r, d) }))
+        .filter(x => x.r > 0)
+        .sort((a, b) => b.b - a.b || b.r - a.r)
+        .slice(0, 10);
+      const tbody = document.querySelector(`#table-top-${d.n} tbody`);
+      tbody.innerHTML = sorted.map(x => `<tr><td>${x.occ}</td><td>${x.task.substring(0, 90)}${x.task.length > 90 ? '...' : ''}</td><td class="num">${x.r}</td><td class="num">${x.b}</td></tr>`).join('');
+    }
+
+    // ── Load and go ──
+    Papa.parse('scores.csv', {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: function(results) {
+        DATA = results.data;
+        buildDimPanels();
+        setupNav();
+        renderOverall();
+        DIMS.forEach(renderDimPanel);
+      }
+    });
+  </script>
+</body>
+</html>
