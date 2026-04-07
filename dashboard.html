@@ -85,7 +85,7 @@
       <h3>Headline Numbers</h3>
       <div class="card-row" id="headline-cards"></div>
 
-      <h3>Exposure Distribution</h3>
+      <h3>Automability Distribution</h3>
       <div class="chart-container"><canvas id="chart-exposure-hist"></canvas></div>
 
       <h3>Mean Bottleneck (B) by Dimension</h3>
@@ -94,7 +94,7 @@
       <h3>Mean Requirement (R) vs Bottleneck (B)</h3>
       <div class="chart-container"><canvas id="chart-r-vs-b"></canvas></div>
 
-      <h3>Exposure by Occupation Group</h3>
+      <h3>Automability by Occupation Group</h3>
       <div class="chart-container wide"><canvas id="chart-exposure-soc"></canvas></div>
     </div>
 
@@ -238,11 +238,9 @@
 
     // ── Overall panel ──
     function renderOverall() {
-      const exposures = DATA.map(getExposure).filter(e => !isNaN(e));
       const n = DATA.length;
-      const medianExp = median(exposures);
 
-      // Epsilon-safe geom automability per task
+      // Use epsilon-safe formula throughout
       const automabilities = DATA.map(geomExposureEps);
       const medianAuto = median(automabilities);
 
@@ -276,14 +274,14 @@
         <div class="card"><div class="label">Broad Relevance</div><div class="value">${highRelevancePct.toFixed(1)}%</div><div class="sub">R&gt;0 on 8+ dimensions</div></div>
       `;
 
-      // Exposure histogram
+      // Automability histogram (epsilon-safe)
       const bins = 20;
       const counts = new Array(bins).fill(0);
-      exposures.forEach(e => { const i = Math.min(Math.floor(e * bins), bins - 1); counts[i]++; });
+      automabilities.forEach(e => { const i = Math.min(Math.floor(e * bins), bins - 1); counts[i]++; });
       new Chart(document.getElementById('chart-exposure-hist'), {
         type: 'bar',
         data: { labels: counts.map((_, i) => (i/bins).toFixed(2)), datasets: [{ data: counts, backgroundColor: 'rgba(42,100,150,0.6)', borderColor: 'rgba(42,100,150,1)', borderWidth: 1 }] },
-        options: { plugins: { legend: { display: false } }, scales: { x: { title: { display: true, text: 'Exposure Score' } }, y: { title: { display: true, text: 'Tasks' } } } }
+        options: { plugins: { legend: { display: false } }, scales: { x: { title: { display: true, text: 'Automability (ε-safe)' } }, y: { title: { display: true, text: 'Tasks' } } } }
       });
 
       // Mean B by dimension
@@ -308,13 +306,12 @@
         }
       });
 
-      // Exposure by SOC
+      // Automability by SOC
       const socGroups = {};
-      DATA.forEach(r => {
+      DATA.forEach((r, i) => {
         const mg = r.onet_soc_code.substring(0, 2);
         if (!socGroups[mg]) socGroups[mg] = [];
-        const e = getExposure(r);
-        if (!isNaN(e)) socGroups[mg].push(e);
+        socGroups[mg].push(automabilities[i]);
       });
       const socKeys = Object.keys(socGroups).sort();
       const socLabels = socKeys.map(k => SOC_LABELS[k] || k);
@@ -478,15 +475,13 @@
       // Task statement
       document.getElementById('task-statement').textContent = '"' + row.task_statement + '"';
 
-      // Compute exposure
-      const exposure = getExposure(row);
+      // Compute automability (epsilon-safe)
       const autoEps = geomExposureEps(row);
       const severeCount = DIMS.filter(d => getR(row, d) > 0 && getB(row, d) === 2).length;
       const relevantCount = DIMS.filter(d => getR(row, d) > 0).length;
 
       document.getElementById('task-cards').innerHTML = `
         <div class="card"><div class="label">Occupation</div><div class="value" style="font-size:1.1em;">${row.occupation_title}</div></div>
-        <div class="card"><div class="label">Exposure</div><div class="value">${isNaN(exposure) ? 'N/A' : exposure.toFixed(3)}</div></div>
         <div class="card"><div class="label">Automability (ε)</div><div class="value">${autoEps.toFixed(3)}</div></div>
         <div class="card"><div class="label">Severe Bottlenecks</div><div class="value">${severeCount}</div><div class="sub">of ${relevantCount} relevant dims</div></div>
       `;
