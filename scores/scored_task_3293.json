@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.02",
+  "task_id": 3293,
+  "task_statement": "Review invoices, work orders, consumption reports, or demand forecasts to estimate peak delivery periods and to issue work assignments.",
+  "occupation_title": "Transportation, Storage, and Distribution Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Reviewing invoices, reports, forecasts, and issuing assignments is commonly done through digital management systems, spreadsheets, or email. However, in some operations these materials may be physical documents and assignments may be given in person to on-site staff."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple document types (invoices, forecasts, work orders) and varying operational contexts (industries, regions, seasonality), but follows fairly structured and recurring patterns in logistics planning.",
+      "adequacy_evidence": "While public and synthetic data can cover general patterns, much real-world variation (firm-specific demand signals, proprietary forecasting practices) is embedded in private datasets, leaving some gaps in representative coverage.",
+      "_timestamp": "2026-04-06T02:16:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step processing\u2014reviewing multiple document types, synthesizing data, forecasting peak periods, and then issuing assignments\u2014requiring consistent reasoning across steps but not extremely long or tightly coupled sequences.",
+      "adequacy_evidence": "Current AI agents can generally maintain coherence across these moderate-length workflows, though some degradation can occur in tracking constraints or integrating information across documents without careful orchestration.",
+      "_timestamp": "2026-04-06T02:16:15"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating peak delivery periods and issuing assignments requires interpreting heterogeneous data (invoices, forecasts, reports) alongside implicit business priorities like service levels, labor constraints, and cost tradeoffs.",
+      "adequacy_evidence": "Current agents can analyze structured data and generate reasonable plans, but often miss context-specific priorities or operational nuances without iterative human guidance.",
+      "_timestamp": "2026-04-06T02:16:15"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating peak delivery periods and assigning work requires some experiential judgment about seasonal patterns, local disruptions, and reliability of inputs that are not fully captured in explicit rules.",
+      "adequacy_evidence": "Well-equipped AI agents can model demand patterns and optimize assignments from data, but they still show gaps in handling context-specific anomalies and subtle operational nuances that experienced managers infer.",
+      "_timestamp": "2026-04-06T02:16:15"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing operational documents to estimate peak periods and assign work is a planning task typically done on hourly or daily cycles, not requiring immediate real-time response.",
+      "adequacy_evidence": "Current AI systems can perform document analysis and scheduling recommendations well within these relaxed timeframes without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T02:16:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing structured documents (invoices, reports, forecasts) that are text- and table-based; visual or non-text modalities are not essential to core performance.",
+      "adequacy_evidence": "Current AI agents can reliably process text and tabular data from documents (including PDFs and spreadsheets), so there is no meaningful multimodal capability gap.",
+      "_timestamp": "2026-04-06T02:16:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from reviewing operational documents like invoices or forecasts or issuing work assignments in logistics. These are internal business functions not tied to licensed decision-making requirements.",
+      "_timestamp": "2026-04-06T02:16:17"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires synthesizing information from multiple document types (invoices, work orders, forecasts) and tracking relationships to estimate peak periods and assign work, but the volume is typically structured and bounded within a planning cycle.",
+      "adequacy_evidence": "Current agents with tool use (e.g., spreadsheet parsing, database queries) can reliably manage and integrate these inputs within a session, with minimal risk of losing critical context when properly scaffolded.",
+      "_timestamp": "2026-04-06T02:16:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Estimating peak delivery periods and assigning work relies on historical demand patterns, prior consumption reports, and past operational decisions, but these are typically stored in enterprise systems rather than requiring implicit memory.",
+      "adequacy_evidence": "Current AI agents can reliably access and query structured historical data from databases or integrated systems, so cross-session retention is well-supported through existing tooling rather than internal memory.",
+      "_timestamp": "2026-04-06T02:16:17"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Outputs are based on structured data (invoices, reports, forecasts) that can be cross-checked against source records and historical trends, but verifying correctness requires domain knowledge and time to validate assumptions and calculations.",
+      "adequacy_evidence": "Current AI can analyze and synthesize such data but may misinterpret patterns or context, so human review is still needed to validate inputs, assumptions, and resulting assignments.",
+      "_timestamp": "2026-04-06T02:16:17"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating and issuing assignments to internal staff (e.g., drivers, warehouse workers), who must engage with and follow the output, though deep interpersonal trust or empathy is not central.",
+      "adequacy_evidence": "Automated scheduling and dispatch systems are already common, but some workers and managers may resist or second-guess AI-generated assignments, especially if perceived as opaque or unfair.",
+      "_timestamp": "2026-04-06T02:16:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in estimating peak periods or assigning work can cause inefficiencies, delays, or increased costs, but are typically recoverable and do not pose severe or irreversible consequences.",
+      "adequacy_evidence": "With standard checks (e.g., managerial review, performance monitoring), AI-generated estimates and assignments can be validated and adjusted, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T02:16:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

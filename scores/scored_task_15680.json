@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.04",
+  "task_id": 15680,
+  "task_statement": "Select transportation routes to maximize economy by combining shipments or consolidating warehousing and distribution.",
+  "occupation_title": "Supply Chain Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Selecting transportation routes typically involves analyzing shipment data, maps, and logistics software to optimize cost and efficiency, which can be done entirely on a computer. Physical presence in warehouses or along routes is not required to perform the decision-making task."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many routing and consolidation decisions can be formalized with optimization models, managers rely on experience for handling soft constraints like carrier reliability, seasonal disruptions, and practical tradeoffs not fully captured in explicit rules.",
+      "adequacy_evidence": "Current AI agents with optimization tools can handle structured routing well, but they still show gaps in nuanced, context-sensitive judgment around exceptions, informal constraints, and rapidly changing real-world conditions.",
+      "_timestamp": "2026-04-05T23:34:08"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Routing and consolidation decisions vary widely by network topology, shipment mix, transport modes, time windows, costs, and regulatory/geographic constraints, creating a highly heterogeneous, long-tailed problem space.",
+      "adequacy_evidence": "There is extensive operations research literature, benchmarks (e.g., VRP variants), and simulatable environments for training, but real-world proprietary data (cost structures, contracts, disruptions) is often inaccessible, leaving some important subcases underrepresented.",
+      "_timestamp": "2026-04-05T23:34:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Route optimization and shipment consolidation require tracking many dynamic variables (shipment sizes, destinations, time windows, costs, capacities) and integrating them into a coherent plan within a single decision episode.",
+      "adequacy_evidence": "Agents with tools can handle large datasets via external solvers and retrieval, but they can still lose constraints or mis-handle interactions when compressing complex state across steps.",
+      "_timestamp": "2026-04-05T23:34:09"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While 'maximize economy' suggests cost minimization, real objectives depend on implicit constraints like service levels, delivery windows, contractual obligations, and risk tradeoffs that are not fully specified.",
+      "adequacy_evidence": "Agents can optimize routing when given clear parameters, but often miss or misweight latent business priorities (e.g., service reliability vs. cost), requiring human iteration to align with true objectives.",
+      "_timestamp": "2026-04-05T23:34:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Route optimization benefits from historical shipment data, carrier performance, contracts, and past consolidation strategies, but individual routing decisions can still be made using current data snapshots.",
+      "adequacy_evidence": "Modern AI systems integrated with databases and logistics platforms can reliably store and retrieve historical shipping, cost, and routing data across sessions, so persistent memory is not a major limitation.",
+      "_timestamp": "2026-04-05T23:34:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Route selection and shipment consolidation involve multi-step planning (data gathering, constraint balancing, optimization, and iteration), but these steps are typically modular and supported by optimization tools rather than long, fragile action chains.",
+      "adequacy_evidence": "LLM-based agents with optimization tools can handle these multi-step workflows reasonably well, though some degradation appears in maintaining constraints and consistency across iterative refinements or complex scenarios.",
+      "_timestamp": "2026-04-05T23:34:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Route selection and shipment consolidation rely primarily on structured data (costs, distances, capacities, schedules) that can be fully represented in text or tabular form without requiring images or other modalities.",
+      "adequacy_evidence": "Current AI agents can handle routing and optimization using text and structured data inputs without needing multimodal perception or generation, so there is no meaningful shortfall.",
+      "_timestamp": "2026-04-05T23:34:11"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Route selection and shipment consolidation are often done through periodic planning cycles or optimization runs, allowing seconds to minutes of computation rather than strict real-time response.",
+      "adequacy_evidence": "Well-tooled AI agents can perform optimization and scenario analysis within acceptable timeframes, so latency does not meaningfully degrade solution quality in most cases.",
+      "_timestamp": "2026-04-05T23:34:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from performing logistics optimization tasks like route selection or shipment consolidation. Such decisions can already be automated in practice, with humans retaining oversight as needed.",
+      "_timestamp": "2026-04-05T23:34:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Verifying optimal routing and consolidation decisions requires modeling cost tradeoffs, capacity constraints, timing, and network effects; errors may only appear after simulation or real-world execution, not through simple inspection.",
+      "adequacy_evidence": "AI can generate plausible routing plans, but validating them still requires running optimization models or expert review, as mistakes in constraints or assumptions are not always obvious upfront.",
+      "_timestamp": "2026-04-05T23:34:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in route selection typically lead to higher costs, delays, or inefficiencies, but are usually correctable in subsequent planning cycles and rarely cause irreversible harm.",
+      "adequacy_evidence": "With standard validation (cost checks, constraints, simulation), AI-generated routing plans can be reliably vetted, leaving residual risks that are generally acceptable for operational use.",
+      "_timestamp": "2026-04-05T23:34:12"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordination with carriers, warehouses, and internal stakeholders who rely on routing decisions, but effectiveness depends more on cost and efficiency than on the planner\u2019s identity.",
+      "adequacy_evidence": "Stakeholders in logistics already accept algorithmic routing and optimization tools, so an AI agent performing this role would face little resistance if performance is strong.",
+      "_timestamp": "2026-04-05T23:34:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1299.01",
+  "task_id": 14740,
+  "task_statement": "Implement updates, upgrades, and patches in a timely manner to limit loss of service.",
+  "occupation_title": "Web Administrators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Applying software updates, upgrades, and patches to web servers or applications is typically done through remote administrative tools or cloud platforms, but in some environments administrators may need physical access to on\u2011premises servers or restricted networks."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different stacks (OS, web servers, frameworks, cloud providers) and organizational contexts, creating moderate diversity in procedures and edge cases but with many recurring patterns.",
+      "adequacy_evidence": "Extensive documentation, tutorials, and incident reports exist, but real-world enterprise-specific environments, failure modes, and rollback decisions are often private or under-documented, leaving some gaps in representative process data.",
+      "_timestamp": "2026-04-06T00:49:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires interpreting what counts as 'timely' and balancing uptime, risk, maintenance windows, and organizational priorities, which are often context-specific and not fully explicit.",
+      "adequacy_evidence": "Current agents can follow documented policies and infer general best practices, but often miss organization-specific constraints (e.g., acceptable downtime windows or dependency risks) without human guidance.",
+      "_timestamp": "2026-04-06T00:49:57"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many updates and patches follow documented procedures, administrators must use experience to judge timing, dependency impacts, rollback strategies, and service disruption risks in specific environments.",
+      "adequacy_evidence": "Current agents can follow runbooks and automate standard patching workflows, but they lack reliable calibration for handling environment-specific edge cases, conflicting dependencies, and nuanced risk tradeoffs.",
+      "_timestamp": "2026-04-06T00:49:57"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Applying updates and patches involves a multi-step workflow (evaluation, staging, backup, deployment, validation, rollback if needed) where consistency across steps matters but sequences are not extremely long or deeply interdependent.",
+      "adequacy_evidence": "Current AI agents can manage structured DevOps workflows with tooling, but may show some degradation over multi-step sequences, such as missed checks or incomplete state tracking across deployment stages.",
+      "_timestamp": "2026-04-06T00:49:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Applying updates and patches requires tracking system configurations, dependencies, version states, and possibly logs within a session, but the scope is typically bounded and structured.",
+      "adequacy_evidence": "Current agents can manage these contexts with tooling, but may occasionally lose track of state across multi-step workflows or mis-handle dependency details without careful orchestration.",
+      "_timestamp": "2026-04-06T00:49:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Applying updates and patches benefits from awareness of prior system configurations, past updates, dependencies, and maintenance schedules, but each instance can largely be handled using current system state and documentation.",
+      "adequacy_evidence": "Current AI agents can integrate with configuration management systems, logs, and version control to retrieve relevant historical context, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T00:50:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Implementing updates, upgrades, and patches primarily involves interacting with text-based interfaces such as command lines, configuration files, logs, and documentation.",
+      "adequacy_evidence": "Since the task is fundamentally text-driven, current AI agents can handle the relevant modalities without limitation.",
+      "_timestamp": "2026-04-06T00:50:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Applying patches and updates is time-sensitive to minimize downtime and vulnerabilities, but typically operates on a scale of minutes rather than requiring instant real-time reactions.",
+      "adequacy_evidence": "AI agents can generate and execute update procedures quickly within this time window; the reasoning required is not so deep that latency meaningfully degrades performance.",
+      "_timestamp": "2026-04-06T00:50:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Applying updates, upgrades, and patches is primarily a back-end technical task with no direct interaction requiring stakeholder acceptance of the performer\u2019s identity.",
+      "adequacy_evidence": "Because stakeholders are not directly engaged and care mainly about system uptime, they are largely indifferent to whether a human or AI performs the task.",
+      "_timestamp": "2026-04-06T00:50:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from implementing software updates, upgrades, or patches. While organizations may impose internal change management controls or approvals, these are not legal restrictions on AI performing the task.",
+      "_timestamp": "2026-04-06T00:50:00"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification typically involves staging deployments, automated tests, monitoring, and rollback checks; while many errors surface quickly, some compatibility or performance issues only appear after deployment under real load.",
+      "adequacy_evidence": "Current AI systems can generate plausible update procedures but are prone to configuration or dependency errors, requiring routine human oversight, testing pipelines, and monitoring to catch issues before and after release.",
+      "_timestamp": "2026-04-06T00:50:00"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in applying updates or patches can cause service outages or introduce vulnerabilities, but standard practices like staging, monitoring, and rollback make most failures recoverable.",
+      "adequacy_evidence": "Even with testing and deployment safeguards, AI-generated changes may still introduce misconfigurations or miss edge cases, leaving some residual risk that can lead to temporary disruptions.",
+      "_timestamp": "2026-04-06T00:50:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

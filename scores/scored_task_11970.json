@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-4012.00",
+  "task_id": 11970,
+  "task_statement": "Write instruction sheets and cutter lists for a machine's controller to guide setup and encode numerical control tapes.",
+  "occupation_title": "Computer Numerically Controlled Machine Tool Programmers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Creating instruction sheets, cutter lists, and NC tape instructions is typically done using CAM or programming software on a computer, but it often requires on-site knowledge of the specific machine setup, tooling availability, or physical encoding equipment in a shop environment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting cutter lists and setup instructions involves experience-based judgment about tooling, feeds/speeds, and machine-specific behavior that is not fully captured in formal rules, though much is documented in standards and manuals.",
+      "adequacy_evidence": "Current agents can apply machining guidelines and generate reasonable instructions, but they often lack nuanced calibration for edge cases (e.g., tricky materials, machine idiosyncrasies), requiring human validation.",
+      "_timestamp": "2026-04-05T21:30:53"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different machine types, materials, geometries, and shop conventions, but follows structured and well-understood programming and setup patterns within CNC machining.",
+      "adequacy_evidence": "There is substantial accessible data (G-code examples, CAM outputs, manuals, and training materials), though some shop-specific practices and detailed process traces are proprietary or underrepresented, leaving partial gaps.",
+      "_timestamp": "2026-04-05T21:30:54"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on engineering drawings, machining standards, and controller specifications, but still involves interpreting implicit details like tooling choices, sequencing, and shop-specific conventions.",
+      "adequacy_evidence": "Current agents can generate instruction sheets and cutter lists from structured inputs, but often miss implicit shop practices or nuanced constraints, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-05T21:30:55"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves generating structured instruction sheets and cutter lists that must remain internally consistent across multiple parameters (tool selection, sequencing, machine setup), but the overall sequence is moderate in length and complexity.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across such structured generation tasks, though minor inconsistencies or dropped constraints can emerge over longer or more detailed specifications.",
+      "_timestamp": "2026-04-05T21:30:55"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Writing instruction sheets and cutter lists for CNC machines is typically an offline engineering task with turnaround times of minutes to hours, not requiring real-time responsiveness.",
+      "adequacy_evidence": "Current AI agents can generate and refine these documents well within acceptable timeframes without needing to truncate reasoning, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-05T21:30:55"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves producing textual artifacts (instruction sheets and cutter lists) and encoding numerical control data; it does not inherently require perception or generation of non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based generation and structured instruction writing well, with no meaningful multimodal demands creating a bottleneck.",
+      "_timestamp": "2026-04-05T21:30:56"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating part specifications, tooling options, machine parameters, and sequencing details, but the information is structured and typically bounded within a single job setup. It involves moderate context tracking rather than extremely large or rapidly changing state.",
+      "adequacy_evidence": "Current agents can handle structured technical inputs and maintain context with tooling support, but they may occasionally omit or misalign specific parameters or constraints, especially when multiple interdependent details must be tracked precisely.",
+      "_timestamp": "2026-04-05T21:30:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements prohibiting AI from generating CNC instruction sheets or cutter lists. While workplace safety and quality standards apply, they do not mandate that a human exclusively perform this programming task.",
+      "_timestamp": "2026-04-05T21:30:57"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from access to persistent information such as standard tooling libraries, machine-specific parameters, and prior setup conventions, but individual jobs can usually be completed from current design specifications and documentation.",
+      "adequacy_evidence": "Current AI systems can reliably integrate with external databases and file systems to store and retrieve tool libraries and prior job data, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-05T21:30:57"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Programs and setup sheets can be checked via CAM backplotting, simulation, and dry runs, but this requires domain expertise and time; some issues (e.g., feeds, fixturing, tolerances) may not be obvious immediately.",
+      "adequacy_evidence": "AI-generated CNC instructions would still need routine simulation and expert review because errors are common enough and not always trivially visible without running verification tools.",
+      "_timestamp": "2026-04-05T21:30:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task produces technical documentation (instruction sheets and cutter lists) consumed by machine operators, with no reliance on the programmer\u2019s identity or interpersonal interaction.",
+      "adequacy_evidence": "As long as the instructions are accurate and usable, stakeholders are largely indifferent to whether they were generated by a human or AI, and such automation is already common in CAM workflows.",
+      "_timestamp": "2026-04-05T21:30:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in CNC instruction sheets or cutter lists can cause machine crashes, tool breakage, scrapped parts, or safety incidents, so even rare residual mistakes have significant consequences.",
+      "adequacy_evidence": "Simulation, backplotting, and review can catch many issues, but AI-generated programs may still introduce subtle tooling or sequencing errors that are not always detected, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T21:30:58"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

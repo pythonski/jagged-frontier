@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.01",
+  "task_id": 16262,
+  "task_statement": "Review clinical or other medical research protocols and recommend appropriate statistical analyses.",
+  "occupation_title": "Biostatisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Reviewing research protocols and recommending statistical analyses involves reading documents and providing analytical guidance, which can be done entirely using digital files, statistical software, and online communication without physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical protocols usually specify primary endpoints and design constraints, but selecting appropriate statistical analyses requires interpreting implicit goals (e.g., estimands, handling missing data, regulatory expectations) and aligning with domain conventions.",
+      "adequacy_evidence": "Current agents can map many protocol features to standard analysis approaches, but they often miss nuanced context (e.g., stakeholder priorities, subtle design implications), requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T02:59:22"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate analyses for clinical protocols requires nuanced judgment about study design, endpoints, confounding, missing data, and regulatory expectations, often relying on experience with prior trials and domain-specific conventions.",
+      "adequacy_evidence": "Current agents can reproduce standard statistical recommendations and guidelines, but show gaps in context-sensitive judgment for atypical designs, subtle biases, or regulatory nuance, indicating a moderate shortfall rather than a pervasive failure.",
+      "_timestamp": "2026-04-06T02:59:23"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clinical research protocols vary widely by study design (RCTs, observational, adaptive trials), endpoints, disease areas, regulatory contexts, and data constraints, creating a highly heterogeneous and long-tailed distribution of cases.",
+      "adequacy_evidence": "There is substantial coverage via published protocols, statistical analysis plans, regulatory guidance, and textbooks, but many real-world protocols and expert deliberations are proprietary or sparsely documented, leaving gaps in edge cases and nuanced reasoning.",
+      "_timestamp": "2026-04-06T02:59:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing protocols involves multiple interdependent steps\u2014understanding study design, endpoints, data structures, and constraints\u2014then mapping these coherently to appropriate statistical methods, but the sequence is not extremely long or tightly coupled across many stages.",
+      "adequacy_evidence": "Frontier AI agents can generally maintain coherence across these analytical steps, but may show some drift or inconsistency in aligning earlier protocol details with later statistical recommendations in longer or more complex documents.",
+      "_timestamp": "2026-04-06T02:59:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing research protocols and recommending statistical analyses is primarily text-based, involving written study designs, variables, and analysis plans; any figures or tables are supplementary and not essential.",
+      "adequacy_evidence": "Since the task is fundamentally text-in/text-out, current AI systems can fully handle the modality requirements without meaningful limitations.",
+      "_timestamp": "2026-04-06T02:59:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reviewing protocols can benefit from knowledge of prior projects, sponsor preferences, or institutional standards, but each protocol is largely self-contained with its own design and requirements.",
+      "adequacy_evidence": "Current AI systems with document storage and retrieval can reliably persist and access prior protocols, guidelines, and preferences, covering most cross-session memory needs for this task.",
+      "_timestamp": "2026-04-06T02:59:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing research protocols requires tracking many interdependent elements (study design, endpoints, covariates, sampling plans, inclusion criteria) and ensuring statistical recommendations align across them, where missing a detail can lead to incorrect analyses.",
+      "adequacy_evidence": "Current agents can use retrieval and chunking to handle long documents, but they still sometimes lose or misweight details across sections, leading to occasional inconsistencies in recommendations.",
+      "_timestamp": "2026-04-06T02:59:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing medical research protocols and selecting appropriate statistical methods is typically an offline, deliberative task with turnaround times ranging from hours to days, not requiring rapid responses.",
+      "adequacy_evidence": "Because there is no tight latency constraint, AI systems can use extended reasoning and tool use without degrading quality; speed does not meaningfully limit performance.",
+      "_timestamp": "2026-04-06T02:59:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether proposed statistical methods are appropriate for a clinical protocol requires deep domain expertise and understanding of study design, endpoints, assumptions, and regulatory standards; errors can be subtle and may not surface until later stages of analysis or review.",
+      "adequacy_evidence": "Current AI systems frequently make nuanced or context-mismatched statistical recommendations, and detecting these requires expert review and careful cross-checking, making verification effort high and essential before use.",
+      "_timestamp": "2026-04-06T02:59:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect statistical recommendations in clinical research protocols can invalidate study results, lead to regulatory rejection, or expose patients to ineffective or harmful interventions, so even rare residual errors carry serious consequences.",
+      "adequacy_evidence": "With expert review and standard QC, many AI errors can be caught, but subtle issues in study design, assumptions, or regulatory alignment may still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T02:59:26"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Regulatory frameworks (e.g., FDA requirements for clinical trial design and analysis plans) generally require qualified human experts to be responsible for protocol review and statistical recommendations, but do not explicitly prohibit AI use as a tool. This creates partial restriction, as AI cannot autonomously fulfill the legally recognized role without human oversight or sign-off.",
+      "_timestamp": "2026-04-06T02:59:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task directly informs clinical study design and regulatory submissions, requiring acceptance by investigators, sponsors, IRBs, and regulators who rely on the statistician\u2019s expertise and professional judgment.",
+      "adequacy_evidence": "In regulated clinical research, stakeholders expect credentialed human biostatisticians to be accountable; an AI acting independently would face strong resistance and typically cannot substitute for required human sign-off.",
+      "_timestamp": "2026-04-06T02:59:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

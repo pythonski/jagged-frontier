@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3099.01",
+  "task_id": 17653,
+  "task_statement": "Monitor the flow of energy in response to changes in consumer demand.",
+  "occupation_title": "Energy Brokers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Monitoring energy flow in response to demand is typically done through digital control systems, dashboards, and data feeds that can be accessed via computer networks. The task primarily involves observing and analyzing system data rather than physically manipulating equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous conditions including regional grid dynamics, weather-driven demand shifts, market fluctuations, and rare disruption events, creating a long-tailed distribution of scenarios.",
+      "adequacy_evidence": "Large volumes of historical grid, market, and demand data exist, but much high-resolution operational data is proprietary or restricted, leaving some edge cases and real-time decision processes only partially covered.",
+      "_timestamp": "2026-04-06T00:19:52"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing monitoring and incremental adjustments over time, but each observation-response cycle is relatively modular rather than a long, tightly coupled dependency chain.",
+      "adequacy_evidence": "Modern agentic systems can sustain continuous monitoring loops with tool support and state tracking without significant degradation, as each step is short and repeatable rather than deeply interdependent.",
+      "_timestamp": "2026-04-06T00:19:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring energy flow involves implicit context such as grid conditions, market signals, and operational thresholds, requiring some interpretation beyond a literal instruction.",
+      "adequacy_evidence": "Current AI agents can reliably infer monitoring objectives and adapt to demand signals using structured data feeds and predefined operational criteria, with minimal ambiguity-related failure.",
+      "_timestamp": "2026-04-06T00:19:53"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring energy flow relative to demand involves interpreting real-time data streams, recognizing anomalies, and applying experience-based judgment about system behavior under varying conditions.",
+      "adequacy_evidence": "Current agents can process and flag patterns in energy data but lack robust calibration for nuanced, context-specific interpretations (e.g., distinguishing benign fluctuations from meaningful shifts) without human oversight.",
+      "_timestamp": "2026-04-06T00:19:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking multiple real-time data streams (energy supply, demand fluctuations, grid conditions) and maintaining an accurate, evolving state where missing or misintegrating a detail can affect decisions.",
+      "adequacy_evidence": "Agents can integrate and monitor structured data streams with tools, but may struggle with continuously updating state and prioritizing salient changes, leading to occasional context loss or misalignment.",
+      "_timestamp": "2026-04-06T00:19:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task commonly involves interpreting time-series data, dashboards, and grid metrics that are often visualized as charts or graphs, though the underlying information is fundamentally structured and numerical.",
+      "adequacy_evidence": "Current AI agents can ingest structured data directly and interpret or generate visualizations reliably, so handling these modest multimodal elements is well within capability.",
+      "_timestamp": "2026-04-06T00:19:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from historical demand and energy flow patterns (e.g., trends, seasonality), but much of the monitoring is driven by current real-time data streams rather than deep longitudinal case histories.",
+      "adequacy_evidence": "Existing data infrastructure (time-series databases, dashboards, retrieval systems) already supports reliable cross-session storage and access to historical energy and demand data, which AI agents can readily utilize.",
+      "_timestamp": "2026-04-06T00:19:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Energy brokers must monitor demand fluctuations and energy flows in near-real-time to make timely trading or allocation decisions, often within seconds to minutes.",
+      "adequacy_evidence": "AI systems can process streaming data quickly, but tight latency can limit deeper scenario analysis or forecasting, leading to some degradation in more complex or rapidly shifting situations.",
+      "_timestamp": "2026-04-06T00:19:54"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Energy flow is tracked through real-time metering, SCADA systems, and market data, so discrepancies are often detectable via cross-checks, but interpreting anomalies still requires domain expertise and attention.",
+      "adequacy_evidence": "AI systems can process and flag inconsistencies, but integration errors, misinterpretation of transient conditions, or data quality issues mean human oversight is still needed to validate outputs.",
+      "_timestamp": "2026-04-06T00:19:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from monitoring energy flow in response to demand changes. This function is already widely automated in energy management and grid operations, though broader trading or decision authority may be regulated.",
+      "_timestamp": "2026-04-06T00:19:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily an internal, system-level monitoring activity with outputs consumed by operational systems or technical teams, not requiring direct stakeholder interaction or trust in the performer's identity.",
+      "adequacy_evidence": "Utilities already rely heavily on automated and algorithmic monitoring systems, and stakeholders are indifferent to whether a human or AI performs this function.",
+      "_timestamp": "2026-04-06T00:19:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Real-time monitoring of energy flow affects grid stability, pricing, and supply-demand balance; even small residual errors can contribute to outages, financial losses, or cascading system disruptions.",
+      "adequacy_evidence": "AI systems can reliably track and flag deviations using structured data and automated checks, but edge cases and dynamic grid conditions mean some residual risk remains that operators may find problematic.",
+      "_timestamp": "2026-04-06T00:19:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

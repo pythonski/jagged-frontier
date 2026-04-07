@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1241.00",
+  "task_id": 17167,
+  "task_statement": "Document or evaluate patients' medical histories.",
+  "occupation_title": "Ophthalmologists, Except Pediatric",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Documenting and reviewing patient medical histories is typically done in electronic health records and can be performed remotely, but in practice it often occurs during in-person clinical visits where the physician gathers or confirms history directly with the patient."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ophthalmic medical histories span diverse patient demographics, comorbidities (e.g., diabetes, hypertension), and ocular conditions, but follow relatively standardized clinical structures and questioning patterns.",
+      "adequacy_evidence": "Large corpora of medical records, case reports, and clinical guidelines exist, but real-world EHR data are privacy-restricted and some nuanced patient presentations are underrepresented, requiring partial synthesis or targeted fine-tuning.",
+      "_timestamp": "2026-04-06T02:18:02"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating ophthalmic patient histories requires some clinical judgment to identify relevant comorbidities, subtle symptom patterns, and risk factors, but much of the process follows structured questioning and documentation norms.",
+      "adequacy_evidence": "Current agents can reliably extract and summarize structured histories, but show gaps in prioritizing clinically salient details and handling nuanced or ambiguous patient narratives.",
+      "_timestamp": "2026-04-06T02:18:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step processes such as eliciting history, organizing information chronologically, reconciling inconsistencies, and documenting findings, requiring moderate sequential consistency.",
+      "adequacy_evidence": "Frontier agents can generally maintain coherence across these moderate sequences with tooling, but may still show some drift or minor inconsistencies over longer patient narratives or complex histories.",
+      "_timestamp": "2026-04-06T02:18:03"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While there are standard history-taking frameworks, clinicians must decide which details are relevant based on presenting symptoms, risk factors, and subtle patient cues, making some objectives context-dependent.",
+      "adequacy_evidence": "Current agents can follow structured intake protocols and adapt questions, but they often miss nuanced clinical relevance or fail to probe appropriately without human guidance.",
+      "_timestamp": "2026-04-06T02:18:03"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating ophthalmic patients requires integrating multiple sources within a visit (systemic conditions like diabetes, medications, prior ocular history, surgeries, imaging reports), but the volume is typically structured and bounded per patient encounter.",
+      "adequacy_evidence": "Current agents can process and summarize multi-document medical context with retrieval, but may omit or misprioritize relevant details (e.g., subtle comorbidities or medication interactions) when information is dispersed across records.",
+      "_timestamp": "2026-04-06T02:18:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Gathering and documenting medical histories often involves spoken patient interviews and occasionally integrating information from prior records, but the core task is largely text-based once information is captured.",
+      "adequacy_evidence": "Current AI systems can reliably handle speech-to-text, text synthesis, and structured record integration, with minimal gaps for this level of multimodal demand.",
+      "_timestamp": "2026-04-06T02:18:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "History-taking and documentation typically occur during patient encounters where responses are expected within seconds to a few minutes, but not instantaneously.",
+      "adequacy_evidence": "Current AI systems can generate and structure medical histories quickly within this time frame without needing to truncate reasoning, maintaining adequate quality.",
+      "_timestamp": "2026-04-06T02:18:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating and documenting ophthalmic medical histories relies on longitudinal patient records, including prior diagnoses, treatments, imaging, and progression over time across many visits.",
+      "adequacy_evidence": "Current AI systems can access and retrieve structured EHR data with tooling, but still show gaps in reliably maintaining, updating, and synthesizing longitudinal patient context across fragmented systems and repeated encounters.",
+      "_timestamp": "2026-04-06T02:18:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in documenting or evaluating medical histories can lead to missed contraindications, incorrect diagnoses, or inappropriate treatments, with potentially serious or irreversible consequences for patient care.",
+      "adequacy_evidence": "Even with physician review and standard checks, AI systems can introduce subtle omissions or misinterpretations that are hard to detect, leaving some residual risk that remains clinically significant but not overwhelmingly unmanageable.",
+      "_timestamp": "2026-04-06T02:18:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Eliciting and evaluating a patient\u2019s medical history requires direct patient interaction, trust, and perceived clinical authority, as patients must disclose sensitive information and rely on the clinician\u2019s judgment.",
+      "adequacy_evidence": "Many patients would be hesitant to fully trust or disclose sensitive medical details to an AI system, though partial acceptance exists in structured intake tools, making resistance meaningful but not prohibitive.",
+      "_timestamp": "2026-04-06T02:18:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "Medical histories can be cross-checked against patient records, prior notes, and direct patient questioning, but this requires clinical expertise and time, and omissions or misinterpretations may not be immediately obvious.",
+      "adequacy_evidence": "Current AI systems frequently omit relevant details, misinterpret clinical context, or introduce subtle inaccuracies, requiring thorough clinician review to ensure completeness and correctness.",
+      "_timestamp": "2026-04-06T02:18:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Medical evaluation of patient histories constitutes the practice of medicine, which legally requires a licensed physician; AI cannot independently perform this role. However, AI tools are permitted to assist with documentation and analysis under physician supervision, creating partial rather than absolute restriction.",
+      "_timestamp": "2026-04-06T02:18:06"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

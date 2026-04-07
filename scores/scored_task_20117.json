@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-2022.00",
+  "task_id": 20117,
+  "task_statement": "Monitor the academic eligibility of student athletes.",
+  "occupation_title": "Coaches and Scouts",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Monitoring eligibility typically involves reviewing grades, transcripts, and academic reports through school information systems or email, which can be done remotely. However, coaches often also discuss progress with teachers, counselors, or athletes in person, adding a non-digital component."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Academic eligibility monitoring is largely governed by explicit rules (GPA thresholds, credit requirements, compliance policies), but edge cases like course equivalencies, transfer credits, or waiver situations require some experience-based judgment.",
+      "adequacy_evidence": "AI agents can reliably apply formal rules and flag issues, but they may struggle with nuanced institutional interpretations or atypical cases that depend on contextual judgment and informal precedent.",
+      "_timestamp": "2026-04-06T05:42:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing monitoring across a term or season, checking grades, credits, and compliance at multiple points, but individual checks are only loosely coupled rather than tightly interdependent.",
+      "adequacy_evidence": "AI agents can generally handle repeated tracking and rule-based checks, but over extended sequences they may show some drift in maintaining constraints or updating status without robust external systems.",
+      "_timestamp": "2026-04-06T05:42:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Academic eligibility is largely governed by explicit rules (e.g., GPA thresholds, credit requirements, enrollment status) set by institutions and athletic associations, though occasional edge cases and policy interpretation introduce some context dependence.",
+      "adequacy_evidence": "Current AI systems can reliably apply codified rules, track requirements, and flag eligibility issues, with only minor difficulty handling ambiguous exceptions that can be resolved with predefined guidance.",
+      "_timestamp": "2026-04-06T05:42:06"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different institutional policies (e.g., NCAA divisions, school rules), student academic paths, and edge cases like transfers or probation, but remains structured and rule-governed rather than highly open-ended.",
+      "adequacy_evidence": "Eligibility rules, academic records, and compliance procedures are well-documented and widely available, and realistic cases can be readily synthesized, giving training pipelines strong coverage of relevant scenarios.",
+      "_timestamp": "2026-04-06T05:42:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring academic eligibility typically involves periodic reviews of grades, credits, and compliance records, with turnaround times of hours to days rather than real-time demands.",
+      "adequacy_evidence": "AI systems can easily process and verify eligibility data within these relaxed timeframes without needing to truncate reasoning, so speed does not degrade output quality.",
+      "_timestamp": "2026-04-06T05:42:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring academic eligibility primarily involves reviewing transcripts, grades, credit hours, and compliance records, which are text and numeric data.",
+      "adequacy_evidence": "Current AI systems handle structured and unstructured text data effectively, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-06T05:42:07"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Monitoring eligibility requires tracking each athlete\u2019s grades, course loads, credit progress, and compliance over multiple terms, making it inherently longitudinal and stateful.",
+      "adequacy_evidence": "Current AI systems can reliably maintain and query persistent records via databases and integrations, so cross-session memory needs are well supported with standard tooling.",
+      "_timestamp": "2026-04-06T05:42:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple data points (grades, credits, course enrollment, eligibility rules) across several athletes, requiring aggregation and periodic updates within an episode.",
+      "adequacy_evidence": "With structured data access and tools, current agents can reliably store, retrieve, and update this level of information without significant loss or drift.",
+      "_timestamp": "2026-04-06T05:42:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Eligibility can be verified through records like transcripts, credit counts, and compliance rules, but requires domain knowledge of academic and athletic regulations and careful cross-checking of multiple data sources.",
+      "adequacy_evidence": "Current AI can assist with rule application and data tracking but is prone to misinterpretation of eligibility rules or data inconsistencies, so human review and validation remain necessary.",
+      "_timestamp": "2026-04-06T05:42:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interaction with student-athletes, academic staff, and compliance offices, who rely on and may question eligibility determinations, though the performer's personal identity is not central.",
+      "adequacy_evidence": "Stakeholders may accept AI-assisted monitoring systems, but full trust in an AI handling eligibility compliance\u2014especially in edge cases or disputes\u2014would likely face some resistance.",
+      "_timestamp": "2026-04-06T05:42:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from monitoring academic eligibility; tools can be used so long as they comply with privacy laws like FERPA. These laws govern data handling, not who or what performs the monitoring.",
+      "_timestamp": "2026-04-06T05:42:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in eligibility monitoring can lead to sanctions, forfeited games, or reputational harm, but they are typically reversible and not physically dangerous, making occasional residual errors survivable.",
+      "adequacy_evidence": "With structured data (grades, credits, rules) and standard compliance checks, AI systems can reliably track eligibility, and any residual errors after review are unlikely to exceed acceptable risk levels.",
+      "_timestamp": "2026-04-06T05:42:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2071.00",
+  "task_id": 539,
+  "task_statement": "Identify, compile, abstract, and code patient data, using standard classification systems.",
+  "occupation_title": "Medical Records and Health Information Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Coding and abstracting patient data is typically done in electronic health record systems using standard classification software, which can be performed remotely. However, some settings still require handling or reviewing physical charts or on-site records, so not all instances are fully digital."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Applying classification systems like ICD or CPT often involves interpreting ambiguous clinical documentation and selecting codes based on nuanced clinical context, which requires some experience-based judgment beyond strict rules.",
+      "adequacy_evidence": "Current AI systems handle routine coding well but show gaps in edge cases, such as conflicting documentation or subtle clinical distinctions, where human coders rely on learned judgment.",
+      "_timestamp": "2026-04-06T00:39:01"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Applying standard classification systems (e.g., ICD codes) requires interpreting clinical documentation, resolving ambiguities in physician notes, and inferring intent when documentation is incomplete or indirect.",
+      "adequacy_evidence": "Current AI can map structured or clear clinical text to codes, but often misinterprets nuanced or ambiguous documentation and requires human review to ensure correct abstraction and coding decisions.",
+      "_timestamp": "2026-04-06T00:39:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (identifying, extracting, abstracting, and coding data) where consistency across steps matters, but each patient record is typically processed in a bounded, moderately sized sequence.",
+      "adequacy_evidence": "AI agents can generally handle these structured multi-step processes, but over longer batches or complex records they may show drift or inconsistencies in coding decisions, requiring oversight.",
+      "_timestamp": "2026-04-06T00:39:01"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied clinical domains, note styles, and coding systems (e.g., ICD, CPT), but is still structured around standardized documentation and classification rules rather than an extremely long-tailed distribution.",
+      "adequacy_evidence": "There is substantial coverage via coding manuals, annotated datasets, and synthetic cases, but real-world EHR variability and access restrictions on private clinical data leave some edge cases and nuanced documentation patterns underrepresented.",
+      "_timestamp": "2026-04-06T00:39:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires synthesizing large volumes of heterogeneous patient information (clinical notes, lab results, histories) and mapping them accurately to standardized codes, where missing or misinterpreting details can lead to errors.",
+      "adequacy_evidence": "Current agents with retrieval and chunking can handle large records, but they still show lapses in maintaining full context across lengthy charts and may omit or misweight details during abstraction and coding.",
+      "_timestamp": "2026-04-06T00:39:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the work involves structured and unstructured text from electronic health records, technicians often must interpret scanned documents, handwritten notes, and occasionally medical images or charts, requiring some multimodal input handling.",
+      "adequacy_evidence": "Current AI systems can handle standard document OCR and structured data well but remain unreliable on degraded scans, handwritten notes, and nuanced clinical visuals, leading to moderate gaps in multimodal performance.",
+      "_timestamp": "2026-04-06T00:39:03"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying clinical coding and abstraction requires domain expertise to interpret medical records and ensure correct application of classification systems (e.g., ICD), with errors often subtle and not immediately observable.",
+      "adequacy_evidence": "Current AI systems still make non-obvious errors in clinical interpretation and coding, requiring expert review of outputs against source records, making verification effort substantial and unavoidable.",
+      "_timestamp": "2026-04-06T00:39:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in patient data abstraction and coding can affect clinical decisions, billing, legal compliance, and patient safety; even rare mistakes can have significant downstream consequences.",
+      "adequacy_evidence": "With standard QA processes (audits, rule-based checks), AI outputs can be substantially validated, but residual risks like subtle miscoding or context misinterpretation still occur at a non-negligible rate.",
+      "_timestamp": "2026-04-06T00:39:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Accurate coding and abstraction often rely on a patient\u2019s longitudinal record (prior diagnoses, treatments), but this information is typically stored in structured EHR systems rather than in the technician\u2019s own memory.",
+      "adequacy_evidence": "Current AI systems can integrate with databases and EHRs to retrieve persistent patient histories across sessions, so cross-session memory needs are well supported by existing infrastructure.",
+      "_timestamp": "2026-04-06T00:39:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Medical records coding and abstraction are typically performed in batch workflows with productivity targets, not real-time deadlines; minutes per record or longer is acceptable.",
+      "adequacy_evidence": "Current AI systems can operate well within these loose time constraints without needing to truncate reasoning, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T00:39:04"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The coded and abstracted data is used by clinicians, insurers, and administrators, so others rely on the output, but they typically do not directly interact with or depend on the technician\u2019s personal identity.",
+      "adequacy_evidence": "While much coding is already partially automated, some stakeholders (e.g., compliance officers, auditors) may be cautious about fully AI-driven coding due to accuracy and accountability concerns, leading to moderate resistance.",
+      "_timestamp": "2026-04-06T00:39:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations that prohibit AI from performing medical data abstraction and coding tasks; these functions are not restricted to licensed professionals. While HIPAA and related rules govern data privacy and security, they regulate how the task is performed, not whether AI can perform it.",
+      "_timestamp": "2026-04-06T00:39:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

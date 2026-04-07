@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4151.00",
+  "task_id": 2678,
+  "task_statement": "Compute total charges for merchandise or services and shipping charges.",
+  "occupation_title": "Order Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Computing totals and shipping charges is typically done using order management systems, spreadsheets, or POS software, but some workplaces still perform calculations on paper forms or calculators alongside physical order documents."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans some variability (tax rules, discounts, shipping tiers, currencies), but follows well-structured, rule-based patterns rather than a highly heterogeneous distribution.",
+      "adequacy_evidence": "There is abundant accessible data (invoices, receipts, pricing rules) and the computation process is explicit and easily synthesized, so current AI systems can cover the full distribution effectively.",
+      "_timestamp": "2026-04-05T23:32:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is typically governed by explicit pricing, tax, and shipping rules; objectives and success criteria are clearly defined and procedural.",
+      "adequacy_evidence": "Current AI systems can reliably follow explicit pricing schemas and compute totals when provided the relevant inputs and rules, with minimal ambiguity to resolve.",
+      "_timestamp": "2026-04-05T23:32:38"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing total charges involves straightforward arithmetic aggregation of item prices and shipping, typically a short, bounded sequence with minimal interdependence between steps.",
+      "adequacy_evidence": "AI systems reliably handle short arithmetic sequences and maintain consistency across such limited steps without degradation.",
+      "_timestamp": "2026-04-05T23:32:38"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves summing a small set of values (item prices, shipping, possibly taxes or discounts), all of which fit easily within a minimal working context.",
+      "adequacy_evidence": "Current AI agents reliably track and combine small numbers of inputs within a single episode, with negligible risk of losing or mismanaging relevant information.",
+      "_timestamp": "2026-04-05T23:32:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing total charges is typically a self-contained transaction using current order details (items, prices, shipping), without reliance on prior interactions or accumulated history.",
+      "adequacy_evidence": "AI systems can fully handle single-transaction calculations without needing cross-session memory, so there is no meaningful gap in capability.",
+      "_timestamp": "2026-04-05T23:32:39"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves applying explicit pricing rules, tax rates, discounts, and shipping fee schedules, all of which are well-defined and procedural.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured pricing rules, perform arithmetic, and integrate rate tables or APIs, leaving no meaningful gap in tacit judgment.",
+      "_timestamp": "2026-04-05T23:32:39"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Order clerks typically compute totals during customer interactions (e.g., checkout or order processing), where responses are expected within seconds but do not require complex reasoning.",
+      "adequacy_evidence": "Arithmetic calculations and summations are trivial for AI systems and can be performed instantly without sacrificing accuracy, well within the time constraints.",
+      "_timestamp": "2026-04-05T23:32:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is a straightforward calculation whose output is typically consumed as part of an order process, with no reliance on who performed the computation.",
+      "adequacy_evidence": "Stakeholders are indifferent to whether a human or AI computes totals, and automated systems already widely perform this function without resistance.",
+      "_timestamp": "2026-04-05T23:32:41"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves calculating totals from prices, quantities, and shipping rates, which are typically represented as structured or textual data (e.g., order forms, databases). No inherent need for image, audio, or other non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based arithmetic and structured data processing reliably, so there is no meaningful multimodal gap affecting performance.",
+      "_timestamp": "2026-04-05T23:32:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in computing totals or shipping charges can cause billing discrepancies and customer dissatisfaction, but are typically reversible through refunds or corrections and rarely have severe downstream consequences.",
+      "adequacy_evidence": "AI systems with tooling can perform arithmetic and rule-based charge calculations with very high accuracy, and standard validation checks (e.g., recomputation, reconciliation) reduce residual error risk to an acceptable level.",
+      "_timestamp": "2026-04-05T23:32:41"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations requiring a human to compute charges for merchandise or shipping; this function is already widely automated in software systems. General consumer protection or billing accuracy rules do not restrict AI from performing the calculation itself.",
+      "_timestamp": "2026-04-05T23:32:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Totals for merchandise and shipping are straightforward arithmetic and rule-based calculations that can be easily recomputed or cross-checked with receipts and pricing systems.",
+      "adequacy_evidence": "AI outputs can be trivially verified using calculators or automated checks, and current systems already achieve near-perfect accuracy on such structured computations.",
+      "_timestamp": "2026-04-05T23:32:42"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

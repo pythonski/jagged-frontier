@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9094.00",
+  "task_id": 9425,
+  "task_statement": "Decide which information should be included or excluded in reports.",
+  "occupation_title": "Medical Transcriptionists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Selecting which information to include or exclude in medical reports is a cognitive editing task performed while reviewing dictated audio and text on a computer, which can be done entirely with standard digital tools."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Medical transcriptionists follow established documentation standards but must still interpret clinician intent, relevance, and legal/clinical significance when deciding what to include or omit.",
+      "adequacy_evidence": "Current AI can apply general documentation rules but often misses subtle context (e.g., clinically relevant nuances or implied priorities), requiring human review to ensure appropriate inclusion/exclusion.",
+      "_timestamp": "2026-04-06T02:55:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many inclusion/exclusion rules are governed by templates, style guides, and legal requirements, transcriptionists still apply judgment to omit redundancies, clarify ambiguities, and ensure clinically relevant details are preserved.",
+      "adequacy_evidence": "Current AI can follow explicit documentation rules well but shows gaps in nuanced clinical relevance judgments and context-sensitive omissions, especially in less standardized or ambiguous dictations.",
+      "_timestamp": "2026-04-06T02:55:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing a full dictation and consistently applying inclusion/exclusion rules across sections of a report, requiring moderate sequential consistency but not tightly interdependent steps.",
+      "adequacy_evidence": "Frontier AI agents can maintain stable criteria application across document-length sequences with minimal drift, especially with structured prompts and guidelines.",
+      "_timestamp": "2026-04-06T02:55:47"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different medical specialties, report types, and physician dictation styles, creating moderate variability but within well-defined clinical documentation norms and standards.",
+      "adequacy_evidence": "Extensive corpora of clinical notes, transcription guidelines, and annotated medical records (including de-identified datasets) provide strong coverage of inclusion/exclusion decisions, with feasible synthetic augmentation for edge cases.",
+      "_timestamp": "2026-04-06T02:55:47"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves processing a full dictated medical record and selectively retaining clinically relevant details while omitting redundancies, requiring moderate tracking and compression of information within a single report.",
+      "adequacy_evidence": "Current AI systems can generally manage and summarize such inputs, but may occasionally miss or misprioritize details, especially in long or complex dictations.",
+      "_timestamp": "2026-04-06T02:55:48"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Decisions about inclusion or exclusion are primarily based on the current dictation, standardized report formats, and medical documentation guidelines, not prior cases.",
+      "adequacy_evidence": "Since the task is largely self-contained per report, existing AI systems do not need persistent cross-session memory to perform it effectively.",
+      "_timestamp": "2026-04-06T02:55:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Medical transcriptionists rely on audio recordings of dictated medical notes, requiring accurate speech perception to determine which content should be included or excluded in written reports.",
+      "adequacy_evidence": "Current AI systems handle medical speech-to-text well in clear conditions, but still struggle with poor audio quality, heavy accents, and nuanced clinical phrasing, which can affect reliable content selection.",
+      "_timestamp": "2026-04-06T02:55:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Medical transcriptionists typically work asynchronously from recorded dictation, with turnaround times measured in minutes to hours rather than requiring immediate decisions.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to apply detailed reasoning without impacting workflow, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T02:55:49"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "In medical transcription, incorrect inclusion or omission of clinical details can affect patient care, legal documentation, and billing, so even rare residual errors can have serious downstream consequences.",
+      "adequacy_evidence": "Even after review, AI may systematically misjudge clinical relevance or omit nuanced details, leaving a non-trivial residual risk that remains concerning though not catastrophic with human oversight.",
+      "_timestamp": "2026-04-06T02:55:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task affects clinical reports used by physicians and healthcare organizations, so stakeholders rely on the output, though the transcriber\u2019s personal identity is not central.",
+      "adequacy_evidence": "Healthcare stakeholders show some openness to AI-assisted documentation, but concerns about accuracy, liability, and oversight mean acceptance is not \u06a9\u0627\u0645\u0644 and often requires human review.",
+      "_timestamp": "2026-04-06T02:55:50"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining what to include or exclude in medical reports involves nuanced clinical judgment; omissions or inappropriate inclusions can be subtle and require domain expertise and cross-checking against source audio and medical context to detect.",
+      "adequacy_evidence": "Current AI systems still produce omission and relevance errors that are not easily flagged automatically, so thorough human review is needed to catch subtle mistakes, making verification effort substantial.",
+      "_timestamp": "2026-04-06T02:55:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI assisting with report content selection, but healthcare documentation is governed by HIPAA and related rules requiring human oversight and clinician authentication of medical records. This creates partial constraints, as ultimate responsibility cannot be delegated to AI alone.",
+      "_timestamp": "2026-04-06T02:55:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

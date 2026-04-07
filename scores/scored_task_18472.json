@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2041.00",
+  "task_id": 18472,
+  "task_statement": "Evaluate chemical equipment and processes to identify ways to optimize performance or to ensure compliance with safety and environmental regulations.",
+  "occupation_title": "Chemical Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Evaluation often relies on analyzing process data, simulations, design documents, and regulatory standards using computer tools. However, many cases require on-site inspections of equipment and plant operations to verify performance or compliance."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating chemical processes for optimization and regulatory compliance requires experiential judgment about tradeoffs, failure modes, plant-specific constraints, and interpreting ambiguous safety margins that are not fully captured in explicit rules.",
+      "adequacy_evidence": "Current AI agents can apply engineering principles and analyze documented cases, but they lack robust calibration for nuanced, plant-specific conditions and edge-case safety judgments that experienced engineers develop through practice.",
+      "_timestamp": "2026-04-06T05:39:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Regulatory compliance criteria are often explicit, but optimization goals involve tradeoffs (cost, yield, safety margins) that depend on plant-specific context and stakeholder priorities, requiring interpretation beyond literal instructions.",
+      "adequacy_evidence": "Current agents can use regulations and engineering heuristics to infer goals, but they often miss nuanced operational priorities or implicit constraints, requiring human iteration to refine recommendations.",
+      "_timestamp": "2026-04-06T05:39:36"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a highly heterogeneous set of chemical processes, equipment types, operating conditions, and regulatory regimes, with strong context dependence across industries (e.g., petrochemicals, pharmaceuticals, food processing).",
+      "adequacy_evidence": "While textbooks, standards, incident reports, and engineering case studies provide substantial coverage, much high-fidelity operational data and nuanced optimization practices are proprietary or sparsely documented, leaving some gaps that are only partially addressable via synthesis or simulation.",
+      "_timestamp": "2026-04-06T05:39:36"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analyses (data collection, process modeling, performance evaluation, and regulatory assessment) where outputs from earlier steps inform later ones, but these steps are often modular and can be revisited independently.",
+      "adequacy_evidence": "Frontier AI agents can handle multi-step analytical workflows with tooling, but over longer chains they show some drift in assumptions and constraint tracking, requiring oversight to maintain consistency.",
+      "_timestamp": "2026-04-06T05:39:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating chemical equipment and processes requires integrating large volumes of heterogeneous information (process flow diagrams, operating conditions, material properties, safety data, and regulatory constraints) where missing details can lead to incorrect conclusions.",
+      "adequacy_evidence": "Current agents can handle sizable context with retrieval tools, but they still exhibit drift or omission when tracking complex, interdependent process details across long analyses.",
+      "_timestamp": "2026-04-06T05:39:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluations often rely on historical performance data, prior audits, and past modifications, but individual assessments can be conducted with documented records rather than continuous lived context.",
+      "adequacy_evidence": "Current agents can store and retrieve structured histories via databases and tools, but may inconsistently surface relevant past context or integrate evolving plant-specific nuances across sessions.",
+      "_timestamp": "2026-04-06T05:39:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Evaluating chemical equipment and processes for optimization or compliance is typically an analytical task performed over hours to days, not under real-time constraints.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform detailed analysis without meaningful degradation from latency constraints, as speed is not a limiting factor for this task.",
+      "_timestamp": "2026-04-06T05:39:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting process flow diagrams (PFDs), piping and instrumentation diagrams (P&IDs), and possibly visual inspection data, but much of the analysis can still be conveyed through text and numerical data.",
+      "adequacy_evidence": "Current agents can interpret standard diagrams and structured data reasonably well, but struggle with complex, real-world visual inputs (e.g., plant conditions, nuanced spatial layouts) and cross-modal integration at high fidelity.",
+      "_timestamp": "2026-04-06T05:39:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing chemical processes and equipment involves complex thermodynamics, kinetics, and regulatory constraints where errors can be subtle and may only surface under specific operating conditions or over long time horizons, requiring expert review, simulation, or physical validation.",
+      "adequacy_evidence": "Current AI systems can generate plausible but flawed analyses or miss edge-case safety and compliance issues, and verifying their recommendations demands extensive expert checking, modeling, and sometimes pilot testing, making unverified use unsafe.",
+      "_timestamp": "2026-04-06T05:39:38"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "The task involves internal stakeholders (plant managers, safety teams) and external regulators who rely on the evaluation, and the credibility of the evaluator (e.g., licensed engineer) can matter for acceptance.",
+      "adequacy_evidence": "Regulators and organizations typically require sign-off from qualified human engineers, and stakeholders may distrust or reject AI-only assessments for safety and compliance, making acceptance of AI in this role limited.",
+      "_timestamp": "2026-04-06T05:39:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing analysis, but many evaluations tied to safety or regulatory compliance must be reviewed, certified, or signed by a licensed Professional Engineer or designated responsible official. This creates partial restriction: AI can assist, but cannot autonomously fulfill legally recognized responsibility.",
+      "_timestamp": "2026-04-06T05:39:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in evaluating chemical processes or compliance can lead to safety incidents, environmental harm, regulatory violations, and large financial or legal consequences, so even rare residual mistakes are highly consequential.",
+      "adequacy_evidence": "While simulations, audits, and human oversight can catch many issues, current AI systems still exhibit occasional gaps in edge-case reasoning and hazard identification, leaving some non-negligible residual risk after standard checks.",
+      "_timestamp": "2026-04-06T05:39:40"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

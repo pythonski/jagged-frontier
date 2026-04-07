@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4151.00",
+  "task_id": 2673,
+  "task_statement": "Direct specified departments or units to prepare and ship orders to designated locations.",
+  "occupation_title": "Order Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Order clerks typically direct departments through order management systems, email, or internal messaging, which can be done remotely. However, in some workplaces they may coordinate directly with shipping or warehouse staff in person."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different products, shipping methods, and organizational workflows, but is largely governed by standardized logistics procedures and order management systems.",
+      "adequacy_evidence": "Extensive SOPs, ERP logs, fulfillment workflows, and synthetic simulation environments provide rich, process-level data for training, with no major gaps in coverage.",
+      "_timestamp": "2026-04-06T01:04:24"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is largely governed by explicit procedures, order specifications, and logistics rules, though some experience-based judgment may be used for prioritization or handling exceptions.",
+      "adequacy_evidence": "Current AI systems can reliably apply rules, track constraints, and handle common exceptions using structured data and workflows, with minimal need for human-like tacit calibration.",
+      "_timestamp": "2026-04-06T01:04:25"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Orders and destinations are typically specified, but some context (priority, special handling, coordination constraints) may require interpretation beyond literal instructions.",
+      "adequacy_evidence": "With structured order data and standard operating procedures, current agents can reliably infer and execute directives with minimal ambiguity resolution needed.",
+      "_timestamp": "2026-04-06T01:04:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating multiple steps (communicating orders, ensuring preparation, confirming shipment), requiring consistency across a moderate sequence but not deeply interdependent or long-running chains.",
+      "adequacy_evidence": "AI agents can generally manage structured workflow coordination with tools, but may show some degradation in maintaining context and follow-through across multiple handoffs or extended interactions.",
+      "_timestamp": "2026-04-06T01:04:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple orders, destinations, and departmental instructions within a single episode, but the information is typically structured and limited in scope (e.g., order details, shipping priorities).",
+      "adequacy_evidence": "Current AI agents with tool use and structured data handling can reliably manage and update such within-episode information without significant loss or drift.",
+      "_timestamp": "2026-04-06T01:04:26"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily coordination and communication of order details, which are typically handled through text-based systems (e.g., order forms, shipping instructions). Non-text modalities are not essential to performing the task.",
+      "adequacy_evidence": "Since the task is fundamentally text-driven, current AI agents can fully handle the modality requirements without reliance on advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T01:04:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many shipping directives are tied to individual orders, the role can involve recurring clients, standing shipping preferences, backorder tracking, and coordination patterns that benefit from retained context across instances.",
+      "adequacy_evidence": "Current AI systems integrated with ERP/CRM databases can reliably store and retrieve order histories, client preferences, and routing rules, meeting the modest cross-session memory needs of the task.",
+      "_timestamp": "2026-04-06T01:04:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Order clerks typically need to coordinate shipments promptly within operational workflows, but decisions and directions can usually be made within seconds to minutes rather than real-time constraints.",
+      "adequacy_evidence": "Current AI agents can generate and communicate routing or shipping instructions \u0628\u0633\u0631\u0639\u0629 within the required timeframe without needing long reasoning, so speed limits do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T01:04:28"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordinating with internal departments or units that must follow instructions, so there are stakeholders, but the performer\u2019s identity or personal authority is not central.",
+      "adequacy_evidence": "Internal operational staff already accept automated systems (e.g., ERP, warehouse management systems) issuing routing and shipping instructions, so AI agents would face little to no resistance.",
+      "_timestamp": "2026-04-06T01:04:28"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in directing order preparation and shipment can cause delays, incorrect deliveries, and customer dissatisfaction, but these are typically recoverable through reshipping or corrections.",
+      "adequacy_evidence": "With standard checks like order validation, inventory systems, and shipping confirmations, AI-driven coordination would leave little residual risk beyond what is already operationally tolerable.",
+      "_timestamp": "2026-04-06T01:04:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from directing order preparation and shipment in general clerical or logistics contexts. While certain specialized shipments (e.g., hazardous materials) require trained or certified human oversight, these do not categorically bar AI involvement in directing routine order fulfillment tasks.",
+      "_timestamp": "2026-04-06T01:04:29"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors such as incorrect quantities, destinations, or department assignments can typically be identified through order management systems, confirmations, and shipping records, but require deliberate checking and coordination across systems.",
+      "adequacy_evidence": "Current AI agents can generate plausible instructions but may misinterpret order details or routing logic, so human oversight or system-based validation is still needed to catch mismatches before execution.",
+      "_timestamp": "2026-04-06T01:04:29"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

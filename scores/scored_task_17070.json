@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1229.01",
+  "task_id": 17070,
+  "task_statement": "Interpret diagnostic test results to make appropriate differential diagnoses.",
+  "occupation_title": "Allergists and Immunologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Interpreting diagnostic test results and forming differential diagnoses is primarily a cognitive task often done by reviewing digital lab reports or records on a computer. However, some instances occur during in-person clinical evaluations or involve tests observed directly in the clinic."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnostic interpretation in allergy/immunology spans diverse conditions (e.g., autoimmune, immunodeficiency, hypersensitivity), varied test modalities, and heterogeneous patient populations with many rare or overlapping presentations.",
+      "adequacy_evidence": "Large corpora of medical literature, guidelines, and case reports exist, but real-world longitudinal cases, rare disease presentations, and nuanced clinician reasoning are often underrepresented or locked in private clinical data, leaving some gaps.",
+      "_timestamp": "2026-04-06T00:23:17"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting allergy and immunology diagnostics (e.g., skin tests, IgE levels, immune panels) requires contextual calibration to patient history, comorbidities, and atypical presentations, relying heavily on experience-based clinical judgment beyond explicit rules.",
+      "adequacy_evidence": "Current AI can apply guidelines and pattern recognition well but lacks robust clinical calibration in ambiguous or borderline cases (e.g., false positives, polysensitization, immune dysregulation), leading to moderate gaps in nuanced judgment.",
+      "_timestamp": "2026-04-06T00:23:17"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting diagnostic results for differential diagnosis requires integrating patient history, symptom context, test limitations, and evolving clinical hypotheses, with many implicit cues and shifting criteria.",
+      "adequacy_evidence": "Current agents can apply guidelines and synthesize data but often miss nuanced context or fail to prioritize differentials appropriately without iterative clinician input.",
+      "_timestamp": "2026-04-06T00:23:18"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting diagnostic results for differential diagnosis involves integrating multiple data points (labs, history, symptoms) in a multi-step reasoning process, but the sequence is typically bounded and not extremely long-running.",
+      "adequacy_evidence": "Current AI systems can generally sustain coherent multi-step clinical reasoning over moderate sequences, but may show some degradation in complex cases with many interacting factors, leading to occasional missed constraints or inconsistencies.",
+      "_timestamp": "2026-04-06T00:23:18"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting diagnostic tests in allergy/immunology often benefits from prior patient history (e.g., past reactions, longitudinal lab trends), but many individual test interpretations can be performed with current-episode data if history is provided.",
+      "adequacy_evidence": "Current AI systems can integrate with EHRs or external memory stores, but they still show inconsistent retrieval, updating, and contextual use of longitudinal patient data across sessions.",
+      "_timestamp": "2026-04-06T00:23:19"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinicians must integrate multiple data sources within an episode (lab panels, skin tests, imaging, patient history, symptom timelines), requiring active comparison and prioritization but typically within a bounded clinical scope.",
+      "adequacy_evidence": "Frontier agents can handle multi-source clinical inputs with large context windows, but may still omit or misweight specific findings or interactions, especially in complex cases with many test results.",
+      "_timestamp": "2026-04-06T00:23:19"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting diagnostic tests for differential diagnosis involves subtle pattern recognition, clinical context integration, and awareness of confounders; errors may not be immediately apparent and often require expert review or longitudinal outcomes to detect.",
+      "adequacy_evidence": "Current AI systems can misinterpret lab nuances, comorbid interactions, or rare presentations, and these errors are difficult to catch without specialist oversight, making thorough expert verification necessary in practice.",
+      "_timestamp": "2026-04-06T00:23:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpreting diagnostic test results in allergy/immunology is typically done within clinical workflows allowing seconds to minutes, not requiring split-second decisions except in rare acute scenarios.",
+      "adequacy_evidence": "Frontier AI systems can analyze structured test results and generate differential diagnoses well within this time window without needing to truncate reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T00:23:20"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Allergists interpret a mix of numeric lab data, graphs (e.g., spirometry), and sometimes visual findings such as skin prick test reactions, making multimodal input relevant but not dominant.",
+      "adequacy_evidence": "Current agents can handle structured lab values well and basic image/graph interpretation, but performance is less reliable for nuanced visual assessments (e.g., subtle skin test reactions or complex pulmonary function curves).",
+      "_timestamp": "2026-04-06T00:23:20"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting diagnostic tests to form differential diagnoses directly affects patient care, requiring patients and other clinicians to trust the clinician\u2019s expertise, judgment, and professional authority.",
+      "adequacy_evidence": "Patients and healthcare systems are unlikely to accept an AI agent independently making differential diagnoses without physician oversight; trust, liability, and expectations of human clinical judgment create strong resistance.",
+      "_timestamp": "2026-04-06T00:23:20"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnostic interpretation directly affects patient treatment decisions; even rare residual errors can lead to missed serious conditions, inappropriate therapies, or delayed care with significant health consequences.",
+      "adequacy_evidence": "Even with clinician oversight and standard checks, AI systems can produce subtle but clinically significant misinterpretations or incomplete differentials, leaving residual risk that remains concerning in high-stakes medical contexts.",
+      "_timestamp": "2026-04-06T00:23:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Medical diagnosis and interpretation of diagnostic tests are legally restricted to licensed physicians in the U.S., with accountability and decision-making authority that cannot be delegated to an autonomous AI system. AI tools may assist, but a human clinician must perform and sign off on the diagnosis.",
+      "_timestamp": "2026-04-06T00:23:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

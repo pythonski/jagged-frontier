@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-2012.00",
+  "task_id": 10594,
+  "task_statement": "Plan flights according to government and company regulations, using aeronautical charts and navigation instruments.",
+  "occupation_title": "Commercial Pilots",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Flight planning is typically done using digital flight planning software, online weather data, and electronic aeronautical charts, all of which can be accessed via computer. However, some instances involve consulting physical charts or aircraft-specific navigation instruments on site."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Flight planning relies heavily on codified procedures (regulations, charts, fuel calculations), but experienced pilots apply judgment in interpreting weather, NOTAMs, routing tradeoffs, and operational constraints.",
+      "adequacy_evidence": "Current agents can follow formal rules and integrate structured data well, but show gaps in nuanced, context-sensitive judgment for atypical conditions like complex weather systems or ambiguous operational tradeoffs.",
+      "_timestamp": "2026-04-05T21:14:59"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Flight planning involves explicit regulations and procedures, but also requires interpreting context like weather, airspace constraints, aircraft performance, and company policies, which are not fully specified in a single rule set.",
+      "adequacy_evidence": "Current agents can integrate regulations and structured data sources, but often struggle with nuanced tradeoffs (e.g., weather avoidance vs. efficiency) and may require human oversight to resolve context-dependent judgments.",
+      "_timestamp": "2026-04-05T21:14:59"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Flight planning involves a multi-step process (route selection, weather analysis, fuel calculation, regulatory compliance) where steps are interdependent but typically bounded in scope rather than extremely long-horizon sequences.",
+      "adequacy_evidence": "Current AI agents can manage multi-step planning workflows with tools, but may show moderate degradation through constraint tracking and consistency across steps, especially when integrating multiple regulatory and environmental factors.",
+      "_timestamp": "2026-04-05T21:14:59"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Flight planning spans diverse and context-sensitive conditions including varying weather systems, airspace constraints, aircraft performance profiles, and differing regulatory regimes, creating a broad and long-tailed distribution of scenarios.",
+      "adequacy_evidence": "Extensive training data exists (flight manuals, dispatch procedures, simulator environments, real-world flight plans), but some edge cases (rare weather phenomena, company-specific practices, and tacit dispatcher-pilot coordination nuances) are less fully represented or harder to capture in training pipelines.",
+      "_timestamp": "2026-04-05T21:14:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Flight planning is largely self-contained per flight, relying on current regulations, weather, aircraft status, and route data rather than accumulated cross-flight history or evolving preferences.",
+      "adequacy_evidence": "Current AI systems can easily access and apply relevant up-to-date information for each planning instance without needing persistent cross-session memory.",
+      "_timestamp": "2026-04-05T21:15:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Flight planning relies heavily on interpreting aeronautical charts, which are rich visual-spatial artifacts, and understanding instrument data; these are core to routing, airspace compliance, and navigation decisions.",
+      "adequacy_evidence": "Current AI systems can interpret maps and charts with tooling, but performance on complex, domain-specific aeronautical charts and integrating instrument semantics is still uneven and less reliable than expert human interpretation.",
+      "_timestamp": "2026-04-05T21:15:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Flight planning requires integrating multiple structured and unstructured inputs (weather, NOTAMs, charts, fuel requirements, airspace restrictions, and regulations) into a coherent plan, but these are typically well-bounded and supported by standardized tools.",
+      "adequacy_evidence": "Current agents can aggregate and track multiple inputs with tool support, but may miss or misprioritize constraints (e.g., subtle regulatory or chart details) and can lose fidelity when compressing complex, interdependent factors.",
+      "_timestamp": "2026-04-05T21:15:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Flight planning is typically conducted pre-flight with minutes to hours available, though some in-flight adjustments require reasonably prompt responses within minutes.",
+      "adequacy_evidence": "Current AI systems with appropriate tools can generate compliant flight plans and updates well within these time bounds without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T21:15:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Flight planning must satisfy regulators, company dispatch, and operational stakeholders who rely on the plan, but they primarily care about compliance and accuracy rather than the planner\u2019s identity.",
+      "adequacy_evidence": "AI-assisted flight planning tools are already widely accepted in aviation, and stakeholders generally accept automated planning as long as it meets regulatory and safety standards.",
+      "_timestamp": "2026-04-05T21:15:02"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "FAA regulations require certified pilots and/or licensed dispatchers to be responsible for flight planning and compliance, with human sign-off and accountability. While AI tools can assist, there is no framework allowing them to independently fulfill this regulated role, creating a partial restriction rather than an explicit ban.",
+      "_timestamp": "2026-04-05T21:15:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Flight planning involves integrating weather, NOTAMs, performance limits, fuel calculations, alternates, and regulatory constraints; errors can be subtle and only surface in-flight or under changing conditions, requiring expert cross-checks with specialized tools.",
+      "adequacy_evidence": "Current AI can produce plausible plans but is prone to omissions or misinterpretations of dynamic data (e.g., NOTAMs, weather minima), so thorough expert review and tool-based validation are still necessary to catch non-obvious errors.",
+      "_timestamp": "2026-04-05T21:15:02"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Flight planning errors (e.g., incorrect routing, fuel miscalculation, or regulatory noncompliance) can lead to safety-critical situations, diversions, or accidents, so even rare residual errors have severe consequences.",
+      "adequacy_evidence": "With current tools and cross-checks (dispatch systems, charts, automated validation), AI-assisted plans can be reviewed, but LLM-based agents still exhibit occasional inconsistencies or missed edge cases, leaving a non-negligible residual risk.",
+      "_timestamp": "2026-04-05T21:15:03"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

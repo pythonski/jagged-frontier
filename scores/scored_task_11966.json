@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-9162.00",
+  "task_id": 11966,
+  "task_statement": "Write programs in the language of a machine's controller and store programs on media, such as punch tapes, magnetic tapes, or disks.",
+  "occupation_title": "Computer Numerically Controlled Tool Programmers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Writing CNC controller programs is done on a computer and can be performed remotely, but in some real-world cases storing or transferring programs to physical media (e.g., punch tapes or machine-linked storage) requires on-site interaction with equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "CNC programming spans different machine types, controller dialects (e.g., Fanuc, Siemens), materials, and part geometries, but remains within a relatively structured and well-defined domain (e.g., G-code variants and CAM workflows).",
+      "adequacy_evidence": "There is substantial accessible data (manuals, example programs, CAM outputs, simulators), but some shop-specific practices, proprietary controller nuances, and edge-case machining strategies are underrepresented and not fully captured in public or synthetic data.",
+      "_timestamp": "2026-04-06T05:11:24"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of CNC programming follows formal rules (G-code syntax, machining parameters), effective programs often require experience-based judgment about tool selection, feeds and speeds, and machine-specific behavior under real conditions.",
+      "adequacy_evidence": "Current AI agents can generate syntactically correct and generally viable CNC programs, but they lack reliable calibration for machine-specific nuances, material variability, and edge-case machining decisions that experienced programmers handle.",
+      "_timestamp": "2026-04-06T05:11:24"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While part geometry and tolerances are typically specified in drawings or CAD models, programmers must interpret machining strategy, tooling, feeds/speeds, and machine-specific constraints that are not fully explicit.",
+      "adequacy_evidence": "Current agents can generate CNC programs from CAD/CAM inputs but often miss shop-specific practices, tooling nuances, or implicit priorities (e.g., cost vs. surface finish), requiring human refinement.",
+      "_timestamp": "2026-04-06T05:11:25"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "CNC programming involves constructing interdependent sequences of instructions (tool paths, feeds, speeds, coordinate systems) where early errors propagate and affect downstream machining outcomes.",
+      "adequacy_evidence": "LLM-based agents can generally maintain coherence over multi-step code generation, but may still exhibit occasional constraint drift or inconsistencies in longer, tightly coupled programs without iterative validation.",
+      "_timestamp": "2026-04-06T05:11:25"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "CNC program development is typically done offline with planning and iteration; minutes to hours of latency are acceptable without impacting task success.",
+      "adequacy_evidence": "Current AI systems can take ample time to generate and refine programs, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T05:11:25"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Writing CNC controller programs is primarily a text-based activity (e.g., G-code) and storing them on media; multimodal inputs are not intrinsic to the task as stated.",
+      "adequacy_evidence": "Current AI agents handle text-based code generation and file handling well, so there is no meaningful multimodal gap affecting performance.",
+      "_timestamp": "2026-04-06T05:11:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "CNC programming requires tracking part geometry, tooling parameters, machine constraints, and sequencing of operations within a single session, but the information is structured and typically bounded by a single job setup.",
+      "adequacy_evidence": "Current agents can manage these structured inputs with tool support, but may occasionally lose or mis-handle constraints or parameters across longer programs, especially when context is fragmented or updated iteratively.",
+      "_timestamp": "2026-04-06T05:11:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "CNC programmers often reuse prior programs, tooling setups, and machine-specific parameters across jobs, but individual programming tasks can typically be completed from current job specifications and documentation.",
+      "adequacy_evidence": "Current AI systems can reliably store, retrieve, and manage program files, machine configs, and project histories using standard databases and file systems, meeting these moderate cross-session needs.",
+      "_timestamp": "2026-04-06T05:11:26"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit or restrict AI from writing CNC machine programs or storing them on media. This task is not legally reserved for licensed humans, and AI use is generally permissible.",
+      "_timestamp": "2026-04-06T05:11:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task produces machine programs that are consumed internally by equipment and technical staff, with no meaningful reliance on the programmer\u2019s identity or direct stakeholder interaction.",
+      "adequacy_evidence": "Because stakeholders are largely indifferent to who or what generates the program as long as it functions correctly, AI-generated outputs would generally be accepted without resistance.",
+      "_timestamp": "2026-04-06T05:11:27"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "CNC programs directly control machine motion and tooling, so residual errors can cause part defects, tool breakage, machine damage, or safety incidents, making very low residual risk essential.",
+      "adequacy_evidence": "With standard safeguards like simulation, verification, and test runs, many AI-generated errors can be caught, but subtle edge cases (e.g., collision conditions or tolerance issues) may still slip through at a non-negligible rate.",
+      "_timestamp": "2026-04-06T05:11:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "CNC programs can be checked using simulation, backplotting, and dry runs, but doing so correctly requires domain expertise and time, and some issues (e.g., tool collisions, suboptimal feeds/speeds) are not always immediately obvious.",
+      "adequacy_evidence": "AI-generated CNC code would still require routine simulation and expert review because models can introduce subtle but consequential errors, though existing verification tools make these issues reasonably detectable with moderate effort.",
+      "_timestamp": "2026-04-06T05:11:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

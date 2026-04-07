@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1031.01",
+  "task_id": 5273,
+  "task_statement": "Pay and process claims within designated authority level.",
+  "occupation_title": "Claims Adjusters, Examiners, and Investigators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Paying and processing claims is typically completed through insurance claims management software, reviewing documentation and authorizing payments electronically, which can be done entirely on a computer with internet access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing claims within authority often follows codified policy rules and thresholds, but adjusters still apply experience to interpret ambiguous documentation, assess reasonableness of costs, and recognize subtle red flags.",
+      "adequacy_evidence": "Current agents can apply explicit policy logic and handle routine cases well, but they show gaps in nuanced judgment for borderline or context-sensitive claims where experienced calibration affects outcomes.",
+      "_timestamp": "2026-04-06T01:55:06"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Claims processing spans diverse insurance lines (auto, health, property), policy terms, jurisdictions, and edge cases like fraud or disputed liability, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "While general procedures and many claim scenarios are documented and can be simulated, much high-fidelity data (especially rare cases, fraud patterns, and insurer-specific practices) is proprietary, leaving some gaps that are only partially addressable via synthesis or fine-tuning.",
+      "_timestamp": "2026-04-06T01:55:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While claims processing follows formal policy terms, authority limits, and procedures, adjusters must interpret coverage nuances, assess reasonableness of claims, and handle exceptions or borderline cases where criteria are not fully explicit.",
+      "adequacy_evidence": "Current agents can apply explicit rules and structured guidelines but often miss contextual judgment, edge-case interpretation, and stakeholder-sensitive nuances, requiring human review to resolve ambiguity.",
+      "_timestamp": "2026-04-06T01:55:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing claims involves a multi-step workflow (reviewing documentation, verifying coverage, calculating payouts, and recording decisions) where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or deeply interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can handle structured multi-step workflows with reasonable consistency, though some degradation can occur over longer or exception-heavy cases (e.g., missed constraints or minor calculation/context errors).",
+      "_timestamp": "2026-04-06T01:55:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Processing claims often requires referencing prior interactions, claim history, documentation, and earlier decisions across multiple sessions for the same case.",
+      "adequacy_evidence": "Current AI systems can reliably integrate with claims databases and case management systems to store and retrieve persistent records, meeting cross-session memory needs with existing infrastructure.",
+      "_timestamp": "2026-04-06T01:55:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing a claim requires integrating multiple documents (policy details, claim forms, evidence, correspondence) and tracking evolving determinations, but the information volume is typically bounded and structured within a case file.",
+      "adequacy_evidence": "Current agents with retrieval and document-handling tools can manage multi-document contexts, but may still miss or misweight details across long or complex files, leading to moderate reliability issues.",
+      "_timestamp": "2026-04-06T01:55:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Claims payment and processing typically occur over minutes to hours (or longer in queues), with no need for real-time responses; accuracy and compliance outweigh immediacy.",
+      "adequacy_evidence": "Current AI agents can easily operate within these timeframes, allowing sufficient reasoning and checks without meaningful quality degradation.",
+      "_timestamp": "2026-04-06T01:55:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Claims processing often involves reviewing supporting materials like photos of damage, scanned forms, or repair estimates, though much of the decision process is document- and text-driven.",
+      "adequacy_evidence": "Current agents can interpret straightforward images and documents but struggle with nuanced visual assessments (e.g., extent of damage or fraud cues), leading to inconsistent performance in complex cases.",
+      "_timestamp": "2026-04-06T01:55:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Processing and paying claims directly affects policyholders, healthcare providers, or claimants who must accept the decision, amount, and legitimacy of the payout within authority limits.",
+      "adequacy_evidence": "Automated claim processing is already common for straightforward cases, but stakeholders often resist or escalate when decisions lack human judgment or empathy, especially for denials or edge cases.",
+      "_timestamp": "2026-04-06T01:55:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Many states require licensed claims adjusters to exercise settlement authority and be responsible for claim decisions, implying a human licensee must oversee or sign off. There is no explicit ban on AI use, but current licensing and accountability rules create partial restrictions on fully autonomous AI execution.",
+      "_timestamp": "2026-04-06T01:55:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrectly paying or denying claims can lead to financial loss, regulatory penalties, litigation, and customer harm, so even rare residual errors can have significant consequences.",
+      "adequacy_evidence": "Even with standard audits and rule-based checks, AI may miss nuanced policy interpretations or fraud signals, leaving a non-trivial residual risk that remains problematic but not universally prohibitive.",
+      "_timestamp": "2026-04-06T01:55:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Claim payments can be checked against policy terms, documentation, and calculation rules, but doing so requires domain expertise and careful review; some errors (e.g., misinterpretation of coverage) are not immediately obvious.",
+      "adequacy_evidence": "Current AI can follow rules and calculations but still makes non-trivial judgment and interpretation errors, so consistent human review is needed though verification is feasible with standard auditing processes.",
+      "_timestamp": "2026-04-06T01:55:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "47-4099.03",
+  "task_id": 17801,
+  "task_statement": "Contact residents or building owners to schedule appointments.",
+  "occupation_title": "Weatherization Installers and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Scheduling appointments is typically done via phone, email, or online scheduling systems that can be handled on a computer. However, some installers may occasionally arrange appointments in person while visiting neighborhoods or job sites."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments with residents or building owners generally follows straightforward procedures (contact, propose times, confirm availability) and relies on basic communication protocols rather than deep experiential judgment.",
+      "adequacy_evidence": "Current AI agents can handle routine scheduling interactions, including polite communication and simple negotiation of times, without needing significant tacit knowledge beyond what is already captured in training data and scripts.",
+      "_timestamp": "2026-04-06T05:10:42"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves some context-dependent factors like resident availability, preferred times, and communication norms, but objectives (schedule an appointment) are generally clear and standardized.",
+      "adequacy_evidence": "Current AI agents can handle scheduling interactions, infer preferences from responses, and iterate to find suitable times with minimal ambiguity-related failure.",
+      "_timestamp": "2026-04-06T05:10:42"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderately diverse cases (different resident types, communication channels, scheduling constraints, and occasional language or accessibility needs) but follows common, repetitive interaction patterns.",
+      "adequacy_evidence": "Large volumes of customer service calls, scheduling emails, and scripts provide rich, process-level data, and remaining variation can be covered with straightforward synthetic data and fine-tuning.",
+      "_timestamp": "2026-04-06T05:10:42"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments can involve short multi-step interactions (initial outreach, negotiation of availability, confirmation), but sequences are typically brief and loosely coupled.",
+      "adequacy_evidence": "Current AI agents can reliably manage short conversational exchanges and scheduling workflows without noticeable degradation over the limited sequence length required.",
+      "_timestamp": "2026-04-06T05:10:42"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves handling small amounts of information such as contact details, availability, and appointment times, all of which fit easily within a single interaction.",
+      "adequacy_evidence": "Current AI agents can reliably track and manage this limited information within an episode without loss or confusion.",
+      "_timestamp": "2026-04-06T05:10:43"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires tracking prior contact attempts, resident availability, and appointment status across multiple interactions, but the state is relatively simple and bounded (e.g., contact logs, scheduled times).",
+      "adequacy_evidence": "Current agent systems integrated with CRM tools and persistent storage can reliably record and retrieve contact history and scheduling details across sessions with minimal failure.",
+      "_timestamp": "2026-04-06T05:10:44"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments can be fully handled via text channels (email, messaging, CRM systems) with no inherent need for images, video, or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents can manage text-based communication and even basic voice calls effectively, so there is no meaningful modality gap for this task.",
+      "_timestamp": "2026-04-06T05:10:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Errors such as mis-scheduled appointments, missed calls, or incorrect contact details typically result in minor inconvenience or rescheduling, not serious harm.",
+      "adequacy_evidence": "AI systems can reliably handle scheduling and communication tasks with standard confirmation checks (e.g., confirmations, reminders), leaving minimal residual risk after normal quality control.",
+      "_timestamp": "2026-04-06T05:10:44"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling often involves phone calls or prompt replies where responses are expected within seconds to minutes, but the cognitive demands are simple and do not require deep reasoning.",
+      "adequacy_evidence": "Current AI agents can handle real-time conversation and scheduling logic comfortably within latency constraints without needing extended reasoning, so quality is not meaningfully degraded.",
+      "_timestamp": "2026-04-06T05:10:44"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires direct interaction with residents or building owners, who must respond and coordinate scheduling, making stakeholder engagement necessary but not highly identity-sensitive.",
+      "adequacy_evidence": "Many people accept automated scheduling via calls, texts, or chat, but some resist or ignore AI outreach (e.g., robocalls), so acceptance is mixed rather than seamless.",
+      "_timestamp": "2026-04-06T05:10:45"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no law prohibiting AI from scheduling appointments, but regulations like the Telephone Consumer Protection Act (TCPA) restrict automated calls, texts, and use of autodialers without consent, creating partial constraints on how AI can perform this task.",
+      "_timestamp": "2026-04-06T05:10:45"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments produces immediately observable outputs (confirmed times, calendar entries, messages), and mistakes like wrong dates or contacts are easily detected through confirmations or simple checks.",
+      "adequacy_evidence": "AI systems can integrate with calendars and messaging tools that provide automatic confirmations and logs, making any errors straightforward to catch with minimal effort.",
+      "_timestamp": "2026-04-06T05:10:46"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

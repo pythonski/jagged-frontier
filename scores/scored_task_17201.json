@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1229.04",
+  "task_id": 17201,
+  "task_statement": "Document examination results, treatment plans, and patients' outcomes.",
+  "occupation_title": "Physical Medicine and Rehabilitation Physicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Recording examination results, treatment plans, and outcomes is typically done in electronic health record systems or other digital documentation tools, which can be completed entirely on a computer without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Documenting clinical findings and plans requires some judgment about relevance, emphasis, and appropriate medical framing, especially for functional outcomes and nuanced rehabilitation progress.",
+      "adequacy_evidence": "Current AI can generate structured clinical notes and summaries but often lacks consistent calibration in prioritizing salient details and applying context-sensitive clinical nuance across varied cases.",
+      "_timestamp": "2026-04-05T23:08:01"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical documentation follows structured conventions (e.g., SOAP notes, billing and compliance rules) but still requires judgment about what details are salient, how to interpret findings, and how to frame plans and outcomes in context.",
+      "adequacy_evidence": "Current AI can generate structured clinical notes from inputs, but often misses nuanced relevance, appropriate clinical emphasis, or compliance subtleties, requiring human review and refinement.",
+      "_timestamp": "2026-04-05T23:08:01"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Documentation spans diverse patient conditions and rehab contexts, but follows relatively standardized clinical note structures (e.g., SOAP, EHR templates) with recurring patterns.",
+      "adequacy_evidence": "Large corpora of de-identified clinical notes, medical documentation guidelines, and supervised examples provide strong coverage of both outputs and underlying reasoning processes for this task.",
+      "_timestamp": "2026-04-05T23:08:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves compiling multiple interrelated elements (exam findings, treatment plans, outcomes) into coherent documentation, requiring consistency across sections but not long multi-step action chains.",
+      "adequacy_evidence": "LLM-based agents can generally maintain coherence across such documentation tasks, though performance can degrade with longer or more complex patient histories, leading to occasional omissions or inconsistencies.",
+      "_timestamp": "2026-04-05T23:08:01"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate documentation requires maintaining longitudinal patient records, including prior exams, evolving treatment plans, and outcomes across many visits over extended periods.",
+      "adequacy_evidence": "Current AI systems can interface with electronic health records and persist structured data, but often struggle with reliably retrieving, integrating, and updating nuanced longitudinal context without errors or omissions.",
+      "_timestamp": "2026-04-05T23:08:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires consolidating multiple within-visit inputs (exam findings, prior notes, treatment plans, and observed outcomes) into coherent documentation, but the volume is moderate and structured by clinical conventions.",
+      "adequacy_evidence": "Current agents can generally manage and summarize this level of clinical context with tool support, though they may occasionally omit or misprioritize details when handling multiple information sources.",
+      "_timestamp": "2026-04-05T23:08:02"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily text-based documentation of findings, plans, and outcomes, even if underlying clinical information may originate from multimodal sources.",
+      "adequacy_evidence": "Current AI systems can reliably generate and structure clinical documentation from text inputs, with no meaningful dependence on advanced multimodal capabilities for this task.",
+      "_timestamp": "2026-04-05T23:08:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Clinical documentation of exams, treatment plans, and outcomes is typically completed during or after patient encounters with minutes to hours available; it does not require immediate real-time response.",
+      "adequacy_evidence": "Current AI systems can generate high-quality clinical documentation well within these timeframes, with no meaningful degradation due to latency constraints.",
+      "_timestamp": "2026-04-05T23:08:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Medical records must be created and authenticated by licensed clinicians, and billing/compliance rules (e.g., CMS documentation requirements) require physician verification. AI can assist (e.g., as a scribe), but cannot independently fulfill the legal responsibility for documentation without clinician oversight and sign-off.",
+      "_timestamp": "2026-04-05T23:08:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clinical documentation directly informs ongoing care, legal records, and billing; even small residual errors can propagate into inappropriate treatments or liability, making tolerance for error very low.",
+      "adequacy_evidence": "AI-generated notes can be reviewed by physicians, but subtle misrepresentations or omissions may still pass checks, leaving some meaningful residual risk even after normal quality control.",
+      "_timestamp": "2026-04-05T23:08:04"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The documentation is used by other clinicians, insurers, and sometimes patients, and its credibility depends in part on being authored and validated by a licensed physician.",
+      "adequacy_evidence": "AI-assisted documentation is increasingly accepted, but full substitution would face resistance due to trust, liability, and the expectation of physician authorship and sign-off.",
+      "_timestamp": "2026-04-05T23:08:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical documentation can be cross-checked against exam findings, prior notes, and structured data, but doing so requires medical expertise and careful review to catch omissions, inconsistencies, or subtle mischaracterizations.",
+      "adequacy_evidence": "AI-generated notes are often plausible but may include fabricated details or miss clinically relevant nuances, so clinicians must routinely review and edit outputs, creating a moderate verification burden.",
+      "_timestamp": "2026-04-05T23:08:05"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

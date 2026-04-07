@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1222.00",
+  "task_id": 17192,
+  "task_statement": "Communicate pathologic findings to surgeons or other physicians.",
+  "occupation_title": "Physicians, Pathologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Pathologic findings are typically communicated through electronic pathology reports, phone calls, or secure messaging within medical record systems, all of which can be done digitally. However, some consultations occur face-to-face in clinical settings such as tumor boards or direct hospital discussions."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of diseases, specimen types, and clinical contexts (e.g., routine biopsies vs. rare malignancies), but remains within a structured medical communication domain with recurring patterns.",
+      "adequacy_evidence": "Large corpora of pathology reports, clinical guidelines, and case discussions exist, but nuanced real-time physician-to-physician communication and rare edge cases are less accessible and only partially captured in training data.",
+      "_timestamp": "2026-04-06T04:56:47"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Communicating pathologic findings typically involves synthesizing results, structuring an explanation, and possibly engaging in brief back-and-forth clarification with clinicians, requiring moderate sequential coherence.",
+      "adequacy_evidence": "AI agents can generally sustain coherent multi-step explanations and short dialogues, but may show some drift or lose precision in extended or nuanced clinical exchanges.",
+      "_timestamp": "2026-04-06T04:56:48"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effectively communicating pathologic findings requires nuanced clinical judgment about significance, uncertainty, and urgency, tailored to specific patient contexts and the receiving physician\u2019s needs\u2014skills built through experience rather than explicit rules.",
+      "adequacy_evidence": "Current AI can summarize and explain findings clearly, but often lacks calibrated judgment about clinical nuance, emphasis, and interpersonal framing in complex or borderline cases, leading to moderate gaps in real-world communication quality.",
+      "_timestamp": "2026-04-06T04:56:48"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While pathology reports follow standardized elements, effective communication requires contextual judgment about what findings are clinically salient, urgency, and how to tailor messaging to specific clinicians and cases.",
+      "adequacy_evidence": "Current agents can summarize and structure findings but often miss nuanced clinical priorities or stakeholder expectations, requiring human refinement to ensure relevance and clarity.",
+      "_timestamp": "2026-04-06T04:56:48"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing multiple within-case inputs (histology findings, clinical history, test results) into a coherent communication, requiring moderate information selection and compression.",
+      "adequacy_evidence": "Current agents can generally manage and summarize such multimodal case information, but may omit subtle details or misprioritize findings, indicating some reliability gaps.",
+      "_timestamp": "2026-04-06T04:56:49"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Communicating pathologic findings is primarily verbal or written but often involves referencing or sharing annotated histology images, gross specimen photos, or diagrams to convey key features.",
+      "adequacy_evidence": "Current agents can integrate and describe medical images at a basic level, but reliability drops for nuanced, fine-grained pathological features and precise cross-modal explanations needed in complex cases.",
+      "_timestamp": "2026-04-06T04:56:49"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Communication of pathologic findings sometimes depends on prior specimens, patient history, or evolving clinical context, but this information is typically retrieved from medical records rather than remembered across sessions.",
+      "adequacy_evidence": "Current AI systems can store and retrieve cross-session data when integrated with EHRs, but reliability and completeness of surfacing relevant historical context remain inconsistent in practice.",
+      "_timestamp": "2026-04-06T04:56:49"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Communication is often expected within seconds to minutes (e.g., intraoperative frozen section calls), but not strictly real-time at sub-second latency; short delays are usually acceptable.",
+      "adequacy_evidence": "Frontier AI systems can generate accurate summaries or structured communications well within these time bounds, so meeting latency constraints does not significantly degrade output quality.",
+      "_timestamp": "2026-04-06T04:56:50"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Accurate communication of pathologic findings depends on nuanced interpretation of diagnostic data and precise clinical language; errors can be subtle and require expert review of underlying pathology and context to detect.",
+      "adequacy_evidence": "Current AI systems can misinterpret clinical nuances or introduce subtle inaccuracies, and verifying correctness still requires a trained pathologist to cross-check against source data, making the checking burden high.",
+      "_timestamp": "2026-04-06T04:56:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "This task involves direct communication between medical professionals where the pathologist\u2019s authority, credibility, and clinical judgment are central to how findings are interpreted and acted upon.",
+      "adequacy_evidence": "While some clinicians may accept AI-assisted reporting, many would be hesitant to rely solely on an AI agent for critical diagnostic communication, preferring human accountability and professional judgment.",
+      "_timestamp": "2026-04-06T04:56:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Pathologic findings directly inform diagnoses and treatment decisions (e.g., cancer type, margins), so even rare communication errors can lead to severe or irreversible patient harm.",
+      "adequacy_evidence": "Even with review, AI systems can introduce subtle misstatements or omissions in clinical communication, and these residual risks remain non-negligible given the high-stakes downstream decisions.",
+      "_timestamp": "2026-04-06T04:56:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State medical practice laws and CLIA regulations require that diagnostic findings be issued under the authority of a licensed physician (e.g., pathologist sign-out and responsibility for results). An AI system cannot independently practice medicine or communicate diagnoses without physician oversight, effectively prohibiting fully autonomous performance.",
+      "_timestamp": "2026-04-06T04:56:51"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

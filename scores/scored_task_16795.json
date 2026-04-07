@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-1029.01",
+  "task_id": 16795,
+  "task_statement": "Analyze large molecular datasets, such as raw microarray data, genomic sequence data, or proteomics data, for clinical or basic research purposes.",
+  "occupation_title": "Bioinformatics Scientists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Analyzing molecular datasets such as genomic sequences or proteomics data is performed using computational tools, statistical software, and databases on a computer, without requiring physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous data types (microarray, genomic sequencing, proteomics) with diverse experimental designs, preprocessing pipelines, and research goals, creating a long-tailed distribution of analysis scenarios.",
+      "adequacy_evidence": "Large public repositories (e.g., GEO, TCGA) and documented pipelines provide substantial coverage and process signal, but important subpopulations\u2014especially proprietary clinical datasets and edge-case experimental conditions\u2014remain underrepresented or inaccessible.",
+      "_timestamp": "2026-04-05T22:20:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Analyzing omics datasets requires interpreting evolving research goals, choosing preprocessing and statistical methods, and defining success criteria (e.g., signal vs noise, biological relevance) that are often implicit and context-dependent.",
+      "adequacy_evidence": "Current agents can follow standard pipelines and infer some goals from context, but they often miss nuanced research intent or experimental subtleties, requiring human guidance and iterative refinement.",
+      "_timestamp": "2026-04-05T22:20:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Analyzing large molecular datasets involves long, interdependent pipelines (data cleaning, normalization, alignment, statistical modeling, validation) where errors early in the sequence propagate and affect downstream results.",
+      "adequacy_evidence": "LLM-based agents can execute multi-step analytical workflows with tooling, but they still show moderate degradation over long pipelines, including occasional state loss, misapplied parameters, or failure to maintain consistency across steps.",
+      "_timestamp": "2026-04-05T22:20:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting high-throughput molecular data requires nuanced judgment about data quality, batch effects, normalization choices, and biological plausibility that is typically developed through hands-on experience with varied datasets and experimental contexts.",
+      "adequacy_evidence": "Current AI agents can apply standard pipelines and heuristics but often lack robust calibration for edge cases (e.g., subtle confounding, novel assay artifacts), leading to gaps in context-sensitive interpretation and method selection.",
+      "_timestamp": "2026-04-05T22:20:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing large molecular datasets in bioinformatics is typically batch-oriented research work where hours or longer runtimes are acceptable and expected.",
+      "adequacy_evidence": "Current AI agents can take extended time for deeper reasoning or pipeline orchestration without violating task constraints, so speed limitations do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T22:20:27"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Bioinformatics analyses often span ongoing projects where prior preprocessing choices, sample annotations, and pipeline configurations must be reused or adapted, but individual datasets can still be analyzed largely independently.",
+      "adequacy_evidence": "Current agents can persist data via external storage and workflow systems, but they inconsistently retrieve and integrate prior project context without careful engineering, leading to gaps in continuity.",
+      "_timestamp": "2026-04-05T22:20:28"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves structured numerical and symbolic data (e.g., sequences, matrices) that can be fully represented and processed in text/tabular form without reliance on visual or sensory modalities.",
+      "adequacy_evidence": "Current AI agents can handle these text- and data-centric inputs directly using code execution and data processing tools, with no meaningful gap in multimodal capability.",
+      "_timestamp": "2026-04-05T22:20:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in genomic or proteomic data analysis (e.g., normalization choices, alignment artifacts, statistical mis-specification) can be subtle and require domain expertise, multiple QC steps, and downstream validation to detect.",
+      "adequacy_evidence": "Current AI systems can generate plausible but incorrect pipelines or interpretations, and their mistakes often evade superficial checks, requiring expert review, reruns, and cross-validation to ensure correctness.",
+      "_timestamp": "2026-04-05T22:20:28"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in analyzing genomic or proteomic data can lead to incorrect biological conclusions, faulty biomarkers, or misinformed clinical decisions, with potentially serious downstream consequences even after standard validation steps.",
+      "adequacy_evidence": "While AI can perform much of the analysis and built-in statistical and reproducibility checks catch many issues, current systems still risk subtle methodological or interpretation errors that may pass standard QC and remain consequential.",
+      "_timestamp": "2026-04-05T22:20:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Analyzing genomic, proteomic, or microarray datasets involves handling massive, heterogeneous data, tracking multiple preprocessing steps, parameters, and intermediate results where missing details can invalidate conclusions.",
+      "adequacy_evidence": "LLM agents can offload data handling to code and external tools, but still show weaknesses in consistently tracking complex multi-step states and parameters across long analytical workflows.",
+      "_timestamp": "2026-04-05T22:20:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Outputs are used by researchers or clinicians who rely on the analysis, but interaction is indirect and does not depend strongly on the analyst\u2019s personal identity.",
+      "adequacy_evidence": "AI-assisted analysis is already common and broadly accepted in bioinformatics workflows, with stakeholders primarily concerned about result quality rather than whether a human or AI performed the analysis.",
+      "_timestamp": "2026-04-05T22:20:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from analyzing molecular datasets for research purposes. While data privacy rules (e.g., HIPAA) and research compliance standards apply, they regulate data handling rather than restricting AI from performing the analysis itself.",
+      "_timestamp": "2026-04-05T22:20:29"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

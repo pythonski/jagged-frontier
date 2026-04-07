@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "25-9021.00",
+  "task_id": 10977,
+  "task_statement": "Research information requested by farmers.",
+  "occupation_title": "Farm and Home Management Educators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Researching answers to farmers' questions is usually done through online databases, extension publications, and digital communication with experts. However, some cases require field visits or direct observation of farm conditions to gather accurate information."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Farmers' information requests are often context-dependent (e.g., local climate, soil conditions, economic constraints) and may be loosely specified, requiring interpretation and clarification.",
+      "adequacy_evidence": "Current agents can ask clarifying questions and infer likely intent, but they often miss nuanced local or operational constraints without iterative human guidance.",
+      "_timestamp": "2026-04-05T23:06:30"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Responding effectively often requires contextual judgment about local conditions (soil, climate, farm practices) and tailoring information to a farmer\u2019s situation, which goes beyond purely explicit rules.",
+      "adequacy_evidence": "AI agents can synthesize general agricultural knowledge well but often lack fine-grained, experience-based calibration for local nuances and edge cases, leading to occasional mismatches in recommendations.",
+      "_timestamp": "2026-04-05T23:06:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Responding to farmer inquiries typically involves gathering and synthesizing information from multiple sources (e.g., extension publications, weather data, crop guidelines), but the volume is moderate and can be structured into concise outputs.",
+      "adequacy_evidence": "Current AI agents with retrieval and summarization tools can reliably manage and compress this level of information within a session without significant loss or misrepresentation.",
+      "_timestamp": "2026-04-05T23:06:31"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Farmer inquiries span diverse crops, regions, climates, pests, regulations, and farm management practices, creating a highly heterogeneous and context-sensitive information distribution.",
+      "adequacy_evidence": "There is extensive coverage in agricultural extension publications, research literature, and advisory materials, but some hyper-local, emerging, or niche farming contexts remain thin and not fully captured in accessible training data.",
+      "_timestamp": "2026-04-05T23:06:31"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Researching farmer inquiries typically involves multi-step workflows (clarifying the question, searching sources, synthesizing findings), but these steps are moderately bounded rather than deeply interdependent over long horizons.",
+      "adequacy_evidence": "AI agents can generally handle multi-step research workflows, but may show some degradation over longer chains (e.g., losing constraints or introducing minor inconsistencies), especially when integrating multiple sources.",
+      "_timestamp": "2026-04-05T23:06:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many research requests are one-off, effective support often benefits from remembering a farmer\u2019s prior inquiries, farm conditions, and past recommendations to tailor future information.",
+      "adequacy_evidence": "Current agents can store and retrieve structured client context with external memory tools, but they still show inconsistencies in maintaining and appropriately surfacing evolving, farm-specific histories across sessions.",
+      "_timestamp": "2026-04-05T23:06:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Researching information for farmers typically allows minutes to hours, involving gathering, synthesizing, and contextualizing data rather than immediate real-time response.",
+      "adequacy_evidence": "Current AI agents can produce high-quality research outputs well within these timeframes, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T23:06:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Research requests may involve interpreting photos of crops, pests, soil conditions, or equipment, though many queries can be handled via text-based information sources.",
+      "adequacy_evidence": "Current agents can analyze straightforward agricultural images and integrate them with text, but reliability drops for nuanced diagnoses (e.g., subtle plant diseases or soil conditions).",
+      "_timestamp": "2026-04-05T23:06:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying agricultural recommendations (e.g., pest control, soil management, crop practices) requires domain knowledge and cross-checking with trusted extension or scientific sources, but is generally feasible with available references.",
+      "adequacy_evidence": "Current AI can produce plausible but sometimes outdated or incorrect agricultural guidance, so outputs require consistent review against authoritative sources, though errors are usually detectable with moderate effort.",
+      "_timestamp": "2026-04-05T23:06:34"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Farmers are direct stakeholders who request and rely on the information, and trust in the source (e.g., extension educator expertise) influences uptake, though deep relational or emotional engagement is not central.",
+      "adequacy_evidence": "Many farmers would use AI-generated information, but some would be skeptical of its reliability or prefer human expert validation, leading to moderate resistance rather than outright rejection.",
+      "_timestamp": "2026-04-05T23:06:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the US that prohibit AI systems from researching and providing agricultural information to farmers. While human educators may operate within extension systems or institutions, the act of information research itself is not legally restricted.",
+      "_timestamp": "2026-04-05T23:06:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect research can lead to suboptimal farming decisions (e.g., yield loss, cost inefficiency, or improper input use), but effects are typically reversible or limited rather than catastrophic.",
+      "adequacy_evidence": "Information provided can usually be cross-checked against established agricultural extension resources and guidelines, and after such review, AI-generated errors are unlikely to leave intolerable residual risk.",
+      "_timestamp": "2026-04-05T23:06:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

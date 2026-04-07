@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2031.00",
+  "task_id": 8980,
+  "task_statement": "Analyze new medical procedures to forecast likely outcomes.",
+  "occupation_title": "Bioengineers and Biomedical Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Forecasting outcomes of new medical procedures is typically done through literature review, statistical analysis, modeling, and simulation on a computer, but some cases involve observing procedures, consulting clinicians, or reviewing physical experimental results in clinical or lab settings."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous medical procedures, patient populations, clinical settings, and evolving innovations, with long-tailed and context-sensitive variation in outcomes.",
+      "adequacy_evidence": "While substantial signal exists in published studies, trials, and clinical guidelines, key gaps remain for novel procedures, rare conditions, and proprietary clinical data, though partial synthesis and simulation are feasible.",
+      "_timestamp": "2026-04-06T04:20:53"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Forecasting outcomes of novel medical procedures requires experience-based clinical and engineering judgment, including interpreting incomplete evidence, analogizing to prior cases, and calibrating risk under uncertainty beyond formal rules.",
+      "adequacy_evidence": "Current agents can leverage large biomedical corpora and prior case data to approximate such judgments, but they lack the nuanced calibration and situational discernment experts apply in edge cases and genuinely novel interventions.",
+      "_timestamp": "2026-04-06T04:20:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Forecasting outcomes of new medical procedures requires multi-stage reasoning: reviewing literature, modeling biological mechanisms, integrating heterogeneous data, and iteratively refining predictions where each step builds on prior conclusions.",
+      "adequacy_evidence": "Current AI agents can sustain multi-step analyses but show some degradation over long reasoning chains, including occasional loss of assumptions or inconsistency across stages, though not catastrophic.",
+      "_timestamp": "2026-04-06T04:20:54"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Forecasting outcomes for new medical procedures involves implicit goals such as selecting relevant endpoints (e.g., safety, efficacy, quality of life), interpreting incomplete clinical evidence, and adapting to context like patient populations and regulatory expectations.",
+      "adequacy_evidence": "Current agents can infer many objectives with sufficient prompting and data, but they often miss nuanced clinical priorities or stakeholder-specific criteria, requiring iterative human clarification to align outputs.",
+      "_timestamp": "2026-04-06T04:20:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Forecasting outcomes for new medical procedures requires integrating large volumes of heterogeneous information (clinical trial data, biological mechanisms, patient variability, prior studies) within a single analytical episode, where missing details can materially affect conclusions.",
+      "adequacy_evidence": "Current agents can use retrieval and summarization to manage large contexts, but still exhibit context loss, imperfect compression, and occasional misalignment across sources when handling dense biomedical evidence.",
+      "_timestamp": "2026-04-06T04:20:56"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Forecasting outcomes of new medical procedures is typically a research and evaluation task with timelines spanning hours to days, not requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform extended reasoning, literature review, and modeling without being constrained by latency, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T04:20:57"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Forecasting outcomes benefits from accumulated knowledge of prior procedures, studies, and historical performance trends, but this is typically accessed via external literature/databases rather than persistent session-specific memory.",
+      "adequacy_evidence": "Current agents can reliably use retrieval systems and structured databases to access prior studies and historical data across sessions, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T04:20:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating new medical procedures often involves interpreting medical imaging, device schematics, or procedural videos alongside textual studies, though much reasoning can still be conducted from written reports and data summaries.",
+      "adequacy_evidence": "Current agents can process medical images and multimodal inputs at a basic level, but struggle with nuanced clinical interpretation and integrating complex visual evidence into reliable outcome forecasts.",
+      "_timestamp": "2026-04-06T04:20:57"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Forecasting outcomes of new medical procedures involves predictive judgments with long feedback loops, complex causal factors, and limited ground truth, making errors subtle and difficult to detect without extensive expertise and validation studies.",
+      "adequacy_evidence": "Current AI systems can synthesize literature but still make reasoning and evidence-integration errors that are hard to spot, requiring intensive expert review and often external validation to ensure reliability.",
+      "_timestamp": "2026-04-06T04:20:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Forecasting outcomes of new medical procedures directly influences clinical decisions, patient safety, and regulatory approval; even rare errors can lead to severe harm or widespread adverse outcomes.",
+      "adequacy_evidence": "Current AI systems remain unreliable in extrapolating from limited or novel biomedical evidence, and their failure modes (e.g., overgeneralization, missed edge cases) can persist even after expert review, leaving unacceptable residual risk.",
+      "_timestamp": "2026-04-06T04:20:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces analyses used by clinicians, researchers, and regulators who rely on the output, but direct interpersonal trust or identity of the analyst is not usually central to using the results.",
+      "adequacy_evidence": "While AI-assisted analysis is increasingly accepted in biomedical research, stakeholders (especially clinicians and regulators) often require human oversight and may be cautious about fully trusting AI-generated forecasts without expert validation.",
+      "_timestamp": "2026-04-06T04:21:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing this analytical task, but FDA regulations for software as a medical device (SaMD) and clinical decision support impose approval and oversight requirements if used in clinical contexts, creating partial constraints rather than a ban.",
+      "_timestamp": "2026-04-06T04:21:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

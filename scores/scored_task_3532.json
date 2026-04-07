@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-1022.00",
+  "task_id": 3532,
+  "task_statement": "Calculate heights, depths, relative positions, property lines, and other characteristics of terrain.",
+  "occupation_title": "Surveyors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "The calculations of terrain characteristics are typically performed using computer software (e.g., CAD, GIS, surveying software) in an office setting once measurement data are collected. However, surveyors sometimes perform or verify calculations in the field using specialized surveying instruments or on-site data processing, which requires physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While core calculations follow explicit geometric and trigonometric procedures, surveyors must apply experience-based judgment in selecting measurement methods, handling instrument error, and interpreting irregular terrain or obstructed lines of sight.",
+      "adequacy_evidence": "AI agents can reliably perform the formal calculations and apply standard corrections, but they lack robust calibration for field-specific judgment calls (e.g., compensating for environmental factors or atypical site conditions) that experienced surveyors routinely make.",
+      "_timestamp": "2026-04-06T00:02:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step calculations integrating measurements, coordinate systems, and geometric relationships, where consistency across steps matters but sequences are typically bounded and structured.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably execute structured multi-step calculations and maintain consistency across these sequences without significant degradation.",
+      "_timestamp": "2026-04-06T00:02:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Surveying tasks are typically guided by project plans, legal descriptions, and established geodetic standards, but require some interpretation of site conditions, reference points, and client intent.",
+      "adequacy_evidence": "Current AI agents can follow explicit surveying specifications but often struggle to infer missing contextual details or reconcile ambiguous field conditions without human clarification.",
+      "_timestamp": "2026-04-06T00:02:06"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied terrains, measurement methods (e.g., GPS, total stations, lidar), and project contexts, but the underlying geometric and trigonometric procedures are well-structured and broadly consistent.",
+      "adequacy_evidence": "There is extensive coverage in textbooks, technical manuals, GIS datasets, and simulated environments that expose both final outputs and step-by-step methods, making representative training data readily obtainable.",
+      "_timestamp": "2026-04-06T00:02:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Surveying calculations are typically performed post-measurement with no strict real-time requirement; minutes to hours are acceptable for accuracy-critical results.",
+      "adequacy_evidence": "Current AI systems can perform geometric and spatial calculations well within these relaxed timeframes without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T00:02:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tasks involve integrating multiple measurements (e.g., coordinates, elevations, boundary markers) and referencing maps or plans, requiring active tracking and transformation of structured spatial data within an episode.",
+      "adequacy_evidence": "Current AI systems with tool support (e.g., GIS, code execution) can reliably store, retrieve, and manipulate these structured datasets without significant context loss or compression errors.",
+      "_timestamp": "2026-04-06T00:02:07"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Surveying often relies on prior surveys, control points, and historical boundary data, but typically within the scope of a given project or site rather than long-term evolving case histories.",
+      "adequacy_evidence": "Current AI systems integrated with GIS databases and project records can reliably store and retrieve prior survey data and benchmarks across sessions, meeting these moderate memory needs.",
+      "_timestamp": "2026-04-06T00:02:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Surveying relies on interpreting spatial data from instruments (e.g., GPS, LiDAR, total stations), terrain features, and sometimes visual site observations, requiring precise cross-modal spatial reasoning beyond text.",
+      "adequacy_evidence": "Current AI systems can process geospatial and sensor data with tools, but integration with real-world measurement workflows and high-precision spatial interpretation remains uneven, especially in complex or noisy field conditions.",
+      "_timestamp": "2026-04-06T00:02:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Surveying work that determines property boundaries and related measurements must be performed under the supervision of, and often certified by, a licensed surveyor in the US. While AI can assist with calculations, regulations require a licensed human to take responsibility, creating partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-06T00:02:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The calculations feed into property boundaries and legal documents relied on by clients, regulators, and courts, so stakeholders do care about who performs them, though the task itself is technical.",
+      "adequacy_evidence": "Stakeholders typically require a licensed surveyor\u2019s authority and sign-off; even if AI can perform calculations, it would not be independently accepted without human oversight.",
+      "_timestamp": "2026-04-06T00:02:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Surveying calculations directly determine legal property boundaries, construction placement, and terrain assessments, where even small residual errors can lead to costly disputes, structural issues, or safety hazards.",
+      "adequacy_evidence": "Given standard quality controls like redundant measurements, instrument validation, and cross-checking, AI-assisted calculations (which are largely deterministic and tool-supported) can achieve sufficiently low residual error to meet these high assurance demands.",
+      "_timestamp": "2026-04-06T00:02:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Survey calculations must be internally consistent with measurements, control points, and geodetic constraints; errors can be subtle and may only appear through closure checks or downstream discrepancies, requiring expert review and sometimes remeasurement.",
+      "adequacy_evidence": "AI can perform geometric and coordinate calculations accurately with tools, but still requires standard surveying validation (e.g., error propagation checks, field verification), creating a meaningful but manageable verification burden.",
+      "_timestamp": "2026-04-06T00:02:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

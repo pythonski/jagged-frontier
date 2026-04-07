@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1161.00",
+  "task_id": 18456,
+  "task_statement": "Write information in medical records or provide narrative summaries to communicate patient information to other health care providers.",
+  "occupation_title": "Nurse Midwives",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Documenting patient information is typically done in electronic health records or typed reports, which are computer-based tasks, though some settings still use paper charts or require on-site system access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting what details to include, how to frame clinical significance, and how to communicate subtle risk factors or patient context requires experience-based clinical judgment beyond fixed templates.",
+      "adequacy_evidence": "Current agents can generate coherent clinical summaries but often lack nuanced prioritization and may misjudge salience or omit subtle context that experienced practitioners would include.",
+      "_timestamp": "2026-04-05T23:30:35"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Clinical documentation for nurse midwives spans varied patient cases (prenatal, labor, postpartum, complications) but follows relatively standardized formats and conventions (e.g., SOAP notes, discharge summaries).",
+      "adequacy_evidence": "Large corpora of de-identified clinical notes, documentation guidelines, and templated EHR workflows provide ample process-level examples, and gaps can be filled with synthetic data and targeted fine-tuning.",
+      "_timestamp": "2026-04-05T23:30:36"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical documentation requires selecting and framing relevant patient details based on implicit standards (e.g., what is clinically salient, medico-legal requirements, audience needs), not fully specified in instructions.",
+      "adequacy_evidence": "Current AI can follow documentation conventions and infer structure, but often misses nuanced clinical priorities or over/under-includes details, requiring human review and correction.",
+      "_timestamp": "2026-04-05T23:30:36"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing patient information into coherent records or summaries, requiring multiple interdependent steps (organizing data, maintaining consistency, and ensuring completeness) but typically within bounded document lengths.",
+      "adequacy_evidence": "Frontier AI systems can generally sustain coherence over medical note-length sequences, though they may occasionally omit details or introduce inconsistencies as length and complexity increase.",
+      "_timestamp": "2026-04-05T23:30:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate medical documentation and summaries depend on integrating longitudinal patient histories, prior visits, treatments, and evolving clinical context across multiple encounters.",
+      "adequacy_evidence": "Current AI systems can retrieve and use structured EHR data across sessions, but often struggle with consistent integration, completeness, and maintaining nuanced longitudinal context without robust external systems.",
+      "_timestamp": "2026-04-05T23:30:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is fundamentally text-based, involving writing or summarizing patient information in medical records for communication with other providers.",
+      "adequacy_evidence": "Since the task is text-in/text-out, current AI systems handle the modality requirements adequately with no meaningful multimodal gap.",
+      "_timestamp": "2026-04-05T23:30:37"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Clinical documentation requires precise, context-sensitive accuracy; errors like omissions, incorrect timelines, or misinterpretation of findings can be subtle and typically require trained clinicians reviewing source data to detect.",
+      "adequacy_evidence": "Current AI systems can generate plausible summaries but frequently introduce hallucinations or misweight clinical details, necessitating thorough expert review and cross-checking against the medical record.",
+      "_timestamp": "2026-04-05T23:30:39"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in medical records or patient summaries can lead to incorrect clinical decisions, medication errors, or missed complications, so even rare residual mistakes can have serious downstream consequences.",
+      "adequacy_evidence": "Even with standard review, AI-generated documentation can include subtle omissions, misinterpretations, or hallucinated details that are hard to detect, leaving a non-trivial residual risk in clinical contexts.",
+      "_timestamp": "2026-04-05T23:30:39"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Clinical documentation and narrative summaries are typically completed after patient encounters or during charting periods, where minutes (or longer) are acceptable and real-time speed is not critical.",
+      "adequacy_evidence": "Current AI systems can generate structured notes and summaries rapidly within these time windows, without needing to sacrifice reasoning depth or output quality.",
+      "_timestamp": "2026-04-05T23:30:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The output is consumed by other healthcare providers who rely on accurate, clinically credible documentation, and the perceived competence of the author can matter for trust and interpretation.",
+      "adequacy_evidence": "Clinicians are increasingly open to AI-assisted documentation, but full acceptance of autonomous AI-authored records is limited due to liability, trust, and accountability concerns.",
+      "_timestamp": "2026-04-05T23:30:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Clinical documentation must be authored or authenticated by a licensed provider, and HIPAA/privacy rules apply, but there is no explicit prohibition on AI assisting with drafting notes. Regulations effectively require human review and sign-off, creating partial rather than full restriction.",
+      "_timestamp": "2026-04-05T23:30:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Documenting and summarizing patient information requires integrating large, heterogeneous data (history, vitals, labs, medications, labor progression) where omissions can affect care continuity.",
+      "adequacy_evidence": "Agents can ingest and summarize sizable records with tools, but still show occasional context loss or misprioritization when compressing complex clinical details.",
+      "_timestamp": "2026-04-05T23:31:45"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

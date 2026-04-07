@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1243.00",
+  "task_id": 16110,
+  "task_statement": "Design database applications, such as interfaces, data transfer mechanisms, global temporary tables, data partitions, and function-based indexes to enable efficient access of the generic database structure.",
+  "occupation_title": "Database Architects",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Designing database applications, structures, and optimization mechanisms is performed using database management systems and development tools on a computer, and does not require physical presence or non-computer equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing database applications requires inferring workload characteristics, performance goals, data access patterns, and trade-offs (e.g., indexing vs. write cost) that are rarely fully specified and depend heavily on business context and future scaling expectations.",
+      "adequacy_evidence": "Current agents can propose reasonable schemas and optimizations from partial specs, but often miss nuanced constraints (e.g., edge-case query patterns, evolving workloads) and require iterative human clarification to align with true system goals.",
+      "_timestamp": "2026-04-05T23:49:12"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective database architecture design requires experiential judgment about workload patterns, query behavior, indexing tradeoffs, and system-specific performance tuning that are not fully captured by formal rules or documentation.",
+      "adequacy_evidence": "Current agents can apply best practices and reason about common patterns, but they lack consistent calibration for nuanced, context-specific tradeoffs and performance tuning seen in complex or atypical production environments.",
+      "_timestamp": "2026-04-05T23:49:12"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Database application design spans diverse systems (OLTP vs OLAP, distributed vs local, varying schemas, workloads, and performance constraints), creating a heterogeneous and context-sensitive distribution of cases.",
+      "adequacy_evidence": "There is extensive accessible data (documentation, open-source systems, benchmarks, design guides, and engineering discussions) that expose both outcomes and design reasoning, and synthetic environments can readily generate additional representative scenarios.",
+      "_timestamp": "2026-04-05T23:49:12"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing database applications typically requires awareness of prior design decisions, existing schemas, organizational standards, and evolving system requirements across a project lifecycle, but individual design tasks can often be scoped and documented per project.",
+      "adequacy_evidence": "Current agents can store and retrieve project artifacts via external memory systems, but they still show gaps in reliably maintaining and integrating evolving schema context and design rationale across sessions without careful tooling and human oversight.",
+      "_timestamp": "2026-04-05T23:49:13"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing database applications requires simultaneously tracking schemas, constraints, workloads, indexing strategies, and data flows, where missing a dependency or constraint can cause major performance or correctness issues.",
+      "adequacy_evidence": "Agents can offload context via tools and retrieval, but still show drift or omission when managing many interdependent design elements across long sequences, leading to moderate reliability gaps.",
+      "_timestamp": "2026-04-05T23:49:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing database applications involves multiple interdependent design steps (schema structuring, indexing, partitioning, and data flow design) where earlier decisions constrain later ones, but the process is often modular and iterative rather than a single \u09a6\u09c0\u09b0\u09cd\u0998 tightly coupled chain.",
+      "adequacy_evidence": "Well-scaffolded AI agents can sustain coherence across typical design workflows, but may show some drift or inconsistency in maintaining constraints across multiple interacting components, especially in larger or more customized designs.",
+      "_timestamp": "2026-04-05T23:49:14"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Database application design is typically an offline, deliberative task where architects can take minutes to hours to analyze requirements and produce designs without strict latency constraints.",
+      "adequacy_evidence": "Current AI systems can generate high-quality design suggestions within acceptable timeframes, and there is no meaningful pressure forcing reduced reasoning depth.",
+      "_timestamp": "2026-04-05T23:49:14"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing database structures, indexes, partitions, and interfaces is primarily a text- and code-based activity, with optional diagrams that are not essential to task completion.",
+      "adequacy_evidence": "Current AI agents handle text-based schema design, SQL, and architectural descriptions effectively, and any optional diagram generation is already well-supported.",
+      "_timestamp": "2026-04-05T23:49:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Design flaws in database architecture (e.g., indexing, partitioning, data transfer mechanisms) can lead to severe performance degradation, data corruption risks, or security vulnerabilities that are costly and hard to reverse once deployed.",
+      "adequacy_evidence": "While code review, testing, and benchmarking can catch many issues, AI-generated designs may still embed subtle inefficiencies or edge-case failures that are not fully exposed pre-deployment, leaving some residual risk.",
+      "_timestamp": "2026-04-05T23:49:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Design flaws in database architecture (e.g., indexing strategy, partitioning, data transfer mechanisms) often manifest only under realistic workloads, edge cases, or scale, requiring performance testing, query analysis, and expert review to detect.",
+      "adequacy_evidence": "Current AI systems frequently produce plausible but suboptimal or inconsistent designs, and verifying correctness and efficiency requires substantial expert validation, benchmarking, and iterative tuning.",
+      "_timestamp": "2026-04-05T23:49:15"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI from designing database applications. While general data protection and security regulations may govern how databases are built, they do not restrict the use of AI as a tool for this task.",
+      "_timestamp": "2026-04-05T23:49:15"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves collaboration with developers, engineers, and possibly clients who rely on the database design, but the performer's personal identity is not central to acceptance beyond competence and reliability.",
+      "adequacy_evidence": "In this domain, stakeholders are generally comfortable with AI-assisted or AI-driven design as long as outputs meet technical requirements, and AI use is already widely accepted in tooling and workflows.",
+      "_timestamp": "2026-04-05T23:49:16"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

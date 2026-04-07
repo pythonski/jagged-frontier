@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1081.02",
+  "task_id": 20011,
+  "task_statement": "Route or reroute drivers in real time with remote route navigation software, satellite linkup systems, or global positioning systems (GPS) to improve operational efficiencies.",
+  "occupation_title": "Logistics Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Routing or rerouting drivers is typically performed through dispatch or fleet management software using GPS and communication systems, which can be operated entirely from a computer with internet access without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While routing relies heavily on explicit optimization rules and real-time data (traffic, distances, constraints), experienced analysts apply some judgment for edge cases like driver preferences, informal constraints, or ambiguous disruptions.",
+      "adequacy_evidence": "Modern AI-driven routing systems already capture most of this judgment through data integration and optimization heuristics, with minimal residual gaps in replicating human calibration.",
+      "_timestamp": "2026-04-06T04:03:55"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing monitoring and iterative rerouting decisions, where prior steps inform current choices, but each routing adjustment is relatively modular rather than tightly interdependent over long chains.",
+      "adequacy_evidence": "AI agents can maintain coherent performance across iterative routing updates with tool support, though some degradation (e.g., missed constraints or drift in priorities) can emerge over extended real-time sequences.",
+      "_timestamp": "2026-04-06T04:03:56"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Routing decisions involve context-dependent tradeoffs (e.g., delivery urgency, fuel costs, driver hours, traffic conditions, client priorities) that are not always fully specified and require interpretation of operational goals.",
+      "adequacy_evidence": "Current AI systems can optimize routing when objectives and constraints are clearly encoded, but they often struggle to infer shifting priorities or implicit business preferences without human input or iterative adjustment.",
+      "_timestamp": "2026-04-06T04:03:56"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking multiple drivers, routes, traffic conditions, and constraints in real time, requiring continuous updating and prioritization of evolving information streams.",
+      "adequacy_evidence": "Current agents can integrate and monitor multiple data feeds with tools, but may lose or misprioritize rapidly changing context or edge-case constraints during extended, dynamic routing scenarios.",
+      "_timestamp": "2026-04-06T04:03:56"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied but structured scenarios (traffic conditions, weather, road networks, vehicle constraints, and disruptions), creating meaningful but not extreme heterogeneity within a well-defined routing domain.",
+      "adequacy_evidence": "Extensive GPS traces, traffic datasets, routing benchmarks, and simulation environments provide rich, process-level training signals, and synthetic generation can cover rare scenarios, leaving little coverage gap.",
+      "_timestamp": "2026-04-06T04:03:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Routing decisions can benefit from stored historical data like driver performance, past route efficiencies, and recurring constraints, but many decisions rely primarily on current real-time data feeds.",
+      "adequacy_evidence": "Modern AI systems with database integrations and retrieval pipelines can reliably store and access historical logistics data across sessions, and this level of persistence is well within current capabilities.",
+      "_timestamp": "2026-04-06T04:03:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task relies on map-based spatial data (GPS, routing interfaces, traffic overlays), which are inherently visual/spatial rather than purely textual.",
+      "adequacy_evidence": "Current AI agents can effectively use map APIs and structured geospatial data to perform routing without needing advanced visual perception, so multimodal demands are well met.",
+      "_timestamp": "2026-04-06T04:03:57"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from performing real-time routing or rerouting of drivers. Existing transportation and safety regulations govern outcomes (e.g., driver compliance, hours-of-service), not the use of AI decision tools for routing.",
+      "_timestamp": "2026-04-06T04:03:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Routing or rerouting drivers in real time requires second-level responsiveness to changing traffic, weather, or operational conditions, making latency constraints tight.",
+      "adequacy_evidence": "Well-integrated AI agents can rely on fast optimization algorithms and live data feeds, producing high-quality routing decisions within required timeframes without needing slow extended reasoning.",
+      "_timestamp": "2026-04-06T04:03:58"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Route quality can be checked against known constraints (traffic data, delivery windows, maps), but assessing optimality or catching subtle inefficiencies often requires domain knowledge and monitoring over time.",
+      "adequacy_evidence": "Current AI can generate plausible routes, but still makes occasional suboptimal or constraint-violating decisions, requiring human oversight or system checks to validate routing choices in practice.",
+      "_timestamp": "2026-04-06T04:03:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Drivers must receive and act on routing instructions, so they are direct stakeholders whose compliance affects task success, though the identity of the dispatcher is not central.",
+      "adequacy_evidence": "Drivers already routinely accept automated routing from GPS and dispatch software, so AI agents performing this role would face little to no resistance.",
+      "_timestamp": "2026-04-06T04:03:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Routing errors can cause delays, missed time windows, and cost inefficiencies, but are typically recoverable through rerouting and driver communication rather than causing irreversible harm.",
+      "adequacy_evidence": "Modern AI systems with GPS, traffic data, and human-in-the-loop monitoring can keep residual routing errors within acceptable bounds after normal checks, with issues usually detectable and correctable in real time.",
+      "_timestamp": "2026-04-06T04:03:59"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

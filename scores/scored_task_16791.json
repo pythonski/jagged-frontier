@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-1029.01",
+  "task_id": 16791,
+  "task_statement": "Compile data for use in activities, such as gene expression profiling, genome annotation, or structural bioinformatics.",
+  "occupation_title": "Bioinformatics Scientists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Compiling bioinformatics data (e.g., gene expression datasets, genome annotations, structural data) typically involves aggregating and organizing digital datasets from databases, sequencing outputs, or repositories using software tools, which can be done entirely on a computer."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Compiling bioinformatics datasets involves choices about preprocessing, normalization, quality control, and integration across sources, which often rely on experience with assay artifacts and domain-specific conventions beyond explicit protocols.",
+      "adequacy_evidence": "Current agents can execute standard pipelines and documented practices, but show weaker calibration on edge cases (e.g., batch effects, low-quality samples, conflicting annotations) where experienced judgment is needed.",
+      "_timestamp": "2026-04-05T20:45:49"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Compiling bioinformatics data requires selecting relevant datasets, formats, and preprocessing steps based on the downstream application, with implicit criteria like quality thresholds, normalization methods, and annotation standards.",
+      "adequacy_evidence": "Current agents can follow explicit instructions but often miss context-dependent choices (e.g., dataset suitability or preprocessing conventions), requiring human guidance to align with true research goals.",
+      "_timestamp": "2026-04-05T20:45:49"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse data types (e.g., RNA-seq, whole-genome sequencing, structural data), organisms, experimental protocols, and preprocessing pipelines, creating a heterogeneous and long-tailed distribution of instances.",
+      "adequacy_evidence": "There are extensive public datasets, pipelines, and documented workflows (e.g., GEO, ENCODE, bioinformatics tutorials), but some coverage gaps remain in proprietary datasets, novel assays, and lab-specific preprocessing practices.",
+      "_timestamp": "2026-04-05T20:45:49"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Compiling bioinformatics data involves multi-step workflows (data acquisition, cleaning, normalization, integration) where outputs from earlier steps feed into later ones, but these steps are typically modular and not highly fragile.",
+      "adequacy_evidence": "LLM-based agents with tools can execute such pipelines with reasonable consistency, though longer workflows can still introduce occasional errors or drift in data handling that require oversight.",
+      "_timestamp": "2026-04-05T20:45:50"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Compiling data for gene expression profiling or genome annotation involves integrating large, heterogeneous datasets (e.g., sequence data, annotations, metadata) from multiple sources, where omissions or misalignment can materially affect downstream analyses.",
+      "adequacy_evidence": "Current agents can use tools and retrieval pipelines to handle large datasets, but they still exhibit limitations in consistently tracking all relevant context and maintaining fidelity when compressing or stitching together complex biological data within a single workflow.",
+      "_timestamp": "2026-04-05T20:45:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Data compilation often benefits from project continuity (e.g., consistent preprocessing choices, dataset versions, or annotation standards), but individual compilation tasks are typically reproducible from documented inputs and protocols.",
+      "adequacy_evidence": "Current AI systems integrated with databases, version control, and retrieval tools can reliably store and recall prior datasets, pipelines, and preferences, adequately supporting these moderate cross-session needs.",
+      "_timestamp": "2026-04-05T20:45:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves collecting and organizing structured data (e.g., nucleotide sequences, expression matrices, annotations) from databases, which are text- and table-based rather than perceptual modalities.",
+      "adequacy_evidence": "Current AI systems handle text and structured data extraction, transformation, and integration well, with no meaningful reliance on image, audio, or other non-text modalities.",
+      "_timestamp": "2026-04-05T20:45:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data compilation for gene expression profiling or genome annotation is typically performed in batch workflows where minutes to hours (or longer) are acceptable, with no strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can take the necessary time for retrieval, integration, and preprocessing without meaningful degradation from latency limits, as speed is not a binding constraint.",
+      "_timestamp": "2026-04-05T20:45:52"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit AI systems from compiling bioinformatics data. Relevant regulations (e.g., HIPAA, data security rules) govern how data is handled, not whether AI can perform the task.",
+      "_timestamp": "2026-04-05T20:45:52"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal data compilation activity where outputs are consumed by researchers or pipelines, with little to no dependence on the performer's identity or direct stakeholder interaction.",
+      "adequacy_evidence": "AI-generated data compilation is already broadly accepted in bioinformatics workflows, and stakeholders generally care about data quality rather than whether a human or AI produced it.",
+      "_timestamp": "2026-04-05T20:45:52"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in compiled bioinformatics datasets can propagate into downstream analyses and publications, affecting scientific conclusions, but they are often detectable later and rarely cause immediate irreversible harm.",
+      "adequacy_evidence": "With standard QC steps (e.g., validation pipelines, consistency checks), many AI errors can be caught, but subtle misannotations or data integration mistakes may still slip through and remain consequential.",
+      "_timestamp": "2026-04-05T20:45:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Compiling bioinformatics datasets involves integrating heterogeneous sources, handling preprocessing steps (e.g., normalization, alignment), and avoiding subtle errors like batch effects or misannotation, which often require expert review and downstream validation to detect.",
+      "adequacy_evidence": "Current AI agents can assist with data compilation but frequently introduce or miss subtle biological and pipeline-specific errors, requiring extensive expert validation and reanalysis to ensure correctness before use.",
+      "_timestamp": "2026-04-05T20:45:53"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

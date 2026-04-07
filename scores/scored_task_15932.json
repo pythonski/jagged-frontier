@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1041.08",
+  "task_id": 15932,
+  "task_statement": "Request or compile necessary import documentation, such as customs invoices, certificates of origin, and cargo-control documents.",
+  "occupation_title": "Customs Brokers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most customs documentation is requested, received, and compiled electronically through email, document management systems, or customs portals. However, some shipments still require handling or verification of original paper documents or stamped certificates."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Determining the exact set of required import documents can involve some case-based judgment (e.g., product classification nuances, origin rules, special programs), but most requirements are governed by explicit regulations and standardized procedures.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably follow codified customs rules, checklists, and tariff schedules, and replicate typical broker decision logic with minimal loss in performance for most cases.",
+      "_timestamp": "2026-04-06T01:44:04"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different countries, product categories, and regulatory regimes, creating moderate variation in required documents and procedures, but much of it relies on standardized forms and well-defined rules.",
+      "adequacy_evidence": "Extensive public documentation, templates, regulatory guidelines, and examples of completed forms provide strong coverage, and synthetic or rule-based generation can fill remaining gaps.",
+      "_timestamp": "2026-04-06T01:44:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Required documents depend on shipment specifics (goods classification, origin/destination countries, trade agreements), so some context-dependent interpretation is needed beyond a literal checklist.",
+      "adequacy_evidence": "Agents can often infer required documents using rules and databases, but they may miss edge cases or nuanced regulatory exceptions, requiring human correction.",
+      "_timestamp": "2026-04-06T01:44:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While each shipment is largely self-contained, brokers often reuse client profiles, importer details, and prior documentation patterns across transactions.",
+      "adequacy_evidence": "Current systems can reliably store and retrieve client records, templates, and past filings, so agents can access needed cross-session context without major gaps.",
+      "_timestamp": "2026-04-06T01:44:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves handling structured and unstructured text documents (e.g., invoices, certificates, forms), even when sourced as PDFs or digital records.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing tools can reliably process and generate these text-based documents, with minimal reliance on complex multimodal reasoning.",
+      "_timestamp": "2026-04-06T01:44:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering and aligning multiple structured data elements (e.g., shipment details, values, origin, classification codes) across documents, requiring moderate within-episode tracking and consistency checks.",
+      "adequacy_evidence": "Modern LLM agents with tool use and structured data handling can reliably track, retrieve, and reconcile these details within a session, with minimal loss or drift in context.",
+      "_timestamp": "2026-04-06T01:44:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple coordinated steps\u2014identifying required documents, requesting them from parties, verifying consistency, and compiling them\u2014where errors in earlier steps can affect later completeness and accuracy.",
+      "adequacy_evidence": "AI agents can generally manage these moderate-length workflows with tools and checklists, but may exhibit some degradation in maintaining all constraints across documents, leading to occasional omissions or inconsistencies.",
+      "_timestamp": "2026-04-06T01:44:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling and requesting import documentation is typically handled over minutes to hours within standard logistics workflows, not requiring real-time responses.",
+      "adequacy_evidence": "Current AI agents can gather, draft, and organize required documents well within these relaxed timeframes without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-06T01:44:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. customs brokerage activities are regulated and typically require a licensed customs broker to be responsible for filings and representations to CBP, but there is no explicit prohibition on using AI to compile or request documentation as a support tool. The requirement for licensed human oversight creates partial restriction rather than a full ban on AI involvement.",
+      "_timestamp": "2026-04-06T01:44:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Import documentation is structured and governed by clear regulatory requirements, allowing checklist-based verification, but errors (e.g., incorrect tariff codes or origin details) require domain expertise and cross-referencing to detect.",
+      "adequacy_evidence": "Current AI can generate plausible documents but may misapply codes or omit nuances, so human review against regulations and source data is still routinely needed.",
+      "_timestamp": "2026-04-06T01:44:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interacting with shippers, exporters, and customs authorities who rely on accurate documentation, but the performer\u2019s personal identity or relationship is not central beyond credibility and correctness.",
+      "adequacy_evidence": "Many stakeholders would accept AI-assisted preparation of standardized documents, but some may still prefer or require a licensed human broker to oversee or validate submissions, creating moderate resistance.",
+      "_timestamp": "2026-04-06T01:44:07"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in import documentation can lead to shipment delays, fines, or additional inspections, but are typically correctable and not usually irreversible or catastrophic after standard review processes.",
+      "adequacy_evidence": "With routine human or automated checks (e.g., validation against shipment data and regulatory rules), AI-generated documents would leave minimal residual risk that is generally acceptable in practice.",
+      "_timestamp": "2026-04-06T01:44:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

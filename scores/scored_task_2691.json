@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4161.00",
+  "task_id": 2691,
+  "task_statement": "Answer questions regarding examinations, eligibility, salaries, benefits, and other pertinent information.",
+  "occupation_title": "Human Resources Assistants, Except Payroll and Timekeeping",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Answering questions about exams, eligibility, salaries, and benefits is typically done via email, HR systems, phone, or messaging tools, which can be handled remotely. However, HR assistants often also respond to walk-in employees or applicants in person, so some instances require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of policy-driven queries (exams, eligibility, compensation, benefits) that vary across organizations and jurisdictions, but follow relatively structured and recurring patterns.",
+      "adequacy_evidence": "While abundant public HR materials, FAQs, and policy documents exist, much organization-specific nuance (e.g., internal benefits rules or eligibility edge cases) is private and not fully represented in training data, though it can be partially approximated.",
+      "_timestamp": "2026-04-06T01:30:15"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Most inquiries rely on documented policies, eligibility rules, and standardized HR procedures, but some cases require minor judgment in interpreting edge cases or applying policies to specific employee contexts.",
+      "adequacy_evidence": "Well-scaffolded AI agents with access to policy documents and retrieval systems can consistently replicate this level of judgment, handling most context-specific interpretations with minimal shortfall.",
+      "_timestamp": "2026-04-06T01:30:15"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Answering HR inquiries often requires consulting multiple policy documents (benefits plans, eligibility rules, salary tables) and selecting relevant details, but the information scope per query is usually bounded and manageable.",
+      "adequacy_evidence": "Current LLM agents with retrieval tools can reliably pull and synthesize relevant policy information within a session without significant context loss or compression errors.",
+      "_timestamp": "2026-04-06T01:30:15"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Employee inquiries can be somewhat context-dependent (e.g., eligibility or benefits vary by role, tenure, or policy nuances), requiring some interpretation beyond literal wording.",
+      "adequacy_evidence": "Current AI agents can reliably handle such ambiguity by asking clarifying questions and retrieving relevant policy details, performing well in typical HR Q&A scenarios.",
+      "_timestamp": "2026-04-06T01:30:15"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Answering HR-related questions can involve multi-turn interactions with some need for consistency across responses, but each query is often independently addressable without long, tightly coupled sequences.",
+      "adequacy_evidence": "Frontier AI agents can maintain coherent context and consistency across short to moderate multi-turn exchanges, with minimal degradation over the typical interaction length for this task.",
+      "_timestamp": "2026-04-06T01:30:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many inquiries can be answered from general policies, some require referencing prior employee records or past interactions (e.g., eligibility status, prior benefits selections), implying moderate cross-session context use.",
+      "adequacy_evidence": "Current AI agents integrated with HR databases and record systems can reliably store and retrieve persistent employee information, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T01:30:17"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "HR assistants are typically expected to respond to employee inquiries within seconds to a few minutes, especially in live or email interactions, but not under strict real-time constraints.",
+      "adequacy_evidence": "Current AI agents can deliver accurate answers to standard HR questions within seconds, with sufficient reasoning depth well inside the typical time expectations.",
+      "_timestamp": "2026-04-06T01:30:17"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves providing information drawn from policies, guidelines, and records, which are overwhelmingly text-based and do not require interpreting or generating non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based question answering effectively, and no significant multimodal capabilities are needed for competent performance in this task.",
+      "_timestamp": "2026-04-06T01:30:18"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Answers can be checked against documented HR policies, benefits guides, and eligibility rules, but doing so requires consulting internal materials and some domain familiarity.",
+      "adequacy_evidence": "AI can often provide plausible answers but may misstate specific policy details or use outdated information, so routine verification against official sources is still needed.",
+      "_timestamp": "2026-04-06T01:30:18"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from answering general HR-related informational questions about exams, eligibility, salaries, or benefits, as long as no regulated decision-making or licensed activity is involved.",
+      "_timestamp": "2026-04-06T01:30:18"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves employees or applicants who rely on the information provided, but the performer's personal authority or empathy is usually not central beyond basic clarity and helpfulness.",
+      "adequacy_evidence": "HR chatbots and automated help desks are already widely used for answering routine questions about benefits, eligibility, and policies, and are generally accepted by stakeholders.",
+      "_timestamp": "2026-04-06T01:30:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect answers about eligibility, salaries, or benefits can mislead employees and cause administrative or financial inconvenience, but errors are typically reversible and not catastrophic.",
+      "adequacy_evidence": "With standard verification against HR policies and documents, AI-generated responses can be checked effectively, leaving minimal residual risk that is generally acceptable.",
+      "_timestamp": "2026-04-06T01:30:19"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

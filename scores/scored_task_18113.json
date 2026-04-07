@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1199.04",
+  "task_id": 18113,
+  "task_statement": "Design, program, or model Geographic Information Systems (GIS) applications or procedures.",
+  "occupation_title": "Geospatial Information Scientists and Technologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Designing, programming, or modeling GIS applications or procedures is software and data work performed using computers and GIS development tools, which can be done entirely remotely without physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "GIS application design spans diverse domains (urban planning, environmental modeling, defense, logistics) with heterogeneous data types, projections, and domain-specific workflows, creating a long-tailed distribution of use cases.",
+      "adequacy_evidence": "There is extensive public code, documentation, tutorials, and open geospatial data enabling strong coverage of common patterns, but niche, proprietary datasets and specialized domain workflows remain underrepresented and only partially recoverable via synthesis.",
+      "_timestamp": "2026-04-06T00:07:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing GIS applications often requires experience-based choices about projections, spatial resolution, data quality tradeoffs, and appropriate analytical methods that are not fully specified by formal rules.",
+      "adequacy_evidence": "Current agents can follow documented GIS procedures and replicate common patterns, but they lack consistent calibration in handling nuanced spatial tradeoffs and context-specific modeling decisions.",
+      "_timestamp": "2026-04-06T00:07:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing and programming GIS applications involves long, interdependent pipelines (data acquisition, cleaning, spatial modeling, algorithm design, testing, and deployment) where early decisions propagate through later stages.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step coding and workflows with tools, but over extended sequences they still show goal drift, integration inconsistencies, and error accumulation requiring human oversight.",
+      "_timestamp": "2026-04-06T00:07:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "GIS application design typically involves translating stakeholder needs (e.g., spatial analyses, data integration, usability) into technical specifications, which are partly implicit and context-dependent but often guided by project briefs and domain conventions.",
+      "adequacy_evidence": "Current agents can infer general goals and propose reasonable GIS designs, but often miss nuanced spatial, domain-specific, or stakeholder-driven requirements, requiring iterative human clarification and refinement.",
+      "_timestamp": "2026-04-06T00:07:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "GIS application development typically spans projects where prior design decisions, data schemas, coordinate systems, and client requirements must be revisited across sessions, but most context can be externalized in code repositories and documentation.",
+      "adequacy_evidence": "Current agents can use external storage (repos, vector DBs) to persist project context, but they still show gaps in reliably retrieving and integrating evolving geospatial assumptions or past decisions across sessions.",
+      "_timestamp": "2026-04-06T00:07:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing and programming GIS applications requires managing multiple heterogeneous data layers, coordinate systems, transformations, parameters, and code components simultaneously, where small mismatches can cause significant errors.",
+      "adequacy_evidence": "Current agents can offload some state to tools and files, but still show weaknesses in consistently tracking complex multi-layer geospatial context and interdependencies across longer workflows.",
+      "_timestamp": "2026-04-06T00:07:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing and programming GIS applications is typically project-based work where iterations can take minutes to hours, and real-time responsiveness is not required.",
+      "adequacy_evidence": "Current AI agents can take the necessary time for code generation, modeling, and refinement without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T00:07:28"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "GIS application design relies heavily on spatial data (maps, raster/vector layers, coordinate systems) and visual outputs, requiring interpretation and generation of geospatial representations beyond text.",
+      "adequacy_evidence": "Current agents can manipulate geospatial data and generate maps with tools, but they are less reliable in complex spatial reasoning, projection handling, and nuanced visual validation tasks.",
+      "_timestamp": "2026-04-06T00:07:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit AI systems from designing, programming, or modeling GIS applications. While certain domains (e.g., defense or sensitive geospatial data) impose access or security restrictions, they do not bar AI from performing the task itself.",
+      "_timestamp": "2026-04-06T00:07:29"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "GIS application design and modeling involve complex spatial transformations, projections, data integration, and domain assumptions where errors can be subtle, propagate silently, and require expert validation using test datasets and visual inspection.",
+      "adequacy_evidence": "Current AI frequently produces plausible but incorrect geospatial logic (e.g., CRS misuse, spatial joins, modeling assumptions), and these errors are hard to detect without thorough expert review and testing, making verification burdens high.",
+      "_timestamp": "2026-04-06T00:07:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task typically serves organizational clients or internal teams who rely on GIS applications, so stakeholders engage with the output, but the developer\u2019s personal identity is not central.",
+      "adequacy_evidence": "Stakeholders generally care about functionality and accuracy of GIS tools rather than who created them, and AI-assisted development is already broadly acceptable in technical workflows.",
+      "_timestamp": "2026-04-06T00:07:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "GIS applications can influence planning, resource allocation, and environmental or infrastructure decisions, so residual errors can have meaningful downstream impacts, but are usually not immediately catastrophic after standard validation.",
+      "adequacy_evidence": "Even after testing and validation, AI-generated GIS code or models can contain subtle spatial logic or data-integration errors that are hard to fully eliminate, leaving a moderate level of residual risk.",
+      "_timestamp": "2026-04-06T00:07:29"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

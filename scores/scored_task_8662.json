@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-3092.00",
+  "task_id": 8662,
+  "task_statement": "Verify accuracy of transcripts by checking copies against original records of proceedings and accuracy of rulings by checking with judges.",
+  "occupation_title": "Court Reporters and Simultaneous Captioners",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Transcript verification is typically done by comparing digital transcripts with audio or stenographic records on a computer, but confirming rulings may sometimes require direct communication with judges or consultation of physical court records in the courthouse."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied accents, audio qualities, legal terminology, and proceeding types, but remains within a well-defined domain of court recordings and transcripts.",
+      "adequacy_evidence": "Large corpora of legal transcripts, audio recordings, and alignment tasks (including ASR correction and legal review workflows) are available or can be synthesized, providing sufficient process-level training signal.",
+      "_timestamp": "2026-04-06T03:40:46"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task has clear primary goals (match transcript to official records and confirm rulings), but includes some context-dependent judgment about what constitutes a meaningful discrepancy or acceptable phrasing differences.",
+      "adequacy_evidence": "Current AI agents can reliably compare documents, detect discrepancies, and flag ambiguities; remaining interpretive gaps are limited and can usually be resolved with straightforward rules or minimal human input.",
+      "_timestamp": "2026-04-06T03:40:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely procedural (line-by-line comparison to source records), but requires some experience-based judgment in resolving ambiguities such as unclear audio, speaker attribution, and interpreting judges\u2019 rulings or corrections.",
+      "adequacy_evidence": "Current AI can perform alignment, transcription comparison, and flag discrepancies well, but still struggles with nuanced legal phring, low-quality audio, and context-sensitive judgment, leaving a moderate gap in non-routine cases.",
+      "_timestamp": "2026-04-06T03:40:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves extended but largely repetitive comparison of transcripts against source records and intermittent confirmation with judges, requiring consistency across many segments but with limited interdependence between steps.",
+      "adequacy_evidence": "AI agents can handle long document comparisons but may show mild degradation over lengthy transcripts, such as missed discrepancies or attention drift, especially without careful chunking and validation.",
+      "_timestamp": "2026-04-06T03:40:47"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verification is typically performed per proceeding using the original record and direct confirmation with the judge; each instance is largely self-contained without needing accumulated history.",
+      "adequacy_evidence": "Since the task does not depend on cross-session memory, current agents' ability to store or retrieve long-term context is sufficient and not a limiting factor.",
+      "_timestamp": "2026-04-06T03:40:47"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves comparing lengthy transcripts against original proceeding records and rulings, requiring sustained tracking of large volumes of detailed, line-by-line information where small discrepancies matter.",
+      "adequacy_evidence": "Current agents can process long documents with retrieval and chunking, but still risk missing or misaligning fine-grained details across sources, especially in dense legal transcripts.",
+      "_timestamp": "2026-04-06T03:40:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verification of transcripts and rulings is typically a post-production quality control task where minutes to hours are acceptable, not requiring real-time response.",
+      "adequacy_evidence": "Current AI systems can perform careful document comparison and cross-checking within these relaxed time constraints without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-06T03:40:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves comparing written transcripts to audio recordings of proceedings and occasionally direct verbal confirmation with judges, requiring audio-text alignment.",
+      "adequacy_evidence": "Current AI handles speech-to-text and text comparison well in clear conditions, but courtroom audio (overlapping speech, accents, noise) can still reduce reliability in fine-grained verification.",
+      "_timestamp": "2026-04-06T03:40:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors can be identified by systematically comparing transcripts to audio records and confirming rulings with judges, but this requires careful attention, domain familiarity, and time.",
+      "adequacy_evidence": "AI transcription and comparison tools still produce enough inaccuracies (especially with legal terminology and audio quality issues) that consistent human review and correction remain necessary.",
+      "_timestamp": "2026-04-06T03:40:49"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Court reporting and transcript certification are typically governed by state laws requiring a licensed or certified human reporter to attest to accuracy, which limits fully autonomous AI performance. However, these rules generally do not explicitly prohibit AI assistance in verification tasks under human supervision.",
+      "_timestamp": "2026-04-06T03:40:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Court transcripts and rulings form the official legal record; even small residual errors can affect appeals, case outcomes, or judicial interpretation, so near-zero error tolerance is required.",
+      "adequacy_evidence": "AI can perform detailed cross-checking against source records and flag discrepancies, but subtle legal phrasing, speaker attribution, or context-sensitive rulings may still leave non-negligible residual risk after checking.",
+      "_timestamp": "2026-04-06T03:40:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires interaction with judges and relies on the verified transcript being accepted in legal proceedings, so stakeholders engage with and depend on the output, though personal identity is not central.",
+      "adequacy_evidence": "Courts and judges are often cautious about AI involvement in official records, and while high-quality output may be acceptable, many stakeholders would still prefer or require human oversight, leading to moderate resistance.",
+      "_timestamp": "2026-04-06T03:40:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

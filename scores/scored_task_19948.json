@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2141.01",
+  "task_id": 19948,
+  "task_statement": "Authorize release of fuel cell parts, components, or subsystems for production.",
+  "occupation_title": "Fuel Cell Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Engineers often authorize production release by reviewing digital test data, design documentation, and approvals in PLM or quality management systems. However, some cases require in-person inspection of prototypes, testing results, or manufacturing readiness before granting authorization."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Authorization decisions span diverse fuel cell designs, materials, operating conditions, regulatory standards, and test outcomes, with many edge cases tied to safety, reliability, and manufacturing variation.",
+      "adequacy_evidence": "Much of the relevant data (qualification tests, failure analyses, internal review processes) is proprietary and not publicly documented in process-rich form, leaving key parts of the distribution thin or inaccessible for training.",
+      "_timestamp": "2026-04-05T23:44:01"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Authorizing release involves judging whether test data, tolerances, and manufacturing variations meet safety and performance standards, often requiring experience with failure modes, degradation patterns, and borderline cases not fully captured in formal criteria.",
+      "adequacy_evidence": "AI systems can apply documented specifications and analyze test results, but they lack the nuanced calibration engineers develop for ambiguous or borderline release decisions, especially under uncertainty or conflicting signals.",
+      "_timestamp": "2026-04-05T23:44:01"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Authorizing release requires interpreting test results, engineering specifications, safety margins, and organizational quality standards, which often involve implicit thresholds and context-dependent tradeoffs rather than purely explicit rules.",
+      "adequacy_evidence": "Agents can follow documented criteria and standards, but often struggle to fully infer implicit risk tolerances, edge-case judgments, and evolving organizational expectations without human clarification.",
+      "_timestamp": "2026-04-05T23:44:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Authorizing release involves reviewing test results, compliance documentation, quality checks, and approval criteria in a structured but finite sequence where consistency across steps matters.",
+      "adequacy_evidence": "AI agents can follow multi-step review workflows but may show some drift or missed constraints across longer approval chains, especially when integrating heterogeneous engineering and compliance data.",
+      "_timestamp": "2026-04-05T23:44:02"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple technical artifacts (test results, design specs, quality reports, compliance checklists) and integrating them into a go/no-go decision, requiring moderate within-episode information tracking.",
+      "adequacy_evidence": "Current agents can aggregate and summarize such documents with tooling, but may miss or inconsistently track critical constraints or edge-case details across sources, leading to moderate reliability gaps.",
+      "_timestamp": "2026-04-05T23:44:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Authorization decisions often reference prior test results, design revisions, and issue histories, but this information is typically stored in formal systems (e.g., PLM, QA records) rather than relying on personal longitudinal memory.",
+      "adequacy_evidence": "Current AI agents can reliably retrieve and use persistent project data from external systems, so cross-session memory needs are well met through standard integrations rather than intrinsic memory.",
+      "_timestamp": "2026-04-05T23:44:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Authorizing release typically involves reviewing test results, inspection images, and possibly CAD drawings or schematics alongside textual specifications, making multimodal inputs useful but not always central.",
+      "adequacy_evidence": "Current agents can interpret standard engineering visuals and structured data, but struggle with fine-grained tolerances, complex schematics, and nuanced visual inspection judgments required for high-stakes release decisions.",
+      "_timestamp": "2026-04-05T23:44:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Authorizing release of engineered components is a deliberative quality assurance and compliance task that typically allows minutes to hours for review, not requiring rapid real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform detailed analysis and checks well within these timeframes, so latency does not meaningfully constrain reasoning quality.",
+      "_timestamp": "2026-04-05T23:44:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Releasing fuel cell components for production carries high safety, reliability, and regulatory stakes; undetected defects can lead to system failures, recalls, or hazardous incidents, so even rare residual errors are unacceptable.",
+      "adequacy_evidence": "Even with standard quality checks, AI systems may miss subtle engineering, materials, or integration issues, and their failure modes are not yet predictable enough to reduce residual risk to acceptable levels for such high-stakes authorization decisions.",
+      "_timestamp": "2026-04-05T23:44:07"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Manufacturing release authorization typically requires a designated responsible engineer or quality authority under standards (e.g., ISO, safety/quality systems), implying human accountability, but there is no explicit law broadly prohibiting AI assistance. This creates partial restriction rather than a clear legal ban.",
+      "_timestamp": "2026-04-05T23:44:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Releasing fuel cell components for production requires sign-off that carries formal authority and accountability to manufacturing, quality assurance, and safety stakeholders; the identity and credentials of the approver are central to acceptance.",
+      "adequacy_evidence": "In safety-critical engineering contexts, stakeholders and regulatory frameworks typically require a human engineer's authorization, and an AI agent alone would not be trusted or accepted to assume legal and professional responsibility for release decisions.",
+      "_timestamp": "2026-04-05T23:44:08"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Authorizing production release requires validating complex test data, safety margins, materials performance, and compliance; errors can be latent and only surface under operational stress or over time, demanding deep domain review.",
+      "adequacy_evidence": "Current AI systems can misinterpret engineering data, standards, or edge-case failure modes, so outputs require intensive expert verification and cross-checking before approval is safe.",
+      "_timestamp": "2026-04-06T11:26:41"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

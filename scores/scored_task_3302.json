@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.02",
+  "task_id": 3302,
+  "task_statement": "Issue shipping instructions and provide routing information to ensure that delivery times and locations are coordinated.",
+  "occupation_title": "Transportation, Storage, and Distribution Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Issuing shipping instructions and routing information is typically done through logistics software, email, or phone from a computer, coordinating carriers and schedules digitally. Physical presence at the shipment site is generally not required."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Shipping instructions and routing vary across transport modes, geographies, regulatory constraints, and disruption scenarios, but follow broadly standardized logistics patterns.",
+      "adequacy_evidence": "Substantial data exists in logistics records, manuals, and simulations, but much high-quality operational data (e.g., real-time exception handling, proprietary routing logic) is private and only partially reproducible via synthesis.",
+      "_timestamp": "2026-04-05T22:22:12"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While core objectives (timely, accurate delivery) are explicit, trade-offs like cost vs. speed, carrier preferences, customer priorities, and real-time disruptions introduce context-dependent criteria that must be inferred.",
+      "adequacy_evidence": "Current agents can generate routing plans and instructions using available data, but they often miss nuanced business priorities or evolving constraints without iterative human guidance.",
+      "_timestamp": "2026-04-05T22:22:13"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of routing and instruction issuance follows explicit logistics rules and optimization models, experienced managers apply judgment about carrier reliability, local conditions, and coordination tradeoffs that are not fully codified.",
+      "adequacy_evidence": "Current AI systems with routing tools can handle standard cases well, but they still show gaps in nuanced, context-sensitive decisions (e.g., handling disruptions or prioritizing soft constraints) that rely on experiential calibration.",
+      "_timestamp": "2026-04-05T22:22:13"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires coordinating multiple pieces of information (shipment details, destinations, schedules, routing constraints), but these are typically structured and manageable within a single operational context.",
+      "adequacy_evidence": "Modern AI agents with tool integration can reliably track and organize structured logistics data within an episode, with minimal loss or drift in context.",
+      "_timestamp": "2026-04-05T22:22:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Coordinating shipping instructions and routing involves multiple interdependent steps (e.g., selecting routes, aligning schedules, communicating constraints), but sequences are typically bounded and modular rather than deeply long or tightly coupled.",
+      "adequacy_evidence": "AI agents can generally manage multi-step logistics planning, but may show some degradation over longer coordination chains, such as dropping constraints or introducing inconsistencies across steps.",
+      "_timestamp": "2026-04-05T22:22:14"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Issuing shipping instructions and routing information is primarily based on textual and structured data (addresses, schedules, routing codes), with minimal need for interpreting or generating non-text modalities.",
+      "adequacy_evidence": "Current AI agents handle text-based logistics coordination and routing tasks effectively without reliance on multimodal perception or generation.",
+      "_timestamp": "2026-04-05T22:22:15"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Shipping instructions and routing decisions typically need to be produced within seconds to minutes to keep logistics operations flowing, but do not require split-second real-time responses.",
+      "adequacy_evidence": "Frontier AI agents with routing tools and data integration can generate accurate instructions well within this time window, with no significant degradation from latency constraints.",
+      "_timestamp": "2026-04-05T22:22:15"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many shipping instructions are based on current shipment details, effective coordination often benefits from retaining prior information such as client preferences, recurring routes, and historical delivery patterns.",
+      "adequacy_evidence": "Modern AI systems integrated with logistics databases and memory stores can reliably persist and retrieve such cross-session information, so current capabilities generally meet these needs.",
+      "_timestamp": "2026-04-05T22:22:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Shipping instructions and routing can be checked against schedules, maps, and constraints, but ensuring full coordination (timing, capacity, regulatory compliance) requires domain knowledge and cross-referencing multiple systems.",
+      "adequacy_evidence": "AI can generate plausible routing plans, but errors in timing, constraints, or edge cases are common enough that human review and system checks are still needed to validate outputs.",
+      "_timestamp": "2026-04-05T22:22:15"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in shipping instructions or routing can cause delays, added costs, or misdeliveries, but most are recoverable and rarely catastrophic after standard checks.",
+      "adequacy_evidence": "Routing and shipping details can be validated through existing logistics systems and constraints, so after normal quality control AI-generated outputs leave minimal residual risk.",
+      "_timestamp": "2026-04-05T22:22:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations requiring a human to issue shipping instructions or routing information; these functions are already widely performed by software systems. Existing transportation regulations govern outcomes (e.g., safety, compliance) rather than mandating a human decision-maker for this task.",
+      "_timestamp": "2026-04-05T22:22:17"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordination with carriers, drivers, and logistics partners who must follow the issued instructions, so stakeholders engage with the output, though not strongly with the issuer's identity.",
+      "adequacy_evidence": "Logistics stakeholders already routinely accept automated dispatching and routing systems, so an AI agent performing this role would face little to no resistance.",
+      "_timestamp": "2026-04-05T22:22:17"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

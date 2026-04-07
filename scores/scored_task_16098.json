@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1199.06",
+  "task_id": 16098,
+  "task_statement": "Test changes to database applications or systems.",
+  "occupation_title": "Database Architects",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Testing changes to database applications or systems is performed using computers, database management tools, and software testing environments, all of which can be accessed remotely without any physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing database changes spans different schemas, query patterns, workloads, and failure modes, but these variations are structured and recur across environments rather than being fully long-tailed.",
+      "adequacy_evidence": "There is abundant public and synthetic data (benchmarks, test suites, CI logs) to train on typical cases, but some production-specific workloads and edge-case failure patterns remain underrepresented and often private.",
+      "_timestamp": "2026-04-05T21:11:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing database changes involves selecting meaningful test cases, interpreting performance or integrity anomalies, and understanding system-specific edge cases, which require some experience beyond formal procedures.",
+      "adequacy_evidence": "Current agents can generate and run comprehensive tests and flag issues, but they show gaps in contextual judgment for subtle performance tradeoffs and environment-specific edge cases.",
+      "_timestamp": "2026-04-05T21:11:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing database changes requires interpreting performance expectations, edge cases, data integrity rules, and downstream impacts that are often only partially specified in documentation.",
+      "adequacy_evidence": "Current agents can generate and run test cases from specs, but they often miss implicit constraints (e.g., business logic nuances or workload patterns), requiring human refinement.",
+      "_timestamp": "2026-04-05T21:11:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing database changes requires tracking schemas, queries, test cases, data states, and observed outputs across multiple steps, but the scope is typically structured and bounded within a test session.",
+      "adequacy_evidence": "Agents can use tools and structured retrieval to manage this information, but may still lose track of intermediate states or inconsistently summarize results across complex test runs.",
+      "_timestamp": "2026-04-05T21:11:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Testing database changes primarily involves executing queries, inspecting logs, validating outputs, and reviewing textual configurations or schemas; visual or other non-text modalities are not essential.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI agents can fully handle the modality requirements without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-05T21:11:37"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing database changes involves multi-step workflows (setup, data preparation, executing test cases, validating results, and possibly rollback), where consistency across steps matters but sequences are typically bounded and structured.",
+      "adequacy_evidence": "AI agents can execute structured testing pipelines and maintain coherence across typical sequences, but may show some degradation in longer or more complex scenarios (e.g., maintaining state across multiple interdependent tests or handling unexpected edge cases).",
+      "_timestamp": "2026-04-05T21:11:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Testing database changes is typically conducted in development or staging environments where runs can take minutes to hours; there is no requirement for immediate, real-time responses.",
+      "adequacy_evidence": "AI agents can take sufficient time to reason through test cases, generate scripts, and analyze results without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T21:11:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing database changes often relies on prior schemas, historical test cases, regression results, and environment configurations, but many individual test runs can still be scoped to the current change set.",
+      "adequacy_evidence": "Agents can leverage version control, test logs, and external storage to persist context, but they may inconsistently retrieve or integrate long project histories and evolving system nuances across sessions.",
+      "_timestamp": "2026-04-05T21:11:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Undetected errors in database system changes can lead to data corruption, security vulnerabilities, or system outages with significant downstream impact, so very low residual risk is required even after testing.",
+      "adequacy_evidence": "While AI can generate and execute extensive test cases, it still tends to miss rare edge cases or complex interaction effects, leaving some non-trivial residual risk even after standard quality control.",
+      "_timestamp": "2026-04-05T21:11:39"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Testing database changes can involve detecting subtle issues like data integrity violations, race conditions, and performance regressions that may only appear under specific workloads or over time, requiring comprehensive and expert-driven validation.",
+      "adequacy_evidence": "AI can assist in generating and running tests, but it often misses edge cases or nuanced failure modes, so meaningful human oversight and robust test frameworks are still needed to ensure reliability.",
+      "_timestamp": "2026-04-05T21:11:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI systems from testing changes to database applications or systems. While regulated industries may require human oversight for compliance, these rules do not specifically restrict AI from performing the testing itself.",
+      "_timestamp": "2026-04-05T21:11:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Testing database changes is an internal technical task whose outputs (test results, logs) are consumed impersonally by engineering teams, with no reliance on the tester\u2019s identity.",
+      "adequacy_evidence": "Engineering stakeholders already accept automated testing tools and scripts; an AI agent performing this role would not face meaningful resistance as long as results are reliable.",
+      "_timestamp": "2026-04-05T21:11:42"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

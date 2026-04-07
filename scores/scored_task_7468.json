@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3031.02",
+  "task_id": 7468,
+  "task_statement": "Compare topographical features or contour lines with images from aerial photographs, old maps, or other reference materials to verify the accuracy of their identification.",
+  "occupation_title": "Surveying and Mapping Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "This comparison is typically performed in GIS or mapping software using digital aerial imagery and scanned maps, making it largely computer-based. However, some instances may involve examining physical maps, prints, or archival materials."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied terrains, map styles, resolutions, and historical artifacts, but these variations are structured and well-represented within geospatial domains.",
+      "adequacy_evidence": "Extensive paired datasets (e.g., aerial imagery, GIS layers, topographic maps) and synthetic generation pipelines provide strong coverage, including examples with expert annotations and alignment processes.",
+      "_timestamp": "2026-04-06T05:06:50"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting terrain features across different representations (contours vs imagery), requiring some experience-based judgment to reconcile scale, distortion, vegetation cover, and ambiguous landforms beyond strict rules.",
+      "adequacy_evidence": "Current multimodal AI can perform many map-image comparisons but still shows inconsistent calibration in ambiguous or degraded cases (e.g., subtle elevation cues, outdated maps), indicating a moderate shortfall in experiential judgment.",
+      "_timestamp": "2026-04-06T05:06:50"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves iterating over multiple map features and reference sources, aligning and cross-checking them in a structured sequence, but each comparison is relatively modular rather than tightly interdependent.",
+      "adequacy_evidence": "Multimodal agents can sustain performance across a series of comparisons, but may show some degradation in consistency or attention to detail over longer sequences, especially when tracking multiple features across sources.",
+      "_timestamp": "2026-04-06T05:06:50"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires holding and comparing multiple spatial representations (contour lines, aerial imagery, historical maps) and aligning features across them, but the information scope is bounded and relatively stable within an episode.",
+      "adequacy_evidence": "Current agents can process multiple images and references, but they often struggle with consistent spatial alignment and may lose or misinterpret fine-grained correspondences across sources.",
+      "_timestamp": "2026-04-06T05:06:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally involves interpreting and comparing visual-spatial data from aerial imagery, maps, and contour lines, requiring detailed cross-modal visual reasoning that cannot be reduced to text.",
+      "adequacy_evidence": "Current AI systems can analyze maps and images reasonably well, but often struggle with fine-grained topographic distinctions, subtle contour interpretations, and precise cross-referencing across heterogeneous visual sources.",
+      "_timestamp": "2026-04-06T05:06:51"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each comparison is typically performed using the provided maps, photographs, and reference materials for that specific instance, without needing accumulated cross-session context.",
+      "adequacy_evidence": "Since the task is largely self-contained per instance, current AI systems do not require persistent memory and therefore face no meaningful limitation in this dimension.",
+      "_timestamp": "2026-04-06T05:06:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This comparison task is typically performed in an office or analysis setting where minutes or longer are acceptable; it does not require real-time responsiveness.",
+      "adequacy_evidence": "Frontier AI systems can take sufficient time to analyze maps and imagery without degrading quality, as there is no meaningful latency pressure constraining reasoning depth.",
+      "_timestamp": "2026-04-06T05:06:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task has a clear goal (verify feature identification), but involves context-dependent judgment such as aligning features across sources, handling scale/projection differences, and deciding acceptable discrepancies.",
+      "adequacy_evidence": "Multimodal AI can often infer comparison goals and perform alignments, but still struggles with nuanced geospatial interpretation and implicit tolerance thresholds, requiring human clarification or review.",
+      "_timestamp": "2026-04-06T05:06:52"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is an internal analytical verification task comparing maps and imagery, typically not involving direct interaction with external stakeholders or reliance on performer identity.",
+      "adequacy_evidence": "Since there are no meaningful stakeholders whose acceptance depends on who performs the task, AI use would not face resistance in this context.",
+      "_timestamp": "2026-04-06T05:06:52"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Surveying outputs that affect official maps or boundaries often must be reviewed and certified by a licensed surveyor, but there is no explicit prohibition on AI performing intermediate analytical tasks like feature comparison. This creates partial restriction through supervision and sign-off requirements rather than banning AI use outright.",
+      "_timestamp": "2026-04-06T05:06:53"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in verifying topographic features can lead to mapping inaccuracies that affect downstream surveying or planning, but these are typically detectable and correctable and rarely catastrophic on their own.",
+      "adequacy_evidence": "With standard quality checks (e.g., cross-referencing multiple sources and human review), AI-generated comparisons can be validated effectively, leaving residual error at an acceptable level.",
+      "_timestamp": "2026-04-06T05:06:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves cross-referencing multiple geospatial sources and interpreting terrain features, which requires domain knowledge and careful visual comparison, but discrepancies are often observable through overlays or inconsistencies.",
+      "adequacy_evidence": "Current AI can align and compare imagery effectively, but still makes interpretation and registration errors (e.g., with distorted historical maps or ambiguous terrain), so human review remains necessary at a moderate level.",
+      "_timestamp": "2026-04-06T05:06:55"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

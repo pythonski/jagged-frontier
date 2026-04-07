@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3029.01",
+  "task_id": 16626,
+  "task_statement": "Interpret the results of all methods of non-destructive testing (NDT), such as acoustic emission, electromagnetic, leak, liquid penetrant, magnetic particle, neutron radiographic, radiographic, thermal or infrared, ultrasonic, vibration analysis, and visual testing.",
+  "occupation_title": "Non-Destructive Testing Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Interpreting NDT results typically involves analyzing digital signals, images, or datasets (e.g., radiographic images, ultrasonic readings) using software, which can be done on a computer. However, in practice it is often performed at inspection sites alongside testing equipment or with physical media such as film radiographs."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans many NDT modalities (ultrasonic, radiographic, thermal, etc.), materials, defect types, and industry contexts, creating a highly heterogeneous and long-tailed distribution of signal patterns and interpretation scenarios.",
+      "adequacy_evidence": "While there are public datasets, standards, and physics-based simulation pipelines for many NDT methods, much high-quality labeled data (especially rare defect cases and expert reasoning traces) is proprietary or sparse, leaving partial but not complete coverage.",
+      "_timestamp": "2026-04-06T04:21:49"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting NDT results requires nuanced judgment to distinguish true defects from artifacts, accounting for material properties, testing conditions, and subtle signal patterns that are learned through hands-on experience across cases.",
+      "adequacy_evidence": "Current AI can match patterns in well-characterized modalities (e.g., radiography, ultrasound) but lacks robust cross-method calibration and struggles with ambiguous or context-dependent signals that experienced inspectors resolve through tacit judgment.",
+      "_timestamp": "2026-04-06T04:21:50"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting NDT results involves synthesizing findings from multiple testing methods and applying consistent reasoning across several analytical steps, but each method\u2019s interpretation is somewhat modular rather than forming a long tightly coupled chain.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across moderate multi-step analytical workflows, but performance can degrade when integrating many heterogeneous signals and maintaining consistency across extended reasoning chains.",
+      "_timestamp": "2026-04-06T04:21:51"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "NDT interpretation is guided by formal codes and standards (e.g., ASTM, ASME), but requires context-sensitive judgment about defect significance, material properties, and service conditions that are not fully explicit in the data.",
+      "adequacy_evidence": "Current AI can apply documented criteria and reference standards, but often misses nuanced contextual factors (e.g., operational risk, borderline indications), requiring human iteration to reach fully appropriate interpretations.",
+      "_timestamp": "2026-04-06T04:21:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting diverse NDT methods requires integrating large, heterogeneous datasets (e.g., signal traces, images, sensor readings) and correlating findings across techniques within a single evaluation episode, where missing details can lead to incorrect diagnoses.",
+      "adequacy_evidence": "Current agents can manage sizable context and structured data but still struggle with reliably tracking and integrating complex, multimodal technical inputs over extended analyses, leading to occasional loss or misweighting of critical details.",
+      "_timestamp": "2026-04-06T04:21:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally involves interpreting diverse non-text data such as radiographic images, ultrasonic waveforms, thermal scans, and vibration signals, requiring cross-modal reasoning beyond text.",
+      "adequacy_evidence": "Current AI systems can process images and some signal data, but performance is inconsistent on complex, noisy, or domain-specific NDT outputs requiring fine-grained interpretation and expert calibration.",
+      "_timestamp": "2026-04-06T04:21:52"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Interpreting NDT results is typically performed offline or with flexible turnaround times (minutes to hours), allowing careful analysis rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can perform detailed analysis within these time windows without needing to truncate reasoning, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T04:21:52"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting NDT results often benefits from comparing with prior inspection data (e.g., trend analysis, baseline shifts, degradation over time), but many interpretations can still be performed on a single dataset.",
+      "adequacy_evidence": "Current agents can store and retrieve historical inspection data with standard database and retrieval tools, but may inconsistently integrate longitudinal context or surface the most relevant prior cases without careful system design.",
+      "_timestamp": "2026-04-06T04:21:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting NDT results involves subtle signal patterns (e.g., radiographic shadows, ultrasonic echoes) where defects can be ambiguous and require expert judgment; errors may only be confirmed via reinspection or alternative testing, making verification difficult and resource-intensive.",
+      "adequacy_evidence": "Current AI systems still struggle with nuanced interpretation across diverse NDT modalities and edge cases, so outputs would require thorough expert review and often revalidation, creating a high and unavoidable verification burden.",
+      "_timestamp": "2026-04-06T04:21:54"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Misinterpretation of NDT results can miss critical defects in infrastructure or equipment (e.g., aircraft, pipelines), leading to catastrophic failures, safety hazards, or loss of life; thus even rare residual errors are unacceptable.",
+      "adequacy_evidence": "Current AI systems still exhibit non-negligible error rates in interpreting complex, noisy, and context-dependent NDT signals, and their failure modes can be subtle and hard to anticipate, leaving residual risk too high even after standard quality control.",
+      "_timestamp": "2026-04-06T04:21:54"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "In many regulated industries (e.g., aerospace, nuclear, pressure vessels), interpretation of NDT results must be performed and signed off by certified personnel (e.g., ASNT Level II/III or equivalent). These rules effectively require a qualified human to make or approve the final determination, preventing fully autonomous AI performance.",
+      "_timestamp": "2026-04-06T04:21:55"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "NDT interpretations are relied upon by engineers, inspectors, regulators, and clients for safety and compliance decisions, so stakeholders do engage with and depend on the performer\u2019s output.",
+      "adequacy_evidence": "In safety-critical inspection contexts, stakeholders typically require certified human specialists and documented accountability, so an AI agent\u2019s involvement would face strong resistance and limited acceptance under current norms and standards.",
+      "_timestamp": "2026-04-06T04:21:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

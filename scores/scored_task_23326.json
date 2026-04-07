@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9041.00",
+  "task_id": 23326,
+  "task_statement": "Transcribe data to worksheets, and enter data into computer for use in preparing documents and adjusting accounts.",
+  "occupation_title": "Insurance Claims and Policy Processing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "The core activity is computer-based data entry and transcription for document preparation and account adjustments, which can be done remotely. However, in many real-world cases clerks may work from physical forms or paper records in an office, requiring some in-person handling of documents."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of routine data transcription and entry from standardized forms and documents, with highly repetitive and well-bounded variation across instances.",
+      "adequacy_evidence": "Large volumes of real and synthetic examples of form filling, data entry, and document transcription exist, and the underlying processes are fully observable and easily captured in training data.",
+      "_timestamp": "2026-04-06T05:23:09"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is highly procedural, involving straightforward transcription and data entry governed by explicit formats, rules, and system prompts, with minimal need for experiential judgment.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured data entry rules and handle minor variations without requiring tacit knowledge, performing at or above human consistency for such routine tasks.",
+      "_timestamp": "2026-04-06T05:23:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves repeated data transcription and entry across multiple fields or records, requiring consistency over a sequence, but each entry is largely independent with minimal cascading dependencies.",
+      "adequacy_evidence": "AI agents can reliably handle extended sequences of structured data entry with minimal degradation, especially with validation checks and tooling, as errors in one entry do not typically propagate to others.",
+      "_timestamp": "2026-04-06T05:23:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple data fields from source documents and ensuring accurate transfer into systems, requiring some active tracking and organization of information within a session.",
+      "adequacy_evidence": "Current AI agents with document parsing and structured data tools can reliably manage and retain this level of within-episode information without significant loss or drift.",
+      "_timestamp": "2026-04-06T05:23:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves straightforward transcription and data entry with predefined fields, formats, and rules, leaving little room for interpretation or latent objectives.",
+      "adequacy_evidence": "Current AI agents reliably map and transfer structured or semi-structured data into specified formats with minimal need for iterative clarification.",
+      "_timestamp": "2026-04-06T05:23:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves transferring textual and numerical information between documents and systems; it is fundamentally text-in, text-out work.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing handle standard forms, typed text, and structured data entry reliably, with minimal multimodal limitations.",
+      "_timestamp": "2026-04-06T05:23:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data transcription and entry tasks are typically self-contained per document or claim, with necessary context provided in the current materials or system interface rather than relying on accumulated cross-session memory.",
+      "adequacy_evidence": "Since the task does not depend on maintaining longitudinal state across sessions, existing agent memory mechanisms are sufficient and no meaningful gap is present.",
+      "_timestamp": "2026-04-06T05:23:11"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data transcription and entry for insurance processing is typically batch-oriented work where minutes of latency are acceptable, and throughput matters more than instantaneous response.",
+      "adequacy_evidence": "LLM-based agents with automation tools can perform data entry and transcription well within acceptable time windows, with no meaningful quality degradation due to speed constraints.",
+      "_timestamp": "2026-04-06T05:23:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Data entry and transcription tasks typically involve structured fields, validation rules, and reconciliation checks (e.g., totals, formats), making most errors easy to detect through routine quality controls.",
+      "adequacy_evidence": "Current AI systems (e.g., OCR + extraction agents) still produce occasional misreads or field mismatches, requiring consistent but not intensive human verification to ensure accuracy.",
+      "_timestamp": "2026-04-06T05:23:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Data entry errors in insurance claims processing can affect account balances or documents, but established reconciliation, auditing, and correction processes make occasional residual errors survivable rather than catastrophic.",
+      "adequacy_evidence": "With standard validation checks (e.g., field constraints, cross-referencing, and audits), current AI systems can reduce residual error risk to acceptable levels comparable to or better than human clerks.",
+      "_timestamp": "2026-04-06T05:23:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from performing clerical data transcription or data entry in insurance processing. While data privacy regulations (e.g., GLBA, HIPAA where applicable) impose handling requirements, they do not bar AI use if compliance is maintained.",
+      "_timestamp": "2026-04-06T05:23:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is a back-office data transcription and entry activity with no direct interaction with clients or external stakeholders; outputs are consumed internally by systems and staff.",
+      "adequacy_evidence": "Since there are effectively no stakeholders concerned with performer identity, AI systems performing data entry are already widely accepted and do not face resistance.",
+      "_timestamp": "2026-04-06T05:23:13"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

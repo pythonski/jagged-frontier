@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1171.00",
+  "task_id": 18396,
+  "task_statement": "Prescribe medication dosages, routes, and frequencies, based on such patient characteristics as age and gender.",
+  "occupation_title": "Nurse Practitioners",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Prescribing medication is typically done through electronic health record systems and e\u2011prescribing platforms, which can be completed on a computer and even via telehealth. However, some instances occur during in\u2011person clinical encounters or involve paper prescriptions or verbal orders, so not all cases are fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Medication prescribing spans highly heterogeneous patient populations (age, comorbidities, renal/hepatic function, pregnancy status, polypharmacy) and drug classes, with many edge cases and context-specific adjustments.",
+      "adequacy_evidence": "There is extensive coverage in clinical guidelines, pharmacology references, and case data, but real-world EHR data capturing nuanced dosing decisions and rare patient subpopulations is often private or sparse, leaving some gaps that are only partially addressable via synthesis.",
+      "_timestamp": "2026-04-05T22:03:30"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Appropriate prescribing requires integrating implicit clinical goals, comorbidities, contraindications, patient preferences, evolving presentation, and nuanced guideline interpretation, much of which is context-dependent and not fully specified in the task statement.",
+      "adequacy_evidence": "Current AI agents struggle to reliably infer and balance these latent clinical factors across diverse cases, often missing subtle contraindications or context, and require substantial human oversight and iteration to reach safe, appropriate decisions.",
+      "_timestamp": "2026-04-05T22:03:30"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Prescribing requires integrating guidelines with patient-specific nuances (comorbidities, renal/hepatic function, polypharmacy, prior response, and subtle risk tradeoffs) that rely on clinical judgment built through experience.",
+      "adequacy_evidence": "Well-scaffolded agents can apply guidelines and known interaction rules, but they still lack reliable calibration for nuanced, context-sensitive adjustments and atypical cases that clinicians handle through experience.",
+      "_timestamp": "2026-04-05T22:03:31"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple patient-specific data points (e.g., age, weight, comorbidities, allergies, current medications) and relevant dosing guidelines within a single episode, but the total information is structured and bounded rather than massive.",
+      "adequacy_evidence": "Current agents can track and organize structured clinical inputs with tool support, but they still show occasional context loss or incomplete integration (e.g., missing drug interactions or contraindications) when multiple factors must be simultaneously considered.",
+      "_timestamp": "2026-04-05T22:03:32"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Prescribing medication involves a moderate sequence of interdependent steps (reviewing patient characteristics, selecting drug, calculating dose, checking contraindications), where consistency across steps matters but the sequence is not \u0905\u0924\u094d\u092f long.",
+      "adequacy_evidence": "Frontier AI agents can generally maintain coherence across these multi-step clinical reasoning chains, but still show some degradation such as missed constraints or compounding errors in dosage calculation and interaction checks.",
+      "_timestamp": "2026-04-05T22:03:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Medication prescribing primarily relies on structured and textual data (e.g., age, gender, lab values, medical history), though occasional integration of non-text inputs like imaging or physical exam findings can inform decisions.",
+      "adequacy_evidence": "Current AI systems can reliably process structured clinical data and have adequate capability on relevant multimodal inputs (e.g., labs, basic imaging summaries) for this task\u2019s typical demands.",
+      "_timestamp": "2026-04-05T22:03:32"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Safe prescribing depends on longitudinal patient data such as prior medication responses, chronic conditions, allergies, and evolving treatment history across multiple visits.",
+      "adequacy_evidence": "Agents can integrate with EHRs and retrieve stored histories, but maintaining complete, up-to-date, and contextually prioritized longitudinal records remains error-prone and inconsistently reliable.",
+      "_timestamp": "2026-04-05T22:03:32"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Prescribing decisions are typically made within a clinical encounter, allowing seconds to a few minutes for review of patient factors and guidelines, rather than requiring instantaneous response.",
+      "adequacy_evidence": "Frontier AI systems can incorporate patient variables and guidelines and produce dosage recommendations well within this time window without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T22:03:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Medication dosing errors can be subtle, depend on patient-specific factors (e.g., renal function, comorbidities, interactions), and may not produce immediate observable effects, requiring expert review and cross-checking to detect.",
+      "adequacy_evidence": "Current AI systems still make nontrivial dosing and interaction errors, and verifying correctness requires detailed clinical validation, making unverified use unsafe and imposing a high checking burden.",
+      "_timestamp": "2026-04-05T22:03:33"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Medication prescribing has high-stakes consequences; even rare residual errors in dosage, route, or frequency can cause severe harm, including toxicity, treatment failure, or death, especially across diverse patient conditions.",
+      "adequacy_evidence": "Even with standard checks (e.g., clinical review, interaction alerts), current AI systems still exhibit non-negligible rates of subtle dosing and contraindication errors, and their failure modes can be unpredictable, leaving residual risk above acceptable thresholds for this task.",
+      "_timestamp": "2026-04-05T22:03:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Patients must trust and accept the prescriber's authority, judgment, and accountability when receiving medication prescriptions, making performer identity central to compliance and outcomes.",
+      "adequacy_evidence": "Most patients would strongly resist or reject an AI autonomously prescribing medications, preferring a licensed human clinician; lack of trust and perceived legitimacy would significantly undermine effectiveness.",
+      "_timestamp": "2026-04-05T22:03:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Prescribing medications in the U.S. is legally restricted to licensed healthcare providers (e.g., nurse practitioners under state scope-of-practice laws), often requiring DEA registration for controlled substances. Current regulations do not permit AI systems to independently prescribe; a licensed human clinician must make and authorize the decision.",
+      "_timestamp": "2026-04-05T22:03:36"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

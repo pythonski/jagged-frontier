@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-2021.00",
+  "task_id": 13244,
+  "task_statement": "Suggest and check alternate spellings, locations, or listing formats to customers lacking details or complete information.",
+  "occupation_title": "Telephone Operators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Checking directories and suggesting alternate spellings or locations is done using digital databases while communicating with the caller via telecommunications systems, which can be performed entirely on a computer with internet access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderately diverse set of cases including misspelled names, incomplete business listings, and geographic ambiguity across regions, but patterns are relatively well-structured (names, addresses, categories).",
+      "adequacy_evidence": "Large-scale query logs, directory data, maps, and synthetic perturbations provide rich coverage of misspellings and partial information, making representative training data readily attainable.",
+      "_timestamp": "2026-04-06T03:47:07"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from experience with common misspellings, phonetic variations, and typical customer errors, but much of this can be captured through explicit heuristics and lookup procedures.",
+      "adequacy_evidence": "Current AI systems with access to large linguistic datasets and search tools can reliably generate and check plausible alternate spellings and locations, covering most of the needed judgment.",
+      "_timestamp": "2026-04-06T03:47:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers often provide incomplete or misspelled names, requiring operators to infer intent, consider plausible variants, and narrow down likely listings based on partial cues.",
+      "adequacy_evidence": "Modern AI systems are highly effective at fuzzy matching, spelling correction, and contextual inference, allowing them to reliably resolve these ambiguities with minimal iteration.",
+      "_timestamp": "2026-04-06T03:47:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each customer interaction is typically self-contained, focusing on resolving missing or unclear information within a single call without reliance on prior history.",
+      "adequacy_evidence": "Since the task does not depend on cross-session memory, current AI systems' persistent memory capabilities are sufficient and not a limiting factor.",
+      "_timestamp": "2026-04-06T03:47:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task typically involves short, loosely coupled conversational steps\u2014suggesting alternatives and verifying them\u2014without long, interdependent sequences.",
+      "adequacy_evidence": "AI agents can maintain consistent performance across these brief interactions, with no meaningful degradation over the limited sequence length involved.",
+      "_timestamp": "2026-04-06T03:47:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves handling a small set of details (e.g., a name, partial spelling, or location) and generating plausible alternatives; the information easily fits within short conversational context.",
+      "adequacy_evidence": "Current AI agents can reliably track and manipulate such limited context within a single interaction without losing or distorting key details.",
+      "_timestamp": "2026-04-06T03:47:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is fundamentally conversational and text-based (names, spellings, locations), with audio input/output easily reducible to text without loss of core information.",
+      "adequacy_evidence": "Current AI systems handle speech-to-text and text-based reasoning for spelling and location suggestions reliably, with no meaningful multimodal limitations impacting performance.",
+      "_timestamp": "2026-04-06T03:47:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Telephone operators interact in real time with callers, where responses are expected within seconds to maintain conversational flow and customer satisfaction.",
+      "adequacy_evidence": "Current LLM-based agents can generate spelling variants, location guesses, and formatted listings almost instantaneously, with little need for extended reasoning that would be constrained by latency.",
+      "_timestamp": "2026-04-06T03:47:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Errors in suggesting spellings or listings typically lead to minor inconvenience or delays (e.g., misdirected call or need to retry), with no serious or irreversible consequences.",
+      "adequacy_evidence": "Even if AI occasionally makes mistakes, these are easily noticed and corrected during interaction, leaving negligible residual risk after normal checking.",
+      "_timestamp": "2026-04-06T03:47:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from suggesting or checking alternate spellings, locations, or listing formats in directory assistance contexts. This task does not require licensure or mandated human involvement.",
+      "_timestamp": "2026-04-06T03:47:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Correctness can be easily verified by consulting directories, databases, or confirming directly with the customer; mistakes are typically obvious and quickly checked.",
+      "adequacy_evidence": "Current AI can generate plausible variants and these can be rapidly validated with simple lookups or tools, making verification low-cost and reliable.",
+      "_timestamp": "2026-04-06T03:47:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task directly involves customers who must interact with and respond to the operator\u2019s suggestions, though the role does not depend heavily on perceived authority or personal identity.",
+      "adequacy_evidence": "Customers are already accustomed to automated phone systems providing directory assistance and suggestions, so AI performing this role is widely accepted and unlikely to face resistance.",
+      "_timestamp": "2026-04-06T03:47:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3031.00",
+  "task_id": 18561,
+  "task_statement": "Prepare and process payroll information.",
+  "occupation_title": "Bookkeeping, Accounting, and Auditing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Payroll preparation and processing is usually performed using payroll or accounting software and can be done remotely, but some workplaces still involve handling paper timesheets, physical records, or printed checks that require on-site interaction."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Payroll processing is largely governed by explicit rules (tax codes, pay schedules, benefits), but includes context-dependent elements like interpreting company policies, handling exceptions, and resolving discrepancies.",
+      "adequacy_evidence": "Current agents can follow structured payroll rules well but often struggle with edge cases, implicit policy interpretations, and resolving inconsistencies without human clarification.",
+      "_timestamp": "2026-04-06T04:59:41"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Payroll processing is largely governed by explicit rules (tax tables, wage laws, benefit deductions), but recurring edge cases\u2014such as employee classification, multi-jurisdiction taxation, and exception handling\u2014require experience-based judgment.",
+      "adequacy_evidence": "Current AI systems handle standard payroll rules well but show gaps in nuanced, context-sensitive cases (e.g., ambiguous classifications or unusual compensation structures), where human calibration is still often needed.",
+      "_timestamp": "2026-04-06T04:59:41"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Payroll processing spans multiple jurisdictions, tax regimes, compensation structures, and edge cases (overtime, bonuses, deductions), creating moderate but structured variability.",
+      "adequacy_evidence": "Extensive documentation, software logs, regulatory guidelines, and synthetic generation make it feasible to cover nearly all relevant cases with process-level detail, including calculations and compliance steps.",
+      "_timestamp": "2026-04-06T04:59:41"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Processing payroll requires handling multiple data fields per employee (hours, wages, deductions, tax rates) and ensuring consistency across records, but the information is typically structured and bounded within a single payroll cycle.",
+      "adequacy_evidence": "Current AI agents with tool integration (e.g., spreadsheets, databases) can reliably track, retrieve, and update structured payroll data within a session without significant context loss.",
+      "_timestamp": "2026-04-06T04:59:42"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Payroll processing primarily involves structured numeric and textual data (e.g., hours worked, wages, tax codes) within software systems or spreadsheets, with minimal reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents can fully handle text- and data-based payroll workflows, including parsing structured inputs and generating reports, without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T04:59:42"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Payroll preparation and processing are typically batch-oriented tasks with deadlines measured in hours or days, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform payroll calculations and checks well within these relaxed time constraints without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T04:59:42"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Payroll processing depends on persistent employee records, historical earnings, tax withholdings, and year-to-date totals across pay periods, requiring consistent cross-session state management.",
+      "adequacy_evidence": "Modern AI agents can integrate with payroll systems and databases that reliably store and retrieve longitudinal records, so maintaining and accessing this information is not a significant limitation.",
+      "_timestamp": "2026-04-06T04:59:42"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Payroll processing involves multi-step workflows (collecting time data, applying pay rules, calculating taxes/deductions, and generating outputs) where earlier steps affect later ones, but the sequences are structured and not extremely long.",
+      "adequacy_evidence": "LLM-based agents with tooling can generally maintain consistency across these structured steps, though some error propagation or missed constraints can occur over multi-step workflows, especially without careful orchestration.",
+      "_timestamp": "2026-04-06T04:59:42"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Employees, HR, and management rely on accurate payroll outputs, but the identity of the preparer is not central as long as results are correct and timely.",
+      "adequacy_evidence": "Payroll processing is already widely automated via software systems, and stakeholders generally accept AI-driven handling provided accuracy and compliance are maintained.",
+      "_timestamp": "2026-04-06T04:59:44"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI or automated systems from preparing and processing payroll; in fact, payroll software automation is widely used. Compliance requirements (e.g., tax reporting, wage laws) apply to the employer, not to whether a human or AI performs the task.",
+      "_timestamp": "2026-04-06T04:59:44"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Payroll outputs can be checked via reconciliations, tax tables, and employee records, but errors like misapplied deductions or jurisdiction-specific tax issues require careful review and domain knowledge.",
+      "adequacy_evidence": "AI can generate structured payroll calculations, but given current error rates and sensitivity to edge cases, human verification of inputs, compliance rules, and outputs remains necessary and non-trivial.",
+      "_timestamp": "2026-04-06T04:59:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Payroll errors can lead to incorrect employee compensation, tax misreporting, and compliance issues, which have meaningful consequences but are typically correctable in subsequent cycles.",
+      "adequacy_evidence": "With standard controls like reconciliation, audit trails, and rule-based validations, AI-generated payroll outputs can be checked effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T04:59:45"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

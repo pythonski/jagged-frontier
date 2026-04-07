@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1299.05",
+  "task_id": 21769,
+  "task_statement": "Coordinate monitoring of networks or systems for security breaches or intrusions.",
+  "occupation_title": "Information Security Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Monitoring networks for security breaches and coordinating responses is done through digital security tools (e.g., SIEM dashboards, alerts, ticketing systems) and online communication, all of which can be accessed and managed remotely from a computer."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many monitoring procedures rely on defined rules and alerting systems, effective performance requires experience-based judgment to distinguish true threats from benign anomalies and to prioritize responses based on subtle contextual cues.",
+      "adequacy_evidence": "Current AI agents can replicate much of rule-based detection and pattern matching but still struggle with nuanced, organization-specific interpretation of ambiguous signals, leading to gaps in calibration for non-routine cases.",
+      "_timestamp": "2026-04-06T11:17:22"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing monitoring loops\u2014collecting alerts, correlating signals, escalating incidents\u2014but these are modular and repeatable rather than a single tightly coupled long sequence.",
+      "adequacy_evidence": "Well-scaffolded agents can sustain monitoring workflows with tooling and automation, but over extended operations they can show drift in prioritization or miss subtle correlations, requiring oversight.",
+      "_timestamp": "2026-04-06T11:17:23"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The core objective (detect and coordinate response to security breaches) is clear, but effective monitoring requires context-dependent tuning of alerts, thresholds, asset criticality, and evolving threat models.",
+      "adequacy_evidence": "Current agents can infer general security goals and operate monitoring tools, but often miss organization-specific priorities and require human input to refine detection criteria and reduce false positives.",
+      "_timestamp": "2026-04-06T11:17:23"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring for security breaches spans highly heterogeneous environments (cloud, on-prem, hybrid), diverse log sources, and constantly evolving attack patterns, creating a long-tailed and context-sensitive distribution.",
+      "adequacy_evidence": "While public datasets, red-team exercises, and synthetic log generation provide partial coverage, much real-world telemetry and incident context is proprietary and sparse, leaving some important subpopulations underrepresented but partially synthesizable.",
+      "_timestamp": "2026-04-06T11:17:23"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring networks for security breaches primarily involves analyzing logs, alerts, and structured telemetry data, which are text or numeric rather than rich multimodal inputs.",
+      "adequacy_evidence": "Current AI agents can effectively process and correlate textual and structured security data streams, and the limited use of visuals (e.g., dashboards) does not pose a meaningful capability gap.",
+      "_timestamp": "2026-04-06T11:17:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective coordination of security monitoring depends on maintaining historical logs, prior incident records, baseline network behavior, and evolving threat intelligence across long time horizons.",
+      "adequacy_evidence": "Current agents can integrate with SIEMs and databases to retrieve historical data, but they still show gaps in consistently surfacing the most relevant past context and adapting to evolving patterns over extended periods.",
+      "_timestamp": "2026-04-06T11:17:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Coordinating security monitoring requires integrating large, heterogeneous, and rapidly updating data streams (logs, alerts, network telemetry) where missing or misprioritizing details can lead to missed intrusions.",
+      "adequacy_evidence": "Agents with SIEM integrations and retrieval pipelines can aggregate and summarize these streams, but still show gaps in reliably maintaining full situational context and correctly correlating signals over complex, evolving inputs.",
+      "_timestamp": "2026-04-06T11:17:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Security monitoring requires near-real-time detection and response to intrusions, where delays of seconds to minutes can materially increase damage or attacker persistence.",
+      "adequacy_evidence": "AI agents can process logs and alerts quickly, but deeper correlation and reasoning across complex signals may be truncated under tight latency, leading to missed or lower-quality detections in some cases.",
+      "_timestamp": "2026-04-06T11:17:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from monitoring networks or systems for security breaches. While industry standards (e.g., NIST, SOC 2) may require oversight and accountability, they do not restrict the use of AI for this task.",
+      "_timestamp": "2026-04-06T11:17:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Detecting missed intrusions or false positives in coordinated monitoring requires deep analysis of logs, alerts, and threat context; many errors are subtle and may only surface after damage or forensic review.",
+      "adequacy_evidence": "Current AI systems generate and triage alerts but still produce significant false positives/negatives, requiring continuous expert validation and cross-checking with telemetry and threat intelligence.",
+      "_timestamp": "2026-04-06T11:17:25"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordination with internal IT and security teams who rely on monitoring outputs and alerts, but the performer\u2019s identity is not central to their effectiveness.",
+      "adequacy_evidence": "Organizations already widely use automated security monitoring systems, and stakeholders are generally indifferent to whether alerts and coordination are AI-driven as long as they are accurate and timely.",
+      "_timestamp": "2026-04-06T11:17:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Missed or mishandled security breaches can lead to data exfiltration, system compromise, and large-scale organizational or national security impacts, so even rare residual errors can have severe consequences.",
+      "adequacy_evidence": "Even with monitoring tools and human review, AI systems can miss novel or subtle attack patterns or generate misleading prioritizations, leaving a non-trivial residual risk that remains problematic but not categorically unmanageable with oversight.",
+      "_timestamp": "2026-04-06T11:17:26"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

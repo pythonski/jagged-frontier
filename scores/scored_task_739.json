@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3041.00",
+  "task_id": 739,
+  "task_statement": "Compute cost of travel and accommodations, using calculator, computer, carrier tariff books, and hotel rate books, or quote package tour's costs.",
+  "occupation_title": "Travel Agents",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Calculating and quoting travel and accommodation costs is typically done using computers, online booking systems, and digital rate databases, and can be completed entirely remotely. Although printed tariff or rate books exist, they are not required and do not necessitate physical presence."
+  },
+  "scores": {
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves combining multiple inputs (transport fares, hotel rates, dates, package details) and performing calculations, requiring moderate tracking and integration of structured information within a single episode.",
+      "adequacy_evidence": "Current AI agents with tool use can reliably retrieve, organize, and compute over such bounded structured data without significant loss of context or state drift.",
+      "_timestamp": "2026-04-06T01:40:02"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily rule-based: looking up rates, applying tariffs, and performing arithmetic, all of which are governed by explicit, documented procedures.",
+      "adequacy_evidence": "Current AI agents can reliably perform lookups, apply pricing rules, and compute totals with high accuracy when given access to the relevant data sources and tools.",
+      "_timestamp": "2026-04-06T01:40:02"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While the core calculation is explicit, inputs like travel dates, class preferences, included fees, and package inclusions can be context-dependent and require some interpretation or clarification.",
+      "adequacy_evidence": "Current agents can reliably elicit missing details, apply rules from tariffs/rate data, and iterate with users to resolve ambiguity with minimal difficulty.",
+      "_timestamp": "2026-04-06T01:40:02"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied but structured pricing scenarios (routes, dates, fare classes, hotel tiers, packages), creating moderate diversity but within well-defined rule-based systems.",
+      "adequacy_evidence": "Airfare, lodging rates, and package pricing rules are extensively documented and accessible via APIs, datasets, and booking systems, with abundant examples and simulable environments for training.",
+      "_timestamp": "2026-04-06T01:40:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple interdependent steps (gathering rates, applying dates, fees, and constraints, then aggregating totals), but the sequence is moderate in length and complexity.",
+      "adequacy_evidence": "Well-tooled AI agents can reliably execute multi-step calculations and data lookups without significant degradation over this sequence length, especially with structured inputs and calculator or spreadsheet tools.",
+      "_timestamp": "2026-04-06T01:40:02"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and manipulating textual and numerical information from tariff books, rate tables, and digital systems; it is fundamentally text- and number-based.",
+      "adequacy_evidence": "Current AI agents handle text and numeric computation well, including extracting and calculating from structured or semi-structured data, so there is no meaningful multimodal gap.",
+      "_timestamp": "2026-04-06T01:40:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing travel and accommodation costs is typically a self-contained transaction based on current rates and itinerary details, without needing prior client history or long-term context.",
+      "adequacy_evidence": "Current AI systems can handle isolated cost computations without requiring cross-session memory, so there is no meaningful gap in capability.",
+      "_timestamp": "2026-04-06T01:40:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from computing travel costs or quoting package prices. While some states regulate sellers of travel, these rules govern business registration and disclosures, not the use of AI tools to perform pricing calculations.",
+      "_timestamp": "2026-04-06T01:40:04"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces cost estimates for clients who rely on the information, but it does not hinge on personal authority or relationship\u2014only on accuracy and clarity.",
+      "adequacy_evidence": "Customers already widely accept automated booking platforms and fare calculators, indicating little resistance to AI performing this cost-quoting function.",
+      "_timestamp": "2026-04-06T01:40:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Pricing errors can lead to financial discrepancies, customer dissatisfaction, or lost bookings, but they are typically correctable and not safety-critical.",
+      "adequacy_evidence": "With calculators, structured data sources, and automated validation, AI systems can reliably compute and cross-check costs, leaving minimal residual risk after normal quality control.",
+      "_timestamp": "2026-04-06T01:40:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Clients typically expect quotes within seconds to a few minutes during live interactions, limiting extended deliberation but not requiring instant real-time response.",
+      "adequacy_evidence": "LLM-based agents with calculators and database access can compute travel and accommodation costs quickly and accurately within this time frame without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T01:40:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Prices and totals can be recomputed and cross-checked against published rates or booking systems, but require attention to conditions like dates, taxes, and fare rules that are not always trivial.",
+      "adequacy_evidence": "AI can calculate and assemble quotes but may misapply fare rules or use outdated data, so human verification against current systems and recalculation is still needed.",
+      "_timestamp": "2026-04-06T01:40:05"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

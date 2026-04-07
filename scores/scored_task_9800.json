@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9111.00",
+  "task_id": 9800,
+  "task_statement": "Interview people and keep track of their responses.",
+  "occupation_title": "Statistical Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Statistical assistants often conduct interviews via phone, email, or online survey systems and record responses digitally, which can be done entirely on a computer. However, some data collection contexts still involve in-person interviews or field surveys, requiring physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interviewing spans diverse respondent types, topics, and interaction contexts, but follows relatively standardized survey and interviewing practices.",
+      "adequacy_evidence": "There is substantial training data (survey instruments, transcripts, role-play simulations), though real-world conversational variability and edge-case respondent behaviors are only partially captured.",
+      "_timestamp": "2026-04-06T05:27:04"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective interviewing often requires some experience-based judgment to probe unclear answers, maintain rapport, and interpret respondent intent beyond scripted questions.",
+      "adequacy_evidence": "Current agents can follow structured questionnaires and basic clarifications but show gaps in nuanced probing, adaptive questioning, and interpreting subtle human cues in less structured interviews.",
+      "_timestamp": "2026-04-06T05:27:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Conducting interviews involves multi-turn interactions where questions build on prior answers and responses must be consistently recorded, but each interview is typically bounded and not highly interdependent across long chains.",
+      "adequacy_evidence": "LLM agents can sustain coherent multi-turn conversations and track responses, but over longer interviews or multiple respondents they may lose context, omit details, or show mild drift in consistency.",
+      "_timestamp": "2026-04-06T05:27:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interviews in statistical contexts are often guided by structured questionnaires, but still require some interpretation of respondent answers, handling clarifications, and deciding when to probe or move on.",
+      "adequacy_evidence": "Current agents can follow scripts and capture responses, but often struggle with nuanced conversational cues, implicit meanings, and adaptive probing, requiring human oversight to ensure data quality.",
+      "_timestamp": "2026-04-06T05:27:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple respondents' answers during an interview session, requiring organization and recall of evolving information but typically at manageable scale.",
+      "adequacy_evidence": "Current AI agents with transcription, note-taking, and structured storage tools can reliably capture and retrieve interview responses within a session without significant loss.",
+      "_timestamp": "2026-04-06T05:27:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves accumulating responses across multiple interviews, requiring persistent tracking of respondent data over time, but not deep longitudinal histories beyond dataset maintenance.",
+      "adequacy_evidence": "Current AI systems with standard databases and memory tools can reliably store, retrieve, and organize cross-session interview responses without significant gaps.",
+      "_timestamp": "2026-04-06T05:27:06"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interviewing involves spoken language, listening, and potentially observing nonverbal cues, though responses can be captured as text transcripts.",
+      "adequacy_evidence": "Current agents handle speech transcription and basic conversational flow well but are less reliable in interpreting nuanced tone, body language, or managing live interactive interviews.",
+      "_timestamp": "2026-04-06T05:27:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Interviewing requires near-real-time conversational responsiveness, with questions and follow-ups delivered within seconds while maintaining accuracy and coherence.",
+      "adequacy_evidence": "Current AI agents can sustain real-time dialogue and capture responses with sufficient quality under tight latency, without needing extended reasoning that would slow interaction.",
+      "_timestamp": "2026-04-06T05:27:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Responses can be verified against audio recordings or transcripts, but doing so requires time and careful review to catch misquotes, omissions, or subtle misinterpretations.",
+      "adequacy_evidence": "AI can record and transcribe interviews but still makes transcription, attribution, and summarization errors often enough that routine human checking against source recordings is needed.",
+      "_timestamp": "2026-04-06T05:27:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task directly involves interacting with human respondents whose willingness to participate and candor can depend on the perceived identity and role of the interviewer.",
+      "adequacy_evidence": "Many respondents may be less comfortable or forthcoming with an AI interviewer, though acceptance is growing in survey contexts and does not universally block task completion.",
+      "_timestamp": "2026-04-06T05:27:07"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing rules prohibiting AI from conducting interviews or recording responses in general. While privacy, consent, and human-subjects regulations (e.g., IRB requirements) may govern how interviews are conducted, they do not ban AI from performing this task.",
+      "_timestamp": "2026-04-06T05:27:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in recording or interpreting interview responses can affect data quality and downstream analyses, but most contexts allow for some tolerance and correction without severe consequences.",
+      "adequacy_evidence": "Even with recordings and review, AI may still introduce subtle misinterpretations or omissions in responses or probing, leaving some residual risk that can impact data integrity.",
+      "_timestamp": "2026-04-06T05:27:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

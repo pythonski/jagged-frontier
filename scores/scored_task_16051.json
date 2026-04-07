@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2099.04",
+  "task_id": 16051,
+  "task_statement": "Gather financial documents related to investigations.",
+  "occupation_title": "Fraud Examiners, Investigators and Analysts",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Financial documents for investigations are often obtained electronically via databases, email, or secure portals, but investigators sometimes must physically collect or handle paper records from offices or institutions."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a moderate range of document types (e.g., bank records, invoices, contracts) and investigative contexts, but remains bounded within financial documentation relevant to fraud cases.",
+      "adequacy_evidence": "While many financial document types and investigation patterns are represented in public and synthetic data, real-world investigative workflows and proprietary datasets are often private, leaving some gaps in coverage.",
+      "_timestamp": "2026-04-06T00:07:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining which financial documents are relevant depends on the specifics of the investigation, evolving leads, and implicit criteria like materiality or evidentiary value.",
+      "adequacy_evidence": "Agents can follow explicit instructions and retrieve broadly relevant records, but often miss nuanced relevance judgments or shifting priorities without human guidance.",
+      "_timestamp": "2026-04-06T00:07:52"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Identifying which financial documents are relevant and where to obtain them often requires experience with investigative patterns, institutional practices, and recognizing subtle indicators of fraud beyond written procedures.",
+      "adequacy_evidence": "AI agents can follow documented procedures and known document types, but may miss context-specific leads or fail to prioritize sources effectively in less routine or ambiguous investigations.",
+      "_timestamp": "2026-04-06T00:07:52"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple coordinated steps such as identifying relevant sources, requesting documents, tracking responses, and organizing collected materials, requiring consistency across a moderate sequence.",
+      "adequacy_evidence": "AI agents can manage multi-step retrieval and tracking workflows with tools, but may show some degradation in maintaining context, follow-ups, and completeness across extended document-gathering sequences.",
+      "_timestamp": "2026-04-06T00:07:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Financial documents may include scanned PDFs, images of receipts, or handwritten records, requiring some image/OCR processing alongside text handling.",
+      "adequacy_evidence": "Current agents handle standard digital documents and basic OCR well, but can be unreliable with low-quality scans, handwriting, or complex document layouts.",
+      "_timestamp": "2026-04-06T00:07:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Gathering financial documents for investigations typically depends on an evolving case file, including prior requests, discovered entities, and document gaps, but each retrieval step is only moderately dependent on long-term history.",
+      "adequacy_evidence": "Current agents can store and retrieve case-related documents using external memory systems, but they still show gaps in reliably maintaining and surfacing all relevant prior context across sessions.",
+      "_timestamp": "2026-04-06T00:07:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves collecting and organizing documents from multiple sources (e.g., bank records, transaction logs, reports) within a case, requiring tracking and filtering relevant materials but not extreme volume or complexity.",
+      "adequacy_evidence": "Current agents with retrieval tools can gather and manage such document sets, but may lose track of relevance criteria or miss items due to imperfect querying and context compression.",
+      "_timestamp": "2026-04-06T00:07:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Gathering financial documents for investigations is typically a back-office, asynchronous task where hours or longer turnaround times are acceptable.",
+      "adequacy_evidence": "AI agents can perform document search, retrieval, and organization well within these loose time constraints without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-06T00:07:54"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Missing or incorrect documents can delay or weaken an investigation, but issues are typically discovered during subsequent analysis or review and can often be corrected without irreversible harm.",
+      "adequacy_evidence": "With standard verification steps (e.g., checklists, cross-referencing sources), AI-assisted document gathering leaves little residual risk, as omissions or errors are usually detectable before critical decisions are made.",
+      "_timestamp": "2026-04-06T00:07:55"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "The task involves interacting with external entities (e.g., banks, employers, clients) who must recognize and respond to document requests, and the requester's legitimacy and role can influence compliance.",
+      "adequacy_evidence": "Many institutions require verified human authority or credentials for sensitive financial disclosures, and would not accept autonomous AI agents making such requests without human representation or oversight.",
+      "_timestamp": "2026-04-06T00:07:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI systems from gathering financial documents for investigations. While privacy, data protection, and access controls apply, they govern how data is accessed rather than banning AI from performing the task.",
+      "_timestamp": "2026-04-06T00:07:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "Verifying that all relevant financial documents have been gathered and correctly identified requires cross-checking sources, understanding financial records, and detecting omissions, which are not always obvious.",
+      "adequacy_evidence": "Current AI systems can miss relevant documents, misclassify items, or fail to ensure completeness, and these errors are not trivially detectable, requiring substantial human review and validation.",
+      "_timestamp": "2026-04-06T00:07:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

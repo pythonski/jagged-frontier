@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1224.00",
+  "task_id": 17252,
+  "task_statement": "Communicate examination results or diagnostic information to referring physicians, patients, or families.",
+  "occupation_title": "Radiologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Radiologists typically communicate results through electronic reports, phone calls, or secure messaging within electronic health record systems. However, some cases involve in-person discussions with referring physicians, patients, or families in clinical settings."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Communicating diagnostic results typically involves a short sequence of steps (summarizing findings, tailoring explanation to audience, answering follow-up questions), but does not require long, tightly interdependent chains of actions.",
+      "adequacy_evidence": "Current AI agents can sustain coherence across brief multi-turn explanations and clarifications without significant degradation, especially in structured communication tasks like conveying medical findings.",
+      "_timestamp": "2026-04-06T05:22:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effectively communicating diagnostic results requires nuanced judgment about tone, level of detail, uncertainty framing, and sensitivity to patient or clinician context, which is typically developed through clinical experience rather than explicit rules.",
+      "adequacy_evidence": "Current AI can generate clear and structured explanations, but often lacks the calibrated judgment needed for emotionally sensitive delivery, contextual tailoring, and subtle clinical nuance in non-routine or high-stakes cases.",
+      "_timestamp": "2026-04-06T05:22:06"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Communication varies across audiences (physicians vs. patients/families), clinical contexts, and result types, requiring adaptation in tone, detail, and framing but within recurring patterns.",
+      "adequacy_evidence": "There is substantial data for physician-facing reporting and some guidance/examples for patient communication, but real-world nuanced conversations (e.g., delivering bad news, cultural factors) are less accessible due to privacy, making coverage incomplete but augmentable.",
+      "_timestamp": "2026-04-06T05:22:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the core goal (accurate communication of findings) is clear, the appropriate level of detail, tone, and framing depend on the audience (physician vs. patient), clinical context, and sensitivity of the information.",
+      "adequacy_evidence": "Current agents can adapt explanations and tone to some extent, but often miss nuanced expectations (e.g., emotional sensitivity, implicit clinical priorities), requiring human adjustment.",
+      "_timestamp": "2026-04-06T05:22:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Communicating diagnostic results requires integrating key imaging findings, relevant clinical history, and contextual details into a coherent explanation tailored to the audience, but the information volume is typically bounded within a single case.",
+      "adequacy_evidence": "Current agents can generally manage and summarize this level of information, but may occasionally omit or misprioritize clinically relevant details, especially when compressing nuanced findings for different audiences.",
+      "_timestamp": "2026-04-06T05:22:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Communicating results often benefits from awareness of prior studies, patient history, and earlier communications, but much of this context is externally stored in medical records rather than requiring intrinsic memory across sessions.",
+      "adequacy_evidence": "Current agents can retrieve prior reports from integrated systems, but maintaining and consistently surfacing relevant longitudinal context (e.g., subtle progression trends or prior communication nuances) is still imperfect.",
+      "_timestamp": "2026-04-06T05:22:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Communication of results is typically expected within seconds to a few minutes, especially for urgent findings, but does not require instantaneous real-time interaction.",
+      "adequacy_evidence": "Current AI systems can generate clear, accurate explanations well within these time constraints without needing extended reasoning, so speed does not significantly degrade quality.",
+      "_timestamp": "2026-04-06T05:22:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While communication is largely verbal or textual, radiologists often reference imaging findings (e.g., scans) and may use visuals to explain results, making some multimodal grounding useful.",
+      "adequacy_evidence": "Current agents can interpret and describe medical images at a basic level, but may struggle with nuanced, clinically precise cross-modal explanations needed for complex or sensitive diagnostic communication.",
+      "_timestamp": "2026-04-06T05:22:08"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in communicating diagnostic findings (e.g., misstatements, omissions, or incorrect interpretation of imaging results) often require medical expertise to detect and may not be immediately obvious, especially in nuanced or borderline cases.",
+      "adequacy_evidence": "AI-generated summaries or communications can be reasonably structured but still require clinician review for accuracy and completeness, as subtle clinical misinterpretations or inappropriate phrasing remain common enough to necessitate careful checking.",
+      "_timestamp": "2026-04-06T05:22:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Medical practice laws generally require that diagnostic interpretation and communication of results to patients be performed by or under the supervision of a licensed physician, which limits fully autonomous AI use. However, there is no explicit blanket prohibition on AI assisting or drafting such communications, creating partial rather than absolute restriction.",
+      "_timestamp": "2026-04-06T05:22:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Miscommunication of diagnostic findings can lead to inappropriate treatment, delayed care, or patient harm, so even rare residual errors after checking can have serious consequences.",
+      "adequacy_evidence": "With standard review of AI-generated communications by clinicians, most factual errors can be caught, but subtle misstatements, omissions, or tone issues still pose moderate residual risk in high-stakes clinical contexts.",
+      "_timestamp": "2026-04-06T05:22:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "This task involves direct communication of diagnostic findings to physicians, patients, and families, where clinical authority, trust, and empathy strongly influence how information is received and acted upon.",
+      "adequacy_evidence": "While referring physicians may accept AI-assisted reporting, many patients and families would be uncomfortable receiving diagnostic information directly from an AI, especially for serious conditions, leading to partial but not universal resistance.",
+      "_timestamp": "2026-04-06T05:22:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "21-1023.00",
+  "task_id": 279,
+  "task_statement": "Modify treatment plans according to changes in client status.",
+  "occupation_title": "Mental Health and Substance Abuse Social Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Updating or revising treatment plans is typically done in electronic health records or documents on a computer, though the information prompting the change often comes from in-person therapy sessions or observations."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Adjusting mental health treatment plans requires nuanced clinical judgment about symptom changes, risk factors, client history, and interpersonal dynamics, which are not fully captured by explicit rules or protocols.",
+      "adequacy_evidence": "Current AI agents lack reliable calibration in interpreting subtle behavioral cues, contextual psychosocial factors, and risk thresholds, leading to systematic gaps in safely and appropriately adapting treatment plans.",
+      "_timestamp": "2026-04-06T02:22:30"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Adjusting mental health treatment plans requires interpreting evolving client symptoms, risk factors, preferences, and contextual factors (family, culture, comorbidities), with goals often implicit and shifting over time.",
+      "adequacy_evidence": "Current agents struggle to reliably infer nuanced clinical priorities and contextual tradeoffs, and cannot autonomously refine ambiguous therapeutic goals without substantial human guidance.",
+      "_timestamp": "2026-04-06T02:22:31"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Client status changes span highly heterogeneous conditions (diagnoses, comorbidities, crises, cultural contexts, treatment modalities), producing a long-tailed distribution of cases requiring plan modification.",
+      "adequacy_evidence": "While clinical guidelines, case studies, and some de-identified records exist, rich longitudinal therapy data and nuanced real-world adjustments are often private and sparsely captured, leaving partial but not complete coverage.",
+      "_timestamp": "2026-04-06T02:22:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Modifying treatment plans depends on detailed longitudinal case histories, including prior interventions, evolving symptoms, client preferences, and responses across many sessions.",
+      "adequacy_evidence": "Current agents can store and retrieve structured case data, but often struggle with reliably integrating nuanced, evolving psychosocial context and surfacing the most relevant history over long time horizons.",
+      "_timestamp": "2026-04-06T02:22:32"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Updating treatment plans involves multi-step reasoning (reviewing client status, integrating history, adjusting goals/interventions) where consistency across steps matters, but sequences are not typically extremely long or tightly coupled in a single episode.",
+      "adequacy_evidence": "AI agents can handle moderate multi-step updates, but show some degradation with longer clinical reasoning chains, occasionally losing track of constraints or prior context without careful scaffolding.",
+      "_timestamp": "2026-04-06T02:22:32"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple within-session inputs (client symptoms, behavioral changes, prior plan elements, risk factors) and updating a coherent plan, but the total information load is typically manageable through structured notes and summaries.",
+      "adequacy_evidence": "Current agents can track and summarize case details, but may miss subtle clinical nuances or improperly weight recent vs. historical information, leading to moderate reliability issues in context retention.",
+      "_timestamp": "2026-04-06T02:22:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing client status often involves interpreting nonverbal cues (e.g., affect, behavior, tone) alongside verbal reports, though much can be documented textually in case notes.",
+      "adequacy_evidence": "Current agents can handle text-based case updates well and have some capability with audio/video, but remain inconsistent at reliably interpreting nuanced behavioral and affective signals in complex clinical contexts.",
+      "_timestamp": "2026-04-06T02:22:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether a modified mental health treatment plan is appropriate requires clinical expertise, interpretation of nuanced client changes, and often delayed outcome feedback, making errors hard to detect upfront.",
+      "adequacy_evidence": "Current AI systems can suggest plausible adjustments but frequently miss subtle clinical cues or context, so thorough expert review is necessary and errors are not easily or reliably caught without significant effort.",
+      "_timestamp": "2026-04-06T02:22:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Modifying treatment plans in mental health care requires client trust, therapeutic alliance, and acceptance of the clinician\u2019s judgment and empathy, making performer identity central to effectiveness.",
+      "adequacy_evidence": "Many clients would resist or disengage if they knew an AI was adjusting their treatment, as perceived lack of genuine empathy, accountability, and professional legitimacy would undermine adherence and outcomes.",
+      "_timestamp": "2026-04-06T02:22:33"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in modifying mental health or substance abuse treatment plans can lead to relapse, self-harm, or deterioration in client condition, so even rare residual mistakes can have serious consequences.",
+      "adequacy_evidence": "Even with supervision and review, AI systems may miss subtle clinical cues or context, leaving a non-trivial residual risk, though human oversight can mitigate the most severe failures.",
+      "_timestamp": "2026-04-06T02:22:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State licensing laws require that diagnosis, treatment planning, and modification of mental health treatment plans be performed or directly supervised by a licensed clinician (e.g., LCSW). AI systems cannot independently hold licensure or legally make these clinical decisions, so autonomous performance is explicitly restricted.",
+      "_timestamp": "2026-04-06T02:22:35"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Adjustments to treatment plans are often made during or shortly after client interactions, requiring reasonably prompt responses but not strict real-time immediacy in most cases.",
+      "adequacy_evidence": "Current AI systems can generate thoughtful plan modifications within seconds to minutes, fitting comfortably within typical time expectations without significant loss in quality.",
+      "_timestamp": "2026-04-06T02:22:35"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

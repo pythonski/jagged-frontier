@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2036.00",
+  "task_id": 22848,
+  "task_statement": "Plan the use of beam modifying devices, such as compensators, shields, and wedge filters, to ensure safe and effective delivery of radiation treatment.",
+  "occupation_title": "Medical Dosimetrists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Planning the use of beam\u2011modifying devices is typically performed within radiation treatment planning software using imaging and dose\u2011calculation systems, which can be done entirely on a computer. Physical fabrication or placement of the devices is handled by other staff, not part of the planning task itself."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Beam modifier planning varies across tumor sites, patient anatomies, beam energies, machine types, and clinical protocols, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "While physics models, treatment planning system data, and clinical guidelines provide substantial coverage, detailed case-level expert reasoning and proprietary clinical datasets are often inaccessible, leaving some subpopulations thin but partially synthesizable.",
+      "_timestamp": "2026-04-06T02:18:11"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Planning beam modifiers requires a multi-step, tightly coupled process (analyzing tumor geometry, dose distribution, device selection, and iterative adjustment), where early decisions directly affect later outcomes.",
+      "adequacy_evidence": "Well-scaffolded AI can handle multi-step planning workflows, but may exhibit some drift or missed constraints over longer interdependent sequences, especially during iterative refinement.",
+      "_timestamp": "2026-04-06T02:18:11"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting and configuring beam modifying devices requires nuanced judgment about patient anatomy, tumor geometry, dose distribution trade-offs, and physician preferences that are not fully captured by explicit rules and are refined through clinical experience.",
+      "adequacy_evidence": "Current AI systems can replicate standard planning heuristics and optimize dose distributions, but they still lack consistent calibration for complex, atypical cases and subtle clinical trade-offs that experienced dosimetrists handle through tacit knowledge.",
+      "_timestamp": "2026-04-06T02:18:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on clinical goals (tumor coverage vs. organ sparing), physician intent, and patient-specific anatomy, which are partly implicit and require interpretation beyond explicit rules, though guided by established protocols.",
+      "adequacy_evidence": "Current AI-assisted planning systems can optimize based on provided constraints, but often miss nuanced clinical preferences or tradeoffs, requiring iterative human refinement to fully capture intent.",
+      "_timestamp": "2026-04-06T02:18:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Planning beam modifiers requires integrating detailed patient geometry, tumor and organ-at-risk contours, dose distributions, and device parameters simultaneously, where missing a constraint can affect safety and efficacy.",
+      "adequacy_evidence": "Current agents can track and retrieve structured clinical data with tooling, but may lose fidelity when compressing complex spatial and dosimetric relationships or maintaining all constraints consistently over multi-step planning.",
+      "_timestamp": "2026-04-06T02:18:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Beam modifier planning is part of treatment planning workflows that typically occur over minutes to hours, with no need for real-time or near-instant responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform detailed reasoning and optimization without impacting usability, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T02:18:12"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Planning beam modifiers requires interpreting 3D medical imaging (CT/MRI), spatial dose distributions, and anatomical structures, with precise geometric and visual reasoning that cannot be reduced to text alone.",
+      "adequacy_evidence": "While AI systems can process medical images, current LLM-based agents lack consistently reliable, clinically validated performance in fine-grained spatial reasoning and multimodal integration required for safe radiation treatment planning.",
+      "_timestamp": "2026-04-06T02:18:12"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Planning beam modifiers may reference prior treatment plans, patient history, or fractionation context, but most information is stored in structured clinical systems and is case-specific rather than requiring rich longitudinal accumulation by the planner.",
+      "adequacy_evidence": "Current AI systems with standard integrations (EHR access, treatment planning systems, databases) can reliably retrieve and use prior case data across sessions, so cross-session memory is not a major limitation.",
+      "_timestamp": "2026-04-06T02:18:12"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is performed within a clinical team where radiation oncologists and medical physicists must review and rely on the dosimetrist\u2019s planning decisions, though patients do not directly engage with the planner.",
+      "adequacy_evidence": "Clinical stakeholders may accept AI-assisted planning, but full delegation to an AI agent would face trust and professional acceptance barriers, with preference for human oversight and sign-off.",
+      "_timestamp": "2026-04-06T02:18:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in selecting or configuring beam modifiers can produce subtle but clinically significant dose distribution deviations that require specialized physics checks, secondary dose calculations, and sometimes measurements to detect.",
+      "adequacy_evidence": "Current AI systems lack fully reliable radiotherapy physics judgment, so their plans would require comprehensive expert review and QA, with nontrivial risk of hard-to-spot errors in dose shaping and safety margins.",
+      "_timestamp": "2026-04-06T02:18:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Beam modifier planning directly affects radiation dose distribution; small errors can cause serious harm to healthy tissue or underdose tumors, so even rare residual errors have severe consequences.",
+      "adequacy_evidence": "While multiple QA layers (physics checks, physician review, dose verification) catch many issues, AI-generated plans may still introduce subtle, patient-specific errors that are not always reliably detected, leaving some residual risk.",
+      "_timestamp": "2026-04-06T02:18:14"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Radiation treatment planning, including beam modification decisions, must be performed and approved by licensed professionals (e.g., medical dosimetrists, medical physicists, radiation oncologists) under federal/state regulations and accreditation standards. These rules require a qualified human decision-maker and sign-off, effectively prohibiting fully autonomous AI performance of the task.",
+      "_timestamp": "2026-04-06T02:18:15"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

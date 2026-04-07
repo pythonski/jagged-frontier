@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1229.05",
+  "task_id": 17220,
+  "task_statement": "Perform epidemiological investigations of acute and chronic diseases.",
+  "occupation_title": "Preventive Medicine Physicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Epidemiological investigations often involve analyzing surveillance data, medical records, and reports using computers, but some investigations require fieldwork such as interviewing patients, visiting sites, or coordinating specimen collection in person."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Epidemiological investigations require interpreting incomplete, noisy, and context-dependent data, assessing confounding factors, and making judgment calls about causality and intervention strategies based on field experience.",
+      "adequacy_evidence": "Current agents can apply formal methods and known patterns but lack real-world calibration and situational judgment for complex, context-sensitive investigations, especially in ambiguous or novel outbreak scenarios.",
+      "_timestamp": "2026-04-05T21:10:45"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Epidemiological investigations involve multi-stage, tightly coupled processes (case identification, data collection, hypothesis generation, field investigation, analysis, and iterative refinement) where early errors can propagate through the workflow.",
+      "adequacy_evidence": "While AI agents can manage multi-step analytical workflows, they show some degradation over long, real-world investigative sequences with evolving data and feedback, leading to occasional goal drift or inconsistency.",
+      "_timestamp": "2026-04-05T21:10:45"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Epidemiological investigations span diverse diseases, populations, geographies, transmission dynamics, and outbreak contexts, including rare and novel events, making the instance distribution highly heterogeneous and long-tailed.",
+      "adequacy_evidence": "There is extensive public data (case reports, surveillance datasets, outbreak investigations), but important real-world signals\u2014such as detailed field investigation processes, local health system nuances, and rare/emerging scenarios\u2014are often sparse or inaccessible, though partially recoverable via synthesis and targeted data collection.",
+      "_timestamp": "2026-04-05T21:10:46"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Epidemiological investigations require defining cases, selecting study designs, identifying exposures, and adapting to evolving public health contexts, with many objectives and constraints emerging during the investigation rather than being \u05de\u05e8\u05d0\u05e9 specified.",
+      "adequacy_evidence": "Current agents can suggest study designs and infer likely goals from context, but often miss nuanced, situational priorities (e.g., stakeholder concerns, field constraints), requiring human guidance to fully resolve ambiguity.",
+      "_timestamp": "2026-04-05T21:10:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Epidemiological investigations require integrating large volumes of heterogeneous data within a single investigation (case histories, lab results, exposure timelines, contact networks, and environmental factors), where missing details can alter conclusions.",
+      "adequacy_evidence": "Current agents with retrieval and tool use can manage sizable datasets, but still exhibit context loss, imperfect retrieval, and summarization drift when tracking complex, evolving case information.",
+      "_timestamp": "2026-04-05T21:10:46"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Epidemiological investigations typically unfold over hours to days, involving data collection, analysis, and coordination rather than requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform analyses and generate insights well within these timeframes without needing to truncate reasoning, so latency does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T21:10:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Epidemiological investigations require tracking cases, exposures, lab results, and evolving outbreak patterns over extended periods, integrating information across many encounters and data sources.",
+      "adequacy_evidence": "Current AI systems can leverage external databases and records for persistence, but often struggle with reliably maintaining and updating complex, evolving cross-case context and surfacing the most relevant historical links.",
+      "_timestamp": "2026-04-05T21:10:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Epidemiological investigations often involve interpreting non-text data such as geographic spread maps, lab results, and occasionally clinical or environmental images, though much reasoning is still based on structured and textual data.",
+      "adequacy_evidence": "Current AI systems can handle basic image and geospatial inputs, but reliability drops for complex cross-modal synthesis (e.g., integrating spatial patterns with clinical and environmental signals) in real-world investigations.",
+      "_timestamp": "2026-04-05T21:10:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Epidemiological investigations involve complex causal inference, noisy and incomplete data, and long feedback loops, so errors (e.g., confounding, bias, misattribution of sources) are often subtle and require expert review and additional data to detect.",
+      "adequacy_evidence": "Current AI systems frequently make reasoning and data interpretation errors in causal and statistical contexts, and verifying their outputs would require extensive expert validation, reanalysis, and cross-checking, making the verification burden severe.",
+      "_timestamp": "2026-04-05T21:10:49"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in epidemiological investigations can lead to misidentified sources, delayed interventions, or inappropriate public health responses, potentially causing widespread harm or preventable morbidity and mortality.",
+      "adequacy_evidence": "Even with review and validation, AI systems can miss subtle biases, confounders, or context-specific signals in complex population data, leaving residual risks that are unacceptable given the high-stakes consequences.",
+      "_timestamp": "2026-04-05T21:10:49"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI conducting epidemiological analyses, but public health investigations often fall under licensed physician or official authority, and involve regulated access to protected health information (HIPAA) and reportable disease protocols. These create partial constraints requiring human oversight or accountability rather than fully autonomous AI operation.",
+      "_timestamp": "2026-04-05T21:10:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Epidemiological investigations require direct interaction with patients, healthcare providers, and public health authorities, where trust, credibility, and professional authority are central to eliciting accurate information and ensuring compliance.",
+      "adequacy_evidence": "Many stakeholders would be reluctant to disclose sensitive health information or follow guidance from an AI agent, and public health effectiveness could be undermined without human legitimacy and trust.",
+      "_timestamp": "2026-04-05T21:10:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

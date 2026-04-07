@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2042.00",
+  "task_id": 3702,
+  "task_statement": "Analyze and interpret geological, geochemical, or geophysical information from sources, such as survey data, well logs, bore holes, or aerial photos.",
+  "occupation_title": "Geoscientists, Except Hydrologists and Geographers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Most analysis and interpretation of geological, geochemical, or geophysical information (e.g., survey datasets, well logs, aerial imagery) is conducted using computer-based modeling and visualization software, which can be done remotely. However, some instances involve examining physical samples such as cores or materials from boreholes in labs or offices."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting subsurface structures, depositional environments, or geophysical signatures relies heavily on experience-based pattern recognition, contextual judgment, and integration of ambiguous signals that are not fully captured by explicit rules.",
+      "adequacy_evidence": "Current agents can apply learned patterns and domain knowledge across many standard datasets, but they still lack the nuanced calibration and cross-context intuition geoscientists develop through field experience, leading to gaps in complex or ambiguous cases.",
+      "_timestamp": "2026-04-06T00:17:48"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous data types (seismic surveys, well logs, geochemical assays, aerial imagery) across varied geological settings, each with distinct patterns and edge cases.",
+      "adequacy_evidence": "While substantial public datasets and published interpretations exist, many high-value subsurface datasets (e.g., proprietary seismic and drilling data) are restricted, and expert reasoning processes are only partially documented, leaving some gaps that can be mitigated but not fully closed.",
+      "_timestamp": "2026-04-06T00:17:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on interpreting non-text data such as well logs, seismic surveys, borehole measurements, and aerial or satellite imagery, requiring spatial and visual reasoning that cannot be reduced to text alone.",
+      "adequacy_evidence": "Current AI agents can process images and structured geophysical data, but struggle with domain-specific interpretation, fine-grained spatial reasoning, and integrating heterogeneous multimodal signals at expert level.",
+      "_timestamp": "2026-04-06T00:17:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating large, heterogeneous datasets (e.g., well logs, seismic surveys, geochemical assays, imagery) where critical insights depend on tracking many interrelated variables and details simultaneously.",
+      "adequacy_evidence": "Current agents can use retrieval and external tools to manage large inputs, but still show weaknesses in maintaining consistent representations across modalities and may miss or misweight important details during compression.",
+      "_timestamp": "2026-04-06T00:17:49"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Geoscientific data analysis (e.g., interpreting well logs or survey data) is typically conducted over hours to days, with no requirement for immediate or real-time responses.",
+      "adequacy_evidence": "Current AI systems can take extended time for deeper reasoning without penalty, so latency does not meaningfully constrain output quality in this task.",
+      "_timestamp": "2026-04-06T00:17:49"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting geological and geophysical data requires inferring the underlying objective (e.g., resource exploration, hazard assessment) and applying context-dependent domain judgment, with success criteria often implicit and evolving as patterns emerge.",
+      "adequacy_evidence": "Current agents can process and summarize multimodal geoscience data, but often miss domain-specific interpretive nuances and require human guidance to align outputs with the true investigative goals.",
+      "_timestamp": "2026-04-06T00:17:49"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpretation often builds on prior analyses, integrating historical survey data, earlier well logs, and evolving geological models across a project, but much of this context can be reloaded from stored datasets rather than requiring intrinsic memory.",
+      "adequacy_evidence": "Current agents can use external storage, retrieval, and project databases to recover past context, but they still show gaps in consistently surfacing the most relevant prior interpretations or maintaining coherent long-term project state without careful system design.",
+      "_timestamp": "2026-04-06T00:17:50"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting subsurface geological and geophysical data involves ambiguous signals, indirect measurements, and model-based inference where errors can be subtle and only revealed after drilling or further surveys, requiring deep expertise to validate.",
+      "adequacy_evidence": "Current AI systems can misinterpret noisy, domain-specific data and lack robust geological judgment, so their outputs require extensive expert review and cross-validation with multiple data sources to catch non-obvious errors.",
+      "_timestamp": "2026-04-06T00:17:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no general prohibition on AI performing geological analysis, but in some U.S. states and regulated contexts (e.g., environmental reports, resource assessments), a licensed Professional Geologist must review and sign off on work. This creates partial restriction, as AI cannot autonomously fulfill legally required human certification roles.",
+      "_timestamp": "2026-04-06T00:17:51"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces analyses used by internal teams or clients (e.g., energy firms, engineering groups), who rely on the output, but the analyst\u2019s personal identity is usually secondary to technical accuracy.",
+      "adequacy_evidence": "Stakeholders are generally open to AI-assisted analysis in this domain, though full autonomy may face some skepticism around reliability and accountability, leading to moderate but not prohibitive resistance.",
+      "_timestamp": "2026-04-06T00:17:51"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple data sources (e.g., well logs, surveys, geophysical signals) through iterative interpretation steps where earlier judgments shape later conclusions, creating tightly coupled analytical sequences.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step analytical workflows with tooling, but performance can degrade over long chains of interdependent reasoning, especially when maintaining consistency across evolving geological interpretations.",
+      "_timestamp": "2026-04-06T00:18:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpretations of subsurface data directly inform high-cost and potentially hazardous decisions such as drilling, resource estimation, and environmental risk management, where even rare errors can have major financial or safety consequences.",
+      "adequacy_evidence": "Even with expert review and validation workflows, AI systems can introduce subtle misinterpretations of complex, noisy geophysical data that are hard to fully eliminate, leaving some residual risk that remains concerning but not uniformly prohibitive.",
+      "_timestamp": "2026-04-06T00:19:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

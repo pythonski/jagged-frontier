@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1141.04",
+  "task_id": 18021,
+  "task_statement": "Write nursing orders.",
+  "occupation_title": "Clinical Nurse Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Nursing orders are typically entered into electronic health record systems using a computer, making the writing itself digital in most cases. However, the task often occurs within in-person clinical workflows and may sometimes involve paper charts or on-site clinical context."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Nursing orders vary widely across patient conditions, comorbidities, care settings, and institutional protocols, creating a heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "There is substantial coverage via clinical guidelines, order sets, and EHR-derived datasets, but much detailed, context-rich decision data is private and uneven, leaving some edge cases thinly represented.",
+      "_timestamp": "2026-04-06T01:32:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Writing nursing orders requires nuanced clinical judgment about patient-specific factors (comorbidities, response to treatment, contraindications, care priorities) that go beyond explicit protocols and rely on experience-based calibration.",
+      "adequacy_evidence": "Current agents can follow guidelines and synthesize patient data, but they lack robust real-world clinical calibration in complex or ambiguous cases, leading to gaps in nuanced decision-making.",
+      "_timestamp": "2026-04-06T01:32:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Writing nursing orders involves integrating patient data, diagnoses, medications, and care plans into a coherent set of instructions, requiring multiple interdependent steps but typically within a bounded workflow.",
+      "adequacy_evidence": "AI agents can generally maintain coherence over this length of structured clinical reasoning, but may show some drift or inconsistency in maintaining all constraints (e.g., contraindications, care continuity) across the full sequence.",
+      "_timestamp": "2026-04-06T01:32:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Nursing orders follow clinical protocols and physician directives but require interpretation of patient-specific context, comorbidities, and care priorities, making some criteria implicit rather than fully specified.",
+      "adequacy_evidence": "Current agents can incorporate guidelines and patient data to draft plausible orders, but they often miss nuanced clinical intent or context-specific adjustments, requiring human review and iteration.",
+      "_timestamp": "2026-04-06T01:32:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Writing nursing orders requires integrating heterogeneous patient data (diagnoses, medications, allergies, labs, vitals, care plans) within a single episode, where missing a detail can lead to unsafe or incorrect orders.",
+      "adequacy_evidence": "Current agents can synthesize multi-source clinical information reasonably well with tooling, but still show lapses in reliably tracking all constraints (e.g., allergies, interactions), especially under dense or evolving inputs.",
+      "_timestamp": "2026-04-06T01:32:28"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Writing nursing orders often depends on patient history, prior interventions, and evolving care plans documented across encounters, but this information is typically available in structured EHR systems rather than requiring independently maintained memory.",
+      "adequacy_evidence": "Current agents can retrieve and use longitudinal patient data when integrated with records, but may inconsistently track or prioritize relevant historical details across sessions without robust system design.",
+      "_timestamp": "2026-04-06T01:32:28"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Writing nursing orders is primarily a text-based task carried out in electronic health records, with relevant clinical information typically available in structured or textual form.",
+      "adequacy_evidence": "Current AI systems handle text-based synthesis and generation well, and no significant multimodal perception or generation is required for this task.",
+      "_timestamp": "2026-04-06T01:32:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Writing nursing orders is typically expected within seconds to a few minutes in clinical workflows, with occasional urgency (e.g., stat orders) but not continuous real-time demands.",
+      "adequacy_evidence": "Frontier AI agents can generate structured, clinically appropriate orders within seconds, well within the time constraints, without needing to truncate reasoning in most cases.",
+      "_timestamp": "2026-04-06T01:32:29"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Nursing orders involve patient-specific clinical judgments (medications, dosages, contraindications, care protocols) where errors can be subtle and require expert review of charts, labs, and guidelines to detect.",
+      "adequacy_evidence": "Current AI can generate plausible but occasionally incorrect or unsafe orders, and verifying them requires detailed clinical cross-checking, making unverified use inappropriate.",
+      "_timestamp": "2026-04-06T01:32:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Nursing orders directly determine medications, treatments, and monitoring; even rare residual errors can lead to serious patient harm or death, so tolerance for error after checking is extremely low.",
+      "adequacy_evidence": "With standard clinical review and safeguards, many AI errors would be caught, but subtle context-specific mistakes (e.g., contraindications, dosing nuances) could still slip through, leaving non-negligible residual risk.",
+      "_timestamp": "2026-04-06T01:32:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Nursing orders are authoritative clinical directives that must be accepted and acted upon by healthcare staff and are tied to licensed professional responsibility and credibility.",
+      "adequacy_evidence": "Clinicians, institutions, and regulators would strongly resist accepting AI-generated nursing orders without human sign-off due to liability, trust, and scope-of-practice concerns.",
+      "_timestamp": "2026-04-06T01:32:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Medical orders, including nursing orders, must be issued or authorized by a licensed clinician under state scope-of-practice laws and hospital regulations; a non-licensed entity (including AI) cannot legally generate orders autonomously. AI may assist, but a licensed human must review and sign, constituting an explicit restriction.",
+      "_timestamp": "2026-04-06T01:32:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

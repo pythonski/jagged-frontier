@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2031.00",
+  "task_id": 18602,
+  "task_statement": "Keep documentation of service histories on all biomedical equipment.",
+  "occupation_title": "Bioengineers and Biomedical Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Service histories are typically maintained in computerized maintenance or asset management systems, making the documentation work mainly computer-based. However, some instances require accessing information from on-site equipment checks, paper logs, or technicians, tying the task partly to physical environments."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining service history documentation is largely governed by standardized record-keeping procedures, templates, and compliance requirements, with minimal reliance on experiential judgment.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured documentation protocols and capture relevant details consistently when provided with appropriate inputs and system integration.",
+      "_timestamp": "2026-04-06T05:41:02"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Service history documentation spans different device types, maintenance events, and institutional formats, but follows broadly standardized record-keeping practices and schemas.",
+      "adequacy_evidence": "Extensive manuals, CMMS records, regulatory guidelines, and synthetic workflows provide ample representative data and process-level examples for training coverage.",
+      "_timestamp": "2026-04-06T05:41:03"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the core objective (maintaining service histories) is clear, important details such as level of detail, formatting, compliance standards (e.g., FDA, Joint Commission), and organization-specific documentation practices are often implicit or context-dependent.",
+      "adequacy_evidence": "Current AI agents can follow general documentation norms and infer structure from examples, but they often miss institution-specific conventions or regulatory nuances without explicit guidance, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T05:41:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining service histories involves repeated, structured updates over time, but each entry is largely independent and does not form a tightly coupled multi-step sequence where early errors cascade.",
+      "adequacy_evidence": "AI agents with database or logging tools can reliably handle repeated documentation tasks with consistent quality, showing minimal degradation across such moderately extended but loosely coupled sequences.",
+      "_timestamp": "2026-04-06T05:41:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintaining service histories inherently requires persistent, longitudinal records for each piece of equipment across many service events over time.",
+      "adequacy_evidence": "Current AI systems can reliably use external databases, CMMS platforms, and structured storage to maintain and retrieve cross-session histories with minimal loss or degradation.",
+      "_timestamp": "2026-04-06T05:41:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining service history documentation is a routine record-keeping task with flexible timing; entries can be completed minutes to hours after servicing without impacting outcomes.",
+      "adequacy_evidence": "AI systems can generate and organize documentation well within these loose time constraints, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T05:41:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining service histories involves organizing multiple fields (dates, procedures, parts, compliance notes) across equipment records, requiring consistent retrieval and updating within a session.",
+      "adequacy_evidence": "Current AI agents with database integrations and structured workflows can reliably track, update, and retrieve such records within an episode without significant information loss.",
+      "_timestamp": "2026-04-06T05:41:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining service histories primarily involves recording textual information such as dates, procedures, parts replaced, and maintenance notes, typically in structured databases or logs.",
+      "adequacy_evidence": "Current AI systems handle text-based documentation and simple data entry reliably, and any occasional attachment of images or reports does not pose a significant challenge.",
+      "_timestamp": "2026-04-06T05:41:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Service history records can be checked against maintenance logs, timestamps, technician reports, and equipment usage data, but doing so requires some attention and domain familiarity to ensure completeness and accuracy.",
+      "adequacy_evidence": "AI systems can generate or update documentation but may introduce omissions or inconsistencies, requiring routine cross-checking against source records, though errors are generally straightforward to detect with standard review practices.",
+      "_timestamp": "2026-04-06T05:41:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintenance logs are used by technicians, regulators, and auditors who rely on their accuracy, but the identity of the record-keeper is not central to their use.",
+      "adequacy_evidence": "Stakeholders generally accept automated record-keeping systems, but in regulated biomedical contexts there may still be a preference or requirement for human oversight or sign-off, leading to moderate resistance.",
+      "_timestamp": "2026-04-06T05:41:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "U.S. regulations (e.g., FDA 21 CFR Part 11, hospital accreditation standards) require accurate, auditable recordkeeping but do not prohibit AI systems from creating or maintaining service documentation, provided compliance, validation, and oversight requirements are met.",
+      "_timestamp": "2026-04-06T05:41:07"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inaccurate service histories can lead to missed maintenance, compliance issues, or audit failures, but errors are usually detectable and rarely cause immediate irreversible harm.",
+      "adequacy_evidence": "With standard verification (cross-checking logs, timestamps, and maintenance records), AI-generated documentation errors can be caught, leaving low residual risk in practice.",
+      "_timestamp": "2026-04-06T05:41:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

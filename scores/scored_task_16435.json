@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2141.02",
+  "task_id": 16435,
+  "task_statement": "Build models for algorithm or control feature verification testing.",
+  "occupation_title": "Automotive Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Building models for algorithm or control feature verification is typically done using simulation and modeling software (e.g., MATLAB/Simulink) on a computer, without requiring physical presence or hardware."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification models are guided by formal requirements and test specifications, but engineers must interpret implicit performance criteria, edge cases, and safety/regulatory expectations that are not fully explicit.",
+      "adequacy_evidence": "Current agents can follow written specs and generate plausible test models, but they often miss latent requirements (e.g., rare failure modes or nuanced safety constraints) and need iterative human refinement to align with true verification goals.",
+      "_timestamp": "2026-04-05T22:57:21"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing verification models for control algorithms involves selecting realistic scenarios, edge cases, and abstractions that reflect real vehicle behavior, which relies on engineering judgment built from prior testing and system experience.",
+      "adequacy_evidence": "Current agents can generate plausible test models and scenarios from documentation and data, but often lack the nuanced calibration to prioritize subtle failure modes or reflect real-world system interactions without human refinement.",
+      "_timestamp": "2026-04-05T22:57:21"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Verification models must cover diverse vehicle systems, driving conditions, edge cases, and failure modes across heterogeneous environments, making the task highly long-tailed and context-sensitive.",
+      "adequacy_evidence": "There is substantial data from simulations, test logs, and engineering artifacts, and synthetic generation is effective, but some rare edge cases and proprietary system behaviors remain underrepresented or inaccessible.",
+      "_timestamp": "2026-04-05T22:57:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Building verification models for control algorithms involves multi-stage workflows (requirements interpretation, model design, parameterization, simulation, validation, and iteration) where earlier decisions constrain later steps and errors can propagate.",
+      "adequacy_evidence": "LLM-based agents can handle multi-step modeling pipelines with tools, but they show some degradation over long iterative workflows, including losing track of assumptions or inconsistencies across stages.",
+      "_timestamp": "2026-04-05T22:57:21"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Building verification models for algorithms or control features is typically an offline engineering task with iteration cycles spanning minutes to hours or longer, not requiring rapid real-time responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time for extended reasoning and tool use without impacting task quality, as there are no tight latency constraints forcing premature outputs.",
+      "_timestamp": "2026-04-05T22:57:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Model building for verification testing typically relies on prior test results, existing model iterations, and evolving project requirements, but individual modeling tasks can often be executed with well-documented artifacts rather than deep longitudinal memory.",
+      "adequacy_evidence": "Current AI agents can use external storage, versioning systems, and retrieval tools to access prior models and data, but they still show gaps in reliably maintaining and surfacing the most relevant historical context across complex, evolving engineering projects.",
+      "_timestamp": "2026-04-05T22:57:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting and generating time-series data, sensor signals, and simulation outputs (e.g., plots, vehicle dynamics), which go beyond pure text but are not dominated by rich perceptual modalities.",
+      "adequacy_evidence": "Current agents can handle structured signals, plots, and simulation workflows reasonably well, but may struggle with complex cross-modal integration and high-fidelity physical modeling tied to real-world sensor behavior.",
+      "_timestamp": "2026-04-05T22:57:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Building verification models for control algorithms requires tracking large volumes of heterogeneous information (system requirements, signal definitions, edge cases, simulation parameters, and test scenarios) where missing details can invalidate results.",
+      "adequacy_evidence": "Current agents with retrieval and code tools can handle substantial context, but still show gaps in reliably maintaining and updating complex, interdependent state across long workflows, leading to occasional context loss or inconsistencies.",
+      "_timestamp": "2026-04-05T22:57:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from building models for algorithm or control feature verification testing. Industry standards (e.g., ISO 26262) require human accountability and validation, but they do not restrict the use of AI as a tool in the modeling process.",
+      "_timestamp": "2026-04-05T22:57:24"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily technical and internal, producing models for verification testing consumed by engineering workflows rather than stakeholders who depend on performer identity.",
+      "adequacy_evidence": "Engineering teams already accept automated and software-driven modeling tools, so AI-generated outputs in this context would face little to no resistance based on agent identity.",
+      "_timestamp": "2026-04-05T22:57:24"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verification models for automotive control algorithms must capture complex system dynamics and edge cases; errors can be subtle and may only appear under specific simulated or real-world conditions, requiring expert review and extensive testing to uncover.",
+      "adequacy_evidence": "Current AI-generated models are prone to missing edge cases or misrepresenting system behavior, and these flaws are difficult to detect without rigorous domain-specific validation, making substantial expert checking unavoidable.",
+      "_timestamp": "2026-04-05T22:57:24"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Verification testing models for automotive control algorithms directly impact safety-critical systems (e.g., braking, steering, ADAS), where even rare undetected errors can lead to severe or irreversible real-world consequences.",
+      "adequacy_evidence": "Even with standard validation and review, AI-generated models may miss edge cases or embed subtle assumptions, leaving non-negligible residual risk that is concerning but not uniformly disqualifying under human oversight.",
+      "_timestamp": "2026-04-05T22:57:25"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

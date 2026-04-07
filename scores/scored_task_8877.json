@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3031.02",
+  "task_id": 8877,
+  "task_statement": "Examine, evaluate, or process loan applications.",
+  "occupation_title": "Financial Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Loan applications are typically reviewed and processed through digital banking systems and electronic documents, allowing remote work. However, some cases still involve handling physical paperwork or in-person verification with applicants."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan evaluation combines formal underwriting criteria with experience-based judgment on borderline cases, such as interpreting qualitative borrower risk signals or atypical financial profiles.",
+      "adequacy_evidence": "Current AI can replicate rule-based underwriting and some pattern recognition but shows weaker calibration on nuanced, context-sensitive cases that rely on seasoned financial judgment.",
+      "_timestamp": "2026-04-06T04:10:58"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Loan evaluation spans highly heterogeneous cases (consumer vs. commercial, industries, credit profiles, macro conditions, regulatory contexts), with many edge cases and context-sensitive factors.",
+      "adequacy_evidence": "While general underwriting principles and some datasets are available, much real-world data (proprietary credit histories, internal risk models, nuanced case deliberations) is private, leaving gaps that can only be partially filled via synthesis or limited disclosures.",
+      "_timestamp": "2026-04-06T04:10:59"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing loan applications involves multi-step workflows (document collection, verification, financial analysis, risk assessment, and decisioning) where outputs from earlier steps inform later ones, but the sequences are structured and standardized rather than highly open-ended.",
+      "adequacy_evidence": "Well-scaffolded AI agents can generally follow these structured workflows, but may show some degradation over longer cases (e.g., missed constraints or inconsistent reasoning across steps), especially when handling complex or exception-heavy applications.",
+      "_timestamp": "2026-04-06T04:10:59"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan evaluation uses formal criteria (credit scores, income ratios, regulations) but also involves context-dependent judgment about risk tolerance, compensating factors, and institutional policies.",
+      "adequacy_evidence": "AI agents can apply explicit rules and infer some intent, but often miss nuanced risk tradeoffs or implicit lending standards, requiring human oversight to resolve ambiguities.",
+      "_timestamp": "2026-04-06T04:10:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Loan evaluation often benefits from access to prior client history, past applications, and institutional knowledge, but many applications can still be processed largely as self-contained cases with supporting records retrieved as needed.",
+      "adequacy_evidence": "Current AI systems can reliably integrate with databases and CRM systems to store and retrieve cross-session information, and this level of persistence is well within existing tooling capabilities.",
+      "_timestamp": "2026-04-06T04:11:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Loan applications may include scanned documents (e.g., IDs, pay stubs, financial statements), but the core evaluation relies on structured numeric and textual data rather than rich multimodal reasoning.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing handle typical financial documents and image-based inputs reliably enough for this task, with multimodal demands being relatively straightforward.",
+      "_timestamp": "2026-04-06T04:11:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Loan application processing involves borrowers and sometimes internal stakeholders relying on the evaluator\u2019s decisions, but interaction is often indirect and standardized rather than deeply relational.",
+      "adequacy_evidence": "Automated underwriting and algorithmic credit decisions are already widely used and generally accepted, so stakeholder resistance to AI in this role is minimal.",
+      "_timestamp": "2026-04-06T04:11:02"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating loan applications requires integrating large volumes of heterogeneous data (financial statements, credit histories, income documentation, risk metrics, and policy rules), where overlooking a detail can materially affect decisions.",
+      "adequacy_evidence": "Modern agents with retrieval and tool use can handle multi-document analysis, but they still exhibit context loss or imperfect prioritization across extensive files, especially when subtle cross-document inconsistencies matter.",
+      "_timestamp": "2026-04-06T04:11:02"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Loan approval decisions directly affect financial risk exposure, regulatory compliance, and potential losses; even rare errors (e.g., approving high-risk borrowers) can have significant downstream consequences.",
+      "adequacy_evidence": "With established validation processes (credit scoring, documentation checks, human oversight), AI-assisted decisions can be meaningfully constrained, but model errors, edge cases, or subtle judgment failures still leave some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T04:11:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan application evaluation involves structured financial data and rule-based checks (credit scores, income verification), but also judgment calls where errors may not be immediately obvious without careful review.",
+      "adequacy_evidence": "Current AI can process and flag inconsistencies, but still makes non-trivial mistakes in interpreting documents or applying policy, requiring routine human verification and oversight.",
+      "_timestamp": "2026-04-06T04:11:02"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Loan application evaluation typically occurs over minutes to hours (or longer), with no strict requirement for immediate real-time responses in most financial management contexts.",
+      "adequacy_evidence": "Current AI systems can take additional time for deeper analysis without violating practical timelines, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T04:11:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "No law explicitly prohibits AI from evaluating or processing loan applications, and automated underwriting is widely used. However, regulations like ECOA, FCRA, and fair lending rules impose requirements (e.g., explainability, adverse action notices, model risk management) that create partial constraints and compliance ambiguity for fully autonomous AI systems.",
+      "_timestamp": "2026-04-06T04:11:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

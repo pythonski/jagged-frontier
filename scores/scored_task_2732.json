@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5032.00",
+  "task_id": 2732,
+  "task_statement": "Determine types or amounts of equipment, vehicles, materials, or personnel required, according to work orders or specifications.",
+  "occupation_title": "Dispatchers, Except Police, Fire, and Ambulance",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Determining required equipment, vehicles, materials, or personnel is typically done by reviewing digital work orders, schedules, and specifications in dispatch or logistics software. The decision-making and coordination can be performed entirely via computer and communication tools without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While work orders and specifications provide structured guidance, dispatchers rely on experience to adjust resource levels based on situational factors like traffic, crew reliability, and job complexity not fully captured in rules.",
+      "adequacy_evidence": "AI agents can follow specifications and incorporate contextual data, but they still show gaps in nuanced calibration for non-routine conditions and local operational subtleties that experienced dispatchers handle intuitively.",
+      "_timestamp": "2026-04-05T22:48:54"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different industries, resource types, and situational constraints, but follows recurring patterns (e.g., matching demand to capacity under known rules and constraints).",
+      "adequacy_evidence": "Extensive logistics, operations research, and dispatch data (plus simulatable environments) provide ample coverage of decision processes, enabling training with representative scenarios and step-by-step reasoning.",
+      "_timestamp": "2026-04-05T22:48:54"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Work orders and specifications provide a baseline, but dispatchers often must interpret context such as urgency, location constraints, and resource availability to decide appropriate quantities and types.",
+      "adequacy_evidence": "Current agents can parse explicit requirements and apply rules, but they often miss situational nuances (e.g., local conditions or implicit priorities), requiring human adjustment in non-routine cases.",
+      "_timestamp": "2026-04-05T22:48:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interpreting work orders, mapping requirements to resource types, and ensuring consistency across a few interdependent steps, but sequences are typically short and bounded.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably handle these moderate multi-step mappings without significant degradation, maintaining consistency across the limited sequence length involved.",
+      "_timestamp": "2026-04-05T22:48:55"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Decisions are primarily driven by current work orders and specifications, but may occasionally benefit from historical patterns (e.g., past resource usage or recurring job requirements).",
+      "adequacy_evidence": "Current AI systems with standard database integrations can reliably store and retrieve relevant historical dispatch data, and the task does not require complex longitudinal memory beyond typical enterprise systems.",
+      "_timestamp": "2026-04-05T22:48:56"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating details from work orders, resource availability, and specifications, but the information scope is typically bounded and structured rather than large or highly dynamic.",
+      "adequacy_evidence": "Current AI agents can reliably track and organize moderate amounts of structured task data within a single episode using tools and memory buffers, with minimal loss or misretrieval.",
+      "_timestamp": "2026-04-05T22:48:56"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatchers must make timely resource determinations to keep operations flowing, typically within seconds to a few minutes, but not in strict real-time emergency conditions.",
+      "adequacy_evidence": "Current AI agents can process work orders and specifications and generate resource allocations well within this time window without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T22:48:56"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining required resources is primarily based on textual or structured inputs such as work orders, schedules, and specifications, which can be fully represented in text or tabular data.",
+      "adequacy_evidence": "Current AI agents handle text-based planning and resource allocation well, and any occasional map or dashboard inputs can be readily abstracted into text or structured data without loss of performance.",
+      "_timestamp": "2026-04-05T22:48:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from determining resource needs in dispatch operations; such planning decisions can be automated. While some industries may require human oversight for safety or accountability, this task itself is not legally restricted from AI execution.",
+      "_timestamp": "2026-04-05T22:48:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in estimating needed equipment, vehicles, or personnel can cause delays, inefficiencies, or service disruptions, but are typically correctable and rarely lead to severe irreversible harm in this occupation.",
+      "adequacy_evidence": "Given structured work orders and specifications, AI-supported decisions can be checked against rules and historical patterns, leaving low residual risk after normal quality control.",
+      "_timestamp": "2026-04-05T22:48:57"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal resource planning based on work orders, with outputs consumed operationally rather than requiring interpersonal engagement or trust in the performer's identity.",
+      "adequacy_evidence": "Organizations already accept automated systems for dispatch planning and resource allocation, and stakeholders are largely indifferent to whether a human or AI produces these determinations.",
+      "_timestamp": "2026-04-05T22:48:57"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Outputs can be checked against work orders, standard operating procedures, capacity constraints, and past dispatch patterns, but doing so requires domain knowledge and careful review rather than trivial automated checks.",
+      "adequacy_evidence": "Current AI can propose plausible allocations but may misinterpret constraints or context, so human review against specifications and operational realities is still needed to catch moderate, non-obvious errors.",
+      "_timestamp": "2026-04-05T22:48:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

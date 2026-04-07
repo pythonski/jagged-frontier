@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1069.05",
+  "task_id": 17144,
+  "task_statement": "Review procedure requests and patients' medical histories to determine applicability of procedures and radioisotopes to be used.",
+  "occupation_title": "Nuclear Medicine Physicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Reviewing procedure requests and patient medical histories is typically done through electronic health records and digital systems, which can be accessed remotely. However, in practice it is often integrated with on-site clinical workflow and occasional consultation with staff or physical records, so not all instances are fully remote."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple inputs (procedure requests, patient history, contraindications, prior treatments) and integrating them through a multi-step clinical reasoning process, but the sequence is bounded and not extremely long.",
+      "adequacy_evidence": "Frontier AI agents can generally sustain coherent multi-step document review and reasoning, though some degradation can occur with complex or lengthy medical histories, leading to occasional missed constraints or inconsistencies.",
+      "_timestamp": "2026-04-06T05:48:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining appropriate nuclear medicine procedures requires interpreting incomplete referrals, nuanced clinical histories, comorbidities, and implicit diagnostic goals, with context-dependent contraindications and tradeoffs.",
+      "adequacy_evidence": "Well-equipped agents can apply guidelines and synthesize records, but they still struggle with subtle clinical intent, edge cases, and reconciling ambiguous or conflicting information without human iteration.",
+      "_timestamp": "2026-04-06T05:48:05"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining appropriate nuclear medicine procedures and radioisotopes requires nuanced clinical judgment, integrating patient history, comorbidities, contraindications, and risk-benefit tradeoffs that are not fully captured by explicit rules.",
+      "adequacy_evidence": "Current AI systems can apply guidelines and recognize common patterns but lack the experiential calibration and clinical discernment needed for complex or atypical cases, leading to gaps in non-routine decision-making.",
+      "_timestamp": "2026-04-06T05:48:05"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Patient populations, comorbidities, prior treatments, and contraindications create a highly heterogeneous, long-tailed distribution of cases that must be evaluated for appropriate nuclear medicine procedures and isotopes.",
+      "adequacy_evidence": "While clinical guidelines, case reports, and de-identified datasets exist, comprehensive real-world patient histories are often private and unevenly represented, leaving gaps in coverage for rare or complex cases.",
+      "_timestamp": "2026-04-06T05:48:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "These reviews are typically conducted ahead of imaging or treatment, allowing minutes to tens of minutes for careful evaluation rather than requiring instant responses.",
+      "adequacy_evidence": "Current AI agents can perform detailed chart review and protocol matching well within these time windows, so latency does not meaningfully constrain reasoning quality.",
+      "_timestamp": "2026-04-06T05:48:07"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task relies on longitudinal patient medical histories, but these are typically stored and retrieved from external EHR systems rather than requiring the physician to personally maintain cross-session memory.",
+      "adequacy_evidence": "Current AI agents can integrate with databases and reliably retrieve patient histories across sessions, so persistent memory needs are largely met through existing infrastructure.",
+      "_timestamp": "2026-04-06T05:48:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating extensive patient records (history, labs, imaging, medications, contraindications) with procedure requirements, where missing a single detail can affect safety and appropriateness.",
+      "adequacy_evidence": "Current agents can retrieve and summarize large medical documents with tooling, but still show weaknesses in consistently tracking all clinically relevant details across long, heterogeneous records.",
+      "_timestamp": "2026-04-06T05:48:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing textual and structured data in procedure requests and medical histories; core decision-making does not require interpreting images, audio, or other non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based clinical documentation and structured data well, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-06T05:48:07"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Clinical decision-making about procedure appropriateness and radiopharmaceutical selection is legally restricted to licensed physicians under state medical practice acts and federal regulations. Orders and interpretations must be made and signed by credentialed practitioners, so AI cannot autonomously perform this task.",
+      "_timestamp": "2026-04-06T05:48:07"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Selecting appropriate nuclear procedures and radioisotopes directly affects patient safety, radiation exposure, and diagnostic accuracy; even rare errors can cause serious harm or missed diagnoses.",
+      "adequacy_evidence": "Current AI can miss subtle contraindications, complex comorbid interactions, or nuanced clinical judgment, and even with review, residual errors in such high-stakes decisions remain too risky.",
+      "_timestamp": "2026-04-06T05:48:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining appropriate nuclear medicine procedures and radioisotopes requires expert interpretation of complex medical histories, contraindications, and nuanced clinical guidelines; errors are often subtle and not immediately observable without deep domain review.",
+      "adequacy_evidence": "Current AI systems can miss nuanced contraindications or misinterpret clinical context, and their outputs would require thorough physician-level review to verify, making the checking burden both necessary and substantial.",
+      "_timestamp": "2026-04-06T05:48:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task directly affects patient care decisions and involves coordination with referring physicians and patients, where the physician\u2019s authority and clinical judgment are central to trust and acceptance.",
+      "adequacy_evidence": "Patients and clinicians are unlikely to accept fully autonomous AI making determinations about radioactive procedures, given safety concerns and the importance of licensed physician oversight, leading to strong resistance.",
+      "_timestamp": "2026-04-06T05:48:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

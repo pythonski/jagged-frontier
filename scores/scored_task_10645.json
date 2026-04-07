@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-3032.00",
+  "task_id": 10645,
+  "task_statement": "Read and interpret maps to determine vehicle routes.",
+  "occupation_title": "Heavy and Tractor-Trailer Truck Drivers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Truck drivers often determine routes using digital navigation tools or online maps, which are computer-based, but they may also use paper atlases or physical map books in the cab, so not all instances are fully digital."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Determining routes involves a sequence of steps (interpreting map data, selecting roads, adjusting for constraints), but these steps are relatively bounded and not highly interdependent over long horizons.",
+      "adequacy_evidence": "Modern AI agents with mapping APIs and planning tools can reliably maintain coherence across these short-to-moderate planning sequences without significant degradation.",
+      "_timestamp": "2026-04-06T04:32:32"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied but well-structured cases (different map formats, road networks, vehicle restrictions, and regional rules), creating moderate diversity without being highly long-tailed.",
+      "adequacy_evidence": "Extensive digital map data, routing logs, navigation systems, and simulation environments provide rich, process-level training signals, making coverage of relevant cases readily achievable.",
+      "_timestamp": "2026-04-06T04:32:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While origin and destination are explicit, effective routing requires interpreting map features alongside context like truck restrictions, road conditions, and safety considerations that are not always fully specified.",
+      "adequacy_evidence": "Modern AI navigation systems with integrated data (maps, regulations, traffic) can reliably infer these constraints and produce appropriate routes with minimal ambiguity remaining.",
+      "_timestamp": "2026-04-06T04:32:32"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Beyond basic map reading, drivers must apply experience about truck-specific constraints (e.g., clearance limits, weight restrictions, local traffic patterns, and safe routing) that are not always explicit in maps.",
+      "adequacy_evidence": "Modern routing systems capture many constraints, but agents still miss or misjudge edge cases like temporary restrictions, nuanced local conditions, or informal best practices known from experience.",
+      "_timestamp": "2026-04-06T04:32:33"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Drivers must track route segments, turns, constraints (e.g., road restrictions, traffic), and update plans as they proceed, but the information volume is structured and manageable with standard navigation aids.",
+      "adequacy_evidence": "Current AI systems with mapping and routing tools reliably manage route information, maintain state, and update paths without significant working memory failures.",
+      "_timestamp": "2026-04-06T04:32:34"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reading and interpreting maps to determine routes is an internal cognitive/navigation task with no direct stakeholder interaction or dependence on performer identity.",
+      "adequacy_evidence": "Since no stakeholders are involved, there is no acceptance barrier; AI route planning is already widely used and indifferent to performer identity.",
+      "_timestamp": "2026-04-06T04:32:34"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining routes from maps is typically a self-contained task using current map data and trip parameters, without needing persistent cross-session context or accumulated history.",
+      "adequacy_evidence": "Since the task does not rely on longitudinal memory, current AI systems already meet its needs without requiring persistent cross-session state.",
+      "_timestamp": "2026-04-06T04:32:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Route selection typically needs to occur within seconds to a minute during trip planning or adjustments, but not at split-second reaction speed.",
+      "adequacy_evidence": "Current AI systems with mapping tools can generate high-quality routes almost instantly, well within the task\u2019s time constraints without degrading performance.",
+      "_timestamp": "2026-04-06T04:32:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI systems from reading and interpreting maps to determine routes; routing software is already widely used in trucking. Licensing requirements apply to operating the vehicle, not to route planning itself.",
+      "_timestamp": "2026-04-06T04:32:35"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Route choices can be cross-checked against maps, GPS systems, and known constraints, but detecting issues like low clearances, weight limits, or truck-restricted roads requires attention and some domain knowledge.",
+      "adequacy_evidence": "Current AI can generate plausible routes but may miss truck-specific constraints or local nuances, so human review using mapping tools is still needed to catch non-obvious but critical errors.",
+      "_timestamp": "2026-04-06T04:32:35"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect route interpretation can lead to serious consequences such as bridge strikes, hazardous road entry, or safety violations, where even rare errors can cause accidents or major disruptions.",
+      "adequacy_evidence": "Modern AI routing systems are generally reliable with map data and constraints, but still occasionally miss edge cases (e.g., low clearances, temporary restrictions), leaving some residual risk even after checks.",
+      "_timestamp": "2026-04-06T04:32:35"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpreting maps involves visual-spatial information such as routes, symbols, and geographic layout, which goes beyond pure text but is not the sole modality since turn-by-turn text directions can substitute in many cases.",
+      "adequacy_evidence": "Current AI systems with mapping APIs and vision capabilities can reliably interpret and generate routes from map data, handling both visual and structured geographic inputs with high accuracy.",
+      "_timestamp": "2026-04-06T04:32:36"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

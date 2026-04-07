@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2072.00",
+  "task_id": 3413,
+  "task_statement": "Review loan agreements to ensure that they are complete and accurate according to policy.",
+  "occupation_title": "Loan Officers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Loan agreements are usually reviewed electronically within loan processing or document management systems, allowing fully remote work. However, some institutions still handle or verify physical paperwork, making a minority of instances non-digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan agreements vary by loan type, jurisdiction, and institutional policy, creating moderate diversity in clauses and compliance checks, though they are still built on fairly standardized document structures.",
+      "adequacy_evidence": "Public and synthetic data can cover many standard agreement patterns and review procedures, but institution-specific policies and proprietary document variations are often inaccessible, leaving some gaps.",
+      "_timestamp": "2026-04-06T04:45:20"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing loan agreements involves applying policy checklists but also interpreting clause intent, spotting subtle inconsistencies, and exercising judgment on edge cases not fully specified in rules.",
+      "adequacy_evidence": "Current agents can follow structured policies and detect many issues, but they show gaps in nuanced contractual interpretation and context-sensitive judgment in non-routine agreements.",
+      "_timestamp": "2026-04-06T04:45:20"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing loan agreements involves multi-step checking across sections (terms, clauses, compliance items), where consistency matters but steps are largely checklist-driven rather than tightly interdependent.",
+      "adequacy_evidence": "AI agents can systematically review long documents with tools and maintain structure, but may show mild degradation over lengthy or complex agreements (e.g., missed clauses or constraint drift).",
+      "_timestamp": "2026-04-06T04:45:21"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan review is guided by formal policies and checklists, but requires interpreting whether clauses meet policy intent and identifying subtle omissions or inconsistencies in context.",
+      "adequacy_evidence": "Current agents can apply explicit rules and flag deviations, but often miss nuanced policy interpretations or edge cases without human clarification and iteration.",
+      "_timestamp": "2026-04-06T04:45:21"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Loan agreements are lengthy, detail-dense documents requiring tracking of multiple clauses, cross-references, and policy criteria simultaneously; missing a single provision can materially affect compliance.",
+      "adequacy_evidence": "Current agents can use retrieval and chunking to manage large documents, but they still exhibit occasional context fragmentation and imperfect integration of dispersed details across sections.",
+      "_timestamp": "2026-04-06T04:45:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing loan agreements is primarily a text-based task involving reading and interpreting written legal and financial language; non-text modalities are not central to competent performance.",
+      "adequacy_evidence": "Current AI agents can reliably process and analyze text documents, including structured PDFs, so there is no meaningful shortfall related to multimodal capabilities for this task.",
+      "_timestamp": "2026-04-06T04:45:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in loan agreements can lead to legal disputes, regulatory violations, and financial losses, and may be difficult or costly to unwind once executed, so residual mistakes must be very rare.",
+      "adequacy_evidence": "Even with review and automated checks, AI systems can miss subtle policy deviations or context-specific clauses, leaving a non-trivial residual risk that remains concerning in high-stakes financial contracts.",
+      "_timestamp": "2026-04-06T04:45:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each loan agreement can be reviewed independently against current policies and checklists; prior cases or long-term client histories are not typically required to assess completeness and accuracy.",
+      "adequacy_evidence": "Current AI systems can retrieve relevant policies and reference materials on demand, and no persistent cross-session memory is needed for competent performance.",
+      "_timestamp": "2026-04-06T04:45:23"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing loan agreements is typically an offline, deliberative task where minutes to hours of analysis time are acceptable and expected for accuracy.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform detailed document analysis without meaningful degradation from speed constraints, as no tight latency requirement forces truncation.",
+      "_timestamp": "2026-04-06T04:45:24"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal, supporting compliance and underwriting decisions; while other staff rely on the output, they do not depend strongly on the individual reviewer\u2019s identity.",
+      "adequacy_evidence": "Financial institutions already use automated systems for document checking, and stakeholders typically accept AI-assisted review as long as outputs meet policy and audit standards.",
+      "_timestamp": "2026-04-06T04:45:24"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Loan agreements involve dense legal and policy-specific clauses where omissions, inconsistencies, or subtle misinterpretations can be hard to detect without expert review and careful cross-checking against policy and regulations.",
+      "adequacy_evidence": "Current AI systems can miss nuanced legal inconsistencies or policy deviations and may produce plausible but incorrect assessments, requiring thorough expert verification of each document to ensure completeness and accuracy.",
+      "_timestamp": "2026-04-06T04:45:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. mortgage lending is governed by the SAFE Act, which requires licensed human loan originators to be responsible for key aspects of the loan process, creating ambiguity about fully autonomous AI handling review tasks. However, there is no explicit prohibition on AI assisting or performing agreement review under human supervision.",
+      "_timestamp": "2026-04-06T04:45:25"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

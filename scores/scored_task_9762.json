@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4181.00",
+  "task_id": 9762,
+  "task_statement": "Trace lost, delayed, or misdirected baggage for customers.",
+  "occupation_title": "Reservation and Transportation Ticket Agents and Travel Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Tracing baggage is typically done through airline or transportation tracking systems and digital communications with other locations, but staff sometimes need to physically check baggage areas or coordinate with on-site handlers."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The core goal (locate and return baggage) is explicit, but handling priorities, customer expectations, and acceptable resolutions (e.g., compensation, rerouting) requires some context-sensitive judgment.",
+      "adequacy_evidence": "Current AI agents can reliably infer intent and follow structured tracing procedures, using available data and customer interaction patterns with minimal ambiguity-related failure.",
+      "_timestamp": "2026-04-06T02:44:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tracing baggage involves a multi-step workflow: gathering details, querying tracking systems, coordinating with multiple parties, and providing updates, where consistency across steps matters but sequences are not extremely long or tightly coupled.",
+      "adequacy_evidence": "Current AI agents can handle structured multi-step workflows with tool use, but may exhibit some goal drift or missed follow-ups over extended interactions, especially when coordination across systems or iterative updates is required.",
+      "_timestamp": "2026-04-06T02:44:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task follows structured procedures and systems (e.g., baggage tracking databases, standard codes), but non-routine cases require experience-based judgment to interpret incomplete records, choose escalation paths, and coordinate across parties.",
+      "adequacy_evidence": "AI agents can execute standard workflows and query systems effectively, but they show gaps in handling messy, ambiguous cases requiring nuanced prioritization, improvisation, or informal coordination across stakeholders.",
+      "_timestamp": "2026-04-06T02:44:06"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cases vary across airlines, routing complexities, international transfers, and irregular operations, but follow broadly similar tracing workflows and system interactions.",
+      "adequacy_evidence": "Operational data and real case logs are largely proprietary, limiting direct coverage, though procedures and many scenarios can be approximated via documentation and synthetic workflows.",
+      "_timestamp": "2026-04-06T02:44:07"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracing lost or delayed baggage often involves ongoing cases that span multiple interactions, requiring access to prior reports, tracking updates, and customer communications.",
+      "adequacy_evidence": "Current systems (e.g., airline baggage tracking databases and CRM tools) already maintain persistent case records that AI agents can reliably access and update across sessions.",
+      "_timestamp": "2026-04-06T02:44:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple pieces of structured information (bag tags, flight segments, routing history, and status updates) across systems, requiring active retrieval and reconciliation within a single case.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably manage and query structured data sources and maintain state within an episode, with minimal risk of losing or misrepresenting relevant information.",
+      "_timestamp": "2026-04-06T02:44:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Tracing lost or delayed baggage primarily relies on text-based systems such as baggage tracking databases, flight records, and customer-provided identifiers (e.g., bag tag numbers). Non-text inputs like images or video are not central to routine task execution.",
+      "adequacy_evidence": "Since the task is fundamentally text-driven, current AI agents can handle the relevant inputs and outputs without meaningful limitations related to multimodal capabilities.",
+      "_timestamp": "2026-04-06T02:44:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers expect updates during an interaction (call, counter, or chat), typically within seconds to a few minutes, but the task allows brief lookup time in tracking systems.",
+      "adequacy_evidence": "Well-integrated AI agents can query baggage systems, follow procedures, and respond within the required timeframe without significant loss of reasoning quality.",
+      "_timestamp": "2026-04-06T02:44:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task directly involves interacting with customers who are often stressed or frustrated, requiring trust, reassurance, and perceived accountability from the agent handling their lost baggage case.",
+      "adequacy_evidence": "While AI chatbots are already used in customer service for baggage tracing, some customers still prefer human agents for empathy and reassurance, especially in high-frustration situations, leading to moderate resistance.",
+      "_timestamp": "2026-04-06T02:44:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in tracing baggage can lead to customer inconvenience, compensation costs, and reputational harm, but are typically reversible and not safety-critical.",
+      "adequacy_evidence": "With access to airline tracking systems and standard verification steps, AI can achieve sufficiently low residual error rates, and remaining mistakes are generally manageable within existing service recovery processes.",
+      "_timestamp": "2026-04-06T02:44:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from performing baggage tracing tasks. While airlines must comply with consumer protection and privacy rules, these do not restrict the use of automated systems for this function.",
+      "_timestamp": "2026-04-06T02:44:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Baggage tracing relies on airline tracking systems, scan histories, and routing logs that allow cross-checking, but verifying correctness can require coordinating across systems and waiting for updated location data.",
+      "adequacy_evidence": "AI can query and summarize tracking data, but may misinterpret incomplete or conflicting records, so human review and follow-up checks are still needed to ensure accuracy.",
+      "_timestamp": "2026-04-06T02:44:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

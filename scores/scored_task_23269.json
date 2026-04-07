@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4031.00",
+  "task_id": 23269,
+  "task_statement": "Record and edit the minutes of meetings and distribute to appropriate officials or staff members.",
+  "occupation_title": "Court, Municipal, and License Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Editing minutes and distributing them to officials is typically done using word processors, email, or document systems. However, clerks often attend meetings in person to record the minutes, which can require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Meeting minutes vary across courts, municipal bodies, and licensing contexts, with differences in formality, legal relevance, and content structure, but follow broadly standardized conventions.",
+      "adequacy_evidence": "Large corpora of meeting transcripts, public records, and example minutes exist, and synthetic data can replicate variations; step-by-step summarization and formatting processes are well captured in current training pipelines.",
+      "_timestamp": "2026-04-06T02:28:51"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Meeting minutes require selecting salient points, decisions, and action items, which are often implicit and depend on organizational norms and context rather than fully explicit rules.",
+      "adequacy_evidence": "Current AI can summarize and format minutes well with prompts or templates but often misses nuanced priorities or implicit decisions, requiring human review and iteration.",
+      "_timestamp": "2026-04-06T02:28:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recording and editing meeting minutes requires tracking multiple discussion points, decisions, and action items over the course of a meeting, with some need for selective compression and organization.",
+      "adequacy_evidence": "Current agents can handle transcription and summarization well, but may lose or misprioritize details in longer or more complex meetings, especially when context windows are strained or compression is imperfect.",
+      "_timestamp": "2026-04-06T02:28:51"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple steps\u2014capturing meeting content, synthesizing accurate minutes, editing for clarity, and distributing\u2014where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or tightly interdependent.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across these moderate workflows, but may exhibit some drift in summarization fidelity or formatting consistency over longer or complex meetings.",
+      "_timestamp": "2026-04-06T02:28:51"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While each meeting\u2019s minutes are largely self-contained, clerks often rely on prior minutes for formatting consistency, tracking ongoing agenda items, and maintaining continuity across meetings.",
+      "adequacy_evidence": "Current AI systems with document storage and retrieval can reliably persist, recall, and reuse prior minutes and templates across sessions, meeting the modest cross-session memory needs of this task.",
+      "_timestamp": "2026-04-06T02:28:52"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Producing accurate minutes requires judgment about what discussions, decisions, and nuances are material, as well as appropriate tone and formatting, which goes beyond strict rules but is not highly specialized intuition.",
+      "adequacy_evidence": "Current AI systems can summarize and format meeting content well but may inconsistently capture subtle contextual cues (e.g., legal sensitivities, implied decisions), leading to moderate gaps in non-routine or high-stakes settings.",
+      "_timestamp": "2026-04-06T02:28:52"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from recording, editing, or distributing meeting minutes. While accuracy and recordkeeping requirements apply, they do not mandate that a human must perform these specific clerical functions.",
+      "_timestamp": "2026-04-06T02:28:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying meeting minutes requires comparing against recordings or attendee recollection to catch omissions, misstatements, or incorrect attributions, which takes some time and attention but not deep technical expertise.",
+      "adequacy_evidence": "Current AI can draft minutes but often misses nuances, speaker intent, or key decisions, so human review against source material is still routinely needed to ensure accuracy.",
+      "_timestamp": "2026-04-06T02:28:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Meeting minutes are typically prepared and circulated after the meeting, with turnaround times ranging from minutes to hours rather than real-time constraints.",
+      "adequacy_evidence": "Current AI systems can generate and edit minutes well within these relaxed timeframes, so no meaningful quality degradation arises from speed limitations.",
+      "_timestamp": "2026-04-06T02:28:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Meeting minutes are distributed to officials and staff who rely on their accuracy and completeness, but the identity of the recorder is not central as long as the record is trustworthy.",
+      "adequacy_evidence": "Stakeholders are generally indifferent to whether minutes are produced by a human or AI if accuracy and formatting standards are met, and such automation is already common in administrative contexts.",
+      "_timestamp": "2026-04-06T02:28:54"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Meeting minutes must accurately reflect decisions and discussions, but errors are typically correctable and rarely lead to severe irreversible consequences.",
+      "adequacy_evidence": "With standard review processes (e.g., human verification), AI-generated minutes can be checked and corrected sufficiently, leaving low residual risk.",
+      "_timestamp": "2026-04-06T02:28:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves listening to spoken discussion or reviewing audio recordings to produce accurate written minutes, so audio-to-text perception is useful though not strictly indispensable.",
+      "adequacy_evidence": "Current AI systems handle speech transcription well in clear conditions but can struggle with overlapping speakers, accents, or noisy meeting environments, requiring human correction.",
+      "_timestamp": "2026-04-06T02:28:55"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3031.01",
+  "task_id": 8093,
+  "task_statement": "Relay buy or sell orders to securities exchanges or to firm trading departments.",
+  "occupation_title": "Securities, Commodities, and Financial Services Sales Agents",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Relaying buy or sell orders is typically done through electronic trading platforms, messaging systems, or phone/online communication with exchanges or trading desks, all of which can be performed entirely via computer and internet without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying buy/sell orders is a highly standardized, procedural task with limited variation in structure (order type, quantity, price, routing destination).",
+      "adequacy_evidence": "There is abundant structured data, protocols, and simulation environments (e.g., trading systems, FIX protocol logs) that fully capture the task process, making coverage complete and easily learnable.",
+      "_timestamp": "2026-04-05T23:44:30"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying buy or sell orders is a highly procedural task governed by explicit instructions, standardized order types, and compliance rules, with little need for experiential judgment beyond basic clarification.",
+      "adequacy_evidence": "AI agents can reliably follow structured protocols, validate order fields, and transmit instructions accurately, with no meaningful gap in tacit judgment once procedures are specified.",
+      "_timestamp": "2026-04-05T23:44:31"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying buy or sell orders is typically a short, discrete action involving receiving order details and transmitting them accurately, with minimal multi-step interdependence.",
+      "adequacy_evidence": "AI agents can reliably handle short, well-defined transactional sequences without degradation, maintaining consistency across the limited steps required.",
+      "_timestamp": "2026-04-05T23:44:31"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying orders involves transmitting clearly specified parameters (e.g., ticker, quantity, price, order type) with little need for interpretation beyond accurate communication.",
+      "adequacy_evidence": "Current AI agents can reliably capture and transmit structured order details with minimal ambiguity, as the task is procedural and well-defined.",
+      "_timestamp": "2026-04-05T23:44:32"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying buy or sell orders is typically a transactional, instance-specific task where each order is executed based on current instructions without needing historical context.",
+      "adequacy_evidence": "Current AI systems can easily handle stateless transaction relaying, and any minimal record-keeping needed (e.g., logs) is well within existing memory infrastructure.",
+      "_timestamp": "2026-04-05T23:44:32"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Relaying orders requires tracking several structured fields (e.g., security identifier, quantity, price, order type, timing) and ensuring accurate transmission, but the information is limited and well-defined within a single interaction.",
+      "adequacy_evidence": "Current AI agents handle structured, short-horizon information reliably, especially with tool support and form-like data, with minimal risk of losing or mismanaging within-episode context.",
+      "_timestamp": "2026-04-05T23:44:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying buy or sell orders is primarily a text or structured-data communication task (e.g., order tickets, electronic systems), with no inherent reliance on images, audio, or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based or structured order transmission workflows, and any incidental audio (e.g., phone orders) can be reliably transcribed with existing speech-to-text systems.",
+      "_timestamp": "2026-04-05T23:44:33"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Order relay in financial markets is highly time-sensitive, often requiring execution within seconds to avoid price slippage or missed opportunities.",
+      "adequacy_evidence": "This task involves straightforward transmission of structured information, which AI systems can perform nearly instantaneously without needing extended reasoning, fitting well within tight latency constraints.",
+      "_timestamp": "2026-04-05T23:44:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Order relay is highly structured with standardized fields (ticker, quantity, price, order type) and immediate electronic confirmations, making discrepancies quickly detectable via system checks and trade acknowledgments.",
+      "adequacy_evidence": "Well-integrated AI systems can rely on validation rules, confirmations, and reconciliation logs, so any errors are quickly surfaced and require minimal additional human verification.",
+      "_timestamp": "2026-04-05T23:44:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "SEC and FINRA rules require broker-dealers to supervise order handling and ensure compliance, typically through registered human personnel, but they do not prohibit automated systems from routing orders. AI can perform the task within a regulated firm under supervision, creating partial but not absolute constraints.",
+      "_timestamp": "2026-04-05T23:44:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying orders is a procedural, system-facing task where outputs are consumed by exchanges or internal trading systems without regard to the performer\u2019s identity.",
+      "adequacy_evidence": "Automated order routing and algorithmic execution are already standard in financial markets, indicating no stakeholder resistance to AI performing this function.",
+      "_timestamp": "2026-04-05T23:44:35"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Incorrectly relayed orders can trigger unintended trades, causing immediate financial loss, regulatory violations, or client harm; even rare errors can have significant consequences.",
+      "adequacy_evidence": "Order transmission is highly structured and typically includes confirmations, validation checks, and reconciliation processes, which can reliably catch or prevent most AI errors, keeping residual risk acceptable.",
+      "_timestamp": "2026-04-05T23:44:35"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.00",
+  "task_id": 21350,
+  "task_statement": "Monitor inventory levels of products or materials in warehouses.",
+  "occupation_title": "Transportation, Storage, and Distribution Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Inventory levels are typically monitored through warehouse management systems, databases, or reports that can be accessed remotely. However, some instances involve physical checks or on-site verification of stock levels in the warehouse."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inventory monitoring spans different product types, demand patterns, warehouse systems, and exception cases (e.g., spoilage, stockouts), but follows relatively structured and well-understood processes.",
+      "adequacy_evidence": "Extensive data exists in ERP/WMS logs, supply chain datasets, and simulations, with clear procedural signals (e.g., reorder logic, auditing workflows), making coverage readily attainable with current training pipelines.",
+      "_timestamp": "2026-04-05T23:22:25"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring inventory typically follows explicit rules (reorder points, safety stock thresholds), but experienced managers apply judgment to interpret anomalies, demand shifts, or supply disruptions beyond static policies.",
+      "adequacy_evidence": "AI agents can reliably track levels and flag deviations, but may lack nuanced calibration in atypical situations (e.g., sudden market shifts or supplier instability) where human experience guides better adjustments.",
+      "_timestamp": "2026-04-05T23:22:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring inventory requires interpreting context such as reorder thresholds, demand variability, and safety stock policies, which are not always fully specified in a single instruction.",
+      "adequacy_evidence": "Current AI systems integrated with inventory rules, historical data, and ERP systems can reliably infer and apply these parameters with minimal ambiguity, handling typical context without significant difficulty.",
+      "_timestamp": "2026-04-05T23:22:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring inventory involves tracking quantities, SKUs, and locations across systems, requiring aggregation and occasional reconciliation of moderately sized, structured data within a session.",
+      "adequacy_evidence": "LLM agents with database/query tools can reliably retrieve, filter, and summarize large inventory datasets, avoiding meaningful context loss within a single monitoring episode.",
+      "_timestamp": "2026-04-05T23:22:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring inventory involves ongoing data collection, reconciliation, and alerting across systems, requiring consistency over repeated but loosely coupled steps rather than long tightly interdependent sequences.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute continuous monitoring loops, integrate data streams, and trigger alerts without significant degradation over time.",
+      "_timestamp": "2026-04-05T23:22:26"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inventory monitoring often involves near-real-time or frequent updates (e.g., dashboards, alerts), but typically tolerates seconds-to-minute latency rather than split-second response.",
+      "adequacy_evidence": "Current AI systems can process inventory data streams, trigger alerts, and update records well within these time bounds without needing deep or slow reasoning.",
+      "_timestamp": "2026-04-05T23:22:26"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Inventory monitoring often relies on digital records and databases but can involve multimodal inputs such as barcode scans, sensor data, and occasional visual inspection of stock or warehouse conditions.",
+      "adequacy_evidence": "Current AI systems can process structured inventory data and simple sensor inputs well, but remain less reliable in handling complex real-time visual monitoring or integrating diverse physical signals in dynamic warehouse environments.",
+      "_timestamp": "2026-04-05T23:22:27"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring inventory relies on ongoing records of stock levels, turnover rates, and past trends, but this information is typically structured and stored in inventory management systems rather than requiring rich episodic memory.",
+      "adequacy_evidence": "Current AI agents can reliably access and use persistent data from databases and enterprise systems, so maintaining and retrieving cross-session inventory information is well within existing capabilities.",
+      "_timestamp": "2026-04-05T23:22:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring inventory levels is primarily an internal, data-driven task with outputs consumed by systems or staff regardless of who or what performs it.",
+      "adequacy_evidence": "Inventory monitoring is already widely automated, and stakeholders are indifferent to whether an AI or human performs it as long as accuracy is maintained.",
+      "_timestamp": "2026-04-05T23:22:28"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inventory monitoring errors can lead to stockouts, overstocking, or logistical inefficiencies, which have meaningful financial and operational consequences but are typically reversible and not catastrophic.",
+      "adequacy_evidence": "With barcode systems, IoT sensors, and reconciliation checks, AI-supported monitoring can reduce and detect most errors; remaining discrepancies are usually caught through routine audits, making residual risk acceptable.",
+      "_timestamp": "2026-04-05T23:22:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from monitoring inventory levels in warehouses. While certain sectors (e.g., pharmaceuticals, food) impose recordkeeping and compliance requirements, they do not restrict the use of AI tools for inventory monitoring as long as standards are met.",
+      "_timestamp": "2026-04-05T23:22:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Inventory levels can be verified through system records, cycle counts, and physical audits, but discrepancies may require investigation and are not always immediately obvious.",
+      "adequacy_evidence": "AI-generated monitoring would still need reconciliation against warehouse management systems and periodic physical checks, as errors in data integration or inference are plausible and require routine validation.",
+      "_timestamp": "2026-04-05T23:22:30"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

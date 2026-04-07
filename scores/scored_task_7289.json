@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2021.02",
+  "task_id": 7289,
+  "task_statement": "Search public records for transactions such as sales, leases, and assessments.",
+  "occupation_title": "Appraisers, Real Estate",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Many public records for sales, leases, and assessments are accessible through online government databases and digital archives, allowing remote searches. However, some jurisdictions still require in-person access to courthouse or municipal records that are not fully digitized."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple jurisdictions, record systems, and document formats (e.g., county deeds, tax assessments, leases), creating moderate variation in how searches are conducted and interpreted.",
+      "adequacy_evidence": "Extensive public records, government databases, and documented workflows are \u0909\u092a\u0932\u092c\u094d\u0927 online, and agents can be trained or scaffolded with real examples and tools to cover the relevant variation.",
+      "_timestamp": "2026-04-06T00:52:18"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires choosing relevant jurisdictions, timeframes, property types, and transaction categories, which are often implied by the appraisal context rather than fully specified.",
+      "adequacy_evidence": "Current agents can infer basic search parameters and retrieve records, but they often miss context-specific nuances (e.g., comparable property criteria or local record idiosyncrasies) without human guidance.",
+      "_timestamp": "2026-04-06T00:52:19"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While much of the task follows documented procedures (querying registries, extracting transaction data), experienced appraisers use some judgment to navigate inconsistent record formats, local idiosyncrasies, and ambiguous entries.",
+      "adequacy_evidence": "Current AI agents with retrieval tools and structured data handling can reliably follow search procedures and handle most record variability, with minimal reliance on human-like experiential calibration.",
+      "_timestamp": "2026-04-06T00:52:19"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step searches across public record systems, including querying, filtering, and compiling results, but steps are loosely coupled and can often be executed independently.",
+      "adequacy_evidence": "Well-scaffolded agents can reliably perform iterative search, retrieval, and extraction across multiple sources without significant degradation in consistency over the sequence length.",
+      "_timestamp": "2026-04-06T00:52:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Searching public records for real estate transactions primarily involves querying and interpreting text-based databases, documents, and registries such as deeds and assessment rolls.",
+      "adequacy_evidence": "Current AI agents can reliably handle text retrieval, parsing, and even OCR of scanned records, so there is no meaningful multimodal shortfall for this task.",
+      "_timestamp": "2026-04-06T00:52:19"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves pulling and tracking information from multiple public record sources (e.g., deeds, tax assessments, leases), requiring some organization and comparison within a single session but not extreme volume or complexity.",
+      "adequacy_evidence": "Modern LLM agents with retrieval tools can reliably gather, store, and reference these records within a session, with minimal loss of context or failure in managing the information load.",
+      "_timestamp": "2026-04-06T00:52:20"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Searching public records for transactions is typically a self-contained activity driven by the current query (property, owner, or area) without needing accumulated cross-session context.",
+      "adequacy_evidence": "Since the task does not rely on persistent longitudinal state, current AI systems' memory capabilities are sufficient and no cross-session retention gap is relevant.",
+      "_timestamp": "2026-04-06T00:52:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Searching public records for real estate transactions is typically a research task without strict real-time constraints; minutes or longer are acceptable in professional workflows.",
+      "adequacy_evidence": "Current AI agents can perform structured searches and retrieval within acceptable timeframes without needing to sacrifice reasoning quality, as latency is not a binding constraint.",
+      "_timestamp": "2026-04-06T00:52:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from searching public records such as property transactions. This activity involves accessing publicly available information and does not require a licensed human appraiser.",
+      "_timestamp": "2026-04-06T00:52:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Public records are structured and auditable (e.g., deeds, tax rolls), so errors can usually be caught by cross-checking sources, but this requires time, familiarity with local systems, and attention to completeness.",
+      "adequacy_evidence": "AI can retrieve and summarize records but may miss filings, misinterpret entries, or pull incomplete data, so human review and cross-verification across databases remains necessary.",
+      "_timestamp": "2026-04-06T00:52:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in identifying or retrieving transaction records can affect valuation accuracy, but they are typically detectable and correctable during appraisal review and cross-checking with multiple sources.",
+      "adequacy_evidence": "With standard verification steps (e.g., cross-referencing databases, document checks), AI-generated results can be validated effectively, leaving minimal residual risk that is acceptable for this task.",
+      "_timestamp": "2026-04-06T00:52:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Searching public records is an impersonal, back-office research task with no need for stakeholder interaction or reliance on performer identity.",
+      "adequacy_evidence": "Data retrieval from public records is already widely automated, and stakeholders are indifferent to whether a human or AI performs the search.",
+      "_timestamp": "2026-04-06T00:52:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

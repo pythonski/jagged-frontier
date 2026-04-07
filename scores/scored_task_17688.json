@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5011.01",
+  "task_id": 17688,
+  "task_statement": "Consolidate loads with a common destination to reduce costs to individual shippers.",
+  "occupation_title": "Freight Forwarders",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Consolidating loads is typically done by analyzing shipment details and coordinating bookings through logistics software, email, and phone. Physical handling of cargo is performed by warehouse or terminal staff, though the forwarder may occasionally coordinate on-site."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Load consolidation spans varied shipment sizes, timing constraints, routing options, and contractual conditions, but follows recurring patterns within logistics optimization problems.",
+      "adequacy_evidence": "Public logistics research and synthetic optimization environments provide partial coverage, but detailed real-world shipment data and decision rationales are often proprietary and unevenly represented.",
+      "_timestamp": "2026-04-06T02:23:31"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the objective of cost reduction via consolidation is clear, key criteria such as timing tolerances, cargo compatibility, service levels, and client-specific preferences are often implicit and context-dependent.",
+      "adequacy_evidence": "Current AI agents can optimize routing and grouping given explicit constraints, but often miss or misinterpret tacit business rules and evolving priorities without human clarification.",
+      "_timestamp": "2026-04-06T02:23:32"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Load consolidation involves tradeoffs around timing, compatibility, routing efficiency, and shipper preferences that are often guided by experience and case-based judgment rather than fixed rules alone.",
+      "adequacy_evidence": "Current agents can optimize consolidation using constraints and historical data, but they show gaps in nuanced judgment around exceptions, risk tolerance, and relationship-specific preferences.",
+      "_timestamp": "2026-04-06T02:23:32"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves gathering shipment data, identifying compatible loads, and coordinating consolidation plans, requiring multiple interdependent steps but not extremely long or tightly coupled sequences.",
+      "adequacy_evidence": "AI agents can generally manage multi-step matching and planning workflows, but may exhibit some constraint drift or inconsistency when coordinating multiple shipments and conditions over several steps.",
+      "_timestamp": "2026-04-06T02:23:33"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple shipments\u2019 destinations, volumes, timing, and constraints within a planning episode, but the information is typically structured and bounded rather than extremely large or rapidly changing.",
+      "adequacy_evidence": "Current agents can manage structured shipment data with tools, but may lose or misprioritize constraints during consolidation decisions, especially as the number of loads and constraints grows.",
+      "_timestamp": "2026-04-06T02:23:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Load consolidation decisions are typically made within operational planning windows (minutes to hours), not requiring instant responses, but still benefiting from reasonably prompt turnaround to coordinate shipments.",
+      "adequacy_evidence": "Current AI systems with optimization tools can generate high-quality consolidation plans well within these timeframes, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T02:23:34"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Load consolidation relies primarily on structured shipment data (destinations, weights, schedules, rates) and planning logic, which are fundamentally text/tabular rather than visual or audio-based.",
+      "adequacy_evidence": "Current AI agents handle text and structured logistics data well, and no significant multimodal perception or generation is required for this task.",
+      "_timestamp": "2026-04-06T02:23:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating among multiple shippers and carriers, whose cooperation and agreement are needed to consolidate loads effectively, so stakeholder interaction matters.",
+      "adequacy_evidence": "While stakeholders may accept AI-assisted logistics optimization, some clients and partners still prefer human oversight for negotiation and trust, leading to moderate resistance rather than outright rejection.",
+      "_timestamp": "2026-04-06T02:23:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Effective load consolidation benefits from awareness of recurring shipping patterns, client preferences, and prior routing decisions, but most decisions rely on current shipment data and near-term scheduling rather than deep longitudinal histories.",
+      "adequacy_evidence": "Modern AI systems integrated with logistics databases or TMS platforms can reliably store and retrieve shipment histories and client preferences, so cross-session memory needs are well within current capabilities.",
+      "_timestamp": "2026-04-06T02:23:35"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in load consolidation mainly lead to higher costs, delays, or suboptimal routing, which are commercially significant but typically reversible and not safety-critical.",
+      "adequacy_evidence": "AI-generated consolidation plans can be checked against constraints (capacity, destination, timing) and cost metrics, making residual errors after QA generally detectable and acceptable.",
+      "_timestamp": "2026-04-06T02:23:35"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying load consolidation requires checking routing constraints, capacity limits, delivery windows, and cost calculations; while many errors can be detected with transportation management systems, identifying suboptimal or infeasible groupings still takes domain expertise and time.",
+      "adequacy_evidence": "Current AI can propose plausible consolidations but often makes constraint or optimization errors, so human review using standard logistics tools is still needed to confirm feasibility and cost savings.",
+      "_timestamp": "2026-04-06T02:23:36"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from performing load consolidation or routing optimization tasks. While freight forwarders as entities may need licensing, these rules govern the business/operator, not the use of AI tools for planning or decision support.",
+      "_timestamp": "2026-04-06T02:23:36"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

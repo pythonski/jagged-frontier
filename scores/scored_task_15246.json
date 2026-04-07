@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2071.00",
+  "task_id": 15246,
+  "task_statement": "Retrieve patient medical records for physicians, technicians, or other medical personnel.",
+  "occupation_title": "Medical Records and Health Information Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Most modern healthcare facilities store records in electronic health record (EHR) systems, allowing staff to retrieve and send records digitally. However, some settings still require locating and delivering physical paper charts or files on-site."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple EHR systems, access protocols, and patient scenarios, but follows relatively standardized workflows for querying and retrieving records.",
+      "adequacy_evidence": "While procedural knowledge is well-documented and can be simulated, real-world data and system interactions are often restricted by privacy laws and proprietary systems, leaving some gaps in fully representative training coverage.",
+      "_timestamp": "2026-04-05T22:20:30"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is largely governed by explicit procedures (identity verification, authorization checks, system queries), with only occasional need for judgment in ambiguous requests or record matching.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured retrieval protocols and apply codified privacy rules, with minimal reliance on experiential calibration beyond what can be explicitly encoded.",
+      "_timestamp": "2026-04-05T22:20:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Retrieving patient records is typically a self-contained query against an existing electronic health record system, not requiring the agent to maintain its own cross-session memory.",
+      "adequacy_evidence": "Current systems already externalize longitudinal patient data in databases, so AI agents do not need persistent internal memory to perform retrieval accurately.",
+      "_timestamp": "2026-04-05T22:20:31"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence of steps (identify correct patient, query records system, retrieve and deliver information) where consistency matters but the sequence is not long or deeply interdependent.",
+      "adequacy_evidence": "Frontier AI agents with tool integration can reliably execute short, structured workflows like database retrieval without noticeable degradation across steps.",
+      "_timestamp": "2026-04-05T22:20:31"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves identifying the correct patient and retrieving records from one or more systems, requiring some coordination of identifiers and sources but not large or complex information tracking.",
+      "adequacy_evidence": "Current AI agents with system integration can reliably manage identifiers, queries, and retrieved data within a single session without significant context loss.",
+      "_timestamp": "2026-04-05T22:20:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Medical records can include scanned documents, handwritten notes, and imaging reports, requiring some ability to process non-text formats alongside structured text data.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing handle routine medical record formats reliably, with multimodal demands generally well within existing capabilities.",
+      "_timestamp": "2026-04-05T22:20:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Requests for medical records often include implicit context such as scope, timeframe, and authorization, requiring interpretation of clinical, legal, and privacy constraints beyond a literal query.",
+      "adequacy_evidence": "Well-scaffolded AI systems integrated with EHRs and access rules can reliably infer and apply these constraints from structured requests and policies, with minimal ambiguity remaining.",
+      "_timestamp": "2026-04-05T22:20:32"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Medical personnel typically expect records within seconds to a minute to support ongoing care, but the task does not require split-second real-time response.",
+      "adequacy_evidence": "Well-integrated AI systems can retrieve and surface records quickly using database queries and indexing, with no need for slow extended reasoning.",
+      "_timestamp": "2026-04-05T22:20:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Correctness can be verified by checking patient identifiers, timestamps, and requested record scope against the medical record system, but this requires attention to detail and familiarity with health information systems.",
+      "adequacy_evidence": "AI systems may mis-handle patient matching or retrieval criteria, so staff would still need to review outputs for accuracy and completeness, though errors are usually detectable with routine checks.",
+      "_timestamp": "2026-04-05T22:20:33"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws prohibiting AI systems from retrieving patient medical records; such tasks can be performed by compliant software under HIPAA and related regulations. The constraints focus on privacy, security, and authorized access, not on requiring a human to perform the retrieval.",
+      "_timestamp": "2026-04-05T22:20:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task serves internal stakeholders (physicians, technicians) who rely on timely and accurate record retrieval, but the performer\u2019s identity is not central as long as access is secure and correct.",
+      "adequacy_evidence": "Healthcare staff already rely on electronic health record systems and automated retrieval tools, so an AI agent performing this function would generally be accepted if it meets privacy and reliability standards.",
+      "_timestamp": "2026-04-05T22:20:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Retrieving incorrect or incomplete patient records can lead to misdiagnosis, treatment errors, or privacy violations, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "While identity verification protocols and audit trails can catch many errors, AI systems may still occasionally mis-associate records or mishandle edge cases, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-05T22:20:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

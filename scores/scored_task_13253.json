@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-2021.00",
+  "task_id": 13253,
+  "task_statement": "Interrupt busy lines if an emergency warrants.",
+  "occupation_title": "Telephone Operators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Interrupting a busy line is performed through a telecommunications switching interface or operator console, which can be accessed via computer-based systems without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of scenarios involving different types of emergencies, priority rules, and organizational protocols, but these are relatively well-defined and procedurally structured.",
+      "adequacy_evidence": "Training data such as call center protocols, emergency handling guidelines, and recorded operator interactions are widely available, and synthetic scenarios can cover edge cases, providing sufficient representative coverage.",
+      "_timestamp": "2026-04-06T04:49:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is a short, discrete action: recognizing an emergency condition and interrupting a line, with minimal multi-step dependency or extended sequencing.",
+      "adequacy_evidence": "AI systems can reliably execute such short, well-defined sequences without degradation, especially with telephony system integration and clear trigger conditions.",
+      "_timestamp": "2026-04-06T04:49:05"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining whether an interruption is warranted requires situational judgment about what qualifies as an emergency, often based on caller cues and context beyond strict rules.",
+      "adequacy_evidence": "Agents can follow defined emergency criteria and handle common cases, but may lack reliable calibration for ambiguous or borderline situations requiring nuanced human judgment.",
+      "_timestamp": "2026-04-06T04:49:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining whether an \"emergency warrants\" interruption depends on context, caller claims, and organizational policies, requiring situational judgment beyond a literal rule.",
+      "adequacy_evidence": "AI agents can apply predefined emergency criteria and escalate based on cues, but may misinterpret ambiguous or deceptive situations without human calibration and iterative clarification.",
+      "_timestamp": "2026-04-06T04:49:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The decision to interrupt a busy line is based on the immediacy and severity of the current call, not on accumulated history or prior interactions.",
+      "adequacy_evidence": "Since the task is self-contained and real-time, current AI systems do not require cross-session memory to perform it effectively.",
+      "_timestamp": "2026-04-06T04:49:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interrupting a busy line during an emergency requires near-instant recognition and action, often within seconds, as delays could have serious consequences.",
+      "adequacy_evidence": "AI systems can process and act quickly, but real-time judgment under ambiguous emergency cues and integration with live telephony systems can introduce slight delays or require simplified decision rules, modestly affecting performance.",
+      "_timestamp": "2026-04-06T04:49:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on real-time audio perception of phone conversations to detect urgency and decide whether to interrupt, which cannot be reduced to text alone without loss of timing and prosodic cues.",
+      "adequacy_evidence": "Current AI systems handle speech recognition and basic audio understanding well, but may miss nuanced urgency signals, overlapping speech, or contextual cues in fast-paced live calls.",
+      "_timestamp": "2026-04-06T04:49:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The operator must track a small set of active call states and the urgency of an incoming request to decide whether interruption is warranted, but the information volume is limited and short-lived.",
+      "adequacy_evidence": "Current AI agents can reliably maintain and update this small within-episode state (call status, priority signals) without meaningful loss or drift.",
+      "_timestamp": "2026-04-06T04:49:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Whether a line was interrupted appropriately is immediately observable through call context, logs, and user feedback; mistakes (unwarranted interruptions or missed emergencies) become apparent in real time or shortly after.",
+      "adequacy_evidence": "AI systems may misjudge what qualifies as an emergency, requiring human oversight or post-action review, but errors are typically easy to detect quickly through monitoring and complaints.",
+      "_timestamp": "2026-04-06T04:49:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations requiring a human to perform call interruption in emergencies; telecommunications systems already implement automated priority and override features. No licensing or legal mandate restricts this task to humans.",
+      "_timestamp": "2026-04-06T04:49:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task directly intervenes in live human communications during emergencies, requiring callers to accept the operator\u2019s authority and legitimacy to interrupt ongoing conversations.",
+      "adequacy_evidence": "While automated systems already perform priority overrides (e.g., emergency alerts), some users may resist or question an AI interrupting calls, especially if perceived as less authoritative or trustworthy than a human operator.",
+      "_timestamp": "2026-04-06T04:49:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Failing to interrupt for a true emergency or interrupting incorrectly can delay urgent response or disrupt critical communications, leading to severe consequences; very low residual error tolerance is required.",
+      "adequacy_evidence": "Even with monitoring, AI may misclassify urgency or context in real time, and rare errors (missed or false interruptions) carry high stakes, leaving unacceptable residual risk.",
+      "_timestamp": "2026-04-06T04:49:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

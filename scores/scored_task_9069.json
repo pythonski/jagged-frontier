@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2021.00",
+  "task_id": 9069,
+  "task_statement": "Gather data from sources such as surface or upper air stations, satellites, weather bureaus, or radar for use in meteorological reports or forecasts.",
+  "occupation_title": "Atmospheric and Space Scientists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Meteorological data from satellites, radar, and weather bureaus is typically accessed through digital databases and networked systems on computers, but some instances involve physically operating or collecting data from instruments at observation stations."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple data sources (satellites, radar, weather stations) with differing formats and conditions, but follows standardized data collection protocols within meteorology.",
+      "adequacy_evidence": "Extensive public datasets, APIs, and documented workflows exist for all major data sources, and synthetic or historical data can readily cover edge cases, leaving no major gaps for training.",
+      "_timestamp": "2026-04-06T02:46:12"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of data gathering follows standardized procedures (accessing stations, satellites, radar feeds), practitioners still apply experience-based judgment to assess data reliability, resolve discrepancies, and select appropriate sources under varying conditions.",
+      "adequacy_evidence": "Current AI agents can automate retrieval and basic quality checks, but they still show gaps in nuanced calibration when handling anomalous readings, conflicting sources, or context-specific data trustworthiness.",
+      "_timestamp": "2026-04-06T02:46:12"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a series of steps such as identifying sources, retrieving data from multiple systems, and organizing it for use, requiring moderate sequential coordination but not deeply interdependent chains.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute multi-step data retrieval and aggregation workflows with minimal degradation, as these sequences are routine and well-supported by existing tools and automation patterns.",
+      "_timestamp": "2026-04-06T02:46:14"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires selecting relevant data sources, variables, timeframes, and quality filters based on the intended forecast or report, which are often implicit and context-dependent rather than fully specified.",
+      "adequacy_evidence": "Current agents can infer general data needs and retrieve appropriate datasets, but they often miss nuanced contextual choices (e.g., prioritizing certain instruments or handling edge cases), requiring human guidance to fully align with intent.",
+      "_timestamp": "2026-04-06T02:46:14"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data gathering for meteorological reports is typically instance-specific, focused on current observations from established sources rather than requiring accumulated cross-session context.",
+      "adequacy_evidence": "Current AI systems can easily persist source lists or retrieval configurations if needed, and the task does not depend on deeper longitudinal memory beyond such simple persistence.",
+      "_timestamp": "2026-04-06T02:46:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating data from multiple heterogeneous sources (stations, satellites, radar), requiring some coordination and organization of inputs but not extreme within-episode complexity.",
+      "adequacy_evidence": "Current AI agents with tool use and structured data pipelines can reliably retrieve, store, and organize multi-source data within a session without significant loss or drift.",
+      "_timestamp": "2026-04-06T02:46:14"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Data collection for meteorological use can be time-sensitive, especially in forecasting contexts, but typically allows seconds to minutes and is often handled via continuous feeds rather than strict real-time manual action.",
+      "adequacy_evidence": "AI agents can retrieve and aggregate data from APIs, databases, and streams \u0628\u0633\u0631\u0639\u0629 with negligible reasoning overhead, meeting latency needs without degrading quality.",
+      "_timestamp": "2026-04-06T02:46:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Data gathering can be checked via metadata validation, range checks, and cross-source consistency, but subtle issues (e.g., calibration errors, incorrect station selection, timing mismatches) require domain expertise to detect.",
+      "adequacy_evidence": "AI systems can retrieve and structure data but still make non-obvious mistakes in source selection, units, or metadata, so routine expert verification and automated checks remain necessary.",
+      "_timestamp": "2026-04-06T02:46:15"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is a backend data collection activity with no direct interaction with external stakeholders; outputs are used internally for further analysis or reporting.",
+      "adequacy_evidence": "Since there are no stakeholders engaged with the performer in this task, acceptance of AI versus human performance is irrelevant.",
+      "_timestamp": "2026-04-06T02:46:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit AI systems from collecting meteorological data from stations, satellites, or public weather sources. Any access controls (e.g., API terms or data use agreements) apply equally to humans and software, not specifically restricting AI use.",
+      "_timestamp": "2026-04-06T02:46:16"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in gathered meteorological data can degrade forecast quality and downstream analyses, but individual data issues are often mitigated by redundancy across sources and do not usually cause catastrophic outcomes on their own.",
+      "adequacy_evidence": "AI systems can reliably retrieve, cross-check, and validate structured weather data via APIs and standardized feeds, and remaining errors after normal validation are typically within acceptable tolerance.",
+      "_timestamp": "2026-04-06T02:46:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves accessing and sometimes interpreting non-text data such as radar imagery, satellite images, and spatial weather maps, though much of it can be converted into structured or textual data feeds.",
+      "adequacy_evidence": "Current agents can ingest and analyze standard meteorological imagery and structured feeds, but may struggle with nuanced interpretation of complex or noisy visual data (e.g., subtle atmospheric patterns) without specialized models or human oversight.",
+      "_timestamp": "2026-04-06T02:46:17"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

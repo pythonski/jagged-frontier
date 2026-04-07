@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4061.00",
+  "task_id": 12956,
+  "task_statement": "Verify the accuracy and validity of data entered in databases, correcting any errors.",
+  "occupation_title": "Social Science Research Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Data verification in research databases is typically done on a computer using database or spreadsheet software, but in some studies assistants must compare entries against paper surveys, consent forms, or lab notes, requiring occasional physical reference materials."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing and correcting many records in sequence, requiring consistent application of validation rules across entries, but individual checks are largely independent rather than tightly interdependent.",
+      "adequacy_evidence": "Frontier AI agents can maintain consistent validation logic across long batches with minimal degradation, especially with structured workflows and tool support, so sequence length does not significantly impair performance.",
+      "_timestamp": "2026-04-05T21:09:11"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderately diverse data types (survey data, coded variables, administrative records) and error modes, but follows recurring validation patterns like range checks, consistency checks, and cross-referencing.",
+      "adequacy_evidence": "Extensive public and synthetic datasets, data cleaning benchmarks, and documented validation workflows provide strong coverage of error detection and correction processes, making representative training signal readily obtainable.",
+      "_timestamp": "2026-04-05T21:09:11"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data verification for research databases is typically a batch or offline task with flexible deadlines, allowing minutes to hours for careful checking rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can perform validation, cross-checking, and error detection well within these relaxed time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T21:09:11"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Most data verification follows explicit rules (range checks, consistency, codebooks), but some cases require experience-based judgment about plausibility, outliers, or ambiguous entries in social science datasets.",
+      "adequacy_evidence": "Well-scaffolded AI agents can apply validation rules, cross-reference sources, and flag anomalies effectively; remaining tacit judgment is limited and can usually be approximated with heuristics and learned patterns.",
+      "_timestamp": "2026-04-05T21:09:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves comparing database entries against source documents or consistency rules across multiple fields, requiring active retrieval and tracking of moderate amounts of structured information within a session.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., database querying, structured validation scripts) can reliably manage and cross-check this level of information without significant loss or drift.",
+      "_timestamp": "2026-04-05T21:09:12"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many validation criteria are explicit (e.g., codebooks, range checks, consistency rules), determining 'validity' often requires context-sensitive judgment about plausible values, coding conventions, or study-specific norms.",
+      "adequacy_evidence": "Current agents can apply explicit rules and detect inconsistencies, but they often miss context-dependent issues (e.g., subtle miscoding or implausible but technically valid entries) without iterative human guidance.",
+      "_timestamp": "2026-04-05T21:09:12"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task sometimes relies on persistent knowledge such as coding conventions, prior corrections, or project-specific validation rules, but most data checks are instance-level and do not require deep longitudinal state.",
+      "adequacy_evidence": "Current AI systems with standard memory tools (databases, retrieval, persistent notes) can reliably store and reuse validation rules and prior patterns, with minimal breakdowns in cross-session recall.",
+      "_timestamp": "2026-04-05T21:09:12"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves checking and correcting textual or numerical entries in databases, which is fundamentally text-based; any non-text inputs (e.g., scanned forms) are peripheral rather than central.",
+      "adequacy_evidence": "Current AI systems handle text-based verification well, and when occasional non-text inputs arise (e.g., OCR of documents), existing tools are generally sufficient for typical cases.",
+      "_timestamp": "2026-04-05T21:09:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Data accuracy matters for research validity and downstream analysis, but most datasets allow for some error detection later and errors are rarely irreversible or safety-critical.",
+      "adequacy_evidence": "With standard validation checks, cross-referencing, and human oversight, AI systems can reduce errors to a level where remaining risk is generally acceptable for typical research workflows.",
+      "_timestamp": "2026-04-05T21:09:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily internal quality control on database entries, with no direct interaction with external stakeholders and little dependence on performer identity.",
+      "adequacy_evidence": "Organizations already accept automated scripts and tools for data validation, and stakeholders are generally indifferent to whether a human or AI performs this function.",
+      "_timestamp": "2026-04-05T21:09:14"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations in the U.S. that prohibit AI systems from verifying and correcting database entries. While data privacy and security laws (e.g., HIPAA, FERPA) may govern how data is handled, they do not restrict the use of AI for this task as long as compliance is maintained.",
+      "_timestamp": "2026-04-05T21:09:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many data errors can be detected through structured checks (range checks, consistency rules, cross-referencing sources), but some require domain knowledge or careful comparison to original materials.",
+      "adequacy_evidence": "AI can automate many validation routines and flag inconsistencies, but still produces occasional misinterpretations or missed edge cases, requiring human review to ensure accuracy.",
+      "_timestamp": "2026-04-05T21:09:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

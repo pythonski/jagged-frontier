@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2053.00",
+  "task_id": 1266,
+  "task_statement": "Authorize reinsurance of policy when risk is high.",
+  "occupation_title": "Insurance Underwriters",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Authorizing reinsurance is a decision based on reviewing policy data, risk analyses, and insurer guidelines within digital underwriting systems and communicating electronically with reinsurers or brokers. The task can be completed entirely via computer and online communication tools."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Authorizing reinsurance for high-risk policies requires nuanced judgment about risk layering, market appetite, and exception handling that goes beyond formal underwriting guidelines and relies on experience with comparable cases.",
+      "adequacy_evidence": "Current AI can model risk and reference prior cases, but often lacks the seasoned calibration for atypical or borderline risks and the subtle judgment used in high-stakes underwriting decisions.",
+      "_timestamp": "2026-04-06T01:06:33"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "High-risk reinsurance decisions span diverse domains (catastrophe, specialty lines, geographies, market cycles) with many edge cases and context-specific factors, creating a long-tailed distribution.",
+      "adequacy_evidence": "While general underwriting principles and some case data exist, detailed reinsurance decision processes and outcomes are often proprietary and sparsely documented, though partially approximable via synthetic scenarios and expert-informed datasets.",
+      "_timestamp": "2026-04-06T01:06:33"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Authorizing reinsurance involves multiple interdependent steps\u2014risk assessment, reviewing policy details, selecting reinsurance structures, and ensuring compliance\u2014requiring consistent reasoning across a short-to-moderate sequence.",
+      "adequacy_evidence": "AI agents can generally sustain coherence across these structured workflows, but may show some drift or missed constraints when coordinating multiple underwriting factors and external data sources.",
+      "_timestamp": "2026-04-06T01:06:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While underwriting guidelines, risk thresholds, and reinsurance treaties provide structure, decisions depend on context-specific judgment about risk appetite, market conditions, and portfolio exposure that are not fully explicit.",
+      "adequacy_evidence": "Current agents can follow documented criteria and analyze risk data, but often miss nuanced contextual factors (e.g., shifting market sentiment or firm-specific tolerance), requiring human refinement to align with true intent.",
+      "_timestamp": "2026-04-06T01:06:34"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Authorizing reinsurance requires integrating multiple pieces of information (policy terms, exposure levels, claims history, treaty limits) within a single decision episode, but the volume is structured and bounded rather than overwhelming.",
+      "adequacy_evidence": "Current agents can retrieve and summarize relevant underwriting data, but may occasionally miss or misprioritize details across documents, leading to moderate risk of context loss or imperfect compression.",
+      "_timestamp": "2026-04-06T01:06:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reinsurance authorization decisions are typically made over minutes to hours (or longer) with time for analysis, consultation, and documentation; they are not real-time decisions.",
+      "adequacy_evidence": "Current AI systems can easily operate within these timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T01:06:34"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Authorizing reinsurance relies on reviewing structured policy data, actuarial analyses, and written risk assessments; these are predominantly text and numerical inputs.",
+      "adequacy_evidence": "Since the task is fundamentally text- and data-driven, current AI agents face no meaningful limitations related to multimodal perception or generation.",
+      "_timestamp": "2026-04-06T01:06:34"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Decisions often reference prior policy history, loss experience, and existing reinsurance arrangements, but each authorization is largely driven by current risk assessment and structured records rather than deep longitudinal context.",
+      "adequacy_evidence": "Current AI systems integrated with underwriting databases can reliably store and retrieve relevant historical policy and reinsurance data, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T01:06:35"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Authorizing reinsurance for high-risk policies involves large financial exposures and tail risks; even rare misjudgments can lead to substantial losses or solvency impacts, so residual error tolerance is very low.",
+      "adequacy_evidence": "Even with review and controls, AI may still misjudge rare or complex risk structures and tail dependencies, leaving some non-negligible residual risk, though human oversight can mitigate it to a moderate level.",
+      "_timestamp": "2026-04-06T01:06:36"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Authorizing reinsurance involves coordination with reinsurers, brokers, and internal stakeholders who rely on the underwriter\u2019s judgment and approval, though it is primarily a professional/organizational interaction rather than public-facing trust.",
+      "adequacy_evidence": "Reinsurers and firms may be cautious about fully delegating high-stakes risk transfer decisions to AI, often expecting human sign-off or accountability, but could accept AI-supported decisions in a hybrid workflow.",
+      "_timestamp": "2026-04-06T01:06:36"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI making underwriting or reinsurance decisions, but insurance is heavily regulated with requirements for accountable human oversight, governance, and compliance. These create partial constraints, as firms typically must ensure a licensed or responsible human ultimately approves or is accountable for such decisions.",
+      "_timestamp": "2026-04-06T01:06:36"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether reinsurance is appropriate involves complex risk assessment, actuarial judgment, and interpretation of policy exposure; mistakes are not immediately observable and often require expert review and scenario analysis to detect.",
+      "adequacy_evidence": "Current AI systems can assist with data analysis but still produce reasoning gaps or misinterpret risk nuances, requiring thorough expert validation to ensure decisions are sound and compliant.",
+      "_timestamp": "2026-04-06T01:06:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

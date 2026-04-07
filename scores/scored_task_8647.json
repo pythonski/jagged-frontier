@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-6041.00",
+  "task_id": 8647,
+  "task_statement": "Compute time settings for traffic signals or speed restrictions, using standard formulas.",
+  "occupation_title": "Traffic Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Computing signal timing or speed restriction settings using standard formulas is an analytical task that can be performed entirely with software or spreadsheets once the traffic data are available, requiring no physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is explicitly defined as using standard formulas for computing signal timing or speed restrictions, indicating performance is largely rule-based and codified rather than reliant on experiential judgment.",
+      "adequacy_evidence": "Current AI systems can reliably apply formalized engineering formulas and documented procedures without needing tacit calibration, so there is no meaningful shortfall in this dimension.",
+      "_timestamp": "2026-04-06T04:57:18"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While based on standard formulas (e.g., MUTCD, Highway Capacity Manual), the task spans varying traffic conditions, intersection types, and regional parameters, introducing moderate but structured variation.",
+      "adequacy_evidence": "Extensive public documentation, worked examples, and engineering guidelines provide clear procedural coverage, and synthetic or simulated scenarios can readily fill remaining gaps.",
+      "_timestamp": "2026-04-06T04:57:18"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves applying standard formulas across several steps (e.g., gathering inputs, calculating cycle lengths, splits, and offsets), but the sequence is structured and not deeply interdependent or long-horizon.",
+      "adequacy_evidence": "Frontier AI agents can reliably execute multi-step formula-based calculations with consistent accuracy over short-to-moderate sequences, with minimal degradation or drift.",
+      "_timestamp": "2026-04-06T04:57:18"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on established traffic engineering formulas and standards (e.g., MUTCD, Highway Capacity Manual) with clearly defined inputs and outputs, leaving little implicit interpretation.",
+      "adequacy_evidence": "Current AI agents can reliably follow explicit formulas and structured procedures when provided with the necessary parameters, with minimal difficulty inferring intent.",
+      "_timestamp": "2026-04-06T04:57:19"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves assembling several input parameters (traffic volumes, phase timings, speed data) and applying standard formulas, requiring some structured tracking of variables but within a bounded and stable scope.",
+      "adequacy_evidence": "Current AI agents handle multi-variable calculations and short-term state tracking reliably, especially with tool use (e.g., code execution), so within-episode information management is not a significant limitation.",
+      "_timestamp": "2026-04-06T04:57:20"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily numerical and formula-based, using structured inputs like traffic volumes, speeds, and timing parameters rather than requiring interpretation of images, audio, or other non-text modalities.",
+      "adequacy_evidence": "Since the task is effectively text/numeric processing, current AI systems can handle it without needing multimodal capabilities.",
+      "_timestamp": "2026-04-06T04:57:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Signal timing calculations and speed setting analyses are typically performed offline using established formulas, with minutes or longer acceptable for completion.",
+      "adequacy_evidence": "AI agents can easily perform these formula-based computations within the available time budget, with no meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T04:57:20"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing signal timing or speed settings using standard formulas is typically a self-contained calculation based on current traffic data and parameters, without reliance on prior cases or evolving context.",
+      "adequacy_evidence": "Since the task does not require cross-session memory, current AI systems' memory limitations do not affect performance.",
+      "_timestamp": "2026-04-06T04:57:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The computed settings are used by engineers, planners, and public agencies, so others rely on the output, but the task itself is technical and does not involve direct stakeholder interaction or identity-sensitive engagement.",
+      "adequacy_evidence": "Agencies already rely on automated tools and formula-based software for signal timing, so an AI agent performing this computation would face little to no resistance as long as results meet standards.",
+      "_timestamp": "2026-04-06T04:57:21"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Incorrect signal timing or speed settings can increase crash risk, congestion, and emergency response delays, so even small residual errors can have significant safety and system-wide consequences.",
+      "adequacy_evidence": "The task relies on well-defined formulas and structured inputs, and results can be validated through simulation and engineering checks, so AI-generated outputs can be made sufficiently reliable after normal quality control.",
+      "_timestamp": "2026-04-06T04:57:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Traffic signal timing plans often must be reviewed or approved by a licensed professional engineer or authorized public agency official, which creates a human sign-off requirement. However, there is no explicit prohibition on AI performing the underlying calculations, so restrictions are partial rather than absolute.",
+      "_timestamp": "2026-04-06T04:57:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task uses standard, well-defined formulas and known inputs, so results can be checked via recalculation, comparison to guidelines, or traffic simulation, but this requires some domain expertise and careful input validation.",
+      "adequacy_evidence": "AI can reliably apply formulas, but may mis-handle inputs or context (e.g., units, assumptions), so practitioners would still need to perform moderate verification and cross-checks.",
+      "_timestamp": "2026-04-06T04:57:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

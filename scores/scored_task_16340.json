@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2051.02",
+  "task_id": 16340,
+  "task_statement": "Analyze the efficiency of water delivery structures, such as dams, tainter gates, canals, pipes, penstocks, or cofferdams.",
+  "occupation_title": "Water/Wastewater Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Efficiency analysis of dams, canals, and pipelines is typically performed using computer-based hydraulic models, sensor data, and engineering software. However, some instances require site visits or field measurements to validate conditions or gather data."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans many heterogeneous structures (dams, canals, pipes, gates) under varying hydrologic, geotechnical, and operational conditions, with strong context sensitivity and long-tailed edge cases.",
+      "adequacy_evidence": "There is substantial public engineering literature, design standards, and case studies, but detailed operational data, failure analyses, and site-specific performance datasets are often proprietary or sparse, leaving some gaps that are only partially addressable via synthesis.",
+      "_timestamp": "2026-04-06T03:50:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating efficiency requires multiple interdependent steps (data gathering, hydraulic calculations, modeling, comparison against benchmarks), but these are typically modular and not extremely long-horizon chains.",
+      "adequacy_evidence": "AI agents can generally follow these multi-step analyses with tools, but may show some degradation over longer workflows (e.g., losing assumptions or inconsistently applying parameters), requiring oversight.",
+      "_timestamp": "2026-04-06T03:50:39"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Efficiency can be defined in multiple context-dependent ways (e.g., hydraulic losses, energy use, leakage, cost-effectiveness, environmental impact), requiring the engineer to infer relevant criteria based on project goals and stakeholder needs.",
+      "adequacy_evidence": "Agents can apply standard engineering definitions and metrics but often miss project-specific priorities or implicit constraints without iterative human clarification.",
+      "_timestamp": "2026-04-06T03:50:40"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Efficiency analysis relies on established hydraulic models and engineering principles, but interpreting results requires experience with real-world factors like sedimentation, wear, leakage, and operational variability.",
+      "adequacy_evidence": "AI agents can apply models and analyze data, but they lack practical calibration from field conditions and may misjudge context-specific tradeoffs or anomalies in non-routine situations.",
+      "_timestamp": "2026-04-06T03:50:40"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Efficiency analyses often draw on historical performance data, prior inspections, and past project context, but individual analyses can still be conducted with a well-defined dataset for a given structure.",
+      "adequacy_evidence": "Current agents can store and retrieve project data via external systems, but maintaining and consistently leveraging evolving, multi-project histories across sessions remains somewhat unreliable without careful system design.",
+      "_timestamp": "2026-04-06T03:50:41"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating efficiency requires integrating design specs, flow data, structural parameters, and environmental conditions across multiple sources, but these can be modularly processed and summarized.",
+      "adequacy_evidence": "Current agents can track and synthesize such engineering inputs with tools, but may lose or oversimplify details when handling large technical documents or many interacting variables.",
+      "_timestamp": "2026-04-06T03:50:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Efficiency analysis of hydraulic structures is typically conducted through engineering studies, simulations, and data review where minutes to hours (or longer) are acceptable; it is not a real-time task.",
+      "adequacy_evidence": "Current AI agents can perform calculations, modeling, and analysis within the available time budget without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T03:50:42"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Efficiency analysis often involves interpreting engineering drawings, site images, sensor plots, and spatial layouts of hydraulic structures, though much can be conveyed in numerical and textual form.",
+      "adequacy_evidence": "Current agents can handle standard diagrams and structured data but are less reliable with complex, real-world visual inspections or nuanced spatial reasoning across heterogeneous visual inputs.",
+      "_timestamp": "2026-04-06T03:50:42"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The analysis is used by clients, regulators, and engineering teams who rely on its conclusions for decisions, and the analyst\u2019s credibility can matter but is not central to performing the task itself.",
+      "adequacy_evidence": "While stakeholders may accept AI-assisted analysis, many would still prefer human oversight for safety-critical infrastructure, leading to moderate resistance if the role were fully automated.",
+      "_timestamp": "2026-04-06T03:50:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing efficiency of hydraulic structures requires specialized engineering analysis, calibration against field data, and validation of assumptions; errors (e.g., in flow modeling or loss estimates) can be subtle and not immediately observable.",
+      "adequacy_evidence": "Current AI can generate analyses but often makes hidden assumption errors or misapplies domain formulas, requiring expert review, cross-checking with empirical data, and sometimes physical inspection to verify correctness.",
+      "_timestamp": "2026-04-06T03:50:43"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Engineering analyses that inform design, safety, or operation of water infrastructure typically fall under professional engineering licensure requirements, requiring a licensed PE to take responsibility and sign/seal work. AI can assist in analysis, but cannot legally act as the responsible engineer, creating a partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-06T03:50:43"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Efficiency analyses of dams, canals, and related structures can affect safety margins, flood risk, energy use, and water supply reliability; even small residual errors can have significant downstream consequences.",
+      "adequacy_evidence": "While engineering review, modeling, and empirical validation can catch many issues, AI may still miss edge-case hydraulic interactions or context-specific constraints, leaving some non-trivial residual risk after checking.",
+      "_timestamp": "2026-04-06T03:50:44"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

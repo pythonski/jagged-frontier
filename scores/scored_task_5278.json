@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1031.01",
+  "task_id": 5278,
+  "task_statement": "Verify and analyze data used in settling claims to ensure that claims are valid and that settlements are made according to company practices and procedures.",
+  "occupation_title": "Claims Adjusters, Examiners, and Investigators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Claims examiners typically verify and analyze claim data using digital claim management systems, documents, and databases. However, some cases may involve reviewing physical documents or coordinating with in-person investigations, so not all instances are fully digital."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many checks follow documented policies and procedures, adjusters routinely rely on experience to spot inconsistencies, assess plausibility, and interpret ambiguous or borderline cases.",
+      "adequacy_evidence": "Current agents can apply rules and flag anomalies, but they show weaker calibration in nuanced, context-dependent judgments (e.g., subtle fraud indicators or atypical but legitimate claims).",
+      "_timestamp": "2026-04-06T05:26:01"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While company practices and procedures provide formal guidelines, determining claim validity often involves context-dependent interpretation of policy language, exceptions, and situational factors not fully explicit in rules.",
+      "adequacy_evidence": "Current AI agents can follow documented procedures but often miss nuanced policy interpretations or implicit judgment calls, requiring human oversight to resolve edge cases and ensure alignment with organizational intent.",
+      "_timestamp": "2026-04-06T05:26:01"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Claims verification spans diverse insurance lines, claim types, documentation formats, jurisdictional rules, and rare fraud patterns, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "While large volumes of claims data and procedures exist within firms and can be used for training or simulation, much of it is proprietary and rare edge cases (e.g., novel fraud schemes) are underrepresented, though partially addressable with synthetic data.",
+      "_timestamp": "2026-04-06T05:26:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step review of claim data, cross-checking against policies, and applying procedures, but these steps are modular rather than tightly interdependent over long horizons.",
+      "adequacy_evidence": "AI agents can generally handle multi-step document analysis workflows, but may show some drift or missed constraints across longer claim files or complex procedural checks.",
+      "_timestamp": "2026-04-06T05:26:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple documents (claims forms, policy terms, supporting evidence) and cross-referencing them, requiring moderate within-episode tracking and synthesis of information.",
+      "adequacy_evidence": "Current agents can manage multi-document retrieval and summarization, but they still sometimes miss or misweight details across sources, especially in complex or lengthy claim files.",
+      "_timestamp": "2026-04-06T05:26:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many claim verifications are case-specific, adjusters often reference prior claims, claimant history, and past decisions to detect patterns or ensure consistency with past handling.",
+      "adequacy_evidence": "Current AI systems can reliably use external databases and retrieval systems to store and access cross-session claim histories, with minimal technical limitation in maintaining such state.",
+      "_timestamp": "2026-04-06T05:26:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Claims verification and analysis are typically performed over minutes to hours as part of case processing workflows, not in real-time interactions requiring immediate responses.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to perform multi-step reasoning, cross-check data, and apply rules without meaningful pressure from latency constraints.",
+      "_timestamp": "2026-04-06T05:26:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Claims verification often includes reviewing photos of damage, scanned documents, and occasionally audio statements alongside structured and textual data, making multimodal input a meaningful part of the task.",
+      "adequacy_evidence": "Current agents can interpret basic images and documents but are less reliable for nuanced visual assessments (e.g., extent of damage, authenticity cues) or integrating them tightly with policy rules, leading to moderate gaps.",
+      "_timestamp": "2026-04-06T05:26:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in claim validation can lead to improper payouts, fraud losses, or regulatory issues, but many mistakes are financially recoverable or correctable through audits and appeals.",
+      "adequacy_evidence": "Even with standard checks, AI may miss nuanced fraud signals or misinterpret policy details, leaving a non-trivial residual risk that organizations would still find concerning.",
+      "_timestamp": "2026-04-06T05:26:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying claims data requires cross-checking documents, policy terms, and procedural rules; errors are not always obvious and often need domain knowledge and careful review, but established audit processes exist.",
+      "adequacy_evidence": "Current AI can assist with document analysis but still misinterprets policy nuances or misses inconsistencies, so human review remains necessary though not prohibitively difficult.",
+      "_timestamp": "2026-04-06T05:26:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal, with outputs used by insurers and colleagues to make claim decisions; stakeholders rely on the analysis but do not directly engage with the performer\u2019s identity.",
+      "adequacy_evidence": "Insurance firms already use automated systems in claims processing, and internal stakeholders are generally indifferent to whether analysis is AI-assisted as long as it meets accuracy and compliance standards.",
+      "_timestamp": "2026-04-06T05:26:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "In most U.S. states, claims adjusting functions (including evaluating and validating claims data) must be performed by or under the authority of a licensed adjuster, and AI systems cannot hold such licenses. This creates an explicit requirement for a human licensee, effectively prohibiting fully autonomous AI performance of the task.",
+      "_timestamp": "2026-04-06T05:26:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

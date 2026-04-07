@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-6012.00",
+  "task_id": 772,
+  "task_statement": "Review legal publications and perform database searches to identify laws and court decisions relevant to pending cases.",
+  "occupation_title": "Legal Secretaries and Administrative Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Legal research is typically conducted through online legal databases and digital publications, but some instances may involve consulting physical law libraries or printed legal reporters."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple jurisdictions, legal domains, and fact patterns, requiring coverage of varied but well-structured subpopulations of legal research queries.",
+      "adequacy_evidence": "Extensive corpora of case law, statutes, legal briefs, and research memos\u2014along with synthetic query generation\u2014provide strong, process-revealing coverage across these subdomains.",
+      "_timestamp": "2026-04-06T00:25:59"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining which laws and cases are truly relevant often involves experience-based judgment about legal relevance, jurisdictional nuances, and issue framing beyond simple keyword matching, though much of the process is guided by established research methods.",
+      "adequacy_evidence": "Current AI agents can execute structured legal searches and approximate relevance well, but they still show gaps in nuanced issue spotting and prioritization in edge or context-sensitive cases that benefit from human legal research experience.",
+      "_timestamp": "2026-04-06T00:25:59"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Identifying 'relevant' laws and cases depends on case-specific facts, jurisdiction, and attorney strategy, which are often only partially specified and require contextual interpretation.",
+      "adequacy_evidence": "Current agents can use prompts and iterative search to approximate relevance but often miss nuanced legal distinctions or strategic intent without human guidance.",
+      "_timestamp": "2026-04-06T00:26:00"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (query formulation, iterative database searching, reviewing results, and refining relevance), but sequences are moderately long and loosely coupled rather than deeply interdependent.",
+      "adequacy_evidence": "LLM-based agents with search tools can sustain performance across these moderate sequences, though some degradation appears in iterative query refinement and maintaining consistent relevance criteria over multiple steps.",
+      "_timestamp": "2026-04-06T00:26:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves scanning multiple legal sources, tracking case facts, and filtering relevant statutes and precedents, requiring moderate integration and compression of information within a single workflow.",
+      "adequacy_evidence": "Current agents can use search tools and summarize findings effectively, but may miss nuances in relevance or lose track of intermediate filtering criteria across multiple documents.",
+      "_timestamp": "2026-04-06T00:26:01"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from retaining context about specific pending cases (e.g., prior research, relevant jurisdictions, evolving legal issues), but each search instance can largely be reconstructed from case files and instructions.",
+      "adequacy_evidence": "Current AI systems with standard retrieval and database integration can reliably store and access case-related context across sessions, with minimal limitations for this level of longitudinal tracking.",
+      "_timestamp": "2026-04-06T00:26:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and searching textual legal documents and databases; relevant information is conveyed through text, not non-text modalities.",
+      "adequacy_evidence": "Current AI agents handle text-based search, retrieval, and analysis well, and no significant multimodal capability is required for competent performance.",
+      "_timestamp": "2026-04-06T00:26:01"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Legal research tasks like reviewing publications and database searches are typically performed over minutes to hours, with no strict real-time response requirement.",
+      "adequacy_evidence": "Current AI agents can conduct thorough searches and synthesize results well within acceptable timeframes, with no meaningful quality loss due to latency constraints.",
+      "_timestamp": "2026-04-06T00:26:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether all relevant statutes and precedents have been identified requires legal expertise, careful cross-checking, and validation of authority and relevance; omissions or misinterpretations are often subtle and not immediately obvious.",
+      "adequacy_evidence": "Current AI systems can retrieve and summarize cases but still miss key authorities, misinterpret holdings, or fabricate citations, so thorough human verification is necessary and nontrivial in effort.",
+      "_timestamp": "2026-04-06T00:26:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from conducting legal research tasks such as reviewing publications or searching databases; these activities do not constitute the unauthorized practice of law when performed as support work.",
+      "_timestamp": "2026-04-06T00:26:04"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal support function where outputs (legal research results) are consumed by attorneys, with little dependence on who or what produced them.",
+      "adequacy_evidence": "Legal professionals already rely heavily on AI-assisted legal research tools, and acceptance of AI in this backend role is high with minimal resistance.",
+      "_timestamp": "2026-04-06T00:26:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Missing or misidentifying relevant laws or precedents can meaningfully affect case preparation, but errors are typically caught during attorney review and are rarely irreversible at this stage.",
+      "adequacy_evidence": "With standard verification (e.g., checking cited cases in databases), AI outputs can be reliably audited, and residual risk after such checks is generally acceptable.",
+      "_timestamp": "2026-04-06T00:26:06"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

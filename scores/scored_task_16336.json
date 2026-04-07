@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2051.02",
+  "task_id": 16336,
+  "task_statement": "Gather and analyze water use data to forecast water demand.",
+  "occupation_title": "Water/Wastewater Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most water demand forecasting relies on collecting existing datasets (utility records, meter databases, GIS, and sensor feeds) and analyzing them with modeling or statistical software. However, some instances involve coordinating or conducting field data collection or validating measurements on-site."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Water demand forecasting spans different regions, climates, infrastructure systems, and user types (municipal, industrial, agricultural), creating moderate distributional diversity.",
+      "adequacy_evidence": "There is substantial public data, modeling literature, and documented forecasting methods, but some high-resolution utility data and edge-case scenarios remain proprietary or thin, limiting full coverage.",
+      "_timestamp": "2026-04-06T02:07:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step workflow (data collection, cleaning, integration, modeling, and validation) where outputs from earlier steps feed into later analysis, but the sequence is modular rather than tightly interdependent at every step.",
+      "adequacy_evidence": "Current AI agents can execute end-to-end data pipelines with reasonable consistency using tools, but may exhibit some error accumulation or misalignment across steps, especially in data preprocessing and model validation stages.",
+      "_timestamp": "2026-04-06T02:07:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Forecasting water demand involves selecting and tuning models, interpreting anomalies, and incorporating local factors (e.g., seasonal behavior, policy changes, infrastructure constraints) that rely on experience beyond fixed rules.",
+      "adequacy_evidence": "AI agents can apply standard forecasting methods and incorporate many variables, but often lack nuanced calibration to local context and edge cases that experienced engineers develop through practice.",
+      "_timestamp": "2026-04-06T02:07:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Forecasting water demand relies on historical usage data, seasonal patterns, and prior analyses, requiring access to accumulated datasets over time rather than isolated instances.",
+      "adequacy_evidence": "Current AI agents can integrate with databases, data warehouses, and retrieval systems to reliably store and access longitudinal data, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T02:07:03"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Forecasting water demand requires integrating multiple datasets (historical usage, weather, population trends, infrastructure constraints) and maintaining intermediate analytical states, but these can typically be structured and summarized effectively.",
+      "adequacy_evidence": "Current agents can handle structured data with tools, but may lose track of intermediate assumptions or mis-handle complex multi-source context without careful orchestration, leading to moderate reliability issues.",
+      "_timestamp": "2026-04-06T02:07:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Forecasting water demand requires choosing horizons, spatial granularity, demand drivers, and scenario assumptions (e.g., climate, policy, growth), which are partly context- and stakeholder-dependent rather than fully specified.",
+      "adequacy_evidence": "Well-scaffolded agents can propose reasonable models and assumptions from context and data, but often miss local constraints, stakeholder priorities, or implicit success criteria without iterative human guidance.",
+      "_timestamp": "2026-04-06T02:07:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Water demand forecasting is typically performed for planning and operations over hours to days (or longer horizons), not under strict real-time constraints requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can perform data aggregation and forecasting well within these relaxed timeframes, so extended reasoning does not conflict with latency requirements.",
+      "_timestamp": "2026-04-06T02:07:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Water demand forecasting often incorporates sensor data streams, GIS maps, and infrastructure diagrams, but much of this can be represented as structured/tabular data with optional visual aids.",
+      "adequacy_evidence": "Current agents can process structured data and basic visual inputs like charts or maps, but may struggle with complex spatial reasoning or integrating heterogeneous sensor and geospatial modalities reliably.",
+      "_timestamp": "2026-04-06T02:07:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from gathering and analyzing water use data. While licensed engineers may be required to approve final engineering decisions or reports, the data analysis task itself is not restricted from AI use.",
+      "_timestamp": "2026-04-06T02:07:05"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Water demand forecasts inform infrastructure sizing, treatment capacity, and drought planning; errors can lead to supply shortfalls or inefficient overinvestment, but forecasts are typically updated and buffered with safety margins.",
+      "adequacy_evidence": "Even with validation and review, AI-driven forecasts may mishandle nonstationarity, local policy effects, or anomalous usage patterns, leaving some residual risk that is manageable but still a concern in planning contexts.",
+      "_timestamp": "2026-04-06T02:07:06"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Forecasting water demand involves model selection, assumptions about growth, climate, and usage patterns, and integration of noisy data; errors can be subtle and may only surface over long horizons or through careful backtesting and domain review.",
+      "adequacy_evidence": "Current AI can perform data analysis and forecasting but often makes modeling or assumption errors, so expert review, validation against historical data, and sensitivity checks are still needed, though feasible.",
+      "_timestamp": "2026-04-06T02:07:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task\u2019s outputs are used by utilities, planners, and regulators who rely on forecasts for decision-making, so stakeholders engage with and depend on the results, though not heavily on the individual performer\u2019s identity.",
+      "adequacy_evidence": "Stakeholders may show some hesitation in trusting AI-generated forecasts for infrastructure planning and regulatory contexts, but acceptance is plausible with validation and human oversight.",
+      "_timestamp": "2026-04-06T02:07:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

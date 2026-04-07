@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9011.00",
+  "task_id": 4754,
+  "task_statement": "Monitor the system for equipment failure or errors in performance.",
+  "occupation_title": "Computer Operators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Monitoring system performance or equipment status is typically done through software dashboards, logs, and alert systems on a computer, which can be accessed remotely without physical interaction with the equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While basic goals (detect failures or performance issues) are explicit, what constitutes an 'error' or actionable deviation often depends on context-specific thresholds, system norms, and operational priorities.",
+      "adequacy_evidence": "Current agents can use logs, alerts, and predefined rules to infer many issues, but they still struggle with ambiguous or novel patterns and often require human tuning to align with context-specific definitions of problems.",
+      "_timestamp": "2026-04-06T01:47:00"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring systems often follows documented thresholds, alerts, and procedures, but experienced operators add value by recognizing subtle anomaly patterns and context-specific warning signs not fully captured in rules.",
+      "adequacy_evidence": "Current agents can handle rule-based monitoring and many anomaly detection tasks, but they still lack consistent calibration for nuanced, context-dependent deviations that experienced operators might catch.",
+      "_timestamp": "2026-04-06T01:47:00"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different systems, hardware, and failure modes, creating moderate diversity in logs, metrics, and alert patterns, but within well-structured and observable domains.",
+      "adequacy_evidence": "Extensive real-world logs, monitoring datasets, incident reports, and the ability to simulate failures provide strong, accessible coverage of relevant scenarios for training and evaluation.",
+      "_timestamp": "2026-04-06T01:47:00"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing monitoring over time, requiring sustained attention, but individual checks (e.g., scanning logs, metrics, alerts) are largely independent rather than tightly interdependent sequences.",
+      "adequacy_evidence": "AI agents can reliably perform continuous monitoring through automated loops and alerting systems without meaningful degradation in performance over time.",
+      "_timestamp": "2026-04-06T01:47:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple system signals (logs, alerts, performance metrics) that evolve over time, requiring ongoing integration and prioritization of information within an episode.",
+      "adequacy_evidence": "Current agents can reliably handle streaming and structured monitoring data using tools and external memory buffers, minimizing risk of losing or mismanaging relevant within-episode information.",
+      "_timestamp": "2026-04-06T01:47:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Effective monitoring benefits from accessing historical logs, prior error patterns, and performance trends across time, but each monitoring instance can still be executed using current system state and stored records.",
+      "adequacy_evidence": "Modern AI agents can reliably integrate with logging systems, databases, and monitoring tools to persist and retrieve cross-session data, so longitudinal context is readily available with existing infrastructure.",
+      "_timestamp": "2026-04-06T01:47:02"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Missing equipment failures or performance errors can lead to downtime, data loss, or service disruption, but these are typically recoverable and mitigated by redundancy and escalation procedures.",
+      "adequacy_evidence": "Well-instrumented systems with automated alerts, redundancy, and human oversight allow AI monitoring to achieve sufficiently low residual risk after checks, making remaining errors generally tolerable.",
+      "_timestamp": "2026-04-06T01:47:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring system performance is an internal, technical task where outputs (alerts, logs) are consumed impersonally by systems or staff, with no reliance on the operator\u2019s identity.",
+      "adequacy_evidence": "AI-based monitoring and alerting systems are already widely accepted in this context, and stakeholders do not depend on or evaluate the performer\u2019s identity.",
+      "_timestamp": "2026-04-06T01:47:03"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "System performance and failures are typically observable through logs, alerts, dashboards, and automated diagnostics, making errors in monitoring outputs relatively easy to detect in real time.",
+      "adequacy_evidence": "Current AI systems can miss subtle anomalies or generate false alerts, so human oversight and cross-checking with system metrics are still needed, though verification remains straightforward.",
+      "_timestamp": "2026-04-06T01:47:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Operators often rely on visual dashboards, status lights, and graphical system monitors in addition to text logs, making some multimodal perception useful though not dominant.",
+      "adequacy_evidence": "Current AI agents can effectively process structured logs, metrics, and even visual dashboard data via integrations, with little limitation for typical monitoring scenarios.",
+      "_timestamp": "2026-04-06T01:47:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from monitoring computer systems for failures or performance issues. While certain industries may require human oversight for critical operations, AI-based monitoring itself is broadly permitted.",
+      "_timestamp": "2026-04-06T01:47:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Computer operators are expected to detect and respond to equipment failures or performance anomalies within seconds to a few minutes, typically via continuous monitoring dashboards and alerts.",
+      "adequacy_evidence": "Current AI systems integrated with monitoring tools can process streams and trigger alerts within required timeframes without relying on slow, extended reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T01:47:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

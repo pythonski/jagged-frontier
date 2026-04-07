@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4061.00",
+  "task_id": 12952,
+  "task_statement": "Prepare, manipulate, and manage extensive databases.",
+  "occupation_title": "Social Science Research Assistants",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Preparing, manipulating, and managing databases is done using database or statistical software on a computer and can be performed entirely remotely. While source data might sometimes originate from physical materials, the database work itself is fully computer-based."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of database types (e.g., survey, administrative, longitudinal) and operations (cleaning, merging, restructuring), but follows broadly consistent data management patterns and tools across cases.",
+      "adequacy_evidence": "There is extensive coverage in public code repositories, tutorials, and documentation (e.g., SQL, R, Python workflows) that expose step-by-step data handling processes, and synthetic data can readily approximate most scenarios.",
+      "_timestamp": "2026-04-05T21:54:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Database tasks are usually guided by research protocols and data dictionaries, but important details (e.g., variable coding decisions, handling missing data, aligning datasets to study hypotheses) are often implicit and context-dependent.",
+      "adequacy_evidence": "Current agents can follow explicit schemas and instructions but often miss study-specific conventions or latent research goals, requiring human clarification and iteration to fully align the database with analytical needs.",
+      "_timestamp": "2026-04-05T21:54:58"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Database preparation and management involve multi-step workflows (e.g., cleaning, transforming, validating, updating), but these are typically modular and can be segmented rather than requiring a single tightly coupled sequence.",
+      "adequacy_evidence": "LLM-based agents can generally handle these workflows with tool support, though over longer sequences they may exhibit some drift (e.g., inconsistent transformations or missed constraints) without careful orchestration.",
+      "_timestamp": "2026-04-05T21:54:58"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Database preparation and management often involve judgment in data cleaning, coding ambiguous variables, and aligning datasets with research goals, which draws on experience beyond strict rules.",
+      "adequacy_evidence": "Current agents handle standard cleaning and transformation well but still show gaps in nuanced, context-dependent decisions (e.g., handling ambiguous or messy social science data) without human guidance.",
+      "_timestamp": "2026-04-05T21:54:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Managing research databases requires persistent knowledge of schema design, variable definitions, data cleaning decisions, and version history across multiple sessions and project phases.",
+      "adequacy_evidence": "Current agents can leverage external databases and logs to store state, but they often struggle to consistently track evolving context (e.g., schema changes or prior transformations) without careful system design and integration.",
+      "_timestamp": "2026-04-05T21:54:59"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing and managing databases is fundamentally a structured, text-and-numeric data task involving tables, schemas, and code rather than perceptual inputs like images or audio.",
+      "adequacy_evidence": "Current AI agents handle text and structured data manipulation well, and the task does not require meaningful multimodal capabilities.",
+      "_timestamp": "2026-04-05T21:54:59"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves handling large, structured datasets with many variables, transformations, and intermediate states, where accurate tracking of schema, cleaning steps, and merges is critical within a single workflow.",
+      "adequacy_evidence": "Agents can offload data handling to tools like Python/SQL and manage large datasets, but they can lose track of intermediate transformations or misremember schema details across multi-step operations.",
+      "_timestamp": "2026-04-05T21:54:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in research databases can distort analyses and findings, but they are typically detectable downstream and rarely cause irreversible harm, making some residual error tolerable.",
+      "adequacy_evidence": "Even after standard validation checks, AI systems can introduce subtle data corruption, mislabeling, or schema inconsistencies that may evade detection and meaningfully impact research quality.",
+      "_timestamp": "2026-04-05T21:55:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Database preparation and management tasks are typically batch-oriented or allow minutes to hours for completion, with no strict real-time responsiveness requirements.",
+      "adequacy_evidence": "LLM-based agents with code execution can perform database manipulation and management well within acceptable timeframes without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-05T21:55:00"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Database preparation errors (e.g., incorrect merges, miscoding variables, data cleaning mistakes) can be subtle and require systematic checks like validation scripts or domain-informed review, but are generally detectable with established methods.",
+      "adequacy_evidence": "AI agents can generate and manipulate datasets effectively, but they still produce non-trivial rates of silent data errors, making routine validation and human review necessary though not prohibitively difficult.",
+      "_timestamp": "2026-04-05T21:55:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from preparing, manipulating, or managing databases. While privacy and data protection laws (e.g., HIPAA, FERPA) impose constraints on how data is handled, they regulate compliance rather than who or what performs the task.",
+      "_timestamp": "2026-04-05T21:55:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing and managing databases is primarily an internal, technical task with outputs consumed impersonally by research teams, not requiring stakeholder engagement with the performer\u2019s identity.",
+      "adequacy_evidence": "There is no meaningful stakeholder sensitivity to whether a human or AI performs database management, and AI tools are already widely accepted in such back-end data tasks.",
+      "_timestamp": "2026-04-05T21:55:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

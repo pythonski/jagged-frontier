@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1031.00",
+  "task_id": 23916,
+  "task_statement": "Develop recipes and menus to address special nutrition needs, such as low glycemic, low histamine, or gluten- or allergen-free.",
+  "occupation_title": "Dietitians and Nutritionists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Designing menus and recipes and performing nutrient analysis can be done with nutrition databases and software remotely, but many real-world cases involve kitchen testing, tasting, or coordination with food service operations that require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans many heterogeneous conditions (e.g., diabetes, histamine intolerance, celiac disease, multiple allergies) combined with cultural, age, and preference variation, creating a long-tailed distribution of dietary constraints and contexts.",
+      "adequacy_evidence": "There is extensive coverage in nutrition guidelines, clinical resources, and recipe corpora for many common conditions, but rarer or poorly standardized needs (e.g., low histamine nuances, complex multi-allergen cases) are thinner and less systematically documented.",
+      "_timestamp": "2026-04-06T05:24:15"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Creating compliant recipes and multi-day menus requires coordinating multiple constraints (nutrient limits, allergens, ingredient substitutions) across several interdependent steps, but sequences are typically of moderate length.",
+      "adequacy_evidence": "LLM-based agents can generally maintain constraints across recipe and menu generation, though they sometimes drop or inconsistently apply restrictions over longer plans or multiple dishes.",
+      "_timestamp": "2026-04-06T05:24:16"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many dietary constraints (e.g., gluten-free, low glycemic) have clear guidelines, tailoring recipes to individual tolerances, cultural preferences, and subtle triggers (e.g., histamine sensitivity variability) requires experience-based judgment.",
+      "adequacy_evidence": "Current agents can apply dietary rules and generate compliant recipes, but they lack reliable calibration for nuanced individual responses and context-specific adjustments that practitioners refine through experience.",
+      "_timestamp": "2026-04-06T05:24:16"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While dietary constraints like gluten-free or low glycemic provide explicit rules, effective menus must incorporate patient-specific factors (preferences, comorbidities, cultural context, tolerance levels), which are often implicit and require interpretation.",
+      "adequacy_evidence": "Agents can elicit preferences and apply dietary rules, but they often miss nuanced constraints (e.g., individual histamine tolerance, adherence considerations), requiring iterative human refinement.",
+      "_timestamp": "2026-04-06T05:24:16"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Menu and recipe development for specialized diets is typically planned in advance, with minutes to hours (or longer) available for careful design and review.",
+      "adequacy_evidence": "Current AI agents can generate and refine tailored recipes and menus well within these generous time windows without sacrificing quality.",
+      "_timestamp": "2026-04-06T05:24:17"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Developing specialized recipes and menus primarily relies on textual knowledge of ingredients, nutritional composition, and dietary constraints; visual or other modalities are not essential to producing correct outputs.",
+      "adequacy_evidence": "Current AI systems handle text-based nutrition planning and recipe generation well, and no significant multimodal capabilities are required for competent performance in this task.",
+      "_timestamp": "2026-04-06T05:24:17"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Designing specialized recipes requires tracking multiple constraints (nutrient targets, ingredient exclusions, substitutions, and meal balance) within a single episode, but the information volume is structured and manageable.",
+      "adequacy_evidence": "Current AI agents can reliably track dietary constraints and ingredient interactions within a session using structured prompting and tools, with minimal loss of relevant context.",
+      "_timestamp": "2026-04-06T05:24:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Menu planning for special nutrition needs often builds on prior client information such as allergies, preferences, tolerances, and past responses, but each plan can also be created from a well-specified snapshot of requirements.",
+      "adequacy_evidence": "Current AI systems can store and retrieve user profiles and preferences across sessions, but they can inconsistently maintain or update nuanced dietary histories and evolving constraints over time.",
+      "_timestamp": "2026-04-06T05:24:17"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task directly serves clients with specific medical or dietary needs, where trust in the dietitian\u2019s expertise, personalization, and credibility influences adherence and outcomes.",
+      "adequacy_evidence": "Many clients already use AI-driven nutrition tools, but for specialized or medically sensitive diets, a substantial portion would still prefer or defer to a human professional, leading to partial resistance.",
+      "_timestamp": "2026-04-06T05:24:19"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Many U.S. states require licensure (e.g., Registered Dietitian) to provide individualized medical nutrition therapy for conditions like diabetes or allergies, which could cover specialized menu planning. These rules do not explicitly ban AI, but they create partial restrictions and ambiguity around autonomous AI providing such personalized guidance without licensed oversight.",
+      "_timestamp": "2026-04-06T05:24:19"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking ingredient lists, nutrient composition, and contraindications (e.g., allergens, glycemic load), which requires domain knowledge and use of nutrition databases but is generally feasible with standard tools.",
+      "adequacy_evidence": "AI-generated recipes can include incorrect nutrient estimates or overlook hidden allergens, so outputs require careful but routine expert review rather than extreme or prohibitive verification effort.",
+      "_timestamp": "2026-04-06T05:24:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in specialized diets (e.g., allergen exposure, glycemic mismanagement) can lead to acute health risks, including allergic reactions or destabilized medical conditions, so very low residual error tolerance is required.",
+      "adequacy_evidence": "With standard quality control (label checks, professional review), most AI errors can be caught, but subtle ingredient issues or misinterpretation of constraints can still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T05:24:19"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

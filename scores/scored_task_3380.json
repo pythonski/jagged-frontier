@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2021.01",
+  "task_id": 3380,
+  "task_statement": "Identify the ownership of each piece of taxable property.",
+  "occupation_title": "Assessors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Identifying property ownership is typically done by reviewing deeds, tax records, GIS databases, and other digital or recorded documents, which can be accessed on a computer. However, some cases may require checking physical records, visiting local offices, or verifying ownership details in person."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ownership determination generally follows documented legal records (deeds, titles, tax rolls), but assessors must interpret ambiguous cases like trusts, joint ownership, or informal transfers using experience-based judgment.",
+      "adequacy_evidence": "AI can apply rules and parse records in routine cases, but may lack reliable calibration for nuanced legal/real-world ownership structures and local conventions that require practiced discernment.",
+      "_timestamp": "2026-04-05T23:28:06"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Property ownership spans a highly heterogeneous distribution including individuals, joint ownership, trusts, estates, shell companies, and jurisdiction-specific legal arrangements, often with complex chains of title.",
+      "adequacy_evidence": "There is substantial public data (deeds, tax rolls, case examples) to train on typical patterns, but edge cases involving opaque entities, fragmented records, or jurisdiction-specific nuances are thinner and less systematically represented.",
+      "_timestamp": "2026-04-05T23:28:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ownership is often documented in deeds, titles, and public records, but can involve ambiguities such as trusts, shell entities, partial interests, or conflicting filings that require interpretation and contextual judgment.",
+      "adequacy_evidence": "Current AI agents can retrieve and parse structured records and infer likely ownership in standard cases, but they struggle with complex legal arrangements and resolving ambiguous or conflicting evidence without human guidance.",
+      "_timestamp": "2026-04-05T23:28:07"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ownership identification often relies on accumulated records such as prior assessments, deeds, and title histories, requiring access to persistent property data across instances but not complex evolving context.",
+      "adequacy_evidence": "Current AI systems integrated with databases and record systems can reliably store and retrieve property ownership histories, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-05T23:28:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining property ownership can involve multi-step processes such as searching records, tracing deeds, and reconciling data sources, but each property is largely handled independently rather than as a tightly coupled long sequence.",
+      "adequacy_evidence": "AI agents can generally manage these multi-step lookups and reasoning chains, though performance may degrade somewhat with longer record trails or complex ownership histories.",
+      "_timestamp": "2026-04-05T23:28:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires consolidating information from property records, deeds, tax rolls, and databases, involving moderate amounts of structured data that must be cross-referenced within a case.",
+      "adequacy_evidence": "Current AI agents with database access and retrieval tools can reliably manage and track this level of structured information within an episode without significant loss or drift.",
+      "_timestamp": "2026-04-05T23:28:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ownership identification often relies on textual records (deeds, tax rolls) but also incorporates parcel maps, GIS data, and boundary diagrams, requiring some spatial and visual interpretation.",
+      "adequacy_evidence": "Current AI can interpret straightforward maps and integrate GIS-style data, but may struggle with complex boundary disputes, layered records, or nuanced cross-referencing between visual and textual sources.",
+      "_timestamp": "2026-04-05T23:28:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining property ownership is typically an administrative task using records and databases, where minutes to hours of processing time is acceptable.",
+      "adequacy_evidence": "AI systems can perform record lookups and reasoning within acceptable timeframes without needing to truncate processing, so latency does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T23:28:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incorrect ownership attribution can lead to improper taxation, legal disputes, and administrative burdens, but errors are typically discoverable and correctable through appeals or record updates.",
+      "adequacy_evidence": "AI can leverage structured property records and cross-checking, but residual risks like misinterpreting ambiguous ownership structures or outdated records would still occur at a non-negligible rate even after standard review.",
+      "_timestamp": "2026-04-05T23:28:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Property assessment functions, including determining ownership for tax rolls, are typically required by state law to be performed or certified by a licensed assessor or authorized official. While AI can assist, statutes generally imply a human decision-maker/signatory, creating partial restriction rather than an explicit ban.",
+      "_timestamp": "2026-04-05T23:28:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ownership can usually be verified through deeds, tax records, and public registries, but doing so requires time, document retrieval, and some domain expertise, especially for complex ownership structures.",
+      "adequacy_evidence": "AI systems can assist in aggregating and parsing records but may misinterpret legal entities or outdated filings, so human verification of sources and conclusions remains necessary.",
+      "_timestamp": "2026-04-05T23:28:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task affects property owners and local governments who rely on the determination, and the assessor\u2019s authority and credibility matter for acceptance and compliance, though interaction is often indirect.",
+      "adequacy_evidence": "Stakeholders may be cautious about AI determining legal ownership due to trust and accountability concerns, but resistance is not absolute if outputs are validated and overseen by human authorities.",
+      "_timestamp": "2026-04-05T23:28:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

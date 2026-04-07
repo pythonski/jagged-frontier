@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4099.02",
+  "task_id": 18292,
+  "task_statement": "Process and analyze data from harvester monitors to develop yield maps.",
+  "occupation_title": "Life, Physical, and Social Science Technicians, All Other",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Processing and analyzing harvester monitor data to create yield maps is typically done using GIS or farm management software on a computer, and the data can be transferred digitally. Physical presence in the field is not required for the analysis itself."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task has a clear end goal (yield maps) but requires context-dependent decisions about data cleaning, sensor calibration, spatial interpolation, and agronomic interpretation that are not fully specified in the prompt.",
+      "adequacy_evidence": "Current agents can process geospatial data and generate maps, but often miss subtle domain-specific adjustments (e.g., correcting monitor errors or aligning with field conditions), requiring human guidance to fully resolve ambiguities.",
+      "_timestamp": "2026-04-06T01:49:38"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different crops, field conditions, sensor types, and machine calibrations, creating moderate variability in data characteristics and preprocessing needs.",
+      "adequacy_evidence": "While agronomic datasets, GIS workflows, and equipment manuals provide substantial coverage, much real-world harvester telemetry is proprietary and unevenly documented, leaving some gaps that can only be partially filled with synthetic or limited public data.",
+      "_timestamp": "2026-04-06T01:49:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Producing accurate yield maps requires experience-based judgment in cleaning sensor data, correcting for lag, moisture variation, and GPS drift, and interpreting anomalies that are not fully captured by fixed rules.",
+      "adequacy_evidence": "AI systems can follow documented preprocessing and mapping workflows, but often lack field-specific calibration judgment and may mis-handle edge cases like sensor noise patterns or atypical harvesting conditions.",
+      "_timestamp": "2026-04-06T01:49:38"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Yield map development can benefit from prior seasons' data, field boundaries, calibration settings, and historical yield patterns, but each dataset can still be processed largely independently.",
+      "adequacy_evidence": "Current AI systems with standard data storage and retrieval (databases, file systems, farm management software integrations) can reliably persist and reuse cross-session agricultural data without major limitations.",
+      "_timestamp": "2026-04-06T01:49:38"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Processing harvester monitor data into yield maps is typically an offline analytical task performed post-collection, where minutes to hours of computation are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform data cleaning, spatial interpolation, and mapping within these relaxed timeframes without needing to truncate reasoning or sacrifice quality.",
+      "_timestamp": "2026-04-06T01:49:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step data pipeline (data ingestion, cleaning, calibration, geospatial alignment, and map generation) where outputs from earlier steps feed into later ones, but the sequence is structured and modular rather than highly interdependent over long horizons.",
+      "adequacy_evidence": "Well-scaffolded AI systems with data-processing and GIS tools can reliably execute such pipelines step-by-step with minimal degradation, as each stage can be validated and corrected without significant compounding errors.",
+      "_timestamp": "2026-04-06T01:49:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves integrating multiple data streams (e.g., yield, GPS coordinates, moisture) and performing cleaning, alignment, and spatial aggregation, requiring moderate within-episode tracking and transformation of structured data.",
+      "adequacy_evidence": "Current agents using data-processing tools (e.g., dataframes, GIS libraries) can reliably manage, store, and transform these datasets without significant context loss or retrieval failures.",
+      "_timestamp": "2026-04-06T01:49:40"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves spatial and geospatial data (e.g., GPS coordinates, yield sensor readings) and requires generating yield maps, which are visual/spatial representations rather than purely text outputs.",
+      "adequacy_evidence": "Current AI systems with GIS tools and data processing pipelines can reliably handle structured sensor data and produce accurate spatial visualizations, with minimal modality-related limitations.",
+      "_timestamp": "2026-04-06T01:49:40"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from processing agricultural monitor data or generating yield maps. This task is a technical data analysis activity without licensure or mandated human sign-off requirements.",
+      "_timestamp": "2026-04-06T01:49:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Yield maps inform agronomic decisions like input allocation and field management; errors can affect profitability and efficiency but are typically not safety-critical or irreversible.",
+      "adequacy_evidence": "After standard validation (e.g., cross-checking sensor data, outlier filtering, and spatial consistency checks), AI-generated maps would leave residual errors within tolerable bounds for practical use.",
+      "_timestamp": "2026-04-06T01:49:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Farmers or agronomists use the resulting yield maps for decision-making, so there are stakeholders who rely on the output, but they primarily care about accuracy rather than who or what produced it.",
+      "adequacy_evidence": "Precision agriculture already widely incorporates automated and AI-driven analytics, and stakeholders are generally comfortable with software-generated yield maps if they are reliable.",
+      "_timestamp": "2026-04-06T01:49:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Yield map generation involves cleaning noisy sensor/GPS data, calibrating for moisture and flow, and applying spatial interpolation; errors like sensor drift or misalignment can produce plausible but incorrect maps that require domain expertise and cross-checks to detect.",
+      "adequacy_evidence": "AI can automate much of the pipeline, but still makes mistakes in filtering, calibration, and geospatial handling that require expert review (e.g., visual inspection and statistical validation), though these checks are feasible and routinely applied.",
+      "_timestamp": "2026-04-06T01:49:41"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1217.00",
+  "task_id": 17126,
+  "task_statement": "Develop treatment plans based on diagnoses and on evaluation of factors, such as age and general health, or procedural risks and costs.",
+  "occupation_title": "Neurologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Developing treatment plans mainly involves reviewing diagnostic data, patient records, and clinical guidelines and documenting decisions in electronic health records, which can be done on a computer. However, many instances occur alongside in-person patient evaluations or discussions, so not all cases are fully remote."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Neurological treatment planning spans highly heterogeneous conditions (e.g., stroke, epilepsy, neurodegeneration), diverse patient factors, and complex comorbidities, creating a long-tailed, context-sensitive distribution.",
+      "adequacy_evidence": "There is extensive coverage via clinical guidelines, case reports, and medical literature, but real-world longitudinal decision processes and rare edge cases (often in private EHRs) are only partially accessible, leaving some gaps.",
+      "_timestamp": "2026-04-06T02:25:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Neurological treatment planning requires nuanced, experience-based judgment to balance disease progression, comorbidities, patient preferences, and risk tolerance, often in cases with high variability and uncertain outcomes.",
+      "adequacy_evidence": "Current agents can synthesize guidelines and evidence but lack robust clinical calibration and experiential judgment for complex, context-sensitive tradeoffs, especially in atypical or high-risk cases.",
+      "_timestamp": "2026-04-06T02:25:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Treatment planning in neurology requires integrating clinical data with patient-specific factors like comorbidities, risk tolerance, quality-of-life priorities, and evolving clinical context, much of which is implicit and negotiated rather than fully specified.",
+      "adequacy_evidence": "Current AI agents can incorporate many explicit factors and guidelines but often miss or misweight latent patient preferences and nuanced clinical tradeoffs, requiring clinician oversight and iterative refinement.",
+      "_timestamp": "2026-04-06T02:25:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing neurological treatment plans involves integrating multiple interdependent factors (diagnosis, comorbidities, risks, patient characteristics) in a structured but not \u0905\u0924\u094d\u092f long sequence of reasoning steps.",
+      "adequacy_evidence": "Current AI agents can sustain multi-step clinical reasoning to a degree but show some degradation over extended constraint tracking, occasionally missing interactions or drifting from earlier considerations.",
+      "_timestamp": "2026-04-06T02:25:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Treatment planning requires integrating heterogeneous within-episode data (history, imaging, labs, comorbidities, medications, risks, and costs), where missing or misweighting a detail can materially affect clinical decisions.",
+      "adequacy_evidence": "Well-scaffolded agents can retrieve and summarize large clinical contexts, but still show weaknesses in reliably prioritizing and maintaining all clinically relevant details without omission or distortion.",
+      "_timestamp": "2026-04-06T02:25:40"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Neurological treatment planning depends heavily on longitudinal patient history, including prior symptoms, disease progression, treatment responses, imaging results, and evolving comorbidities across many encounters.",
+      "adequacy_evidence": "Current AI systems can access and retrieve structured EHR data, but often struggle with integrating fragmented records, tracking nuanced progression over time, and maintaining coherent longitudinal context across complex cases.",
+      "_timestamp": "2026-04-06T02:25:40"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Treatment planning in neurology often incorporates imaging (MRI, CT), EEG data, and physical exam findings, though these are frequently available as structured reports rather than raw modalities.",
+      "adequacy_evidence": "Current agents can use textual summaries of imaging and tests effectively but remain less reliable when direct interpretation of complex neuroimaging or electrophysiological data is required.",
+      "_timestamp": "2026-04-06T02:25:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Neurological treatment plans involve complex, individualized judgments with risks that may only manifest over time, requiring deep specialist expertise to evaluate correctness and safety.",
+      "adequacy_evidence": "Current AI systems can propose plausible plans but frequently miss nuanced clinical factors or contraindications, and their errors are subtle enough that thorough expert review is still necessary.",
+      "_timestamp": "2026-04-06T02:25:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Treatment planning in neurology often allows minutes to hours for deliberation, though some acute cases (e.g., stroke) require decisions within minutes, creating moderate time pressure.",
+      "adequacy_evidence": "Frontier AI systems can generate high-quality treatment plan drafts within seconds to minutes, well within typical time constraints, without needing to truncate reasoning in most cases.",
+      "_timestamp": "2026-04-06T02:25:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Neurological treatment planning directly affects patient survival, functional outcomes, and risk of irreversible harm (e.g., stroke management, tumor treatment), so even rare residual errors can have severe consequences.",
+      "adequacy_evidence": "Current AI systems can still miss nuanced clinical tradeoffs or patient-specific factors, and even after physician review, residual errors or overreliance risks remain too significant for such high-stakes decisions.",
+      "_timestamp": "2026-04-06T02:25:43"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Developing neurological treatment plans requires patient trust, understanding, and acceptance, as patients must agree to and adhere to complex, high-stakes medical decisions influenced by the clinician\u2019s perceived expertise and empathy.",
+      "adequacy_evidence": "Patients and other stakeholders are currently unlikely to accept an AI as the primary decision-maker for neurological treatment planning, especially given the seriousness of conditions and need for human judgment, making resistance substantial.",
+      "_timestamp": "2026-04-06T02:25:43"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State medical practice acts require that diagnosis and treatment planning be performed by licensed physicians, and prescribing and clinical decision authority cannot be delegated to autonomous AI systems. AI may assist, but a human neurologist must legally make and approve treatment plans.",
+      "_timestamp": "2026-04-06T02:25:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

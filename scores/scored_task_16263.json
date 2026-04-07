@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.01",
+  "task_id": 16263,
+  "task_statement": "Provide biostatistical consultation to clients or colleagues.",
+  "occupation_title": "Biostatisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Biostatistical consultation typically involves discussing study design, data analysis, and interpretation, which can be done via email, messaging, shared documents, or video calls without requiring physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Biostatistical consultation requires eliciting vague or evolving research goals, aligning on appropriate study designs, endpoints, and constraints, and translating between domain scientists and statistical methodology, with much left implicit.",
+      "adequacy_evidence": "Agents can ask clarifying questions and propose reasonable analyses, but often miss subtle stakeholder priorities, domain-specific nuances, or shifting objectives, requiring human iteration to fully converge.",
+      "_timestamp": "2026-04-06T03:51:14"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Biostatistical consultation involves selecting appropriate models, diagnosing assumption violations, balancing bias-variance tradeoffs, and tailoring analyses to messy real-world study designs and stakeholder goals\u2014judgments that rely heavily on experience and case-based intuition beyond formal rules.",
+      "adequacy_evidence": "Current AI agents can reproduce many standard analytical choices and explain tradeoffs, but they often lack nuanced calibration in ambiguous, high-stakes, or novel study contexts, especially when integrating domain-specific subtleties and client constraints.",
+      "_timestamp": "2026-04-06T03:51:15"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Biostatistical consultation spans diverse domains (clinical trials, epidemiology, genomics), study designs, regulatory contexts, and client needs, creating a highly heterogeneous and long-tailed distribution of problem types and interactions.",
+      "adequacy_evidence": "There is substantial coverage in textbooks, published studies, guidelines, and case examples that expose reasoning processes, but real-world client interactions and proprietary datasets are partially inaccessible, leaving some gaps that require synthesis or simulation.",
+      "_timestamp": "2026-04-06T03:51:15"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Biostatistical consultation typically involves iterative discussions, data review, model selection, interpretation, and refinement across multiple exchanges, but not extremely long tightly coupled chains where every step critically depends on all prior ones.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across moderate multi-step analytical dialogues, but over longer or more complex consultations they may exhibit drift, lose track of prior assumptions, or inconsistently apply earlier decisions.",
+      "_timestamp": "2026-04-06T03:51:15"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Biostatistical consultation often spans multiple meetings where prior study designs, datasets, and client preferences inform ongoing advice, but many consultations can still be handled with refreshed context each session.",
+      "adequacy_evidence": "Current agents can persist and retrieve project context using external memory tools, but retrieval can be inconsistent or incomplete, especially across longer or more complex engagements.",
+      "_timestamp": "2026-04-06T03:51:16"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Biostatistical consultation requires integrating study design details, datasets, assumptions, prior analyses, and client constraints, often across multiple documents and evolving discussions where missing a detail can affect conclusions.",
+      "adequacy_evidence": "Current agents can manage large contexts with retrieval and tools, but they still show drift, miss constraints, or inconsistently track assumptions across extended interactions.",
+      "_timestamp": "2026-04-06T03:51:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Biostatistical consultation often involves interpreting and producing data visualizations (e.g., plots, charts) alongside textual explanations, but the core reasoning is largely text- and data-driven.",
+      "adequacy_evidence": "Current AI agents can reliably generate and interpret standard statistical graphics and tables, making multimodal demands in this task well within existing capabilities.",
+      "_timestamp": "2026-04-06T03:51:17"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Biostatistical consultation involves assessing study design, model assumptions, and interpretation of results, where errors can be subtle and require deep statistical and domain expertise to detect, often without immediate feedback.",
+      "adequacy_evidence": "Current AI systems can produce plausible but flawed statistical reasoning or recommendations, and detecting these issues requires expert review, making verification effort substantial and unavoidable.",
+      "_timestamp": "2026-04-06T03:51:18"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Biostatistical consultation typically occurs in meetings, reports, or asynchronous exchanges where minutes to hours (or longer) are acceptable for thoughtful analysis.",
+      "adequacy_evidence": "Current AI systems can deliver high-quality statistical reasoning well within these timeframes, so latency does not meaningfully constrain performance.",
+      "_timestamp": "2026-04-06T03:51:18"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from providing biostatistical consultation. While certain regulated contexts (e.g., clinical trials) may require qualified human statisticians to oversee or sign off, this does not ban AI use as a tool or intermediary.",
+      "_timestamp": "2026-04-06T03:51:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Biostatistical advice can shape clinical trials, public health studies, and regulatory submissions; even small residual errors can lead to invalid conclusions, patient harm, or costly downstream decisions.",
+      "adequacy_evidence": "With expert human review and standard validation checks, many AI errors can be caught, but subtle issues in study design, model assumptions, or causal interpretation may still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T03:51:18"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Biostatistical consultation involves advising researchers, clinicians, or clients where perceived expertise, credibility, and trust in the consultant strongly influence uptake of recommendations.",
+      "adequacy_evidence": "While some stakeholders would accept AI-assisted analysis, many would still prefer human experts for accountability and interpretation in high-stakes biomedical contexts, leading to moderate resistance.",
+      "_timestamp": "2026-04-06T03:51:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3021.00",
+  "task_id": 23238,
+  "task_statement": "Verify accuracy of billing data and revise any errors.",
+  "occupation_title": "Billing and Posting Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Verifying billing data and correcting errors is typically done within accounting or billing software and spreadsheets, but in some workplaces clerks may still reference or handle paper invoices or source documents."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Billing verification spans varied formats (medical, utilities, retail), coding systems, and error types, but follows structured, rule-governed patterns with recurring cases.",
+      "adequacy_evidence": "While many billing examples and rules are documented, high-quality, process-level data (including error correction workflows and proprietary billing systems) is often private, leaving some gaps that can be partially mitigated with synthetic data and targeted fine-tuning.",
+      "_timestamp": "2026-04-06T02:56:25"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely governed by explicit rules (billing codes, rate tables, contracts), but resolving discrepancies can require experience with edge cases like unusual coding combinations, payer-specific rules, or recognizing patterns of common errors.",
+      "adequacy_evidence": "Current agents can apply rules and detect inconsistencies well, but may lack reliable calibration for nuanced, context-specific exceptions (e.g., ambiguous coding or organization-specific practices) without human oversight.",
+      "_timestamp": "2026-04-06T02:56:25"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Accuracy criteria are largely defined by billing rules, source documents, and coding standards, but some context-dependent judgment is needed for exceptions, discrepancies, or unclear documentation.",
+      "adequacy_evidence": "Agents can follow explicit rules and cross-check data reliably, but often struggle with ambiguous cases or implicit policy nuances, requiring human clarification or review.",
+      "_timestamp": "2026-04-06T02:56:25"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing multiple fields, cross-checking records, and making corrections in a structured workflow, requiring some consistency across steps but not long, tightly coupled sequences.",
+      "adequacy_evidence": "Modern AI agents with tool support can reliably handle structured, multi-step verification workflows without significant degradation, as sequences are relatively short and well-bounded.",
+      "_timestamp": "2026-04-06T02:56:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires comparing multiple fields across billing records, invoices, and possibly supporting documentation, requiring moderate tracking and reconciliation of structured information within a session.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, databases) can reliably manage and cross-reference this level of structured information without significant context loss.",
+      "_timestamp": "2026-04-06T02:56:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While most billing verification tasks are tied to individual transactions, clerks sometimes rely on prior account history, recurring billing patterns, or past corrections to identify discrepancies.",
+      "adequacy_evidence": "Current AI systems integrated with databases and record systems can reliably store and retrieve cross-session billing histories and account data, meeting these modest persistence needs.",
+      "_timestamp": "2026-04-06T02:56:26"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying billing data is primarily a text- and number-based task involving structured records in billing systems, invoices, and databases, with minimal reliance on non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle text and numerical data processing well, and any occasional document parsing (e.g., OCR) is already sufficiently reliable for typical billing workflows.",
+      "_timestamp": "2026-04-06T02:56:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Billing verification is typically a back-office task performed in batches or within routine processing windows, where minutes or longer are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform data checking and correction well within these relaxed time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T02:56:27"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI from verifying billing data or correcting errors. While sectors like healthcare impose compliance obligations (e.g., HIPAA), they regulate data handling rather than forbidding automated systems from performing billing verification tasks.",
+      "_timestamp": "2026-04-06T02:56:28"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Billing errors can lead to financial discrepancies, customer disputes, and compliance issues, but they are typically detectable and correctable through audits or follow-up adjustments.",
+      "adequacy_evidence": "AI systems with validation rules, reconciliation checks, and audit trails can reduce errors to low levels, and any residual mistakes after standard checks are generally acceptable and fixable.",
+      "_timestamp": "2026-04-06T02:56:28"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily internal, involving verification and correction of billing data without direct interaction with external stakeholders who depend on the performer\u2019s identity.",
+      "adequacy_evidence": "Since outputs are reviewed or used within organizational systems, stakeholders are generally indifferent to whether the work is performed by a human or an AI system.",
+      "_timestamp": "2026-04-06T02:56:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves cross-checking entries against source documents, billing codes, and rules; while many errors are detectable via reconciliation and validation checks, some require domain knowledge and careful review.",
+      "adequacy_evidence": "Current AI can automate many consistency checks but still makes mistakes in interpreting billing codes or context, so human review remains necessary though not excessively burdensome.",
+      "_timestamp": "2026-04-06T02:56:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

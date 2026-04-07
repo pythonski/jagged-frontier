@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2011.00",
+  "task_id": 21524,
+  "task_statement": "Audit payroll and personnel records to determine unemployment insurance premiums, workers' compensation coverage, liabilities, and compliance with tax laws.",
+  "occupation_title": "Accountants and Auditors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Payroll and personnel records are typically stored in digital payroll or HR systems and can be audited remotely using accounting software and shared documents. However, some audits still involve on-site reviews of internal records, controls, or physical documentation."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse payroll systems, industry practices, and jurisdiction-specific tax and insurance rules, with many edge cases (e.g., misclassification, multi-state employment) requiring broad coverage.",
+      "adequacy_evidence": "While regulations, audit procedures, and example cases are well-documented, much real-world payroll data and nuanced audit trails are private, making some subpopulations only partially accessible but still amenable to synthesis and targeted training.",
+      "_timestamp": "2026-04-06T05:10:28"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on applying established tax laws and auditing standards, but also requires experience-based judgment in interpreting ambiguous classifications, identifying subtle compliance risks, and assessing intent or materiality.",
+      "adequacy_evidence": "Current agents can apply explicit rules and handle standard cases well, but show gaps in nuanced judgment for edge cases (e.g., worker classification disputes or irregular payroll patterns) where experienced auditor calibration matters.",
+      "_timestamp": "2026-04-06T05:10:28"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely governed by explicit tax laws, insurance rules, and auditing standards, but requires contextual interpretation (e.g., worker classification, jurisdictional nuances, and implicit audit scope decisions).",
+      "adequacy_evidence": "Current agents can apply codified rules and reference regulations well, but often miss context-specific nuances or implicit audit expectations, requiring human oversight to resolve ambiguities.",
+      "_timestamp": "2026-04-06T05:10:29"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The audit involves multiple linked steps\u2014reviewing payroll records, reconciling personnel data, calculating premiums, and checking compliance\u2014but many substeps can be modularized and validated independently.",
+      "adequacy_evidence": "LLM-based agents can follow structured audit workflows with tools, but over longer sequences they may exhibit mild error propagation or lose track of constraints without careful orchestration and checks.",
+      "_timestamp": "2026-04-06T05:10:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Payroll and compliance audits are batch processes conducted over hours or days, with no need for immediate or real-time responses.",
+      "adequacy_evidence": "AI systems can take sufficient time to perform detailed analysis without latency pressure, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T05:10:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Audits often reference prior periods' payroll records, prior audit findings, and evolving client-specific policies, but each audit cycle can largely be conducted with current-period data and documented history.",
+      "adequacy_evidence": "Current agents can store and retrieve prior records and audit artifacts via external databases or memory systems, but they may inconsistently surface relevant historical context or maintain continuity across engagements.",
+      "_timestamp": "2026-04-06T05:10:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves structured and unstructured text and numerical data (payroll records, tax documents, compliance reports), which can be fully represented in text or tabular formats.",
+      "adequacy_evidence": "Current AI agents can handle text and numeric data extraction, analysis, and auditing workflows effectively; any minor use of scanned documents is well-covered by OCR and does not create a meaningful multimodal gap.",
+      "_timestamp": "2026-04-06T05:10:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple structured records (payroll data, personnel files, tax documents) and reconciling them, requiring active retrieval and tracking of key figures and rules but within a bounded, tool-manageable scope.",
+      "adequacy_evidence": "Current agents can use retrieval and external tools to handle document sets, but may lose track of cross-document relationships or subtle inconsistencies without careful orchestration, leading to moderate context management gaps.",
+      "_timestamp": "2026-04-06T05:10:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Detecting errors requires cross-checking payroll records, tax rules, and insurance classifications; mistakes can be subtle (e.g., misclassification, incorrect wage bases) and require domain expertise and detailed review.",
+      "adequacy_evidence": "Current AI systems can misapply complex, jurisdiction-specific rules and miss edge cases, so thorough human verification is still necessary and nontrivial to perform.",
+      "_timestamp": "2026-04-06T05:10:31"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in auditing payroll and compliance can lead to regulatory penalties, legal liability, and financial misstatements, so even rare residual mistakes can have significant consequences.",
+      "adequacy_evidence": "Even after standard review and checks, AI may miss nuanced compliance issues or jurisdiction-specific rules, leaving some non-trivial residual risk, though not overwhelmingly so with proper oversight.",
+      "_timestamp": "2026-04-06T05:10:32"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "No explicit prohibition on AI performing audit-related analyses, but many auditing activities\u2014especially those tied to formal attest functions or compliance certifications\u2014require oversight, review, or sign-off by a licensed CPA. This creates partial regulatory constraint rather than a full prohibition.",
+      "_timestamp": "2026-04-06T05:10:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces compliance determinations used by employers, insurers, and regulators, who rely on the auditor\u2019s judgment and credibility, though deep interpersonal interaction is limited.",
+      "adequacy_evidence": "Stakeholders often require accountability and may expect a licensed human auditor to stand behind findings, so fully autonomous AI would face some resistance even if used as a supporting tool.",
+      "_timestamp": "2026-04-06T05:10:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

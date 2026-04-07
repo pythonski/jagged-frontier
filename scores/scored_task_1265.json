@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2053.00",
+  "task_id": 1265,
+  "task_statement": "Review company records to determine amount of insurance in force on single risk or group of closely related risks.",
+  "occupation_title": "Insurance Underwriters",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Underwriters typically review policy and exposure records in electronic underwriting or policy management systems, making the task mostly computer-based. However, some organizations may still rely on physical files or archived documents that require in-office access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied company records, policy structures, and risk groupings, but follows relatively standardized insurance and accounting conventions rather than a highly long-tailed distribution.",
+      "adequacy_evidence": "While insurance documents and underwriting examples exist, much real-world data is proprietary and lacks detailed process annotations, though partial coverage can be synthesized or learned from available corpora.",
+      "_timestamp": "2026-04-05T21:18:59"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining insurance in force requires interpreting company records and judging which risks are sufficiently related to aggregate, often relying on experience with policy structures and underwriting conventions beyond explicit rules.",
+      "adequacy_evidence": "Current AI can apply documented aggregation rules and parse records well, but may lack consistent calibration in borderline cases (e.g., complex corporate structures or ambiguous risk relationships) where human underwriters rely on experience.",
+      "_timestamp": "2026-04-05T21:18:59"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple records, extracting relevant policy details, and aggregating them to compute total insurance exposure, requiring a multi-step but not deeply interdependent workflow.",
+      "adequacy_evidence": "AI agents can generally sustain coherence across document review and aggregation steps, but may show some drift or inconsistency when handling longer or heterogeneous record sets, especially with complex edge cases.",
+      "_timestamp": "2026-04-05T21:19:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing textual and numerical company records (e.g., financial statements, policy documents), which are fundamentally text-based.",
+      "adequacy_evidence": "Current AI systems handle text and structured numerical data well, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-05T21:19:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining insurance in force requires interpreting policy documents, endorsements, and defining what counts as a 'single risk' or 'closely related risks,' which often depends on context and company-specific guidelines.",
+      "adequacy_evidence": "Current agents can extract and aggregate policy data but may misinterpret nuanced relationships between risks or overlook implicit underwriting conventions, requiring human clarification in non-routine cases.",
+      "_timestamp": "2026-04-05T21:19:00"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is typically performed using the current set of company records for the specific risk, without needing persistent memory of prior cases beyond what is documented in those records.",
+      "adequacy_evidence": "AI systems can access and retrieve relevant documents within each task instance; no cross-session memory is necessary, so existing capabilities fully meet requirements.",
+      "_timestamp": "2026-04-05T21:19:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing information from multiple documents (policies, endorsements, related risks) and tracking coverage limits and relationships, but the scope is typically bounded and structured rather than massive or rapidly changing.",
+      "adequacy_evidence": "Agents can retrieve and summarize multiple documents with tools, but may lose or misalign key details (e.g., exclusions, overlapping limits) when compressing information across sources, requiring careful orchestration.",
+      "_timestamp": "2026-04-05T21:19:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing company records for insurance exposure is an analytical back-office task with no real-time interaction requirement; turnaround times of minutes to hours are typically acceptable.",
+      "adequacy_evidence": "Frontier AI systems can take sufficient time to perform document analysis and aggregation without pressure, so there is no meaningful quality loss due to latency constraints.",
+      "_timestamp": "2026-04-05T21:19:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining insurance in force requires interpreting policy documents, endorsements, and aggregation rules across related risks, so verification needs domain expertise and careful cross-checking rather than trivial validation.",
+      "adequacy_evidence": "AI can extract and summarize relevant policy details, but may misinterpret coverage nuances or miss dependencies, requiring human review to confirm accuracy and completeness.",
+      "_timestamp": "2026-04-05T21:19:02"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal analytical review of company records, with outputs used within underwriting workflows rather than requiring direct stakeholder interaction or trust in the performer\u2019s identity.",
+      "adequacy_evidence": "Because the work is internal and document-based, stakeholders are largely indifferent to whether a human or AI performs it, and AI use would not meaningfully affect acceptance.",
+      "_timestamp": "2026-04-05T21:19:03"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misstating the amount of insurance in force can materially affect risk exposure, pricing, and regulatory compliance, leading to significant financial or legal consequences even if errors are infrequent.",
+      "adequacy_evidence": "AI can reconcile records and calculations with automated checks, but occasional misinterpretation of complex or inconsistent records could still leave non-trivial residual risk after review.",
+      "_timestamp": "2026-04-05T21:19:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from reviewing records to assess insurance in force; insurers already use automated underwriting tools. While licensed humans are typically responsible for final underwriting decisions and regulatory compliance, this specific analytic task is not legally restricted from AI execution.",
+      "_timestamp": "2026-04-05T21:19:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

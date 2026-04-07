@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2051.02",
+  "task_id": 16280,
+  "task_statement": "Generate data queries, based on validation checks or errors and omissions identified during data entry, to resolve identified problems.",
+  "occupation_title": "Clinical Data Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Generating data queries based on validation checks or data entry errors is done within clinical data management systems or databases using standard computer software, requiring no physical presence or specialized equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many data queries follow standardized validation rules and protocols, crafting effective queries often requires experience-based judgment about clinical context, ambiguity resolution, and appropriate wording to elicit accurate corrections.",
+      "adequacy_evidence": "Current AI agents can generate appropriate queries for routine and well-specified cases, but they may lack nuanced calibration in ambiguous or clinically subtle situations, leading to occasional misinterpretation or suboptimal query phrasing.",
+      "_timestamp": "2026-04-06T03:42:48"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different clinical trial protocols, data schemas, and error types, creating moderate variation in how queries must be phrased and contextualized, though patterns are relatively standardized.",
+      "adequacy_evidence": "There are many SOPs, query templates, and training examples available, and synthetic generation is feasible, but access to diverse real-world proprietary datasets and edge-case errors is somewhat limited.",
+      "_timestamp": "2026-04-06T03:42:49"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interpreting validation outputs, diagnosing issues, and formulating appropriate queries, requiring a few interdependent steps but typically within short, bounded sequences per case.",
+      "adequacy_evidence": "Current AI agents can reliably maintain coherence across these short multi-step workflows, with little evidence of degradation given the limited sequence length and structured nature of the task.",
+      "_timestamp": "2026-04-06T03:42:49"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While validation rules and error flags provide structure, crafting appropriate data queries requires interpreting context (protocol, medical plausibility, site practices) and choosing how to frame requests for clarification or correction.",
+      "adequacy_evidence": "Current agents can generate reasonable queries from structured checks and examples, but often miss subtle clinical context or phrasing nuances, requiring human review and refinement.",
+      "_timestamp": "2026-04-06T03:42:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple validation rules, discrepancies, and specific data fields within a case, but the scope is typically bounded to structured records and defined checks rather than very large or rapidly evolving information.",
+      "adequacy_evidence": "Current agents can manage structured data and rule-based discrepancies with tooling, but may still lose or misprioritize context across multiple fields or validation issues, especially when many interdependent errors are present.",
+      "_timestamp": "2026-04-06T03:42:50"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily text- and data-driven, involving structured fields, validation rules, and written queries; it does not inherently require image, audio, or other non-text modalities.",
+      "adequacy_evidence": "Since the task is effectively text-in/text-out over structured data, current AI systems handle the modality requirements fully without limitation.",
+      "_timestamp": "2026-04-06T03:42:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Generating data queries for validation issues in clinical data management is typically an asynchronous task where turnaround times of minutes to hours are acceptable rather than immediate response.",
+      "adequacy_evidence": "Current AI systems can produce high-quality query formulations well within these relaxed time constraints, so speed does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T03:42:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Generating queries often benefits from awareness of prior queries, study-specific conventions, and ongoing issue patterns, but each query can largely be produced from current validation outputs and protocol rules.",
+      "adequacy_evidence": "Current AI systems can reliably use external storage, databases, and retrieval to maintain project context and prior query history, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T03:42:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from generating data queries in clinical data management; while FDA and GCP guidelines require data integrity and human oversight, they do not forbid the use of AI tools for this task.",
+      "_timestamp": "2026-04-06T03:42:51"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces data queries that are sent to clinical site staff or investigators, who must interpret and respond to them, so stakeholders engage with the output though not strongly with the performer\u2019s identity.",
+      "adequacy_evidence": "Stakeholders already interact with standardized, system-generated queries in clinical data management workflows, so AI-generated queries would generally be accepted if they meet expected formats and quality.",
+      "_timestamp": "2026-04-06T03:42:52"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in generated data queries can lead to unresolved or misinterpreted data issues in clinical trials, affecting data quality, but such errors are typically detectable and correctable in subsequent review cycles.",
+      "adequacy_evidence": "Even after standard checks, AI may produce unclear or slightly incorrect queries that require human clarification, creating moderate residual risk through inefficiency or minor data handling errors rather than severe harm.",
+      "_timestamp": "2026-04-06T03:42:52"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Query generation is guided by predefined validation rules and identifiable discrepancies, so outputs can be checked against source data and edit checks, but this requires domain expertise and careful review.",
+      "adequacy_evidence": "AI can draft plausible queries, but reviewers must verify alignment with protocol, data standards, and specific discrepancies, as errors or misinterpretations occur often enough to require routine checking.",
+      "_timestamp": "2026-04-06T03:42:52"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

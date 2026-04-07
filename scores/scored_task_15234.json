@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2031.00",
+  "task_id": 15234,
+  "task_statement": "Perform general administrative tasks, such as scheduling appointments or ordering supplies or equipment.",
+  "occupation_title": "Cardiovascular Technologists and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Scheduling appointments and placing supply or equipment orders are typically done through electronic scheduling systems, email, or procurement software. However, some instances require on-site coordination with staff or checking physical inventory, making the task not fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Administrative tasks like scheduling and ordering span multiple workflows, systems, and constraints (e.g., provider availability, inventory types), but follow broadly standardized patterns across settings.",
+      "adequacy_evidence": "There is abundant accessible data (business workflows, scheduling logs, procurement processes) and clear procedural examples, making it feasible to cover the distribution through existing corpora and synthetic environments.",
+      "_timestamp": "2026-04-06T02:50:56"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling and ordering require awareness of clinician preferences, patient priorities, equipment specifications, and institutional procedures, which are often implicit or context-dependent rather than fully specified.",
+      "adequacy_evidence": "Current agents can handle routine cases with provided constraints but often miss implicit preferences or situational nuances, requiring human clarification or iteration.",
+      "_timestamp": "2026-04-06T02:50:57"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "General administrative tasks like scheduling and ordering supplies are largely governed by explicit procedures, availability constraints, and standardized preferences rather than deep experiential judgment.",
+      "adequacy_evidence": "Current AI agents can reliably follow scheduling rules, manage calendars, and reorder supplies based on defined criteria, with minimal need for tacit calibration.",
+      "_timestamp": "2026-04-06T02:50:57"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling appointments and ordering supplies involve multi-step workflows (checking availability, coordinating with stakeholders, placing orders, confirming details) where consistency across steps matters but sequences are not deeply interdependent or long.",
+      "adequacy_evidence": "Current AI agents can generally manage these workflows with tools and automation, but may exhibit minor errors like missed constraints or inconsistent updates over multi-step processes, especially without careful orchestration.",
+      "_timestamp": "2026-04-06T02:50:57"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments and ordering supplies are routine administrative tasks that typically tolerate delays of minutes to hours without impacting outcomes.",
+      "adequacy_evidence": "Current AI agents can complete these tasks accurately within acceptable timeframes without needing to sacrifice reasoning quality for speed.",
+      "_timestamp": "2026-04-06T02:50:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments and ordering supplies are primarily handled through text-based interfaces (calendars, emails, procurement systems) with minimal reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents can fully manage text-based administrative workflows, including interacting with digital systems and generating or interpreting structured text, without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T02:50:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tasks like scheduling and ordering require tracking multiple constraints (availability, preferences, inventory details) within a session, but the information volume is moderate and structured.",
+      "adequacy_evidence": "Current agents with tool integrations (calendars, databases, ordering systems) reliably manage and retrieve this level of context without significant loss or drift.",
+      "_timestamp": "2026-04-06T02:50:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tasks like scheduling appointments and ordering supplies rely on maintaining calendars, inventory levels, and vendor or procedural preferences across sessions, but the state is relatively structured and limited in scope.",
+      "adequacy_evidence": "Current AI agents integrated with standard tools (calendars, databases, inventory systems) can reliably store and retrieve this information across sessions, with minimal gaps in persistence or recall.",
+      "_timestamp": "2026-04-06T02:50:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in scheduling or supply ordering can disrupt workflows or delay patient care, but are typically recoverable and rarely cause irreversible harm after standard checks.",
+      "adequacy_evidence": "With confirmation steps, audit trails, and human oversight, current AI systems can reduce residual errors to a tolerable level for these administrative tasks.",
+      "_timestamp": "2026-04-06T02:50:59"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments and ordering supplies require interaction with patients, vendors, and staff who engage with the output, but the performer's identity is not central to success.",
+      "adequacy_evidence": "Stakeholders already widely accept automated scheduling systems and procurement tools, so AI handling these tasks would face little resistance.",
+      "_timestamp": "2026-04-06T02:50:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws prohibiting AI from performing general administrative tasks like scheduling or ordering supplies; these can be automated as long as systems comply with regulations such as HIPAA for handling patient data. Such rules constrain implementation, not the use of AI itself.",
+      "_timestamp": "2026-04-06T02:50:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Errors in scheduling or ordering (e.g., wrong time, duplicate booking, incorrect item) are typically easy to detect through calendars, confirmations, or inventory checks with immediate feedback loops.",
+      "adequacy_evidence": "Current AI systems can perform these tasks but still make occasional coordination or detail errors, requiring routine human review, though the verification process itself is straightforward.",
+      "_timestamp": "2026-04-06T02:51:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

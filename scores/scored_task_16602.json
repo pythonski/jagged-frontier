@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3027.01",
+  "task_id": 16602,
+  "task_statement": "Read and interpret blueprints, schematics, work specifications, drawings, or charts.",
+  "occupation_title": "Automotive Engineering Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Blueprints, schematics, and technical drawings are commonly reviewed in digital CAD or document systems on computers. However, technicians often also use printed drawings or review them on-site alongside physical prototypes or test equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Engineering drawings and schematics follow standardized conventions, but technicians must interpret implicit tolerances, context-specific notes, and how components interact within a larger system.",
+      "adequacy_evidence": "Current AI can parse and explain many standardized elements of blueprints, but it often misses context-dependent intent or subtle design implications without iterative human guidance.",
+      "_timestamp": "2026-04-05T23:58:18"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting engineering drawings relies partly on standardized symbols and conventions, but technicians also use experience to infer intent, tolerances, and practical manufacturability details not always explicit.",
+      "adequacy_evidence": "Current AI can parse symbols and extract structured information from schematics, but often lacks the contextual calibration to reliably infer implicit design intent or handle ambiguous, real-world variations.",
+      "_timestamp": "2026-04-05T23:58:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting blueprints and schematics requires tracking numerous symbols, dimensions, annotations, and cross-referenced components simultaneously, where missing a small detail can lead to incorrect interpretation.",
+      "adequacy_evidence": "Current agents can process large technical documents and retrieve details, but they still struggle with consistently maintaining and integrating complex spatial and cross-referenced information without omissions or drift.",
+      "_timestamp": "2026-04-05T23:58:18"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple diagram types (mechanical drawings, electrical schematics, CAD prints) and varying standards across manufacturers, but follows broadly standardized conventions within engineering domains.",
+      "adequacy_evidence": "There is substantial public and \u0622\u0645\u0648\u0632\u0634\u06cc material with worked examples of blueprint interpretation, but proprietary OEM schematics and edge-case formats are less accessible, leaving some gaps in coverage.",
+      "_timestamp": "2026-04-05T23:58:18"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting blueprints and schematics relies heavily on visual-spatial understanding of diagrams, symbols, and layouts that cannot be reduced to text alone.",
+      "adequacy_evidence": "Current agents can parse many structured diagrams and standard symbols, but struggle with complex, low-quality, or highly domain-specific schematics requiring precise spatial reasoning and context integration.",
+      "_timestamp": "2026-04-05T23:58:18"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting technical drawings often involves multi-step reasoning\u2014cross-referencing symbols, dimensions, and notes across sections\u2014but these sequences are typically bounded and not deeply interdependent over long horizons.",
+      "adequacy_evidence": "AI systems can generally sustain coherence across these moderate-length interpretation steps, but performance can degrade when handling large, complex, multi-sheet schematics with many cross-references.",
+      "_timestamp": "2026-04-05T23:58:18"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Blueprints, schematics, and drawings are typically self-contained artifacts that encode the necessary information for interpretation without requiring prior session history.",
+      "adequacy_evidence": "Since the task does not depend on cross-session memory, current AI systems' limited persistent state does not meaningfully constrain performance.",
+      "_timestamp": "2026-04-05T23:58:18"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reading and interpreting technical drawings is an internal cognitive task; outputs are typically used within engineering workflows without requiring stakeholder interaction or acceptance of the individual performing it.",
+      "adequacy_evidence": "Since there are no meaningful stakeholder acceptance requirements tied to performer identity, AI use in this task would not face resistance.",
+      "_timestamp": "2026-04-05T23:58:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Technicians often need to interpret drawings during ongoing work, so responses are expected within seconds to a few minutes, but not instantaneously under strict real-time pressure.",
+      "adequacy_evidence": "Current AI systems can parse and explain schematics or blueprints quickly, and the moderate latency requirement does not meaningfully constrain their reasoning quality.",
+      "_timestamp": "2026-04-05T23:58:20"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Misinterpreting technical drawings can lead to incorrect assembly or testing setups, causing performance issues or rework, but errors are often caught during prototyping, inspection, or validation stages.",
+      "adequacy_evidence": "AI can interpret many schematics accurately, but occasional misreadings of symbols, tolerances, or context-specific conventions could slip through and remain consequential even after standard checks.",
+      "_timestamp": "2026-04-05T23:58:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from reading or interpreting technical documents like blueprints or schematics. While downstream sign-off or engineering approval may require licensed humans, the act of interpretation itself is not legally restricted.",
+      "_timestamp": "2026-04-05T23:58:21"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Misinterpretations of dimensions, tolerances, symbols, or specifications in technical drawings can be subtle and may only surface during fabrication or testing, requiring expert review to catch beforehand.",
+      "adequacy_evidence": "Current AI systems can parse schematics but still make non-obvious errors in symbol interpretation and context, so outputs require careful expert verification to avoid costly downstream mistakes.",
+      "_timestamp": "2026-04-05T23:58:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3051.03",
+  "task_id": 15456,
+  "task_statement": "Review logs, datasheets, or reports to ensure adequate production levels or to identify abnormalities with biofuels production equipment or processes.",
+  "occupation_title": "Biofuels Production Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Production logs, datasheets, and reports are typically stored and reviewed in digital plant monitoring systems or spreadsheets, allowing remote analysis. However, some facilities still use physical logs or require on-site context when reviewing equipment-related abnormalities."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different plant configurations, feedstocks, equipment types, and operational conditions, creating moderate variability in logs and abnormal patterns but within a structured industrial domain.",
+      "adequacy_evidence": "While general industrial monitoring data and examples exist, detailed, high-quality datasets of biofuel-specific logs and rare failure modes are often proprietary or sparse, leaving some gaps that can only be partially filled with synthesis.",
+      "_timestamp": "2026-04-06T02:58:20"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many parameters and thresholds are documented, identifying meaningful abnormalities often requires experience with process variability, sensor quirks, and plant-specific operating patterns.",
+      "adequacy_evidence": "Current agents can apply rules and detect statistical anomalies, but they lack full calibration to plant-specific nuances and edge-case interpretations that experienced managers use.",
+      "_timestamp": "2026-04-06T02:58:21"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While logs and datasheets provide structured data, determining 'adequate' production levels and identifying true abnormalities depends on plant-specific baselines, operating conditions, and contextual judgment not \u0574\u056b\u0577\u057f explicitly specified.",
+      "adequacy_evidence": "Current AI agents can flag statistical anomalies and compare against documented thresholds, but they often miss context-dependent nuances (e.g., acceptable deviations under certain conditions) without human guidance or iterative clarification.",
+      "_timestamp": "2026-04-06T02:58:22"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple logs and reports and integrating findings across them, requiring some sustained attention and consistency but not deeply interdependent multi-stage workflows.",
+      "adequacy_evidence": "AI agents can handle multi-document review with reasonable consistency, though mild degradation can occur over longer contexts (e.g., missed anomalies or inconsistent comparisons).",
+      "_timestamp": "2026-04-06T02:58:22"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing information from multiple documents (logs, datasheets, reports) and tracking production patterns, but the scope is typically bounded to specific timeframes or systems rather than massive real-time streams.",
+      "adequacy_evidence": "Current agents can parse and summarize such materials, but may lose fidelity when integrating multiple heterogeneous sources or tracking subtle cross-document anomalies over longer contexts.",
+      "_timestamp": "2026-04-06T02:58:23"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves interpreting charts, sensor readouts, and tabular datasheets in addition to textual reports, requiring some visual and numerical data interpretation.",
+      "adequacy_evidence": "Current AI systems can reliably parse and analyze structured tables, logs, and standard industrial charts, handling most multimodal aspects of this task without significant gaps.",
+      "_timestamp": "2026-04-06T02:58:23"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reviewing production logs and reports typically allows for minutes-level latency, though timely detection of abnormalities can be important for operational response.",
+      "adequacy_evidence": "Current AI systems can analyze logs and detect anomalies well within these time constraints without needing to truncate reasoning, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T02:58:23"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Production logs and process data are structured and often have thresholds/benchmarks, but identifying true abnormalities versus normal variation requires domain expertise and cross-checking multiple indicators.",
+      "adequacy_evidence": "AI can flag patterns but may misinterpret noise or miss context-specific issues, so human review and validation of flagged anomalies and conclusions remain necessary.",
+      "_timestamp": "2026-04-06T02:58:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from comparing current logs to historical performance, past anomalies, and evolving production baselines, but much of this information is typically recorded in accessible logs and reports rather than relying on implicit memory.",
+      "adequacy_evidence": "Current AI systems can reliably use databases, log storage, and retrieval tools to access cross-session production history, so persistent state needs are well-supported with standard infrastructure.",
+      "_timestamp": "2026-04-06T02:58:24"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal analysis of production data, with outputs consumed operationally rather than requiring stakeholder engagement with the performer.",
+      "adequacy_evidence": "Since stakeholders are not directly interacting with or evaluating the performer, acceptance of an AI agent is largely irrelevant and unlikely to affect task execution.",
+      "_timestamp": "2026-04-06T02:58:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations that prohibit AI systems from reviewing production logs or identifying abnormalities in biofuels operations. While facilities may require qualified human oversight for compliance and safety, AI use in analysis is not legally restricted.",
+      "_timestamp": "2026-04-06T02:58:24"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Failing to detect abnormalities in biofuel production logs can lead to equipment damage, safety hazards, regulatory violations, or significant production losses, so even rare missed errors can have serious consequences.",
+      "adequacy_evidence": "AI systems can reliably flag many anomalies in structured logs and reports, but subtle, context-dependent process deviations or novel failure modes may still be missed, leaving some residual risk even after standard checks.",
+      "_timestamp": "2026-04-06T02:58:25"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

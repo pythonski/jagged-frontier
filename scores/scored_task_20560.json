@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-4021.00",
+  "task_id": 20560,
+  "task_statement": "Write photograph captions.",
+  "occupation_title": "Photographers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Writing photograph captions is a text-based task that can be done entirely on a computer while viewing digital images or notes, with no need for physical presence or specialized equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Writing effective photograph captions involves some experiential judgment about tone, context, audience, and what details are salient or sensitive, which goes beyond strict rules.",
+      "adequacy_evidence": "Current AI systems can reliably generate appropriate, context-aware captions across a wide range of styles and domains, capturing most of the needed judgment with minimal gaps.",
+      "_timestamp": "2026-04-06T05:52:17"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Photograph captions vary across contexts (journalistic, artistic, commercial, scientific, social media), requiring adaptation to different tones, audiences, and informational goals, but remain a bounded text-generation task.",
+      "adequacy_evidence": "Large-scale image-caption datasets, editorial guidelines, and abundant examples provide strong coverage, including process signals via annotated datasets and instruction tuning, making current training pipelines sufficient.",
+      "_timestamp": "2026-04-06T05:52:18"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Photograph captions require interpreting context such as audience, publication style, purpose (journalistic vs artistic), and selecting salient details, which are often implicit rather than fully specified.",
+      "adequacy_evidence": "Current agents can generate plausible captions from images and prompts but often miss nuanced intent (tone, editorial framing, key contextual facts), requiring human iteration to align with expectations.",
+      "_timestamp": "2026-04-06T05:52:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Writing a photograph caption typically involves a small, bounded set of information (the image content and possibly brief contextual details), which fits easily within working memory.",
+      "adequacy_evidence": "Current AI systems can reliably retain and use all relevant within-episode information for captioning without loss or drift, even with modest additional context.",
+      "_timestamp": "2026-04-06T05:52:19"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Photograph captioning is typically self-contained per image, relying on visible content and immediate context rather than accumulated cross-session history.",
+      "adequacy_evidence": "Since the task does not meaningfully depend on persistent cross-session memory, current agents\u2019 memory capabilities are sufficient.",
+      "_timestamp": "2026-04-06T05:52:20"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Writing photograph captions requires interpreting visual content (subjects, context, mood) and translating it into text, making image understanding integral to the task.",
+      "adequacy_evidence": "Current multimodal models can generate accurate captions for many images but still struggle with subtle context, intent, or fine-grained details in more complex or artistic photographs.",
+      "_timestamp": "2026-04-06T05:52:20"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Caption accuracy can be quickly checked by comparing the text directly to the photograph; mismatches (objects, actions, subjects) are usually obvious without specialized expertise.",
+      "adequacy_evidence": "AI systems can produce plausible but occasionally incorrect or hallucinated details, so captions require routine human review, though verification is fast and straightforward.",
+      "_timestamp": "2026-04-06T05:52:21"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Caption errors are usually low-stakes (e.g., minor misdescriptions or stylistic issues), and are easily corrected without significant downstream harm in most photography contexts.",
+      "adequacy_evidence": "After routine human review, AI-generated captions pose minimal residual risk, as remaining errors are typically obvious, non-critical, and easily fixable.",
+      "_timestamp": "2026-04-06T05:52:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit or restrict AI systems from writing photograph captions. This task is not regulated, and AI-generated captions are generally permissible across contexts.",
+      "_timestamp": "2026-04-06T05:52:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Photograph captions are typically consumed without regard to who authored them; the audience engages with the content itself rather than the identity of the caption writer.",
+      "adequacy_evidence": "AI-generated captions are already widely accepted in media, social platforms, and archives, with little to no stakeholder concern about authorship.",
+      "_timestamp": "2026-04-06T05:52:22"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Writing photograph captions is typically a short, self-contained task with minimal multi-step dependency or extended sequencing.",
+      "adequacy_evidence": "LLM-based agents can reliably produce consistent quality for short, single-step text generation without degradation over sequence length.",
+      "_timestamp": "2026-04-06T05:53:26"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Photograph captions are typically written post-production with no strict real-time requirement; minutes or longer are acceptable in most workflows.",
+      "adequacy_evidence": "Current AI can generate high-quality captions quickly (seconds) without needing extended reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T05:53:29"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "21-1011.00",
+  "task_id": 5586,
+  "task_statement": "Review and evaluate clients' progress in relation to measurable goals described in treatment and care plans.",
+  "occupation_title": "Substance Abuse and Behavioral Disorder Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Reviewing and evaluating client progress is typically done through electronic health records, notes, and assessments that can be accessed and analyzed on a computer. However, evaluations often rely on observations from in-person counseling sessions or meetings, which makes some instances not fully remote."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating client progress in substance abuse treatment requires nuanced interpretation of behavioral changes, relapse signals, motivation, and psychosocial context, which depend heavily on clinical judgment built through experience.",
+      "adequacy_evidence": "Current AI can track measurable indicators and compare against plans, but lacks robust experiential calibration for interpreting subtle, context-dependent signs of progress or regression across diverse client presentations.",
+      "_timestamp": "2026-04-06T05:44:20"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Although treatment plans include measurable goals, interpreting client progress requires contextual judgment about behavior, relapse risk, and psychosocial factors that are not fully explicit.",
+      "adequacy_evidence": "Current agents can track stated metrics but often miss nuanced clinical context and implicit signals, requiring human interpretation to fully resolve ambiguities.",
+      "_timestamp": "2026-04-06T05:44:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating treatment plans, prior session notes, and measurable goal metrics within a session, but the information volume is typically bounded and can be summarized.",
+      "adequacy_evidence": "Current agents can track and summarize multi-document context, but may omit subtle progress indicators or misweight details when compressing clinical histories.",
+      "_timestamp": "2026-04-06T05:44:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing client history, treatment goals, and current progress, then synthesizing across these elements to form an evaluation, requiring a multi-step but bounded reasoning sequence.",
+      "adequacy_evidence": "LLM-based agents can generally handle these structured review-and-compare workflows, but may show some degradation over longer or more complex client histories, with occasional omissions or inconsistency in tracking all goals.",
+      "_timestamp": "2026-04-06T05:44:21"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Client progress evaluation spans highly heterogeneous cases (different substances, comorbid mental health conditions, socio-economic contexts, and individualized treatment plans), making the instance distribution broad and long-tailed.",
+      "adequacy_evidence": "While guidelines, de-identified clinical notes, and synthetic roleplay data provide partial coverage, real-world longitudinal counseling data with detailed reasoning is often private and sparse, leaving some subpopulations underrepresented but not entirely inaccessible.",
+      "_timestamp": "2026-04-06T05:44:22"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing and evaluating client progress is typically done during scheduled sessions or documentation periods where minutes to hours are acceptable, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform this type of reflective analysis well within relaxed time constraints, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T05:44:22"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating client progress often incorporates non-textual cues such as observed behavior, affect, and possibly audio/video from sessions, though much is documented in text-based notes and standardized measures.",
+      "adequacy_evidence": "Current agents can process transcripts and some multimodal inputs, but remain unreliable at nuanced interpretation of affect, body language, and cross-modal clinical signals in complex cases.",
+      "_timestamp": "2026-04-06T05:44:22"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating client progress against treatment goals inherently depends on longitudinal tracking of behaviors, setbacks, milestones, and evolving care plans across many sessions.",
+      "adequacy_evidence": "Agents can store and retrieve structured case histories, but often struggle with nuanced synthesis of long-term behavioral patterns, subtle progress signals, and context drift across extended therapeutic timelines.",
+      "_timestamp": "2026-04-06T05:44:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing client progress involves interpreting nuanced behavioral changes, self-reports, and alignment with individualized treatment goals over time, which requires clinical judgment and is not easily reducible to simple checks.",
+      "adequacy_evidence": "AI-generated evaluations would require consistent clinician review to validate interpretations and ensure alignment with clinical context, but trained professionals can usually detect issues without extreme difficulty.",
+      "_timestamp": "2026-04-06T05:44:23"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Misjudging a client's progress can lead to inappropriate treatment adjustments or missed warning signs of relapse, which have meaningful but typically not immediately irreversible consequences.",
+      "adequacy_evidence": "Even with review processes, AI may misinterpret nuanced behavioral cues or self-reported data, leaving a non-trivial residual risk that could still affect care quality.",
+      "_timestamp": "2026-04-06T05:44:23"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Evaluating client progress in substance abuse counseling is embedded in an ongoing therapeutic relationship where trust, empathy, and perceived human understanding are central to client engagement and honesty.",
+      "adequacy_evidence": "Many clients would resist or disengage if evaluations were conducted by an AI rather than a human counselor, as acceptance depends heavily on perceived empathy and legitimacy, which current AI struggles to establish in this sensitive context.",
+      "_timestamp": "2026-04-06T05:44:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Behavioral health treatment evaluation and documentation are typically required to be performed and signed by a licensed clinician under state licensure laws and payer (e.g., Medicaid/insurance) regulations. These rules mandate a human credentialed provider as the responsible decision-maker, effectively prohibiting autonomous AI from performing the task independently.",
+      "_timestamp": "2026-04-06T05:44:24"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

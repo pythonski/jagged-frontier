@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1211.00",
+  "task_id": 3465,
+  "task_statement": "Test, maintain, and monitor computer programs and systems, including coordinating the installation of computer programs and systems.",
+  "occupation_title": "Computer Systems Analysts",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Testing, maintaining, monitoring software systems, and coordinating installations are typically performed via remote access, monitoring tools, and communication platforms. However, some installations or troubleshooting may occasionally require on-site coordination with physical hardware or infrastructure."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous systems, environments, architectures, and organizational contexts, including diverse software stacks, integration scenarios, and failure modes.",
+      "adequacy_evidence": "While extensive public documentation, logs, and examples exist for many systems, significant portions of real-world variation (e.g., proprietary configurations, internal infrastructure, and rare edge cases) are not fully captured but can be partially approximated via synthesis and tooling.",
+      "_timestamp": "2026-04-05T23:24:57"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many procedures are documented, effective testing, monitoring, and maintenance require experience-based judgment in interpreting ambiguous logs, diagnosing edge-case failures, and handling environment-specific quirks.",
+      "adequacy_evidence": "Current agents can follow documented procedures and analyze common failure patterns, but they still lack robust calibration for subtle, context-dependent system behaviors and atypical integration issues.",
+      "_timestamp": "2026-04-05T23:24:58"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing, maintenance, and system monitoring depend on implicit factors like organizational priorities, acceptable performance thresholds, and environment-specific constraints that are not always fully specified in documentation.",
+      "adequacy_evidence": "Current agents can infer many goals from logs, specs, and prior patterns, but they often miss organization-specific expectations or evolving constraints, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-05T23:24:59"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Testing, maintaining, and monitoring systems involves multi-step workflows (diagnosing issues, applying fixes, validating results, coordinating installations) where earlier steps directly affect later outcomes.",
+      "adequacy_evidence": "AI agents can manage multi-step IT workflows with tooling, but over extended sequences they show some drift (e.g., losing context, misordering steps), requiring oversight to maintain consistency.",
+      "_timestamp": "2026-04-05T23:24:59"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking system configurations, logs, dependencies, and installation steps across multiple tools, requiring active retrieval and summarization but typically within manageable scopes using standard tooling.",
+      "adequacy_evidence": "Current agents can use tools and external memory to handle logs and configs, but they still exhibit occasional context loss or imperfect summarization when juggling multiple information streams within a session.",
+      "_timestamp": "2026-04-05T23:24:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Testing, maintaining, and coordinating system installations are typically scheduled activities where minutes to hours of latency are acceptable rather than real-time responses.",
+      "adequacy_evidence": "Current AI agents can perform diagnostics, monitoring analysis, and coordination tasks well within these relaxed time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T23:25:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves working with code, logs, system configurations, and documentation, which are fundamentally text-based; any graphical interfaces or dashboards are supplementary and not essential to core task performance.",
+      "adequacy_evidence": "Current AI agents can effectively process and generate the text-based artifacts central to this task, and any minor visual elements (e.g., dashboards) are already well within existing multimodal capabilities.",
+      "_timestamp": "2026-04-05T23:25:00"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintaining and monitoring systems depends heavily on persistent knowledge of system configurations, past incidents, updates, and installation histories accumulated over time.",
+      "adequacy_evidence": "Current agents can store and retrieve logs, tickets, and configuration data via external systems, but often struggle with integrating and surfacing the most relevant historical context reliably across complex, evolving environments.",
+      "_timestamp": "2026-04-05T23:25:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI systems from testing, maintaining, monitoring, or coordinating installation of computer programs and systems; these activities are not legally restricted to human professionals.",
+      "_timestamp": "2026-04-05T23:25:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating installations and interacting with IT staff or end users, so stakeholders do engage with the performer, though the role is primarily technical rather than authority- or identity-driven.",
+      "adequacy_evidence": "Many organizations would accept AI assistance for monitoring and testing, but some resistance remains for coordination and troubleshooting roles where human judgment and accountability are expected.",
+      "_timestamp": "2026-04-05T23:25:02"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Residual errors in system testing, monitoring, or installation can cause outages, security vulnerabilities, or degraded performance, but most are detectable and recoverable without irreversible harm.",
+      "adequacy_evidence": "Even with standard QA and monitoring, AI may miss edge cases or integration issues, leaving a moderate level of residual risk that still requires human oversight to manage.",
+      "_timestamp": "2026-04-05T23:25:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing and monitoring workflows provide structured ways to detect errors (e.g., test suites, logs, alerts), but integration issues, edge cases, and performance regressions can require expertise and time to uncover.",
+      "adequacy_evidence": "AI-generated scripts, configurations, or analyses can often be validated with existing tools, but they still require careful review and testing because models frequently miss edge cases or introduce subtle system-level errors.",
+      "_timestamp": "2026-04-05T23:25:02"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

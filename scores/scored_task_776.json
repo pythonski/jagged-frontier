@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-6013.00",
+  "task_id": 776,
+  "task_statement": "Compile and record medical charts, reports, or correspondence, using typewriter or personal computer.",
+  "occupation_title": "Medical Secretaries and Administrative Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Compiling and recording charts, reports, or correspondence is largely done in electronic health record systems or documents on a computer, which can be performed remotely. However, many real-world instances still involve handling or referencing physical medical charts or documents within a clinic or hospital."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling and recording medical charts and correspondence is largely governed by standardized formats, documentation protocols, and explicit instructions rather than experiential judgment.",
+      "adequacy_evidence": "Current AI systems can reliably follow structured templates, transcription norms, and formatting rules, with little need for tacit calibration beyond what is already captured in documentation.",
+      "_timestamp": "2026-04-05T23:29:06"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple medical specialties, document types (charts, reports, correspondence), and formatting conventions, but remains within relatively standardized administrative workflows.",
+      "adequacy_evidence": "Large amounts of medical text and templates exist, and synthetic data can cover many cases, but real-world EHR-specific workflows and institution-specific documentation practices are often private and only partially represented.",
+      "_timestamp": "2026-04-05T23:29:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many elements are standardized (formats, terminology, templates), the task still involves interpreting physician notes, selecting appropriate formats, and aligning with implicit organizational or clinician-specific preferences.",
+      "adequacy_evidence": "Current AI systems can usually infer structure and conventions from context and templates, but they may miss subtle preferences or implicit priorities, requiring occasional human correction or clarification.",
+      "_timestamp": "2026-04-05T23:29:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step workflows such as gathering information, formatting documents, and ensuring consistency across entries, but sequences are relatively bounded and not deeply interdependent.",
+      "adequacy_evidence": "Frontier AI agents can reliably handle these moderate-length document preparation workflows with minimal degradation, maintaining consistency across steps using structured prompts and tools.",
+      "_timestamp": "2026-04-05T23:29:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating patient data, dictation, and formatting requirements from multiple sources within a single episode, requiring some active tracking and organization but not extreme scale or volatility.",
+      "adequacy_evidence": "Current agents can generally manage these context loads with structured inputs and tools, but may occasionally omit or mis-handle details when information is fragmented or lengthy.",
+      "_timestamp": "2026-04-05T23:29:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling and recording medical charts and correspondence is typically done with minutes-to-hours time horizons, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can produce high-quality documentation well within these time frames, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T23:29:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves entering, formatting, and organizing textual medical information into charts and documents; it is fundamentally text-in, text-out.",
+      "adequacy_evidence": "Current AI systems handle text processing, formatting, and document generation reliably, and any occasional audio or scanned input (e.g., dictation or OCR) is already well-supported.",
+      "_timestamp": "2026-04-05T23:29:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking medical terminology, patient identifiers, and consistency with source documents, which requires care and some domain familiarity but is routinely performed by staff.",
+      "adequacy_evidence": "AI systems can generate well-structured documentation but still introduce transcription errors, omissions, or incorrect details, requiring consistent human review to ensure accuracy.",
+      "_timestamp": "2026-04-05T23:29:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws prohibiting AI from compiling or recording medical documentation; tools may be used so long as HIPAA and data security requirements are met. Regulations constrain handling of patient data but do not mandate a human exclusively perform this task.",
+      "_timestamp": "2026-04-05T23:29:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Medical charts and reports directly inform clinical decisions; even small residual errors (e.g., in medications, allergies, or diagnoses) can have serious downstream consequences for patient safety.",
+      "adequacy_evidence": "With structured EHR systems and routine human review, many AI errors can be caught, but risks like subtle misentries or hallucinated details may still occasionally slip through, leaving some residual concern.",
+      "_timestamp": "2026-04-05T23:29:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The compiled charts and reports are used by clinicians, insurers, and administrative staff, so others rely on the output, but the identity of the preparer is not central as long as accuracy and completeness are ensured.",
+      "adequacy_evidence": "Healthcare settings already use automated documentation tools, and stakeholders generally accept AI-assisted record compilation provided outputs are accurate and compliant.",
+      "_timestamp": "2026-04-05T23:29:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task regularly involves updating and referencing patient records and prior correspondence across visits, but relies on structured record systems rather than complex evolving contextual memory.",
+      "adequacy_evidence": "Current AI systems integrated with electronic health records or databases can reliably store, retrieve, and update cross-session information, meeting the task\u2019s longitudinal memory needs.",
+      "_timestamp": "2026-04-05T23:29:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

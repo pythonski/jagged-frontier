@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3099.01",
+  "task_id": 17646,
+  "task_statement": "Explain contracts or related documents to customers.",
+  "occupation_title": "Energy Brokers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Explaining contracts can commonly be done via phone, video call, email, or screen sharing, but in many sales contexts it also occurs during in-person meetings with customers."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Explaining contracts to customers requires some experience-based judgment to gauge customer sophistication, highlight salient risks, and tailor explanations beyond the literal text.",
+      "adequacy_evidence": "Current agents can accurately summarize and explain contract terms, but often lack nuanced calibration in emphasizing what matters most for a specific customer or context, leading to moderate gaps.",
+      "_timestamp": "2026-04-06T00:01:35"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Energy contracts vary by supplier terms, pricing structures, regulatory contexts, and customer sophistication, creating a moderately diverse but still patterned set of explanation scenarios.",
+      "adequacy_evidence": "Large corpora of contracts, legal explanations, customer-facing summaries, and plain-language rewrites exist, and synthetic generation can cover remaining variants, providing ample process-level training signal.",
+      "_timestamp": "2026-04-06T00:01:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Explaining contracts typically involves multi-step dialogue\u2014breaking down clauses, answering follow-up questions, and maintaining consistency across the explanation\u2014but does not require extremely long or tightly coupled sequences.",
+      "adequacy_evidence": "AI agents can generally sustain coherent multi-turn explanations, but may exhibit some drift, inconsistency, or missed details over extended interactions, especially when tracking prior clarifications.",
+      "_timestamp": "2026-04-06T00:01:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tailoring explanations to each customer's knowledge level, concerns, and priorities, with implicit expectations about clarity, emphasis on risks, and relevance that are not fully specified in the documents themselves.",
+      "adequacy_evidence": "Current agents can generally infer user intent and provide clear explanations, but they often miss nuanced customer context or fail to adapt explanations optimally without iterative clarification.",
+      "_timestamp": "2026-04-06T00:01:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Explaining contracts is primarily a text- and language-based task involving reading documents and communicating their meaning verbally or in writing; non-text modalities are not essential.",
+      "adequacy_evidence": "Current AI agents handle text understanding and explanation well, and any optional audio or visual components (e.g., verbal explanation) are already adequately supported.",
+      "_timestamp": "2026-04-06T00:01:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Explaining energy contracts requires tracking multiple clauses (pricing, terms, penalties) and mapping them to a customer's situation, but the information volume is moderate and usually bounded within a single document or small set of documents.",
+      "adequacy_evidence": "Current agents can summarize and explain contracts reasonably well, but may occasionally omit or misrepresent specific clauses or fail to consistently track all relevant details across longer or more complex documents.",
+      "_timestamp": "2026-04-06T00:01:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Explaining contracts can benefit from prior knowledge of a customer's history, preferences, or past agreements, but many explanations can be done using the current document alone.",
+      "adequacy_evidence": "Current AI systems with CRM integrations and retrieval can reliably store and recall customer-specific context across sessions, and the memory demands are modest enough to be well handled.",
+      "_timestamp": "2026-04-06T00:01:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Explanations are typically delivered in live or near-live customer interactions, where responses are expected within seconds to a minute, but not instantaneously.",
+      "adequacy_evidence": "Frontier AI systems can generate clear, accurate explanations of contracts within seconds, so meeting latency expectations does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T00:01:37"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Explaining contracts requires accurately interpreting legal language, obligations, and edge cases; mistakes can be subtle and may not be obvious without domain expertise or careful cross-checking against the original document.",
+      "adequacy_evidence": "Current AI systems can misinterpret clauses, omit caveats, or oversimplify terms, and these errors are not always easily detectable without expert review, making thorough checking necessary in practice.",
+      "_timestamp": "2026-04-06T00:01:38"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Customers directly engage with the broker to understand contract terms, ask questions, and rely on the broker\u2019s perceived expertise and trustworthiness to make decisions.",
+      "adequacy_evidence": "While some customers are increasingly comfortable with AI explanations, many still prefer a human for trust, clarification, and accountability when interpreting contractual obligations.",
+      "_timestamp": "2026-04-06T00:01:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Misexplaining contract terms (rates, fees, obligations) can lead to financial harm or disputes, but errors are typically discoverable and not immediately catastrophic.",
+      "adequacy_evidence": "Even after review, AI can subtly misinterpret legal or pricing nuances, leaving a non-trivial risk of misleading explanations that remains problematic but not prohibitive.",
+      "_timestamp": "2026-04-06T00:01:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from explaining contracts to customers in the energy brokerage context. While brokers themselves may need licenses and must comply with consumer protection and disclosure rules, these do not forbid the use of AI as a tool for explanation.",
+      "_timestamp": "2026-04-06T00:01:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

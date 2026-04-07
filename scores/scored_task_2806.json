@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-6014.00",
+  "task_id": 2806,
+  "task_statement": "Provide services to customers, such as order placement or account information.",
+  "occupation_title": "Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Providing customer services like order placement or account information is typically handled via phone, email, or computer systems, which can be done remotely. However, administrative assistants often also assist walk-in customers or provide information at a physical front desk, requiring in-person interaction in some cases."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer service interactions vary across industries, customer intents, and edge cases (complaints, complex accounts), but follow broadly recurring patterns and scripts.",
+      "adequacy_evidence": "Large-scale call center transcripts, chat logs, CRM records, and synthetic dialogue generation provide rich, process-level data covering most interaction types, making representative training feasible.",
+      "_timestamp": "2026-04-06T01:27:21"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customer requests are often phrased informally or incompletely, requiring interpretation of intent (e.g., clarifying order details or account issues) and adapting to context.",
+      "adequacy_evidence": "Current AI agents can usually infer intent in routine service interactions but still misinterpret ambiguous or nuanced requests, requiring follow-up clarification or human oversight.",
+      "_timestamp": "2026-04-06T01:27:21"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Most interactions follow established procedures and scripts, but some situations require experience-based judgment in handling exceptions, interpreting customer intent, or adapting communication tone.",
+      "adequacy_evidence": "Current AI agents handle routine requests well but show gaps in nuanced judgment for atypical cases, such as resolving ambiguous customer needs or balancing policy with customer satisfaction.",
+      "_timestamp": "2026-04-06T01:27:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing order placement or account information is primarily conducted through text or spoken language, with little inherent need for visual or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents handle text and speech interactions well, and the limited multimodal demands (e.g., optional voice interfaces) are already well supported.",
+      "_timestamp": "2026-04-06T01:27:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer service interactions like order placement or account inquiries involve short multi-step workflows (gathering info, verifying, executing, confirming) with some interdependence across steps.",
+      "adequacy_evidence": "Frontier AI agents with tool use can reliably maintain coherence over these relatively short sequences, with little noticeable degradation or compounding error.",
+      "_timestamp": "2026-04-06T01:27:23"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer service interactions like order placement or account inquiries typically expect responses within seconds to a minute, but do not require instant real-time precision under extreme time pressure.",
+      "adequacy_evidence": "Frontier AI agents can generate accurate responses within these time bounds without needing to truncate reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T01:27:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer service interactions often rely on existing account records, prior orders, or customer preferences, but this information is typically stored in external systems rather than requiring rich, evolving memory within the agent itself.",
+      "adequacy_evidence": "Current AI agents can reliably integrate with databases and CRM systems to retrieve and update cross-session information, so persistent memory needs for this task are well supported.",
+      "_timestamp": "2026-04-06T01:27:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking customer details, requests, account data, and possibly multiple steps (e.g., verifying identity, updating orders), but the information volume is moderate and typically structured within a single interaction.",
+      "adequacy_evidence": "Well-scaffolded agents with retrieval and tool use can reliably maintain and reference this level of contextual information within a session, with minimal loss or drift.",
+      "_timestamp": "2026-04-06T01:27:24"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors like incorrect order placement or miscommunicated account information have noticeable consequences but are typically reversible and do not create severe or irreversible harm.",
+      "adequacy_evidence": "With standard safeguards such as confirmation steps, audit logs, and human oversight for exceptions, current AI systems can reduce residual error risk to an acceptable level for this task.",
+      "_timestamp": "2026-04-06T01:27:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Outputs like order entries or account details can be cross-checked against databases, confirmations, and customer feedback, but verification requires attention and sometimes system access rather than being fully automatic.",
+      "adequacy_evidence": "Current AI agents can perform these tasks but still make occasional factual or procedural errors, so routine human or system-level verification (e.g., confirmation screens, audits) remains necessary.",
+      "_timestamp": "2026-04-06T01:27:25"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves direct interaction with customers who rely on the information or service provided, but it does not typically depend on strong personal authority or deep relational trust.",
+      "adequacy_evidence": "Customers are already widely accustomed to interacting with AI systems (e.g., chatbots, automated phone agents) for order placement and account information, with minimal resistance in routine cases.",
+      "_timestamp": "2026-04-06T01:27:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations broadly prohibiting AI from providing customer service functions like order placement or account information. While sector-specific rules (e.g., privacy or disclosure requirements) may govern how it is done, they do not ban AI from performing the task.",
+      "_timestamp": "2026-04-06T01:27:26"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

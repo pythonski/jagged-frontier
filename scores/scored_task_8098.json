@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3031.01",
+  "task_id": 8098,
+  "task_statement": "Analyze market conditions to determine optimum times to execute securities transactions.",
+  "occupation_title": "Securities, Commodities, and Financial Services Sales Agents",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Analyzing market conditions for securities trading is performed using digital market data, analytics platforms, and financial software, all of which can be accessed remotely on a computer with internet access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining optimal trade timing relies heavily on experiential judgment about market sentiment, liquidity, behavioral patterns, and interpreting ambiguous signals beyond formal indicators.",
+      "adequacy_evidence": "Current AI can model many signals and patterns but lacks fully reliable real-time calibration to shifting market regimes and nuanced trader intuition, leading to gaps in edge cases and regime changes.",
+      "_timestamp": "2026-04-06T04:09:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining 'optimum' timing depends on partially implicit factors like client risk tolerance, investment horizon, and interpretation of market signals, requiring contextual judgment beyond explicit rules.",
+      "adequacy_evidence": "Current agents can incorporate stated parameters and analyze data, but often miss nuanced or shifting client objectives and require human iteration to align timing decisions with true intent.",
+      "_timestamp": "2026-04-06T04:09:05"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Market timing depends on highly heterogeneous conditions across asset classes, macro regimes, microstructure states, and rare events, creating a long-tailed, context-sensitive distribution.",
+      "adequacy_evidence": "There is extensive historical market data, research, and simulated environments, but key elements like proprietary trading strategies, real-time order flow, and expert decision processes are only partially accessible or reconstructable.",
+      "_timestamp": "2026-04-06T04:09:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires synthesizing multiple contemporaneous inputs (price movements, indicators, news, macro signals), but these can be structured and selectively retrieved rather than held in full detail simultaneously.",
+      "adequacy_evidence": "Current agents can offload much of this to tools and retrieval systems, but still show some context drift or imperfect prioritization when integrating rapidly changing or numerous signals within a single analysis episode.",
+      "_timestamp": "2026-04-06T04:09:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis (gathering market data, evaluating indicators, synthesizing signals) where intermediate reasoning affects conclusions, but sequences are not extremely long or tightly interdependent.",
+      "adequacy_evidence": "Frontier AI agents can sustain coherent multi-step financial analysis with tools, though some degradation (e.g., inconsistency or missed signals) can occur as reasoning chains lengthen.",
+      "_timestamp": "2026-04-06T04:09:07"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from awareness of prior market patterns, client preferences, or ongoing strategies, but most required information (market data, indicators) can be freshly retrieved each session rather than relying on persistent internal memory.",
+      "adequacy_evidence": "Current AI systems can reliably access external databases, historical market data, and stored client profiles across sessions, so cross-session memory needs are well supported by existing tooling.",
+      "_timestamp": "2026-04-06T04:09:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily relies on numerical time series, textual reports, and structured financial data; while charts or visualizations may assist, they are not essential to competent analysis.",
+      "adequacy_evidence": "Current AI agents can effectively process structured financial data and text, and can optionally interpret charts when used, so there is no meaningful multimodal shortfall.",
+      "_timestamp": "2026-04-06T04:09:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Mistiming securities transactions can lead to meaningful financial losses or missed gains, but these are typically bounded and survivable rather than catastrophic or irreversible.",
+      "adequacy_evidence": "Even after standard checks, AI-driven timing judgments remain error-prone due to market volatility and unpredictability, leaving a moderate level of residual risk that can impact outcomes.",
+      "_timestamp": "2026-04-06T04:09:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing optimal timing depends on interpreting noisy, dynamic market signals with no immediate ground truth; errors may only become evident after significant time or through counterfactual analysis requiring expert judgment.",
+      "adequacy_evidence": "Current AI systems can produce plausible but unreliable market analyses, often missing regime shifts or overfitting patterns, so substantial expert review and validation are required to detect subtle but consequential errors.",
+      "_timestamp": "2026-04-06T04:09:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The analysis informs trading decisions for clients or internal desks, so stakeholders rely on the output, but the identity of the analyst is not usually central to the task itself.",
+      "adequacy_evidence": "Algorithmic and AI-driven market analysis is already common, but some clients and firms still prefer human oversight or judgment, leading to moderate resistance rather than full acceptance.",
+      "_timestamp": "2026-04-06T04:09:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Optimal trade timing often depends on rapidly changing market data, where delays of seconds can materially affect outcomes, especially in volatile conditions.",
+      "adequacy_evidence": "LLM-based agents can analyze data quickly with tooling, but achieving high-quality, context-rich reasoning under strict real-time constraints can require truncation or simplification, reducing performance in fast-moving scenarios.",
+      "_timestamp": "2026-04-06T04:09:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing market analysis, and algorithmic/AI-driven trading is widely permitted. However, broker-dealer regulations (e.g., SEC/FINRA supervision, fiduciary duties, and licensing requirements) require accountable human oversight, creating partial constraints rather than full autonomy.",
+      "_timestamp": "2026-04-06T04:09:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

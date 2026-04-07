@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "39-6012.00",
+  "task_id": 20263,
+  "task_statement": "Arrange childcare services for guests.",
+  "occupation_title": "Concierges",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Arranging childcare typically involves contacting providers, checking availability, and making bookings via phone, email, or online platforms, which can be done entirely on a computer with internet access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate childcare involves judging provider reliability, safety, cultural fit, and guest preferences, which often relies on experience with local options and nuanced client expectations beyond explicit criteria.",
+      "adequacy_evidence": "Agents can match stated requirements to databases and reviews, but they lack grounded, experience-based calibration about provider trustworthiness and subtle fit, leading to weaker performance in edge or high-stakes cases.",
+      "_timestamp": "2026-04-06T00:50:29"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderately diverse cases (different ages, special needs, cultural preferences, locations, and urgency levels) but follows fairly standard service-matching and vetting patterns.",
+      "adequacy_evidence": "There is abundant accessible data (concierge procedures, childcare platforms, reviews, regulations) and clear process examples, enabling training pipelines to cover the relevant distribution well.",
+      "_timestamp": "2026-04-06T00:50:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Guest needs (children\u2019s ages, special requirements, budget, language, timing, safety expectations) are often not fully specified upfront and must be elicited and interpreted.",
+      "adequacy_evidence": "Agents can gather requirements through structured questioning, but they still miss subtle preferences (e.g., trust, cultural expectations, nuanced safety concerns) without human-like contextual judgment.",
+      "_timestamp": "2026-04-06T00:50:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking guest details (children\u2019s ages, schedules, preferences, special needs) and matching them with available childcare providers, requiring moderate coordination of multiple information sources.",
+      "adequacy_evidence": "Current agents can reliably manage and organize this level of structured, within-episode information using tools and memory without significant loss or misretrieval.",
+      "_timestamp": "2026-04-06T00:50:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Arranging childcare for guests is typically a one-off, self-contained request handled per stay, with minimal need for retaining information across sessions.",
+      "adequacy_evidence": "Current AI systems can store and retrieve simple guest preferences if needed, and the task does not depend on complex longitudinal memory beyond what existing tools support.",
+      "_timestamp": "2026-04-06T00:50:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple coordinated steps\u2014understanding guest needs, identifying suitable providers, checking availability, booking, and confirming arrangements\u2014where consistency matters across steps but sequences are not deeply interdependent or long.",
+      "adequacy_evidence": "Frontier agents can manage multi-step service coordination with tools, but may show mild degradation such as missed constraints or minor coordination errors over several steps, especially without tight oversight.",
+      "_timestamp": "2026-04-06T00:50:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Arranging childcare services primarily involves gathering preferences, contacting providers, and scheduling via text or phone; it does not inherently require image, audio, or other non-text inputs or outputs.",
+      "adequacy_evidence": "Since the task is effectively text-based coordination, current AI agents can handle the modality demands without limitation.",
+      "_timestamp": "2026-04-06T00:50:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Arranging childcare typically allows several minutes or longer to research options, contact providers, and confirm availability; immediate real-time responses are not required.",
+      "adequacy_evidence": "Current AI agents can gather options and draft arrangements well within acceptable timeframes without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T00:50:31"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from arranging or recommending childcare services. While childcare providers themselves are regulated and licensed, the act of coordinating or referring services is not restricted to licensed human agents.",
+      "_timestamp": "2026-04-06T00:50:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Guests rely on the concierge to identify trustworthy childcare providers and may value reassurance and judgment, but the role does not require deep personal authority or emotional bonding.",
+      "adequacy_evidence": "Many guests would accept AI-assisted concierge services, but some may hesitate to trust an AI with sensitive childcare arrangements, especially regarding safety and vetting quality.",
+      "_timestamp": "2026-04-06T00:50:33"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Childcare involves safety of minors; even rare errors in vetting, availability, or special needs matching can have serious consequences, so very little residual risk is tolerable.",
+      "adequacy_evidence": "AI can verify credentials, reviews, and requirements, but risks like misjudging provider quality or missing subtle red flags remain, leaving some non-trivial residual risk after standard checks.",
+      "_timestamp": "2026-04-06T00:50:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Key details (availability, licensing, location, pricing) can be verified through confirmations and records, but some issues like provider reliability or quality may only surface during service delivery.",
+      "adequacy_evidence": "AI may select outdated or incorrect providers or mis-handle booking details, requiring human follow-up calls or checks to ensure accuracy and appropriateness.",
+      "_timestamp": "2026-04-06T00:50:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2023.00",
+  "task_id": 21570,
+  "task_statement": "Obtain county land values and sales information about nearby properties to aid in establishment of property values.",
+  "occupation_title": "Appraisers and Assessors of Real Estate",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "County land values and comparable sales data are commonly accessed through online public records, MLS systems, and digital databases, but in some jurisdictions appraisers may still need to retrieve records from county offices or physical archives."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While much of the task involves procedural data retrieval from public records and databases, some experience-based judgment is used in identifying relevant comparable properties and filtering out anomalous sales.",
+      "adequacy_evidence": "Current AI agents with access to real estate databases and retrieval tools can reliably gather and filter comparable sales data using explicit criteria, with minimal reliance on tacit human calibration.",
+      "_timestamp": "2026-04-06T04:56:15"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple counties, property types, and data systems with varying formats and access methods, but follows broadly similar data-gathering patterns across cases.",
+      "adequacy_evidence": "Public records, assessor databases, and documented appraisal workflows provide substantial coverage, though some key sources (e.g., MLS data) are proprietary or restricted, leaving partial gaps.",
+      "_timestamp": "2026-04-06T04:56:15"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting relevant comparable properties and interpreting county land values requires contextual judgment about proximity, property characteristics, market conditions, and intended use, which are not fully specified in the task description.",
+      "adequacy_evidence": "Current agents can retrieve and filter property data but often struggle to consistently infer nuanced comparability criteria or purpose-specific adjustments without iterative human guidance.",
+      "_timestamp": "2026-04-06T04:56:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps\u2014identifying relevant counties, querying records, filtering comparable properties, and compiling results\u2014but these steps are loosely coupled and do not require long, tightly interdependent sequences.",
+      "adequacy_evidence": "Frontier AI agents with tool use can reliably execute multi-step data retrieval and filtering workflows without significant degradation, as the sequence length and dependency complexity are moderate.",
+      "_timestamp": "2026-04-06T04:56:16"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering and comparing multiple property records, sales data, and county assessments, requiring organization and synthesis of several data points within a single workflow.",
+      "adequacy_evidence": "Current agents with tool use and retrieval can reliably track and structure this level of information (e.g., comps, prices, locations) without significant loss or confusion within a single session.",
+      "_timestamp": "2026-04-06T04:56:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves retrieving and analyzing structured records such as county databases, sales reports, and property listings, which are text and numeric in nature; maps or images are supplementary, not essential.",
+      "adequacy_evidence": "Current AI agents can effectively access, parse, and synthesize structured and textual property data sources, with no meaningful multimodal limitations affecting performance.",
+      "_timestamp": "2026-04-06T04:56:17"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Gathering county land values and nearby property sales is a research task using public records and databases, typically performed over minutes to hours without strict real-time constraints.",
+      "adequacy_evidence": "Current AI agents can query databases, retrieve comparable sales, and compile summaries well within acceptable timeframes, with no meaningful quality loss due to latency.",
+      "_timestamp": "2026-04-06T04:56:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each appraisal instance typically involves independently gathering current county records and comparable sales data; prior cases are not required to complete the task.",
+      "adequacy_evidence": "Agents can reliably retrieve needed property and sales data on demand from external sources, so lack of persistent cross-session memory does not hinder performance.",
+      "_timestamp": "2026-04-06T04:56:17"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from gathering county land values and comparable sales data, as these are typically public records or commercially accessible datasets. Licensing requirements apply to performing and signing appraisals, not to collecting market data.",
+      "_timestamp": "2026-04-06T04:56:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inaccuracies in property value data can affect appraisals and financial decisions, but errors are usually correctable and rarely cause irreversible harm on their own.",
+      "adequacy_evidence": "Data can be cross-checked against public records and multiple sources, so after normal verification, AI-introduced errors are unlikely to leave unacceptable residual risk.",
+      "_timestamp": "2026-04-06T04:56:19"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves retrieving publicly available property and sales data from records or databases, with minimal reliance on interpersonal interaction or stakeholder perception of the performer.",
+      "adequacy_evidence": "Data providers (e.g., county databases, MLS systems) are largely indifferent to whether queries are made by humans or automated systems, and AI-based retrieval is already widely accepted.",
+      "_timestamp": "2026-04-06T04:56:19"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Data on land values and comparable sales can be cross-checked against public records, MLS databases, and county assessor sources, but requires some domain knowledge to ensure correct parcel matching and relevant comparables.",
+      "adequacy_evidence": "AI systems can retrieve and summarize property data but may select incorrect comparables, outdated records, or mismatched parcels, requiring routine but not extreme human verification.",
+      "_timestamp": "2026-04-06T04:56:29"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

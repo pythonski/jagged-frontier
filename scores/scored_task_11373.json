@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5061.00",
+  "task_id": 11373,
+  "task_statement": "Contact suppliers to verify shipment details.",
+  "occupation_title": "Production, Planning, and Expediting Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Verifying shipment details with suppliers is typically done via email, phone, messaging, or supplier/ERP systems, all of which can be handled remotely using a computer and internet access. In-person contact with suppliers is not required for this task."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderate variation across suppliers, communication channels (email, phone), shipment types, and exception cases, but follows relatively standardized verification patterns.",
+      "adequacy_evidence": "Extensive email corpora, customer service logs, and synthetic dialogue generation provide strong coverage of both typical and edge-case interactions, including step-by-step verification processes.",
+      "_timestamp": "2026-04-05T20:46:55"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence of steps such as initiating contact, requesting details, and recording or confirming responses, with some need for consistency across interactions.",
+      "adequacy_evidence": "Current AI agents can reliably manage short multi-step communication workflows (e.g., drafting messages, tracking replies) without meaningful degradation over this limited sequence length.",
+      "_timestamp": "2026-04-05T20:46:56"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking order identifiers, shipment quantities, dates, and supplier responses across a short interaction, requiring some coordination of multiple data points but not large-scale information management.",
+      "adequacy_evidence": "Current agents with tool integration (CRM/ERP access, note-taking) can reliably store, retrieve, and update these details within a single episode without significant context loss.",
+      "_timestamp": "2026-04-05T20:46:56"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is largely procedural (confirming dates, quantities, tracking info) but can involve some experience-based judgment in handling discrepancies, supplier responsiveness, or escalation tone.",
+      "adequacy_evidence": "Current AI agents can reliably follow communication protocols, adapt phrasing, and handle common exceptions using available context, with little residual need for human-like tacit calibration.",
+      "_timestamp": "2026-04-05T20:46:56"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task has generally clear goals (confirm shipment quantities, dates, tracking, discrepancies), but some context-specific judgment is needed about what details matter or when to escalate issues.",
+      "adequacy_evidence": "Current agents can reliably infer standard verification objectives, use templates or checklists, and iteratively clarify missing details with suppliers, handling the modest ambiguity effectively.",
+      "_timestamp": "2026-04-05T20:46:57"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Verifying shipment details sometimes relies on prior order records, supplier histories, and ongoing shipment tracking, but each contact is largely anchored in a specific transaction with limited longitudinal dependency.",
+      "adequacy_evidence": "Current AI systems with standard database/CRM integrations can reliably store and retrieve supplier records and past shipment data across sessions, meeting these modest cross-session memory needs.",
+      "_timestamp": "2026-04-05T20:46:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying shipment details is primarily conducted via text (email, messaging, or data systems), with occasional phone calls that do not require complex audio or visual interpretation.",
+      "adequacy_evidence": "Current AI agents can handle text communication and basic voice interactions effectively, with no meaningful multimodal gaps for this task.",
+      "_timestamp": "2026-04-05T20:46:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Verifying shipment details often involves emails or phone calls where responses are expected within seconds to minutes, especially in live conversations, but not at sub-second or safety-critical speeds.",
+      "adequacy_evidence": "Current AI agents can generate accurate, context-appropriate questions and responses well within these time constraints, as the reasoning required is relatively straightforward and does not demand extended deliberation.",
+      "_timestamp": "2026-04-05T20:46:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves cross-checking supplier responses against purchase orders, shipping documents, or system records; this requires some attention and follow-up but is routine and not deeply complex.",
+      "adequacy_evidence": "AI agents can draft and track communications, but errors (e.g., misinterpreting responses or missing discrepancies) occur often enough that human review and reconciliation are still needed.",
+      "_timestamp": "2026-04-05T20:46:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI systems from contacting suppliers to verify shipment details; such communication can be automated via email or phone within existing commercial and telecom regulations.",
+      "_timestamp": "2026-04-05T20:46:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in verifying shipment details can cause delays, inventory mismatches, or scheduling issues, but these are typically detectable and correctable with limited long-term impact.",
+      "adequacy_evidence": "AI systems can reliably confirm and document shipment details via structured communication, and standard confirmation practices (e.g., written records, cross-checks) reduce residual risk to acceptable levels.",
+      "_timestamp": "2026-04-05T20:47:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires interacting with external suppliers to confirm shipment details, so another party must engage with the performer, though the role does not rely heavily on personal authority or rapport.",
+      "adequacy_evidence": "Suppliers already commonly interact with automated systems (e.g., EDI messages, automated emails, chatbots), so AI agents are broadly acceptable and unlikely to face meaningful resistance in this context.",
+      "_timestamp": "2026-04-05T20:47:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9111.01",
+  "task_id": 17708,
+  "task_statement": "Monitor database performance and perform any necessary maintenance, upgrades, or repairs.",
+  "occupation_title": "Statistical Assistants",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Monitoring database performance and performing database maintenance, upgrades, or repairs are software administration activities done through database management tools and remote server access, which can be performed entirely on a computer without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different database systems, workloads, performance issues, and failure modes, but these fall into recurring, moderately diverse patterns rather than a highly long-tailed space.",
+      "adequacy_evidence": "There is abundant documentation, logs, benchmarks, and simulated environments for common cases, but real-world edge-case failures and production-specific configurations are often private or underrepresented.",
+      "_timestamp": "2026-04-06T00:17:34"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing database performance issues and choosing appropriate maintenance or upgrade actions often involves experience-based judgment about tradeoffs (e.g., indexing strategies, query tuning, resource contention) beyond fixed rules.",
+      "adequacy_evidence": "Current agents can handle many standard monitoring and optimization scenarios using logs and best practices, but they still lack robust calibration for complex, context-specific performance pathologies and system interactions.",
+      "_timestamp": "2026-04-06T00:17:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Performance monitoring and maintenance rely on implicit thresholds (e.g., acceptable latency, uptime, cost tradeoffs) and organizational priorities that are not fully specified in the task statement.",
+      "adequacy_evidence": "Agents can use metrics, logs, and best practices to infer many actions, but often miss context-specific priorities or risk tolerances without human guidance, requiring iteration.",
+      "_timestamp": "2026-04-06T00:17:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking multiple performance metrics, logs, system states, and maintenance actions within a session, requiring integration of evolving technical information but typically supported by monitoring tools.",
+      "adequacy_evidence": "Current agents can use tools to retrieve and summarize logs and metrics, but may lose track of evolving system state or overlook relevant signals when context becomes moderately complex.",
+      "_timestamp": "2026-04-06T00:17:35"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Database monitoring can involve responding to alerts within seconds to minutes, but most maintenance, upgrades, and repairs allow short delays for diagnosis and planning.",
+      "adequacy_evidence": "Frontier agents can quickly analyze metrics, logs, and diagnostics within the available time, with little need to truncate reasoning to meet latency constraints.",
+      "_timestamp": "2026-04-06T00:17:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Database performance monitoring often involves interpreting dashboards, graphs, and visual metrics (e.g., query latency charts, resource utilization plots) alongside textual logs and commands.",
+      "adequacy_evidence": "Current agents can interpret many standard visualizations and logs, but may struggle with complex, custom dashboards or nuanced visual patterns in performance data.",
+      "_timestamp": "2026-04-06T00:17:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring database performance benefits from historical trends, prior incidents, and maintenance records, but much of this information is stored in logs and monitoring systems rather than requiring deep implicit memory.",
+      "adequacy_evidence": "Current AI agents can integrate with logging, monitoring, and database tools to retrieve and persist cross-session state reliably, so longitudinal context is generally accessible when needed.",
+      "_timestamp": "2026-04-06T00:17:36"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (monitoring metrics, diagnosing issues, applying fixes, validating outcomes), but these are typically modular and not extremely long or tightly coupled sequences.",
+      "adequacy_evidence": "AI agents can generally sustain coherence across these moderate sequences using tools and scripts, though performance can degrade during extended troubleshooting or iterative repair cycles.",
+      "_timestamp": "2026-04-06T00:17:36"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Database performance issues can often be detected via monitoring tools and metrics, but diagnosing root causes or confirming correct maintenance actions requires technical expertise and may involve non-obvious system interactions.",
+      "adequacy_evidence": "AI can assist with monitoring and suggest fixes, but its recommendations still need human validation using logs, benchmarks, and system knowledge, creating a moderate but manageable verification burden.",
+      "_timestamp": "2026-04-06T00:17:37"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit AI systems from monitoring database performance or performing maintenance tasks. While regulated industries may impose data security and access controls, these do not restrict AI from executing such functions.",
+      "_timestamp": "2026-04-06T00:17:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Database maintenance errors can degrade performance, cause downtime, or risk data integrity, but most issues are detectable and recoverable (e.g., via backups, monitoring alerts).",
+      "adequacy_evidence": "Even with monitoring and validation, AI systems may still introduce subtle misconfigurations or miss edge-case failures, leaving some non-trivial residual risk in production environments.",
+      "_timestamp": "2026-04-06T00:17:37"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily internal, involving system performance monitoring and maintenance with no direct interaction with external stakeholders where performer identity matters.",
+      "adequacy_evidence": "Database maintenance is already heavily automated and stakeholders are indifferent to whether a human or AI performs it, as long as performance and reliability are maintained.",
+      "_timestamp": "2026-04-06T00:17:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

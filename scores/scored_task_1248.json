@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2011.02",
+  "task_id": 1248,
+  "task_statement": "Examine records, tax returns, and related documents pertaining to settlement of decedent's estate.",
+  "occupation_title": "Accountants and Auditors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "The task primarily involves reviewing records and tax documents, which are often stored and examined electronically. However, some cases still require handling or accessing physical documents in offices, archives, or probate records."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estate settlements span varied asset types, jurisdictions, and document sets, but follow relatively structured tax, probate, and accounting conventions with recurring patterns.",
+      "adequacy_evidence": "While many tax forms, audit examples, and probate documents are publicly available or synthesizable, real-world estate records are often private and nuanced, leaving some subcases underrepresented in training data.",
+      "_timestamp": "2026-04-05T22:35:14"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing estate-related financial records involves applying tax rules but also interpreting ambiguous transactions, spotting inconsistencies, and exercising judgment on valuation and compliance issues that benefit from experience.",
+      "adequacy_evidence": "Current AI can follow tax rules and flag anomalies but lacks consistent calibration in nuanced or borderline cases (e.g., intent, unusual asset structures), leading to gaps in non-routine professional judgment.",
+      "_timestamp": "2026-04-05T22:35:14"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on applying tax law, probate rules, and case-specific context to determine what to look for (e.g., assets, liabilities, compliance issues), so some goals and criteria must be inferred rather than explicitly stated.",
+      "adequacy_evidence": "Current agents can follow general audit/tax review procedures but often miss jurisdiction-specific nuances or implicit priorities, requiring human guidance to fully align with the intended scope.",
+      "_timestamp": "2026-04-05T22:35:15"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple interrelated documents (tax returns, financial records, legal filings) and cross-checking consistency, requiring a multi-step but not deeply interdependent sequence.",
+      "adequacy_evidence": "AI agents can handle multi-document analysis but may show some degradation in tracking details and maintaining consistency across longer document sets, leading to moderate error accumulation.",
+      "_timestamp": "2026-04-05T22:35:16"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Examining estate settlement records requires integrating large volumes of heterogeneous financial documents (tax returns, legal filings, asset records), where missing or misaligning details can materially affect conclusions.",
+      "adequacy_evidence": "Agents can offload and retrieve documents using tools, but still show moderate weaknesses in consistently tracking and compressing complex, interrelated financial details across many sources within a single workflow.",
+      "_timestamp": "2026-04-05T22:35:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Estate settlement reviews often span multiple sessions and require recalling prior examined documents, findings, and case context, but this information is typically well-documented and case-bounded rather than evolving across many unrelated instances.",
+      "adequacy_evidence": "Current AI systems can reliably store, index, and retrieve case documents and prior analyses using standard document management and retrieval tools, with minimal loss of necessary cross-session context.",
+      "_timestamp": "2026-04-05T22:35:17"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and interpreting structured and unstructured text documents (e.g., tax returns, financial records), which are fundamentally text-based even when presented as PDFs or forms.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing handle these text-based formats reliably, with minimal dependence on advanced multimodal reasoning.",
+      "_timestamp": "2026-04-05T22:35:17"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing estate records and tax documents is typically a deliberate, offline process where thoroughness is prioritized over speed; minutes to hours (or longer) are acceptable.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to analyze documents without harming task quality, as there is no strict latency pressure forcing rushed reasoning.",
+      "_timestamp": "2026-04-05T22:35:18"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Reviewing estate settlement documents involves detecting subtle inconsistencies, compliance issues, and valuation errors across complex financial and legal records, often requiring expert judgment and cross-document reconciliation.",
+      "adequacy_evidence": "Current AI systems can miss nuanced tax law implications, misinterpret documents, or overlook inconsistencies, meaning thorough expert review is still necessary and nontrivial to ensure correctness.",
+      "_timestamp": "2026-04-05T22:35:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in examining estate records and tax filings can lead to incorrect tax liabilities, legal disputes among beneficiaries, penalties, or regulatory violations, so even rare residual mistakes can have serious financial and legal consequences.",
+      "adequacy_evidence": "While human review and reconciliation checks can catch many AI errors, current systems may still miss nuanced legal or contextual issues in estate documents, leaving some non-trivial residual risk after standard quality control.",
+      "_timestamp": "2026-04-05T22:35:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "No law explicitly prohibits AI from examining financial and tax documents, but CPA licensure and IRS practice rules require qualified humans to take responsibility for tax advice, representation, and signed work, creating partial constraints on fully autonomous AI performance.",
+      "_timestamp": "2026-04-05T22:35:20"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task supports estate settlement for clients, executors, and possibly courts, so stakeholders rely on the output, but the work itself is largely internal document examination rather than direct interaction.",
+      "adequacy_evidence": "Stakeholders may be somewhat cautious about AI handling sensitive financial and tax records, but are generally willing to accept AI-assisted analysis if overseen by a human professional.",
+      "_timestamp": "2026-04-05T22:35:20"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

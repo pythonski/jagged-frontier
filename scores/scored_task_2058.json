@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9095.00",
+  "task_id": 2058,
+  "task_statement": "Process medical insurance claims, posting bill amounts and calculating copayments.",
+  "occupation_title": "Pharmacy Aides",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Processing insurance claims, posting charges, and calculating copayments are performed through pharmacy or insurance billing software on a computer. However, in pharmacy aide roles this task is commonly tied to the in\u2011person prescription intake and checkout workflow within the pharmacy."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple insurance plans, billing codes, formularies, and edge cases (e.g., prior authorizations, coordination of benefits), but follows structured, rule-based patterns within a bounded domain.",
+      "adequacy_evidence": "Large volumes of billing guidelines, claims data (often de-identified), and procedural documentation exist, but insurer-specific rules and proprietary adjudication logic create partial gaps that are only partly recoverable via synthesis or fine-tuning.",
+      "_timestamp": "2026-04-05T23:38:25"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of claims processing and copayment calculation follows explicit insurance rules and fee schedules, workers often rely on experience to interpret ambiguous plan details, resolve discrepancies, and handle coordination of benefits or unusual claim responses.",
+      "adequacy_evidence": "Current AI agents can apply codified rules well but still struggle with nuanced, plan-specific exceptions and inconsistent insurer behaviors that require experiential judgment in a non-trivial share of cases.",
+      "_timestamp": "2026-04-05T23:38:25"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing claims involves applying payer-specific rules, formularies, and copayment structures that vary by insurer and plan, requiring some interpretation of policy details and exceptions.",
+      "adequacy_evidence": "Current AI agents can handle standard billing logic and structured rules but often struggle with nuanced plan differences, exceptions, and ambiguous claim rejections, requiring human clarification.",
+      "_timestamp": "2026-04-05T23:38:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Processing a claim requires tracking multiple fields (patient info, drug codes, billing amounts, insurance rules) and performing calculations, but the information volume per claim is bounded and structured.",
+      "adequacy_evidence": "Current agents with tool support handle structured data extraction, retrieval, and arithmetic reliably within a single episode, with minimal risk of losing or mismanaging context.",
+      "_timestamp": "2026-04-05T23:38:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Processing insurance claims involves a series of steps (verifying coverage, posting charges, calculating copays), but these are relatively short, structured, and often repeated per claim rather than forming long, tightly interdependent sequences.",
+      "adequacy_evidence": "Modern AI agents can reliably execute short, rule-based workflows with consistent accuracy across steps, especially when each claim is handled independently and supported by structured data systems.",
+      "_timestamp": "2026-04-05T23:38:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Processing claims often depends on stored patient insurance details, prior payments, and deductible status accumulated over time, but each claim is largely handled as a discrete transaction with database lookup.",
+      "adequacy_evidence": "Current AI systems can reliably interface with persistent databases and records systems to retrieve and update cross-session information, so longitudinal memory needs are well supported.",
+      "_timestamp": "2026-04-05T23:38:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Processing medical insurance claims primarily involves structured text and numeric data such as billing codes, amounts, and policy details, with minimal reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI systems can reliably handle text-based claim data and even straightforward document OCR, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-05T23:38:27"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in claim processing (e.g., incorrect copay or billing codes) can often be detected by cross-checking against insurance rules, formularies, and system validations, but this requires domain knowledge and attention to detail.",
+      "adequacy_evidence": "Current AI systems can assist but still produce non-trivial errors in interpreting insurance policies or edge cases, so consistent human review or structured validation checks remain necessary.",
+      "_timestamp": "2026-04-05T23:38:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Claims processing in pharmacies is expected to be completed within seconds to a couple of minutes to keep workflow moving, but it is not a sub-second, real-time task.",
+      "adequacy_evidence": "Current AI systems can quickly apply billing rules and compute copayments within this time window without needing extended reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T23:38:28"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely back-office processing of claims data with outputs consumed by internal systems or insurers, not requiring direct stakeholder engagement with the performer.",
+      "adequacy_evidence": "Automation of claims processing is already widely accepted, and stakeholders are generally indifferent to whether a human or AI performs these calculations.",
+      "_timestamp": "2026-04-05T23:38:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements that prohibit AI from processing insurance claims or calculating copayments; such tasks are routinely automated in practice. Regulations like HIPAA govern data handling and privacy but do not restrict AI from performing the task itself.",
+      "_timestamp": "2026-04-05T23:38:28"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in claim processing or copayment calculation can cause financial discrepancies and administrative issues, but they are typically detectable and correctable without irreversible harm.",
+      "adequacy_evidence": "Given structured data, rule-based checks, and reconciliation processes, AI-generated outputs can be effectively audited, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T23:38:29"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

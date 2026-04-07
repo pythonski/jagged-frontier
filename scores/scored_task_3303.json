@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.02",
+  "task_id": 3303,
+  "task_statement": "Examine invoices and shipping manifests for conformity to tariff and customs regulations.",
+  "occupation_title": "Transportation, Storage, and Distribution Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Invoices and shipping manifests are commonly received and reviewed through electronic logistics, customs, or document management systems, allowing remote compliance checks. However, some cases still involve handling or verifying physical shipping paperwork at ports, warehouses, or customs offices."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans many jurisdictions, product categories, tariff schedules, and evolving regulations, with numerous edge cases in classification, valuation, and documentation practices.",
+      "adequacy_evidence": "There is substantial accessible data (regulations, sample documents, compliance guides, and case rulings), and synthetic generation is feasible, but real-world edge cases and proprietary shipment data are partially underrepresented.",
+      "_timestamp": "2026-04-06T01:14:20"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many tariff and customs checks follow explicit rules (e.g., classification codes, required fields), real-world cases often involve ambiguous product descriptions, borderline classifications, and subtle inconsistencies that require experience-based judgment.",
+      "adequacy_evidence": "Current AI agents can apply codified rules and detect clear discrepancies, but they show gaps in nuanced classification and in recognizing context-specific red flags that experienced practitioners infer from patterns and edge cases.",
+      "_timestamp": "2026-04-06T01:14:20"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customs compliance is largely governed by explicit regulations and tariff schedules, but applying them involves interpreting product classifications, origin rules, and edge-case documentation details that are context-dependent.",
+      "adequacy_evidence": "Frontier agents with retrieval and rule-based scaffolding can handle many standard cases, but they still struggle with nuanced classification judgments and ambiguous or incomplete documentation, often requiring human clarification.",
+      "_timestamp": "2026-04-06T01:14:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step review\u2014cross-checking invoices, manifests, and tariff rules\u2014but the sequence is relatively bounded and consists of structured, repeatable checks rather than long, interdependent chains.",
+      "adequacy_evidence": "Frontier AI agents can reliably sustain performance across these moderate-length document review sequences using structured workflows and tool support, with minimal degradation over the required steps.",
+      "_timestamp": "2026-04-06T01:14:21"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires comparing multiple structured documents (invoices, manifests, tariff schedules) and tracking fields like quantities, classifications, and origin, but the information volume is typically bounded and structured.",
+      "adequacy_evidence": "Current agents can handle multi-document comparison with retrieval and tool support, but may occasionally miss or misalign specific fields or inconsistencies across documents, especially when formats vary.",
+      "_timestamp": "2026-04-06T01:14:22"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing invoices and shipping manifests for regulatory conformity is typically a back-office task where minutes of processing time are acceptable and does not require real-time responses.",
+      "adequacy_evidence": "Current AI systems can analyze structured and semi-structured documents for compliance within seconds to minutes, well within operational time constraints without sacrificing quality.",
+      "_timestamp": "2026-04-06T01:14:22"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Invoices and shipping manifests are primarily text-based documents; the task involves reading and comparing textual and numeric information against regulations.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing handle text extraction and analysis from standard document formats reliably, with little reliance on complex multimodal reasoning.",
+      "_timestamp": "2026-04-06T01:14:22"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While each invoice/manifold review is largely self-contained, the task can benefit from recalling prior shipment patterns, client-specific compliance nuances, or past discrepancies across instances.",
+      "adequacy_evidence": "Current AI systems with standard database integration and retrieval can reliably store and access historical records and prior cases, meeting the modest cross-session memory needs of this task.",
+      "_timestamp": "2026-04-06T01:14:23"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves cross-checking classifications, valuations, and documentation against tariff schedules and customs rules, which requires domain knowledge and careful review but relies on structured, inspectable data.",
+      "adequacy_evidence": "Current AI can assist with document parsing and rule lookup but still makes non-trivial errors in classification and regulatory interpretation, so consistent human review remains necessary.",
+      "_timestamp": "2026-04-06T01:14:23"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in customs and tariff compliance can trigger fines, shipment delays, seizures, or legal liability, so even rare residual mistakes can have significant financial and operational consequences.",
+      "adequacy_evidence": "While many elements are structured and can be cross-checked, AI may still miss nuanced regulatory exceptions or jurisdiction-specific rules, leaving some non-trivial residual risk even after standard verification.",
+      "_timestamp": "2026-04-06T01:14:23"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task interacts with external stakeholders like customs authorities and internal compliance teams, who rely on the accuracy of the review but not strongly on the individual examiner\u2019s identity.",
+      "adequacy_evidence": "Automated systems are already widely used in document compliance checking, and stakeholders generally accept AI-assisted or fully automated review as long as outputs meet regulatory standards.",
+      "_timestamp": "2026-04-06T01:14:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. customs law requires licensed customs brokers or authorized personnel to conduct and certify certain customs business (e.g., filing entries), which creates ambiguity for fully autonomous AI execution. However, there is no explicit prohibition on AI assisting with or performing invoice and manifest review under human supervision.",
+      "_timestamp": "2026-04-06T01:14:24"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-1022.01",
+  "task_id": 16299,
+  "task_statement": "Analyze control or survey data to ensure adherence to project specifications or land survey standards.",
+  "occupation_title": "Geodetic Surveyors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Analyzing control or survey datasets to verify compliance with specifications or standards is typically performed using GIS, GNSS, or surveying software on a computer. The task involves digital data analysis and review, which can be done entirely remotely once the data are collected."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many survey standards and tolerance checks are codified (e.g., statistical residual thresholds, adjustment procedures), analysts must still use experience to interpret anomalous results, diagnose error sources, and judge borderline compliance cases.",
+      "adequacy_evidence": "AI agents can apply formal rules and statistical tests reliably, but they show weaker calibration in diagnosing subtle, context-dependent data issues (e.g., multipath effects, control instability) that experienced surveyors infer from patterns.",
+      "_timestamp": "2026-04-06T00:59:05"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied project types, survey methods, terrains, and applicable standards, creating meaningful but not extreme diversity in data patterns and edge cases.",
+      "adequacy_evidence": "There are extensive public standards, textbooks, and example datasets for survey validation, but real-world edge cases and proprietary field data are only partially represented and require some synthesis.",
+      "_timestamp": "2026-04-06T00:59:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on established land survey standards and project specifications, but interpreting tolerances, datum choices, and quality thresholds often requires context-specific judgment.",
+      "adequacy_evidence": "Current agents can parse standards and apply explicit rules, but they may miss implicit conventions or project-specific nuances without iterative human clarification.",
+      "_timestamp": "2026-04-06T00:59:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step analysis\u2014checking datasets against specifications, verifying consistency, and applying standards\u2014but these steps are typically modular and not deeply interdependent over long sequences.",
+      "adequacy_evidence": "Frontier AI agents can reliably execute structured, multi-step data validation workflows with minimal degradation, especially when supported by tools and intermediate checks.",
+      "_timestamp": "2026-04-06T00:59:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves handling large volumes of heterogeneous survey data (e.g., control points, measurements, error tolerances, and standards) and maintaining consistency across many interdependent values where small omissions can affect compliance judgments.",
+      "adequacy_evidence": "LLM-based agents with tool use (e.g., code execution and data processing) can manage large datasets, but they can still lose context or mis-handle edge cases when compressing or tracking complex interdependencies.",
+      "_timestamp": "2026-04-06T00:59:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing control or survey data for adherence to specifications is typically an offline task where minutes to hours of processing time are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform detailed analysis within these timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T00:59:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many analyses can be performed on a given dataset with documented specifications, survey projects often span multiple sessions and may require referencing prior measurements, control networks, or project-specific standards.",
+      "adequacy_evidence": "Current AI systems with standard database integration and retrieval can reliably store and access project histories, specifications, and prior data, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T00:59:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting spatial data, maps, plots, or survey diagrams alongside numerical datasets, requiring some visual-spatial reasoning beyond pure text.",
+      "adequacy_evidence": "Current agents can process geospatial data and simple visuals with tools, but reliability drops for complex map interpretation, spatial nuance, or high-precision visual inspection.",
+      "_timestamp": "2026-04-06T00:59:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves applying geodetic standards, consistency checks, and error propagation analysis; while some automated checks exist, detecting subtle datum, calibration, or systematic errors requires domain expertise and careful review.",
+      "adequacy_evidence": "AI can perform many consistency and standards checks, but still makes nontrivial mistakes in interpreting specifications or edge cases, so human experts must meaningfully review outputs to ensure correctness.",
+      "_timestamp": "2026-04-06T00:59:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task\u2019s outputs are used by project managers, engineers, and regulators who rely on their accuracy, but interaction with the performer is indirect and not centered on personal authority or rapport.",
+      "adequacy_evidence": "While stakeholders may accept AI-assisted analysis, full reliance on an AI agent without human oversight\u2014especially given professional licensing norms\u2014would face some resistance, though not outright rejection.",
+      "_timestamp": "2026-04-06T00:59:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in verifying survey data against specifications can propagate into boundary misplacements, construction defects, or legal disputes, where even rare residual mistakes can have significant financial and legal consequences.",
+      "adequacy_evidence": "AI can assist with consistency checks and standards compliance, but subtle context-specific judgment errors or misinterpretation of edge cases may persist after normal QC, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T00:59:15"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Land surveying work, including verifying adherence to standards, typically must be performed under the responsible charge of a licensed professional surveyor, who must review and certify results. While AI can assist with analysis, regulations generally require human oversight and sign-off, creating partial but not absolute restrictions on autonomous AI performance.",
+      "_timestamp": "2026-04-06T00:59:16"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

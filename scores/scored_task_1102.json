@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9051.00",
+  "task_id": 1102,
+  "task_statement": "Take dining reservations.",
+  "occupation_title": "Food Service Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Dining reservations are commonly taken through online reservation systems, email, or phone using computer-based tools, which can be done remotely. However, many restaurants also take reservations in person at the host stand, requiring physical presence."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Taking dining reservations involves a short multi-step interaction (gathering party details, checking availability, confirming booking), where steps are moderately interdependent but limited in length.",
+      "adequacy_evidence": "Well-scaffolded AI agents reliably handle these brief transactional sequences with minimal degradation, maintaining context and constraints across the interaction.",
+      "_timestamp": "2026-04-06T03:10:10"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While core details (date, time, party size) are explicit, successful reservations often require inferring preferences like seating, special occasions, pacing, or accommodating vague customer requests.",
+      "adequacy_evidence": "Current AI agents handle this level of ambiguity well through conversational clarification and iterative questioning, reliably converging on complete and appropriate reservation details.",
+      "_timestamp": "2026-04-06T03:10:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Taking dining reservations typically occurs in real time over phone or digital interfaces, requiring responses within seconds to maintain customer experience.",
+      "adequacy_evidence": "Current AI agents can handle reservation booking quickly with minimal reasoning, so meeting speed requirements does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T03:10:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking multiple fields (date, time, party size, customer details, special requests) and checking availability, but the information volume is structured and limited within a single interaction.",
+      "adequacy_evidence": "Current AI agents reliably handle structured slot-filling, maintain conversation state, and integrate with reservation systems without significant context loss.",
+      "_timestamp": "2026-04-06T03:10:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many reservations are one-off, the task often benefits from retaining customer history (e.g., repeat guests, preferences, special requests, no-show patterns) across sessions.",
+      "adequacy_evidence": "Current AI systems integrated with standard reservation databases and CRM tools can reliably store and retrieve this cross-session information with minimal failure.",
+      "_timestamp": "2026-04-06T03:10:11"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reservation-taking involves some variation (different customer requests, party sizes, special accommodations, policies, and communication styles) but follows a relatively structured and repetitive interaction pattern.",
+      "adequacy_evidence": "There is abundant accessible data (call transcripts, chat logs, booking workflows) and clear procedural examples, making it straightforward to cover the distribution with existing and synthetic training pipelines.",
+      "_timestamp": "2026-04-06T03:10:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations in the U.S. that prohibit or restrict AI systems from taking dining reservations. Restaurants are free to use automated systems (e.g., online booking platforms, chatbots, phone agents) for this function.",
+      "_timestamp": "2026-04-06T03:10:13"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reservation details (date, time, party size, contact info) are structured and easily confirmed with the customer or checked against system availability, making errors immediately visible.",
+      "adequacy_evidence": "Current AI systems integrated with reservation platforms can reliably capture and confirm structured inputs, with simple validation and confirmation steps eliminating most errors without significant human oversight.",
+      "_timestamp": "2026-04-06T03:10:13"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Taking dining reservations primarily involves collecting structured information (date, time, party size, contact details), which can be fully handled via text-based interfaces without reliance on visual or other modalities.",
+      "adequacy_evidence": "Current AI agents can reliably manage reservations through text or speech interfaces (via transcription), with no meaningful gap in handling the minimal multimodal aspects involved.",
+      "_timestamp": "2026-04-06T03:10:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers directly interact with the reservation system or staff, but the task mainly involves straightforward information exchange where performer identity has limited importance.",
+      "adequacy_evidence": "AI systems (online booking platforms, phone agents) are already widely accepted for reservations, with minimal resistance from customers.",
+      "_timestamp": "2026-04-06T03:10:13"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Taking reservations involves some experiential judgment (e.g., estimating table turn times, handling special requests, prioritizing VIPs or regulars), but most decisions follow explicit policies and booking system rules.",
+      "adequacy_evidence": "Well-scaffolded AI agents integrated with reservation systems can apply rules, availability logic, and common heuristics reliably, with minimal gaps in handling typical context-sensitive cases.",
+      "_timestamp": "2026-04-06T03:10:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Errors in taking dining reservations (e.g., wrong time or party size) typically cause inconvenience or minor service disruption but are easily corrected and rarely have serious consequences.",
+      "adequacy_evidence": "With confirmations and standard booking checks, current AI systems can reduce errors to an acceptable level, and any residual mistakes are manageable and low-impact.",
+      "_timestamp": "2026-04-06T03:10:15"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

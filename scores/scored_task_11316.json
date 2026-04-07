@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5041.00",
+  "task_id": 11316,
+  "task_statement": "Update client address and meter location information.",
+  "occupation_title": "Meter Readers, Utilities",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Updating client address or meter location information is typically done through a digital utility database or handheld device, but meter readers often perform these updates while physically on-site verifying the meter location or customer details."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves standardized data fields (addresses, meter locations) with limited variation and well-defined formats, making the instance distribution highly homogeneous.",
+      "adequacy_evidence": "Extensive real-world and synthetic data sources exist for address parsing, geolocation, and record updating workflows, providing full coverage of relevant cases for training.",
+      "_timestamp": "2026-04-06T04:10:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Updating client address and meter location information is a procedural, rules-based task driven by explicit records, forms, and standardized data entry practices rather than experiential judgment.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured instructions, parse address formats, and update records without needing tacit calibration or experiential know-how.",
+      "_timestamp": "2026-04-06T04:10:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Updating client address and meter location is typically a short, bounded task involving a few straightforward steps (verify information, enter into system, confirm).",
+      "adequacy_evidence": "AI agents can reliably handle such short, low-dependency sequences without degradation in performance or consistency.",
+      "_timestamp": "2026-04-06T04:10:27"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves recording and updating specific fields (client address and meter location) according to clear, predefined data formats and procedures, with little need for interpretation.",
+      "adequacy_evidence": "Current AI agents can reliably extract, validate, and update structured address and location data with minimal ambiguity, especially when supported by standard data-entry rules and validation tools.",
+      "_timestamp": "2026-04-06T04:10:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves handling a small, well-defined set of fields (client address and meter location), typically drawn from a single record or form, with minimal need for tracking multiple evolving data elements.",
+      "adequacy_evidence": "Current AI agents can reliably manage and update such limited, structured information within a single episode without losing context or mismanaging state.",
+      "_timestamp": "2026-04-06T04:10:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Updating client address and meter location information is a routine administrative task that can be completed within minutes without strict real-time pressure.",
+      "adequacy_evidence": "AI systems can perform data entry and updates quickly and accurately within the available time, with no need to trade off reasoning quality for speed.",
+      "_timestamp": "2026-04-06T04:10:28"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each update is a discrete transaction based on current client data; prior session context is stored in external databases rather than requiring the worker to remember it.",
+      "adequacy_evidence": "Modern AI systems can reliably read/write persistent records in databases, so no meaningful cross-session memory gap exists for this task.",
+      "_timestamp": "2026-04-06T04:10:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations requiring a human to perform routine data entry or record updates like client address or meter location information; such tasks can be automated subject to general data protection and accuracy requirements.",
+      "_timestamp": "2026-04-06T04:10:30"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect address or meter location can lead to billing errors, missed service, or field crew inefficiencies, but issues are typically detectable and correctable without severe or irreversible harm.",
+      "adequacy_evidence": "With standard validation (e.g., address verification systems, cross-checks against existing records), AI-induced errors would likely be caught, leaving minimal residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T04:10:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Updating address and meter location may involve interpreting maps, GPS data, or occasional site photos, but much of the task is structured data entry and text-based records.",
+      "adequacy_evidence": "Current agents can handle basic map, GPS, and image interpretation, but may be unreliable in complex spatial contexts (e.g., ambiguous property layouts or unclear visual inputs).",
+      "_timestamp": "2026-04-06T04:10:30"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves client records, so customers are indirect stakeholders, but they typically do not interact with or evaluate the performer directly when data is updated.",
+      "adequacy_evidence": "Utilities already use automated and digital systems for updating customer information, and stakeholders are generally indifferent to whether a human or AI performs this back-office task.",
+      "_timestamp": "2026-04-06T04:10:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Address and meter location updates can be directly checked against source documents, customer records, or GIS systems, with structured fields and validation rules making errors easy to spot.",
+      "adequacy_evidence": "AI outputs can be verified through simple cross-checks and system validations, and any transcription or entry errors are typically obvious and low-cost to correct.",
+      "_timestamp": "2026-04-06T04:10:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

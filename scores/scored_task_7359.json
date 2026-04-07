@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2082.00",
+  "task_id": 7359,
+  "task_statement": "Prepare or assist in preparing simple to complex tax returns for individuals or small businesses.",
+  "occupation_title": "Tax Preparers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Preparing tax returns is primarily done using tax software and digital records on a computer, but many real-world cases still involve handling physical documents or meeting clients to obtain information, which introduces a non-digital component."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tax preparation is largely governed by explicit tax codes and forms, but competent performance often requires case-based judgment on deductions, classifications, and handling ambiguous or borderline situations.",
+      "adequacy_evidence": "Current AI agents can apply rules well for standard cases but show gaps in nuanced judgment for edge cases, evolving interpretations, and context-specific decisions that experienced preparers handle more reliably.",
+      "_timestamp": "2026-04-06T01:34:30"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Tax preparation spans a wide range of scenarios including varied income types, deductions, credits, business structures, and jurisdictional rules, creating a long-tailed and heterogeneous task distribution.",
+      "adequacy_evidence": "Extensive public tax codes, IRS guidance, worked examples, commercial software logic, and the ability to generate synthetic cases provide strong coverage of nearly all relevant scenarios, including complex edge cases.",
+      "_timestamp": "2026-04-06T01:34:30"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While tax forms and rules are structured, key inputs depend on client-specific circumstances (income types, deductions, filing status) that must be elicited and interpreted from incomplete or ambiguous information.",
+      "adequacy_evidence": "Current agents can guide structured intake and apply rules, but often miss nuanced eligibility or fail to probe for implicit details, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T01:34:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Preparing tax returns involves multi-step, interdependent workflows (gathering inputs, applying tax rules, completing multiple linked forms and schedules) where earlier errors propagate into later calculations.",
+      "adequacy_evidence": "Well-scaffolded AI agents can manage multi-step workflows with tools and checks, but still show some degradation over long, complex filings (e.g., missed carryovers or inconsistent entries across forms).",
+      "_timestamp": "2026-04-06T01:34:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Preparing tax returns requires integrating numerous documents (W-2s, 1099s, receipts), tracking many interdependent fields, and ensuring consistency across forms, where small omissions can materially affect outcomes.",
+      "adequacy_evidence": "Current agents can manage large structured inputs with tools and retrieval, but still show occasional context loss or misalignment across fields when handling complex, multi-document cases.",
+      "_timestamp": "2026-04-06T01:34:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing tax returns typically allows minutes to hours (or longer) for completion, with no need for immediate real-time responses; accuracy is prioritized over speed.",
+      "adequacy_evidence": "Frontier AI agents can take sufficient time to perform detailed reasoning and checks within this generous time window, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T01:34:33"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing tax returns often benefits from prior-year filings, carryforward amounts, depreciation schedules, and client-specific preferences, but each return can still be completed largely from current-year documents.",
+      "adequacy_evidence": "Current agents can store and retrieve prior documents with external memory systems, but linking and consistently applying historical tax context (e.g., carryforwards, evolving client situations) is still error-prone in practice.",
+      "_timestamp": "2026-04-06T01:34:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tax returns benefit from structured forms and validation rules (e.g., software checks, IRS schemas), but detecting errors in deductions, classifications, or edge-case compliance often requires domain expertise and careful review.",
+      "adequacy_evidence": "Current AI can produce plausible returns but makes non-obvious mistakes in interpretation and rule application, so meaningful human review and cross-checking with tax software remain necessary.",
+      "_timestamp": "2026-04-06T01:34:34"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tax preparation is primarily text and numeric data processing, but often involves interpreting PDFs, scanned documents, or receipts, requiring some document perception and structured data extraction.",
+      "adequacy_evidence": "Current agents can handle standard digital forms and many document types with OCR and parsing tools, but performance is less reliable on low-quality scans, handwritten inputs, or complex multi-document cases.",
+      "_timestamp": "2026-04-06T01:34:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Tax return errors can lead to penalties, audits, interest charges, or legal exposure; even small mistakes can have significant financial and compliance consequences, so very low residual error is required.",
+      "adequacy_evidence": "With standard validation tools and human review, many AI errors can be caught, but edge cases (complex deductions, jurisdictional nuances) may still leave some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T01:34:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "The IRS requires a human paid preparer with a valid PTIN to sign returns and be accountable, which limits fully autonomous AI acting as the official preparer. However, tax software is widely permitted, so AI can assist extensively without being outright prohibited.",
+      "_timestamp": "2026-04-06T01:34:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tax preparation involves direct interaction with clients who rely on the preparer\u2019s output and may value trust and perceived expertise, though deep interpersonal engagement is not always central.",
+      "adequacy_evidence": "Many clients already accept software-based tax preparation, but a significant subset\u2014especially for complex returns\u2014still prefer human preparers, indicating moderate resistance to fully AI-driven agents.",
+      "_timestamp": "2026-04-06T01:34:36"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

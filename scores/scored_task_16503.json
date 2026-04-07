@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2199.06",
+  "task_id": 16503,
+  "task_statement": "Create schematics and physical layouts of integrated microelectromechanical systems (MEMS) components or packaged assemblies consistent with process, functional, or package constraints.",
+  "occupation_title": "Microsystems Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Creating schematics and layout designs for MEMS components is typically done using electronic design automation (EDA) or CAD software on a computer, applying process and packaging constraints digitally. No physical presence or specialized non-computer equipment is required to produce the designs."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "MEMS layout design spans many device types, fabrication processes, foundry-specific rules, and tightly coupled physical constraints, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "Much of the relevant data (process design kits, detailed layouts, fabrication constraints) is proprietary or sparsely published, and public sources rarely expose full step-by-step design reasoning, leaving major gaps in accessible training coverage.",
+      "_timestamp": "2026-04-06T04:33:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing MEMS schematics and layouts involves long, tightly coupled sequences: iteratively translating functional requirements into geometry, enforcing process constraints, and maintaining consistency across interconnected components and packaging steps.",
+      "adequacy_evidence": "Frontier AI agents can manage multi-step design workflows with tooling, but they show some degradation over extended sequences, including constraint drift and inconsistency across iterations, especially in complex, tightly coupled layouts.",
+      "_timestamp": "2026-04-06T04:33:03"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "MEMS layout design must reconcile explicit constraints (process design rules, functional specs) with implicit tradeoffs like manufacturability, yield, and cross-domain interactions that are often only partially specified.",
+      "adequacy_evidence": "Current agents can interpret formal constraints and generate candidate layouts, but they often miss nuanced process-specific tradeoffs and require iterative human guidance to converge on fully acceptable designs.",
+      "_timestamp": "2026-04-06T04:33:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "MEMS layout and schematic design must balance process constraints, fabrication tolerances, parasitics, and packaging interactions, requiring experiential judgment about tradeoffs that are not fully captured in formal design rules.",
+      "adequacy_evidence": "Current AI agents can follow design rules and known patterns but lack the deep, experience-derived intuition about fabrication variability and cross-domain tradeoffs, leading to systematic gaps in non-routine or high-performance designs.",
+      "_timestamp": "2026-04-06T04:33:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Creating MEMS schematics and physical layouts is inherently spatial and visual, requiring precise geometric design, layer visualization, and cross-modal reasoning between process constraints and physical structures; text alone is insufficient.",
+      "adequacy_evidence": "Current AI agents can generate and manipulate CAD-like representations and assist with layouts via tools, but struggle with fine-grained physical constraints, fabrication nuances, and fully reliable cross-modal integration at expert level.",
+      "_timestamp": "2026-04-06T04:33:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "MEMS layout design requires tracking numerous interdependent constraints (process rules, layer geometries, material properties, packaging limits) and detailed spatial relationships, where missing small details can invalidate the design.",
+      "adequacy_evidence": "Current agents can offload some state to tools and structured representations, but still show gaps in reliably maintaining and updating complex, constraint-heavy design contexts across a full layout workflow.",
+      "_timestamp": "2026-04-06T04:33:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "MEMS schematics and layouts must satisfy complex multi-physics, fabrication, and packaging constraints, with errors often only detectable through detailed simulation, rule checks, or fabrication feedback cycles.",
+      "adequacy_evidence": "Current AI systems can generate plausible designs but frequently miss subtle process or physical constraints, requiring extensive expert review, simulation, and iteration to validate outputs.",
+      "_timestamp": "2026-04-06T04:33:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "MEMS layout design typically spans multiple iterations where prior design versions, process design rules, and project-specific constraints must be reused, but each component or assembly can often be worked from documented specifications without requiring deep longitudinal state.",
+      "adequacy_evidence": "Current agents can store and retrieve prior design documents and constraints via external memory systems, but they can struggle to consistently maintain and integrate evolving project context (e.g., nuanced design tradeoffs or implicit team decisions) across sessions.",
+      "_timestamp": "2026-04-06T04:33:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in MEMS schematics or layouts can lead to fabrication failures, device malfunction, or costly redesign cycles, with limited ability to correct post-fabrication, making residual errors highly consequential.",
+      "adequacy_evidence": "Even after standard verification (DRC, simulation, peer review), AI-generated designs may still harbor subtle physics or process-integration issues that are hard to detect pre-fabrication, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T04:33:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "MEMS schematic and layout design is typically an offline, iterative engineering task where turnaround times of minutes to hours (or longer) are acceptable, with no strict real-time constraints.",
+      "adequacy_evidence": "Frontier AI systems can take sufficient time for extended reasoning and tool use (e.g., CAD integration, simulation loops) without compromising usability, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T04:33:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The schematics and layouts are used by fabrication teams, colleagues, and possibly clients, who rely on their correctness, but the personal identity of the designer is secondary to technical validity.",
+      "adequacy_evidence": "Stakeholders in engineering contexts are increasingly open to AI-assisted design tools, but full acceptance of an autonomous AI as the primary designer may still face some resistance, especially for high-stakes or novel designs.",
+      "_timestamp": "2026-04-06T04:33:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Engineering design work that affects public safety may require review and sign-off by a licensed Professional Engineer, which an AI cannot provide. However, there is no explicit prohibition on AI generating schematics under human supervision, so restrictions are partial rather than absolute.",
+      "_timestamp": "2026-04-06T04:33:06"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

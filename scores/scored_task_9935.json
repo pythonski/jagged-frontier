@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-2091.00",
+  "task_id": 9935,
+  "task_statement": "Keep records of maintenance and repair work.",
+  "occupation_title": "Avionics Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Recording maintenance and repair work is typically done by entering information into electronic maintenance management or logbook systems, which is computer-based. However, avionics technicians sometimes complete or sign physical aircraft logbooks or documentation on-site, requiring a non-digital component."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintenance record-keeping spans different aircraft systems, regulatory requirements, and documentation formats, but is largely standardized through aviation logs, checklists, and compliance templates.",
+      "adequacy_evidence": "There is extensive accessible data (manuals, maintenance logs, regulatory guidance) demonstrating both outputs and procedures, and synthetic generation can cover variations, leaving no major gaps.",
+      "_timestamp": "2026-04-06T04:54:52"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recording maintenance and repair work follows standardized formats, regulatory requirements, and documentation procedures, though technicians use some judgment in selecting relevant details and ensuring compliance with aviation logging norms.",
+      "adequacy_evidence": "Current AI agents can reliably generate structured, compliant records and capture relevant details when provided inputs, with minimal gaps in judgment for typical documentation scenarios.",
+      "_timestamp": "2026-04-06T04:54:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recording maintenance and repair work requires tracking multiple details (tasks performed, parts used, timestamps, compliance notes), but these are structured and bounded within a single job episode.",
+      "adequacy_evidence": "Current AI agents with tool integration (forms, databases, checklists) reliably manage and organize such structured information without significant loss or drift.",
+      "_timestamp": "2026-04-06T04:54:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recordkeeping in avionics maintenance follows standardized regulatory formats (e.g., FAA logbook entries), but technicians must still decide the appropriate level of detail, terminology, and inclusion of relevant context for compliance and traceability.",
+      "adequacy_evidence": "Current AI systems can reliably infer required structure and conventions from documentation and examples, producing compliant records with minimal need for iterative clarification.",
+      "_timestamp": "2026-04-06T04:54:53"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recording maintenance and repair work is typically done after task completion with no strict real-time constraint; minutes or longer delays are acceptable.",
+      "adequacy_evidence": "Current AI systems can generate and organize maintenance records quickly and accurately well within the available time, with no need to truncate reasoning.",
+      "_timestamp": "2026-04-06T04:54:53"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Keeping maintenance and repair records is primarily a text-based documentation task involving written logs, codes, and structured entries, with minimal reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based recordkeeping, formatting, and data entry reliably, with no significant multimodal capability gaps for this task.",
+      "_timestamp": "2026-04-06T04:54:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Keeping maintenance and repair records involves multi-step documentation (collecting details, formatting entries, ensuring consistency and completeness across logs), but steps are loosely coupled and not highly interdependent.",
+      "adequacy_evidence": "Frontier AI agents with structured tools and databases can reliably maintain consistency across such documentation workflows without meaningful degradation over the sequence length.",
+      "_timestamp": "2026-04-06T04:54:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintenance record-keeping for avionics is inherently longitudinal, requiring accurate accumulation and retrieval of aircraft-specific histories across many service events for compliance and diagnostics.",
+      "adequacy_evidence": "Current AI systems integrated with standard databases or maintenance management systems can reliably store, update, and retrieve cross-session records, so persistence is not a major limitation.",
+      "_timestamp": "2026-04-06T04:54:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "FAA regulations (e.g., 14 CFR Part 43) require certificated mechanics or repair stations to make and sign maintenance record entries, which implies a licensed human must be responsible for the record. While AI can assist in recordkeeping, it cannot legally fulfill the sign-off or accountability requirements, creating partial restriction.",
+      "_timestamp": "2026-04-06T04:54:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintenance records are relied upon by inspectors, regulators (e.g., FAA), and airline operators, and often require attribution to certified technicians, so the performer\u2019s identity has some importance.",
+      "adequacy_evidence": "Stakeholders would likely require human-certified sign-off and may be cautious about fully accepting AI-generated records, though AI assistance in documentation is increasingly tolerated if overseen by a human.",
+      "_timestamp": "2026-04-06T04:54:56"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintenance records can be cross-checked against work orders, parts used, and procedural requirements, but doing so requires domain knowledge and careful review; errors like omissions or incorrect codes are not always immediately obvious.",
+      "adequacy_evidence": "AI-generated records would still need technician verification for accuracy, correct terminology, and regulatory compliance, as current systems can misstate details or omit critical information, creating a moderate review burden.",
+      "_timestamp": "2026-04-06T04:54:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintenance records in avionics are safety-critical artifacts used for airworthiness compliance, audits, and future maintenance decisions; even small residual errors can lead to regulatory violations or missed faults with serious consequences.",
+      "adequacy_evidence": "With standard human review and structured logging systems, many AI-generated errors can be caught, but risks like subtle omissions or incorrect entries could still slip through, making residual risk non-trivial.",
+      "_timestamp": "2026-04-06T04:54:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

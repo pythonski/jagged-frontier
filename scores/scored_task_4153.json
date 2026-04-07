@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2033.00",
+  "task_id": 4153,
+  "task_statement": "Process cardiac function studies, using computer.",
+  "occupation_title": "Nuclear Medicine Technologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Processing cardiac function studies involves computer-based analysis of imaging data, which is a digital activity. However, in practice it is typically performed on specialized hospital workstations integrated with imaging equipment and clinical systems, often requiring on-site access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing cardiac function studies (e.g., gated SPECT) involves largely standardized software workflows, but technologists must apply experience to detect artifacts, select appropriate parameters, and judge borderline image quality or patient motion effects.",
+      "adequacy_evidence": "Current AI systems can replicate standard processing and flag common artifacts, but they lack consistent calibration for nuanced judgment in atypical or borderline cases, especially where subtle artifacts or patient-specific factors affect interpretation.",
+      "_timestamp": "2026-04-05T22:33:44"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cardiac function study processing spans different imaging modalities (e.g., SPECT, PET), patient conditions, artifacts, and protocol variations, but follows relatively standardized workflows and metrics (ejection fraction, wall motion).",
+      "adequacy_evidence": "While substantial clinical imaging data and processing examples exist, much is proprietary and rare edge cases (e.g., unusual artifacts or comorbidities) are underrepresented, though partially addressable via synthetic data and targeted datasets.",
+      "_timestamp": "2026-04-05T22:33:45"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing cardiac function studies follows established imaging protocols and software workflows, but requires some context-dependent judgment (e.g., selecting regions of interest, handling artifacts, ensuring physiologic plausibility).",
+      "adequacy_evidence": "Current AI agents can follow standardized processing steps but often struggle with implicit quality judgments and edge cases, requiring human oversight to correctly interpret ambiguous or noisy study data.",
+      "_timestamp": "2026-04-05T22:33:45"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing cardiac function studies involves a multi-step workflow (data loading, image reconstruction, parameter adjustment, quantitative analysis, and quality checks) where steps are interdependent but relatively standardized and bounded.",
+      "adequacy_evidence": "AI agents can generally follow structured processing pipelines, but may show some degradation in maintaining parameter consistency or handling edge cases across steps without careful scaffolding and validation.",
+      "_timestamp": "2026-04-05T22:33:45"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Processing cardiac function studies may involve referencing prior patient scans or clinical history for comparison, but each study is largely self-contained and does not require extensive longitudinal state.",
+      "adequacy_evidence": "Current AI systems integrated with databases or EHRs can reliably store and retrieve prior studies and patient context across sessions, meeting these modest cross-session memory needs.",
+      "_timestamp": "2026-04-05T22:33:45"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Processing cardiac function studies involves handling multiple structured data elements (imaging frames, patient parameters, software outputs) and integrating them within a single workflow, but the information is organized and bounded by specialized software systems.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably manage structured medical imaging data and associated parameters within a single session using tools and memory buffers, with minimal risk of losing critical context.",
+      "_timestamp": "2026-04-05T22:33:45"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Processing cardiac function studies typically occurs in clinical workflows where results are expected within minutes rather than instantly, allowing some time for careful analysis but not prolonged delays.",
+      "adequacy_evidence": "Current AI systems can perform image processing and quantitative analysis of cardiac studies within seconds to minutes, well within typical clinical time constraints without sacrificing quality.",
+      "_timestamp": "2026-04-05T22:33:47"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Processing cardiac function studies relies on interpreting nuclear imaging data (e.g., SPECT/PET scans, gated cine sequences) and associated quantitative visual outputs, making non-text modalities central to the task.",
+      "adequacy_evidence": "Current AI systems can analyze medical images with reasonable accuracy, but performance can be inconsistent for complex cardiac imaging nuances (e.g., motion artifacts, gating errors, subtle perfusion defects), requiring human oversight.",
+      "_timestamp": "2026-04-05T22:33:48"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Processing cardiac function studies directly informs clinical interpretation (e.g., ejection fraction, wall motion), where even small residual errors can lead to misdiagnosis or inappropriate treatment with serious health consequences.",
+      "adequacy_evidence": "While outputs can be cross-checked against imaging data and reviewed by physicians, AI systems may still introduce subtle quantification or segmentation errors that are not always caught, leaving some meaningful residual risk.",
+      "_timestamp": "2026-04-05T22:33:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Processing cardiac function studies (e.g., gated SPECT) involves nuanced interpretation of imaging artifacts, segmentation accuracy, and derived metrics like ejection fraction, where errors can be subtle and require domain expertise to detect.",
+      "adequacy_evidence": "Current AI systems can assist with image processing and quantification but still produce non-obvious errors (e.g., mis-segmentation, artifact misinterpretation), requiring careful expert review and substantial verification effort.",
+      "_timestamp": "2026-04-05T22:33:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The processed cardiac study results are used by physicians and care teams, so others rely on the output, but interaction with or awareness of the individual technologist is limited.",
+      "adequacy_evidence": "Clinicians already accept heavily computerized and partially automated image processing in nuclear medicine, and are generally indifferent to whether AI or a human performed the computational steps if results are accurate.",
+      "_timestamp": "2026-04-05T22:33:48"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Nuclear medicine procedures, including processing cardiac function studies, are regulated and typically must be performed or supervised by licensed technologists or physicians. While AI tools can assist, current regulations and licensure frameworks implicitly require a human professional to be responsible, creating partial restrictions rather than an outright prohibition.",
+      "_timestamp": "2026-04-05T22:33:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

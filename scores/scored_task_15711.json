@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1199.06",
+  "task_id": 15711,
+  "task_statement": "Create or maintain database of customer accounts.",
+  "occupation_title": "Online Merchants",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Creating or maintaining customer account databases is done using computer-based database or CRM systems and can be performed entirely online without physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer account databases vary across platforms (e-commerce systems, schemas, privacy requirements), but the core operations (CRUD, validation, integration) are relatively standardized with limited long-tail complexity.",
+      "adequacy_evidence": "There is extensive accessible data including documentation, code examples, schemas, and operational logs, and synthetic data generation is straightforward, providing strong coverage of relevant cases.",
+      "_timestamp": "2026-04-06T02:17:02"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Creating and maintaining customer account databases is largely governed by explicit schemas, data entry standards, and predefined procedures (e.g., validation rules, formatting, deduplication protocols).",
+      "adequacy_evidence": "Current AI agents can reliably follow structured rules, enforce data integrity constraints, and handle routine edge cases using existing tooling without needing experience-based judgment.",
+      "_timestamp": "2026-04-06T02:17:02"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves some implicit choices such as schema design, required fields, data validation rules, and privacy constraints, which depend on business context and are not fully specified in the task statement.",
+      "adequacy_evidence": "Current AI agents can reliably infer typical database structures and iterate with users to refine requirements, handling most ambiguity with standard patterns and minimal clarification.",
+      "_timestamp": "2026-04-06T02:17:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintaining a customer account database involves multi-step processes (data entry, updates, validation, deduplication, and consistency checks) where errors can propagate, but sequences are typically modular rather than tightly coupled end-to-end.",
+      "adequacy_evidence": "LLM-based agents with tooling can execute these workflows reasonably well, but over longer or repeated update sequences they can exhibit drift or missed constraints (e.g., inconsistent schema adherence or validation lapses), requiring monitoring.",
+      "_timestamp": "2026-04-06T02:17:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Creating or maintaining customer account databases primarily involves structured text and numerical data (names, addresses, transaction records) with little to no reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Since the task is effectively text- and data-based, current AI systems already handle these inputs and outputs well without needing multimodal capabilities.",
+      "_timestamp": "2026-04-06T02:17:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintaining customer accounts inherently requires persistent, longitudinal storage and retrieval of individual customer records across many interactions over time.",
+      "adequacy_evidence": "Current AI agents can reliably use external databases and CRM systems to store, update, and retrieve persistent customer data, with well-established infrastructure for cross-session memory.",
+      "_timestamp": "2026-04-06T02:17:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Managing customer account databases involves tracking multiple fields and records and coordinating updates, but most information is structured and externally stored in database systems rather than held in active memory.",
+      "adequacy_evidence": "LLM-based agents with database tools can reliably query, update, and retrieve records without needing to internally retain large state, so within-episode memory demands are well handled.",
+      "_timestamp": "2026-04-06T02:17:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Creating or maintaining customer account databases is typically a back-office or asynchronous task where minutes or longer processing times are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform data entry, validation, and database updates well within acceptable timeframes without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T02:17:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from creating or maintaining customer account databases. While data privacy regulations (e.g., CCPA) govern how data is handled, they do not restrict the use of AI systems to perform this task.",
+      "_timestamp": "2026-04-06T02:17:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining a database of customer accounts is an internal back-office task with no direct stakeholder interaction; outputs are used operationally rather than requiring engagement with the performer.",
+      "adequacy_evidence": "Because stakeholders do not directly interact with the performer, there is no meaningful acceptance barrier; AI systems are already widely used for such backend data management tasks.",
+      "_timestamp": "2026-04-06T02:17:05"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in customer account databases (e.g., incorrect contact details or account status) can cause service issues or billing problems, but are typically detectable and reversible without severe irreversible harm.",
+      "adequacy_evidence": "With standard validation rules, audits, and reconciliation checks, AI-generated or maintained records can be reliably verified, leaving minimal residual risk at acceptable levels.",
+      "_timestamp": "2026-04-06T02:17:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customer account databases typically include structured fields, validation rules, and audit logs that make many errors (e.g., missing fields, duplicates) detectable, though some issues like incorrect mappings or subtle data inconsistencies require review.",
+      "adequacy_evidence": "AI systems can populate and maintain such databases but still make integration or formatting mistakes, requiring routine validation checks and periodic human or automated audits to ensure data integrity.",
+      "_timestamp": "2026-04-06T02:17:06"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

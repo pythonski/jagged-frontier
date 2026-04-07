@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-3041.00",
+  "task_id": 1791,
+  "task_statement": "Select local, state, national, and international news items received from wire services, based on assessment of items' significance and interest value.",
+  "occupation_title": "Editors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Wire service news items are received and reviewed through digital feeds or software systems, and selection decisions are made by reading and evaluating them on a computer. The task does not require physical presence or non-computer equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing 'significance' and 'interest value' depends on implicit editorial judgment, audience expectations, news cycle context, and organizational priorities, none of which are fully specified.",
+      "adequacy_evidence": "Current agents can approximate newsworthiness using trends and historical patterns but often miss nuanced editorial tone, local relevance, and shifting priorities, requiring human refinement.",
+      "_timestamp": "2026-04-06T03:20:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing news significance and audience interest depends on editorial judgment shaped by experience, including understanding evolving public interests, newsworthiness norms, and contextual nuance not fully captured by explicit rules.",
+      "adequacy_evidence": "Current AI can approximate news values using patterns from training data, but often lacks fine-grained calibration for local context, emerging stories, and subtle editorial priorities, leading to moderate gaps in judgment.",
+      "_timestamp": "2026-04-06T03:20:47"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "News selection spans highly heterogeneous topics, geographies, audiences, and shifting notions of significance and interest, making the instance distribution broad and context-sensitive.",
+      "adequacy_evidence": "Large-scale news corpora, archived front pages, editorial picks, engagement data, and synthetic preference modeling provide rich, process-revealing signals for how items are selected, covering the key subpopulations of the task.",
+      "_timestamp": "2026-04-06T03:20:47"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing and filtering a stream of wire items using consistent editorial criteria, requiring some sustained attention across multiple items but with largely independent evaluations.",
+      "adequacy_evidence": "AI agents can reliably apply stable selection criteria across large batches of inputs without significant degradation, especially when guided by explicit rules or scoring frameworks.",
+      "_timestamp": "2026-04-06T03:20:49"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Wire service news selection is primarily based on textual content (headlines, summaries, and article text) rather than requiring analysis of images, audio, or video.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI agents can fully handle the modality requirements without meaningful gaps.",
+      "_timestamp": "2026-04-06T03:20:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Editors must review and compare numerous incoming wire stories, tracking key details (topics, relevance, timeliness) across a stream of items, requiring moderate information aggregation and filtering within a session.",
+      "adequacy_evidence": "Current AI agents can reliably ingest, summarize, rank, and filter large batches of text with tooling support, maintaining sufficient context without significant loss or misretrieval in typical workloads.",
+      "_timestamp": "2026-04-06T03:20:51"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Editors benefit from accumulated knowledge of audience preferences, ongoing storylines, and prior editorial judgments, but each selection decision is largely driven by current incoming items.",
+      "adequacy_evidence": "Current agents can store and retrieve prior preferences and trends via external memory systems, but they often inconsistently surface or weight this context, leading to moderate gaps in continuity.",
+      "_timestamp": "2026-04-06T03:20:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations that prohibit or require human-only decision-making for selecting news items for publication. Editorial selection is not a licensed activity, and current regulations do not restrict AI from performing this task.",
+      "_timestamp": "2026-04-06T03:20:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Wire editors must triage incoming news promptly to meet publishing cycles, often within seconds to a few minutes, but not true real-time subsecond constraints.",
+      "adequacy_evidence": "Current AI systems can rapidly classify and rank news items by significance within these time windows without needing extended reasoning, so speed does not materially degrade quality.",
+      "_timestamp": "2026-04-06T03:20:51"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Misjudging the significance or interest of news items can affect audience trust and editorial quality, but errors are typically reversible and do not cause severe irreversible harm.",
+      "adequacy_evidence": "AI can approximate newsworthiness using trends and historical patterns, but it still shows inconsistent judgment on nuanced editorial priorities, leaving some residual risk even after review.",
+      "_timestamp": "2026-04-06T03:20:52"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Editors\u2019 selection of news items affects audiences and publishers who rely on editorial judgment, and the credibility of the selector (human editor vs system) can influence trust and perceived news value.",
+      "adequacy_evidence": "Algorithmic and AI-assisted news curation is already common, but many audiences and journalists remain wary of fully AI-driven editorial judgment, especially for significance and bias, leading to partial resistance.",
+      "_timestamp": "2026-04-06T03:20:52"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing newsworthiness and audience interest is partly subjective and requires editorial judgment, but outputs (selected vs. omitted items) can be reviewed against other sources and editorial standards with moderate effort.",
+      "adequacy_evidence": "AI can surface plausible stories but often misjudges significance or context, so human editors must routinely review and adjust selections, though errors are usually visible upon inspection.",
+      "_timestamp": "2026-04-06T03:20:54"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

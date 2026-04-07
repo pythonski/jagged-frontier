@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-4011.00",
+  "task_id": 11261,
+  "task_statement": "Compute customer's installation or production costs and estimate savings from new services, products, or equipment.",
+  "occupation_title": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Cost and savings estimates are typically calculated using spreadsheets, pricing databases, and digital specifications. However, accurate inputs sometimes require site visits or physical inspection of customer facilities or equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Cost computation and savings estimation vary widely across industries, equipment types, site conditions, and customer-specific operational constraints, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "While general cost modeling methods, case studies, and engineering economics data are widely available and can be synthesized, many real-world instances rely on proprietary customer data and niche configurations that are only partially represented in accessible training sources.",
+      "_timestamp": "2026-04-05T21:41:01"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating costs and savings requires interpreting customer-specific contexts (e.g., operational constraints, priorities, and assumptions about usage), which are not fully explicit and must be inferred or clarified.",
+      "adequacy_evidence": "Current agents can model costs and generate estimates when given sufficient data, but often miss implicit business constraints or stakeholder priorities, requiring human iteration to refine assumptions.",
+      "_timestamp": "2026-04-05T21:41:02"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating costs and savings involves applying standard financial and engineering calculations but also requires some experiential judgment about customer-specific factors like workflow inefficiencies, hidden costs, and realistic adoption impacts.",
+      "adequacy_evidence": "AI agents can perform structured cost modeling and scenario analysis well, but often lack calibration for nuanced, context-specific adjustments (e.g., informal practices or site-specific constraints), leading to moderate gaps in non-routine cases.",
+      "_timestamp": "2026-04-05T21:41:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps such as gathering customer data, modeling installation/production costs, and estimating comparative savings, requiring consistency across a moderate sequence of calculations and assumptions.",
+      "adequacy_evidence": "With tool use (e.g., spreadsheets, code execution), AI systems can reliably maintain consistency across these structured steps, with minimal degradation over the sequence length typical of this task.",
+      "_timestamp": "2026-04-05T21:41:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires aggregating multiple inputs (customer usage data, installation costs, product specs, pricing, and savings assumptions) and keeping them consistent within a single calculation workflow, but the scope is typically bounded and structured.",
+      "adequacy_evidence": "Current agents can reliably manage and track these inputs using tools (spreadsheets, code execution, retrieval) without significant loss of context or state within a single episode.",
+      "_timestamp": "2026-04-05T21:41:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves numerical analysis, pricing data, and textual specifications; relevant inputs (cost figures, usage data, product specs) are typically structured or text-based rather than inherently multimodal.",
+      "adequacy_evidence": "Current AI systems handle text and numerical computation well, and no significant non-text perception or generation is required for competent performance.",
+      "_timestamp": "2026-04-05T21:41:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Sales reps often need to produce estimates during conversations or shortly after, implying expectations of responses within seconds to a few minutes rather than extended analysis windows.",
+      "adequacy_evidence": "Current AI agents with calculators, spreadsheets, or pricing data can generate cost and savings estimates quickly without significant loss in quality within these time constraints.",
+      "_timestamp": "2026-04-05T21:41:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating costs and savings often benefits from prior customer data (past quotes, installed equipment, historical usage), but each estimate can be produced with fresh inputs if needed.",
+      "adequacy_evidence": "Current agents can persist and retrieve customer data via CRM integrations, but inconsistencies in data syncing, schema alignment, and retrieval relevance still cause moderate failures.",
+      "_timestamp": "2026-04-05T21:41:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost and savings estimates can be recalculated and audited, but require domain knowledge of inputs, assumptions, and pricing structures; errors in assumptions may not be immediately obvious.",
+      "adequacy_evidence": "AI can produce structured estimates but often makes mistakes in assumptions, unit handling, or missing factors, so human review and recalculation are still needed to ensure reliability.",
+      "_timestamp": "2026-04-05T21:41:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from computing installation or production costs or estimating savings in a sales context. While certain industries may require licensed professionals to approve final figures (e.g., engineering sign-off), the computational task itself is not restricted.",
+      "_timestamp": "2026-04-05T21:41:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in cost or savings estimates can mislead purchasing decisions and affect financial outcomes, but are typically revisable and rarely cause irreversible harm.",
+      "adequacy_evidence": "AI can perform calculations and modeling well, but may misinterpret inputs or assumptions; even after review, some risk of subtle financial misestimation remains.",
+      "_timestamp": "2026-04-05T21:41:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces cost and savings estimates for customers, who must rely on and engage with the output, but it does not heavily depend on the personal identity or relationship beyond baseline credibility.",
+      "adequacy_evidence": "Some customers may accept AI-generated estimates if well-explained and accurate, but others may distrust or prefer a human representative for credibility and negotiation context.",
+      "_timestamp": "2026-04-05T21:41:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

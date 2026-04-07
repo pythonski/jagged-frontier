@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3011.00",
+  "task_id": 18559,
+  "task_statement": "Answer customer questions regarding problems with their accounts.",
+  "occupation_title": "Bill and Account Collectors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Customer questions about accounts are typically handled via phone, email, or online systems using account databases, which can be done entirely on a computer. However, collectors may sometimes answer such questions during in-person visits or at service counters."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves applying documented account policies but also requires some experience-based judgment in interpreting customer intent, handling disputes, and adjusting tone based on emotional cues.",
+      "adequacy_evidence": "Current AI agents can follow procedures and handle many routine interactions, but they still show gaps in nuanced judgment for edge cases, such as complex disputes or emotionally sensitive situations.",
+      "_timestamp": "2026-04-06T01:32:01"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer account issues vary across billing errors, payment plans, disputes, and policies, but follow recurring, well-structured patterns within call center operations.",
+      "adequacy_evidence": "Large volumes of customer service transcripts, scripts, and resolution workflows exist and can be supplemented with synthetic scenarios, providing strong coverage of typical and edge-case interactions.",
+      "_timestamp": "2026-04-06T01:32:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Handling customer account issues typically involves multi-turn conversations where the agent must maintain context (account details, prior statements, resolutions) across several exchanges, but sequences are usually bounded and not highly interdependent over long horizons.",
+      "adequacy_evidence": "LLM-based agents can generally sustain coherent multi-turn customer service interactions with tooling, but may exhibit context drift or minor inconsistencies over longer dialogues, especially when conversations become complex or prolonged.",
+      "_timestamp": "2026-04-06T01:32:02"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customer questions about account problems often omit key details and require interpreting intent, diagnosing underlying issues, and applying context-specific policies, but objectives are generally bounded by defined service protocols.",
+      "adequacy_evidence": "Current AI agents can usually infer intent and handle common cases with tooling, but they still miss nuances in ambiguous or emotionally charged interactions, requiring human escalation or correction.",
+      "_timestamp": "2026-04-06T01:32:02"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Handling account issues requires tracking multiple pieces of information (customer identity, account history, recent transactions, policies) within a single interaction, but the scope is typically bounded and structured.",
+      "adequacy_evidence": "Well-scaffolded agents can reliably retrieve and manage structured account data and maintain conversational context within an episode, with minimal loss or distortion of relevant details.",
+      "_timestamp": "2026-04-06T01:32:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Agents often need prior account history, past communications, and payment arrangements to accurately answer customer questions, but this information is typically structured and bounded per account.",
+      "adequacy_evidence": "Current AI agents can reliably access and use persistent customer records via CRM/database integrations, so cross-session memory needs are well met with existing tooling.",
+      "_timestamp": "2026-04-06T01:32:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer service interactions (phone or chat) typically expect responses within seconds to a minute, but do not require split-second real-time precision.",
+      "adequacy_evidence": "Frontier AI agents can generate accurate, context-aware responses well within these time constraints without needing to truncate reasoning in most cases.",
+      "_timestamp": "2026-04-06T01:32:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Answering customer account questions is primarily language-based (spoken or written) and does not inherently require processing or generating non-text modalities beyond what can be captured in text or transcripts.",
+      "adequacy_evidence": "Current AI agents handle text and transcribed speech effectively, and no meaningful multimodal gap exists for this task.",
+      "_timestamp": "2026-04-06T01:32:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws prohibiting AI from answering customer account questions in collections. Regulations like the FDCPA govern conduct (e.g., disclosures, harassment limits) but are technology-neutral and allow automated systems if compliant.",
+      "_timestamp": "2026-04-06T01:32:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Responses can usually be checked against account records, billing systems, and company policies, but doing so requires accessing the correct data and understanding procedural rules, not just surface reading.",
+      "adequacy_evidence": "Current AI can retrieve and summarize account information but may misinterpret policies or edge cases, so human or system-level verification is still needed to confirm accuracy.",
+      "_timestamp": "2026-04-06T01:32:05"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Providing incorrect account information or guidance can lead to customer disputes, complaints, or regulatory issues, but errors are typically reversible through follow-up corrections.",
+      "adequacy_evidence": "Even with scripts and account data retrieval plus oversight, AI can still misinterpret edge cases or give slightly incorrect guidance, leaving some residual risk that remains manageable but not negligible.",
+      "_timestamp": "2026-04-06T01:32:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Customers directly interact with the agent to resolve account issues, and perceptions of trustworthiness, authority, and empathy influence cooperation and satisfaction.",
+      "adequacy_evidence": "AI chatbots are widely used in customer service and often accepted for routine account inquiries, but some customers still prefer human agents for trust, nuance, or dispute resolution.",
+      "_timestamp": "2026-04-06T01:32:06"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

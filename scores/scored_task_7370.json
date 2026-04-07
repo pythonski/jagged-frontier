@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2021.00",
+  "task_id": 7370,
+  "task_statement": "Perform computations and apply methods of numerical analysis to data.",
+  "occupation_title": "Mathematicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Computations and numerical analysis are typically performed using computer software on digital datasets, requiring only a computer and standard analytical tools without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate numerical methods, tuning parameters (e.g., step sizes, tolerances), and diagnosing instability or conditioning issues often relies on experience beyond formal rules.",
+      "adequacy_evidence": "Current agents can apply standard numerical techniques but show inconsistent judgment in method selection and calibration for non-routine or ill-conditioned problems.",
+      "_timestamp": "2026-04-05T22:37:08"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Numerical analysis spans a wide range of problem types (e.g., differential equations, optimization, linear algebra, stochastic simulation) with diverse structures and edge cases across domains.",
+      "adequacy_evidence": "There is extensive high-quality coverage in textbooks, lecture notes, code repositories, and synthetic problem generation that expose step-by-step methods, enabling comprehensive training signal across subdomains.",
+      "_timestamp": "2026-04-05T22:37:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While some problems have explicit computational goals, selecting appropriate numerical methods, error tolerances, and interpretations often depends on context, assumptions, and the underlying scientific question.",
+      "adequacy_evidence": "Current agents can often infer reasonable approaches from context but still frequently require clarification or iteration to align with implicit goals and domain-specific expectations.",
+      "_timestamp": "2026-04-05T22:37:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Numerical analysis tasks require tracking intermediate variables, parameters, and iterative computations, but these are typically structured and can be modularized or offloaded to tools.",
+      "adequacy_evidence": "Current agents handle structured computations well with tool support, but may lose track of intermediate state or introduce drift in longer, multi-step analyses without careful scaffolding.",
+      "_timestamp": "2026-04-05T22:37:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Numerical analysis computations are typically self-contained per dataset or problem instance, with all necessary inputs provided at the time of analysis.",
+      "adequacy_evidence": "Since the task rarely depends on cross-session context, current agents' limited persistent memory does not impede performance.",
+      "_timestamp": "2026-04-05T22:37:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Numerical analysis tasks often involve multi-step procedures (e.g., iterative methods, error analysis, algorithm selection) where intermediate results inform later steps, but these sequences are typically modular and decomposable.",
+      "adequacy_evidence": "LLM-based agents with code execution and numerical libraries can reliably carry out extended computational workflows without significant degradation, as intermediate steps are offloaded to stable tools and can be checked iteratively.",
+      "_timestamp": "2026-04-05T22:37:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Numerical analysis and mathematical computations are typically conducted in research or analytical settings where minutes to hours (or longer) are acceptable, with little need for real-time responsiveness.",
+      "adequacy_evidence": "Given the relaxed latency constraints, AI systems can use extended reasoning, iterative computation, and tooling without time pressure, achieving high-quality results within the available time budget.",
+      "_timestamp": "2026-04-05T22:37:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Numerical results can often be checked via residuals, convergence tests, benchmarks, or alternative formulations, but verifying correctness in complex analyses or bespoke methods requires expertise and nontrivial effort.",
+      "adequacy_evidence": "AI can generate computations and code, but still makes implementation or methodological errors often enough that practitioners must run tests, sanity checks, and cross-validations to \u057e\u057d\u057f\u0561\u0570 results.",
+      "_timestamp": "2026-04-05T22:37:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Core numerical analysis work is fundamentally symbolic and text-based (equations, algorithms, numerical results), with any visualizations (e.g., plots) being optional aids rather than required inputs or outputs.",
+      "adequacy_evidence": "Current AI systems can fully handle text-based mathematical computation and generate basic visualizations when needed, with no significant multimodal limitations affecting task performance.",
+      "_timestamp": "2026-04-05T22:37:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements that prohibit AI from performing numerical computations or applying numerical analysis methods. These activities are broadly unregulated and commonly automated across many domains.",
+      "_timestamp": "2026-04-05T22:37:12"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily technical and computational, with outputs (e.g., numerical results, analyses) consumed impersonally; stakeholder interaction or performer identity is not central.",
+      "adequacy_evidence": "Because there are no meaningful stakeholder acceptance requirements tied to performer identity, AI systems are already broadly accepted for computational and numerical analysis tasks.",
+      "_timestamp": "2026-04-05T22:37:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Numerical analysis results often feed into high-stakes domains (e.g., engineering models, scientific conclusions), where even small residual errors can propagate and cause significant downstream consequences.",
+      "adequacy_evidence": "With standard validation (e.g., cross-checks, test cases, error bounds), AI-generated computations can usually be vetted, but subtle numerical instability or methodological misapplication can still leave non-trivial residual risk.",
+      "_timestamp": "2026-04-05T22:37:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

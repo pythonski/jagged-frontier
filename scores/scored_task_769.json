@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-6012.00",
+  "task_id": 769,
+  "task_statement": "Assist attorneys in collecting information such as employment, medical, and other records.",
+  "occupation_title": "Legal Secretaries and Administrative Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Most record collection is done through digital means such as email, online portals, electronic records systems, or phone requests. However, some cases require handling physical documents, mailed authorizations, or obtaining records from offices that only provide paper copies."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple record types (employment, medical, legal) and varying procedures across jurisdictions and institutions, but follows broadly similar administrative patterns (requests, authorizations, tracking).",
+      "adequacy_evidence": "There is substantial public and synthetic data on records requests and legal admin workflows, but many real-world variations (institution-specific processes, private records systems, nuanced compliance practices) are not well represented in accessible training data.",
+      "_timestamp": "2026-04-05T23:58:58"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of record collection follows documented procedures, assistants must use experience to judge which sources to contact, interpret incomplete requests, and handle exceptions (e.g., missing or inconsistent records).",
+      "adequacy_evidence": "Current agents can follow standard workflows and infer many requirements, but they lack reliable calibration in edge cases like ambiguous requests or nuanced judgments about completeness and relevance.",
+      "_timestamp": "2026-04-05T23:58:58"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task depends on case-specific needs (e.g., which records are relevant, required scope, jurisdictional rules, and attorney preferences), which are often implicit rather than fully specified upfront.",
+      "adequacy_evidence": "Current agents can infer likely document sets and follow standard procedures, but they often miss context-specific nuances or attorney intent without iterative clarification.",
+      "_timestamp": "2026-04-05T23:58:59"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves handling multiple records across categories (employment, medical, etc.), requiring tracking of names, dates, sources, and document status within a single workflow.",
+      "adequacy_evidence": "Current agents can manage document sets with tool support, but may lose or misalign specific details (e.g., mismatched records or incomplete tracking) without careful structuring.",
+      "_timestamp": "2026-04-05T23:59:00"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Collecting employment, medical, and other records involves multi-step workflows (identifying sources, requesting documents, tracking responses), but many steps are loosely coupled and can be handled independently.",
+      "adequacy_evidence": "AI agents can manage multi-step retrieval and tracking workflows, but over longer sequences may exhibit minor coordination issues such as missed follow-ups or inconsistent state tracking.",
+      "_timestamp": "2026-04-05T23:59:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves handling documents like medical records or scanned forms that may include images, handwriting, or non-text formats, though much content is still text-centric.",
+      "adequacy_evidence": "Current agents handle standard digital documents and basic OCR well but can struggle with poor-quality scans, handwriting, or complex document layouts.",
+      "_timestamp": "2026-04-05T23:59:01"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves tracking which records have been requested, received, and still outstanding across ongoing legal cases, requiring some continuity of case-specific context over time.",
+      "adequacy_evidence": "Current AI systems can use external databases and case management integrations to persist and retrieve this information, but failures in consistent updating, retrieval accuracy, or integration across tools still occur in a meaningful share of workflows.",
+      "_timestamp": "2026-04-05T23:59:01"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Collecting employment, medical, and other records typically unfolds over hours to days, with no need for immediate real-time responses.",
+      "adequacy_evidence": "AI agents can operate well within these loose time constraints, and slower, more thorough reasoning does not conflict with task expectations.",
+      "_timestamp": "2026-04-05T23:59:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors such as missing, incorrect, or misattributed records can affect case preparation and timelines, but are usually discoverable and correctable without irreversible harm.",
+      "adequacy_evidence": "Even with review, AI may still overlook relevant records or mishandle document matching, leaving some residual risk that could impact case completeness.",
+      "_timestamp": "2026-04-05T23:59:02"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires interacting with external parties (employers, medical providers, clients) who must trust the legitimacy of the request and provide sensitive records, so performer identity has some importance.",
+      "adequacy_evidence": "Many stakeholders may be hesitant to engage with or release sensitive information to an AI agent, preferring verified human or firm representatives, though this can often be mitigated if the AI operates under clear institutional authority.",
+      "_timestamp": "2026-04-05T23:59:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI assisting with record collection, but laws like HIPAA and other privacy/confidentiality rules impose strict requirements on handling medical and personal data, creating compliance constraints. These rules may require human oversight or specific safeguards, leading to partial restriction rather than a full ban.",
+      "_timestamp": "2026-04-05T23:59:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying collected records involves checking completeness, correct identities, date ranges, and relevance to the legal matter, which requires careful review but follows structured criteria and established procedures.",
+      "adequacy_evidence": "AI can gather and organize records but may miss items, misinterpret requests, or include incorrect documents, so consistent human review is still needed though errors are generally detectable with routine checks.",
+      "_timestamp": "2026-04-06T11:26:44"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

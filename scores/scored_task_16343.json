@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2051.02",
+  "task_id": 16343,
+  "task_statement": "Analyze and recommend chemical, biological, or other wastewater treatment methods to prepare water for industrial or domestic use.",
+  "occupation_title": "Water/Wastewater Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Analyzing data and recommending treatment methods is typically done using computer-based modeling, data analysis, and report preparation. However, some instances rely on field sampling, pilot testing, or lab results that involve physical processes and site interaction."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Wastewater treatment design spans highly heterogeneous conditions (industrial vs domestic sources, contaminant profiles, local regulations, climate, scale), with many context-specific edge cases requiring tailored solutions.",
+      "adequacy_evidence": "There is extensive public literature, engineering case studies, design manuals, and simulation tools covering many scenarios, but some real-world operational data and rare industrial edge cases remain proprietary or thinly documented.",
+      "_timestamp": "2026-04-06T00:22:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis including characterizing influent, selecting and sizing treatment processes, evaluating constraints, and iterating designs where early decisions affect downstream feasibility and performance.",
+      "adequacy_evidence": "LLM-based agents can handle multi-step engineering reasoning with tools, but over longer chains they show some error accumulation (e.g., inconsistent assumptions or missed constraints) requiring oversight.",
+      "_timestamp": "2026-04-06T00:22:30"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting and tailoring wastewater treatment methods depends heavily on site-specific factors (influent variability, local regulations, operational constraints) and experiential judgment from prior projects, not just codified rules.",
+      "adequacy_evidence": "Current AI agents can apply engineering principles and reference cases, but lack the field-derived calibration and nuanced tradeoff judgment needed for many non-routine or context-sensitive scenarios.",
+      "_timestamp": "2026-04-06T00:22:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large, heterogeneous datasets within a single analysis episode (e.g., influent chemistry, flow rates, regulatory limits, treatment performance data, and design constraints), where missing or mismanaging details can lead to incorrect treatment recommendations.",
+      "adequacy_evidence": "Current agents can manage substantial context using retrieval and external tools, but they still show weaknesses in consistently tracking all interacting parameters and maintaining accurate compressed representations over complex engineering analyses.",
+      "_timestamp": "2026-04-06T00:22:31"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While regulatory discharge limits and treatment goals are partly explicit, key criteria (cost tradeoffs, site constraints, influent variability, stakeholder priorities) are context-dependent and require interpretation.",
+      "adequacy_evidence": "Current agents can infer typical objectives and propose viable treatment options, but often miss local constraints or implicit priorities, requiring human iteration to refine recommendations.",
+      "_timestamp": "2026-04-06T00:22:32"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommendations often build on prior site analyses, pilot studies, historical performance data, and evolving regulatory or client constraints across project phases, but each project is largely self-contained.",
+      "adequacy_evidence": "Current agents with retrieval systems can store and recall project documents and histories, but they can inconsistently track evolving context or integrate lessons across multiple prior cases without careful system design.",
+      "_timestamp": "2026-04-06T00:22:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves interpreting lab data, process flow diagrams, and occasionally site or equipment visuals, but core reasoning is largely based on textual and numerical data.",
+      "adequacy_evidence": "Current AI agents can reliably process structured data, technical documents, and common engineering diagrams, with multimodal gaps rarely limiting overall task performance.",
+      "_timestamp": "2026-04-06T00:22:32"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Wastewater treatment analysis and method selection are typically conducted as part of engineering studies or design processes with timelines of hours to days, not real-time decision-making.",
+      "adequacy_evidence": "Current AI systems can take seconds to minutes for extended reasoning, which fits comfortably within the task's time horizons without forcing quality-speed tradeoffs.",
+      "_timestamp": "2026-04-06T00:22:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in selecting or recommending wastewater treatment methods can lead to public health hazards, environmental damage, regulatory violations, and costly system failures, so even rare residual mistakes can have severe consequences.",
+      "adequacy_evidence": "While engineering review, simulation, and pilot testing can catch many issues, AI-generated recommendations may still introduce subtle design or context errors that are not fully eliminated by standard checks, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T00:22:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Engineers must present and justify treatment recommendations to clients, regulators, and public stakeholders who rely on their expertise and credentials, though the task is primarily technical analysis.",
+      "adequacy_evidence": "Stakeholders often expect licensed human engineers to endorse decisions; while AI-assisted analysis may be tolerated, full substitution by an AI agent would face trust and accountability concerns.",
+      "_timestamp": "2026-04-06T00:22:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing treatment recommendations requires domain expertise, process modeling, and often pilot testing; errors may only surface after implementation via effluent quality or regulatory noncompliance, making them hard to detect upfront.",
+      "adequacy_evidence": "Current AI can propose plausible but flawed designs or misapply standards, so outputs require thorough expert review, calculations, and validation studies, making verification burdensome and unavoidable.",
+      "_timestamp": "2026-04-06T00:22:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Engineering work that involves recommending treatment methods for public or industrial water systems typically must be performed under the responsible charge of a licensed Professional Engineer (PE), who must review and approve/sign off on the work. AI can assist, but cannot legally replace the licensed decision-maker, creating a partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-06T00:22:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

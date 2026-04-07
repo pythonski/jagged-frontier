@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-1133.00",
+  "task_id": 18698,
+  "task_statement": "Complete administrative tasks, such as entering orders into computer, answering telephone calls, or maintaining medical or facility information.",
+  "occupation_title": "Psychiatric Aides",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "The listed activities\u2014entering orders into a computer, answering calls, and maintaining information\u2014are primarily computer or phone based and could be done remotely, but in practice psychiatric aides often perform them on-site and may handle physical records or coordinate with staff in person."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans moderately diverse instances (different types of calls, order entries, and facility-specific record systems), but remains within a bounded administrative domain with recurring patterns.",
+      "adequacy_evidence": "While general administrative workflows are well-covered in available data, healthcare-specific processes and real patient interaction logs are often private, making some subcases thin but still partially reproducible via synthetic data and structured training.",
+      "_timestamp": "2026-04-06T05:17:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Administrative tasks like order entry and maintaining records follow established procedures, but answering calls and prioritizing or interpreting requests can involve context-dependent judgment and implicit expectations.",
+      "adequacy_evidence": "Current agents handle structured data entry well but can miss nuanced intent or context in phone interactions or loosely specified requests, requiring human clarification in some cases.",
+      "_timestamp": "2026-04-06T05:17:53"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "These administrative tasks are largely governed by explicit procedures (data entry protocols, call scripts, record-keeping rules) with minimal reliance on experience-based judgment.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured workflows, handle routine communication, and manage records without needing tacit experiential calibration.",
+      "_timestamp": "2026-04-06T05:17:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Administrative tasks like entering orders or maintaining records require tracking patient details, instructions, and updates within a single interaction, but the information volume is typically structured and bounded.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably manage structured data entry, call handling scripts, and record updates with minimal context loss using current tools and retrieval mechanisms.",
+      "_timestamp": "2026-04-06T05:17:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "These administrative duties involve short to moderately extended sequences (e.g., gathering information, entering it correctly, confirming details), but steps are typically loosely coupled and reset between tasks.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably handle such routine multi-step workflows (data entry, call handling scripts) without meaningful degradation over the sequence lengths involved.",
+      "_timestamp": "2026-04-06T05:17:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task includes answering telephone calls (audio) and possibly interpreting spoken information, but much of the work (data entry, record maintenance) is text-based.",
+      "adequacy_evidence": "Current AI systems handle speech recognition and basic audio interaction reliably in structured contexts like phone calls, and text-based administrative tasks are well within capability.",
+      "_timestamp": "2026-04-06T05:17:56"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tasks like answering telephone calls and entering orders typically require responses within seconds to a minute, but do not demand complex reasoning under extreme real-time pressure.",
+      "adequacy_evidence": "Current AI systems can generate accurate responses and perform structured data entry well within these time constraints, with minimal quality loss from latency limits.",
+      "_timestamp": "2026-04-06T05:17:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining medical or facility information and handling calls often depends on accessing existing patient or facility records across sessions, but the task relies on stored systems rather than personal memory.",
+      "adequacy_evidence": "Current AI agents can reliably use external databases and record systems (e.g., EHRs, CRM tools) to retrieve and update persistent information, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T05:17:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Administrative errors (e.g., incorrect order entry or misrecorded information) can affect patient care and operations, but are often caught through routine checks and are usually correctable before causing severe harm.",
+      "adequacy_evidence": "Even with standard verification (e.g., supervisor review or system checks), AI may still introduce occasional data entry or communication errors that could slip through, leaving some residual risk that is noticeable but generally manageable.",
+      "_timestamp": "2026-04-06T05:17:57"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Administrative errors like incorrect data entry or misrecorded information can usually be detected through cross-checking records or routine review, but they are not always immediately obvious and require attention to detail.",
+      "adequacy_evidence": "Current AI systems can handle structured administrative tasks but still make occasional transcription or interpretation errors, requiring consistent human verification to ensure accuracy.",
+      "_timestamp": "2026-04-06T05:17:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "These administrative tasks involve interacting with patients, staff, or external callers who rely on accurate information handling, but the performer\u2019s personal identity or authority is not central to task success.",
+      "adequacy_evidence": "Many stakeholders would accept AI for routine administrative functions like data entry or call routing, but in a psychiatric setting some may prefer human interaction, leading to moderate resistance.",
+      "_timestamp": "2026-04-06T05:17:58"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no blanket prohibition on AI performing administrative healthcare tasks, but regulations like HIPAA and EHR access controls require authorized users and safeguard patient data, and order entry often must be attributed to credentialed personnel. These create partial constraints rather than a full ban on AI involvement.",
+      "_timestamp": "2026-04-06T05:17:59"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

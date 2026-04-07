@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5032.00",
+  "task_id": 2724,
+  "task_statement": "Arrange for necessary repairs to restore service and schedules.",
+  "occupation_title": "Dispatchers, Except Police, Fire, and Ambulance",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Arranging repairs typically involves contacting maintenance personnel or vendors, updating schedules, and coordinating resources via phone, radio, or computer systems. The dispatcher does not perform the repair and the coordination can be done entirely through digital communication tools."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dispatchers must prioritize repairs based on operational impact, resource availability, and evolving conditions, which often requires experience-based judgment beyond fixed procedures.",
+      "adequacy_evidence": "AI agents can follow scheduling and prioritization rules, but they still lack robust calibration for handling nuanced tradeoffs and exceptions in dynamic, real-world service disruptions.",
+      "_timestamp": "2026-04-05T20:47:43"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied but structured scenarios (different equipment failures, vendors, urgency levels, and scheduling constraints) rather than a highly long-tailed distribution.",
+      "adequacy_evidence": "There is ample coverage in maintenance logs, dispatch records, service manuals, and workflow documentation, and realistic scenarios can be readily simulated, providing sufficient process-level training signal.",
+      "_timestamp": "2026-04-05T20:47:43"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting operational priorities, urgency, resource availability, and implicit service standards to decide what repairs are 'necessary' and how to restore schedules effectively.",
+      "adequacy_evidence": "Current agents can infer general goals (restore service quickly) but often miss context-specific priorities or tradeoffs (e.g., which routes matter most), requiring human guidance to resolve ambiguity.",
+      "_timestamp": "2026-04-05T20:47:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking service disruptions, available repair crews, equipment status, and scheduling constraints, requiring integration of multiple evolving information sources within a single episode.",
+      "adequacy_evidence": "Current agents can manage structured state with tools, but may lose track of updates or inconsistencies in dynamic, multi-entity scheduling contexts without careful scaffolding.",
+      "_timestamp": "2026-04-05T20:47:44"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Coordinating repairs involves multiple interdependent steps such as identifying issues, contacting service providers, scheduling repairs, and updating service plans, where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long.",
+      "adequacy_evidence": "AI agents can manage multi-step coordination with tools, but may show some degradation over extended interactions, such as losing track of constraints or failing to update all dependent elements consistently.",
+      "_timestamp": "2026-04-05T20:47:45"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatchers benefit from prior maintenance records, recurring equipment issues, and vendor performance history, but each repair arrangement can often be handled with current incident data plus accessible logs.",
+      "adequacy_evidence": "Existing systems (e.g., maintenance databases, ticketing systems) and LLM agents with retrieval can reliably store and access cross-session records, with minimal gaps for this level of longitudinal context.",
+      "_timestamp": "2026-04-05T20:47:45"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatchers must act promptly to minimize service disruptions, typically within seconds to a few minutes, but the task does not require split-second decisions.",
+      "adequacy_evidence": "Current AI agents can generate and coordinate repair plans quickly within this time frame without significant loss of quality, as the reasoning depth required is moderate.",
+      "_timestamp": "2026-04-05T20:47:46"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying correctness requires checking that appropriate repair actions, vendors, and timing align with operational needs; mistakes may only become evident through delays or service disruptions, not immediately.",
+      "adequacy_evidence": "AI can propose plausible repair arrangements, but may misjudge priorities, availability, or constraints, so human oversight and coordination checks are still needed to catch practical errors.",
+      "_timestamp": "2026-04-05T20:47:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatchers often rely on audio communications (radio, phone) and occasionally map interfaces, but the core task\u2014coordinating and arranging repairs\u2014is largely information management and communication rather than deeply perceptual work.",
+      "adequacy_evidence": "Current AI systems with speech recognition and standard interfaces can reliably handle audio inputs and basic spatial data, with no major shortfall for typical dispatch coordination tasks.",
+      "_timestamp": "2026-04-05T20:47:47"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations that prohibit AI systems from arranging repairs in dispatch operations. While specific industries (e.g., utilities, transportation) may have operational or safety regulations, they do not mandate that only humans perform scheduling or coordination tasks.",
+      "_timestamp": "2026-04-05T20:47:47"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires coordinating with repair crews, vendors, and operations staff who must act on the dispatcher\u2019s instructions, so stakeholders do engage with the performer\u2019s output.",
+      "adequacy_evidence": "In logistics and dispatch contexts, stakeholders are already accustomed to interacting with automated or semi-automated systems, and would generally accept an AI agent arranging repairs if it performs reliably.",
+      "_timestamp": "2026-04-05T20:47:47"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in arranging repairs can cause service delays, missed schedules, and operational inefficiencies, but these are typically recoverable and not catastrophic.",
+      "adequacy_evidence": "With standard checks like confirmation of repair orders and schedule validation, AI-generated plans can be reviewed and corrected, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T20:47:48"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

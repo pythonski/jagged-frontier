@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9097.00",
+  "task_id": 19393,
+  "task_statement": "Provide sample analysis results to physicians to assist diagnosis.",
+  "occupation_title": "Phlebotomists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Sample analysis results are typically transmitted to physicians through electronic health record systems, messages, or digital reports. However, some instances may involve verbal communication or handing over printed results in clinical settings."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of laboratory tests, patient conditions, and reporting formats, but remains within standardized clinical lab result interpretation and communication patterns.",
+      "adequacy_evidence": "Extensive medical datasets, lab report examples, and clinical guidelines provide strong coverage of result presentation and interpretation, with clear structured formats and documented reasoning processes.",
+      "_timestamp": "2026-04-05T23:55:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing sample analysis results follows standardized lab reporting formats with explicit values, reference ranges, and flags, leaving little room for interpretation of objectives or success criteria.",
+      "adequacy_evidence": "AI systems can reliably format and present lab results according to established conventions without needing to infer latent intent or resolve ambiguity.",
+      "_timestamp": "2026-04-05T23:55:36"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Providing sample analysis results is largely governed by standardized lab procedures and reference ranges, though some experience helps in flagging anomalies or noting pre-analytical factors that could affect interpretation.",
+      "adequacy_evidence": "Current AI systems can reliably apply reference ranges, detect abnormalities, and contextualize results using clinical guidelines, with little shortfall in the limited tacit judgment required.",
+      "_timestamp": "2026-04-05T23:55:36"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing sample analysis results is typically a short, well-defined task involving retrieving lab outputs and communicating them clearly, with minimal multi-step interdependence.",
+      "adequacy_evidence": "AI systems can reliably handle short, structured reporting tasks without degradation, maintaining consistency across the limited sequence length required.",
+      "_timestamp": "2026-04-05T23:55:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling patient identifiers, lab results, and reference ranges within a single episode, requiring some integration and accuracy but not large or complex information volumes.",
+      "adequacy_evidence": "Current AI systems can reliably manage and organize structured clinical data within a single interaction without significant loss or distortion of relevant information.",
+      "_timestamp": "2026-04-05T23:55:37"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing sample analysis results primarily involves communicating numeric lab values and textual interpretations; it does not inherently require perception or generation of non-text modalities.",
+      "adequacy_evidence": "AI systems can reliably handle text-based and structured data reporting, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-05T23:55:38"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Lab analysis results are typically delivered on timescales of minutes to hours, even for urgent (STAT) cases, rather than requiring instantaneous responses.",
+      "adequacy_evidence": "AI systems can generate or summarize analysis results well within these time windows without sacrificing reasoning quality, so latency constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T23:55:38"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Providing sample analysis results may benefit from referencing prior patient results for comparison (e.g., trends), but each report is largely self-contained and tied to a specific sample instance.",
+      "adequacy_evidence": "Current AI systems integrated with standard lab information systems can reliably store and retrieve prior results, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-05T23:55:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Clinical laboratory regulations (e.g., CLIA) require that test results be generated and verified under the supervision of qualified personnel, and diagnostic tools may require FDA clearance. AI can assist, but autonomous provision of results without human oversight is not clearly permitted, creating partial regulatory constraints.",
+      "_timestamp": "2026-04-05T23:55:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Physicians are the direct consumers of the analysis results and must trust and act on them, so there is stakeholder engagement, though it is primarily output-focused rather than relationship-driven.",
+      "adequacy_evidence": "Physicians already rely heavily on automated lab systems and machine-generated analyses, so AI-produced sample results would generally be accepted if validated and integrated into existing workflows.",
+      "_timestamp": "2026-04-05T23:55:39"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Lab analysis results can be cross-checked against instrument outputs, reference ranges, and quality control procedures, but doing so requires domain knowledge and careful review rather than being entirely trivial.",
+      "adequacy_evidence": "AI-generated or relayed results would still need routine verification against source data and lab systems, as errors like misreporting or misinterpretation are plausible and not always immediately obvious without standard checks.",
+      "_timestamp": "2026-04-05T23:55:39"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect or miscommunicated lab analysis results can directly lead to misdiagnosis or inappropriate treatment, so even rare residual errors can have serious clinical consequences.",
+      "adequacy_evidence": "With structured lab systems and verification workflows, many errors can be caught, but LLM-based agents still pose some risk of subtle misreporting or interpretation errors that remain problematic even after standard checks.",
+      "_timestamp": "2026-04-05T23:55:40"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

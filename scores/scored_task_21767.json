@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1299.05",
+  "task_id": 21767,
+  "task_statement": "Conduct investigations of information security breaches to identify vulnerabilities and evaluate the damage.",
+  "occupation_title": "Information Security Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Investigating security breaches is typically performed through digital forensics, log analysis, and examination of systems and network data using computers. However, some cases require physical access to compromised machines, storage media, or on\u2011site evidence collection."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Breach investigation requires interpreting ambiguous logs, inferring attacker intent, prioritizing plausible attack paths, and assessing business impact\u2014skills built through experience with diverse incidents and adversary behavior.",
+      "adequacy_evidence": "Current agents can follow playbooks and analyze artifacts, but often lack robust calibration in novel or highly context-specific attacks, especially in weighing subtle signals and organizational context.",
+      "_timestamp": "2026-04-05T22:43:12"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Security breach investigations span highly heterogeneous environments (different architectures, threat actors, attack vectors, and logging practices), with many rare, long-tail incident types and context-specific factors.",
+      "adequacy_evidence": "While there is substantial public data (incident reports, CTFs, malware analyses) and synthetic generation is feasible, detailed real-world investigative traces and enterprise-specific logs are often private, leaving gaps in fully representative coverage.",
+      "_timestamp": "2026-04-05T22:43:13"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Security breach investigations require multi-stage workflows (evidence collection, timeline reconstruction, hypothesis testing, vulnerability identification, and damage assessment) where each step builds on prior findings.",
+      "adequacy_evidence": "Current agents can sustain structured multi-step analyses with tooling, but longer investigations with evolving hypotheses and large evidence sets still show some drift and error compounding.",
+      "_timestamp": "2026-04-05T22:43:13"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Security breach investigations require synthesizing large volumes of heterogeneous data (logs, network traces, system states, timelines) and maintaining a coherent evolving picture where missing a detail can lead to incorrect root-cause or impact assessment.",
+      "adequacy_evidence": "Agents with retrieval and tool use can handle large datasets, but still show weaknesses in maintaining consistent state across long investigative chains, occasionally losing or misprioritizing critical context.",
+      "_timestamp": "2026-04-05T22:43:14"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Investigations benefit from prior incident reports, known vulnerabilities, and historical patterns within the organization, but many cases can still be handled using current logs and evidence from the specific breach.",
+      "adequacy_evidence": "Current AI systems can integrate with SIEMs, ticketing systems, and knowledge bases to retrieve past incidents, but they still show gaps in consistently maintaining and surfacing relevant cross-case context without careful system design.",
+      "_timestamp": "2026-04-05T22:43:14"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Investigations primarily rely on textual artifacts (logs, alerts, reports), but can include non-text data such as packet captures, memory dumps, and network diagrams that require some multimodal or structured-data interpretation.",
+      "adequacy_evidence": "Current agents can process structured and some binary-derived data with tools, but performance is less reliable on complex packet analysis, memory forensics, or nuanced cross-modal correlations.",
+      "_timestamp": "2026-04-05T22:43:14"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While incident response has standard playbooks, key objectives\u2014such as scope of investigation, what constitutes material damage, and which systems or data matter most\u2014depend on organizational context and stakeholder priorities.",
+      "adequacy_evidence": "Current agents can follow structured IR procedures but often miss shifting investigative scope, implicit business impacts, or nuanced stakeholder goals without human guidance and iteration.",
+      "_timestamp": "2026-04-05T22:43:15"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Initial incident triage may require relatively quick responses, but full breach investigations typically unfold over hours to days, allowing time for careful analysis.",
+      "adequacy_evidence": "Current AI agents can perform log analysis, correlation, and hypothesis generation within acceptable timeframes, so speed constraints rarely force a significant quality tradeoff.",
+      "_timestamp": "2026-04-05T22:43:15"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Misidentifying vulnerabilities or underestimating breach impact can leave systems exposed, enable repeat attacks, or cause major financial, legal, and reputational damage.",
+      "adequacy_evidence": "Even with review and tooling, AI may miss subtle attack vectors, misattribute causality, or incompletely assess damage, leaving significant residual risk in adversarial and high-stakes security contexts.",
+      "_timestamp": "2026-04-05T22:43:16"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Breach investigations involve complex, adversarial, and incomplete evidence (logs, artifacts, attacker behavior), where mistakes like missed indicators or incorrect causal chains can be subtle and only uncovered through deep forensic review and cross-validation.",
+      "adequacy_evidence": "Current AI agents can misinterpret logs, miss edge-case indicators, or fabricate plausible but incorrect attack narratives, requiring extensive expert validation and re-analysis to ensure accuracy before results are trusted.",
+      "_timestamp": "2026-04-05T22:43:16"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Investigations are consumed by internal leadership, legal teams, and sometimes external clients or regulators, who rely on the findings and may care about the credibility of the investigator.",
+      "adequacy_evidence": "AI-assisted security analysis is increasingly accepted, but fully delegating breach investigations to an AI agent may face skepticism, especially where legal accountability or forensic credibility is important.",
+      "_timestamp": "2026-04-05T22:43:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from conducting information security breach investigations. While data handling and privacy laws (e.g., HIPAA, GLBA) impose constraints on how investigations are performed, they do not require a human to exclusively carry out the investigative task.",
+      "_timestamp": "2026-04-05T22:43:17"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

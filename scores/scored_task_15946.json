@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1041.08",
+  "task_id": 15946,
+  "task_statement": "Clear goods through customs and to their destinations for clients.",
+  "occupation_title": "Customs Brokers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Customs clearance is largely handled through electronic filing systems, digital documentation, and online communication with customs authorities and carriers. However, some cases require in-person interactions at ports, handling original documents, or on-site coordination with customs officials or logistics providers."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous cases across countries, product categories, tariff classifications, compliance regimes, and exception scenarios, creating a long-tailed distribution of situations.",
+      "adequacy_evidence": "While regulations, forms, and many example filings are publicly available and can be simulated, detailed case histories and edge-case resolutions are often proprietary or sparse, leaving some important subpopulations only partially covered.",
+      "_timestamp": "2026-04-06T00:06:57"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of customs clearance relies on codified regulations (tariff schedules, documentation requirements), brokers frequently rely on experience to interpret ambiguous classifications, anticipate enforcement behavior, and handle exceptions or disputes.",
+      "adequacy_evidence": "Current agents can apply explicit rules and past examples well, but struggle with nuanced judgment in borderline classifications, evolving enforcement practices, and informal negotiation dynamics with customs officials.",
+      "_timestamp": "2026-04-06T00:06:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clearing goods through customs involves interpreting evolving regulations, correctly classifying goods, and balancing client priorities (cost, speed, risk), many of which are implicit and context-dependent across jurisdictions and shipments.",
+      "adequacy_evidence": "Current agents can infer many objectives and apply rules with retrieval, but they still struggle with nuanced trade-offs, exception handling, and aligning with unstated client or regulator expectations without human guidance.",
+      "_timestamp": "2026-04-06T00:06:57"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clearing goods through customs requires coordinated multi-step workflows (classification, documentation, duty calculation, filing entries, responding to holds, and arranging delivery) where errors in early steps propagate to later stages.",
+      "adequacy_evidence": "Well-scaffolded AI agents can manage multi-step logistics workflows with tool use and tracking, but still show some degradation over extended sequences (e.g., missed constraints or inconsistent updates across steps).",
+      "_timestamp": "2026-04-06T00:06:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves handling multiple structured documents (invoices, bills of lading, tariff codes, regulatory forms) and cross-referencing details, requiring consistent tracking but within relatively bounded and standardized information sets.",
+      "adequacy_evidence": "Current agents can process and organize such documents with tools, but may occasionally lose or misalign key details across sources, especially in longer or more complex filings.",
+      "_timestamp": "2026-04-06T00:06:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Customs clearance processes typically operate on timescales of minutes to hours, involving document preparation, submission, and review rather than real-time interaction.",
+      "adequacy_evidence": "Current AI agents can perform required reasoning and document handling well within these time windows, so latency does not meaningfully constrain quality.",
+      "_timestamp": "2026-04-06T00:06:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customs brokers benefit from retaining client profiles, prior classifications, compliance history, and recurring documentation patterns across shipments, though many filings can still be handled as largely self-contained cases.",
+      "adequacy_evidence": "Current agents can persist and query structured client and shipment data via external systems, but they can inconsistently surface relevant prior cases or nuanced historical context without careful system design and integration.",
+      "_timestamp": "2026-04-06T00:06:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is primarily document- and text-driven (forms, invoices, tariffs), but may involve interpreting images of goods, labels, or shipping documents in some cases.",
+      "adequacy_evidence": "Current AI systems handle document parsing and basic image interpretation (e.g., invoices, labels) reliably enough for typical cases, with minimal multimodal limitations.",
+      "_timestamp": "2026-04-06T00:06:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in tariff classification, valuation, or documentation can be subtle and may only surface during audits or inspections, requiring specialized knowledge and cross-checking against complex regulations.",
+      "adequacy_evidence": "Current AI systems frequently make nuanced mistakes in regulatory interpretation and documentation, and verifying correctness demands expert review, making unverified use impractical.",
+      "_timestamp": "2026-04-06T00:07:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task requires ongoing interaction with customs authorities and clients, where recognized credentials, accountability, and professional legitimacy of the broker are central to acceptance and successful clearance.",
+      "adequacy_evidence": "Customs agencies and clients typically require licensed human brokers and identifiable responsible parties, and would not accept an AI agent as the official intermediary, creating strong resistance.",
+      "_timestamp": "2026-04-06T00:07:00"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in customs clearance (e.g., misclassification, incorrect valuation, or missing documentation) can lead to fines, shipment seizures, legal penalties, or significant delays, making even rare residual mistakes high-impact.",
+      "adequacy_evidence": "While many outputs can be checked against regulations and documentation, AI may still introduce subtle compliance errors (e.g., incorrect tariff codes or rule interpretations) that survive review, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T00:07:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "U.S. customs brokerage activities must be conducted under the authority of a licensed customs broker (19 U.S.C. \u00a71641), with a human licensee responsible for filings and compliance. While automation is allowed, an AI system cannot independently hold a license or legally perform the task without human oversight, constituting an explicit regulatory requirement for a human decision-maker.",
+      "_timestamp": "2026-04-06T00:07:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

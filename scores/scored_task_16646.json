@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3029.03",
+  "task_id": 16646,
+  "task_statement": "Produce electrical, electronic, or mechanical drawings or other related documents or graphics necessary for electromechanical design, using computer-aided design (CAD) software.",
+  "occupation_title": "Engineering Technologists and Technicians, Except Drafters, All Other",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Producing electromechanical drawings with CAD software is a computer-based activity that can be completed entirely using digital tools. It does not inherently require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple domains (electrical, mechanical, electronic) with varying standards, components, and design contexts, but much of the work follows structured conventions and recurring CAD practices.",
+      "adequacy_evidence": "Large corpora of CAD files, engineering drawings, and tutorials exist, but many high-quality, real-world industrial designs are proprietary, leaving some gaps that must be approximated via synthesis or limited-access data.",
+      "_timestamp": "2026-04-06T02:15:31"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of CAD drafting follows explicit standards (dimensioning, symbols, tolerances), effective drawings often require experience-based judgment about manufacturability, component fit, and practical design conventions not fully captured in rules.",
+      "adequacy_evidence": "Current AI agents can apply standards and generate structured drawings, but they still show gaps in context-sensitive judgment (e.g., subtle fit, fabrication constraints), especially in non-routine or organization-specific scenarios.",
+      "_timestamp": "2026-04-06T02:15:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While drawings are guided by explicit engineering specifications and standards, important details such as tolerances, manufacturability, and design intent often require interpretation of context and implicit constraints.",
+      "adequacy_evidence": "Current AI agents can generate CAD artifacts from clear specifications but often miss implicit design intent, standards nuances, or stakeholder preferences, requiring iterative human correction.",
+      "_timestamp": "2026-04-06T02:15:32"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Producing CAD drawings and related design documents typically occurs over minutes to hours, with no requirement for real-time responsiveness.",
+      "adequacy_evidence": "Current AI agents can take the necessary time to plan and generate designs without latency pressure, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T02:15:33"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Producing CAD drawings involves multiple coordinated steps (interpreting specs, constructing geometry, layering, dimensioning, revising), but many steps are modular and can be checked incrementally within the software.",
+      "adequacy_evidence": "AI agents can manage multi-step CAD workflows with tool support, but over longer sequences they can lose constraints or introduce inconsistencies across elements, requiring human oversight to maintain coherence.",
+      "_timestamp": "2026-04-06T02:15:33"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Producing electromechanical CAD drawings requires tracking many interdependent parameters (dimensions, tolerances, materials, component relationships, standards) where missing a detail can propagate errors across the design.",
+      "adequacy_evidence": "Agents can manage structured design data with tooling, but still show context loss and inconsistency when handling complex assemblies or long specification chains, especially across iterative edits.",
+      "_timestamp": "2026-04-06T02:15:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "CAD drawings for electromechanical systems can contain subtle dimensional, tolerance, or integration errors that require domain expertise, cross-referencing, and sometimes downstream simulation or prototyping to detect.",
+      "adequacy_evidence": "Current AI-generated CAD artifacts can include non-obvious geometric, constraint, or standards-compliance errors, and verifying correctness still demands detailed human inspection and iteration, making the checking burden high.",
+      "_timestamp": "2026-04-06T02:15:33"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centers on creating precise graphical CAD drawings involving spatial geometry, dimensions, and visual representations of electromechanical systems, which cannot be reduced to text-only outputs.",
+      "adequacy_evidence": "Current agents can generate simple CAD models or scripts and assist with design, but they remain unreliable on complex assemblies, fine tolerances, and detailed engineering drawing standards.",
+      "_timestamp": "2026-04-06T02:15:34"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "CAD work typically spans multiple sessions within a project, requiring access to prior drawings, design revisions, specifications, and project context, but each drawing task can often be executed with well-scoped inputs from project files.",
+      "adequacy_evidence": "Current agents can interface with file systems and PLM/CAD repositories to retrieve prior context, but integration is not always seamless and may miss or misinterpret relevant historical details across sessions.",
+      "_timestamp": "2026-04-06T02:15:34"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "CAD drawings are reviewed and used by engineers, manufacturers, and project teams who rely on their accuracy and standards compliance, though interaction is primarily with the output rather than the creator\u2019s identity.",
+      "adequacy_evidence": "Stakeholders are generally indifferent to whether drawings are produced by humans or AI as long as they meet technical specifications; CAD automation and AI-assisted design tools are already widely accepted.",
+      "_timestamp": "2026-04-06T02:15:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI generating CAD drawings, but in many engineering contexts the final design documents must be reviewed and stamped by a licensed Professional Engineer. This creates a partial restriction, as AI cannot autonomously fulfill the legally required human sign-off.",
+      "_timestamp": "2026-04-06T02:15:35"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in electromechanical CAD drawings (e.g., incorrect dimensions, tolerances, or component specifications) can propagate into manufacturing and lead to functional failures, safety issues, or costly rework, so very little residual error is tolerable.",
+      "adequacy_evidence": "While standard review processes (peer checks, simulations, CAD validation tools) catch many issues, AI-generated designs may still introduce subtle specification or integration errors that are not always reliably detected, leaving some residual risk.",
+      "_timestamp": "2026-04-06T02:15:35"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

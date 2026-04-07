@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1213.00",
+  "task_id": 17084,
+  "task_statement": "Conduct or order diagnostic tests such as chest radiographs (x-rays), microbiologic tests, or endocrinologic tests.",
+  "occupation_title": "Dermatologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Dermatologists most often order diagnostic tests electronically through medical record systems, which can be done on a computer. However, the task can also include conducting certain tests or specimen collection, which requires physical presence and medical equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate diagnostic tests in dermatology often follows clinical guidelines but still requires experience-based judgment about atypical presentations, comorbidities, and pre-test probabilities.",
+      "adequacy_evidence": "Current AI agents can follow guidelines and synthesize patient data but show weaker calibration in ambiguous or borderline cases, where nuanced clinical judgment influences whether and which tests to order.",
+      "_timestamp": "2026-04-06T03:50:15"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate diagnostic tests spans a wide range of dermatologic presentations, comorbidities, and rare systemic conditions, with significant variation across patient populations and clinical contexts.",
+      "adequacy_evidence": "There is extensive coverage in medical literature, guidelines, and case data describing diagnostic reasoning, but some rare conditions and nuanced real-world decision patterns remain underrepresented or locked in private clinical data.",
+      "_timestamp": "2026-04-06T03:50:16"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate diagnostic tests depends on interpreting patient presentation, differential diagnoses, and clinical context, which are partly implicit and require judgment beyond explicit rules.",
+      "adequacy_evidence": "Current AI can often suggest reasonable tests from structured inputs and guidelines but still struggles with nuanced context, incomplete information, and prioritization, requiring clinician oversight.",
+      "_timestamp": "2026-04-06T03:50:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence: evaluating clinical indications, selecting appropriate tests, and placing or conducting orders, with some interdependence but limited length.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain consistency across these short clinical decision and ordering workflows without noticeable degradation over the sequence.",
+      "_timestamp": "2026-04-06T03:50:16"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate diagnostic tests requires integrating patient history, physical findings, prior test results, and differential diagnoses, but the information volume is typically bounded and structured within a single clinical encounter.",
+      "adequacy_evidence": "Current agents can summarize and track structured clinical information reasonably well, but may miss subtle contextual details or fail to reliably prioritize salient factors across multiple inputs.",
+      "_timestamp": "2026-04-06T03:50:17"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering or conducting diagnostic tests in dermatology typically occurs during patient visits or follow-up workflows where minutes of deliberation are acceptable; it is not a split-second decision task.",
+      "adequacy_evidence": "Current AI agents can generate appropriate test recommendations well within these relaxed time constraints without needing to truncate reasoning, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T03:50:18"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate diagnostic tests often depends on prior patient history, previous test results, and longitudinal disease progression, but each ordering decision is not wholly dependent on deep long-term state.",
+      "adequacy_evidence": "Current AI systems can retrieve and use structured patient records via EHR integrations, but they still show inconsistencies in maintaining and prioritizing longitudinal context across encounters, especially with fragmented or incomplete data.",
+      "_timestamp": "2026-04-06T03:50:18"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interacting with and sometimes interpreting non-text outputs like radiographic images or lab results, but much of the activity (ordering tests, reviewing reports) is mediated through structured or textual data.",
+      "adequacy_evidence": "Current AI systems can handle test ordering workflows and basic interpretation of structured results well, but reliability drops for nuanced image interpretation or integrating multimodal findings in complex cases.",
+      "_timestamp": "2026-04-06T03:50:18"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Ordering diagnostic tests such as radiographs and laboratory studies legally requires authorization by a licensed healthcare provider in the U.S.; AI systems cannot independently place such orders without physician oversight or sign-off. This constitutes an explicit regulatory requirement for a human licensee.",
+      "_timestamp": "2026-04-06T03:50:19"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Ordering diagnostic tests involves direct patient care decisions where patients, insurers, and clinical staff rely on the dermatologist\u2019s medical authority and judgment, making performer identity important.",
+      "adequacy_evidence": "While some patients and systems might accept AI-assisted ordering, many would resist or require physician oversight due to trust, liability, and clinical accountability concerns.",
+      "_timestamp": "2026-04-06T03:50:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering or conducting diagnostic tests carries meaningful consequences\u2014incorrect or omitted tests can delay diagnosis or lead to inappropriate care\u2014but most errors are typically recoverable through downstream clinical review and follow-up.",
+      "adequacy_evidence": "With standard safeguards (physician oversight, lab/radiology interpretation, and clinical follow-up), AI-supported ordering would leave little unacceptable residual risk; errors are likely to be caught before causing severe harm.",
+      "_timestamp": "2026-04-06T03:50:20"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying appropriate test selection and correct execution requires clinical expertise and review of patient context and results, but errors are often caught through standard clinical workflows (e.g., radiologist interpretation, lab validation).",
+      "adequacy_evidence": "Current AI can suggest or order tests but still makes non-trivial mistakes in clinical judgment, requiring physician oversight and routine verification through existing medical review processes.",
+      "_timestamp": "2026-04-06T03:50:20"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

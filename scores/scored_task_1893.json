@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2011.00",
+  "task_id": 1893,
+  "task_statement": "Provide technical information about test results to physicians, family members, or researchers.",
+  "occupation_title": "Medical and Clinical Laboratory Technologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Technical explanations of lab results are often communicated through electronic health records, emails, phone, or video calls, which can be done remotely. However, in many clinical settings technologists also discuss results in person with physicians or care teams within the facility."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting and communicating lab results requires some experiential judgment to contextualize abnormal values, recognize clinically significant patterns, and tailor explanations to different audiences, though much is guided by established reference ranges and protocols.",
+      "adequacy_evidence": "AI systems can accurately explain most standard test results and reference ranges, but show gaps in nuanced clinical interpretation, edge cases, and audience-sensitive framing that experienced technologists handle more reliably.",
+      "_timestamp": "2026-04-05T23:58:21"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tailoring explanations to different audiences (physicians vs. family vs. researchers), with implicit expectations about level of detail, clinical relevance, and tone that are not fully specified in the prompt.",
+      "adequacy_evidence": "Current AI can usually infer audience-appropriate explanations when given context, but often misses nuanced clinical priorities or emotional framing, requiring human adjustment.",
+      "_timestamp": "2026-04-05T23:58:22"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans diverse test types, clinical contexts, and audience expertise levels (physicians vs. lay family members vs. researchers), but the underlying structure of explaining lab results is fairly standardized.",
+      "adequacy_evidence": "There is abundant accessible data (medical literature, lab reports, clinical guidelines, patient education materials) and strong potential for synthetic generation of explanations, providing good coverage of the task\u2019s distribution.",
+      "_timestamp": "2026-04-05T23:58:22"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Providing technical information may involve multi-turn explanations, clarifications, and tailoring detail to the audience, but these interactions are typically short to moderately extended and not tightly interdependent across many steps.",
+      "adequacy_evidence": "Frontier AI agents can maintain coherence and consistency over short-to-moderate explanatory dialogues without significant degradation, especially with structured medical information and tool support.",
+      "_timestamp": "2026-04-05T23:58:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves synthesizing multiple pieces of information such as test results, reference ranges, and patient context, requiring some active retrieval and summarization within a single interaction.",
+      "adequacy_evidence": "Current LLM-based agents can reliably manage and summarize this level of structured clinical information within a single episode without significant loss or distortion of relevant details.",
+      "_timestamp": "2026-04-05T23:58:23"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Explanations of lab results are typically expected within seconds to a few minutes in clinical workflows, especially during consultations, but do not require real-time instantaneous response.",
+      "adequacy_evidence": "Current AI systems can generate accurate, context-aware explanations of test results well within this time window without needing to truncate reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T23:58:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves communicating and explaining laboratory test results, which are typically numerical or textual data, via spoken or written language; multimodal input is not central to this communication step.",
+      "adequacy_evidence": "Current AI systems can effectively handle text-based explanation and communication of technical results, with no significant unmet multimodal requirements for this task.",
+      "_timestamp": "2026-04-05T23:58:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing technical information about test results is typically based on current lab data and existing medical records, with each interaction largely self-contained rather than relying on the agent\u2019s own accumulated memory.",
+      "adequacy_evidence": "Current AI systems can retrieve relevant patient or study history from external databases (e.g., EHRs) as needed, so lack of intrinsic cross-session memory does not meaningfully hinder performance.",
+      "_timestamp": "2026-04-05T23:58:24"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misinterpretations of lab results can be clinically subtle and require domain expertise, contextual patient knowledge, and cross-checking against reference ranges or clinical guidelines to detect errors.",
+      "adequacy_evidence": "Current AI can often generate plausible explanations but still makes occasional interpretation or context errors, requiring expert review to verify accuracy before use.",
+      "_timestamp": "2026-04-05T23:58:25"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves direct communication with physicians, family members, and researchers, all of whom rely on the communicator\u2019s credibility and clarity to interpret medical test results appropriately.",
+      "adequacy_evidence": "While physicians and researchers may accept AI-assisted explanations if validated, many would still prefer human accountability, and family members in particular may distrust or resist AI-delivered medical information.",
+      "_timestamp": "2026-04-05T23:58:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Miscommunication or misinterpretation of lab test results can directly affect clinical decisions, potentially leading to misdiagnosis or inappropriate treatment with serious patient consequences.",
+      "adequacy_evidence": "Even with standard review, AI systems can introduce subtle clinical misinterpretations or overgeneralizations that are not always caught, though these risks are typically manageable with human oversight.",
+      "_timestamp": "2026-04-05T23:58:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "CLIA regulations require that laboratory test results be reported and interpreted under the supervision of qualified laboratory personnel, and accountability is tied to licensed professionals. While AI can assist in generating or conveying information, current rules do not clearly permit fully autonomous AI to fulfill this role without human oversight, creating partial restriction rather than an outright prohibition.",
+      "_timestamp": "2026-04-05T23:58:25"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

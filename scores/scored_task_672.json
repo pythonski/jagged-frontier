@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-1011.00",
+  "task_id": 672,
+  "task_statement": "Plan and prepare work schedules and keep records of employees' work schedules and time cards.",
+  "occupation_title": "First-Line Supervisors of Retail Sales Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Scheduling and maintaining time records are commonly done with digital scheduling and payroll systems, which can be accessed remotely. However, many retail environments still involve handling physical time cards, updating in-store schedules, or coordinating with on-site staffing needs."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Work scheduling requires balancing explicit constraints (labor laws, availability) with implicit factors like fairness, employee preferences, peak demand patterns, and managerial judgment about staffing adequacy.",
+      "adequacy_evidence": "Agents can optimize schedules given structured inputs, but often miss tacit priorities (e.g., perceived fairness, morale, informal norms) without iterative human correction.",
+      "_timestamp": "2026-04-06T05:27:08"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Work scheduling spans variations in store size, employee availability, labor laws, and demand patterns, but follows relatively structured and repetitive patterns with well-understood constraints.",
+      "adequacy_evidence": "There is abundant accessible data from HR systems, scheduling software, and synthetic simulation environments that capture both inputs and decision processes, making coverage of key cases feasible for current AI systems.",
+      "_timestamp": "2026-04-06T05:27:08"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While scheduling uses explicit inputs (availability, labor laws, sales forecasts), effective supervisors apply experience to balance fairness, employee preferences, morale, and store-specific demand patterns.",
+      "adequacy_evidence": "Current AI systems can optimize schedules and incorporate constraints well, but often lack nuanced calibration around informal team dynamics, employee satisfaction, and subtle context-specific tradeoffs.",
+      "_timestamp": "2026-04-06T05:27:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Creating and maintaining employee schedules involves multi-step coordination (availability, labor rules, coverage needs) and updating records over time, but sequences are modular and not deeply interdependent end-to-end.",
+      "adequacy_evidence": "AI agents can manage scheduling workflows with tools, but may show some degradation over longer updates (e.g., constraint drift or inconsistency across revisions), requiring oversight to maintain coherence.",
+      "_timestamp": "2026-04-06T05:27:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires tracking multiple employees, shifts, availability constraints, and time records within a single planning episode, but the information is structured and bounded (often handled via rosters or spreadsheets).",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, databases) reliably manage and update this level of structured information without significant loss or drift within an episode.",
+      "_timestamp": "2026-04-06T05:27:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Work scheduling and timecard management are typically planned in advance or updated periodically, allowing minutes to hours for completion rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI agents can generate and adjust schedules well within these relaxed time constraints without needing to truncate reasoning, so speed does not degrade output quality.",
+      "_timestamp": "2026-04-06T05:27:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Planning schedules and maintaining timecard records are primarily text- and data-driven tasks typically handled via spreadsheets, scheduling software, or written records.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based scheduling, tabular data manipulation, and record-keeping without reliance on multimodal capabilities.",
+      "_timestamp": "2026-04-06T05:27:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires maintaining and referencing ongoing records of employee schedules, availability, and time cards across pay periods, but the structure is relatively standardized and bounded.",
+      "adequacy_evidence": "Current AI systems integrated with databases and scheduling software can reliably store, update, and retrieve this type of structured cross-session information with minimal loss or degradation.",
+      "_timestamp": "2026-04-06T05:27:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in schedules or time records can cause payroll discrepancies, staffing gaps, or employee dissatisfaction, but these are typically reversible and correctable without lasting harm.",
+      "adequacy_evidence": "With standard checks like manager review, payroll system validation, and employee feedback, AI-generated schedules and records would leave minimal residual risk that is generally acceptable in practice.",
+      "_timestamp": "2026-04-06T05:27:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Employees and store management rely on and interact with schedules and time records, and the supervisor\u2019s role carries some authority, but deep personal trust or identity is not central.",
+      "adequacy_evidence": "Automated scheduling and timekeeping systems are already widely used in retail, and employees generally accept AI-assisted or fully automated scheduling as long as it functions fairly and accurately.",
+      "_timestamp": "2026-04-06T05:27:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from creating work schedules or maintaining time and attendance records; employers are responsible for compliance with labor laws, but the tools used (including AI) are not restricted.",
+      "_timestamp": "2026-04-06T05:27:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Work schedules and time records can be checked against clear constraints (shift coverage, labor laws, hours limits), often with software that flags conflicts, though some issues (e.g., fairness or subtle understaffing) require human review.",
+      "adequacy_evidence": "AI can generate plausible schedules but may miss constraints or preferences, requiring routine human or system-based validation; however, most errors are detectable with standard checks and tools.",
+      "_timestamp": "2026-04-06T05:27:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

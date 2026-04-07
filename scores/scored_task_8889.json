@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3031.02",
+  "task_id": 8889,
+  "task_statement": "Submit delinquent accounts to attorneys or outside agencies for collection.",
+  "occupation_title": "Financial Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Submitting delinquent accounts to attorneys or collection agencies is typically done via email, online portals, or electronic account transfers, but some organizations still send physical documentation or files by mail."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves some variation across industries, jurisdictions, and account types (e.g., differing thresholds, documentation, and compliance rules), but is largely governed by standardized policies and procedures.",
+      "adequacy_evidence": "There is ample accessible data (SOPs, compliance guidelines, case workflows) and clear process documentation, making it feasible to cover the relevant distribution with existing training and synthetic augmentation.",
+      "_timestamp": "2026-04-05T22:46:56"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many organizations use explicit policies (e.g., days past due, balance thresholds), managers often apply case-based judgment considering client relationships, recovery likelihood, and legal costs.",
+      "adequacy_evidence": "These judgments are typically supported by structured criteria and historical data, which well-scaffolded AI systems can replicate reliably with minimal loss of performance.",
+      "_timestamp": "2026-04-05T22:46:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step process (identifying eligible accounts, preparing documentation, selecting appropriate agencies, and submitting cases), but the sequence is relatively short and standardized.",
+      "adequacy_evidence": "Current AI agents can reliably execute structured, short workflows with minimal degradation, especially when steps are well-defined and supported by tooling and checklists.",
+      "_timestamp": "2026-04-05T22:46:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While submission procedures can be governed by explicit policies (e.g., aging thresholds, balance size), real-world decisions often involve context like client relationships, likelihood of recovery, and legal considerations that are not fully codified.",
+      "adequacy_evidence": "Given access to organizational policies, account data, and legal constraints, current AI agents can reliably apply rules and infer appropriate actions with minimal ambiguity remaining.",
+      "_timestamp": "2026-04-05T22:46:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Submitting delinquent accounts involves preparing and transmitting financial records, forms, and correspondence, which are fundamentally text and data-based processes.",
+      "adequacy_evidence": "Current AI systems can fully handle text-based document preparation, routing, and communication without needing multimodal capabilities.",
+      "_timestamp": "2026-04-05T22:46:57"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Submitting delinquent accounts to attorneys or agencies is a batch-oriented administrative task with timelines measured in hours or days, not requiring rapid or real-time responses.",
+      "adequacy_evidence": "AI systems can easily meet these loose time constraints while maintaining quality, as the task involves straightforward data handling and communication preparation without latency pressure.",
+      "_timestamp": "2026-04-05T22:46:57"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task relies on prior account history (delinquency status, past collection efforts, client agreements) maintained across time, but this information is typically structured and stored in financial systems rather than requiring complex longitudinal reasoning.",
+      "adequacy_evidence": "Current AI agents can reliably access and use persistent records from CRMs/ERPs or databases, and the memory demands are straightforward and well-supported by existing data integration practices.",
+      "_timestamp": "2026-04-05T22:46:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires gathering and organizing account details (balances, delinquency status, contact history, documentation) from multiple sources, but the information volume per case is bounded and structured.",
+      "adequacy_evidence": "Current AI agents with database/tool integration can reliably retrieve, track, and package these records within a single workflow without significant context loss.",
+      "_timestamp": "2026-04-05T22:46:58"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves confirming delinquency status, documentation completeness, and compliance with collection policies and regulations; this requires review of financial records and procedures but is generally straightforward for trained staff.",
+      "adequacy_evidence": "AI can assemble and flag accounts but may misclassify eligibility or omit required compliance steps, so routine human review of account status and documentation would still be needed.",
+      "_timestamp": "2026-04-05T22:46:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from submitting delinquent accounts to attorneys or collection agencies. While debt collection activities are regulated (e.g., FDCPA), these rules govern conduct rather than requiring a human to make or transmit such referrals.",
+      "_timestamp": "2026-04-05T22:46:59"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with external collection agencies or attorneys who receive and act on submitted accounts, but the identity of the submitter is not central to engagement.",
+      "adequacy_evidence": "These stakeholders already routinely accept automated or system-generated submissions, so an AI agent performing this task would face little to no resistance.",
+      "_timestamp": "2026-04-05T22:47:00"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Submitting accounts for collection has significant legal, financial, and reputational consequences if done in error (e.g., wrong debtor, premature escalation, regulatory violations), so even rare residual mistakes can be serious.",
+      "adequacy_evidence": "With structured data and standard verification workflows, AI can handle most cases reliably, but edge cases around compliance, documentation completeness, or misclassification still pose moderate residual risk after checking.",
+      "_timestamp": "2026-04-05T22:47:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

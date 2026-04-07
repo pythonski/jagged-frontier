@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2041.00",
+  "task_id": 1255,
+  "task_statement": "Generate financial ratios, using computer programs, to evaluate customers' financial status.",
+  "occupation_title": "Credit Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Generating financial ratios using computer programs is a data analysis task performed with spreadsheets or financial software, which can be completed entirely on a computer without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Generating financial ratios is a rule-based, formulaic process (e.g., debt-to-equity, current ratio) that follows explicit accounting definitions and procedures with little need for experiential judgment.",
+      "adequacy_evidence": "AI systems can reliably compute and apply these formulas using structured financial data, with no meaningful gap in tacit knowledge or calibration required.",
+      "_timestamp": "2026-04-06T03:51:19"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different industries, firm sizes, and accounting formats, but the underlying computations (e.g., liquidity, leverage, profitability ratios) are standardized and well-defined.",
+      "adequacy_evidence": "Extensive public financial data, textbooks, worked examples, and code implementations provide strong coverage of ratio generation procedures, and synthetic data can easily fill gaps.",
+      "_timestamp": "2026-04-06T03:51:19"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many financial ratios are standardized, selecting the appropriate set and interpreting relevance depends on context such as industry, credit purpose, and available financial data.",
+      "adequacy_evidence": "Current agents can reliably infer and compute standard ratio sets and adjust based on provided context, with minimal difficulty resolving typical ambiguities.",
+      "_timestamp": "2026-04-06T03:51:20"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on structured financial data (numerical and textual accounting information) and produces numeric/textual ratio outputs, with no need for images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI systems can fully handle text and structured numeric data processing, so there is no multimodal gap affecting performance.",
+      "_timestamp": "2026-04-06T03:51:21"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Financial ratio generation is typically performed in batch or routine analysis workflows where minutes or longer processing times are acceptable, not requiring real-time responsiveness.",
+      "adequacy_evidence": "Current AI systems can compute and verify financial ratios quickly and accurately well within the available time, with no meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T03:51:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a modest sequence of steps (retrieving financial data, selecting formulas, computing multiple ratios), but these steps are relatively standardized and loosely coupled.",
+      "adequacy_evidence": "LLM-based agents with tool use (e.g., spreadsheets or code execution) can reliably carry out these short, structured sequences without noticeable degradation in performance.",
+      "_timestamp": "2026-04-06T03:51:21"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves pulling multiple figures from financial statements (e.g., income, assets, liabilities) and combining them into ratios, requiring some structured data tracking but within a bounded and well-defined scope.",
+      "adequacy_evidence": "Current AI agents handle structured financial data and intermediate calculations reliably within a single session, with minimal risk of losing or mismanaging relevant information.",
+      "_timestamp": "2026-04-06T03:51:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Generating financial ratios is a back-office analytical task typically consumed internally, where the identity of the performer is not relevant to stakeholders.",
+      "adequacy_evidence": "Organizations already widely accept automated systems for financial ratio computation, and there is little to no stakeholder concern about whether a human or AI performs this task.",
+      "_timestamp": "2026-04-06T03:51:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Financial ratios are formulaic and can be recomputed or cross-checked against source financial statements, but verifying correctness still requires ensuring proper data extraction, mapping, and accounting conventions.",
+      "adequacy_evidence": "Current AI can compute ratios reliably when inputs are clean, but often makes mistakes in data extraction or formula selection, so practitioners must perform routine but non-trivial checks against source documents.",
+      "_timestamp": "2026-04-06T03:51:22"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While ratio calculation itself is instance-based, analysts often compare against prior periods or historical client data, creating some dependence on cross-session financial records.",
+      "adequacy_evidence": "Current AI systems with standard database integrations can reliably store and retrieve longitudinal financial data, so persistent memory needs are well-supported.",
+      "_timestamp": "2026-04-06T03:51:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect financial ratios can affect credit decisions and risk assessments, but they are typically one component of a broader analysis and errors are often detectable and correctable before final decisions.",
+      "adequacy_evidence": "With programmatic calculation and standard validation checks, AI systems can reliably compute ratios; remaining errors after QC are rare and generally acceptable for this task.",
+      "_timestamp": "2026-04-06T03:51:22"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing rules prohibiting AI from computing financial ratios. Existing regulations (e.g., model risk management or fair lending laws) govern how results are used and validated, not the use of AI to perform the calculation itself.",
+      "_timestamp": "2026-04-06T03:51:24"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

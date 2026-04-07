@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4141.00",
+  "task_id": 4729,
+  "task_statement": "Investigate and correct errors upon customers' request, according to customer and bank records.",
+  "occupation_title": "New Accounts Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Investigating and correcting account errors typically involves reviewing and updating electronic bank and customer records in internal systems. However, some cases may involve physical documents or in-branch interactions with customers, so not all instances are fully remote."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a range of error types (e.g., transaction discrepancies, account details, documentation issues) across different account products, but follows relatively structured investigation procedures.",
+      "adequacy_evidence": "While general workflows and error categories are well-documented, realistic training data is constrained by privacy of financial records, leaving some edge cases and authentic process traces only partially accessible.",
+      "_timestamp": "2026-04-05T20:44:27"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many error investigations follow documented reconciliation procedures, clerks often rely on experience to interpret ambiguous discrepancies, recognize patterns (e.g., likely data entry vs. fraud), and decide appropriate corrections.",
+      "adequacy_evidence": "Current agents can apply rules and past cases effectively but still show gaps in nuanced judgment for edge cases or context-specific discrepancies, especially where intent or subtle anomalies must be inferred.",
+      "_timestamp": "2026-04-05T20:44:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing and reconciling multiple sources such as customer requests, account records, and transaction histories, requiring comparison and tracking of several details within a single case.",
+      "adequacy_evidence": "Current agents can retrieve and cross-reference structured records with tools, but may occasionally lose track of discrepancies or mis-handle intermediate comparisons when information is fragmented across sources.",
+      "_timestamp": "2026-04-05T20:44:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Investigating and correcting account errors relies primarily on structured financial records, transaction logs, and written customer communications, all of which are text or tabular data.",
+      "adequacy_evidence": "Current AI systems handle text and structured data processing well, and no meaningful multimodal perception or generation is required for typical task performance.",
+      "_timestamp": "2026-04-05T20:44:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customer requests often come with incomplete or unclear descriptions of the issue, requiring clerks to interpret intent, reconcile discrepancies between customer and bank records, and apply policy context.",
+      "adequacy_evidence": "Current agents can interpret structured requests and reconcile records in many cases, but they still struggle with vague complaints, nuanced policy interpretation, and resolving conflicting information without human clarification.",
+      "_timestamp": "2026-04-05T20:44:29"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step process\u2014reviewing customer requests, cross-checking bank records, identifying discrepancies, and implementing corrections\u2014where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092fnt long or deeply interdependent.",
+      "adequacy_evidence": "LLM-based agents can generally manage these structured workflows with tools, but may show some degradation over multiple steps (e.g., losing track of constraints or partial inconsistencies), especially when handling complex record reconciliation.",
+      "_timestamp": "2026-04-05T20:44:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Error investigations may reference prior account activity, past corrections, or customer history, but this information is typically stored in bank systems rather than requiring the worker to personally retain it across sessions.",
+      "adequacy_evidence": "Well-integrated AI agents can reliably retrieve and use persistent customer and transaction records from databases, so cross-session memory needs are effectively met by existing infrastructure.",
+      "_timestamp": "2026-04-05T20:44:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers typically expect reasonably prompt resolution (within seconds to a few minutes), but investigations can take some time without violating expectations.",
+      "adequacy_evidence": "Current AI agents can retrieve records, cross-check discrepancies, and propose corrections within this time window without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T20:44:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves direct interaction with customers requesting error investigation and correction, where clear communication and responsiveness matter, but deep personal trust or authority is not central.",
+      "adequacy_evidence": "Many customers already accept AI-assisted support in banking, but some may resist or prefer human agents for error resolution, especially when financial discrepancies are involved.",
+      "_timestamp": "2026-04-05T20:44:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors can usually be verified by cross-referencing customer requests with bank records, transaction logs, and account histories, but this requires careful review and some domain familiarity.",
+      "adequacy_evidence": "AI outputs would still need human checking to ensure correct interpretation of financial records and policies, though discrepancies are generally detectable through systematic comparison.",
+      "_timestamp": "2026-04-05T20:44:31"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in correcting customer and bank records can affect account balances, fees, or compliance, but are typically traceable and reversible through audit trails and follow-up corrections.",
+      "adequacy_evidence": "Even with review and system checks, AI may mishandle edge cases (e.g., ambiguous records, fraud-related discrepancies), leaving some residual risk that remains operationally concerning.",
+      "_timestamp": "2026-04-05T20:44:32"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "US banking regulations (e.g., Regulation E, UDAAP) require timely and accurate error resolution and proper consumer notification, but they do not prohibit the use of AI systems to investigate or correct account errors. There is no explicit rule mandating a human decision-maker for this task.",
+      "_timestamp": "2026-04-05T20:44:32"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

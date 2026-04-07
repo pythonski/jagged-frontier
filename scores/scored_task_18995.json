@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1231.00",
+  "task_id": 18995,
+  "task_statement": "Identify the causes of networking problems, using diagnostic testing software and equipment.",
+  "occupation_title": "Computer Network Support Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Many network issues can be diagnosed remotely using monitoring systems, logs, and diagnostic software from a computer. However, some cases require on-site testing with physical networking equipment (e.g., cable testers, checking switches or ports), which cannot be done remotely."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing network issues often involves interpreting noisy or ambiguous signals (e.g., intermittent latency, conflicting logs) and applying experience-based pattern recognition across configurations and failure modes not fully captured by formal procedures.",
+      "adequacy_evidence": "Current agents can follow documented diagnostics and analyze logs effectively, but they still struggle with environment-specific quirks, subtle cross-layer interactions, and prioritizing among plausible causes in non-routine cases.",
+      "_timestamp": "2026-04-05T20:42:27"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Networking problems span a highly heterogeneous, long-tailed space across hardware vendors, topologies, configurations, protocols, and failure modes, often context-specific to particular environments.",
+      "adequacy_evidence": "There is substantial coverage via logs, troubleshooting guides, simulations, and forum cases, but gaps remain in proprietary enterprise environments and rare edge-case failures that are not fully represented in accessible training data.",
+      "_timestamp": "2026-04-05T20:42:27"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While diagnostic tools provide structured signals (logs, metrics, test outputs), identifying true root causes often requires interpreting incomplete symptoms, prioritizing among multiple plausible causes, and understanding local network configurations and usage context.",
+      "adequacy_evidence": "Current agents can analyze logs and suggest likely causes, but they often miss context-specific nuances (e.g., unusual configurations, intermittent issues, or user-reported symptoms), requiring human guidance to fully resolve ambiguity.",
+      "_timestamp": "2026-04-05T20:42:28"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing network issues involves multi-step workflows (collecting symptoms, running diagnostic tests, interpreting outputs, and iterating), where each step informs the next but sequences are typically bounded rather than deeply long or tightly coupled.",
+      "adequacy_evidence": "AI agents can follow structured troubleshooting sequences with tools, but may show some error accumulation or misinterpretation of intermediate results over multiple steps, especially in ambiguous or noisy diagnostic contexts.",
+      "_timestamp": "2026-04-05T20:42:29"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing network issues involves integrating data from diagnostic tools, logs, configurations, and test results, requiring active tracking and synthesis of multiple evolving information sources within a session.",
+      "adequacy_evidence": "Current agents can aggregate and summarize such data with tooling, but may lose or misprioritize intermediate findings or evolving hypotheses over longer troubleshooting sequences.",
+      "_timestamp": "2026-04-05T20:42:29"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Network issues often require timely troubleshooting to restore service, with expectations of responses in seconds to minutes, but not strict real-time constraints.",
+      "adequacy_evidence": "Frontier agents can run diagnostic workflows and reason through likely causes within the available time window, with minimal degradation from latency constraints.",
+      "_timestamp": "2026-04-05T20:42:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing network issues often benefits from prior incident histories, recurring fault patterns, and knowledge of past configurations, but many cases can still be handled as largely self-contained troubleshooting instances.",
+      "adequacy_evidence": "Current agents can store and retrieve logs, tickets, and configuration histories via external systems, but they can miss or inconsistently surface relevant past context across systems, leading to moderate gaps.",
+      "_timestamp": "2026-04-05T20:42:30"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Misdiagnosing network issues can cause service outages or delays, but impacts are typically reversible and rarely catastrophic after detection.",
+      "adequacy_evidence": "Diagnostic outputs can be cross-checked with monitoring tools and system behavior, so residual AI errors after normal validation are usually caught and acceptable.",
+      "_timestamp": "2026-04-05T20:42:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnoses can usually be checked by running additional tests, monitoring network behavior, or confirming issue resolution, but intermittent faults and complex system interactions can require expertise and time to verify.",
+      "adequacy_evidence": "AI-generated diagnoses would still need validation through real-world testing and logs, and misdiagnoses are common enough that technicians must routinely double-check conclusions.",
+      "_timestamp": "2026-04-05T20:42:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit AI systems from performing network diagnostics. While organizational policies or sector-specific security standards may govern tool use, they do not legally bar AI from carrying out this task.",
+      "_timestamp": "2026-04-05T20:42:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting outputs from diagnostic tools such as network graphs, packet capture visualizations, hardware indicator lights, and interface dashboards, which go beyond pure text but are not overwhelmingly multimodal.",
+      "adequacy_evidence": "Current agents can handle many cases by parsing logs or structured exports, but they are less reliable when interpreting complex visualizations (e.g., packet traces, topology diagrams) or integrating subtle physical cues from equipment.",
+      "_timestamp": "2026-04-05T20:42:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Diagnosing network issues with software and equipment is a technical, internally consumed activity with no meaningful reliance on stakeholder interaction or performer identity.",
+      "adequacy_evidence": "There are no relevant stakeholders whose acceptance matters; automated diagnostic tools are already widely accepted in this context.",
+      "_timestamp": "2026-04-05T20:42:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

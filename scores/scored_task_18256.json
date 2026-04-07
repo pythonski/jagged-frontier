@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2099.01",
+  "task_id": 18256,
+  "task_statement": "Analyze data acquired from aircraft, satellites, or ground-based platforms, using statistical analysis software, image analysis software, or Geographic Information Systems (GIS).",
+  "occupation_title": "Remote Sensing Scientists and Technologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "The task consists of analyzing remotely sensed datasets using statistical, image analysis, or GIS software, which is entirely computer-based. No physical presence or specialized non-computer equipment is required once the data are acquired."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Analysis goals (e.g., classification, change detection, anomaly identification) depend on project context, data source, and stakeholder needs, requiring interpretation beyond a literal task description.",
+      "adequacy_evidence": "Current agents can follow explicit analytical goals but often miss nuanced domain intent (e.g., appropriate preprocessing choices or context-specific metrics) without iterative human guidance.",
+      "_timestamp": "2026-04-06T05:26:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting remote sensing outputs requires experience with sensor artifacts, atmospheric effects, and context-specific feature classification, which go beyond strictly codified procedures.",
+      "adequacy_evidence": "Current AI systems can execute standard workflows and detect patterns but often lack consistent calibration for nuanced interpretation and sensor-specific judgment in less routine or ambiguous cases.",
+      "_timestamp": "2026-04-06T05:26:07"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous data sources (satellite, airborne, ground-based) with diverse sensors, resolutions, spectral bands, and application contexts (e.g., environmental monitoring, defense, urban planning), creating a long-tailed distribution of cases.",
+      "adequacy_evidence": "Large volumes of remote sensing data and labeled datasets are publicly available, but important subpopulations (e.g., proprietary sensor data, rare geophysical events, expert analytic workflows) are underrepresented or inaccessible, though partially addressable via synthesis and fine-tuning.",
+      "_timestamp": "2026-04-06T05:26:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task typically involves multi-step analytical pipelines (data preprocessing, calibration, georeferencing, feature extraction, statistical modeling) where outputs from earlier steps feed into later ones, but many steps are modular and tool-supported.",
+      "adequacy_evidence": "AI agents can execute these pipelines with tool integration, but over longer sequences they show some drift (e.g., parameter inconsistencies, missed dependencies), requiring oversight to maintain coherence.",
+      "_timestamp": "2026-04-06T05:26:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating multiple data layers (e.g., imagery bands, geospatial layers, statistical outputs) and analysis steps, requiring active tracking and summarization, but most raw data is handled by external software rather than held directly in memory.",
+      "adequacy_evidence": "Current agents can offload data handling to tools, but may lose track of intermediate assumptions, parameters, or layer relationships across multi-step workflows, leading to moderate context drift.",
+      "_timestamp": "2026-04-06T05:26:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Remote sensing analysis often involves comparing new data to prior datasets, calibration baselines, or project-specific conventions, but many analyses can still be performed as largely self-contained tasks using stored data products.",
+      "adequacy_evidence": "Current agents can persist and retrieve prior datasets and project context via databases or vector stores, but they may inconsistently surface the most relevant historical context or maintain evolving project-specific interpretations over time.",
+      "_timestamp": "2026-04-06T05:26:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit AI systems from performing geospatial or statistical analysis of remote sensing data. While data access may be restricted (e.g., classified or ITAR-controlled data), these rules govern data handling, not whether AI can perform the analysis itself.",
+      "_timestamp": "2026-04-06T05:26:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally involves interpreting satellite, aerial, and sensor imagery (often multispectral or geospatial raster data) and integrating it within GIS systems, requiring rich visual-spatial and cross-modal reasoning beyond text.",
+      "adequacy_evidence": "Current AI agents can analyze images and integrate with GIS tools, but they are still inconsistent on fine-grained geospatial interpretation, spectral band analysis, and complex spatial relationships, especially in high-stakes or subtle cases.",
+      "_timestamp": "2026-04-06T05:26:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Remote sensing analyses often involve subtle signal interpretation, model assumptions, and spatial-temporal context; errors like misclassification or bias can be difficult to detect without expert validation or ground truth comparison.",
+      "adequacy_evidence": "Current AI systems can generate plausible analyses but still produce non-obvious errors in geospatial interpretation and statistical modeling, requiring substantial expert review and cross-checking to ensure reliability.",
+      "_timestamp": "2026-04-06T05:26:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Remote sensing data analysis is typically conducted in batch workflows or research/operational settings where minutes to hours (or longer) are acceptable, rather than requiring real-time responses.",
+      "adequacy_evidence": "Because tight latency is not required, AI agents can use extended reasoning and tool use without degrading quality, fitting comfortably within typical time budgets.",
+      "_timestamp": "2026-04-06T05:26:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces analytical outputs used by scientists, agencies, or clients who rely on results, but interaction is typically indirect and not dependent on the analyst\u2019s personal identity.",
+      "adequacy_evidence": "Stakeholders in geospatial and remote sensing domains already widely accept automated and AI-assisted analysis tools, and are generally indifferent to whether outputs are produced by humans or AI if accuracy is maintained.",
+      "_timestamp": "2026-04-06T05:26:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in remote sensing analysis can affect environmental assessments, resource management, or operational decisions, but most contexts tolerate some residual uncertainty after standard validation procedures.",
+      "adequacy_evidence": "Even after quality checks, AI systems can still introduce subtle misclassifications or analytical errors that are not always caught, leaving a moderate level of residual risk that can matter in downstream use.",
+      "_timestamp": "2026-04-06T05:26:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

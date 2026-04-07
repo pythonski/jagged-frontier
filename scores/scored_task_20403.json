@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1011.00",
+  "task_id": 20403,
+  "task_statement": "Recommend and arrange for diagnostic procedures, such as blood chemistry tests, saliva tests, x-rays, or other imaging procedures.",
+  "occupation_title": "Chiropractors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Recommending and arranging diagnostic tests is typically done through electronic health records, referrals, or communication with labs or imaging centers, which can be handled digitally. However, it often occurs during in-person patient visits as part of a physical assessment, so a substantial portion is tied to non-remote clinical encounters."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting and arranging appropriate diagnostic tests depends on interpreting patient symptoms, history, risk factors, and evolving clinical hypotheses, with success criteria that are context-dependent and not fully explicit.",
+      "adequacy_evidence": "Current AI can infer likely diagnostic pathways from clinical data but often misses nuanced contextual factors (e.g., atypical presentations, patient preferences, contraindications), requiring clinician oversight to refine choices.",
+      "_timestamp": "2026-04-06T05:14:17"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of patient presentations (musculoskeletal complaints, possible systemic issues) and diagnostic options, but is still guided by relatively standardized clinical pathways and referral patterns.",
+      "adequacy_evidence": "There is extensive accessible data in medical guidelines, textbooks, case studies, and clinical decision protocols, providing sufficient coverage of how to select and arrange appropriate diagnostic tests.",
+      "_timestamp": "2026-04-06T05:14:17"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate diagnostic tests in chiropractic care involves applying guidelines (e.g., red flags for imaging) but also case-based judgment about symptom patterns, risk factors, and when imaging is clinically justified.",
+      "adequacy_evidence": "Current AI can follow evidence-based decision rules and flag standard indications, but may lack nuanced calibration in ambiguous musculoskeletal cases or in balancing overuse vs. missed pathology.",
+      "_timestamp": "2026-04-06T05:14:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating patient history, current symptoms, prior test results, and possible contraindications within a single encounter, but the volume is typically moderate and structured.",
+      "adequacy_evidence": "Current agents can track and organize this level of clinical context with tools, but may occasionally miss or misprioritize details when multiple data sources or evolving notes are involved.",
+      "_timestamp": "2026-04-06T05:14:19"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommending diagnostic procedures depends on patient history (prior symptoms, past tests, treatment response), but does not require deeply complex longitudinal state across many years.",
+      "adequacy_evidence": "Current agents can store and retrieve structured patient records, but often show gaps in reliably surfacing the most relevant prior context or integrating evolving histories across multiple encounters.",
+      "_timestamp": "2026-04-06T05:14:19"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a moderate sequence: interpreting clinical information, selecting appropriate diagnostics, and coordinating orders or referrals, with some interdependence between steps.",
+      "adequacy_evidence": "AI agents can generally manage these multi-step workflows with tooling, but may exhibit some drift or missed constraints over longer coordination sequences, especially when integrating clinical nuance and logistics.",
+      "_timestamp": "2026-04-06T05:14:19"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining appropriate diagnostic tests requires clinical judgment about symptoms, contraindications, and differential diagnoses; mistakes (e.g., unnecessary imaging or missed tests) may not be immediately obvious and often require expert review to detect.",
+      "adequacy_evidence": "Current AI systems can suggest plausible but incorrect or suboptimal diagnostic plans, and verifying appropriateness requires clinician-level expertise and chart review, making the checking burden substantial and unavoidable.",
+      "_timestamp": "2026-04-06T05:14:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recommending and arranging diagnostic tests in chiropractic practice typically occurs during a patient visit or shortly after, where minutes of deliberation are acceptable and no real-time urgency is required.",
+      "adequacy_evidence": "Current AI agents can generate appropriate diagnostic recommendations well within this time window without needing to truncate reasoning, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T05:14:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommending diagnostic procedures often relies on physical examination findings and sometimes prior imaging, requiring some interpretation of non-text clinical cues, though the decision itself can be expressed textually.",
+      "adequacy_evidence": "Current agents can recommend tests based on textual case descriptions, but lack reliable access to and interpretation of nuanced physical exam signals or multimodal clinical context in more complex cases.",
+      "_timestamp": "2026-04-06T05:14:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Patients must trust and accept the chiropractor\u2019s clinical judgment when being advised to undergo diagnostic tests, making perceived professional authority and credibility central to compliance.",
+      "adequacy_evidence": "Many patients would be uncomfortable relying on an AI to recommend medical diagnostics without human clinician endorsement, and may distrust or refuse such recommendations if delivered solely by an AI agent.",
+      "_timestamp": "2026-04-06T05:14:22"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Ordering and recommending diagnostic tests (e.g., imaging, lab work) is restricted to licensed healthcare providers under state scope-of-practice laws and facility policies. An AI system cannot legally act as the authorized decision-maker or place orders independently without a licensed practitioner\u2019s involvement.",
+      "_timestamp": "2026-04-06T05:14:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Choosing inappropriate or missing necessary diagnostic procedures can delay diagnosis, expose patients to unnecessary risk (e.g., radiation), or lead to serious downstream health consequences, so very low residual error tolerance is required.",
+      "adequacy_evidence": "With standard clinical review and oversight, many AI recommendation errors could be caught, but subtle context-specific misjudgments or omissions may still slip through, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T05:14:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2051.01",
+  "task_id": 16318,
+  "task_statement": "Estimate transportation project costs.",
+  "occupation_title": "Transportation Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Cost estimation is typically performed using spreadsheets, estimating software, and digital project documents, which can be done remotely. However, some estimates rely on site inspections or field information that may require physical presence or in-person assessment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate cost estimation depends heavily on experiential judgment about site conditions, local market prices, contractor behavior, risk contingencies, and historical project analogs that are not fully captured in formal rules or documents.",
+      "adequacy_evidence": "AI can synthesize historical cost data and apply standard estimation methods, but it lacks robust real-world calibration for context-specific factors like unforeseen site issues, regional pricing dynamics, and nuanced risk adjustments.",
+      "_timestamp": "2026-04-05T22:31:59"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Transportation cost estimation spans diverse project types (roads, bridges, transit), geographies, regulatory regimes, materials, and site conditions, with significant variation and long-tailed edge cases.",
+      "adequacy_evidence": "There is substantial accessible data (DOT cost databases, bid histories, engineering manuals, case studies) that demonstrate estimation processes, but some local cost drivers, proprietary bid data, and rare project types remain thin or partially inaccessible.",
+      "_timestamp": "2026-04-05T22:31:59"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation often relies on interpreting plans, maps, CAD drawings, and site imagery to derive quantities and constraints, though much of the work is ultimately reduced to tabular/textual inputs.",
+      "adequacy_evidence": "Current agents can process basic diagrams and extract structured information, but struggle with complex engineering drawings, spatial nuances, and cross-referencing visual details with cost models reliably.",
+      "_timestamp": "2026-04-05T22:32:00"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating transportation project costs involves multiple interdependent steps (scope definition, quantity takeoffs, unit pricing, contingencies), where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or deeply recursive.",
+      "adequacy_evidence": "LLM-based agents can generally sustain coherence across these multi-step workflows, but may show moderate degradation through accumulated small errors or missed constraints over longer estimation pipelines.",
+      "_timestamp": "2026-04-05T22:32:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation depends on implicit assumptions about scope, site conditions, design maturity, risk contingencies, and stakeholder priorities, which are often only partially specified and evolve with project context.",
+      "adequacy_evidence": "Agents can apply standard estimating frameworks and infer typical assumptions, but they often miss local constraints, risk tolerances, and stakeholder-specific criteria without iterative human clarification.",
+      "_timestamp": "2026-04-05T22:32:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Transportation project cost estimation is typically conducted over hours to days as part of planning and design workflows, with no need for immediate or real-time responses.",
+      "adequacy_evidence": "AI agents can take sufficient time to perform detailed reasoning, data gathering, and calculations, so latency does not meaningfully constrain output quality.",
+      "_timestamp": "2026-04-05T22:32:00"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Cost estimation often benefits from historical project data, prior estimates, and evolving assumptions, but each estimate can largely be performed using current project specifications and accessible databases.",
+      "adequacy_evidence": "Modern AI systems with database integration and retrieval can reliably store and access past project data and cost benchmarks, so cross-session memory needs are generally well met.",
+      "_timestamp": "2026-04-05T22:32:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Cost estimation requires integrating large volumes of heterogeneous inputs\u2014design plans, quantities, unit costs, site conditions, schedules, and historical benchmarks\u2014where missing or misaligning details can materially affect estimates.",
+      "adequacy_evidence": "Current agents can use tools and retrieval to handle large inputs, but still show weaknesses in maintaining consistent state across complex, multi-document estimates and may lose or misaggregate details without careful scaffolding.",
+      "_timestamp": "2026-04-05T22:32:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation errors can lead to significant budget overruns, funding shortfalls, and project delays, but these impacts are typically financial and correctable rather than immediately catastrophic or irreversible.",
+      "adequacy_evidence": "Even with standard review processes, AI-generated estimates may still miss context-specific cost drivers or local factors, leaving a moderate level of residual risk that can affect project planning accuracy.",
+      "_timestamp": "2026-04-05T22:32:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Transportation cost estimates rely on assumptions about materials, labor, site conditions, and contingencies; errors can be subtle and require domain expertise, benchmarking, and detailed quantity/cost review to detect before project commitment.",
+      "adequacy_evidence": "AI can generate structured estimates and use historical data, but it often misjudges local factors, unit costs, or scope details, so meaningful expert review and cross-checking are still \u0561\u0576\u0570\u0580\u0561\u056a\u0565\u0577\u057f though not prohibitively difficult.",
+      "_timestamp": "2026-04-05T22:32:02"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI generating cost estimates, but in practice official transportation project estimates used for bidding, funding, or approval often require review and sign-off by a licensed Professional Engineer or responsible official. This creates a partial regulatory constraint, as AI cannot independently fulfill the legally recognized role without human oversight.",
+      "_timestamp": "2026-04-05T22:32:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimates are used by public agencies, contractors, and funding bodies who rely on the engineer\u2019s credibility and professional judgment, though interaction is typically mediated through reports rather than direct personal engagement.",
+      "adequacy_evidence": "Stakeholders may accept AI-assisted estimates, but full replacement by an AI agent would likely face skepticism around reliability and accountability, often requiring human validation or sign-off.",
+      "_timestamp": "2026-04-05T22:32:03"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

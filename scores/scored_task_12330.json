@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-8013.00",
+  "task_id": 12330,
+  "task_statement": "Receive outage calls and request necessary personnel during power outages or emergencies.",
+  "occupation_title": "Power Plant Operators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "The task mainly involves communication\u2014receiving calls and contacting or dispatching personnel\u2014which can be done via phone, radio, or computer systems. However, it is typically performed from an on-site control room integrated with plant operations and communication systems."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While dispatch protocols and escalation rules are documented, operators must interpret incomplete or ambiguous outage reports and choose appropriate personnel based on situational nuances and experience.",
+      "adequacy_evidence": "Current agents can follow structured dispatch rules and triage common scenarios, but may lack reliable calibration in ambiguous or rapidly evolving situations requiring nuanced judgment.",
+      "_timestamp": "2026-04-06T05:42:52"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of scenarios (routine outages, severe emergencies, varying caller information quality), but follows structured protocols and recurring patterns in dispatch and escalation.",
+      "adequacy_evidence": "Training data is widely available via call center logs, emergency response procedures, and simulated scenarios, and these sources capture both inputs and decision processes sufficiently for current AI training pipelines.",
+      "_timestamp": "2026-04-06T05:42:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Callers may provide incomplete or stressful information, requiring operators to interpret outage severity, location, and appropriate personnel based on context and established protocols.",
+      "adequacy_evidence": "AI agents can follow structured dispatch rules and infer needs from call details, but may struggle with ambiguous, noisy, or high-stakes situations without human clarification.",
+      "_timestamp": "2026-04-06T05:42:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step handling of incoming outage reports, assessing needs, and coordinating personnel dispatch, but each incident is relatively bounded and not deeply interdependent over long sequences.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably manage short-to-moderate workflows like call intake, information extraction, and dispatch coordination without significant degradation across steps.",
+      "_timestamp": "2026-04-06T05:42:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking caller details, outage specifics, location, severity, and matching these to appropriate personnel and protocols within a single interaction, requiring moderate information management.",
+      "adequacy_evidence": "Current agents can reliably manage and structure this level of within-episode information using standard tools (CRM-style tracking, retrieval, and checklists) without significant loss or drift.",
+      "_timestamp": "2026-04-06T05:42:53"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Handling outage calls and dispatching personnel during emergencies requires near-immediate response to prevent safety risks and service disruption, with decisions expected in real time or within seconds.",
+      "adequacy_evidence": "Well-scaffolded AI systems can process structured incident information and trigger dispatch protocols within seconds, with minimal degradation in quality under tight latency constraints.",
+      "_timestamp": "2026-04-06T05:42:53"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling real-time phone calls (audio) and possibly interpreting urgency or details from spoken communication, though this can be reliably converted to text for processing.",
+      "adequacy_evidence": "Current AI systems with speech recognition and call-handling integrations can accurately transcribe and manage routine outage reports, making multimodal demands well within capability.",
+      "_timestamp": "2026-04-06T05:42:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each outage call is largely handled as an independent event using current system status, procedures, and available personnel; prior incident history is not essential to executing the task.",
+      "adequacy_evidence": "Current AI systems can easily log and retrieve basic dispatch history if needed, but the task does not meaningfully depend on cross-session memory beyond trivial record-keeping.",
+      "_timestamp": "2026-04-06T05:42:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking that the correct personnel and response level were dispatched based on outage details, which requires operational knowledge but is supported by protocols and becomes apparent quickly if wrong crews are mobilized.",
+      "adequacy_evidence": "Current AI may misinterpret call details or apply dispatch rules imperfectly, so human review is needed to confirm appropriateness, but errors are generally detectable through standard monitoring and follow-up.",
+      "_timestamp": "2026-04-06T05:42:55"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interacting with callers and coordinating personnel, where clear communication and perceived competence matter, but deep personal trust or empathy is not central.",
+      "adequacy_evidence": "Stakeholders may accept partial automation (e.g., dispatch systems), but in emergency contexts many would still prefer or expect a human operator, leading to some resistance to a fully AI-driven role.",
+      "_timestamp": "2026-04-06T05:42:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "NERC reliability standards require certified human operators to be responsible for grid operations and emergency actions, which can constrain full autonomy. However, there is no explicit prohibition on AI handling call intake or dispatch support functions under human oversight.",
+      "_timestamp": "2026-04-06T05:42:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in receiving outage information or dispatching the wrong personnel during power emergencies can delay response, increase outage duration, and pose safety risks, so very low residual error tolerance is required.",
+      "adequacy_evidence": "Even with monitoring or confirmation steps, AI may still misinterpret caller information or urgency in edge cases, leaving a non-negligible residual risk, though not consistently catastrophic under supervised use.",
+      "_timestamp": "2026-04-06T05:42:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

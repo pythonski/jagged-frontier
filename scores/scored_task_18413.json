@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1299.01",
+  "task_id": 18413,
+  "task_statement": "Advise patients about therapeutic exercise and nutritional medicine regimens.",
+  "occupation_title": "Naturopathic Physicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Providing advice on exercise and nutrition is primarily informational counseling that can be delivered via telehealth, messaging, or email. However, it is often given during in-person clinical visits following examinations, so a substantial minority of instances occur face-to-face."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective advice requires individualized calibration based on patient presentation, lifestyle, adherence likelihood, and nuanced interpretation of symptoms, which are often not fully codified in explicit rules.",
+      "adequacy_evidence": "Current AI can apply general guidelines and synthesize personalized plans, but lacks reliable experiential judgment for edge cases, subtle patient cues, and long-term calibration across diverse real-world patient responses.",
+      "_timestamp": "2026-04-05T23:32:10"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Advising on therapeutic exercise and nutritional regimens spans highly diverse patient conditions, comorbidities, lifestyles, and preferences, creating a long-tailed, context-sensitive distribution.",
+      "adequacy_evidence": "There is extensive public data on nutrition, exercise, and general clinical guidance, but detailed naturopathic case processes and personalized longitudinal adjustments are less consistently documented, leaving some subpopulations thin but partially recoverable via synthesis.",
+      "_timestamp": "2026-04-05T23:32:10"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Advising on therapeutic exercise and nutritional regimens requires interpreting patient goals, symptoms, lifestyle, beliefs about naturopathy, and evolving responses to treatment\u2014much of which is implicit and context-dependent.",
+      "adequacy_evidence": "Current agents can gather and infer many relevant factors through dialogue, but often miss nuanced preferences, psychosocial context, or shifting patient goals, requiring human oversight and iterative clarification.",
+      "_timestamp": "2026-04-05T23:32:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Advising patients on exercise and nutritional regimens depends on longitudinal tracking of medical history, prior responses to treatments, adherence patterns, and evolving health goals across repeated visits.",
+      "adequacy_evidence": "Current AI agents can persist and retrieve structured patient records with tooling, but maintaining nuanced, continuously updated clinical context and reliably integrating it into advice remains inconsistent.",
+      "_timestamp": "2026-04-05T23:32:11"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising on exercise and nutrition involves multi-step consultations (assessment, goal setting, regimen design, explanation, adjustment), where consistency across steps matters but sequences are not extremely long or tightly coupled within a single interaction.",
+      "adequacy_evidence": "LLM agents can generally maintain coherent multi-step advice in a session, but may show some drift or inconsistency across extended interactions or when tracking multiple constraints, leading to moderate degradation.",
+      "_timestamp": "2026-04-05T23:32:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising on exercise and nutrition is largely conversational but often benefits from visual elements like demonstrating movements, assessing posture, or interpreting basic physical cues.",
+      "adequacy_evidence": "Current agents can generate exercise plans and provide visual aids, but are less reliable in fine-grained movement assessment or real-time visual feedback on patient form.",
+      "_timestamp": "2026-04-05T23:32:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising requires integrating multiple patient-specific factors (medical history, current conditions, medications, lifestyle, goals) within a single consultation, but the information volume is typically manageable and structured.",
+      "adequacy_evidence": "Current agents can track and synthesize moderate patient context with tooling, but may occasionally omit or misweight details (e.g., contraindications or preferences) when context grows or is imperfectly structured.",
+      "_timestamp": "2026-04-05T23:32:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Patient consultations expect reasonably prompt back-and-forth (seconds to a few minutes), but do not require split-second responses or real-time reflexes.",
+      "adequacy_evidence": "Frontier AI systems can generate well-reasoned lifestyle and nutritional guidance within this time window without needing to truncate reasoning, so quality is not meaningfully degraded by latency constraints.",
+      "_timestamp": "2026-04-05T23:32:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in exercise or nutritional advice can lead to adverse health effects or missed contraindications, but consequences are typically manageable and rarely immediately catastrophic with standard oversight.",
+      "adequacy_evidence": "Even after review, AI may overlook patient-specific contraindications, comorbidities, or supplement interactions, leaving a non-trivial residual risk that remains clinically relevant.",
+      "_timestamp": "2026-04-05T23:32:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task is inherently patient-facing and depends on trust, perceived expertise, and empathetic communication to influence adherence to therapeutic and nutritional regimens.",
+      "adequacy_evidence": "Many patients\u2014especially in naturopathic care, which emphasizes personal connection and holistic trust\u2014would resist or discount advice from an AI, reducing adherence and effectiveness unless AI involvement is minimized or concealed.",
+      "_timestamp": "2026-04-05T23:32:13"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing correctness of exercise and nutritional regimens requires clinical expertise (contraindications, comorbidities, drug\u2013nutrient interactions) and many errors have delayed or subtle effects, making them hard to detect before harm.",
+      "adequacy_evidence": "Current AI often produces plausible but incorrect or non-personalized advice; verifying safety and suitability requires expert review and patient-specific checks, creating a high and unavoidable verification burden.",
+      "_timestamp": "2026-04-05T23:32:13"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Providing individualized therapeutic and nutritional advice constitutes the practice of medicine in many U.S. jurisdictions, which legally requires a licensed practitioner. AI systems cannot hold medical licenses, so fully autonomous performance of this task would violate unlicensed practice laws.",
+      "_timestamp": "2026-04-05T23:32:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-3039.02",
+  "task_id": 22195,
+  "task_statement": "Consult with other professionals about patients' neurological conditions.",
+  "occupation_title": "Neuropsychologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Consultations about patients' neurological conditions often occur via email, electronic health records, phone, or video meetings, which can be done remotely. However, many consultations still occur in person during clinical meetings, hospital rounds, or case conferences."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Consultations span a wide range of neurological conditions, comorbidities, patient histories, and interdisciplinary contexts, producing a highly heterogeneous and long-tailed distribution of cases and discussion styles.",
+      "adequacy_evidence": "While medical literature, case reports, and some clinical discussions are available, real-world interdisciplinary consultation dialogues are often private and sparsely captured, though partially recoverable via synthesis and structured training.",
+      "_timestamp": "2026-04-05T23:38:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Consultation involves multi-turn exchanges integrating patient history, test results, and evolving interpretations, requiring consistency across a moderate sequence of interactions.",
+      "adequacy_evidence": "AI agents can sustain coherent multi-step dialogue but may exhibit some drift or lose nuanced constraints over extended exchanges, especially with complex clinical context.",
+      "_timestamp": "2026-04-05T23:38:05"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Consultation among neuropsychologists and other clinicians relies heavily on nuanced clinical judgment, integrating test results with patient history, comorbidities, and subtle behavioral cues that are not fully codified in explicit rules.",
+      "adequacy_evidence": "Current AI agents can synthesize clinical information and suggest interpretations, but they lack the finely calibrated, experience-based discernment needed for complex or ambiguous cases and interdisciplinary negotiation.",
+      "_timestamp": "2026-04-05T23:38:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Consultations routinely draw on prior patient history, test results, and earlier professional interactions, but much of this context is documented in external records rather than requiring rich internal longitudinal memory.",
+      "adequacy_evidence": "Current agents can store and retrieve structured patient data via EHR integrations, but often struggle with consistent cross-session synthesis, context prioritization, and maintaining nuanced evolving interpretations across multiple consultations.",
+      "_timestamp": "2026-04-05T23:38:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Consultations require integrating detailed patient histories, neuropsychological test results, imaging findings, medications, and prior clinical interpretations, where omission or misinterpretation of specific details can materially affect conclusions.",
+      "adequacy_evidence": "Current agents can ingest and summarize large clinical contexts but still show weaknesses in reliably tracking all salient details across heterogeneous inputs, with some risk of omission or distortion during compression.",
+      "_timestamp": "2026-04-05T23:38:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Consultations require interpreting partially implicit goals (e.g., diagnostic clarification, treatment planning, differing professional perspectives) and adapting to context-specific clinical nuances, but core objectives are usually broadly defined.",
+      "adequacy_evidence": "Current agents can infer general consultation goals from context but often miss subtle interpersonal cues, shifting priorities, or discipline-specific expectations, requiring human guidance to fully align.",
+      "_timestamp": "2026-04-05T23:38:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Consultations with other professionals typically occur in meetings, case conferences, or written exchanges where responses are expected within seconds to minutes but not instantaneously under strict real-time pressure.",
+      "adequacy_evidence": "Current AI agents can generate clinically relevant discussion points and summaries within seconds, fitting comfortably within typical consultation timeframes without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T23:38:08"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Consultations about neurological conditions involve nuanced interpretation of clinical data, patient history, and specialist judgment, where errors can be subtle and require deep expertise to detect.",
+      "adequacy_evidence": "Current AI systems can produce plausible but clinically inaccurate or oversimplified interpretations, and these errors are difficult to catch without expert review, necessitating thorough checking.",
+      "_timestamp": "2026-04-05T23:38:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task is inherently interpersonal, involving peer-to-peer consultation where professional credibility, licensure, and clinical judgment are central to effective collaboration.",
+      "adequacy_evidence": "Medical professionals are unlikely to accept an AI as an autonomous consulting peer for neurological cases due to trust, liability, and credentialing concerns, and would typically require a human clinician in the loop.",
+      "_timestamp": "2026-04-05T23:38:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Consultations often involve discussing neuroimaging (e.g., MRI, CT), test results, and observed behaviors, requiring some interpretation of non-textual clinical data alongside text-based reports.",
+      "adequacy_evidence": "Current AI can handle basic interpretation of medical images and integrate them into discussions, but reliability drops for nuanced, clinically critical imaging and cross-modal synthesis in complex cases.",
+      "_timestamp": "2026-04-05T23:38:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Consultations on neurological conditions inform diagnosis, treatment planning, and patient management; even small residual errors can lead to inappropriate care decisions with serious health consequences.",
+      "adequacy_evidence": "Even after review by professionals, AI-generated clinical reasoning can contain subtle inaccuracies or misweight evidence, leaving non-negligible residual risk that clinicians would need to actively guard against.",
+      "_timestamp": "2026-04-05T23:38:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Clinical consultation about patients\u2019 neurological conditions constitutes the practice of psychology/medicine, which legally requires a licensed professional in the U.S. AI systems cannot independently fulfill licensure requirements or act as the responsible consulting clinician, so autonomous performance is explicitly restricted.",
+      "_timestamp": "2026-04-05T23:38:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

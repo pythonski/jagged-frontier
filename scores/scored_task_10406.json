@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-5111.00",
+  "task_id": 10406,
+  "task_statement": "Examine photographic images for obvious imperfections prior to plate making.",
+  "occupation_title": "Prepress Technicians and Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "In modern prepress workflows, photographic images are usually digital files reviewed on a computer for defects using image-editing or proofing software. However, some shops may still examine physical photographs or film transparencies before plate making, requiring in-person inspection."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of image types and common defect categories (e.g., dust, scratches, color imbalance), but these are well-understood and relatively bounded within prepress workflows.",
+      "adequacy_evidence": "Extensive image datasets and synthetic augmentation can capture these defect patterns, and visual examples with annotations provide clear training signal for competent performance.",
+      "_timestamp": "2026-04-06T11:09:44"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many imperfections (dust, scratches, color shifts, exposure issues) can be identified via clear visual criteria, borderline cases still benefit from experience-based judgment about print impact and acceptability thresholds.",
+      "adequacy_evidence": "Current multimodal AI systems can reliably detect and classify common visual defects using well-defined cues, and can approximate human judgment in most routine and moderately ambiguous cases.",
+      "_timestamp": "2026-04-06T11:09:44"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Evaluating photographic images for imperfections is typically a self-contained task where each image is assessed independently based on visible defects and current job specifications.",
+      "adequacy_evidence": "Since the task does not rely on retaining information across sessions, existing AI systems' limited long-term memory does not constrain performance.",
+      "_timestamp": "2026-04-06T11:09:45"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of inspecting individual images for visible flaws, typically as short, repeatable checks with minimal interdependence between steps or across images.",
+      "adequacy_evidence": "AI vision systems can consistently apply the same inspection criteria across independent images without degradation, as the task does not require maintaining long sequential context.",
+      "_timestamp": "2026-04-06T11:09:45"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves identifying 'obvious imperfections' (e.g., dust, scratches, color or exposure issues), which introduces some mild subjectivity but is largely guided by established prepress standards and visual cues.",
+      "adequacy_evidence": "Current multimodal AI systems can reliably detect common visual defects and infer expected quality standards with minimal ambiguity, especially when guided by typical prepress criteria or examples.",
+      "_timestamp": "2026-04-06T11:09:47"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task typically involves inspecting one image at a time against a small, stable set of visual criteria (e.g., dust, scratches, color issues), with minimal need to track or integrate large amounts of information within the episode.",
+      "adequacy_evidence": "Current AI systems can reliably process and attend to all relevant visual details within a single image or small batch, with no meaningful working memory limitations for this scope.",
+      "_timestamp": "2026-04-06T11:09:47"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Prepress inspection is part of a production workflow where images are reviewed efficiently, typically within seconds to a few minutes per item, but not under strict real-time constraints.",
+      "adequacy_evidence": "Current multimodal AI systems can analyze images for visible defects quickly without needing extended reasoning time, so meeting typical latency expectations does not degrade performance.",
+      "_timestamp": "2026-04-06T11:09:47"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal quality-control step in a production workflow, with no direct interaction with external stakeholders or dependence on performer identity.",
+      "adequacy_evidence": "Since the output is inspected internally and evaluated on objective criteria, stakeholders are indifferent to whether a human or AI performs the task, and AI use is already common in similar image-checking contexts.",
+      "_timestamp": "2026-04-06T11:09:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task is fundamentally visual, requiring inspection of photographic images for defects such as color issues, artifacts, or damage; text alone cannot substitute for image-based evaluation.",
+      "adequacy_evidence": "Current multimodal models can detect many obvious visual flaws but are less reliable for subtle, print-critical imperfections (e.g., fine color shifts, resolution artifacts) that matter in prepress workflows.",
+      "_timestamp": "2026-04-06T11:09:48"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements restricting AI from examining images for imperfections in prepress workflows; this is a routine commercial task without regulated decision-making authority.",
+      "_timestamp": "2026-04-06T11:09:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task focuses on identifying obvious visual imperfections (e.g., dust, scratches, color flaws) that can be quickly confirmed through direct visual inspection with immediate feedback.",
+      "adequacy_evidence": "Modern vision-enabled AI can reliably flag common visible defects, and any mistakes are easy for a human to spot with a quick review, making verification low-effort.",
+      "_timestamp": "2026-04-06T11:09:49"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Missed imperfections can lead to print defects, wasted materials, and rework costs, but these are typically detectable downstream and are not catastrophic.",
+      "adequacy_evidence": "Modern multimodal AI with image analysis plus standard QC (e.g., human spot checks or automated preflight tools) can reliably catch obvious defects, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T11:09:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

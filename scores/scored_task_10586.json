@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-2011.00",
+  "task_id": 10586,
+  "task_statement": "Plan and formulate flight activities and test schedules and prepare flight evaluation reports.",
+  "occupation_title": "Airline Pilots, Copilots, and Flight Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Planning flight activities, scheduling tests, and preparing evaluation reports are largely computer-based planning and documentation tasks. However, they are often tied to in-person operational contexts such as flight tests, simulator sessions, or on-site coordination with crews and equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Flight activity planning and test scheduling span diverse aircraft types, environmental conditions, regulatory contexts, and rare edge-case scenarios (e.g., abnormal system behavior), creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "Substantial procedural documentation, flight test reports, and high-fidelity simulators exist, but much detailed operational data and edge-case experience remain proprietary or sparsely recorded, limiting full coverage despite partial synthetic and training solutions.",
+      "_timestamp": "2026-04-05T21:45:58"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Planning flight activities and test schedules involves multiple coordinated steps (constraints gathering, sequencing, resource allocation) and producing structured reports, but these are modular and not extremely long-horizon chains.",
+      "adequacy_evidence": "Frontier AI agents can manage multi-step planning and report drafting with tools, though some degradation appears in maintaining consistency across constraints and iterations in longer or more complex schedules.",
+      "_timestamp": "2026-04-05T21:45:58"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many constraints are governed by explicit regulations and standard operating procedures, planners must still interpret context such as test objectives, aircraft condition, weather, and stakeholder priorities, requiring some implicit judgment.",
+      "adequacy_evidence": "Current agents can incorporate regulations and structured inputs but often miss nuanced operational tradeoffs and evolving priorities, requiring human iteration to fully align plans and reports with real-world intent.",
+      "_timestamp": "2026-04-05T21:45:58"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Planning flight activities and test schedules requires experiential judgment about aircraft performance limits, weather interactions, safety margins, and sequencing of tests that are not fully captured in formal procedures.",
+      "adequacy_evidence": "Current AI can synthesize procedures and historical data into plans and reports, but lacks the lived calibration and nuanced risk judgment pilots develop, especially for atypical or safety-critical scenarios.",
+      "_timestamp": "2026-04-05T21:45:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Planning flight activities, test schedules, and preparing evaluation reports are pre-flight or post-flight tasks that typically allow minutes to hours (or longer) for completion, not requiring real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform scheduling, planning, and report drafting at high quality well within these generous time bounds, with no meaningful degradation due to latency constraints.",
+      "_timestamp": "2026-04-05T21:45:59"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple information sources (weather, aircraft status, crew availability, regulatory constraints, and test objectives) and maintaining consistency across schedules and reports, but the total scope is structured and not overwhelmingly large within a single episode.",
+      "adequacy_evidence": "Current agents can track and organize such structured inputs with tools, but may occasionally lose or misprioritize details across longer planning/reporting workflows, especially when compressing evolving constraints.",
+      "_timestamp": "2026-04-05T21:45:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Flight test planning and evaluation reporting often draw on prior test results, aircraft performance history, and ongoing program schedules, but many individual planning/reporting tasks can be completed with documented records rather than deep longitudinal state.",
+      "adequacy_evidence": "Current agents can persist and retrieve structured records (e.g., prior test data, schedules) via external systems, but integration gaps and imperfect retrieval over complex, evolving program contexts can lead to missed or incomplete use of past information.",
+      "_timestamp": "2026-04-05T21:45:59"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Planning flight activities and test schedules may involve interpreting weather charts, maps, and flight data visualizations, but much of the work is structured data and text-based reporting.",
+      "adequacy_evidence": "Current AI systems can reliably interpret standard aviation charts and generate structured reports, with multimodal capabilities sufficient for typical planning and documentation tasks.",
+      "_timestamp": "2026-04-05T21:45:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Flight activity planning, test scheduling, and evaluation reports directly affect aviation safety, where even rare residual errors can contribute to accidents or flawed safety assessments with severe consequences.",
+      "adequacy_evidence": "While human oversight and established aviation review processes can catch many issues, current AI systems may still introduce subtle planning or judgment errors that are not fully eliminated by standard checks, leaving some residual risk.",
+      "_timestamp": "2026-04-05T21:46:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "FAA regulations require certificated pilots and/or licensed dispatchers to be responsible for flight planning and operational control, and to sign off on related activities. AI can assist, but cannot legally serve as the accountable decision-maker, creating partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-05T21:46:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Flight test planning and evaluation reports involve complex, safety-critical constraints (aircraft performance, weather, regulations) where errors can be subtle and only surface during execution or detailed expert review, making verification demanding and expertise-intensive.",
+      "adequacy_evidence": "Current AI systems can draft plausible plans and reports but often miss nuanced operational constraints or edge cases, requiring thorough expert validation and cross-checking before use, as mistakes are not easily or automatically detectable.",
+      "_timestamp": "2026-04-05T21:46:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Flight planning, test scheduling, and evaluation reports are reviewed by regulators, safety authorities, and airline leadership, where the perceived expertise and accountability of the human pilot/engineer are important for approval and trust.",
+      "adequacy_evidence": "While AI-generated analyses may be used as support tools, stakeholders in aviation safety-critical contexts are unlikely to fully accept an AI as the primary accountable agent without human oversight, though partial acceptance is growing.",
+      "_timestamp": "2026-04-05T21:46:02"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

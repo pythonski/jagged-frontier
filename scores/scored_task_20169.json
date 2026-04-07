@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3031.01",
+  "task_id": 20169,
+  "task_statement": "Handle all aspects of employee insurance, benefits, and casualty programs, including monitoring changes in health insurance regulations and creating budgets for benefits and worker's compensation.",
+  "occupation_title": "Treasurers and Controllers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Managing insurance and benefits programs, monitoring regulations, and creating related budgets are administrative and analytical tasks typically done through HR systems, financial software, documents, and online research, all of which can be handled remotely on a computer."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse regulatory regimes, company sizes, insurance products, and workforce demographics, with significant variation in benefits design, compliance contexts, and budgeting practices.",
+      "adequacy_evidence": "While there is extensive public and synthetic data on regulations and standard benefits structures, detailed real-world company-specific programs, negotiations, and edge-case compliance scenarios are often private and only partially reproducible through training pipelines.",
+      "_timestamp": "2026-04-06T01:11:47"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves aligning benefits programs with organizational strategy, employee needs, risk tolerance, and evolving regulations, all of which require interpreting implicit priorities and trade-offs not fully specified in advance.",
+      "adequacy_evidence": "Current agents can synthesize regulations and propose benefit structures or budgets, but often miss organization-specific preferences and require human input to resolve competing stakeholder objectives and implicit constraints.",
+      "_timestamp": "2026-04-06T01:11:47"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing and managing benefits and insurance programs involves tradeoffs (cost vs. coverage, risk tolerance, workforce preferences) that rely on experience-based judgment beyond explicit rules, but much of the domain is still governed by structured regulations and actuarial logic.",
+      "adequacy_evidence": "Current AI agents can apply regulations and perform budgeting analyses, but they lack robust calibration for organization-specific tradeoffs, vendor negotiations, and nuanced risk judgments in non-routine cases.",
+      "_timestamp": "2026-04-06T01:11:47"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step processes like tracking regulatory changes, updating benefits programs, and integrating those inputs into budgeting cycles, but these steps are somewhat modular rather than tightly interdependent in a single continuous sequence.",
+      "adequacy_evidence": "AI agents can handle multi-step workflows with tooling, but over longer, evolving sequences (e.g., ongoing regulatory monitoring feeding into budgets) they show some drift, missed updates, or inconsistency without supervision.",
+      "_timestamp": "2026-04-06T01:11:48"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Managing employee benefits and insurance programs requires maintaining persistent knowledge of plan histories, regulatory changes, prior budgeting decisions, and evolving workforce needs across years.",
+      "adequacy_evidence": "Current agents can store and retrieve structured records via databases and tools, but often struggle with consistently integrating evolving historical context and surfacing the most relevant prior decisions without careful system design.",
+      "_timestamp": "2026-04-06T01:11:48"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large volumes of heterogeneous information\u2014employee data, insurance plans, regulatory updates, and financial inputs\u2014where missing details (e.g., compliance thresholds or cost assumptions) can materially affect outcomes.",
+      "adequacy_evidence": "Current agents can handle large contexts with retrieval and summarization tools, but still show weaknesses in maintaining precise, evolving state across complex financial and regulatory details within a single workflow.",
+      "_timestamp": "2026-04-06T01:11:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves analyzing regulations, managing benefits programs, and creating budgets, all of which are text- and numeric-data-driven activities.",
+      "adequacy_evidence": "Current AI systems handle text and structured numeric data well, with no meaningful reliance on multimodal inputs or outputs for this task.",
+      "_timestamp": "2026-04-06T01:11:49"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Handling employee insurance, benefits, and regulatory monitoring involves analytical, periodic, and planning work with timelines of hours to weeks rather than real-time response requirements.",
+      "adequacy_evidence": "Current AI systems can take ample time to perform research, analysis, and budgeting without any meaningful degradation from latency constraints, as immediate responses are not required.",
+      "_timestamp": "2026-04-06T01:11:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in benefits design, regulatory compliance, or workers' compensation budgeting can be subtle and only surface through audits, legal challenges, or financial discrepancies, requiring specialized expertise to detect.",
+      "adequacy_evidence": "Current AI systems frequently misinterpret nuanced regulations and make fragile assumptions in financial modeling, so outputs require thorough expert review and cross-checking against evolving legal and actuarial standards.",
+      "_timestamp": "2026-04-06T01:11:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in benefits administration, insurance compliance, or worker's compensation budgeting can lead to legal penalties, financial losses, and employee harm, so even rare residual mistakes can have significant consequences.",
+      "adequacy_evidence": "While many outputs (budgets, policy interpretations) can be reviewed by experts or checked against regulations, AI may still miss nuanced compliance changes or edge cases, leaving some non-trivial residual risk after standard quality control.",
+      "_timestamp": "2026-04-06T01:11:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interaction with employees, insurers, and regulators, where stakeholders rely on outputs like benefits design and compliance decisions, though deep personal trust or identity is not central.",
+      "adequacy_evidence": "Organizations and employees may be cautious about AI handling benefits and insurance decisions, especially regarding fairness and compliance, but partial acceptance is likely since many related processes are already automated.",
+      "_timestamp": "2026-04-06T01:11:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Certain aspects (e.g., advising on or selling insurance, ERISA fiduciary responsibilities, and workers\u2019 compensation administration) require licensed individuals or designated human fiduciaries, which AI cannot legally fulfill autonomously. However, there is no explicit prohibition on AI assisting with or performing much of the underlying analytical and administrative work.",
+      "_timestamp": "2026-04-06T01:11:51"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2141.02",
+  "task_id": 16431,
+  "task_statement": "Develop engineering specifications or cost estimates for automotive design concepts.",
+  "occupation_title": "Automotive Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Developing engineering specifications or cost estimates is typically done using CAD data, simulations, documents, and spreadsheets on a computer. While inputs may come from physical testing elsewhere, the task itself can be completed entirely with digital information and software."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Automotive engineering specifications and cost estimates span diverse vehicle systems, materials, manufacturing processes, regulatory contexts, and performance targets, with substantial variation across OEMs, vehicle classes, and design stages.",
+      "adequacy_evidence": "While there is substantial public engineering literature and some cost modeling data, much high-fidelity, process-level data (e.g., proprietary design specs, supplier pricing, real cost breakdowns) is private, leaving gaps that can only be partially filled through synthesis or approximation.",
+      "_timestamp": "2026-04-06T00:17:51"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing specifications or cost estimates requires interpreting design intent, performance targets, regulatory constraints, and trade-offs that are often only partially specified and evolve with stakeholder input.",
+      "adequacy_evidence": "Current agents can use prior examples and iterate, but they often miss implicit priorities (e.g., cost vs. performance trade-offs or manufacturability concerns) without human clarification and feedback.",
+      "_timestamp": "2026-04-06T00:17:52"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing engineering specifications or cost estimates involves multi-step processes (requirements interpretation, calculations, tradeoff analysis, documentation) where consistency across steps matters but sequences are not extremely long or tightly coupled.",
+      "adequacy_evidence": "LLM-based agents can handle multi-step analytical workflows with tooling, but over longer chains they show some drift in assumptions, missed constraints, or inconsistency across linked calculations.",
+      "_timestamp": "2026-04-06T00:17:53"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing specifications and cost estimates often involves interpreting and producing engineering drawings, CAD models, and schematics, alongside textual and numerical data.",
+      "adequacy_evidence": "Current agents can process and generate some visual engineering artifacts, but struggle with complex CAD interpretation, fine-grained spatial reasoning, and fully integrated cross-modal engineering workflows.",
+      "_timestamp": "2026-04-06T00:17:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing specifications or cost estimates often builds on prior design iterations, historical cost data, and evolving project requirements, but many instances can be executed with well-documented inputs rather than deep longitudinal memory.",
+      "adequacy_evidence": "Current agents can store and retrieve prior documents and project data via external memory systems, but they inconsistently maintain and surface evolving context (e.g., design rationale changes or cost assumption updates) across sessions without careful system design.",
+      "_timestamp": "2026-04-06T00:17:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Developing engineering specifications or cost estimates is typically an offline analytical task with timelines ranging from hours to days, not requiring immediate or real-time responses.",
+      "adequacy_evidence": "Frontier AI systems can take sufficient time to perform multi-step reasoning, simulations, and cost analysis without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T00:17:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing specifications or cost estimates requires integrating large amounts of heterogeneous information (design parameters, materials, performance targets, regulatory constraints, supplier data, and cost models), where missing details can materially affect outputs.",
+      "adequacy_evidence": "Current agents can use retrieval and structured tools to manage large contexts, but still show moderate issues with maintaining consistency across many interdependent variables and may lose or misweight details in complex, multi-factor engineering scenarios.",
+      "_timestamp": "2026-04-06T00:17:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in engineering specifications or cost estimates can be subtle, requiring domain expertise, simulations, prototyping, or detailed cost modeling to uncover; many issues only surface downstream in testing or production.",
+      "adequacy_evidence": "AI-generated specs and estimates still exhibit nontrivial error rates and inconsistencies, and verifying them demands expert review, cross-checking with models, and validation workflows, making the checking burden substantial.",
+      "_timestamp": "2026-04-06T00:17:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Engineering specifications and cost estimates in automotive contexts may require sign-off by a licensed professional engineer or responsible human authority, which AI cannot legally fulfill. However, there is no explicit prohibition on AI assisting in generating these materials, creating a partial constraint.",
+      "_timestamp": "2026-04-06T00:17:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Engineering specifications and cost estimates are used by internal stakeholders (design teams, managers, suppliers) who rely on their credibility, though the individual author\u2019s identity is not usually central.",
+      "adequacy_evidence": "Stakeholders may accept AI-assisted outputs but could be hesitant to rely fully on an autonomous AI for high-stakes engineering specs or cost estimates without human validation.",
+      "_timestamp": "2026-04-06T00:17:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in engineering specifications or cost estimates can propagate into vehicle safety issues, regulatory noncompliance, or major financial losses, so even rare residual mistakes after review can have serious consequences.",
+      "adequacy_evidence": "With standard engineering validation processes (simulation, peer review, testing), many AI errors can be caught, but subtle integration, safety, or cost-modeling mistakes may still slip through, leaving some nontrivial residual risk.",
+      "_timestamp": "2026-04-06T00:17:57"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing engineering specifications and cost estimates requires experience-based judgment about tradeoffs (performance, manufacturability, supplier variability, regulatory margins) and calibration from prior programs that are not fully captured in formal rules.",
+      "adequacy_evidence": "Frontier agents can apply documented methods and past examples, but still lack robust real-world calibration for edge cases, supplier nuances, and implicit tradeoffs, leading to gaps in non-routine or high-stakes design estimation.",
+      "_timestamp": "2026-04-06T00:19:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

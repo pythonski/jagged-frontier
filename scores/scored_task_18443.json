@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1161.00",
+  "task_id": 18443,
+  "task_statement": "Document patients' health histories, symptoms, physical conditions, or other diagnostic information.",
+  "occupation_title": "Nurse Midwives",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "The task involves entering or recording patient information in medical records, which is typically done using electronic health record systems on a computer. While the information may originate from in-person care, the act of documenting it can be performed entirely digitally and remotely."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Patient histories and symptoms vary across individuals (e.g., obstetric risk factors, cultural reporting differences, comorbidities), but follow relatively structured clinical documentation patterns.",
+      "adequacy_evidence": "Large volumes of clinical notes and EHR data exist, but access is restricted and some nuanced or underrepresented populations (e.g., rare complications, diverse communication styles) are thin, though partially addressable via synthesis and fine-tuning.",
+      "_timestamp": "2026-04-05T22:17:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While there are standard formats and checklists for patient histories, clinicians must interpret which symptoms, social factors, and contextual details are relevant and probe beyond explicit answers, making success criteria partly implicit.",
+      "adequacy_evidence": "Current AI agents can follow structured intake protocols but often miss nuanced clinical relevance, fail to adapt questioning dynamically, or underweight subtle cues, requiring human oversight to ensure completeness and appropriateness.",
+      "_timestamp": "2026-04-05T22:17:07"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Accurate documentation requires some clinical judgment about which symptoms and history details are relevant, how to interpret patient narratives, and how to probe for missing information, but much of the process follows structured clinical guidelines.",
+      "adequacy_evidence": "Current agents can handle structured intake and standard documentation well, but they show gaps in nuanced patient interviewing, context-sensitive probing, and subtle clinical relevance judgments in non-routine cases.",
+      "_timestamp": "2026-04-05T22:17:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing patient histories, symptoms, and exam findings from multiple inputs within a clinical encounter, requiring structured organization and selective compression but not extreme volume.",
+      "adequacy_evidence": "Current agents can handle structured summarization and note-taking, but may omit or misprioritize clinically relevant details when information is heterogeneous or incrementally revealed.",
+      "_timestamp": "2026-04-05T22:17:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Documenting patient histories involves multi-step interactions (eliciting information, clarifying, organizing, and recording) where consistency matters, but sequences are not extremely long or tightly interdependent.",
+      "adequacy_evidence": "Frontier AI agents can generally maintain coherence over such structured documentation workflows, though some degradation (e.g., missed details or inconsistencies) can occur across longer or more complex patient interactions.",
+      "_timestamp": "2026-04-05T22:17:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting spoken patient reports and observing physical conditions (e.g., appearance, movement, visible symptoms), though the final output is primarily textual documentation.",
+      "adequacy_evidence": "Current agents can handle speech-to-text and basic image interpretation, but they are not consistently reliable in capturing nuanced clinical observations or integrating subtle multimodal cues from real patient interactions.",
+      "_timestamp": "2026-04-05T22:17:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Nurse midwives routinely document and update longitudinal patient records across multiple prenatal, perinatal, and postnatal visits, requiring accurate retrieval of evolving health histories over extended periods.",
+      "adequacy_evidence": "Current AI systems can persist and retrieve structured patient data via EHR integrations, but often struggle with consistent cross-system context integration, nuanced updates, and reliable surfacing of relevant historical details.",
+      "_timestamp": "2026-04-05T22:17:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Documentation typically occurs during or shortly after patient encounters, requiring reasonably prompt entry but allowing seconds to a few minutes for completion.",
+      "adequacy_evidence": "Current AI systems can generate accurate structured clinical notes quickly within this time frame, with little need for extended reasoning that would be constrained by latency.",
+      "_timestamp": "2026-04-05T22:17:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Inaccurate or incomplete documentation of patient histories or symptoms can lead to misdiagnosis, inappropriate treatment, or missed complications in maternal care, where consequences can be severe.",
+      "adequacy_evidence": "Even with clinician review, AI systems can omit subtle but clinically relevant details or introduce inaccuracies; while many errors are catchable, some residual risk remains non-trivial.",
+      "_timestamp": "2026-04-05T22:17:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many details can be cross-checked with patients, prior records, and observable vitals, but omissions, misinterpretations, or clinically relevant nuances require trained review and are not always immediately obvious.",
+      "adequacy_evidence": "AI systems can capture and structure information well but still make attribution errors or subtle omissions, so clinician verification remains necessary though not prohibitively difficult.",
+      "_timestamp": "2026-04-05T22:17:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI assisting with clinical documentation, and AI scribes are \u0628\u0627\u0644\u0641\u0639\u0644 used in practice. However, regulations require that licensed clinicians (e.g., nurse midwives) are responsible for the accuracy and authentication of medical records, meaning AI cannot independently fulfill the task without human oversight and sign-off.",
+      "_timestamp": "2026-04-05T22:17:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Eliciting and documenting patient histories requires direct interaction with patients, where trust, empathy, and perceived clinical legitimacy strongly influence willingness to disclose sensitive information.",
+      "adequacy_evidence": "Many patients would be reluctant to share intimate health details with an AI system, and reduced trust or comfort could materially degrade the completeness and accuracy of the information collected.",
+      "_timestamp": "2026-04-05T22:17:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

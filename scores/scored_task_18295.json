@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4012.01",
+  "task_id": 18295,
+  "task_statement": "Document and maintain records of precision agriculture information.",
+  "occupation_title": "Precision Agriculture Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Maintaining and documenting precision agriculture records is typically done using farm management software, GIS systems, or spreadsheets on a computer. However, technicians may sometimes need to access field equipment, collect data on-site, or handle physical logs before updating records."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While much of the task follows standardized data recording procedures, technicians may need experience-based judgment to interpret sensor anomalies, decide what contextual notes matter, or ensure data consistency across systems.",
+      "adequacy_evidence": "Current AI agents can reliably follow documentation protocols and apply learned patterns for data cleaning and annotation, capturing most of the required judgment from available examples and rules.",
+      "_timestamp": "2026-04-05T23:31:42"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Record-keeping in precision agriculture involves context-specific decisions about what data to capture (e.g., yield, soil metrics, equipment logs), formatting standards, and compliance with farm, regulatory, or client needs, which are not always fully explicit.",
+      "adequacy_evidence": "Current agents can follow templates and infer common documentation practices, but often miss farm-specific conventions or implicit priorities without iterative human guidance.",
+      "_timestamp": "2026-04-05T23:31:42"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans moderately diverse data types (e.g., yield data, GPS logs, soil metrics, equipment telemetry) and farm-specific record-keeping practices, but follows broadly standardized documentation patterns.",
+      "adequacy_evidence": "While many examples and schemas exist in agricultural datasets and farm management systems, a significant portion of real-world data is proprietary or context-specific, requiring some synthesis or adaptation to fully cover edge cases.",
+      "_timestamp": "2026-04-05T23:31:43"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing data entry, updating, and organization of agricultural records where consistency over multiple steps matters, but workflows are relatively modular and not tightly interdependent.",
+      "adequacy_evidence": "AI agents with database tools and structured workflows can maintain consistency across such sequences with minimal degradation, as tasks are repetitive and well-scaffolded rather than deeply interdependent.",
+      "_timestamp": "2026-04-05T23:31:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves consolidating and updating data from multiple sources (e.g., sensor readings, GPS data, field logs), requiring tracking and organizing moderately complex but structured information within a session.",
+      "adequacy_evidence": "Well-scaffolded agents with database access, retrieval, and structured data handling can reliably manage, store, and update this level of information without significant loss or drift.",
+      "_timestamp": "2026-04-05T23:31:43"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintaining precision agriculture records requires longitudinal tracking of field data (yields, soil conditions, inputs, sensor data) across seasons and years, forming a cumulative operational history.",
+      "adequacy_evidence": "Current AI systems integrated with databases and farm management platforms can reliably store, retrieve, and update cross-session records, with no fundamental limitation in persistent memory for this task.",
+      "_timestamp": "2026-04-05T23:31:44"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Documenting and maintaining precision agriculture records is typically an asynchronous task where minutes to hours of latency are acceptable, with no need for real-time responsiveness.",
+      "adequacy_evidence": "Current AI agents can generate and update structured records well within these timeframes without needing to truncate reasoning, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-05T23:31:44"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves handling geospatial data, sensor outputs, and occasionally imagery (e.g., yield maps, soil maps), though much of the work is ultimately structured into text or database records.",
+      "adequacy_evidence": "Current agents can process structured data and basic geospatial or image inputs, but integration and interpretation of complex, heterogeneous agricultural data streams can still be inconsistent.",
+      "_timestamp": "2026-04-05T23:31:45"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from documenting or maintaining agricultural records; general data management and privacy rules apply but do not restrict AI use for this task.",
+      "_timestamp": "2026-04-05T23:31:45"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Records (e.g., yield data, soil metrics, input applications) can usually be cross-checked against sensor outputs, logs, and farm management systems, but doing so requires time and some domain familiarity to catch inconsistencies or misentries.",
+      "adequacy_evidence": "AI systems can organize and document data well but may misinterpret inputs, mislabel fields, or omit edge cases, so human review against source data remains necessary to ensure accuracy.",
+      "_timestamp": "2026-04-05T23:31:45"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Records are used by farmers, agronomists, and possibly regulators, so others rely on the output, but the identity of who/what produced it is not central to its usefulness.",
+      "adequacy_evidence": "Stakeholders already accept automated and software-based recordkeeping systems in agriculture, so an AI agent performing this task would face little to no resistance.",
+      "_timestamp": "2026-04-05T23:31:46"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in agricultural records can affect decision-making, compliance, and traceability, but most mistakes are correctable and do not immediately cause severe or irreversible harm.",
+      "adequacy_evidence": "With standard validation checks and human oversight, AI-generated records can be reliably verified, leaving minimal residual risk that is acceptable for this task.",
+      "_timestamp": "2026-04-05T23:31:48"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

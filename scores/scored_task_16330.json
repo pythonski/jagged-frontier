@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2051.02",
+  "task_id": 16330,
+  "task_statement": "Design or select equipment for use in wastewater processing to ensure compliance with government standards.",
+  "occupation_title": "Water/Wastewater Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Designing or selecting wastewater processing equipment is usually done using engineering software, standards, and vendor specifications on a computer, but it sometimes requires site visits, coordination with existing plant infrastructure, or evaluation of physical equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Wastewater equipment design spans highly variable influent characteristics, plant scales, regulatory regimes, climates, and treatment technologies, creating a long-tailed and context-sensitive distribution of cases.",
+      "adequacy_evidence": "There is substantial coverage in textbooks, standards, case studies, and vendor data, but detailed plant-specific performance data and edge-case operational contexts are often proprietary or sparsely documented, leaving some gaps.",
+      "_timestamp": "2026-04-06T00:56:44"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Equipment selection requires nuanced judgment about site-specific influent variability, fouling risks, lifecycle costs, and regulatory interpretation that is typically gained through field experience rather than fully codified rules.",
+      "adequacy_evidence": "Current AI can apply design standards and compare options, but lacks robust experiential calibration for edge cases (e.g., unusual wastewater characteristics or operational constraints), leading to gaps in non-routine decisions.",
+      "_timestamp": "2026-04-06T00:56:45"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Regulatory standards are explicit, but translating them into equipment choices requires interpreting site-specific factors (influent characteristics, local permits, cost constraints) and tradeoffs not fully specified in the task.",
+      "adequacy_evidence": "Current agents can interpret regulations and propose designs, but often miss nuanced local constraints or implicit stakeholder priorities, requiring human iteration to refine specifications.",
+      "_timestamp": "2026-04-06T00:56:45"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing or selecting wastewater equipment involves multi-stage processes (requirements analysis, regulatory interpretation, sizing calculations, integration with system constraints, and iterative validation) where errors in early steps propagate through later decisions.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step engineering workflows with scaffolding and tools, but they still show some degradation over long, tightly coupled sequences, such as losing constraints or introducing inconsistencies across iterations.",
+      "_timestamp": "2026-04-06T00:56:45"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Equipment design and selection often builds on prior site assessments, historical performance data, and evolving regulatory interpretations, but many decisions can be made from current project documentation without deep longitudinal history.",
+      "adequacy_evidence": "Current agents can store and retrieve project data across sessions, but they still show gaps in reliably maintaining and surfacing all relevant historical context (e.g., past design rationales or site-specific constraints) without careful system design.",
+      "_timestamp": "2026-04-06T00:56:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting engineering drawings, process flow diagrams, site layouts, and equipment schematics alongside textual specifications, though much reasoning can be expressed textually.",
+      "adequacy_evidence": "Current agents can handle basic diagrams and visual inputs but are less reliable with complex, domain-specific engineering schematics and nuanced spatial reasoning required in real-world design contexts.",
+      "_timestamp": "2026-04-06T00:56:46"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Equipment design and selection for wastewater processing is typically conducted over hours to days with no requirement for real-time responsiveness.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform detailed analysis and optimization without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T00:56:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating many heterogeneous inputs within a single episode\u2014flow rates, contaminant profiles, regulatory thresholds, process design criteria, and equipment specifications\u2014where missing or misaligning a parameter can lead to noncompliance or design failure.",
+      "adequacy_evidence": "Well-scaffolded agents can track and retrieve multiple constraints using tools and structured contexts, but still show drift or omission in longer design chains, especially when juggling interdependent engineering parameters and regulatory details.",
+      "_timestamp": "2026-04-06T00:56:47"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Engineering design for public infrastructure, including wastewater systems, typically must be performed and signed off by a licensed Professional Engineer (PE). Current laws require a human license holder to take responsible charge and seal designs, which an AI system cannot do, effectively prohibiting fully autonomous AI performance of this task.",
+      "_timestamp": "2026-04-06T00:56:47"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Equipment design for wastewater systems must be reviewed and accepted by regulators, municipal clients, and often requires sign-off by licensed professional engineers, making the performer\u2019s authority and credentials central.",
+      "adequacy_evidence": "Regulators and clients would not accept an AI agent as the responsible designer or signatory for compliance-critical infrastructure; legal liability and licensing rules make human authority essential.",
+      "_timestamp": "2026-04-06T00:56:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying equipment design for wastewater treatment requires detailed engineering review, regulatory compliance checks, and often modeling or pilot validation; errors may only surface during operation or inspection, making them hard to detect upfront.",
+      "adequacy_evidence": "Current AI systems can propose designs but frequently miss site-specific constraints, regulatory nuances, and engineering edge cases, so outputs require extensive expert validation and cannot be trusted without thorough checking.",
+      "_timestamp": "2026-04-06T00:56:48"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Equipment design and selection directly affect regulatory compliance, environmental discharge quality, and public health; even rare residual errors can lead to violations, fines, or harm to ecosystems and communities.",
+      "adequacy_evidence": "With standard engineering review and compliance checks, many AI-generated errors can be caught, but subtle design mismatches or misinterpretations of regulations may still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T00:56:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

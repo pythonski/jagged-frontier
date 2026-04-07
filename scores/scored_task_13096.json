@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "33-9021.00",
+  "task_id": 13096,
+  "task_statement": "Search computer databases, credit reports, public records, tax or legal filings, or other resources to locate persons or to compile information for investigations.",
+  "occupation_title": "Private Detectives and Investigators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Most searches of databases, credit reports, and many public records are conducted online using investigative or government databases. However, some cases still require accessing physical records in courthouses or local offices that are not fully digitized."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Investigative searches depend on implicit goals like relevance, credibility, and legal/ethical constraints, which vary by case and often require interpreting what information will be useful or admissible.",
+      "adequacy_evidence": "Current agents can follow broad search objectives but often miss nuanced relevance judgments or context-specific priorities, requiring human guidance to refine queries and interpret findings.",
+      "_timestamp": "2026-04-06T03:23:49"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple data sources (public records, credit reports, legal filings) and investigative contexts, but follows relatively standardized search and cross-referencing procedures.",
+      "adequacy_evidence": "While public records and investigative workflows are well-documented and trainable, key data sources (e.g., proprietary databases, credit bureaus) are inaccessible, leaving gaps that can only be partially approximated through synthetic or proxy data.",
+      "_timestamp": "2026-04-06T03:23:49"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective searches often require experience-based judgment to disambiguate identities, assess source reliability, and decide which records are relevant or misleading across varied cases.",
+      "adequacy_evidence": "Current agents can aggregate and cross-reference data well but still show gaps in nuanced judgment for ambiguous identities or deceptive records, especially in non-routine investigations.",
+      "_timestamp": "2026-04-06T03:23:50"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step information gathering across databases, refining queries, cross-referencing identities, and iterating based on findings, but steps are often loosely coupled rather than strictly sequential.",
+      "adequacy_evidence": "AI agents can sustain coherent multi-step search workflows with tools, but over longer investigative chains they may show drift, miss connections, or inconsistently apply constraints.",
+      "_timestamp": "2026-04-06T03:23:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large volumes of heterogeneous records (e.g., databases, filings, credit reports) and tracking entities, aliases, and relationships across sources, where missing or mislinking a detail can compromise the investigation.",
+      "adequacy_evidence": "Current agents can retrieve and summarize multi-source information but still struggle with persistent entity tracking, cross-document consistency, and avoiding context loss over long evidence chains.",
+      "_timestamp": "2026-04-06T03:23:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves querying and reviewing structured and unstructured text sources such as databases, reports, and filings, with minimal reliance on non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based search, retrieval, and synthesis effectively, and the negligible multimodal demands do not create a capability gap.",
+      "_timestamp": "2026-04-06T03:23:52"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Database and records searches for investigations typically allow minutes to hours, with no strict real-time interaction requirement.",
+      "adequacy_evidence": "Current AI agents can perform multi-step searches and synthesis well within these timeframes without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T03:23:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Information can often be cross-checked against multiple databases and records, but identity matching, outdated data, and incomplete records require careful validation and some expertise.",
+      "adequacy_evidence": "AI systems can retrieve and compile data but may misinterpret records or conflate identities, so consistent cross-checking and source verification are still necessary.",
+      "_timestamp": "2026-04-06T03:23:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Investigations often span multiple sessions, requiring accumulation of prior search results, leads, and case context, but individual database queries can still be executed independently.",
+      "adequacy_evidence": "Current agents with external memory (databases, retrieval systems) can store and recall case information, but retrieval can be inconsistent and integration of evolving context across sessions is not fully reliable.",
+      "_timestamp": "2026-04-06T03:23:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces information for clients or internal investigative use, so stakeholders rely on the output, but the identity of the performer is not central to effectiveness.",
+      "adequacy_evidence": "Database searches and record aggregation are already widely automated, and stakeholders generally accept AI-assisted or fully automated tools for this type of information retrieval.",
+      "_timestamp": "2026-04-06T03:23:55"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors (e.g., misidentifying a person or missing key records) can meaningfully affect an investigation, but are usually discoverable and correctable through follow-up checks and rarely cause irreversible harm on their own.",
+      "adequacy_evidence": "AI outputs in this domain can be cross-verified against primary records and multiple databases, so remaining errors after normal checking are typically detectable and do not leave intolerable residual risk.",
+      "_timestamp": "2026-04-06T03:23:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Laws like the Fair Credit Reporting Act (FCRA) and Driver\u2019s Privacy Protection Act (DPPA) restrict who may access certain records and for what purposes, often requiring a licensed investigator or permissible-use certification. These do not explicitly prohibit AI use, but create partial constraints because access is legally tied to authorized human or licensed entities rather than autonomous systems.",
+      "_timestamp": "2026-04-06T03:23:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

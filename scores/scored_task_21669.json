@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1252.00",
+  "task_id": 21669,
+  "task_statement": "Develop or direct software system testing or validation procedures, programming, or documentation.",
+  "occupation_title": "Software Developers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Developing or directing software testing procedures, programming, and documentation is typically done entirely on computers using development and collaboration tools. However, some cases (e.g., embedded or hardware\u2011integrated systems) may require access to physical devices or lab environments for validation."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Software testing and validation spans diverse systems (web, embedded, distributed, safety-critical), tools, and organizational practices, with substantial variation in requirements, architectures, and failure modes.",
+      "adequacy_evidence": "There is extensive public code, test suites, CI/CD practices, and documentation providing strong coverage, but important slices (e.g., proprietary systems, edge-case production failures, and organization-specific validation workflows) are underrepresented or inaccessible.",
+      "_timestamp": "2026-04-06T00:05:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing and validation procedures depend on implicit requirements like risk tolerance, system context, user expectations, and evolving specifications, which are often only partially documented and require interpretation.",
+      "adequacy_evidence": "Current agents can infer many testing goals from code, specs, and prior patterns, but they still miss subtle stakeholder expectations or edge-case priorities without iterative human guidance.",
+      "_timestamp": "2026-04-06T00:05:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing and directing testing/validation involves judgment about risk prioritization, edge cases, and tradeoffs between coverage and effort that are not fully captured by explicit rules, even with complete documentation.",
+      "adequacy_evidence": "Current agents can generate comprehensive test plans and code, but often lack robust calibration for context-specific priorities and subtle failure modes, leading to gaps in non-routine or system-specific scenarios.",
+      "_timestamp": "2026-04-06T00:05:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing or directing testing and validation involves multi-step workflows (planning, writing tests, executing, analyzing results, documenting), but these steps are often modular and can be iterated or segmented.",
+      "adequacy_evidence": "AI agents can handle multi-step testing workflows with tooling, but over longer sequences they show some drift in maintaining consistency across artifacts and may miss dependencies or constraints without supervision.",
+      "_timestamp": "2026-04-06T00:05:27"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective testing and validation development depends on persistent knowledge of the codebase, prior defects, requirements history, and evolving test strategies across a project lifecycle.",
+      "adequacy_evidence": "Current agents can store and retrieve project artifacts via repositories and vector databases, but they often miss or inconsistently surface relevant historical context, especially as projects scale and evolve.",
+      "_timestamp": "2026-04-06T00:05:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing or directing testing and validation involves tracking large codebases, test suites, requirements, edge cases, and evolving system states within a single workflow, where missing details can cause significant defects or gaps in coverage.",
+      "adequacy_evidence": "Current agents can use retrieval and tooling to handle large contexts, but still exhibit context window limits, imperfect retrieval, and occasional loss or distortion of critical details across complex testing workflows.",
+      "_timestamp": "2026-04-06T00:05:28"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Developing or directing software testing, validation procedures, and documentation is primarily text- and code-based, relying on written specifications, logs, and scripts rather than non-text modalities.",
+      "adequacy_evidence": "Current AI agents handle text-based code, documentation, and test design effectively, and the minimal multimodal aspects (e.g., occasional UI screenshots) are not central to task performance.",
+      "_timestamp": "2026-04-06T00:05:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Developing or directing testing procedures and related programming/documentation is typically asynchronous, with timelines ranging from hours to days rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI agents can take seconds to minutes for high-quality outputs in this domain, which fits comfortably within the task\u2019s relaxed latency constraints without degrading quality.",
+      "_timestamp": "2026-04-06T00:05:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing strategies and validation procedures can be partially checked via execution (e.g., running tests, coverage metrics), but assessing their completeness, edge-case coverage, and appropriateness requires expert review and can miss latent gaps.",
+      "adequacy_evidence": "AI can generate plausible test plans and code, but often omits critical edge cases or misaligns with system requirements, so meaningful human review and iteration are still needed to ensure adequacy.",
+      "_timestamp": "2026-04-06T00:05:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves internal stakeholders such as engineering teams, QA, and managers who rely on the outputs, but interaction is largely technical and does not depend strongly on the developer\u2019s personal identity.",
+      "adequacy_evidence": "AI-assisted tools are already widely accepted in software testing, validation, and documentation, and stakeholders generally prioritize output quality over whether a human or AI produced it.",
+      "_timestamp": "2026-04-06T00:05:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from developing or directing software testing, validation procedures, programming, or documentation. While regulated industries may require human accountability, they do not forbid AI from performing these tasks.",
+      "_timestamp": "2026-04-06T00:05:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Residual errors in testing procedures or validation logic can allow defects into production, causing outages or security issues, but impacts are usually mitigated by layered QA and monitoring rather than being immediately catastrophic.",
+      "adequacy_evidence": "AI-generated testing strategies and code can pass standard reviews yet still miss edge cases or encode flawed assumptions, leaving a moderate level of residual risk even after typical quality control.",
+      "_timestamp": "2026-04-06T00:05:30"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

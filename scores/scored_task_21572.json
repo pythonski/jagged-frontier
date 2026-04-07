@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2023.00",
+  "task_id": 21572,
+  "task_statement": "Estimate building replacement costs, using building valuation manuals and professional cost estimators.",
+  "occupation_title": "Appraisers and Assessors of Real Estate",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Estimating replacement costs using valuation manuals or cost-estimator software is an analytical task that can be performed entirely on a computer using property data. No physical presence or specialized non-computer equipment is inherently required."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While valuation manuals and estimator tools provide structured procedures, appraisers must interpret building characteristics, select appropriate cost models, and adjust for local conditions and intended use, introducing moderate context dependence.",
+      "adequacy_evidence": "Current AI agents can follow manuals and apply cost models but often miss nuanced contextual factors (e.g., atypical materials, local market adjustments), requiring human guidance to fully resolve specification details.",
+      "_timestamp": "2026-04-06T01:58:42"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step process (collecting building characteristics, selecting appropriate cost models/manual entries, applying adjustments, and synthesizing an estimate), but the steps are fairly modular and not deeply interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably follow structured estimation procedures and maintain consistency across these moderate-length workflows without significant degradation.",
+      "_timestamp": "2026-04-06T01:58:42"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While valuation manuals and cost estimator tools provide structured procedures, appraisers must adjust for local construction practices, quality differences, and atypical property features using experience-derived judgment.",
+      "adequacy_evidence": "AI agents can apply standardized cost manuals and typical adjustments, but often lack reliable calibration for nuanced local conditions or atypical structures, leading to moderate gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T01:58:42"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different building types, materials, regions, and depreciation contexts, but is largely structured around standardized valuation manuals and cost estimation frameworks.",
+      "adequacy_evidence": "Extensive manuals (e.g., RSMeans), training materials, and worked examples provide broad, process-level coverage; remaining gaps (e.g., unusual properties) are limited and can be approximated with existing data and synthesis.",
+      "_timestamp": "2026-04-06T01:58:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating multiple structured inputs (building characteristics, regional cost factors, depreciation estimates) and consulting valuation manuals, but the information is finite and can be organized systematically.",
+      "adequacy_evidence": "Current agents can reliably track and manipulate this level of structured, tabular, and document-based information using tool support, with minimal loss or drift within a single episode.",
+      "_timestamp": "2026-04-06T01:58:43"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Estimating replacement costs is typically a self-contained task using current valuation manuals, cost indices, and property-specific characteristics rather than relying on accumulated cross-session history.",
+      "adequacy_evidence": "Since the task does not depend on persistent longitudinal context, existing agent memory systems are sufficient and no meaningful cross-session retention gap arises.",
+      "_timestamp": "2026-04-06T01:58:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Estimating building replacement costs is typically a back-office analytical task where minutes to hours are acceptable, involving consultation of manuals and detailed calculations rather than real-time response.",
+      "adequacy_evidence": "Current AI agents can perform cost estimation and reference valuation data within acceptable timeframes without needing to truncate reasoning, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-06T01:58:43"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating replacement costs often involves interpreting building characteristics from photos, plans, or site observations alongside textual cost manuals, making some multimodal input useful but not always central.",
+      "adequacy_evidence": "Current agents can handle basic image and document interpretation but are inconsistent with fine-grained architectural details or complex plans, which can affect cost accuracy in more nuanced cases.",
+      "_timestamp": "2026-04-06T01:58:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in replacement cost estimates can affect property taxes, insurance coverage, and valuations, but they are typically revisable and rarely cause irreversible harm.",
+      "adequacy_evidence": "With access to valuation manuals, structured data, and review processes, AI systems can produce estimates with residual error rates comparable to human appraisers, and remaining discrepancies are usually detectable and correctable.",
+      "_timestamp": "2026-04-06T01:58:45"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Replacement cost estimates can be cross-checked against standardized cost manuals and comparable properties, but require domain expertise to validate assumptions (materials, depreciation, local factors).",
+      "adequacy_evidence": "AI can follow cost manuals and perform calculations, but may misapply local adjustments or miss context-specific factors, so expert review is still needed though not prohibitively difficult.",
+      "_timestamp": "2026-04-06T01:58:45"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The estimates are used by clients, lenders, insurers, and regulators who rely on the output, and the appraiser\u2019s professional credibility and certification can matter, though interaction is limited.",
+      "adequacy_evidence": "Stakeholders are somewhat cautious about fully AI-generated valuations and often require a licensed human appraiser\u2019s sign-off, but AI-assisted estimates are increasingly tolerated as inputs.",
+      "_timestamp": "2026-04-06T01:58:45"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "U.S. appraisal practice for federally related transactions requires a licensed or certified human appraiser who signs and takes responsibility under USPAP; AI tools may assist but cannot independently perform or certify appraisal components like replacement cost estimates.",
+      "_timestamp": "2026-04-06T01:58:45"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

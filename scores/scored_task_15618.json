@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9121.02",
+  "task_id": 15618,
+  "task_statement": "Perform hydrologic, hydraulic, or water quality modeling.",
+  "occupation_title": "Water Resource Specialists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Hydrologic, hydraulic, and water quality modeling is typically performed using specialized computer software and datasets, which can be run and analyzed entirely on a computer without physical presence. Fieldwork relates to data collection, not the modeling task itself."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydrologic, hydraulic, and water quality modeling spans diverse geographies, climate regimes, watershed characteristics, and regulatory contexts, with many edge cases (e.g., extreme events, data-sparse basins).",
+      "adequacy_evidence": "There is substantial public data (e.g., USGS, EPA models, academic literature) and well-documented modeling workflows, but important local datasets, calibration practices, and rare event scenarios are often proprietary or sparse, leaving partial gaps.",
+      "_timestamp": "2026-04-06T03:05:04"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydrologic and hydraulic modeling requires expert judgment in model selection, parameter calibration, handling uncertain or sparse data, and interpreting outputs in context-specific environmental conditions, which are not fully captured by explicit rules.",
+      "adequacy_evidence": "Current AI systems can assist with model setup and calibration using documented practices, but they lack robust experience-based judgment for edge cases, local idiosyncrasies, and nuanced interpretation under uncertainty.",
+      "_timestamp": "2026-04-06T03:05:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Modeling tasks require selecting appropriate models, parameters, calibration targets, and assumptions based on site conditions, regulatory standards, and stakeholder goals, which are often only partially specified.",
+      "adequacy_evidence": "Current agents can follow explicit modeling instructions but often miss context-specific objectives (e.g., regulatory nuances, calibration priorities), requiring human guidance to refine specifications.",
+      "_timestamp": "2026-04-06T03:05:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydrologic, hydraulic, and water quality modeling involves multi-stage workflows (data preprocessing, parameter selection, calibration, validation, and scenario analysis) where each step depends on prior outputs and errors propagate forward.",
+      "adequacy_evidence": "Current AI agents can manage multi-step modeling pipelines with tools, but they show some degradation over long, interdependent sequences, including missed constraints or compounding setup errors during iterative calibration.",
+      "_timestamp": "2026-04-06T03:05:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Hydrologic, hydraulic, and water quality modeling are typically conducted as offline analyses where runs can take minutes to hours or longer, and immediate responses are not required.",
+      "adequacy_evidence": "AI agents can take sufficient time for multi-step reasoning, data processing, and simulation setup without meaningful quality loss due to latency constraints.",
+      "_timestamp": "2026-04-06T03:05:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydrologic and hydraulic modeling requires managing large, heterogeneous datasets (e.g., time series, spatial layers, parameters, boundary conditions) and tracking evolving model states and calibration outputs within a single workflow.",
+      "adequacy_evidence": "Tool-augmented agents can offload data to code environments and files, but still show moderate failures in reliably tracking all parameters and intermediate states, especially across complex, multi-step modeling and calibration processes.",
+      "_timestamp": "2026-04-06T03:05:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hydrologic and hydraulic modeling projects often involve iterative runs, calibration histories, and site-specific data that accumulate over time, but most of this context is explicitly stored in project files and datasets rather than relying on implicit memory.",
+      "adequacy_evidence": "Current AI agents can use external storage, databases, and retrieval tools to persist and access project context, though they may inconsistently track evolving assumptions or surface relevant prior runs without careful system design.",
+      "_timestamp": "2026-04-06T03:05:06"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hydrologic and hydraulic modeling often involves geospatial data (maps, rasters, spatial layers) and visualization of flows or water quality outputs, but much of the core work is numerical and text-based configuration of models.",
+      "adequacy_evidence": "Current agents can interface with GIS and modeling tools and process structured spatial data, but they remain less reliable on complex spatial reasoning, interpreting heterogeneous geospatial inputs, and generating high-fidelity visual outputs.",
+      "_timestamp": "2026-04-06T03:05:06"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Hydrologic and hydraulic models involve complex parameterization, calibration, and assumptions where errors may not be obvious and often require expert review, benchmarking, or real-world data comparison to detect.",
+      "adequacy_evidence": "Current AI systems can generate plausible models but frequently mis-specify parameters, boundary conditions, or assumptions, and these errors are subtle enough that thorough expert validation is still \u0636\u0631\u0648\u0631\u06cc before use.",
+      "_timestamp": "2026-04-06T03:05:07"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydrologic and hydraulic models inform flood risk, infrastructure design, and regulatory compliance, where even small residual errors can lead to property damage, safety risks, or costly misallocation of resources.",
+      "adequacy_evidence": "With standard validation (benchmarking, sensitivity analysis, expert review), many AI-generated modeling outputs can be checked, but risks from subtle mis-specification or misinterpretation of local conditions still leave some non-negligible residual uncertainty.",
+      "_timestamp": "2026-04-06T03:05:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on using AI for hydrologic or hydraulic modeling, but engineering and environmental regulations often require a licensed professional (e.g., PE) to review, approve, and sign off on analyses. This creates partial restriction since AI cannot independently fulfill the legally recognized role of the responsible professional.",
+      "_timestamp": "2026-04-06T03:05:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Model outputs are used by engineers, planners, and regulators who rely on the results, and credibility of the analyst can matter for trust and decision-making.",
+      "adequacy_evidence": "Stakeholders would often accept AI-assisted modeling, but full delegation to an AI agent may face skepticism, especially for regulatory or high-stakes decisions requiring human accountability or licensure.",
+      "_timestamp": "2026-04-06T03:06:17"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

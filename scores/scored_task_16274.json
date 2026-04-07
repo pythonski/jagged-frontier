@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2051.02",
+  "task_id": 16274,
+  "task_statement": "Track the flow of work forms, including in-house data flow or electronic forms transfer.",
+  "occupation_title": "Clinical Data Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Tracking the movement of work forms and data flow is usually done through electronic data capture systems, databases, or workflow software, which can be monitored remotely. However, some environments may still involve physical paper forms moving within a facility, requiring occasional in-person handling or verification."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Tracking the flow of work forms and electronic data transfers is typically governed by explicit workflows, SOPs, and system rules with clear status indicators and routing logic.",
+      "adequacy_evidence": "Current AI agents can reliably follow and monitor rule-based workflows, log transitions, and flag deviations without needing experience-based judgment.",
+      "_timestamp": "2026-04-06T05:48:48"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple workflows (paper, EDC systems, regulatory-compliant data pipelines) with variation across organizations, but the underlying processes are fairly structured and repeatable.",
+      "adequacy_evidence": "While general workflow tracking patterns are well-documented, much real-world data (e.g., proprietary clinical systems, internal SOPs, audit trails) is private, leaving some gaps that can only be partially filled via synthetic or simulated environments.",
+      "_timestamp": "2026-04-06T05:48:49"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tracking work form flow involves multi-step monitoring, updating statuses, and ensuring correct routing across systems, requiring consistent attention across a moderate sequence of interdependent steps.",
+      "adequacy_evidence": "AI agents can manage workflow tracking with tools and state management, but over longer sequences may exhibit minor drift or missed updates without robust orchestration and monitoring.",
+      "_timestamp": "2026-04-06T05:48:49"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking the flow of work forms involves established protocols, SOPs, and system-defined workflows, but may require some interpretation of exceptions or context-specific routing rules.",
+      "adequacy_evidence": "Current AI agents can reliably follow and infer structured workflow rules and handle minor ambiguities using system context, with minimal need for human clarification.",
+      "_timestamp": "2026-04-06T05:48:50"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves monitoring multiple forms, their statuses, and transfer pathways within a workflow, requiring tracking and updating structured information across several sources during an episode.",
+      "adequacy_evidence": "Current AI agents with tool integration (e.g., databases, workflow systems) can reliably store, retrieve, and update this structured state without significant context loss.",
+      "_timestamp": "2026-04-06T05:48:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Tracking the flow of work forms and electronic data transfers is primarily handled through textual records, databases, and system logs, with little to no reliance on images, audio, or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents can fully manage text-based workflow tracking, database queries, and electronic form routing without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T05:48:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Tracking the flow of work forms is typically asynchronous and monitored over minutes to hours via systems or logs, without strict real-time decision pressure.",
+      "adequacy_evidence": "Current AI agents can easily operate within these relaxed time constraints, with no need to truncate reasoning to meet latency demands.",
+      "_timestamp": "2026-04-06T05:48:51"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Form flow tracking typically relies on system logs, audit trails, and reconciliation checks, so discrepancies can be detected but may require careful review of timestamps, statuses, and transfer records.",
+      "adequacy_evidence": "AI can monitor and flag inconsistencies, but current systems may miss edge cases or misinterpret workflow states, requiring routine human verification and occasional correction.",
+      "_timestamp": "2026-04-06T05:48:51"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking form flow requires maintaining awareness of ongoing project states and histories of form transfers across time, but this is typically structured and systematized in databases or workflow tools.",
+      "adequacy_evidence": "Current AI agents can reliably integrate with persistent storage systems (e.g., databases, workflow trackers) to retain and retrieve cross-session state, so longitudinal memory needs are well-supported.",
+      "_timestamp": "2026-04-06T05:48:51"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in tracking form flow can delay data processing or cause temporary inconsistencies in clinical datasets, but they are typically detectable and correctable without irreversible harm to patients or trials.",
+      "adequacy_evidence": "With audit trails, reconciliation checks, and monitoring systems in place, AI-generated tracking errors can be identified and corrected, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T05:48:52"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily an internal administrative function tracking form flow; outputs are consumed within systems or workflows without reliance on the performer\u2019s identity.",
+      "adequacy_evidence": "Since stakeholders are not sensitive to who or what performs the tracking, AI systems are already broadly acceptable for such back-office process management tasks.",
+      "_timestamp": "2026-04-06T05:48:52"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from tracking the flow of work forms in clinical data management. Relevant frameworks like HIPAA and 21 CFR Part 11 impose requirements on data security, validation, and auditability, but they do not mandate human-only execution of this task.",
+      "_timestamp": "2026-04-06T05:48:53"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

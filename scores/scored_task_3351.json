@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1141.00",
+  "task_id": 3351,
+  "task_statement": "Evaluate job positions, determining classification, exempt or non-exempt status, and salary.",
+  "occupation_title": "Compensation, Benefits, and Job Analysis Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Evaluating job positions and determining classification or salary typically involves reviewing job descriptions, compensation data, and regulations using digital documents and HR systems. However, some evaluations may include on-site observation or in-person discussions with managers to understand job duties."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While classification and exempt status rely on formal frameworks (e.g., FLSA tests), applying them often involves case-based judgment about job duties, organizational context, and borderline roles that are not fully captured by explicit rules.",
+      "adequacy_evidence": "Current AI agents can apply regulatory criteria and analyze job descriptions well, but they show gaps in nuanced interpretation of ambiguous or strategically framed roles, especially in edge cases requiring experiential calibration.",
+      "_timestamp": "2026-04-06T05:24:07"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous roles across industries, geographies, and regulatory contexts, with nuanced distinctions in duties tests, exemptions, and compensation structures creating a long-tailed distribution of cases.",
+      "adequacy_evidence": "There is substantial public guidance (e.g., FLSA rules, job descriptions, HR frameworks) and examples for training, but key data like proprietary compensation surveys and firm-specific role calibrations are only partially accessible, leaving some gaps.",
+      "_timestamp": "2026-04-06T05:24:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step process\u2014collecting job information, applying classification frameworks (e.g., FLSA criteria), comparing roles, and determining salary bands\u2014where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or deeply interdependent.",
+      "adequacy_evidence": "AI agents can generally follow structured evaluation workflows, but may show moderate degradation through missed criteria, inconsistent application of standards, or drift over multi-step analyses without careful scaffolding.",
+      "_timestamp": "2026-04-06T05:24:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating job classifications requires synthesizing job descriptions, duties, FLSA criteria, salary benchmarks, and organizational context, but the information is typically bounded and document-based within a single episode.",
+      "adequacy_evidence": "Agents can generally track and summarize these inputs, but may occasionally miss or misweight specific duties or regulatory criteria when handling multiple documents or nuanced distinctions.",
+      "_timestamp": "2026-04-06T05:24:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Core criteria (e.g., FLSA exemption tests, salary thresholds, job evaluation frameworks) are formally defined, but applying them requires interpreting job duties, organizational context, and sometimes incomplete or stylized job descriptions.",
+      "adequacy_evidence": "Agents can apply codified rules and infer intent from descriptions, but often misinterpret nuanced duty distinctions or implicit organizational factors, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T05:24:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating job classifications and salary often depends on prior decisions, internal equity, and organizational pay structures, requiring reference to past cases and evolving policies across instances.",
+      "adequacy_evidence": "Current agents can store and retrieve prior classifications and compensation frameworks via external databases, but inconsistencies in retrieval, updating, and contextual alignment still occur in a meaningful fraction of cases.",
+      "_timestamp": "2026-04-06T05:24:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on written job descriptions, compensation data, and regulatory text (e.g., FLSA criteria), with little to no dependence on images, audio, or other non-text inputs or outputs.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI systems already handle the required modalities adequately with no meaningful gap.",
+      "_timestamp": "2026-04-06T05:24:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Job classification and exemption analysis are typically performed over hours or days with ample time for review; there is no need for real-time or rapid responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to apply detailed reasoning without latency pressure, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-06T05:24:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The evaluations affect employees and managers who rely on and may question classification and pay decisions, so stakeholder trust and perceived legitimacy matter to some extent.",
+      "adequacy_evidence": "Organizations may hesitate to fully delegate such sensitive HR judgments to AI due to fairness and compliance concerns, though AI-assisted decision-making is increasingly acceptable if overseen by humans.",
+      "_timestamp": "2026-04-06T05:24:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining job classification and FLSA exempt status relies on nuanced interpretation of job duties, legal criteria, and organizational context; mistakes are often subtle and may only surface during audits or disputes.",
+      "adequacy_evidence": "Current AI can misinterpret role descriptions or legal thresholds, and verifying outputs requires expert HR/legal review, making checking both necessary and non-trivial.",
+      "_timestamp": "2026-04-06T05:24:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from evaluating job classifications or exempt status; these are internal HR compliance functions. While employers remain legally responsible for FLSA compliance, they may use AI tools to assist in these determinations.",
+      "_timestamp": "2026-04-06T05:24:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misclassification of exempt/non-exempt status can trigger significant legal liability, back pay, penalties, and class-action risk; even rare residual errors can have major financial and compliance consequences.",
+      "adequacy_evidence": "With human/legal review and rule-based checks, many errors can be caught, but AI may still miss nuanced FLSA/jurisdictional edge cases, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T05:24:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

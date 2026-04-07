@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2053.00",
+  "task_id": 21045,
+  "task_statement": "Examine documents to determine degree of risk from factors such as applicant health, financial standing and value, and condition of property.",
+  "occupation_title": "Insurance Underwriters",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Insurance underwriters typically assess risk by reviewing digital applications, medical records, financial data, and inspection reports in underwriting software or document systems. Physical presence or equipment is not required for the evaluation itself."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Underwriting spans heterogeneous inputs (medical records, financial histories, property inspections) with substantial variation across applicants, policy types, and edge cases, creating a broad, long-tailed distribution.",
+      "adequacy_evidence": "While large corpora of underwriting guidelines, case studies, and structured data exist, much high-quality labeled data is proprietary and expert reasoning traces are limited, though partially recoverable via synthesis and fine-tuning.",
+      "_timestamp": "2026-04-05T21:46:51"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While underwriting uses formal guidelines and scoring models, practitioners routinely apply experience-based judgment to weigh borderline cases, interpret conflicting signals, and assess qualitative factors like property condition or applicant credibility.",
+      "adequacy_evidence": "Current agents can follow rules and replicate standard risk models but show gaps in nuanced calibration for edge cases, subtle inconsistencies, and context-sensitive tradeoffs that experienced underwriters handle more reliably.",
+      "_timestamp": "2026-04-05T21:46:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Underwriters must synthesize information from multiple documents (medical records, financial statements, property reports), requiring selective attention and compression of relevant details within a single case.",
+      "adequacy_evidence": "Current agents can process and summarize multiple documents but may miss or inconsistently weight key details across sources, especially when information is scattered or subtly conflicting.",
+      "_timestamp": "2026-04-05T21:46:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Underwriting relies on formal guidelines and actuarial criteria, but also involves context-dependent judgment about risk factors (e.g., interpreting borderline financials or property conditions) and aligning with company risk appetite.",
+      "adequacy_evidence": "Current agents can apply explicit rules and extract signals from documents, but often miss nuanced, context-specific interpretations and require human iteration to align with implicit underwriting standards.",
+      "_timestamp": "2026-04-05T21:46:52"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple documents (medical, financial, property) and integrating their contents into a coherent risk assessment, requiring several interdependent steps but not extremely long chains.",
+      "adequacy_evidence": "Frontier AI can generally sustain multi-step document analysis and synthesis, but may show some degradation such as missed details or inconsistent weighting across longer or more complex document sets.",
+      "_timestamp": "2026-04-05T21:46:53"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of underwriting relies on textual documents (applications, financial records, reports), assessing property condition can involve images, inspection photos, or diagrams, making multimodal input meaningfully relevant.",
+      "adequacy_evidence": "Current agents can interpret basic document images and structured visuals, but performance is less reliable on nuanced property condition assessments or subtle visual risk cues in complex or low-quality imagery.",
+      "_timestamp": "2026-04-05T21:46:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Insurance underwriting typically operates on turnaround times of hours to days, allowing thorough document review without strict real-time pressure.",
+      "adequacy_evidence": "Current AI systems can perform detailed analysis within these generous timeframes, so latency does not meaningfully constrain quality.",
+      "_timestamp": "2026-04-05T21:46:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each underwriting decision is typically based on the current application and accompanying documents, which contain the relevant applicant, financial, and property information; prior context is usually embedded in these materials rather than requiring recall across sessions.",
+      "adequacy_evidence": "Current AI systems with standard data storage and retrieval can easily access any needed historical records when explicitly provided, and the task does not depend on maintaining evolving cross-session state.",
+      "_timestamp": "2026-04-05T21:46:54"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing insurance risk involves integrating nuanced financial, medical, and property information where mistakes (e.g., misweighting a risk factor or overlooking a document detail) can be subtle and require domain expertise to detect.",
+      "adequacy_evidence": "Current AI systems can misinterpret complex or context-dependent risk signals and supporting documents, and their errors are not always obvious, requiring thorough expert review to catch and correct.",
+      "_timestamp": "2026-04-05T21:46:55"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Underwriting errors can lead to financial losses or mispriced policies, but impacts are typically distributed across portfolios and can be corrected or absorbed over time, making occasional residual errors survivable.",
+      "adequacy_evidence": "Even after standard checks, AI may misweight nuanced risk factors or miss subtle red flags, leaving some non-trivial residual risk that insurers would likely still find concerning without human oversight.",
+      "_timestamp": "2026-04-05T21:46:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing underwriting analysis, and insurers already use automated systems, but regulations (e.g., state insurance laws, unfair discrimination rules, model governance requirements) impose constraints and often require human oversight or accountability, creating partial restriction.",
+      "_timestamp": "2026-04-05T21:46:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Underwriters\u2019 assessments affect applicants and insurers, but the task itself is primarily internal document analysis with limited direct stakeholder interaction or need for personal authority.",
+      "adequacy_evidence": "Automated underwriting systems are already widely used and accepted in insurance, and stakeholders generally do not require a human identity for document-based risk evaluation.",
+      "_timestamp": "2026-04-05T21:46:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

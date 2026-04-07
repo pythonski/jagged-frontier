@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2099.01",
+  "task_id": 17435,
+  "task_statement": "Submit reports to physicians summarizing test results.",
+  "occupation_title": "Neurodiagnostic Technologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Reports are typically prepared and submitted through electronic health record systems or email, which can be done entirely on a computer. However, in some clinical settings reports may be printed, filed, or delivered in person, so not all instances are fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different neurodiagnostic tests (e.g., EEG, EMG), patient conditions, and physician preferences, but follows relatively standardized reporting formats and conventions.",
+      "adequacy_evidence": "There are substantial medical report corpora and templates available, but much high-quality, detailed clinical reporting data is private and may limit full coverage of edge cases and nuanced expert phrasing.",
+      "_timestamp": "2026-04-06T05:18:48"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Summarizing neurodiagnostic test results involves some judgment in emphasizing clinically relevant findings, appropriate terminology, and caveats, which benefits from experience but is partly guided by standardized reporting conventions.",
+      "adequacy_evidence": "Current AI can generate structured medical summaries well, but may lack consistent calibration in highlighting nuanced or borderline findings and appropriate clinical framing in non-routine cases.",
+      "_timestamp": "2026-04-06T05:18:50"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reports follow established clinical formats but require some contextual judgment about which findings to highlight, how to phrase uncertainty, and how to tailor summaries to physician expectations.",
+      "adequacy_evidence": "Current agents can generate structured summaries from test data but may miss subtle clinical emphasis or implicit communication norms, often requiring human review to ensure alignment with physician preferences.",
+      "_timestamp": "2026-04-06T05:18:50"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering test results, synthesizing them into a coherent summary, and submitting the report, requiring some multi-step consistency but over a relatively short sequence.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain coherence across short document-generation workflows without noticeable degradation or compounding errors.",
+      "_timestamp": "2026-04-06T05:18:50"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires consolidating multiple test outputs and relevant patient/contextual details into a coherent summary, but the information volume is typically bounded and structured.",
+      "adequacy_evidence": "Current AI agents handle summarization and integration of moderate-sized structured and unstructured medical data reliably within a single episode, with minimal context loss.",
+      "_timestamp": "2026-04-06T05:18:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Report submission typically occurs after test completion with turnaround times of minutes to hours, not requiring immediate real-time response.",
+      "adequacy_evidence": "Current AI systems can generate accurate summaries well within these relaxed time constraints without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-06T05:18:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each report is primarily based on current test results and existing patient records, which are retrieved from clinical systems rather than relying on the technologist\u2019s personal cross-session memory.",
+      "adequacy_evidence": "AI systems can access and pull structured patient history from external databases when needed, so there is no meaningful gap in cross-session memory capability for this task.",
+      "_timestamp": "2026-04-06T05:18:54"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification requires domain expertise to cross-check summaries against underlying neurodiagnostic data (e.g., EEG traces), but errors can usually be detected through review of source results and standard reporting formats.",
+      "adequacy_evidence": "Current AI can generate plausible summaries but may misinterpret clinical nuances or omit key findings, so consistent expert review is still needed though errors are generally detectable with careful checking.",
+      "_timestamp": "2026-04-06T05:18:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Summarizing neurodiagnostic test results may require interpreting non-text data such as EEG waveforms or imaging outputs before converting them into a textual report.",
+      "adequacy_evidence": "Current agents can handle basic multimodal inputs but remain inconsistent with complex clinical signals like EEG patterns, limiting reliability in nuanced interpretation.",
+      "_timestamp": "2026-04-06T05:18:54"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "These reports inform physicians' clinical interpretation of neurodiagnostic tests, so even small residual errors can mislead diagnosis or treatment decisions with potentially serious consequences.",
+      "adequacy_evidence": "AI-generated summaries can be reviewed against underlying test data, but risks like subtle misinterpretation or omission may still persist after checking, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T05:18:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Clinical reports in healthcare typically must be reviewed and authenticated by a licensed professional under medical record regulations, but there is no explicit prohibition on AI drafting or assisting with report submission. This creates partial restriction: AI cannot operate fully autonomously without human sign-off.",
+      "_timestamp": "2026-04-06T05:18:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Physicians rely on these reports to interpret test results, so they engage with the output, but the technologist\u2019s personal identity or interpersonal role is not central beyond ensuring credibility and accuracy.",
+      "adequacy_evidence": "Physicians may accept AI-generated summaries if accuracy and validation are demonstrated, but concerns about reliability, liability, and clinical accountability would lead to some resistance.",
+      "_timestamp": "2026-04-06T05:18:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9033.00",
+  "task_id": 5245,
+  "task_statement": "Determine course schedules, and coordinate teaching assignments and room assignments to ensure optimum use of buildings and equipment.",
+  "occupation_title": "Education Administrators, Postsecondary",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Course scheduling, teaching assignments, and room allocation are typically managed using scheduling software, spreadsheets, and communication tools, all of which can be handled remotely without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Course scheduling spans highly heterogeneous constraints across institutions (varying curricula, instructor preferences, room capacities, equipment needs, and policy rules), creating a long-tailed, context-sensitive distribution.",
+      "adequacy_evidence": "While real-world scheduling data is often institution-specific and private, there is substantial accessible signal via timetabling benchmarks, operations research literature, and synthetic generation, though some edge-case institutional nuances remain thin.",
+      "_timestamp": "2026-04-05T21:25:27"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many constraints (room capacity, time conflicts, equipment needs) are explicit, effective scheduling also relies on experience with faculty preferences, departmental politics, and institutional norms that are not fully codified.",
+      "adequacy_evidence": "Current agents can optimize explicit constraints well but have only partial ability to handle informal preferences, tradeoffs, and politically sensitive assignments that require nuanced human judgment.",
+      "_timestamp": "2026-04-05T21:25:28"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task has clear formal goals (fit courses, instructors, and rooms under constraints), but also involves latent priorities like faculty preferences, departmental politics, and tradeoffs between utilization, convenience, and fairness.",
+      "adequacy_evidence": "Current agents can handle explicit constraints and optimization but often miss or misweight tacit preferences and evolving stakeholder priorities, requiring human iteration to refine schedules.",
+      "_timestamp": "2026-04-05T21:25:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Course scheduling and assignment planning are typically done over days or weeks, with no need for real-time or near-instant responses.",
+      "adequacy_evidence": "Current AI systems can take minutes or longer to optimize schedules without issue, and this latency does not meaningfully impact task quality or usability.",
+      "_timestamp": "2026-04-05T21:25:29"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Course scheduling and assignment requires maintaining longitudinal data such as past schedules, faculty teaching histories, room capacities, recurring constraints, and evolving institutional preferences across semesters.",
+      "adequacy_evidence": "While current AI systems can integrate with databases and persist structured records, they still show gaps in consistently retrieving and appropriately using nuanced historical context (e.g., informal constraints, evolving preferences) across planning cycles.",
+      "_timestamp": "2026-04-05T21:25:29"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Coordinating course schedules, instructor assignments, and room usage involves many interdependent constraints (time slots, instructor availability, room capacity/equipment) where early decisions affect later feasibility, creating a tightly coupled multi-step process.",
+      "adequacy_evidence": "LLM-based agents with optimization tools can manage these sequences reasonably well, but still show some degradation through constraint tracking errors or iterative revisions, especially in complex edge cases or large institutions.",
+      "_timestamp": "2026-04-05T21:25:29"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Scheduling requires tracking many interdependent constraints (courses, instructors, room capacities, equipment, time slots) simultaneously, where missing a single constraint can cause conflicts or infeasible schedules.",
+      "adequacy_evidence": "With database access and optimization tools, agents can manage large constraint sets, but they can still lose or mis-handle edge constraints or evolving state without careful orchestration.",
+      "_timestamp": "2026-04-05T21:25:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves structured data such as course listings, instructor availability, and room capacities, all of which are typically handled in text or tabular formats without reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI systems can effectively process and optimize text-based and structured scheduling data, so there is no meaningful shortfall related to multimodal capabilities.",
+      "_timestamp": "2026-04-05T21:25:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements mandating that course scheduling or assignment coordination be performed by a human. Institutions can use software or automated systems for these administrative functions without regulatory prohibition.",
+      "_timestamp": "2026-04-05T21:25:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hard constraints (time conflicts, room capacity, equipment needs) can be systematically checked, but verifying optimality and satisfaction of soft constraints (faculty preferences, balanced workloads) requires domain knowledge and review.",
+      "adequacy_evidence": "AI systems can generate schedules but still make constraint or preference tradeoff errors, requiring routine validation with scheduling tools and human oversight to ensure feasibility and quality.",
+      "_timestamp": "2026-04-05T21:25:30"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling errors (e.g., room conflicts, suboptimal assignments) cause disruption, inefficiency, and stakeholder frustration, but are typically reversible and not safety-critical.",
+      "adequacy_evidence": "Most errors (like double-bookings or capacity mismatches) are easily caught by automated checks and human review, and current AI systems can operate within acceptable residual risk levels after such validation.",
+      "_timestamp": "2026-04-05T21:25:30"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires coordination with faculty, departments, and possibly students, who must accept schedules and assignments, though the role is primarily administrative rather than relationally intensive.",
+      "adequacy_evidence": "Stakeholders may show some resistance to AI making scheduling and assignment decisions, especially if perceived as inflexible or opaque, but this resistance is not likely to be prohibitive if outcomes are effective.",
+      "_timestamp": "2026-04-05T21:25:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

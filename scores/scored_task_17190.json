@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1222.00",
+  "task_id": 17190,
+  "task_statement": "Write pathology reports summarizing analyses, results, and conclusions.",
+  "occupation_title": "Physicians, Pathologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Writing pathology reports involves composing and editing documents summarizing findings, which is typically done using computer-based medical record or reporting systems and can be completed remotely if the analysis data are accessible digitally."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Producing pathology reports requires nuanced interpretation of findings, appropriate diagnostic wording, and calibration of uncertainty based on experience with diverse cases and clinical context, which goes beyond explicit rules.",
+      "adequacy_evidence": "Current AI systems can draft structured summaries but lack reliable expert-level calibration in edge cases, nuanced diagnostic thresholds, and medico-legal phrasing, leading to systematic gaps in professional discernment.",
+      "_timestamp": "2026-04-05T22:16:10"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Pathology reports span many organ systems, specimen types, staining methods, and rare diseases, with a long-tailed distribution and context-specific conventions.",
+      "adequacy_evidence": "While large volumes of reports and standardized templates (e.g., CAP synoptic reports) exist, much data is private and process-level reasoning is sparsely documented, though partially recoverable via de-identified datasets and synthesis.",
+      "_timestamp": "2026-04-05T22:16:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Pathology reports follow established formats and standards, but require context-sensitive inclusion of clinically relevant findings, appropriate terminology, and judgment about emphasis and interpretation.",
+      "adequacy_evidence": "Current agents can draft structured reports with guidance, but often miss nuanced clinical priorities or implicit reporting conventions, requiring human review and iteration.",
+      "_timestamp": "2026-04-05T22:16:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Pathology reports are typically case-specific but often reference prior specimens, patient history, or earlier reports, requiring some cross-session retrieval of clinical context.",
+      "adequacy_evidence": "Current agents can store and retrieve prior records via EHR integrations, but consistency and reliable surfacing of all relevant historical context across systems remains imperfect.",
+      "_timestamp": "2026-04-05T22:16:11"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Writing a pathology report involves synthesizing findings, organizing sections (e.g., clinical history, gross/microscopic description, diagnosis), and maintaining consistency across them, but the sequence is moderately bounded and structured.",
+      "adequacy_evidence": "Frontier AI systems can reliably maintain coherence across such moderately long, structured writing tasks, especially with templates and tools, showing little degradation over the required sequence length.",
+      "_timestamp": "2026-04-05T22:16:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple structured and unstructured inputs (lab results, microscopic findings, clinical context) into a coherent report, but the total information per case is typically bounded and document-based.",
+      "adequacy_evidence": "Current agents can handle multi-document summarization but may omit or misweight clinically relevant details, especially when compressing dense medical information into concise reports.",
+      "_timestamp": "2026-04-05T22:16:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Pathology report writing typically occurs after analysis and review, with turnaround times ranging from hours to days rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can generate high-quality reports well within these timeframes, allowing for extended reasoning without meaningful quality-speed tradeoffs.",
+      "_timestamp": "2026-04-05T22:16:13"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Although the report itself is text, it is based on interpretation of non-text inputs such as histopathology slides, imaging, and lab visualizations, making multimodal perception an integral upstream component.",
+      "adequacy_evidence": "Current AI systems can process medical images but remain inconsistent on fine-grained pathological distinctions and cross-modal synthesis, especially in complex or ambiguous cases.",
+      "_timestamp": "2026-04-05T22:16:13"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Pathology reports integrate nuanced microscopic findings, clinical context, and diagnostic judgment; errors can be subtle (e.g., misclassification, staging nuances) and require expert review and sometimes additional testing to detect.",
+      "adequacy_evidence": "Current AI can draft plausible reports but may misinterpret findings or introduce inaccuracies; verifying correctness requires full expert review of underlying slides and context, making the checking burden substantial.",
+      "_timestamp": "2026-04-05T22:16:13"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Pathology reports directly inform diagnoses, staging, and treatment decisions; even rare residual errors can lead to incorrect therapy, missed cancers, or serious patient harm.",
+      "adequacy_evidence": "With standard pathologist review, many AI errors could be caught, but subtle misstatements, omissions, or incorrect clinical interpretations may still slip through, leaving non-trivial residual risk.",
+      "_timestamp": "2026-04-05T22:16:14"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Under U.S. CLIA regulations and state medical practice laws, pathology reports used for clinical diagnosis must be reviewed and signed out by a licensed physician (pathologist). AI systems may assist, but cannot legally issue or finalize such reports autonomously, as a human licensee is explicitly required.",
+      "_timestamp": "2026-04-05T22:16:14"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Pathology reports are authoritative medical documents relied on by clinicians for diagnosis and treatment, where the credibility and licensure of the pathologist are central to trust and use.",
+      "adequacy_evidence": "Clinicians, hospitals, and regulators currently require human pathologist oversight and sign-off; fully AI-authored reports without human attribution would face strong resistance and likely be rejected in practice.",
+      "_timestamp": "2026-04-05T22:16:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

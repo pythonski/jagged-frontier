@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1051.00",
+  "task_id": 20846,
+  "task_statement": "Collect historical cost data to estimate costs for current or future products.",
+  "occupation_title": "Cost Estimators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Historical cost data is typically gathered from digital sources such as spreadsheets, databases, ERP systems, and online records. However, in some cases estimators may need to review physical documents, archived files, or consult staff on-site for past project information."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Historical cost data collection spans different industries, cost categories, data systems, and formats, but follows broadly similar procedures (sourcing records, normalizing, validating), yielding moderate variability rather than a highly long-tailed distribution.",
+      "adequacy_evidence": "While general methods and some example datasets are available, much relevant data is proprietary and context-specific, limiting direct training coverage; however, synthetic data generation and documented workflows make partial coverage feasible.",
+      "_timestamp": "2026-04-06T03:20:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple linked steps\u2014identifying relevant data sources, extracting data, cleaning and standardizing it, and organizing it for estimation\u2014requiring some consistency across steps but not deeply interdependent long chains.",
+      "adequacy_evidence": "AI agents can generally manage these multi-step data workflows with tools, though mild degradation can occur in longer pipelines (e.g., inconsistencies in data cleaning or categorization), especially without careful orchestration.",
+      "_timestamp": "2026-04-06T03:20:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting and normalizing historical cost data requires judgment about comparability, adjusting for context (e.g., scope differences, market conditions), and handling anomalies, which goes beyond purely explicit rules.",
+      "adequacy_evidence": "AI agents can apply standard adjustments and similarity matching, but often lack robust calibration for nuanced context differences and edge cases, leading to moderate gaps in non-routine scenarios.",
+      "_timestamp": "2026-04-06T03:20:36"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Selecting appropriate historical cost data requires interpreting project scope, comparability (materials, scale, geography), and adjusting for inflation or process differences, which are partly context-dependent.",
+      "adequacy_evidence": "With access to documentation and iterative querying, current agents can infer relevant criteria and refine selections reliably, as the ambiguity is limited and can be resolved through standard analytical workflows.",
+      "_timestamp": "2026-04-06T03:20:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Collecting historical cost data primarily involves retrieving and organizing numeric and textual information from databases, spreadsheets, invoices, and reports, which are fundamentally text-based or structured data sources.",
+      "adequacy_evidence": "Current AI agents can reliably process, extract, and organize text and structured numerical data, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-06T03:20:37"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering and synthesizing cost data from multiple sources (e.g., past projects, databases, vendor records), requiring some active organization and comparison within a single workflow.",
+      "adequacy_evidence": "Current agents with retrieval tools, structured data handling, and external memory (e.g., spreadsheets, databases) can reliably manage and organize this level of information without significant loss or drift.",
+      "_timestamp": "2026-04-06T03:20:38"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Collecting historical cost data is typically a back-office activity with flexible timelines; minutes to hours (or longer) are acceptable for gathering and compiling data.",
+      "adequacy_evidence": "AI agents can retrieve, aggregate, and structure historical data well within these loose time constraints without needing to sacrifice reasoning depth or quality.",
+      "_timestamp": "2026-04-06T03:20:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in collected historical cost data can lead to inaccurate estimates and budgeting issues, but these are typically caught in downstream review or adjusted without catastrophic consequences.",
+      "adequacy_evidence": "With standard validation steps (cross-checking sources, audits, reconciliation), AI-collected data errors are generally detectable and correctable, leaving acceptable residual risk.",
+      "_timestamp": "2026-04-06T03:20:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the US that prohibit AI from collecting or compiling historical cost data for estimation purposes. While general data privacy or contractual obligations may govern how data is accessed, they do not restrict AI specifically from performing this task.",
+      "_timestamp": "2026-04-06T03:20:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Estimating costs relies on accessing accumulated historical cost records from prior projects, but these are typically stored in databases or documentation rather than requiring implicit longitudinal memory.",
+      "adequacy_evidence": "Current AI systems can reliably retrieve and integrate cross-session data via databases, document stores, and RAG pipelines, so persistent memory limitations are not a major barrier.",
+      "_timestamp": "2026-04-06T03:20:39"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying collected cost data requires cross-checking sources, ensuring correct units, time frames, and comparability, which takes domain knowledge and effort but is generally feasible with standard auditing practices.",
+      "adequacy_evidence": "AI systems can gather and structure cost data but are prone to sourcing errors, misinterpretation, or outdated figures, so human review and validation remain necessary at a moderate level.",
+      "_timestamp": "2026-04-06T03:20:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Collecting historical cost data is typically an internal, back-office activity using databases, records, or supplier logs, with no reliance on stakeholder interaction or performer identity.",
+      "adequacy_evidence": "Organizations already accept automated tools and software for data collection tasks, and there is little to no stakeholder resistance to AI performing this function.",
+      "_timestamp": "2026-04-06T03:20:41"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1141.04",
+  "task_id": 18020,
+  "task_statement": "Prepare reports to document patients' care activities.",
+  "occupation_title": "Clinical Nurse Specialists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Preparing reports documenting patient care is primarily a documentation task typically completed in electronic health record systems or word processors, which can be done entirely on a computer with remote access to records."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing care activity reports involves selecting clinically relevant details, prioritizing events, and framing information appropriately for medical, legal, and interdisciplinary use, which benefits from experience-based judgment beyond strict templates.",
+      "adequacy_evidence": "Current AI can generate structured clinical summaries and follow documentation standards, but it can miss subtle clinical significance, context-dependent emphasis, or liability-sensitive phrasing in more complex or nuanced cases.",
+      "_timestamp": "2026-04-06T02:57:57"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Patient care reporting spans different specialties, conditions, and institutional documentation styles, but is guided by relatively standardized formats (e.g., SOAP notes, care plans).",
+      "adequacy_evidence": "Large amounts of clinical documentation exist but are often private and restricted; while de-identified datasets and synthetic data help, some real-world variation and nuanced examples remain underrepresented.",
+      "_timestamp": "2026-04-06T02:57:58"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While documentation standards and EHR templates exist, reports must reflect context-specific clinical judgment about what details, emphasis, and phrasing are appropriate for care continuity, compliance, and stakeholders.",
+      "adequacy_evidence": "Current agents can follow templates and infer common structure but often miss nuanced clinical priorities, legal phrasing, or institution-specific expectations, requiring human review and iteration.",
+      "_timestamp": "2026-04-06T02:57:58"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Preparing patient care reports involves collecting information from records, synthesizing it, and structuring it into coherent documentation, requiring multiple interdependent steps but not long or tightly coupled sequences.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably maintain coherence across these moderate-length documentation workflows, with minimal degradation when supported by structured data retrieval and templates.",
+      "_timestamp": "2026-04-06T02:57:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Preparing patient care reports requires integrating large, heterogeneous data (vitals, medications, interventions, progress notes, timelines) where omissions or misordering can materially affect clinical accuracy.",
+      "adequacy_evidence": "Current agents can retrieve and summarize structured EHR data reasonably well, but they still show gaps in reliably maintaining full context, temporal coherence, and nuanced clinical detail across complex records.",
+      "_timestamp": "2026-04-06T02:57:59"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing care activity reports is primarily text-based, drawing on structured EHR entries, notes, and coded clinical data rather than direct interpretation of images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI systems handle text summarization and structured data-to-text reporting well, with no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-06T02:57:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing patient care reports is typically done after care delivery with flexibility of minutes to hours, not requiring immediate real-time output.",
+      "adequacy_evidence": "Current AI systems can produce high-quality documentation well within these timeframes, so latency does not meaningfully constrain performance.",
+      "_timestamp": "2026-04-06T02:58:00"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Preparing patient care reports regularly draws on prior encounters, treatment history, and evolving care plans across sessions, but this information is typically stored in electronic health records rather than solely in the clinician\u2019s memory.",
+      "adequacy_evidence": "Current AI systems can reliably access and retrieve longitudinal patient data from structured EHR systems and databases, so cross-session memory needs are largely met through existing infrastructure rather than requiring intrinsic agent memory.",
+      "_timestamp": "2026-04-06T02:58:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying patient care reports requires cross-checking against clinical records and applying domain knowledge to catch omissions or misstatements, but errors are generally detectable with careful review.",
+      "adequacy_evidence": "Current AI can draft such reports but may introduce subtle inaccuracies or omissions, so clinicians must still perform routine but non-trivial verification against source documentation.",
+      "_timestamp": "2026-04-06T02:58:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reports are used by clinicians, care teams, and auditors who rely on their accuracy, but the individual nurse's personal identity is less central than the content itself.",
+      "adequacy_evidence": "AI-generated clinical documentation is increasingly used but still often requires human oversight, and some stakeholders may distrust or scrutinize AI-authored records more closely.",
+      "_timestamp": "2026-04-06T02:58:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Patient care reports are part of the medical record and inform clinical decisions, legal documentation, and continuity of care, so even small residual errors can have serious downstream consequences.",
+      "adequacy_evidence": "While reports can be reviewed against source data in EHR systems, AI may still introduce subtle omissions or misinterpretations that are not always caught, leaving some residual risk after standard checks.",
+      "_timestamp": "2026-04-06T02:58:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Clinical documentation must be attributed to and authenticated by a licensed clinician, and they are legally responsible for its accuracy. While AI can assist in drafting reports, regulations and standards (e.g., CMS, state licensing boards, medical record rules) require clinician oversight and sign-off, creating partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-06T02:58:02"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

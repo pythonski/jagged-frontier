@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2021.02",
+  "task_id": 7295,
+  "task_statement": "Check building codes and zoning bylaws to determine any effects on the properties being appraised.",
+  "occupation_title": "Appraisers, Real Estate",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Checking building codes and zoning bylaws involves researching regulatory documents, which are typically available through online municipal code databases or digital records, allowing the task to be completed entirely on a computer."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans many jurisdictions with differing local building codes and zoning bylaws, creating moderate variation in structure, terminology, and edge cases across municipalities.",
+      "adequacy_evidence": "Most codes and bylaws are publicly available and digitized, enabling training coverage, but smaller or frequently updated local regulations and nuanced interpretations are less consistently represented.",
+      "_timestamp": "2026-04-06T03:43:32"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves consulting multiple legal documents (building codes, zoning bylaws) and mapping their provisions to specific property characteristics, requiring moderate information tracking and synthesis within a session.",
+      "adequacy_evidence": "Well-scaffolded agents can reliably retrieve, chunk, and cross-reference relevant regulations within a session using tools, with minimal loss of context or compression errors.",
+      "_timestamp": "2026-04-06T03:43:33"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While building codes and zoning bylaws are documented, interpreting their practical impact (e.g., nonconforming uses, variances, grandfathering, or highest-and-best-use implications) often requires experience-based judgment beyond explicit rules.",
+      "adequacy_evidence": "Agents can reliably extract and summarize regulations, but they show gaps in nuanced interpretation of edge cases and local enforcement practices, which are often informed by practitioner experience.",
+      "_timestamp": "2026-04-06T03:43:33"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining relevant provisions and their impact requires interpreting jurisdiction-specific codes, intended property use, and appraisal context (e.g., zoning compliance, nonconforming uses), which are not fully explicit.",
+      "adequacy_evidence": "Agents can retrieve and summarize codes, but often struggle with local nuances, exceptions, and context-dependent interpretations, requiring human guidance to resolve ambiguities.",
+      "_timestamp": "2026-04-06T03:43:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step process\u2014identifying relevant jurisdictions, retrieving applicable codes, and mapping them to property features\u2014but the steps are relatively bounded and not highly interdependent over long sequences.",
+      "adequacy_evidence": "Frontier AI agents can reliably sustain performance across these moderate-length retrieval and analysis chains using tools and structured workflows, with minimal degradation over the sequence.",
+      "_timestamp": "2026-04-06T03:43:34"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each appraisal involves checking current building codes and zoning bylaws for a specific property, which can be done independently without relying on prior cases or accumulated context.",
+      "adequacy_evidence": "Since the task is self-contained per instance, existing agent memory systems are sufficient; no persistent cross-session state is required.",
+      "_timestamp": "2026-04-06T03:43:34"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Building codes and zoning bylaws are primarily text-based legal and regulatory documents; determining their effects mainly involves reading and interpreting written provisions.",
+      "adequacy_evidence": "Current AI systems handle text ingestion and legal-style document analysis well, and any occasional map or diagram references can typically be interpreted or supplemented without major performance gaps.",
+      "_timestamp": "2026-04-06T03:43:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing building codes and zoning bylaws is a research-oriented task with no need for immediate response; minutes to hours of analysis are typically acceptable in appraisal workflows.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to retrieve and analyze relevant regulations without pressure, so there is no quality degradation due to speed constraints.",
+      "_timestamp": "2026-04-06T03:43:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from reviewing building codes and zoning bylaws. While licensed appraisers are required for official appraisal conclusions, the act of checking and interpreting public regulations is not restricted to humans.",
+      "_timestamp": "2026-04-06T03:43:36"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining impacts from building codes and zoning bylaws requires careful interpretation of jurisdiction-specific legal text, cross-referencing multiple provisions, and understanding exceptions, making errors non-obvious without domain expertise.",
+      "adequacy_evidence": "AI can retrieve and summarize relevant codes, but it still misinterprets legal nuances or misses local updates, so expert review is needed though errors are usually catchable with careful checking.",
+      "_timestamp": "2026-04-06T03:43:36"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The results inform appraisal reports used by clients and regulators, but this subtask is largely internal and does not involve direct stakeholder interaction or reliance on the performer\u2019s identity.",
+      "adequacy_evidence": "Stakeholders generally care that zoning/code checks are accurate and compliant, not whether an AI or human gathered the information, especially when incorporated into a licensed appraiser\u2019s final report.",
+      "_timestamp": "2026-04-06T03:43:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Misinterpreting zoning or building codes can materially affect property valuation and legal compliance, but errors are usually correctable and rarely catastrophic.",
+      "adequacy_evidence": "Even with review, AI may miss jurisdiction-specific nuances or recent code changes, leaving some non-trivial residual risk in appraisal-relevant interpretations.",
+      "_timestamp": "2026-04-06T03:43:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

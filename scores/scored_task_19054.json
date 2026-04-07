@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "23-1012.00",
+  "task_id": 19054,
+  "task_statement": "Verify that all files, complaints, or other papers are available and in the proper order.",
+  "occupation_title": "Judicial Law Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Court records and filings are often managed through electronic case management systems, allowing clerks to verify document presence and order digitally, but some courts still maintain or supplement with physical case files that must be checked in person."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different case types, jurisdictions, and filing formats, but is largely governed by standardized procedural rules and document conventions.",
+      "adequacy_evidence": "Extensive legal corpora, court rules, docket examples, and procedural guides provide ample coverage, and missing variations can be readily synthesized or learned via structured workflows.",
+      "_timestamp": "2026-04-06T11:22:37"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely procedural, governed by explicit rules about required documents and their correct order, typically specified by court procedures or checklists.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured rules and checklists to verify document presence and ordering when given clear criteria, with little need for experience-based judgment.",
+      "_timestamp": "2026-04-06T11:22:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "\"Proper order\" and completeness depend on court-specific filing rules, case type, and individual judge preferences, which are not always fully explicit in the task description.",
+      "adequacy_evidence": "Well-scaffolded agents can use rules, checklists, and prior examples to infer ordering and completeness, but may still miss subtle, judge-specific or context-dependent expectations without human guidance.",
+      "_timestamp": "2026-04-06T11:22:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves checking multiple documents for presence and correct ordering, requiring a short sequence of dependent verification steps but not a long or tightly coupled workflow.",
+      "adequacy_evidence": "AI agents can reliably track and verify ordered lists of documents across moderate-length sequences with minimal degradation, especially when supported by structured inputs and checklist-style reasoning.",
+      "_timestamp": "2026-04-06T11:22:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing and organizing text-based legal documents and metadata (filenames, dates, case numbers), with little to no reliance on non-text modalities.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI systems can handle it without meaningful multimodal limitations.",
+      "_timestamp": "2026-04-06T11:22:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is performed on a specific case file or set of documents that are present at the time of verification, with required context contained within the file itself rather than relying on accumulated cross-session knowledge.",
+      "adequacy_evidence": "Current AI systems can rely on provided document sets or case management systems for state, so no persistent cross-session memory is needed or lacking for this task.",
+      "_timestamp": "2026-04-06T11:22:40"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying that documents are present and properly ordered is typically done with no strict real-time pressure; minutes or longer are acceptable within normal clerical workflows.",
+      "adequacy_evidence": "Current AI agents can perform document checking and ordering well within these loose time constraints without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T11:22:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves checking multiple documents against an expected set and order, requiring tracking and comparison of several items within a case file, but typically follows structured checklists or known filing conventions.",
+      "adequacy_evidence": "Current AI agents with document ingestion and list-tracking tools can reliably enumerate, compare, and order files within a single episode without significant context loss.",
+      "_timestamp": "2026-04-06T11:22:41"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from organizing or verifying the completeness and order of case files. While courts may have internal policies or confidentiality requirements, these do not constitute a legal ban on AI performing this task.",
+      "_timestamp": "2026-04-06T11:22:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors like missing or misordered documents can cause procedural delays or inconvenience in court processes, but are typically caught and corrected before causing severe or irreversible harm.",
+      "adequacy_evidence": "AI systems can reliably cross-check document presence and ordering against lists or rules, and after standard verification steps, the residual error risk is low and generally acceptable.",
+      "_timestamp": "2026-04-06T11:22:42"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is an internal administrative task ensuring case materials are complete and properly ordered, with no direct interaction requiring stakeholder acceptance of the performer.",
+      "adequacy_evidence": "Because the task is backend and procedural, stakeholders are largely indifferent to who or what performs it, and AI assistance would be readily acceptable if accurate.",
+      "_timestamp": "2026-04-06T11:22:43"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "The task relies on explicit checklists (case dockets, filing requirements, chronological or rule-based ordering), making omissions or misordering straightforward to detect through direct comparison.",
+      "adequacy_evidence": "AI systems may occasionally miss or mis-sequence documents, so a human would still need to cross-check outputs against the docket or filing rules, but this verification is routine and not technically difficult.",
+      "_timestamp": "2026-04-06T11:22:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

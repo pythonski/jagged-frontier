@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2071.00",
+  "task_id": 546,
+  "task_statement": "Prepare statistical reports, narrative reports, or graphic presentations of information, such as tumor registry data for use by hospital staff, researchers, or other users.",
+  "occupation_title": "Medical Records and Health Information Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Preparing statistical, narrative, or graphic reports from registry data is done using computer software (databases, spreadsheets, presentation tools) and does not require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing reports requires some experience-based judgment in selecting relevant metrics, interpreting irregularities in clinical data, and tailoring presentation to different audiences, beyond purely mechanical procedures.",
+      "adequacy_evidence": "Current AI agents can generate statistical summaries and narratives reliably but may lack nuanced calibration for edge cases, clinical context interpretation, or audience-specific emphasis in non-routine situations.",
+      "_timestamp": "2026-04-06T01:28:54"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Report preparation requires tailoring metrics, visualizations, and narrative framing to different audiences (clinicians, researchers), with some implicit expectations about relevance and presentation style.",
+      "adequacy_evidence": "Current agents can usually infer appropriate structures and adapt outputs with prompting, but often miss subtle stakeholder preferences or domain-specific emphasis without iterative human guidance.",
+      "_timestamp": "2026-04-06T01:28:54"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different report types (statistical, narrative, graphical) and varying tumor registry datasets, audiences, and institutional formats, but relies on standardized medical coding and reporting conventions.",
+      "adequacy_evidence": "There is extensive accessible data (e.g., SEER, clinical reporting guidelines, sample reports) and clear documentation of processes, enabling training pipelines to cover the relevant distribution with minimal gaps.",
+      "_timestamp": "2026-04-06T01:28:55"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing statistical and narrative reports involves multiple steps (data extraction, validation, analysis, and presentation) where consistency across stages matters but sequences are not \u0905\u0924\u094d\u092f long or tightly coupled.",
+      "adequacy_evidence": "AI agents can manage multi-step data analysis and report generation workflows, but may show moderate degradation over longer pipelines, such as losing constraints or introducing inconsistencies between analysis and narrative.",
+      "_timestamp": "2026-04-06T01:28:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves aggregating and summarizing multiple patient records, variables, and metrics into coherent reports, requiring active retrieval and compression of structured information within a session.",
+      "adequacy_evidence": "Current agents with tool use can handle structured datasets reasonably well, but may still lose track of intermediate transformations or mis-handle complex filtering and aggregation steps without careful scaffolding.",
+      "_timestamp": "2026-04-06T01:28:55"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing statistical or narrative reports from tumor registry data is typically a batch, offline task with deadlines measured in hours or days rather than real-time responsiveness.",
+      "adequacy_evidence": "Current AI systems can generate high-quality reports well within these relaxed time constraints, with no meaningful degradation due to latency limits.",
+      "_timestamp": "2026-04-06T01:28:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Report preparation often draws on existing tumor registry databases and may benefit from consistent templates or prior reporting conventions, but each report is largely based on current data pulls rather than evolving cross-session context.",
+      "adequacy_evidence": "Current AI systems can reliably access persistent databases, templates, and stored preferences via standard integrations, so cross-session memory needs for this task are well-supported.",
+      "_timestamp": "2026-04-06T01:28:56"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task includes creating graphic presentations (e.g., charts, visual summaries) from structured medical data, requiring some visual output beyond pure text.",
+      "adequacy_evidence": "Current AI agents can reliably generate standard charts, graphs, and visual reports from structured data with high quality, making multimodal demands well within capability.",
+      "_timestamp": "2026-04-06T01:28:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The reports are used by hospital staff and researchers who rely on the information, so there are stakeholders engaging with the output, though the producer\u2019s identity is not central.",
+      "adequacy_evidence": "Stakeholders in medical data contexts already accept software-generated reports if accurate and validated, so AI involvement would face minimal resistance.",
+      "_timestamp": "2026-04-06T01:28:57"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from preparing statistical or narrative reports from health data; tools may be used as long as they comply with HIPAA and data security requirements. These rules govern handling of protected health information, not whether AI can perform the reporting task itself.",
+      "_timestamp": "2026-04-06T01:28:58"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Statistical and narrative reports based on tumor registry data can be checked against source data, coding standards, and known aggregates, but doing so requires domain knowledge and careful review to catch subtle misclassifications or calculation errors.",
+      "adequacy_evidence": "Current AI can generate plausible reports but may introduce errors in data interpretation, aggregation, or medical coding, requiring routine expert validation though not making verification prohibitively difficult.",
+      "_timestamp": "2026-04-06T01:28:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in statistical or narrative reports on tumor registry data can misinform research or operational decisions, but they are typically not directly life-critical and are often caught downstream, making occasional residual errors survivable.",
+      "adequacy_evidence": "Outputs are largely structured and based on underlying datasets, enabling cross-checks and validation; with normal QA processes, AI-generated reports can be verified to a level where residual risk is acceptable.",
+      "_timestamp": "2026-04-06T01:28:58"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

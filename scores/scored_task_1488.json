@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3027.00",
+  "task_id": 1488,
+  "task_statement": "Estimate cost factors including labor and material for purchased and fabricated parts and costs for assembly, testing, or installing.",
+  "occupation_title": "Mechanical Engineering Technologists and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Cost estimation is typically performed using digital tools such as spreadsheets, CAD/BOM data, and supplier quotes, all of which can be handled remotely. However, some cases may require on-site observation of fabrication processes, assembly methods, or prototype parts to estimate costs accurately."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation requires experience-based calibration of labor hours, material waste, shop efficiency, and supplier pricing nuances that are not fully captured in explicit formulas.",
+      "adequacy_evidence": "Current AI can apply cost models and reference data but lacks reliable calibration for local conditions, shop-specific practices, and subtle complexity adjustments in non-routine cases.",
+      "_timestamp": "2026-04-05T21:02:02"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation depends on context such as design specifications, production methods, supplier conditions, and assumptions about labor rates and materials, which are not always fully explicit.",
+      "adequacy_evidence": "Current AI can generate reasonable estimates given structured inputs, but often misses implicit assumptions or project-specific constraints without iterative clarification.",
+      "_timestamp": "2026-04-05T21:02:02"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation spans different materials, manufacturing processes, suppliers, and project contexts, but follows recurring patterns (BOMs, labor rates, standard costing methods) rather than an extremely long-tailed distribution.",
+      "adequacy_evidence": "While general costing methods and examples are well documented, detailed, up-to-date cost data (supplier pricing, proprietary production efficiencies) are often private, leaving some gaps that can only be partially filled via synthesis or approximations.",
+      "_timestamp": "2026-04-05T21:02:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating costs often requires interpreting engineering drawings, CAD models, and physical specifications in addition to text-based bills of materials and process descriptions.",
+      "adequacy_evidence": "Current agents can handle structured text and some simple visual inputs, but remain inconsistent at extracting detailed, precise cost-relevant information from complex technical drawings or CAD data.",
+      "_timestamp": "2026-04-05T21:02:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires combining multiple inputs (BOMs, labor rates, process steps, material specs) and keeping them consistent within a single estimate, but the information is structured and bounded within a project scope.",
+      "adequacy_evidence": "Current agents can reliably manage and organize this level of structured, tabular, and document-based information using tools like spreadsheets and retrieval without significant context loss.",
+      "_timestamp": "2026-04-05T21:02:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating costs involves multiple steps\u2014gathering inputs (materials, labor rates), applying formulas, and aggregating components\u2014where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092fntly long or tightly coupled.",
+      "adequacy_evidence": "LLM-based agents with tools can generally sustain multi-step calculations and aggregation, but may show some drift or small compounding errors over longer estimation chains, especially if inputs are incomplete or require iterative refinement.",
+      "_timestamp": "2026-04-05T21:02:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Cost estimation often benefits from prior project data, historical pricing, and supplier records, but each estimate can be completed using available documentation and databases without deep longitudinal state.",
+      "adequacy_evidence": "Current AI systems with standard database integrations and retrieval can reliably store and access historical cost data and project context, adequately meeting these moderate cross-session memory needs.",
+      "_timestamp": "2026-04-05T21:02:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimates can be cross-checked against bills of materials, supplier quotes, historical data, and standard costing methods, but doing so requires domain expertise and time to validate assumptions and inputs.",
+      "adequacy_evidence": "AI can generate reasonable estimates but often makes assumption or input errors, so human review and comparison to real-world data are still needed to ensure accuracy.",
+      "_timestamp": "2026-04-05T21:02:05"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation errors can lead to budget overruns, pricing mistakes, or reduced profitability, but they are typically correctable and rarely cause immediate safety or irreversible harm.",
+      "adequacy_evidence": "Even after review, AI may miss nuanced cost drivers or context-specific factors, leaving some residual risk that can affect accuracy, though not usually catastrophically.",
+      "_timestamp": "2026-04-05T21:02:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Cost estimation for engineering components and processes is typically performed in planning or quoting contexts where minutes to hours of analysis are acceptable, not real-time decision-making.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to gather inputs, perform calculations, and iterate without meaningful degradation from latency constraints, as tight response times are not required.",
+      "_timestamp": "2026-04-05T21:02:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from estimating cost factors for engineering-related tasks. While human oversight may be required in certain contracting or certification contexts, no rule bars AI from performing this estimation work.",
+      "_timestamp": "2026-04-05T21:02:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimates are used by managers, procurement teams, and clients who rely on the output for decisions, but the estimator\u2019s personal identity is not central as long as results are credible.",
+      "adequacy_evidence": "Organizations already use software and data-driven tools for cost estimation, but full AI autonomy may face some resistance in high-stakes or client-facing bids where human validation is still expected.",
+      "_timestamp": "2026-04-05T21:02:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

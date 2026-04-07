@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2021.00",
+  "task_id": 20208,
+  "task_statement": "Develop or use mathematical or computer models for weather forecasting.",
+  "occupation_title": "Atmospheric and Space Scientists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Developing or using mathematical or computer models for weather forecasting is done entirely through software, coding environments, and digital datasets on computers or remote servers, which can be accessed over the internet without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of weather modeling is grounded in explicit physics and statistical methods, practitioners rely on experience to tune models, interpret outputs, and handle edge cases like anomalous atmospheric conditions.",
+      "adequacy_evidence": "Current AI systems can replicate many modeling and calibration procedures, but they still show gaps in nuanced judgment for atypical or poorly constrained scenarios that experienced scientists handle through tacit understanding.",
+      "_timestamp": "2026-04-06T00:01:17"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Weather forecasting spans highly heterogeneous phenomena across spatial scales (local to global), regimes (tropical, polar, severe storms), and rare extreme events, requiring broad and long-tailed coverage.",
+      "adequacy_evidence": "There is extensive observational, reanalysis, and simulation data plus detailed methodological literature, but rare edge cases (e.g., extreme events, novel climate regimes) remain relatively sparse and only partially recoverable via simulation or synthesis.",
+      "_timestamp": "2026-04-06T00:01:17"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While core goals like improving forecast accuracy and reliability are explicit, important criteria (e.g., spatial/temporal resolution, computational constraints, stakeholder needs) are often context-dependent and require interpretation.",
+      "adequacy_evidence": "Current agents can follow well-specified modeling objectives but often miss implicit priorities or tradeoffs (e.g., operational constraints vs. accuracy), requiring human guidance to fully align with real-world forecasting needs.",
+      "_timestamp": "2026-04-06T00:01:17"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Weather modeling involves multi-step workflows (data ingestion, preprocessing, model configuration, simulation runs, validation), but these are typically modular and can be checkpointed rather than requiring a single tightly coupled continuous sequence.",
+      "adequacy_evidence": "AI agents can handle multi-step pipelines with tooling, but over longer workflows they still show some degradation such as configuration drift, missed constraints, or errors propagating across steps, especially in complex model tuning or iterative runs.",
+      "_timestamp": "2026-04-06T00:01:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Weather modeling involves managing large, heterogeneous datasets (observational data, model parameters, boundary conditions) and tracking evolving simulation states, where missing or mismanaging details can materially affect forecasts.",
+      "adequacy_evidence": "Agents can offload much of this burden to external tools (code execution, data pipelines), but still show limitations in reliably tracking complex state and intermediate assumptions across long workflows.",
+      "_timestamp": "2026-04-06T00:01:19"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Weather forecasting models involve complex numerical methods and chaotic systems where errors may only appear after long simulation runs or in edge-case conditions, requiring expert validation, benchmarking, and real-world comparison.",
+      "adequacy_evidence": "Current AI systems can generate or modify models and code but frequently introduce subtle methodological or implementation errors that are hard to detect without extensive domain-specific testing and validation workflows.",
+      "_timestamp": "2026-04-06T00:01:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Weather forecasting models are typically developed and run in scheduled cycles on HPC systems, where minutes to hours of computation time are acceptable for accurate outputs.",
+      "adequacy_evidence": "AI systems can take sufficient time for extended reasoning and tool use without violating latency expectations, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T00:01:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Weather forecasting relies heavily on spatial-temporal data such as satellite imagery, radar maps, and multidimensional numerical grids, requiring integration of visual and numeric modalities beyond text.",
+      "adequacy_evidence": "Current agents can process structured numerical data and some imagery with tools, but struggle with fully reliable, fine-grained interpretation of complex geospatial and atmospheric visual data at expert level.",
+      "_timestamp": "2026-04-06T00:01:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from developing or using mathematical or computer models for weather forecasting. This activity is widely performed using automated and AI-driven systems in both public and private sectors without licensing constraints specific to AI.",
+      "_timestamp": "2026-04-06T00:01:20"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Weather modeling work benefits from retaining prior model configurations, calibration results, and historical performance data, but much of this is externalized in datasets, code repositories, and documented workflows rather than relying on human memory.",
+      "adequacy_evidence": "Current AI agents can integrate with databases, version control, and retrieval systems to access prior runs and model context, so cross-session state can be effectively maintained with existing tooling.",
+      "_timestamp": "2026-04-06T00:01:20"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces models used by other scientists, agencies, or forecasters, so stakeholders rely on the output, but direct interaction with or concern about the model developer\u2019s identity is limited.",
+      "adequacy_evidence": "Numerical weather prediction and modeling are already heavily automated, and stakeholders generally accept machine-generated outputs as long as they are accurate, with little concern about AI involvement.",
+      "_timestamp": "2026-04-06T00:01:20"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Weather forecasting tolerates some residual error because uncertainty is inherent and forecasts are probabilistic, but mistakes (e.g., missed severe events) can still have meaningful societal and economic consequences.",
+      "adequacy_evidence": "Even after standard validation and ensemble checks, AI-based models can exhibit unpredictable errors or miss rare extreme events, leaving a non-trivial but not prohibitive residual risk.",
+      "_timestamp": "2026-04-06T00:01:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

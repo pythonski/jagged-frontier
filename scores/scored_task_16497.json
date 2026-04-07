@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2199.06",
+  "task_id": 16497,
+  "task_statement": "Investigate characteristics such as cost, performance, or process capability of potential microelectromechanical systems (MEMS) device designs, using simulation or modeling software.",
+  "occupation_title": "Microsystems Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "The task explicitly involves investigating MEMS design characteristics using simulation or modeling software, which can be performed entirely on a computer. No physical presence or specialized non-computer equipment is required."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "MEMS design spans diverse devices (sensors, actuators, RF components), materials, fabrication processes, and multi-physics regimes, creating a highly heterogeneous and long-tailed instance distribution.",
+      "adequacy_evidence": "While academic literature, simulation tools, and physics-based synthetic data provide substantial coverage, detailed industrial process data and edge-case performance behaviors are often proprietary or sparsely documented, leaving some gaps.",
+      "_timestamp": "2026-04-06T00:02:24"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate models, setting boundary conditions, and interpreting simulation outputs for MEMS devices often requires experiential judgment about physical non-idealities, fabrication constraints, and trade-offs not fully captured in formal rules.",
+      "adequacy_evidence": "Current AI agents can follow documented simulation workflows and analyze outputs, but they show gaps in nuanced calibration for edge cases, model validity limits, and context-specific trade-offs that experienced engineers handle more reliably.",
+      "_timestamp": "2026-04-06T00:02:24"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While core evaluation dimensions like cost, performance, and process capability are typically defined, the relative importance, modeling assumptions, and acceptable tradeoffs are often context-dependent and require engineering judgment.",
+      "adequacy_evidence": "Current agents can follow specified evaluation criteria but often miss implicit priorities or select suboptimal modeling approaches without iterative human guidance to clarify goals and constraints.",
+      "_timestamp": "2026-04-06T00:02:24"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (defining models, setting parameters, running simulations, analyzing outputs, iterating designs), where consistency across steps matters but sequences are typically modular rather than tightly coupled end-to-end.",
+      "adequacy_evidence": "Frontier AI agents can manage multi-step simulation workflows with tools, but show some degradation over longer iterative cycles, such as losing track of constraints or suboptimal parameter adjustments.",
+      "_timestamp": "2026-04-06T00:02:25"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "MEMS design investigations often build on prior simulation results, design iterations, and accumulated project knowledge, but many analyses can still be conducted as relatively self-contained studies with documented inputs.",
+      "adequacy_evidence": "Current agents can store and retrieve prior simulation data and project context via external memory systems, but they still show gaps in reliably maintaining and surfacing nuanced design history and evolving assumptions across sessions.",
+      "_timestamp": "2026-04-06T00:02:25"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Investigating MEMS designs relies heavily on interpreting and generating geometric layouts, simulation visualizations (e.g., stress/thermal maps), and spatial models, where visual-spatial reasoning is central and text alone is insufficient.",
+      "adequacy_evidence": "Current agents can interface with simulation tools and interpret standard plots or CAD outputs, but struggle with nuanced spatial reasoning, complex geometries, and reliably integrating multimodal simulation feedback across iterations.",
+      "_timestamp": "2026-04-06T00:02:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking numerous interdependent variables (geometry, materials, boundary conditions, performance metrics) and iterating through simulation outputs, where missing or misremembering a parameter can invalidate conclusions.",
+      "adequacy_evidence": "Agents can use tools and external memory to manage simulation data, but they still show drift or omission when handling many coupled parameters and iterative results within a single session.",
+      "_timestamp": "2026-04-06T00:02:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "MEMS device simulation outputs depend on complex multiphysics models, boundary conditions, and fabrication assumptions; errors can be subtle and require expert validation, cross-checking, or physical prototyping to detect.",
+      "adequacy_evidence": "Current AI systems can mis-specify models, parameters, or assumptions in ways that produce plausible but incorrect results, and detecting these issues requires significant domain expertise and careful review of simulation setup and outputs.",
+      "_timestamp": "2026-04-06T00:02:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "MEMS design investigation via simulation or modeling is typically an offline engineering activity where runs can take minutes to hours and iterative analysis is expected; there is no need for rapid, real-time responses.",
+      "adequacy_evidence": "AI agents can take sufficient time to perform extended reasoning, run simulations, and iterate without meaningful degradation from latency constraints, since turnaround expectations are already long.",
+      "_timestamp": "2026-04-06T00:02:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces technical analyses that are used by engineering teams or decision-makers, so others rely on the output, but interaction is limited and not identity-sensitive.",
+      "adequacy_evidence": "Engineering stakeholders already accept simulation software and automated tools; AI-generated analyses would generally be accepted if accurate, with little concern about performer identity.",
+      "_timestamp": "2026-04-06T00:02:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from performing simulation or modeling of MEMS device designs; such activities are generally unregulated from an automation standpoint. While export controls or IP/security rules may apply to specific technologies, they do not restrict AI use itself.",
+      "_timestamp": "2026-04-06T00:02:28"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in MEMS simulation or modeling can propagate into flawed device designs, leading to costly fabrication failures or performance shortfalls, so even small residual mistakes can have significant downstream consequences.",
+      "adequacy_evidence": "With standard validation (peer review, cross-checking models, comparing to known benchmarks), many AI errors can be caught, but subtle mis-specifications or incorrect assumptions may still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T00:02:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

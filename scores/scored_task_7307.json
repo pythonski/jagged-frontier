@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2051.00",
+  "task_id": 7307,
+  "task_statement": "Recommend investments and investment timing to companies, investment firm staff, or the public.",
+  "occupation_title": "Financial and Investment Analysts",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Investment recommendations are typically delivered through digital analysis, reports, emails, or virtual meetings, but some instances involve in-person client meetings, presentations, or conferences."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Investment recommendations depend heavily on implicit client goals (risk tolerance, time horizon, liquidity needs, strategic priorities) that are often only partially specified and must be inferred and refined through interaction.",
+      "adequacy_evidence": "Current agents can elicit and model many of these factors via structured prompts and iteration, but they still frequently miss nuanced preferences or shifting stakeholder priorities, requiring human clarification.",
+      "_timestamp": "2026-04-06T00:24:01"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Investment recommendations span diverse asset classes, market regimes, client objectives, and time horizons, with highly context-sensitive and long-tailed scenarios.",
+      "adequacy_evidence": "There is abundant public data (market data, research reports, historical trades, simulations) and some process-level signal, but key areas like proprietary datasets, real-time market microstructure, and nuanced expert deliberation remain partially inaccessible.",
+      "_timestamp": "2026-04-06T00:24:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Investment recommendations involve multi-step workflows (data gathering, modeling, risk assessment, timing analysis), but these steps are modular and can often be decomposed rather than requiring tightly coupled long sequences.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across these analytical steps with tooling, but some degradation occurs in longer chains (e.g., consistency of assumptions or tracking evolving constraints), especially without careful orchestration.",
+      "_timestamp": "2026-04-06T00:24:01"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Effective investment recommendations rely heavily on experience-based judgment about market regimes, risk tolerance, behavioral factors, and timing under uncertainty, which are not fully captured by explicit rules or static data.",
+      "adequacy_evidence": "Current AI agents can analyze data and patterns but lack robust real-world calibration for shifting market conditions, nuanced client contexts, and timing decisions, leading to systematic gaps in high-stakes, non-routine cases.",
+      "_timestamp": "2026-04-06T00:24:02"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires synthesizing large volumes of heterogeneous information within a single analysis episode, including financial statements, market data, macroeconomic indicators, and client-specific constraints, where missing or misweighting details can materially affect recommendations.",
+      "adequacy_evidence": "Frontier agents with retrieval and tool use can handle multi-source financial analysis, but still exhibit context loss, imperfect prioritization, and occasional drift in summarizing complex, evolving inputs.",
+      "_timestamp": "2026-04-06T00:24:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Investment recommendations rely heavily on persistent knowledge of client portfolios, past advice, risk tolerance, market positions, and evolving financial goals over time.",
+      "adequacy_evidence": "Current agents can store and retrieve client data via external memory systems, but they show inconsistencies in maintaining updated, coherent longitudinal views and integrating evolving context across sessions.",
+      "_timestamp": "2026-04-06T00:24:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily based on analyzing numerical and textual financial data (e.g., reports, market data, forecasts), with outputs typically delivered in text or tables; visualizations are helpful but not essential.",
+      "adequacy_evidence": "Current AI systems can adequately process and generate the necessary text and structured data, and can also handle optional visualizations like charts when needed without significant limitation.",
+      "_timestamp": "2026-04-06T00:24:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Investment recommendations often respond to market conditions and client requests within minutes to hours, but rarely require split-second decisions outside of high-frequency trading contexts.",
+      "adequacy_evidence": "Current AI systems can generate high-quality analyses well within these timeframes, and extended reasoning can usually be accommodated without violating practical latency expectations.",
+      "_timestamp": "2026-04-06T00:24:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Investment recommendations can lead to substantial financial losses, legal liability, and reputational damage; even rare errors can have large, irreversible consequences.",
+      "adequacy_evidence": "With human oversight, backtesting, and compliance checks, many errors can be caught, but AI systems still exhibit judgment gaps and occasional spurious reasoning that leave non-trivial residual risk.",
+      "_timestamp": "2026-04-06T00:24:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Investment recommendations are directly consumed by clients and decision-makers, where trust, credibility, and perceived expertise of the advisor strongly influence whether advice is followed.",
+      "adequacy_evidence": "While AI-driven robo-advisors are accepted in retail contexts, many institutional clients and professionals still prefer human judgment for high-stakes decisions, leading to partial but not overwhelming resistance.",
+      "_timestamp": "2026-04-06T00:24:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Providing investment advice is regulated under SEC and state laws, requiring registration as an investment adviser or broker-dealer and adherence to fiduciary and disclosure rules. AI systems can be used (e.g., robo-advisors), but must operate under a licensed entity with human accountability, so there is no outright prohibition but clear regulatory constraints.",
+      "_timestamp": "2026-04-06T00:24:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing the quality of investment recommendations requires deep financial expertise, modeling assumptions scrutiny, and often long time horizons before outcomes reveal errors, making mistakes subtle and hard to detect ex ante.",
+      "adequacy_evidence": "Current AI systems can produce plausible but error-prone financial analyses and recommendations, and verifying them requires expert review of assumptions, data, and market context, creating a substantial and unavoidable checking burden.",
+      "_timestamp": "2026-04-06T00:24:05"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

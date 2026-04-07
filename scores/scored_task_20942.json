@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.04",
+  "task_id": 20942,
+  "task_statement": "Determine appropriate equipment and staffing levels to load, unload, move, or store materials.",
+  "occupation_title": "Supply Chain Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Determining equipment and staffing levels is typically done through data analysis, planning software, and communication tools, which can be handled remotely. However, some cases involve on-site observation of warehouse operations or equipment capabilities to make accurate decisions."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many aspects can be guided by explicit models (throughput calculations, standard operating procedures), effective decisions often rely on experience with local conditions like workforce reliability, equipment quirks, and variability in demand or congestion.",
+      "adequacy_evidence": "Current AI agents can apply optimization frameworks and historical data but lack grounded, experience-based calibration for site-specific nuances and edge cases, leading to gaps in non-routine or highly context-sensitive situations.",
+      "_timestamp": "2026-04-06T03:42:35"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous contexts (e.g., warehouses, ports, manufacturing, retail DCs) with varying demand patterns, layouts, equipment types, labor constraints, and safety/regulatory conditions, creating a long-tailed distribution of scenarios.",
+      "adequacy_evidence": "There is substantial coverage via operations research literature, logistics datasets, simulations, and synthetic environments, but much high-fidelity operational data (e.g., firm-specific workflows, real-time disruptions, labor dynamics) is proprietary or thin, leaving some subpopulations underrepresented.",
+      "_timestamp": "2026-04-06T03:42:36"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step planning (forecasting demand, matching equipment capacity, staffing constraints, and operational timing), where steps are interdependent but not extremely long or tightly coupled.",
+      "adequacy_evidence": "Current AI agents can handle structured planning workflows but may show some degradation over multi-step operational scenarios, such as missing constraints or minor inconsistencies across steps.",
+      "_timestamp": "2026-04-06T03:42:36"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves balancing cost, throughput, safety, service levels, and facility constraints, many of which are context-dependent and not fully specified upfront, requiring interpretation of operational priorities.",
+      "adequacy_evidence": "Current agents can optimize based on provided data and explicit objectives but often miss tacit factors like informal practices, shifting priorities, or nuanced safety and labor considerations, requiring human adjustment.",
+      "_timestamp": "2026-04-06T03:42:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining equipment and staffing levels often relies on historical demand patterns, prior operational performance, and accumulated knowledge of workflows and constraints, but each planning cycle can still be executed with refreshed data inputs.",
+      "adequacy_evidence": "Current agents can persist and query historical operational data via databases and integrations, but may inconsistently maintain or surface evolving contextual nuances (e.g., informal practices, shifting constraints) across sessions without careful system design.",
+      "_timestamp": "2026-04-06T03:42:37"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple inputs (material volumes, throughput targets, equipment specs, labor availability, and facility constraints) within a planning episode, but these can be structured and summarized without overwhelming scale.",
+      "adequacy_evidence": "Current agents can manage this using tools like tables and optimization scripts, but may occasionally lose or misweight constraints when juggling multiple variables or compressed summaries.",
+      "_timestamp": "2026-04-06T03:42:37"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often benefits from spatial understanding of warehouse layouts, equipment footprints, and material flow (e.g., floor plans, sensor data), though much can be represented in structured or textual form.",
+      "adequacy_evidence": "Current agents can handle tabular and simplified layout representations well, but are less reliable when interpreting complex real-world visual inputs like dynamic floor operations or nuanced spatial constraints.",
+      "_timestamp": "2026-04-06T03:42:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Determining equipment and staffing levels is typically a planning and coordination task where minutes to hours are acceptable, though some operational contexts may require reasonably prompt adjustments.",
+      "adequacy_evidence": "Current AI agents can generate high-quality staffing and equipment recommendations well within these timeframes, with little need to truncate reasoning due to latency constraints.",
+      "_timestamp": "2026-04-06T03:42:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing appropriate equipment and staffing levels requires modeling demand, throughput, and constraints; errors may only become evident during operations or through detailed analysis, requiring domain expertise and time to verify.",
+      "adequacy_evidence": "AI can generate plausible plans but may misestimate constraints or variability, so human review, scenario testing, and validation against historical data are still needed to catch non-obvious errors.",
+      "_timestamp": "2026-04-06T03:42:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating with internal stakeholders like warehouse staff and operations leadership who rely on and may question staffing and equipment decisions, but it does not require strong personal trust or authority signaling.",
+      "adequacy_evidence": "AI-generated planning recommendations are increasingly accepted in logistics, but some managers and frontline staff may still be cautious or prefer human oversight, especially for workforce-related decisions.",
+      "_timestamp": "2026-04-06T03:42:39"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect staffing or equipment levels can cause delays, higher costs, or operational inefficiencies, but most errors are recoverable and rarely lead to irreversible harm after standard oversight.",
+      "adequacy_evidence": "With simulation tools, historical data checks, and managerial review, AI-generated plans can be validated sufficiently such that remaining errors are typically tolerable in practice.",
+      "_timestamp": "2026-04-06T03:42:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from determining equipment and staffing levels in supply chain operations. While safety and labor regulations apply to outcomes, they do not mandate a human decision-maker for this planning task.",
+      "_timestamp": "2026-04-06T03:42:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

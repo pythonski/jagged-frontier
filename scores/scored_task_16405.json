@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2141.01",
+  "task_id": 16405,
+  "task_statement": "Simulate or model fuel cell, motor, or other system information, using simulation software programs.",
+  "occupation_title": "Fuel Cell Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Running simulations or models with specialized software is performed entirely on a computer using digital system data and tools, with no inherent need for physical presence or equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Simulation tasks depend on implicit choices about model fidelity, boundary conditions, assumptions, and performance metrics that are often context-specific and not fully specified upfront.",
+      "adequacy_evidence": "Current agents can propose reasonable modeling setups when guided, but often miss nuanced engineering intent or require iterative clarification to align assumptions and success criteria with real project goals.",
+      "_timestamp": "2026-04-06T01:51:58"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While simulation software and governing physics are well-documented, effective modeling often requires experience-based choices about parameter tuning, boundary conditions, and interpreting discrepancies between model and real-world behavior.",
+      "adequacy_evidence": "Current AI agents can run simulations and follow documented procedures, but they show gaps in nuanced calibration and in diagnosing subtle model mismatches that experienced engineers handle through tacit judgment.",
+      "_timestamp": "2026-04-06T01:51:58"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different fuel cell types, operating conditions, system configurations, and degradation scenarios, but is still grounded in well-defined physical models and engineering workflows.",
+      "adequacy_evidence": "There is extensive public literature, simulation documentation, and codebases covering core modeling approaches, though some proprietary industrial data and edge-case operating regimes are less accessible.",
+      "_timestamp": "2026-04-06T01:51:59"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Building and running fuel cell or motor simulations involves multi-step workflows: defining system parameters, configuring models, running solvers, analyzing outputs, and iteratively refining assumptions, where early choices affect downstream results.",
+      "adequacy_evidence": "Frontier AI agents can execute multi-step simulation pipelines with tools, but over longer iterative cycles they can lose track of constraints or introduce inconsistencies, especially during repeated debugging and refinement loops.",
+      "_timestamp": "2026-04-06T01:52:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Fuel cell and motor simulations involve managing many parameters (materials, geometries, boundary conditions), intermediate results, and iterative adjustments, where missing or misapplying a variable can invalidate outcomes.",
+      "adequacy_evidence": "Agents can offload state to code, files, and structured tools, but still show occasional context loss or misalignment between model setup and results across iterative runs.",
+      "_timestamp": "2026-04-06T01:52:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Engineering simulations of fuel cells or motors are typically offline analyses where runs can take minutes to hours, and tight real-time response is not required.",
+      "adequacy_evidence": "AI agents can take sufficient time to plan, configure, and interpret simulations without meaningful quality loss, as latency is not a binding constraint.",
+      "_timestamp": "2026-04-06T01:52:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves interpreting and generating visual outputs such as plots, graphs, and schematic representations from simulation software, but core reasoning is largely numerical and symbolic.",
+      "adequacy_evidence": "Current AI agents with tool use can reliably generate, interpret, and manipulate standard engineering plots and simulation outputs, with minimal degradation in performance.",
+      "_timestamp": "2026-04-06T01:52:00"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Simulation work is often iterative across sessions, requiring reuse of prior models, parameters, validation results, and project-specific assumptions, but much of this is stored in files rather than relying on implicit memory.",
+      "adequacy_evidence": "Agents can leverage external storage, version control, and retrieval systems to persist and recall prior simulations, but may inconsistently surface relevant past context or maintain continuity without careful scaffolding.",
+      "_timestamp": "2026-04-06T01:52:00"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Simulation outputs depend heavily on correct assumptions, parameters, and boundary conditions; errors can be subtle and require expert validation against physical principles, benchmarks, or experimental data.",
+      "adequacy_evidence": "AI-generated models are prone to incorrect parameterization, simplifying assumptions, or misapplied physics, and these issues are not easily detectable without extensive expert review and validation workflows.",
+      "_timestamp": "2026-04-06T01:52:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from performing simulation or modeling of fuel cell or motor systems. While licensed engineers may be required to review or sign off on results in certain contexts, the act of running simulations itself is not legally restricted.",
+      "_timestamp": "2026-04-06T01:52:02"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Simulation outputs inform engineering decisions affecting system safety, efficiency, and regulatory compliance; even small undetected errors can propagate into costly design flaws or hazardous performance issues.",
+      "adequacy_evidence": "While AI can assist with setup and analysis, risks like incorrect model assumptions or boundary conditions may persist after checks, leaving some non-trivial residual risk despite validation workflows.",
+      "_timestamp": "2026-04-06T01:52:02"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Running simulations of fuel cell or motor systems is primarily a technical, internal task where outputs are evaluated on accuracy and usefulness, not on who or what produced them.",
+      "adequacy_evidence": "Stakeholders in engineering contexts already accept software-generated simulations; extending this to AI-driven agents does not meaningfully change acceptance dynamics.",
+      "_timestamp": "2026-04-06T01:52:02"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1231.00",
+  "task_id": 18989,
+  "task_statement": "Analyze network data to determine network usage, disk space availability, or server function.",
+  "occupation_title": "Computer Network Support Specialists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Analyzing network usage, disk space, or server performance is typically done through monitoring tools, logs, and dashboards on a computer, which can be accessed remotely. The task involves interpreting digital data rather than interacting with physical hardware."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different network architectures, monitoring tools, and log formats, but follows broadly similar patterns of traffic analysis, resource monitoring, and anomaly detection.",
+      "adequacy_evidence": "Extensive real-world logs, monitoring datasets, and simulation environments exist, and synthetic generation can cover edge cases, providing strong process-level training signal across the task distribution.",
+      "_timestamp": "2026-04-06T04:36:04"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting network metrics and logs often requires experience-based pattern recognition (e.g., distinguishing normal vs. anomalous traffic or diagnosing subtle performance issues) that goes beyond fixed rules.",
+      "adequacy_evidence": "Current AI agents can handle standard log analysis and known patterns well, but they still struggle with nuanced, context-specific anomalies and environment-specific baselining that human experience captures.",
+      "_timestamp": "2026-04-06T04:36:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting network metrics in context (e.g., what counts as abnormal usage or critical disk space), which often depends on organizational norms, system baselines, and intended server roles.",
+      "adequacy_evidence": "Current agents can analyze logs and infer general patterns, but they often miss organization-specific thresholds, implicit priorities, or evolving operational goals without iterative human guidance.",
+      "_timestamp": "2026-04-06T04:36:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis such as collecting logs, querying metrics, correlating signals, and interpreting results, but sequences are typically bounded and modular rather than deeply interdependent.",
+      "adequacy_evidence": "Current AI agents can sustain coherent performance across these moderate analysis pipelines with tooling, though some degradation (e.g., missed correlations or drift in multi-step reasoning) can occur in longer or more complex cases.",
+      "_timestamp": "2026-04-06T04:36:06"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves interpreting textual logs, command outputs, and structured numerical metrics; while dashboards may include graphs, these are not essential to competent performance.",
+      "adequacy_evidence": "Current AI agents can effectively process and analyze textual and structured network data, and any occasional visual elements (e.g., simple charts) are well within existing multimodal capabilities.",
+      "_timestamp": "2026-04-06T04:36:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Network analysis often needs timely responses (seconds to a few minutes) for troubleshooting or monitoring, but not strict real-time constraints in most cases.",
+      "adequacy_evidence": "Well-tooled AI agents can process logs and metrics quickly within these time bounds without needing prolonged reasoning, so speed constraints rarely degrade output quality.",
+      "_timestamp": "2026-04-06T04:36:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily an internal technical analysis of system metrics, with outputs consumed impersonally by IT processes or teams rather than requiring stakeholder interaction with the performer.",
+      "adequacy_evidence": "Organizations already widely accept automated monitoring and analysis tools in this domain, and performer identity (human vs AI) is largely irrelevant to task effectiveness.",
+      "_timestamp": "2026-04-06T04:36:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the US that prohibit AI systems from analyzing network data for usage, storage, or server function. While data protection and cybersecurity regulations apply, they govern handling of data rather than restricting AI from performing the analysis itself.",
+      "_timestamp": "2026-04-06T04:36:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often benefits from historical baselines, prior incident patterns, and evolving network configurations, but many analyses can be performed using current logs and monitoring data alone.",
+      "adequacy_evidence": "Current AI agents can reliably integrate with logging systems, monitoring tools, and databases to retrieve cross-session network history, so persistent memory is well-supported through existing infrastructure.",
+      "_timestamp": "2026-04-06T04:36:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Analysis outputs (e.g., usage patterns, capacity issues, server roles) can be cross-checked against logs, monitoring dashboards, and known baselines, but doing so requires technical expertise and time to interpret metrics correctly.",
+      "adequacy_evidence": "Current AI can generate plausible analyses but may misinterpret signals or miss edge cases, so human verification using monitoring tools and domain knowledge remains necessary but not prohibitively difficult.",
+      "_timestamp": "2026-04-06T04:36:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in interpreting network metrics can lead to performance issues or missed capacity problems, but these are typically detectable and correctable before causing severe or irreversible harm.",
+      "adequacy_evidence": "With existing monitoring tools, alerts, and cross-checks, AI-generated analyses can be validated effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T04:36:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves synthesizing data from logs, monitoring tools, and system metrics, requiring some active retrieval and summarization but typically supported by structured tools and dashboards.",
+      "adequacy_evidence": "Current agents with tool integration (e.g., querying logs, aggregating metrics) can reliably manage and compress this information within an episode without significant loss or drift.",
+      "_timestamp": "2026-04-06T04:36:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

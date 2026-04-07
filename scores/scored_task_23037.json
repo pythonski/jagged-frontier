@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "33-3021.00",
+  "task_id": 23037,
+  "task_statement": "Identify case issues and evidence needed, based on analysis of charges, complaints, or allegations of law violations.",
+  "occupation_title": "Detectives and Criminal Investigators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Identifying case issues and required evidence is largely an analytical task based on reviewing complaints, charges, and reports, which are often handled digitally. However, some instances involve in-person briefings or examination of physical evidence or files."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting charges and allegations requires inferring legally relevant issues, prioritizing investigative angles, and determining what evidence would substantiate or refute claims, all of which depend heavily on context, jurisdiction, and evolving case dynamics.",
+      "adequacy_evidence": "Agents can extract explicit elements and suggest plausible evidence types, but they often miss nuanced investigative priorities or misinterpret implicit legal significance without iterative human guidance.",
+      "_timestamp": "2026-04-05T23:22:34"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Criminal investigations span a highly heterogeneous, long-tailed set of offenses, fact patterns, jurisdictions, and evidentiary contexts, requiring broad coverage of diverse case types and evolving legal standards.",
+      "adequacy_evidence": "While there is substantial data in case law, legal documents, and investigative manuals, much real-world investigative reasoning and evidence selection occurs in non-public records, limiting full coverage but still partially recoverable through synthesis and training.",
+      "_timestamp": "2026-04-05T23:22:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves analyzing legal documents, mapping allegations to statutory elements, and systematically identifying corresponding evidence needs, requiring a multi-step but bounded reasoning process.",
+      "adequacy_evidence": "LLM agents can generally sustain coherence across these analytical steps but may exhibit some drift or omit constraints in longer or more complex cases, leading to moderate degradation.",
+      "_timestamp": "2026-04-05T23:22:34"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining relevant issues and evidence in criminal investigations relies heavily on experiential judgment about case patterns, credibility, investigative strategy, and legal nuance that are not fully codified in rules.",
+      "adequacy_evidence": "LLM-based agents can map charges to typical evidentiary requirements, but often lack the nuanced, experience-driven prioritization and contextual calibration needed for complex or ambiguous cases.",
+      "_timestamp": "2026-04-05T23:22:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing charges and identifying relevant issues and evidence is typically deliberative work done over minutes to hours, not under tight real-time constraints.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to perform extended reasoning and document analysis, so speed limits do not materially degrade output quality.",
+      "_timestamp": "2026-04-05T23:22:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Investigators must synthesize large volumes of heterogeneous information (reports, witness statements, legal statutes, timelines, physical evidence) within a single case, where missing or misweighting details can materially affect issue identification and evidence needs.",
+      "adequacy_evidence": "Current agents with retrieval and summarization tools can handle sizable document sets, but still show weaknesses in maintaining precise cross-document linkages and avoiding loss or distortion of key details in complex, evolving case contexts.",
+      "_timestamp": "2026-04-05T23:22:35"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves analyzing written charges, complaints, and legal allegations, which are text-based sources; multimodal inputs are not inherently required to identify issues or needed evidence.",
+      "adequacy_evidence": "Since the task is fundamentally text-driven, current AI systems handle the modality requirements adequately with no meaningful shortfall.",
+      "_timestamp": "2026-04-05T23:22:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While initial issue-spotting can be done from current charges and complaints, investigators often rely on accumulated case history, prior interviews, and evolving evidence across sessions to refine what evidence is needed.",
+      "adequacy_evidence": "Agents can use external memory systems (databases, retrieval) to store and recall case context, but they still show gaps in consistently surfacing the most relevant prior details and maintaining coherent long-term case state.",
+      "_timestamp": "2026-04-05T23:22:36"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether all relevant legal issues and necessary evidence have been correctly identified requires deep investigative and legal expertise; omissions or misprioritizations can be subtle and may only surface later in the case.",
+      "adequacy_evidence": "Current AI systems frequently miss nuanced legal issues, misinterpret fact patterns, or suggest irrelevant evidence, and these errors are difficult to detect without expert review, making thorough verification necessary.",
+      "_timestamp": "2026-04-05T23:22:37"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations that prohibit AI systems from assisting with or performing analytical tasks like identifying case issues and evidence. While law enforcement activities are governed by policies and evidentiary rules, these do not ban the use of AI for investigative analysis.",
+      "_timestamp": "2026-04-05T23:22:37"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task feeds into decisions by prosecutors, supervisors, and courts, so others rely on the output, but it is primarily internal analytical work where performer identity is not central to immediate interaction.",
+      "adequacy_evidence": "Legal and law enforcement stakeholders may be cautious about relying on AI-generated investigative judgments, especially regarding evidentiary strategy, leading to partial resistance even if outputs are high quality.",
+      "_timestamp": "2026-04-05T23:22:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Missing or misidentifying key legal issues or required evidence can lead to failed prosecutions, wrongful actions, or overlooked crimes, with significant downstream consequences even if errors are rare.",
+      "adequacy_evidence": "Even with review by investigators or prosecutors, AI may omit subtle but critical lines of inquiry or suggest irrelevant evidence, leaving a non-trivial residual risk that is problematic but usually catchable.",
+      "_timestamp": "2026-04-05T23:22:38"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

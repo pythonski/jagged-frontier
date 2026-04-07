@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-1021.00",
+  "task_id": 3515,
+  "task_statement": "Collect information about specific features of the Earth, using aerial photography and other digital remote sensing techniques.",
+  "occupation_title": "Cartographers and Photogrammetrists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Cartographers and photogrammetrists often collect information by analyzing satellite or aerial imagery and remote sensing datasets on a computer. However, some instances involve operating or coordinating drones, aircraft, or field calibration activities that require physical equipment and presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous conditions including diverse terrains, climates, sensor types (e.g., multispectral, LiDAR, SAR), resolutions, and edge cases like rare environmental events or degraded imagery.",
+      "adequacy_evidence": "Large-scale public and commercial remote sensing datasets provide substantial coverage with labeled examples and workflows, but gaps remain in rare conditions, proprietary high-resolution data, and certain specialized sensor modalities.",
+      "_timestamp": "2026-04-06T05:47:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While data collection uses established remote sensing methods, key choices (which features, classification criteria, spatial resolution, and preprocessing steps) depend on project goals and often require contextual interpretation.",
+      "adequacy_evidence": "Current AI agents can follow explicit specifications and infer common goals, but they often misalign with implicit feature definitions or stakeholder expectations without iterative human guidance.",
+      "_timestamp": "2026-04-06T05:47:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (data acquisition, preprocessing, georeferencing, feature extraction, and validation), where outputs from earlier steps affect later ones but are often modular and partially separable.",
+      "adequacy_evidence": "Current AI agents can handle such pipelines with tool support, but may show some degradation over longer sequences, such as error propagation or missed constraints across stages.",
+      "_timestamp": "2026-04-06T05:47:05"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting remote sensing imagery often requires experience-based judgment to distinguish subtle land features, correct for sensor artifacts, and account for environmental context not fully captured in explicit rules.",
+      "adequacy_evidence": "Current AI systems perform well on standard imagery interpretation but still show gaps in nuanced, context-sensitive cases (e.g., rare terrain patterns or ambiguous signals), indicating partial but incomplete coverage of this tacit judgment.",
+      "_timestamp": "2026-04-06T05:47:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task is fundamentally based on interpreting aerial imagery and other remote sensing data (e.g., satellite, LiDAR), requiring rich visual and spatial analysis that cannot be reduced to text alone.",
+      "adequacy_evidence": "Current AI systems perform well on many remote sensing and image analysis tasks but still struggle with high-precision photogrammetry, subtle feature extraction, and complex spatial reasoning in varied real-world conditions.",
+      "_timestamp": "2026-04-06T05:47:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires handling large volumes of heterogeneous geospatial data (imagery layers, sensor metadata, coordinates, projections) and integrating them coherently within a single workflow, where missing details can affect accuracy.",
+      "adequacy_evidence": "Current agents with tools can manage and retrieve such data but may struggle with consistent tracking of complex transformations and maintaining fidelity across large, multi-layered datasets.",
+      "_timestamp": "2026-04-06T05:47:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Work often involves revisiting geographic areas over time, comparing datasets, and maintaining project context (e.g., prior imagery, calibration choices), but many collection tasks can also be executed as discrete projects.",
+      "adequacy_evidence": "Current AI systems with standard data storage, retrieval, and indexing can reliably maintain and access cross-session geospatial datasets and project metadata, so longitudinal memory needs are well supported.",
+      "_timestamp": "2026-04-06T05:47:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Remote sensing analysis and feature extraction from aerial imagery are typically conducted in offline workflows where minutes to hours (or longer) are acceptable, rather than requiring real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform image analysis and geospatial feature extraction well within these relaxed time constraints without needing to sacrifice reasoning depth for speed.",
+      "_timestamp": "2026-04-06T05:47:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily technical data acquisition using sensors and imagery, with outputs consumed impersonally by downstream analysts or systems rather than requiring stakeholder interaction with the performer.",
+      "adequacy_evidence": "Remote sensing and aerial data collection are already heavily automated, and stakeholders generally do not care whether a human or AI system performs the data collection as long as quality standards are met.",
+      "_timestamp": "2026-04-06T05:47:07"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There are no laws prohibiting AI from processing or extracting information from aerial or remote sensing data, but data collection via drones is regulated by the FAA, which requires a licensed human remote pilot in command. This creates a partial restriction on fully autonomous AI operation in data acquisition.",
+      "_timestamp": "2026-04-06T05:47:08"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting aerial and remote sensing data involves subtle judgments (e.g., feature classification, georeferencing accuracy, sensor artifacts) that often require expert review, cross-referencing datasets, or ground truth validation to detect errors.",
+      "adequacy_evidence": "Current AI systems in remote sensing still produce nontrivial misclassifications and geospatial inaccuracies, and these errors are not always obvious without expert inspection, making thorough human verification necessary.",
+      "_timestamp": "2026-04-06T05:47:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in extracted geospatial features can affect mapping accuracy and downstream planning, but most applications (e.g., land use mapping, environmental monitoring) can tolerate small residual inaccuracies without severe consequences.",
+      "adequacy_evidence": "Modern AI combined with standard validation methods (cross-referencing datasets, spot ground-truthing) can reduce residual errors to acceptable levels, and remaining inaccuracies are typically detectable or non-critical.",
+      "_timestamp": "2026-04-06T05:47:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

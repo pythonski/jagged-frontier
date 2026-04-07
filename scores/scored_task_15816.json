@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9199.09",
+  "task_id": 15816,
+  "task_statement": "Monitor and maintain records of daily facility operations.",
+  "occupation_title": "Wind Energy Operations Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Monitoring wind facility operations is typically done through digital SCADA systems and maintaining electronic operational logs. However, some facilities may still involve on-site checks or physical logbooks, so not all instances are fully remote."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of record monitoring and maintenance follows standardized logging and reporting procedures, operators must interpret irregularities, reconcile inconsistent data, and decide what is operationally significant based on experience.",
+      "adequacy_evidence": "Current AI systems can reliably track, structure, and flag anomalies in operational data, but they lack full calibration for context-specific judgment about which deviations matter in complex, real-world facility conditions.",
+      "_timestamp": "2026-04-05T23:11:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While recordkeeping follows regulatory and organizational standards, operators must interpret what operational details, anomalies, and contextual factors are important to capture, which can vary by facility and situation.",
+      "adequacy_evidence": "Agents can follow predefined schemas and logs but often miss implicit priorities or nuanced judgments about what deviations or context should be recorded without human guidance.",
+      "_timestamp": "2026-04-05T23:11:32"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Daily operations records span multiple data types (SCADA logs, maintenance reports, weather impacts, grid events) with some variation across sites and incident types, but follow largely standardized industrial logging practices.",
+      "adequacy_evidence": "While general logging procedures and many examples are available, much high-fidelity data (e.g., proprietary SCADA streams, rare fault conditions) is restricted, leaving some subpopulations thin though partially addressable via simulation and synthetic data.",
+      "_timestamp": "2026-04-05T23:11:32"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing daily tracking and updating of operational records, requiring consistency over time but largely composed of modular, repeatable entries rather than tightly interdependent steps.",
+      "adequacy_evidence": "AI agents can generally maintain logging and monitoring workflows with tooling, but over extended sequences may exhibit mild drift, missed updates, or inconsistency without supervision.",
+      "_timestamp": "2026-04-05T23:11:32"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking multiple operational data streams (e.g., turbine status, maintenance logs, incidents) within a day, requiring consolidation and updating of records but not extreme real-time complexity.",
+      "adequacy_evidence": "Current agents can aggregate and manage such data with tools, but may lose context across heterogeneous inputs or produce inconsistent summaries without careful system design and retrieval support.",
+      "_timestamp": "2026-04-05T23:11:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves logging, reviewing, and maintaining operational data (e.g., SCADA readings, maintenance logs, performance metrics), which are largely text and structured numerical data rather than rich sensory inputs.",
+      "adequacy_evidence": "Current AI agents handle text and structured data processing, logging, and record maintenance reliably, with no significant dependence on advanced multimodal perception or generation.",
+      "_timestamp": "2026-04-05T23:11:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring and maintaining daily operational records typically allows for minute-to-hour latency, with no strict requirement for immediate, real-time decision-making under tight time pressure.",
+      "adequacy_evidence": "Current AI agents can process, log, and summarize operational data well within these relaxed time constraints without needing to sacrifice reasoning depth or output quality.",
+      "_timestamp": "2026-04-05T23:11:35"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from monitoring or maintaining operational records in wind energy facilities. Compliance frameworks (e.g., NERC, FERC) require accurate recordkeeping and responsible oversight, but do not mandate that only humans perform the task.",
+      "_timestamp": "2026-04-05T23:11:35"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Operational records support maintenance, compliance, and performance tracking; errors matter but are typically detectable later and rarely cause immediate irreversible harm.",
+      "adequacy_evidence": "AI-generated or maintained records can be cross-checked against sensor data and logs, so after normal verification residual errors are unlikely to pose significant risk.",
+      "_timestamp": "2026-04-05T23:11:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintaining records of daily facility operations inherently requires building and accessing a continuous historical log of performance, incidents, and maintenance over long time horizons.",
+      "adequacy_evidence": "Current AI systems can reliably integrate with databases, logging systems, and retrieval tools to store and access longitudinal operational data across sessions without fundamental limitations.",
+      "_timestamp": "2026-04-05T23:11:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves internal data logging and record maintenance, with outputs consumed impersonally by systems or staff rather than requiring direct stakeholder interaction.",
+      "adequacy_evidence": "Organizations already use automated systems for operational monitoring and recordkeeping, and stakeholders are generally indifferent to whether records are maintained by humans or AI.",
+      "_timestamp": "2026-04-05T23:11:36"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Operational records can be cross-checked against SCADA data, maintenance logs, and sensor outputs, but doing so requires domain familiarity and deliberate review rather than being instantly obvious.",
+      "adequacy_evidence": "AI systems can compile and structure records but may misinterpret data streams or omit anomalies, so routine human verification against source systems is still needed.",
+      "_timestamp": "2026-04-05T23:11:36"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

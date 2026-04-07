@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "39-6012.00",
+  "task_id": 20259,
+  "task_statement": "Make reservations for patrons, such as for dinner, spa treatments, or golf tee times, and obtain tickets to special events.",
+  "occupation_title": "Concierges",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most reservations and ticket arrangements can be completed online or by phone using a computer and internet access, but some cases may require physical ticket pickup or in-person coordination with local venues."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many reservations follow clear procedures, effective concierges use experience to match patron preferences with venues, navigate availability constraints, and leverage informal knowledge (e.g., which venues suit certain tastes or occasions).",
+      "adequacy_evidence": "Current agents can execute bookings and use structured preference data, but they lack robust calibration for nuanced, context-sensitive matching and relationship-based judgment in less routine or high-touch scenarios.",
+      "_timestamp": "2026-04-06T02:25:58"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of booking contexts (restaurants, spas, events, golf) with varying systems, constraints, and client preferences, but follows broadly similar procedural patterns across cases.",
+      "adequacy_evidence": "Extensive online data and APIs document reservation workflows and ticket procurement, but some high-end, relationship-driven, or last-minute access scenarios rely on private channels and are underrepresented in training data.",
+      "_timestamp": "2026-04-06T02:25:58"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Making reservations and obtaining tickets involves multi-step workflows (gathering preferences, checking availability, booking, confirming details), but sequences are typically short and loosely coupled.",
+      "adequacy_evidence": "Modern AI agents with tool use can reliably handle these short transactional sequences without significant degradation, maintaining context and constraints across steps.",
+      "_timestamp": "2026-04-06T02:25:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking client preferences, availability windows, reservation details, and confirmation information across a small number of bookings, requiring some active state management but not large-scale memory.",
+      "adequacy_evidence": "Current AI agents with tool integration (calendars, booking APIs) can reliably track and update this level of structured information within a session without significant loss or drift.",
+      "_timestamp": "2026-04-06T02:25:58"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Patron requests often omit key preferences (e.g., budget, ambiance, timing flexibility, special occasions), requiring the concierge to infer or elicit latent criteria to secure appropriate reservations.",
+      "adequacy_evidence": "Current agents can ask clarifying questions and use context, but still frequently miss subtle preferences or social cues, leading to iterative back-and-forth to reach a satisfactory booking.",
+      "_timestamp": "2026-04-06T02:25:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Concierges benefit from remembering returning patrons\u2019 preferences (e.g., favorite restaurants, seating, timing), but many reservations are one-off and can be handled without prior context.",
+      "adequacy_evidence": "Current AI systems integrated with CRM tools can reliably store and retrieve customer preferences across sessions, and this level of memory is sufficient for typical concierge use cases.",
+      "_timestamp": "2026-04-06T02:25:59"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Making reservations and obtaining tickets is primarily handled through text-based systems (web portals, emails, booking platforms) or structured databases, with minimal need for interpreting images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents can effectively interact with booking APIs, websites, and text-based interfaces, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-06T02:25:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Concierges are expected to respond promptly during guest interactions, typically within seconds to a few minutes, but the task allows brief lookup and coordination time with vendors.",
+      "adequacy_evidence": "LLM-based agents can quickly query booking systems, availability, and ticketing APIs within this time window without needing deep extended reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T02:26:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from making reservations or purchasing event tickets on behalf of users. While platform terms of service or anti-bot measures may restrict automated access, these are contractual or technical controls, not legal prohibitions.",
+      "_timestamp": "2026-04-06T02:26:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with patrons and external service providers (restaurants, spas, ticket vendors), but success depends mainly on accurate booking rather than the concierge\u2019s personal identity or authority.",
+      "adequacy_evidence": "Automated booking systems, apps, and chatbots are already widely accepted for reservations and ticketing, indicating minimal resistance to AI performing this role.",
+      "_timestamp": "2026-04-06T02:26:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Reservation details (date, time, location, party size, confirmation numbers) are explicit and can be quickly verified via confirmation emails, vendor systems, or direct contact, making errors easy to detect before use.",
+      "adequacy_evidence": "AI agents can make booking or detail-entry mistakes or mis-handle edge cases (availability, special requests), so routine verification of confirmations is still needed even though checking is straightforward.",
+      "_timestamp": "2026-04-06T02:26:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in reservations or ticketing typically cause inconvenience, missed experiences, or financial costs, but are usually reversible or compensable rather than catastrophic.",
+      "adequacy_evidence": "AI systems can confirm bookings, cross-check details, and provide verifiable confirmation records, leaving minimal residual risk after standard checks.",
+      "_timestamp": "2026-04-06T02:26:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

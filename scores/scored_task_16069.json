@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1143.01",
+  "task_id": 16069,
+  "task_statement": "Monitor and analyze system performance, such as network traffic, security, and capacity.",
+  "occupation_title": "Telecommunications Engineering Specialists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Monitoring and analyzing system performance (network traffic, security, capacity) is done through software dashboards, logs, and monitoring tools on computers, which can be accessed remotely without physical interaction with hardware."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "System performance monitoring spans highly heterogeneous environments (different network architectures, traffic patterns, failure modes, and security threats), including rare and evolving edge cases.",
+      "adequacy_evidence": "While large volumes of logs, telemetry, and incident reports exist, much of the most relevant data is proprietary or security-sensitive, and rare failure/attack scenarios are underrepresented but partially addressable via simulation and synthetic generation.",
+      "_timestamp": "2026-04-06T00:41:44"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many monitoring tasks rely on explicit thresholds, metrics, and documented procedures, effective analysis often requires experience-based judgment to distinguish benign anomalies from meaningful issues and to interpret complex traffic patterns in context.",
+      "adequacy_evidence": "Current AI agents can handle routine monitoring and known patterns well, but they show gaps in nuanced, context-dependent interpretation of novel or ambiguous system behaviors that experienced engineers calibrate through practice.",
+      "_timestamp": "2026-04-06T00:41:45"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Performance monitoring involves implicit thresholds (e.g., acceptable latency, anomaly significance) that depend on network context, service-level agreements, and evolving operational priorities.",
+      "adequacy_evidence": "Current agents can track metrics and flag deviations but often lack full context of business priorities or evolving norms, requiring human input to interpret which issues truly matter.",
+      "_timestamp": "2026-04-06T00:41:45"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing monitoring and periodic analysis cycles, where multiple steps (data collection, interpretation, anomaly detection) must be performed consistently but are often modular and repeatable rather than tightly interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can sustain performance across these monitoring and analysis loops using tooling, alerts, and state management, with little degradation over typical sequence lengths.",
+      "_timestamp": "2026-04-06T00:41:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating large volumes of heterogeneous, rapidly updating data (e.g., logs, metrics, traffic flows, alerts) where missing anomalies or correlations can lead to incorrect assessments.",
+      "adequacy_evidence": "Agents with tool use can query, filter, and summarize large datasets, but may still lose subtle context or misprioritize signals when compressing high-volume, fast-changing information streams.",
+      "_timestamp": "2026-04-06T00:41:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Analyzing system performance relies on historical trends, baselines, and prior incidents, but this context is typically stored in logs and monitoring systems rather than requiring rich, evolving narrative memory.",
+      "adequacy_evidence": "Current AI agents can reliably retrieve and use cross-session data from structured logs, databases, and monitoring tools, so persistent memory needs are well supported by existing infrastructure.",
+      "_timestamp": "2026-04-06T00:41:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting dashboards, graphs, and visualizations of network traffic and system metrics, though underlying data is largely structured and can be represented textually.",
+      "adequacy_evidence": "Current agents can interpret standard charts and structured telemetry with tools, but may struggle with complex, noisy visual dashboards or subtle visual anomaly patterns.",
+      "_timestamp": "2026-04-06T00:41:47"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal monitoring and analysis of system performance, with outputs consumed by technical teams rather than external stakeholders, and does not rely on interpersonal acceptance.",
+      "adequacy_evidence": "Stakeholders are typically indifferent to whether analysis is performed by humans or AI, and automated monitoring systems are already widely accepted in this domain.",
+      "_timestamp": "2026-04-06T00:41:47"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "System performance analysis can be cross-checked against logs, metrics, and monitoring dashboards, but interpreting anomalies or root causes requires domain expertise and is not always immediately obvious.",
+      "adequacy_evidence": "AI can surface metrics and flag anomalies, but it still misinterprets patterns or context, requiring engineers to review outputs against raw telemetry and known system behavior.",
+      "_timestamp": "2026-04-06T00:41:48"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from monitoring and analyzing network performance in telecommunications. Existing frameworks (e.g., cybersecurity and network reliability standards) permit automation and do not mandate a human to perform these specific tasks.",
+      "_timestamp": "2026-04-06T00:41:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Telecommunications performance monitoring (e.g., traffic anomalies, security events, capacity thresholds) often requires near-real-time or seconds-level responsiveness to detect and respond to issues before service degradation occurs.",
+      "adequacy_evidence": "Well-instrumented AI systems using streaming data pipelines and lightweight analysis can meet these latency demands without relying on slow, extended reasoning, so quality is not significantly degraded by speed constraints.",
+      "_timestamp": "2026-04-06T00:41:48"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Undetected anomalies in network traffic, security, or capacity can lead to outages, breaches, or service degradation affecting large user bases, so even rare residual errors can have major consequences.",
+      "adequacy_evidence": "Even with dashboards, alerts, and cross-checking, AI systems can miss subtle or novel patterns or generate misleading analyses, leaving a non-trivial residual risk, though not so high as to be clearly unacceptable with human oversight.",
+      "_timestamp": "2026-04-06T00:41:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

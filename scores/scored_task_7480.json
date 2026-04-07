@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3031.02",
+  "task_id": 7480,
+  "task_statement": "Identify, research, and resolve anomalies in legal land descriptions, referring issues to title or survey experts as appropriate.",
+  "occupation_title": "Surveying and Mapping Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Identifying and researching anomalies in legal land descriptions is typically done using digital records, GIS systems, and online databases, with communication to experts via email or calls. However, some cases require consulting physical archives or coordinating with field survey work that involves on-site verification."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Legal land descriptions often contain inconsistencies, archaic language, or conflicting records, requiring interpretation of intent, historical context, and jurisdiction-specific conventions to determine what constitutes an anomaly and how to resolve it.",
+      "adequacy_evidence": "Current agents can parse documents and flag inconsistencies but often struggle to infer legal intent or reconcile ambiguous cases without human guidance, especially when context is fragmented or requires professional judgment.",
+      "_timestamp": "2026-04-06T05:27:00"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Legal land descriptions vary widely across jurisdictions, historical periods, and formats (e.g., metes and bounds, PLSS, subdivision plats), with many rare edge-case anomalies requiring broad coverage.",
+      "adequacy_evidence": "Large corpora of deeds, title records, and surveying manuals exist, but detailed, process-level examples of diagnosing and resolving rare anomalies are sparse and often embedded in proprietary or case-specific contexts.",
+      "_timestamp": "2026-04-06T05:27:00"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Resolving anomalies in legal land descriptions often involves interpreting ambiguous metes-and-bounds language, historical conventions, and local surveying practices, requiring some experience-based judgment beyond written rules.",
+      "adequacy_evidence": "AI can follow formal rules and identify inconsistencies, but it lacks robust calibration in edge cases involving historical quirks or context-specific interpretation, leading to gaps in non-routine judgments.",
+      "_timestamp": "2026-04-06T05:27:00"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows\u2014identifying anomalies, researching records, cross-referencing sources, and determining resolution or escalation\u2014where consistency across steps matters but sequences are not extremely long or deeply interdependent.",
+      "adequacy_evidence": "Frontier agents can generally sustain coherence across moderate multi-step investigations, but may exhibit some goal drift or lose constraints when reconciling multiple documents, leading to occasional compounding errors.",
+      "_timestamp": "2026-04-06T05:27:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While legal land descriptions are text-based, resolving anomalies often requires interpreting plats, maps, and survey diagrams to cross-check spatial relationships and boundaries.",
+      "adequacy_evidence": "Current agents can interpret basic maps and diagrams but remain inconsistent on complex spatial reasoning and integrating legal text with nuanced survey visuals.",
+      "_timestamp": "2026-04-06T05:27:01"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Investigating and resolving anomalies in legal land descriptions typically allows for minutes to hours of analysis, including document review and consultation, with no need for real-time responses.",
+      "adequacy_evidence": "Current AI agents can perform document analysis and research well within these relaxed time constraints, so extended reasoning does not conflict with latency requirements.",
+      "_timestamp": "2026-04-06T05:27:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing multiple documents (deeds, plats, surveys, legal descriptions) and tracking relationships and inconsistencies, requiring active retrieval and compression of structured but not massive information within a single case.",
+      "adequacy_evidence": "Current agents can manage multi-document contexts but often lose fine-grained details in legal descriptions or spatial relationships, leading to moderate risk of omission or drift in complex cases.",
+      "_timestamp": "2026-04-06T05:27:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Work often benefits from recalling prior parcel histories, past anomalies, and project-specific context, but most information can be reloaded from records rather than relying on persistent memory alone.",
+      "adequacy_evidence": "Current agents can store and retrieve project documents and prior cases via external memory systems, though they may inconsistently surface relevant historical context across sessions without careful setup.",
+      "_timestamp": "2026-04-06T05:27:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Detecting anomalies in legal land descriptions requires careful cross-referencing of deeds, plats, surveys, and historical records; errors can be subtle (e.g., boundary inconsistencies, ambiguous metes-and-bounds language) and often require expert interpretation to verify.",
+      "adequacy_evidence": "Current AI can assist with document parsing and comparison but is prone to misinterpreting legal descriptions and edge cases, so outputs would require thorough expert review and validation, making verification effort substantial.",
+      "_timestamp": "2026-04-06T05:27:03"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in resolving anomalies in legal land descriptions can lead to boundary disputes, title defects, or legal/financial liabilities, so even rare residual mistakes can have serious downstream consequences.",
+      "adequacy_evidence": "Even with standard quality checks, AI may miss subtle legal or historical nuances in land records, leaving a non-trivial residual risk that remains concerning but not uniformly catastrophic if human escalation pathways are used.",
+      "_timestamp": "2026-04-06T05:27:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordination with title professionals, surveyors, and possibly clients who rely on the technician\u2019s findings, where credibility and professional judgment matter but are not the sole determinant of acceptance.",
+      "adequacy_evidence": "Stakeholders in land and title work often expect human oversight due to legal and liability concerns, so while AI-assisted outputs may be used, full acceptance of an autonomous AI agent would face moderate resistance.",
+      "_timestamp": "2026-04-06T05:27:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Surveying activities that impact legal land boundaries typically require oversight or sign-off by a licensed professional surveyor, and AI cannot hold such licensure. While this specific task can be performed as preparatory analysis, regulations create partial constraints by requiring human supervision and responsibility for final determinations.",
+      "_timestamp": "2026-04-06T05:27:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

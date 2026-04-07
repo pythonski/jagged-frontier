@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1243.00",
+  "task_id": 16115,
+  "task_statement": "Develop and document database architectures.",
+  "occupation_title": "Database Architects",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Designing and documenting database architectures is performed using computer-based modeling, diagramming, and documentation tools, and can be done entirely online without physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Database architecture spans diverse domains (OLTP vs OLAP, distributed systems, cloud vs on-prem, industry-specific constraints, scaling patterns), creating a heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "Extensive public documentation, open-source systems, benchmarks, and design case studies provide strong coverage, but some high-value enterprise-specific schemas, workloads, and trade-offs remain proprietary and only partially reproducible via synthesis.",
+      "_timestamp": "2026-04-05T23:34:03"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Database architecture design requires eliciting and reconciling implicit requirements around scale, performance, security, future growth, and organizational constraints that are often not fully specified upfront.",
+      "adequacy_evidence": "Current agents can propose plausible architectures from partial specs but frequently miss latent constraints (e.g., edge-case workloads, organizational policies), requiring iterative human clarification and refinement.",
+      "_timestamp": "2026-04-05T23:34:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing database architectures involves long, interdependent sequences: requirements analysis, conceptual/logical/physical modeling, constraint propagation, performance considerations, and consistent documentation where early decisions affect all later steps.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step design workflows with tooling, but still show moderate degradation over extended sequences, such as drifting constraints or inconsistencies between schema design and documentation.",
+      "_timestamp": "2026-04-05T23:34:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing database architectures requires tracking many interdependent elements (schemas, entities, relationships, constraints, performance requirements, and tradeoffs) simultaneously, where missing a detail can introduce design flaws.",
+      "adequacy_evidence": "Agents can use tools and extended context to manage substantial design state, but still show drift or omission when handling large, evolving schemas and constraints across long sessions.",
+      "_timestamp": "2026-04-05T23:34:04"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing database architectures involves trade-offs (e.g., normalization vs. performance, consistency vs. availability) that rely on experience with real workloads and failure modes, not fully captured by explicit rules.",
+      "adequacy_evidence": "Current agents can apply standard patterns and documented best practices but often lack reliable calibration for context-specific trade-offs (e.g., workload nuances, scaling behavior, organizational constraints), leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-05T23:34:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Database architecture development is primarily text-based (schemas, specifications, documentation) but often includes diagrams such as ERDs or data flow visuals to communicate structure and relationships.",
+      "adequacy_evidence": "Current agents can reliably generate and interpret both textual schema definitions and common diagram formats (or their textual equivalents), with multimodal demands being straightforward and well-supported.",
+      "_timestamp": "2026-04-05T23:34:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Database architecture work often spans multiple sessions with evolving requirements, stakeholder preferences, and legacy system constraints that must be remembered across iterations, but individual projects remain relatively bounded.",
+      "adequacy_evidence": "Current agents can persist and retrieve project artifacts using external memory (e.g., RAG, document stores), but they still show inconsistencies in updating and prioritizing evolving context across sessions.",
+      "_timestamp": "2026-04-05T23:34:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Database architecture design and documentation are typically performed over hours to days, with no expectation of immediate or real-time responses.",
+      "adequacy_evidence": "AI agents can take sufficient time to reason through design choices and produce high-quality outputs without being constrained by latency requirements.",
+      "_timestamp": "2026-04-05T23:34:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements that prohibit AI from developing or documenting database architectures. While sector-specific compliance rules may govern how databases are designed (e.g., for security or privacy), they do not restrict the use of AI as a tool in performing this task.",
+      "_timestamp": "2026-04-05T23:34:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in database architecture (e.g., flawed schema design, indexing strategy, or security controls) can lead to data corruption, performance collapse, or breaches with large downstream impact, so very low residual error tolerance is required.",
+      "adequacy_evidence": "Even after review and testing, AI-generated designs can contain subtle scalability, consistency, or edge-case flaws that are hard to surface pre-deployment, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T23:34:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Database architectures are reviewed and implemented by engineering teams and stakeholders who rely on their quality, but the architect\u2019s personal identity is usually secondary to the technical soundness of the design.",
+      "adequacy_evidence": "Many organizations would accept AI-assisted or AI-generated architectures if validated by humans, but some stakeholders may resist full delegation due to trust, accountability, and governance concerns.",
+      "_timestamp": "2026-04-05T23:34:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Flaws in database architectures (e.g., schema design, indexing strategy, scalability, consistency tradeoffs) are often subtle and may only surface under realistic workloads or edge cases, requiring expert review, testing, and simulation to detect.",
+      "adequacy_evidence": "Current AI systems can produce plausible designs but frequently miss workload-specific optimizations, constraints, or failure modes, and these errors are not easily caught without substantial expert validation and testing.",
+      "_timestamp": "2026-04-05T23:34:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

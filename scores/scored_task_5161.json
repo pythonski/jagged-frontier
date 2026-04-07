@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9081.00",
+  "task_id": 5161,
+  "task_statement": "Compare information or figures on one record against same data on other records, or with original copy, to detect errors.",
+  "occupation_title": "Proofreaders and Copy Markers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Comparing records to detect errors is often done using digital documents and software (e.g., PDFs, word processors, spreadsheets). However, proofreaders may still compare printed proofs or physical records against originals, requiring manual review of paper documents."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of document types (text, numerical tables, forms) and error patterns, but remains structurally consistent as comparison and discrepancy detection.",
+      "adequacy_evidence": "Large corpora of parallel texts, spreadsheets, and error-labeled data exist, and synthetic generation of mismatched records is straightforward, providing strong coverage of relevant cases.",
+      "_timestamp": "2026-04-06T03:03:18"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely rule-based visual or textual comparison, relying on explicit matching procedures rather than experience-based judgment or intuition.",
+      "adequacy_evidence": "Current AI systems with tooling (e.g., diffing, structured comparison) can reliably perform these comparisons without needing tacit calibration.",
+      "_timestamp": "2026-04-06T03:03:18"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task has explicit objectives: directly compare specified data fields across records or against an original to identify mismatches, with little need for interpretation.",
+      "adequacy_evidence": "Current AI systems can reliably perform structured and unstructured comparisons and detect discrepancies with minimal ambiguity, especially when given clear instructions or schemas.",
+      "_timestamp": "2026-04-06T03:03:19"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves repeated comparisons across multiple records, requiring sustained attention over a sequence, but each comparison is largely independent and does not strongly depend on prior steps.",
+      "adequacy_evidence": "AI systems with tooling (e.g., programmatic diffing or structured checks) can maintain consistent accuracy across many comparisons without meaningful degradation over sequence length.",
+      "_timestamp": "2026-04-06T03:03:19"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is performed within a single set of documents, comparing records directly without needing information from prior sessions or accumulated history.",
+      "adequacy_evidence": "Since no cross-session memory is required, current AI systems fully meet the task's needs without relying on persistent state.",
+      "_timestamp": "2026-04-06T03:03:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Proofreading and cross-checking records is typically done in batch workflows where minutes or longer per document are acceptable; there is no inherent need for immediate or real-time response.",
+      "adequacy_evidence": "AI systems can perform text and numeric comparisons very quickly, well within typical time budgets, without needing to truncate reasoning or sacrifice accuracy.",
+      "_timestamp": "2026-04-06T03:03:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves holding and comparing corresponding fields or figures across multiple records, requiring some active tracking and alignment of information but typically within structured, bounded scopes.",
+      "adequacy_evidence": "Current AI agents can reliably manage side-by-side comparisons using retrieval, chunking, and tool support, with minimal loss of relevant within-episode information for typical proofreading workloads.",
+      "_timestamp": "2026-04-06T03:03:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves comparing textual and numerical information across records; any figures are typically represented in text or simple tabular formats rather than requiring rich visual or sensory interpretation.",
+      "adequacy_evidence": "Current AI systems handle text and numerical comparison reliably, including across documents, with minimal need for advanced multimodal perception.",
+      "_timestamp": "2026-04-06T03:03:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is an internal quality-control activity comparing records for errors, with no need for direct stakeholder interaction or reliance on performer identity.",
+      "adequacy_evidence": "Because there are no relevant stakeholders whose acceptance matters, AI use in this role faces no meaningful acceptance barrier.",
+      "_timestamp": "2026-04-06T03:03:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the US that prohibit AI from performing record comparison or error detection tasks in proofreading contexts. While human oversight may be required in certain regulated industries, the task itself is not restricted from AI execution.",
+      "_timestamp": "2026-04-06T03:03:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves direct comparison of records or figures, where discrepancies are explicit and can be mechanically checked or double-verified with straightforward procedures or tools.",
+      "adequacy_evidence": "AI systems can reliably perform record comparisons, and any errors are easy for humans to spot via simple re-checking or automated diffing, making verification low-cost and low-effort.",
+      "_timestamp": "2026-04-06T03:03:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Missed discrepancies can propagate errors in published or recorded information, but consequences are typically correctable and rarely catastrophic in this occupation.",
+      "adequacy_evidence": "With structured comparison tools and redundancy checks, AI systems can reduce residual error risk to a low, acceptable level for this task.",
+      "_timestamp": "2026-04-06T03:03:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

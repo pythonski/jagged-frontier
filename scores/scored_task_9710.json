@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-1011.00",
+  "task_id": 9710,
+  "task_statement": "Review records or reports pertaining to activities such as production, payroll, or shipping to verify details, monitor work activities, or evaluate performance.",
+  "occupation_title": "First-Line Supervisors of Office and Administrative Support Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Supervisors typically review production, payroll, or shipping records through digital systems, spreadsheets, or reports on a computer. However, some workplaces still use or supplement with physical documents or on-site records, requiring occasional in-person review."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of record review follows explicit procedures (e.g., checking totals, matching entries), evaluating performance or identifying meaningful anomalies often relies on experience with typical patterns, edge cases, and organizational norms.",
+      "adequacy_evidence": "Current agents can apply rules and flag inconsistencies reliably, but they lack nuanced calibration for context-specific judgments (e.g., distinguishing acceptable variance from concerning patterns) without substantial customization.",
+      "_timestamp": "2026-04-05T20:42:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on organizational policies, performance standards, and context-specific expectations (e.g., what counts as an anomaly or acceptable variance), which are often implicit rather than fully specified in the records themselves.",
+      "adequacy_evidence": "Current agents can apply explicit rules and flag inconsistencies but often miss subtle, context-dependent judgments (e.g., acceptable exceptions or evolving norms), requiring human clarification or iteration.",
+      "_timestamp": "2026-04-05T20:42:52"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderately diverse document types (production logs, payroll records, shipping reports) and organizational contexts, but follows broadly standardized structures and review procedures.",
+      "adequacy_evidence": "There is abundant accessible data (business documents, auditing examples, synthetic records) that can capture both outputs and review processes, making representative coverage feasible with current training pipelines.",
+      "_timestamp": "2026-04-05T20:42:52"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple records and cross-checking details across documents, requiring consistent attention over a sequence of steps, but each item is relatively modular rather than tightly interdependent.",
+      "adequacy_evidence": "LLM-based agents can sustain performance across moderate review sequences with tool support, though some degradation (e.g., missed inconsistencies or drift in criteria) can occur over longer or more complex batches.",
+      "_timestamp": "2026-04-05T20:42:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves comparing and synthesizing information across multiple reports (e.g., payroll, production, shipping), requiring tracking of figures and discrepancies, but typically within bounded document sets.",
+      "adequacy_evidence": "Current agents can manage multi-document review with tools, but may lose track of specific details or inconsistencies across sources without careful scaffolding, leading to moderate reliability issues.",
+      "_timestamp": "2026-04-05T20:42:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and analyzing structured or semi-structured textual and numerical records (e.g., reports, spreadsheets), with minimal reliance on non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle text and tabular data effectively, and any incidental visual formats (e.g., simple charts or scanned documents) are well within existing multimodal capabilities.",
+      "_timestamp": "2026-04-05T20:42:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reviewing operational records often involves comparing current data to prior reports, tracking trends, or referencing past employee or process performance, but many individual reviews can still be conducted with self-contained records.",
+      "adequacy_evidence": "Current AI systems integrated with databases and retrieval tools can reliably store and access historical records and performance data across sessions, meeting the task\u2019s moderate longitudinal memory needs.",
+      "_timestamp": "2026-04-05T20:42:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing administrative records or reports is typically a deliberative task with flexible deadlines; minutes to hours are generally acceptable for accurate evaluation.",
+      "adequacy_evidence": "Current AI systems can perform thorough document review well within these loose time constraints, so speed does not meaningfully limit output quality.",
+      "_timestamp": "2026-04-05T20:42:54"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves cross-checking structured records (e.g., payroll, shipping logs) where discrepancies can usually be identified, but doing so requires attention to detail and some domain familiarity.",
+      "adequacy_evidence": "AI outputs can be checked against source records and rules, but current systems still make non-trivial errors or omissions, so routine human review remains necessary.",
+      "_timestamp": "2026-04-05T20:42:55"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in reviewing payroll, production, or shipping records can lead to financial discrepancies or operational inefficiencies, but these are typically correctable and rarely catastrophic after standard checks.",
+      "adequacy_evidence": "With existing validation processes (cross-checks, audits, system constraints), AI-generated reviews can be verified effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T20:42:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves internal stakeholders (management, employees) who rely on the supervisor\u2019s review to assess performance and compliance, but interaction is indirect and largely based on the output rather than personal presence.",
+      "adequacy_evidence": "Organizations already accept automated systems for auditing, payroll checks, and performance monitoring, so AI performing this review function would face little resistance if outputs are reliable.",
+      "_timestamp": "2026-04-05T20:42:57"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from reviewing operational records (e.g., payroll, production, shipping) for verification or monitoring purposes. While data privacy and security laws (e.g., HIPAA, state privacy laws) may govern how data is handled, they do not forbid AI from performing the task itself.",
+      "_timestamp": "2026-04-05T20:42:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

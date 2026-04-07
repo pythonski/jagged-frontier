@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1241.01",
+  "task_id": 16064,
+  "task_statement": "Provide user support by diagnosing network and device problems and implementing technical or procedural solutions.",
+  "occupation_title": "Telecommunications Engineering Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "User support for network and device issues is often performed remotely through diagnostics, monitoring tools, and communication with users. However, some cases require on-site inspection or physical intervention with networking hardware or devices."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Troubleshooting network and device issues often relies on pattern recognition, heuristic reasoning, and experience with atypical failure modes beyond formal procedures, though many standard diagnostics are documented.",
+      "adequacy_evidence": "Current agents can follow structured troubleshooting flows and analyze logs, but they show gaps in handling edge cases, ambiguous symptoms, and context-specific judgment that experienced technicians develop over time.",
+      "_timestamp": "2026-04-06T03:10:22"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing network and device issues involves multi-step troubleshooting workflows with conditional branching, requiring consistency across several interdependent diagnostic and remediation steps.",
+      "adequacy_evidence": "LLM-based agents can follow structured troubleshooting sequences but show some degradation over longer or branching interactions, occasionally losing track of prior steps or misapplying earlier findings.",
+      "_timestamp": "2026-04-06T03:10:22"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a highly heterogeneous space of network topologies, vendor-specific equipment, configurations, and rare failure modes, requiring coverage of many edge cases and context-specific scenarios.",
+      "adequacy_evidence": "There is substantial accessible data (logs, troubleshooting guides, forums, synthetic labs), but proprietary network environments and rare fault conditions are underrepresented and only partially recoverable via simulation or targeted data generation.",
+      "_timestamp": "2026-04-06T03:10:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Troubleshooting often benefits from prior incident history, device configurations, and recurring issue patterns, but many support cases can still be handled as largely self-contained tickets.",
+      "adequacy_evidence": "Current agents can integrate with ticketing systems and logs to retrieve past context, but they still show gaps in consistently linking relevant historical cases and maintaining coherent long-term context across fragmented records.",
+      "_timestamp": "2026-04-06T03:10:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing network and device issues requires integrating user reports, device configurations, logs, and troubleshooting steps within a single session, but the information scope is typically bounded per case.",
+      "adequacy_evidence": "Current agents can track and summarize multi-source technical context with tools, but may lose or misprioritize details over extended troubleshooting sequences or complex log analysis.",
+      "_timestamp": "2026-04-06T03:10:24"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "User-reported issues are often incomplete or misleading, requiring interpretation of symptoms, context, and constraints to define the real problem and acceptable solution.",
+      "adequacy_evidence": "Current agents can iteratively elicit information and narrow diagnoses, but they still frequently miss contextual cues or user intent, requiring human clarification to fully resolve ambiguity.",
+      "_timestamp": "2026-04-06T03:10:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors can disrupt service, degrade network performance, or misconfigure devices, affecting users and operations, but issues are typically detectable and reversible through monitoring and rollback procedures.",
+      "adequacy_evidence": "Even with testing and monitoring, AI may misdiagnose edge cases or apply incorrect fixes, leading to intermittent outages or degraded performance that are not always immediately caught, leaving some residual risk.",
+      "_timestamp": "2026-04-06T03:10:26"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from diagnosing network or device issues or providing technical support. While telecommunications is regulated, these rules do not mandate human-only execution of such support tasks.",
+      "_timestamp": "2026-04-06T03:10:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves direct interaction with users who rely on support to resolve technical issues, and their cooperation and trust affect success, though deep personal authority or empathy is not central.",
+      "adequacy_evidence": "Many users already accept AI-based technical support (e.g., chatbots), but for complex or frustrating issues, users often prefer human agents and may resist or escalate when they know support is AI-driven.",
+      "_timestamp": "2026-04-06T03:10:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "User support interactions typically require responses within seconds to a few minutes to maintain service quality, but do not demand strict real-time precision under sub-second constraints.",
+      "adequacy_evidence": "Frontier AI agents can generate effective diagnostic steps and solutions within these timeframes without needing to truncate reasoning, maintaining adequate quality for most support scenarios.",
+      "_timestamp": "2026-04-06T03:10:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often uses textual logs and command outputs but also involves interpreting network diagrams, device indicator lights, hardware layouts, and screenshots, making multimodal input helpful though not always essential.",
+      "adequacy_evidence": "Current agents can interpret screenshots, logs, and basic diagrams reasonably well, but struggle with complex physical setups, subtle visual cues (e.g., hardware faults), and integrating multimodal signals in harder troubleshooting cases.",
+      "_timestamp": "2026-04-06T03:10:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many fixes can be validated with diagnostics (connectivity tests, logs, monitoring), but some issues are intermittent or have side effects, requiring expert review and time to confirm correctness.",
+      "adequacy_evidence": "AI can propose plausible diagnoses and configurations, but it still makes nontrivial mistakes and requires human validation and testing, especially to avoid misconfigurations or partial fixes.",
+      "_timestamp": "2026-04-06T03:10:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-3033.00",
+  "task_id": 22165,
+  "task_statement": "Document patient information including session notes, progress notes, recommendations, and treatment plans.",
+  "occupation_title": "Clinical and Counseling Psychologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Clinical psychologists typically document notes and treatment plans in electronic health record systems on a computer, which can be done remotely. However, some settings still involve handwritten notes or on\u2011site documentation within physical patient charts."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse patient conditions, therapeutic approaches, and clinician styles, but is structured by relatively standardized documentation formats (e.g., SOAP notes, treatment plans).",
+      "adequacy_evidence": "Large corpora of clinical documentation are restricted due to privacy, leaving some real-world variation underrepresented, though de-identified data and synthetic generation can partially cover the space.",
+      "_timestamp": "2026-04-05T21:10:55"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Producing session notes and treatment plans requires synthesizing multiple pieces of patient information into a coherent document, with some dependence on consistency across sections and prior notes, but not long, tightly coupled action chains.",
+      "adequacy_evidence": "AI systems can generally maintain coherence within a single document, but may show drift or inconsistency when integrating multiple details or maintaining alignment with prior context over longer sequences.",
+      "_timestamp": "2026-04-05T21:10:55"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate documentation requires integrating longitudinal patient history across many sessions, including prior notes, evolving diagnoses, and treatment responses.",
+      "adequacy_evidence": "Current agents can store and retrieve structured records via EHR integrations, but often struggle with reliably surfacing the most relevant historical context and maintaining coherent longitudinal narratives over time.",
+      "_timestamp": "2026-04-05T21:10:56"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires synthesizing multiple streams of session information (patient statements, observed behaviors, prior notes) into structured documentation, but the volume within a single episode is moderate and can be summarized.",
+      "adequacy_evidence": "Current agents can generally manage and summarize session-length information with tooling, but may lose nuance, misprioritize details, or introduce drift when compressing clinically relevant context.",
+      "_timestamp": "2026-04-05T21:10:56"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical documentation follows partial standards (e.g., SOAP notes, DSM-informed formulations) but requires judgment about what details are salient, how to frame risk, and how to tailor treatment plans to context and patient nuances.",
+      "adequacy_evidence": "Agents can populate structured templates and summarize sessions, but often miss clinically important subtleties, risk framing, or payer/legal nuances without iterative human correction.",
+      "_timestamp": "2026-04-05T21:10:56"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Clinical documentation (session notes, treatment plans) is typically completed after sessions with flexibility of minutes to hours, not under real-time constraints.",
+      "adequacy_evidence": "Current AI systems can generate high-quality clinical documentation well within these time windows, with no meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T21:10:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the output is primarily text, accurate documentation often depends on interpreting spoken dialogue and nonverbal cues (tone, affect, behavior) from therapy sessions, which are multimodal inputs.",
+      "adequacy_evidence": "Current AI can transcribe and summarize audio well but struggles to reliably interpret subtle nonverbal signals and integrate them into clinically appropriate notes.",
+      "_timestamp": "2026-04-05T21:10:57"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Clinical documentation involves nuanced interpretation of patient statements, accurate clinical terminology, and alignment with diagnostic and treatment frameworks; errors can be subtle, omissions hard to detect, and often require professional expertise and context to verify.",
+      "adequacy_evidence": "Current AI systems can generate plausible but inaccurate or incomplete notes (e.g., mischaracterizing symptoms, overgeneralizing, or fabricating details), requiring careful, line-by-line expert review to ensure fidelity and clinical appropriateness.",
+      "_timestamp": "2026-04-05T21:10:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clinical documentation directly informs diagnosis, treatment decisions, and legal records; even small residual errors can lead to inappropriate care or liability, so tolerance for post-check error is very low.",
+      "adequacy_evidence": "Even with clinician review, AI-generated notes can subtly mischaracterize patient affect, omit critical context, or introduce plausible but incorrect details that are hard to detect, leaving some nontrivial residual risk.",
+      "_timestamp": "2026-04-05T21:10:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The documentation is used by other clinicians, insurers, and sometimes patients, so stakeholders rely on its accuracy, though the specific identity of the author is less central than in direct therapy.",
+      "adequacy_evidence": "AI-assisted clinical documentation (e.g., scribes) is increasingly accepted, but concerns about privacy, accuracy, and professional responsibility mean some stakeholders would still resist fully autonomous AI authorship.",
+      "_timestamp": "2026-04-05T21:10:58"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "No law explicitly prohibits AI from drafting or assisting with clinical documentation, but regulations (e.g., HIPAA, professional licensure rules) require a licensed clinician to be responsible for, review, and authenticate the records, creating partial restrictions on fully autonomous AI performance.",
+      "_timestamp": "2026-04-05T21:11:00"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "High-quality clinical documentation requires nuanced judgment about what details are clinically salient, how to interpret patient behavior and statements, and how to frame progress and treatment plans appropriately\u2014skills built through experience rather than explicit rules.",
+      "adequacy_evidence": "Current agents can generate structured notes and plausible summaries, but often lack reliable calibration in interpreting subtle clinical cues, prioritizing information, and aligning documentation with professional standards across varied cases.",
+      "_timestamp": "2026-04-06T11:26:30"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

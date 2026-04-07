@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "21-1011.00",
+  "task_id": 5590,
+  "task_statement": "Modify treatment plans to comply with changes in client status.",
+  "occupation_title": "Substance Abuse and Behavioral Disorder Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Updating or revising a client's treatment plan is typically done in electronic health records or documents and can be completed on a computer. However, it often depends on information gathered through in-person counseling sessions or team discussions, so not all instances occur fully remotely."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Adjusting treatment plans requires interpreting evolving client status, implicit clinical goals, comorbidities, risk factors, and patient preferences, none of which are fully specified and often shift dynamically.",
+      "adequacy_evidence": "Current AI agents struggle to reliably infer nuanced therapeutic priorities and contextual factors from incomplete data, often missing latent goals or requiring substantial human guidance to refine plans.",
+      "_timestamp": "2026-04-06T04:46:55"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Adjusting treatment plans requires nuanced clinical judgment about relapse risk, comorbid mental health conditions, client motivation, and therapeutic alliance, which are developed through experience and case-based learning rather than fixed rules.",
+      "adequacy_evidence": "Current AI agents can apply guidelines but lack the experiential calibration and contextual sensitivity to reliably interpret subtle behavioral changes or interpersonal dynamics, leading to systematic gaps in non-routine clinical adjustments.",
+      "_timestamp": "2026-04-06T04:46:56"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Client status changes span diverse substances, comorbid mental/physical conditions, social contexts, and treatment modalities, creating a highly heterogeneous and long-tailed set of scenarios requiring broad coverage.",
+      "adequacy_evidence": "Clinical guidelines, case studies, and supervised training data provide substantial coverage, but real-world longitudinal treatment adaptations\u2014especially for complex comorbid or underserved populations\u2014are often underrepresented or locked in private records.",
+      "_timestamp": "2026-04-06T04:46:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Modifying treatment plans involves reviewing client status changes, updating goals and interventions, and ensuring consistency with prior plans and clinical guidelines, but the sequence is moderately complex rather than deeply long or tightly coupled.",
+      "adequacy_evidence": "AI agents can generally handle multi-step plan revisions with some consistency, but may exhibit drift or miss subtle dependencies across steps, especially in maintaining alignment with evolving client history.",
+      "_timestamp": "2026-04-06T04:46:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Updating treatment plans depends on detailed longitudinal knowledge of a client\u2019s history, prior interventions, progress, relapses, and evolving psychosocial context across many sessions.",
+      "adequacy_evidence": "Current agents can store and retrieve structured case histories via EHR integrations, but often struggle with consistent synthesis of nuanced longitudinal context and maintaining coherent evolving narratives over time.",
+      "_timestamp": "2026-04-06T04:46:57"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Modifying treatment plans requires integrating multiple within-session data sources such as current symptoms, prior treatment history, comorbidities, and existing plan elements, but the information is typically bounded to a single client record.",
+      "adequacy_evidence": "Current agents with retrieval and note-structuring tools can manage moderate context, but may miss nuances or improperly prioritize details when synthesizing evolving client information.",
+      "_timestamp": "2026-04-06T04:46:57"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Adjusting treatment plans may occur during or shortly after client sessions, so responses are expected within minutes, but not instantaneously under strict real-time constraints.",
+      "adequacy_evidence": "Frontier AI systems can generate and revise treatment recommendations well within this time window without needing to truncate reasoning, so speed does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T04:46:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Counselors often rely on non-text cues such as client affect, tone, and observed behavior alongside case notes when updating treatment plans, though much information can be documented in text form.",
+      "adequacy_evidence": "Current agents can process text well and handle basic audio/visual inputs, but they remain limited in reliably interpreting nuanced emotional and behavioral cues critical in complex clinical assessments.",
+      "_timestamp": "2026-04-06T04:46:58"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State licensing laws require substance abuse and behavioral disorder treatment plans to be developed and modified by licensed or supervised human clinicians, making autonomous AI performance impermissible. Regulations and payer requirements (e.g., Medicaid/insurance) also mandate human clinician responsibility and sign-off.",
+      "_timestamp": "2026-04-06T04:46:59"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Updating treatment plans in substance abuse counseling depends heavily on client trust, clinician judgment, and therapeutic alliance; client acceptance of the counselor\u2019s role is central to effectiveness.",
+      "adequacy_evidence": "Clients and clinical stakeholders are unlikely to accept an AI modifying treatment plans in this sensitive context, and lack of human empathy and legitimacy would significantly undermine engagement and adherence.",
+      "_timestamp": "2026-04-06T04:46:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether a modified treatment plan is appropriate requires clinical expertise, knowledge of the client\u2019s evolving condition, and consideration of subtle psychosocial factors; errors may not be immediately apparent and outcomes can unfold over time.",
+      "adequacy_evidence": "AI-generated modifications would require thorough clinician review because mistakes (e.g., inappropriate interventions or missed risk factors) are hard to detect quickly and current systems lack reliable clinical judgment, making verification effort substantial.",
+      "_timestamp": "2026-04-06T04:47:00"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Treatment plan modifications directly affect client safety, relapse risk, and mental health outcomes; even rare mistakes can lead to severe consequences such as overdose or crisis escalation.",
+      "adequacy_evidence": "While clinician review can catch many issues, AI may still miss nuanced clinical signals or context, leaving some residual risk that remains concerning though not clearly unacceptable under supervision.",
+      "_timestamp": "2026-04-06T04:47:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1224.00",
+  "task_id": 17248,
+  "task_statement": "Document the performance, interpretation, or outcomes of all procedures performed.",
+  "occupation_title": "Radiologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Documenting procedures and interpretations is typically done in electronic health record systems or via digital dictation/reporting software, which can be completed entirely on a computer. Physical presence is not required for the documentation itself."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Radiology documentation spans multiple imaging modalities, procedures, and clinical contexts, but follows relatively standardized reporting structures and conventions across cases.",
+      "adequacy_evidence": "Large corpora of radiology reports, templates, and annotated examples are widely available, and training data can capture both outputs and underlying reasoning patterns through reports and supervised annotation.",
+      "_timestamp": "2026-04-06T05:22:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Radiology reports follow conventions but require context-sensitive judgment about what findings are clinically relevant, how to phrase uncertainty, and how much detail to include for different stakeholders.",
+      "adequacy_evidence": "Current agents can generate structured reports from inputs and guidelines, but often miss subtle clinical priorities or appropriate emphasis, requiring human review and refinement.",
+      "_timestamp": "2026-04-06T05:22:29"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiology documentation requires nuanced clinical judgment in how findings are characterized, prioritized, and contextualized (e.g., significance of incidental findings, hedging language), which relies on experience beyond explicit rules.",
+      "adequacy_evidence": "Current AI systems can generate structured radiology reports and mimic standard phrasing, but they show gaps in nuanced clinical calibration and context-sensitive interpretation, especially in atypical or ambiguous cases.",
+      "_timestamp": "2026-04-06T05:22:29"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Accurate documentation often references prior studies, patient history, and longitudinal findings to ensure continuity and consistency in reporting outcomes over time.",
+      "adequacy_evidence": "Current AI systems can retrieve and incorporate prior records via EHR/PACS integrations, but may inconsistently surface all relevant historical context or maintain nuanced continuity across cases.",
+      "_timestamp": "2026-04-06T05:22:31"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves assembling findings, interpretations, and outcomes into a coherent report, requiring multiple steps with some interdependence but typically within a bounded, structured workflow.",
+      "adequacy_evidence": "Frontier AI systems can reliably maintain coherence across the length of typical radiology reports, with minimal degradation over these moderate-length sequences.",
+      "_timestamp": "2026-04-06T05:22:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Radiology reporting is time-sensitive within clinical workflows (often expected within minutes), but not truly real-time; brief delays for careful interpretation are acceptable.",
+      "adequacy_evidence": "Frontier AI systems can generate structured reports and documentation within seconds to minutes without needing to truncate reasoning, so latency does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T05:22:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily generating textual reports summarizing procedures and their outcomes; the imaging itself has already been interpreted, so documentation is fundamentally text-based.",
+      "adequacy_evidence": "Current AI systems handle text generation well, and no significant non-text perception or generation is required for documenting procedures.",
+      "_timestamp": "2026-04-06T05:22:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Radiology reports encode nuanced interpretations of imaging; errors (e.g., missed lesions, incorrect characterizations) are often subtle and require expert review against the images, with some discrepancies only evident on follow-up or clinical correlation.",
+      "adequacy_evidence": "Current AI can draft reports but still produces omission and misinterpretation errors that are not trivially detectable, necessitating thorough expert verification of both findings and language before clinical use.",
+      "_timestamp": "2026-04-06T05:22:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Procedure documentation in radiology directly informs clinical decisions, follow-up care, and legal records; even small residual errors can lead to mismanagement or liability, making tolerance for error very low.",
+      "adequacy_evidence": "While AI-generated documentation can be reviewed against imaging findings and procedural notes, subtle omissions or misstatements may still slip through, leaving some non-trivial residual risk even after standard checks.",
+      "_timestamp": "2026-04-06T05:22:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The documentation is used by other clinicians and becomes part of the legal medical record, so stakeholders rely on it and may care about the author\u2019s credentials, but direct interpersonal trust or empathy is not central to the task itself.",
+      "adequacy_evidence": "Clinicians and institutions currently expect radiologist-authored reports with licensed sign-off; AI-generated documentation may be used as support, but full acceptance without human attribution remains limited.",
+      "_timestamp": "2026-04-06T05:22:32"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiology documentation requires integrating numerous findings across many images, sequences, and prior comparisons, where missing a single detail can materially affect the report.",
+      "adequacy_evidence": "Frontier agents with retrieval and tooling can handle large contexts, but still show occasional omissions or compression errors when tracking many fine-grained imaging details within a single episode.",
+      "_timestamp": "2026-04-06T05:22:33"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "US healthcare regulations (e.g., CMS Conditions of Participation and medical record authentication rules) require that diagnostic reports be reviewed and signed by a licensed physician, meaning AI cannot autonomously perform and finalize this documentation. AI may assist in drafting, but a human radiologist must legally authenticate the record.",
+      "_timestamp": "2026-04-06T05:22:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

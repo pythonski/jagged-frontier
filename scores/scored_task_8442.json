@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-9061.00",
+  "task_id": 8442,
+  "task_statement": "Requisition parts or materials.",
+  "occupation_title": "Camera and Photographic Equipment Repairers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Requisitioning parts is typically done through digital inventory or purchasing systems, email, or online supplier portals. However, in repair shops it often involves checking physical stock or coordinating with a parts room, adding a non-digital component in many cases."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different camera models, parts catalogs, suppliers, and inventory systems, creating moderate variation but within well-structured and repeatable procurement workflows.",
+      "adequacy_evidence": "Extensive parts catalogs, repair manuals, supplier databases, and procurement examples are available, and missing cases can be synthesized, giving strong coverage of the relevant distribution.",
+      "_timestamp": "2026-04-05T23:27:07"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Requisitioning parts requires some experience-based judgment to match components to specific camera models, assess compatibility, and choose acceptable substitutes when originals are unavailable, but much is guided by manuals and catalogs.",
+      "adequacy_evidence": "AI agents can use parts databases and documentation effectively, but may lack reliable calibration in non-routine cases like sourcing obsolete components or judging substitute equivalence under nuanced repair constraints.",
+      "_timestamp": "2026-04-05T23:27:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Requisitioning parts involves a short sequence of steps such as identifying needed components, checking availability, and placing orders, with some dependence between steps but limited overall length.",
+      "adequacy_evidence": "Current AI agents can reliably execute these short procurement workflows with tool use and maintain consistency across steps without meaningful degradation.",
+      "_timestamp": "2026-04-05T23:27:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many parts can be identified via explicit model numbers and repair diagnoses, selecting appropriate replacements often involves context like compatibility nuances, supplier reliability, cost tradeoffs, and customer preferences.",
+      "adequacy_evidence": "Current agents can usually match parts using specifications and databases, but they still struggle with nuanced tradeoffs (e.g., acceptable substitutes, vendor quality, or situational constraints), requiring human judgment to finalize choices.",
+      "_timestamp": "2026-04-05T23:27:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Requisitioning parts can benefit from recalling prior orders, preferred suppliers, and compatibility history, but most requests are driven by the current repair job and available documentation.",
+      "adequacy_evidence": "Existing systems (inventory databases, procurement logs) already support reliable cross-session tracking, and AI agents can readily integrate with these to retrieve and use historical information.",
+      "_timestamp": "2026-04-05T23:27:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Requisitioning parts requires tracking equipment models, part specifications, quantities, and supplier options, but the information scope is limited and structured within a single request episode.",
+      "adequacy_evidence": "Current agents can reliably manage and organize such structured lists and specifications within an episode, with minimal risk of losing or misrepresenting key details.",
+      "_timestamp": "2026-04-05T23:27:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Requisitioning parts or materials is typically a non-urgent administrative task that can be completed over minutes to hours without strict latency constraints.",
+      "adequacy_evidence": "AI systems can easily generate accurate requisitions, identify parts, and place orders well within the available time, so speed does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T23:27:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Requisitioning parts often involves interpreting model numbers, specifications, and catalogs, but may also require visually identifying components or matching them to diagrams or physical items.",
+      "adequacy_evidence": "Current agents can handle catalog lookup and basic image-based identification, but may be unreliable when distinguishing visually similar or specialized photographic components.",
+      "_timestamp": "2026-04-05T23:27:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Correct part selection can usually be verified against manuals, part numbers, and supplier catalogs, but requires some domain knowledge to ensure compatibility with specific camera models and configurations.",
+      "adequacy_evidence": "AI systems can assist with identifying parts but may misidentify model variants or compatible components, requiring technicians to cross-check specifications and part numbers before ordering.",
+      "_timestamp": "2026-04-05T23:27:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Requisitioning parts involves interacting with suppliers or internal procurement systems, so there are stakeholders relying on the request, but the individual identity of the requester is not central.",
+      "adequacy_evidence": "Automated purchasing systems and AI-assisted procurement are already widely accepted; suppliers and internal systems typically do not require a human identity for routine parts ordering.",
+      "_timestamp": "2026-04-05T23:27:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the US that prohibit AI systems from requisitioning parts or materials. This is a routine procurement/administrative task with no mandated human decision-maker.",
+      "_timestamp": "2026-04-05T23:27:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering incorrect parts or quantities can delay repairs and increase costs, but errors are typically recoverable through returns or reorders and do not pose severe irreversible consequences.",
+      "adequacy_evidence": "With catalog integration, part-number validation, and standard procurement checks, AI systems can achieve low residual error rates that are acceptable for this task\u2019s moderate consequence profile.",
+      "_timestamp": "2026-04-05T23:27:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

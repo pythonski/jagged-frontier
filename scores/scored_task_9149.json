@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-3031.03",
+  "task_id": 9149,
+  "task_statement": "Advise clients on how they could be helped by counseling.",
+  "occupation_title": "Counseling Psychologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Advising clients about how counseling could help them is a conversational, informational task that can be done via video call, phone, chat, or email without physical presence or specialized equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clients present highly diverse psychological issues, cultural contexts, communication styles, and levels of insight, creating a long-tailed distribution of intake and advisory scenarios.",
+      "adequacy_evidence": "While there are therapy transcripts, training materials, and guidelines, much real-world data is private and underrepresented; however, many scenarios can be approximated via synthetic data and supervised fine-tuning.",
+      "_timestamp": "2026-04-06T05:17:23"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining how counseling could help a specific client requires nuanced interpretation of their emotional state, readiness for change, and fit with therapeutic approaches, which relies heavily on experience-based clinical judgment.",
+      "adequacy_evidence": "Current agents can approximate general recommendations using learned patterns, but they lack reliable calibration in complex, ambiguous, or high-stakes interpersonal contexts where subtle cues and practitioner intuition are critical.",
+      "_timestamp": "2026-04-06T05:17:23"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clients often present with unclear, evolving concerns, and determining whether and how counseling can help requires interpreting implicit needs, emotional cues, and contextual factors that are not explicitly stated.",
+      "adequacy_evidence": "Current agents can gather information and suggest counseling options, but they often miss subtle cues, misinterpret underlying issues, and require human guidance to refine understanding of client needs.",
+      "_timestamp": "2026-04-06T05:17:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising clients involves multi-turn conversations where understanding, tailoring, and refining guidance over several exchanges matters, but sequences are not typically long or tightly interdependent.",
+      "adequacy_evidence": "AI agents can sustain coherent multi-turn dialogue for moderate lengths, but may show some drift in personalization, consistency, or context tracking over extended interactions.",
+      "_timestamp": "2026-04-06T05:17:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising clients requires tracking multiple pieces of client-provided information (symptoms, history, goals) within a session and integrating them into coherent recommendations, but the volume is typically manageable within a single interaction.",
+      "adequacy_evidence": "Current agents can hold and summarize conversational context reasonably well, but they may lose nuance, misprioritize details, or drift in longer or emotionally complex exchanges.",
+      "_timestamp": "2026-04-06T05:17:25"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective advising in counseling psychology often draws on clients\u2019 tone of voice, facial expressions, and other nonverbal cues in addition to verbal content, though it can be partially conducted via text or transcripts.",
+      "adequacy_evidence": "Current agents can process basic audio/visual signals but remain limited in reliably interpreting subtle affective and contextual nonverbal cues critical to nuanced psychological judgment.",
+      "_timestamp": "2026-04-06T05:17:26"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Advising clients occurs in live or near-live conversations where responses are expected within seconds to maintain rapport and conversational flow, but not at split-second urgency.",
+      "adequacy_evidence": "Current LLM-based agents can generate coherent, contextually appropriate counseling guidance within seconds, with little need for long deliberation that would exceed acceptable latency.",
+      "_timestamp": "2026-04-06T05:17:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether advice about counseling suitability is appropriate requires clinical judgment, understanding of client context, and outcomes that may only become clear over time, making errors subtle and hard to detect immediately.",
+      "adequacy_evidence": "Current AI can produce plausible but potentially inappropriate or miscalibrated guidance, and verifying its correctness requires expert review and nuanced client knowledge, creating a high ongoing checking burden.",
+      "_timestamp": "2026-04-06T05:17:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Advising clients in a counseling context typically relies on accumulated case history, prior sessions, and evolving understanding of the client\u2019s needs over time, not just a single interaction.",
+      "adequacy_evidence": "Current agents can store and retrieve client histories using external memory systems, but they often struggle with consistent, nuanced longitudinal tracking and integration of evolving personal context across sessions.",
+      "_timestamp": "2026-04-06T05:17:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Misadvising clients about appropriate counseling can lead to delayed or suboptimal care and worsening mental health, but most errors are not immediately irreversible and can be corrected over time.",
+      "adequacy_evidence": "Even with supervision or review, AI may miss subtle risk factors (e.g., suicidality, complex comorbidities), leaving residual risk that is concerning but not consistently catastrophic.",
+      "_timestamp": "2026-04-06T05:17:28"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "This task depends heavily on client trust, perceived empathy, and professional legitimacy; the client's willingness to engage is central to effectiveness.",
+      "adequacy_evidence": "Many clients are reluctant to accept AI in a counseling-adjacent advisory role, particularly for sensitive mental health decisions, and this resistance would significantly reduce engagement and trust.",
+      "_timestamp": "2026-04-06T05:17:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State laws define the practice of psychology/counseling and require a licensed human provider to deliver or be responsible for such services; unlicensed entities cannot independently provide counseling advice. Since AI cannot hold licensure or assume legal responsibility, these rules effectively prohibit autonomous AI performance of this task.",
+      "_timestamp": "2026-04-06T05:17:29"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

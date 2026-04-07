@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1231.00",
+  "task_id": 19003,
+  "task_statement": "Analyze and report computer network security breaches or attempted breaches.",
+  "occupation_title": "Computer Network Support Specialists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Analyzing network security breaches typically involves reviewing digital logs, alerts, and monitoring tools and then documenting or reporting findings, all of which can be done via computer systems remotely."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Security breaches span a highly heterogeneous, adversarial, and evolving distribution (malware types, intrusion methods, network architectures, attacker behaviors), requiring coverage of many edge cases and novel patterns.",
+      "adequacy_evidence": "While there are substantial public datasets, logs, and incident reports, much high-quality, process-level data (real enterprise breaches, analyst workflows) is proprietary or sparse, leaving some important subpopulations underrepresented but partially synthesizable.",
+      "_timestamp": "2026-04-06T05:30:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Analyzing network breaches requires synthesizing large volumes of heterogeneous data (logs, alerts, traffic traces, system states) and maintaining an evolving timeline of events where missing correlations can lead to incorrect conclusions.",
+      "adequacy_evidence": "Current agents can use tools to retrieve and summarize large datasets, but they still exhibit context loss, imperfect retrieval across sources, and drift in multi-step incident reconstruction, leading to moderate gaps in managing full task state.",
+      "_timestamp": "2026-04-06T05:30:44"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step investigation workflows (log analysis, correlation, hypothesis testing, and reporting) where steps are interdependent but typically bounded in length rather than deeply extended chains.",
+      "adequacy_evidence": "Current AI agents can handle structured investigative sequences with tooling, but performance can degrade over longer or more complex cases due to error accumulation and occasional loss of intermediate context.",
+      "_timestamp": "2026-04-06T05:30:44"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting security events requires some experience-based judgment to distinguish benign anomalies from true threats and to contextualize indicators within a specific network environment.",
+      "adequacy_evidence": "Current AI agents can replicate many analytic patterns using logs, threat intel, and rules, but often lack nuanced calibration for organization-specific context and subtle attacker behavior, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T05:30:44"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Analyzing network security breaches often benefits from access to prior incident reports, historical logs, and patterns of past attacks, but many individual analyses can still be conducted on a self-contained set of current data.",
+      "adequacy_evidence": "Current AI systems can store and retrieve incident histories via external databases, but they can struggle with consistently surfacing the most relevant past cases or maintaining coherent long-term context without careful system design.",
+      "_timestamp": "2026-04-06T05:30:44"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining what constitutes a meaningful breach, its severity, and what to include in a report depends on organizational policies, threat context, and implicit priorities (e.g., risk tolerance, compliance needs).",
+      "adequacy_evidence": "Agents can follow standard incident response frameworks and infer many goals, but often miss organization-specific nuances or implicit reporting expectations without iterative human guidance.",
+      "_timestamp": "2026-04-06T05:30:44"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task primarily involves textual and structured data (logs, alerts, reports), but can include non-text inputs like packet captures, network traffic visualizations, and dashboard graphics for thorough analysis.",
+      "adequacy_evidence": "Current agents can handle log analysis and some structured network data well, but are less reliable when interpreting raw packet data, complex visualizations, or integrating cross-modal signals in nuanced breach scenarios.",
+      "_timestamp": "2026-04-06T05:30:45"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Security breach analysis often occurs under incident response conditions where rapid triage and reporting (seconds to minutes) are critical to contain threats and limit damage.",
+      "adequacy_evidence": "AI agents can quickly process logs and surface likely issues, but deeper forensic reasoning and correlation across systems may require longer runtimes, creating some quality loss under tight time constraints.",
+      "_timestamp": "2026-04-06T05:30:45"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from analyzing or reporting network security breaches. While sector-specific rules (e.g., HIPAA, FISMA) impose requirements on handling data and incident reporting, they do not mandate that only humans perform the analysis.",
+      "_timestamp": "2026-04-06T05:30:46"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether activity constitutes a true breach versus benign anomaly requires deep analysis of logs, context, and attacker patterns; mistakes can be subtle and not immediately observable without expert review.",
+      "adequacy_evidence": "Current AI systems can misinterpret logs, miss novel attack patterns, or overflag benign events, so outputs require careful, time-intensive validation by skilled analysts using multiple tools and data sources.",
+      "_timestamp": "2026-04-06T05:30:46"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reporting findings to internal stakeholders (e.g., IT teams, management) who rely on the analysis, but the performer's identity is not central to effectiveness.",
+      "adequacy_evidence": "Organizations already accept automated and AI-assisted security analysis tools, and stakeholders generally prioritize accuracy and timeliness over whether a human or AI produced the report.",
+      "_timestamp": "2026-04-06T05:30:47"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Failing to correctly identify or accurately report a security breach can lead to data loss, system compromise, regulatory violations, and significant financial or reputational damage, so even rare residual errors can have severe consequences.",
+      "adequacy_evidence": "Even with logs, monitoring tools, and human review, AI systems can miss novel or subtle attack patterns or misinterpret signals, leaving some non-negligible residual risk that remains concerning but not categorically prohibitive.",
+      "_timestamp": "2026-04-06T05:30:47"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2141.00",
+  "task_id": 20737,
+  "task_statement": "Assist drafters in developing the structural design of products, using drafting tools or computer-assisted drafting equipment or software.",
+  "occupation_title": "Mechanical Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Assisting drafters typically involves collaborating on CAD models, drawings, and design files using computer-aided drafting software, which can be done remotely. However, some instances involve reviewing physical prototypes, drawings, or coordinating in person with drafting teams."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assisting with structural design requires some experience-based judgment about load paths, material behavior, and manufacturability that goes beyond explicit drafting rules, but much of it is guided by established engineering principles and standards.",
+      "adequacy_evidence": "Current agents can reproduce many standard design heuristics and support drafting workflows, but they show gaps in nuanced, context-specific engineering judgment in non-routine or edge-case scenarios.",
+      "_timestamp": "2026-04-06T00:42:06"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of products, materials, and industry standards, but much of the work follows well-documented CAD practices, engineering conventions, and repeatable design patterns.",
+      "adequacy_evidence": "Extensive CAD datasets, engineering documentation, tutorials, and synthetic generation pipelines provide strong coverage of both final designs and step-by-step drafting workflows across domains.",
+      "_timestamp": "2026-04-06T00:42:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Structural design assistance requires interpreting engineering requirements, safety factors, materials, and standards that are partly specified but often involve implicit constraints and coordination with engineers' intent.",
+      "adequacy_evidence": "Current agents can infer many design goals from provided specs and context, but they often miss implicit engineering considerations or preferences, requiring iterative human correction.",
+      "_timestamp": "2026-04-06T00:42:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves iterative coordination with drafters, applying design constraints, reviewing outputs, and refining drawings, requiring consistency across multiple interdependent steps but typically in modular segments.",
+      "adequacy_evidence": "AI agents can handle multi-step drafting assistance workflows, but over longer sequences they can exhibit drift in constraints or lose consistency across revisions, requiring oversight and correction.",
+      "_timestamp": "2026-04-06T00:42:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally involves interpreting and generating CAD models, technical drawings, and spatial geometry, requiring strong visual-spatial and cross-modal reasoning beyond text.",
+      "adequacy_evidence": "Current agents can assist with CAD generation and interpretation in structured cases, but struggle with complex, precise geometric constraints, nuanced drafting conventions, and iterative visual refinement.",
+      "_timestamp": "2026-04-06T00:42:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking multiple design parameters (dimensions, materials, constraints, standards) and coordinating them within CAD workflows, requiring active but not extreme within-session information management.",
+      "adequacy_evidence": "Current agents can use tools and structured representations to manage design context, but may lose or mis-handle interdependent constraints and evolving state in complex drafting sessions.",
+      "_timestamp": "2026-04-06T00:42:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Structural design work is iterative and project-based, requiring reuse of prior drafts, design constraints, and evolving specifications across sessions, but typically within bounded project contexts rather than long-term case histories.",
+      "adequacy_evidence": "Current AI systems integrated with CAD tools, file storage, and version control can reliably persist and retrieve project data across sessions, with minimal gaps in maintaining necessary continuity.",
+      "_timestamp": "2026-04-06T00:42:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Assisting with structural design in CAD workflows typically allows minutes to hours for iteration, analysis, and refinement rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI agents can deliver high-quality drafting assistance within these relaxed timeframes without needing to truncate reasoning, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T00:42:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves collaboration with drafters who must interpret and use the engineer\u2019s guidance, so there is some stakeholder interaction, though it is internal and task-focused.",
+      "adequacy_evidence": "Engineering teams already rely heavily on software tools and automation in drafting workflows, and AI assistance in this context is unlikely to face meaningful resistance if it improves efficiency.",
+      "_timestamp": "2026-04-06T00:42:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no prohibition on AI assisting with drafting or design, but engineering work that affects public safety typically requires review and sign-off by a licensed Professional Engineer. This creates a partial constraint where AI can assist but cannot independently fulfill legally recognized engineering responsibility.",
+      "_timestamp": "2026-04-06T00:42:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Structural design outputs must meet safety factors, material constraints, and tolerances, and errors (e.g., stress miscalculations, interference issues) are often subtle and require expert review, simulation, or testing to detect.",
+      "adequacy_evidence": "AI-generated CAD or design suggestions can be checked with existing engineering tools (e.g., FEA, rule checks), but they still require careful expert validation because current systems make non-obvious mistakes with enough frequency to necessitate consistent oversight.",
+      "_timestamp": "2026-04-06T00:42:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in structural design drawings can propagate into manufacturing defects or product failures, potentially causing safety issues or costly redesigns, so even small residual errors matter after review.",
+      "adequacy_evidence": "With standard engineering checks (peer review, simulation, CAD validation), many AI-generated drafting errors can be caught, but subtle design misinterpretations or edge-case oversights can still slip through at a non-negligible rate.",
+      "_timestamp": "2026-04-06T00:42:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

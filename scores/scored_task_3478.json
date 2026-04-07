@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1121.00",
+  "task_id": 3478,
+  "task_statement": "Review and analyze computer printouts and performance indicators to locate code problems, and correct errors by correcting codes.",
+  "occupation_title": "Computer Systems Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Reviewing performance indicators or logs and correcting code errors are standard software debugging activities that can be done entirely on a computer using development tools and log files without any physical presence or equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans diverse systems, programming languages, log formats, and performance contexts, but follows recurring debugging patterns and error types across environments.",
+      "adequacy_evidence": "Extensive code repositories, debugging transcripts, log datasets, and instructional materials provide rich process-level signal, and synthetic environments can replicate most remaining scenarios.",
+      "_timestamp": "2026-04-05T21:11:51"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Debugging from logs and performance indicators often relies on experience-based pattern recognition (e.g., recognizing subtle failure signatures or performance anomalies) beyond explicit rules, but much of it is still grounded in documented diagnostics and reproducible methods.",
+      "adequacy_evidence": "Current agents can handle many standard debugging patterns and log analyses, but they still struggle with nuanced, context-specific system behaviors and edge cases that require seasoned judgment, leading to moderate gaps.",
+      "_timestamp": "2026-04-05T21:11:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the goal is broadly defined (identify and fix code issues from outputs and metrics), determining what constitutes a 'problem' often depends on implicit expectations about system behavior, performance baselines, and context-specific norms.",
+      "adequacy_evidence": "Current agents can infer many debugging objectives from logs and metrics, but they often miss context-specific expectations or subtle performance issues without iterative human guidance.",
+      "_timestamp": "2026-04-05T21:11:52"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves iterative steps\u2014examining outputs, diagnosing issues, modifying code, and rechecking results\u2014requiring consistency across multiple dependent actions but not extremely long or tightly coupled sequences.",
+      "adequacy_evidence": "AI agents can sustain coherent debugging workflows over moderate sequences, but performance can degrade with longer iterations due to context drift or missed constraints, leading to occasional compounding errors.",
+      "_timestamp": "2026-04-05T21:11:52"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Analyzing printouts and performance indicators to locate code problems often involves large logs, multiple metrics, and interdependent code segments, where missing a detail can lead to incorrect diagnosis or fixes.",
+      "adequacy_evidence": "Current agents can handle large contexts with retrieval tools, but still exhibit issues with losing salient details, imperfect summarization, or misalignment between logs and code during extended debugging workflows.",
+      "_timestamp": "2026-04-05T21:11:53"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading code, logs, and textual performance indicators; any visualizations (e.g., charts) can typically be represented or interpreted in text form.",
+      "adequacy_evidence": "Current AI agents handle text-based code analysis and log interpretation well, and any occasional simple visual inputs (like basic charts) are within existing multimodal capabilities.",
+      "_timestamp": "2026-04-05T21:11:53"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing printouts and performance indicators to debug code is typically an offline analytical task where minutes to hours are acceptable, not requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform deep analysis without meaningful degradation, as there is no strict latency pressure constraining reasoning.",
+      "_timestamp": "2026-04-05T21:11:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Debugging often benefits from knowledge of prior bugs, system history, and recurring performance patterns, but many issues can still be resolved using current logs and code without deep longitudinal context.",
+      "adequacy_evidence": "Agents can use external memory (repositories, logs, issue trackers) to retain and retrieve past context, but they inconsistently surface relevant historical details and may miss implicit patterns across sessions.",
+      "_timestamp": "2026-04-05T21:11:54"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit or restrict AI systems from reviewing code, analyzing performance outputs, or correcting programming errors in this context.",
+      "_timestamp": "2026-04-05T21:11:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal technical activity (analyzing printouts and fixing code) with no direct interaction with external stakeholders; outputs are consumed within engineering workflows.",
+      "adequacy_evidence": "Since there are no meaningful stakeholders whose acceptance depends on performer identity, AI use in this role faces little to no resistance.",
+      "_timestamp": "2026-04-05T21:11:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Code fixes can often be validated via tests, logs, and performance metrics, but some defects (e.g., edge cases, regressions, or misinterpreted indicators) require careful analysis and may not surface immediately.",
+      "adequacy_evidence": "AI-generated diagnoses and fixes are frequently plausible but imperfect, so meaningful verification through testing and review is still needed, though established tooling keeps this burden moderate rather than severe.",
+      "_timestamp": "2026-04-05T21:11:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Undetected coding errors can lead to system malfunctions, downtime, or degraded performance, but most environments include testing and rollback mechanisms that make occasional residual errors survivable.",
+      "adequacy_evidence": "Even after standard QA and monitoring, AI-generated fixes can introduce subtle logic or integration bugs that are not always caught, leaving a non-trivial but generally manageable residual risk.",
+      "_timestamp": "2026-04-05T21:11:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

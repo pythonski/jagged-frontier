@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-3092.00",
+  "task_id": 8656,
+  "task_statement": "Transcribe recorded proceedings in accordance with established formats.",
+  "occupation_title": "Court Reporters and Simultaneous Captioners",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Transcribing recorded proceedings involves listening to audio/video recordings and producing formatted text transcripts using computer software, which can be done entirely on a computer without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Proceedings vary across speakers, accents, audio quality, and legal contexts, but follow relatively structured formats and recurring linguistic patterns.",
+      "adequacy_evidence": "Large-scale speech and legal transcription datasets, along with synthetic audio generation and formatting examples, provide broad and process-relevant coverage for training modern systems.",
+      "_timestamp": "2026-04-05T23:04:22"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is governed by explicit rules: verbatim transcription and adherence to well-defined court formatting standards, leaving little room for interpretation of goals or success criteria.",
+      "adequacy_evidence": "Current AI systems can reliably follow explicit transcription and formatting instructions, with minimal need for iterative clarification or goal inference.",
+      "_timestamp": "2026-04-05T23:04:22"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Court proceedings can span hours and require continuous, consistent transcription with correct speaker attribution and strict adherence to formatting rules throughout the entire record.",
+      "adequacy_evidence": "Modern AI transcription systems can handle long audio via chunking and maintain reasonable consistency, but still exhibit some drift in speaker tracking, formatting, or error accumulation over very long sessions.",
+      "_timestamp": "2026-04-05T23:04:23"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of transcription follows explicit rules and formatting standards, accurate speaker attribution, handling unclear audio, and interpreting overlapping speech require some experience-based judgment.",
+      "adequacy_evidence": "Current AI systems perform well on standard transcription but still struggle with nuanced audio conditions (e.g., heavy accents, crosstalk, ambiguous utterances), indicating partial gaps in this experiential calibration.",
+      "_timestamp": "2026-04-05T23:04:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires continuous tracking of spoken content, speaker turns, and formatting conventions across a proceeding, but the information is largely sequential and locally structured rather than highly heterogeneous.",
+      "adequacy_evidence": "Current AI transcription systems handle streaming input well but can lose local context such as speaker attribution or formatting consistency over longer spans, requiring some correction.",
+      "_timestamp": "2026-04-05T23:04:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each transcription task is largely self-contained, relying on the current recording and established formatting rules rather than accumulated cross-session context.",
+      "adequacy_evidence": "Current AI systems can easily handle any minimal reuse of templates or glossaries, and no persistent longitudinal memory is required for competent performance.",
+      "_timestamp": "2026-04-05T23:04:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Court reporting and live captioning require near-real-time transcription with minimal delay while maintaining high accuracy and formatting standards.",
+      "adequacy_evidence": "Modern speech-to-text systems can operate in real time, but latency constraints still reduce accuracy in complex, multi-speaker, or jargon-heavy proceedings, especially when formatting and speaker attribution are required.",
+      "_timestamp": "2026-04-05T23:04:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task fundamentally requires converting spoken audio from proceedings into text, making audio perception essential, though it does not involve complex cross-modal reasoning beyond speech recognition.",
+      "adequacy_evidence": "Current AI speech-to-text systems perform well on clear audio but still struggle with overlapping speech, accents, legal terminology, and noisy courtroom conditions, leading to moderate reliability gaps.",
+      "_timestamp": "2026-04-05T23:04:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Court transcripts become official legal records used in appeals and proceedings; even small residual errors (e.g., wording, speaker attribution) can materially affect legal outcomes.",
+      "adequacy_evidence": "With audio replay and human review, many AI transcription errors can be caught, but subtle inaccuracies (legal terminology, homophones, speaker distinctions) can still slip through at rates that remain concerning for high-stakes legal use.",
+      "_timestamp": "2026-04-05T23:04:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification requires careful comparison against audio, attention to speaker attribution, legal terminology, and formatting rules; errors are detectable but not trivially or instantly, often needing replay and domain familiarity.",
+      "adequacy_evidence": "State-of-the-art ASR makes noticeable but non-negligible errors (e.g., names, overlaps, punctuation), so human review is still needed to ensure accuracy and compliance, though the burden is not extreme.",
+      "_timestamp": "2026-04-05T23:04:26"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Court transcript preparation and certification are governed by state laws requiring licensed/certified court reporters to produce and attest to official records, which effectively prohibits fully autonomous AI from performing this task in an official capacity.",
+      "_timestamp": "2026-04-05T23:04:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The transcripts are relied upon by judges, attorneys, and parties, and official acceptance often depends on certified reporters, so the performer\u2019s role has some importance beyond the raw text.",
+      "adequacy_evidence": "While automated transcription is increasingly used, courts and legal stakeholders still show partial resistance due to concerns about accuracy, certification, and admissibility, though this resistance is not absolute.",
+      "_timestamp": "2026-04-05T23:04:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

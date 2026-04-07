@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9041.00",
+  "task_id": 23318,
+  "task_statement": "Review insurance policy to determine coverage.",
+  "occupation_title": "Insurance Claims and Policy Processing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most insurance policy reviews are done using digital policy management systems or scanned documents on a computer. However, some organizations still use or receive physical policy documents that must be reviewed in person."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple policy types, endorsements, and jurisdiction-specific clauses, but operates within a relatively structured and rule-governed domain of insurance contracts.",
+      "adequacy_evidence": "Large corpora of insurance policies, legal interpretations, and claims examples exist, but much high-quality annotated decision data and internal insurer guidelines are proprietary, leaving some gaps that can only be partially filled via synthesis or fine-tuning.",
+      "_timestamp": "2026-04-06T01:15:10"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining coverage requires interpreting policy language, exclusions, endorsements, and aligning them with specific claim circumstances, which often involves context-dependent judgment beyond a literal reading.",
+      "adequacy_evidence": "Current agents can parse policy text and apply rules in standard cases, but they often struggle with nuanced clause interactions and implicit legal interpretations, requiring human clarification or iteration.",
+      "_timestamp": "2026-04-06T01:15:10"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining coverage relies largely on explicit policy language and standardized guidelines, but clerks often apply experience to interpret ambiguous clauses, exclusions, or edge cases in context.",
+      "adequacy_evidence": "Current agents handle straightforward policy interpretation well but show inconsistent calibration on ambiguous or context-sensitive clauses, especially where subtle judgment or precedent-like reasoning is needed.",
+      "_timestamp": "2026-04-06T01:15:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Insurance policies are primarily text-based documents; determining coverage involves reading and interpreting written clauses and terms.",
+      "adequacy_evidence": "Current AI systems handle text ingestion and analysis well, including OCR for scanned documents, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-06T01:15:12"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing a policy for coverage is typically a self-contained task based on the policy document and current claim details, without needing accumulated cross-session context.",
+      "adequacy_evidence": "Since the task is largely instance-specific, existing AI systems do not require persistent cross-session memory to perform it effectively.",
+      "_timestamp": "2026-04-06T01:15:12"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Requires tracking multiple policy sections, endorsements, exclusions, and the specifics of a claim, with some cross-referencing and synthesis but typically within bounded document sets.",
+      "adequacy_evidence": "Current agents can ingest and retrieve from long policies using tools, but may miss or misweight relevant clauses or lose context across chunks, leading to occasional gaps or drift.",
+      "_timestamp": "2026-04-06T01:15:12"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reading and interpreting multiple sections of a policy (coverage terms, exclusions, conditions) and mapping them to a claim scenario, requiring several interdependent reasoning steps but not extremely long chains.",
+      "adequacy_evidence": "Well-scaffolded AI systems with document retrieval and structured reasoning can maintain consistency across these moderate-length sequences with little degradation, especially for text-based policy analysis.",
+      "_timestamp": "2026-04-06T01:15:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing policy documents for coverage is typically a back-office task with turnaround expectations in minutes to hours rather than real-time response.",
+      "adequacy_evidence": "Frontier AI agents can perform document analysis with sufficient depth well within these relaxed time constraints, so speed does not force meaningful quality tradeoffs.",
+      "_timestamp": "2026-04-06T01:15:13"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining coverage involves interpreting policy language, exclusions, and endorsements; errors can be found by rechecking the source documents but require domain familiarity and careful reading.",
+      "adequacy_evidence": "Current AI can extract and summarize policy terms but still misinterprets nuanced clauses or exclusions, so human review is needed to verify correctness with moderate effort.",
+      "_timestamp": "2026-04-06T01:15:13"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incorrect coverage determinations can lead to improper claim approvals or denials, causing financial and legal consequences, but these decisions are typically reviewable and correctable through appeals or supervisory oversight.",
+      "adequacy_evidence": "Even after standard checks, AI may misinterpret nuanced policy language or exceptions, leaving some residual risk that could still impact outcomes, though not at a catastrophic or irrecoverable level.",
+      "_timestamp": "2026-04-06T01:15:14"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task informs decisions that affect policyholders and other stakeholders, but it is typically performed as a back-office analysis with limited direct interaction or reliance on the clerk\u2019s personal identity.",
+      "adequacy_evidence": "Stakeholders generally care about the correctness of coverage determinations rather than who performed the review, and AI-assisted or automated policy analysis is already widely accepted in insurance operations.",
+      "_timestamp": "2026-04-06T01:15:15"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Many states require licensed adjusters or authorized personnel to make or approve coverage determinations, which can limit fully autonomous AI decision-making. However, there is no explicit prohibition on AI assisting with or performing the review itself under human supervision.",
+      "_timestamp": "2026-04-06T01:15:15"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

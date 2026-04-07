@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1069.05",
+  "task_id": 17145,
+  "task_statement": "Prescribe radionuclides and dosages to be administered to individual patients.",
+  "occupation_title": "Nuclear Medicine Physicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Prescribing radionuclides and dosages is primarily a clinical decision and order-entry task typically done through electronic health records or digital systems. However, it is often integrated with in-person clinical evaluation and on-site nuclear medicine workflows."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Dosing decisions depend on highly variable patient-specific factors (diagnosis, comorbidities, prior treatments, imaging findings, renal function), creating a long-tailed, context-sensitive distribution across cases.",
+      "adequacy_evidence": "Clinical guidelines, published studies, and some case reports provide partial coverage, but detailed decision processes and rich patient-level data are often proprietary or sparse, leaving gaps that are only partially addressable through synthesis or fine-tuning.",
+      "_timestamp": "2026-04-06T11:14:00"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting radionuclides and dosages requires nuanced clinical judgment integrating patient-specific factors (e.g., comorbidities, prior exposures, organ function, therapeutic goals) and balancing efficacy with radiation risk, which goes beyond fixed protocols.",
+      "adequacy_evidence": "Current AI can follow dosing guidelines and incorporate structured patient data, but lacks robust clinical calibration for nuanced tradeoffs and atypical cases, leading to gaps in non-routine decision-making.",
+      "_timestamp": "2026-04-06T11:14:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining radionuclide type and dosage depends on nuanced clinical judgment about patient-specific factors (diagnosis, comorbidities, prior treatments, risk tolerance) and evolving therapeutic goals that are not fully explicit in guidelines.",
+      "adequacy_evidence": "Current AI agents struggle to reliably infer and balance these latent clinical priorities and contextual tradeoffs, often requiring substantial human interpretation and iteration to reach appropriate prescriptions.",
+      "_timestamp": "2026-04-06T11:14:00"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step clinical workflow (reviewing patient data, selecting an appropriate radionuclide, calculating and adjusting dosage, and documenting), where each step depends on prior judgments but the overall sequence is not extremely long.",
+      "adequacy_evidence": "Frontier AI agents can generally maintain coherence across these moderate-length clinical reasoning chains, but some degradation can occur through missed constraints or compounding judgment errors over multiple steps.",
+      "_timestamp": "2026-04-06T11:14:00"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dosing decisions depend on patient-specific longitudinal data (prior imaging, treatments, renal function, cumulative radiation exposure), but this information is typically stored in external medical records rather than requiring the physician to personally retain it across sessions.",
+      "adequacy_evidence": "Current AI systems can reliably access and retrieve structured patient histories from EHRs or databases, so cross-session memory needs are met via external systems rather than being a core limitation of the agent.",
+      "_timestamp": "2026-04-06T11:14:02"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple patient-specific data points (e.g., weight, renal function, prior treatments, imaging findings, contraindications) and protocol guidelines within a single decision episode, but the total information volume is structured and bounded.",
+      "adequacy_evidence": "Current agents can generally track and organize these structured inputs, but may inconsistently retain or correctly prioritize all relevant clinical details, especially when information is dispersed across sources or requires careful synthesis.",
+      "_timestamp": "2026-04-06T11:14:02"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Prescribing radionuclides and dosages relies in part on interpreting medical imaging (e.g., PET/CT scans) alongside textual clinical data, making multimodal input important but not exclusively dominant.",
+      "adequacy_evidence": "Current AI systems can assist with medical image analysis but remain inconsistent on complex or subtle cases, especially when integrating imaging with clinical context for treatment decisions.",
+      "_timestamp": "2026-04-06T11:14:02"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Prescribing radionuclides and dosages is a deliberative clinical decision that typically allows minutes or longer for review of patient data, protocols, and safety considerations rather than requiring immediate response.",
+      "adequacy_evidence": "Because tight latency is not required, AI systems can use extended reasoning and tool use without time pressure, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T11:14:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying radionuclide selection and dosing requires specialized medical expertise, patient-specific calculations (e.g., weight, renal function, radiation safety), and understanding of nuanced clinical indications; errors may not be immediately observable and can have delayed effects.",
+      "adequacy_evidence": "Current AI systems can make clinically plausible but incorrect dosing or contraindication judgments, and these errors are difficult to detect without expert review, necessitating thorough and time-intensive verification in practice.",
+      "_timestamp": "2026-04-06T11:14:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Federal (NRC) and state regulations require that radionuclides be prescribed by an authorized, licensed physician (e.g., an \u2018Authorized User\u2019 under NRC rules) with appropriate credentials and supervision responsibilities. These rules explicitly mandate a human licensee for prescribing and administration decisions, prohibiting autonomous AI from performing this task.",
+      "_timestamp": "2026-04-06T11:14:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "This task directly affects patient treatment and safety, requiring trust in the physician\u2019s clinical judgment and authority from both patients and care teams.",
+      "adequacy_evidence": "Patients, clinicians, and institutions are unlikely to accept an AI system autonomously prescribing radionuclides due to safety, liability, and trust concerns; acceptance would be severely limited without human oversight.",
+      "_timestamp": "2026-04-06T11:14:03"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Incorrect radionuclide selection or dosage can cause serious radiation injury, ineffective treatment, or long-term cancer risk; even rare errors can have severe, irreversible consequences.",
+      "adequacy_evidence": "Even with clinical review and protocol checks, AI systems can introduce subtle patient-specific dosing or contraindication errors that are difficult to fully eliminate, leaving residual risk at an unacceptable level for this high-stakes task.",
+      "_timestamp": "2026-04-06T11:14:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

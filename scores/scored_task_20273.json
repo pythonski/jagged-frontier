@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5011.00",
+  "task_id": 20273,
+  "task_statement": "Check import or export documentation to determine cargo contents and use tariff coding system to classify goods according to fee or tariff group.",
+  "occupation_title": "Cargo and Freight Agents",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "The task mainly involves reviewing shipping documentation and assigning tariff codes, which is commonly done through digital documents and customs or logistics software. However, in many freight terminals agents still handle or verify physical paperwork on-site, so some instances require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a highly diverse and long-tailed set of goods, documentation formats, and jurisdiction-specific tariff interpretations, including ambiguous or novel product descriptions.",
+      "adequacy_evidence": "There is substantial public data (HS codes, customs rulings, trade manuals, example classifications) enabling training, but real-world edge cases and proprietary shipment documentation are unevenly represented.",
+      "_timestamp": "2026-04-06T01:12:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on interpreting sometimes incomplete or ambiguously worded shipping documents and mapping them to the correct tariff codes, which requires contextual judgment about product characteristics and classification rules.",
+      "adequacy_evidence": "Current AI agents can usually extract and map descriptions to tariff codes but often struggle with nuanced classification distinctions or missing context, requiring human review to resolve edge cases.",
+      "_timestamp": "2026-04-06T01:12:05"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tariff classification follows structured rules (e.g., HS codes and explanatory notes) but often requires experience to interpret ambiguous product descriptions, composite goods, or borderline categories.",
+      "adequacy_evidence": "Well-scaffolded agents can apply tariff rules and reference databases effectively, but they still struggle with nuanced, context-dependent classifications and subtle judgment calls in non-routine cases.",
+      "_timestamp": "2026-04-06T01:12:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing multiple structured documents (invoices, bills of lading, product descriptions) and mapping details to tariff codes, requiring moderate information integration and attention to detail.",
+      "adequacy_evidence": "Frontier agents can reliably parse and track relevant fields across documents within a single session, with minimal context loss given typical document lengths and structured formats.",
+      "_timestamp": "2026-04-06T01:12:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each shipment\u2019s documentation can be reviewed and classified independently using the tariff schedule; prior cases or long-term history are not required to perform the task.",
+      "adequacy_evidence": "Since the task is self-contained per instance, existing AI systems do not need persistent cross-session memory to perform it effectively.",
+      "_timestamp": "2026-04-06T01:12:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step process\u2014reviewing documentation, extracting relevant cargo details, and mapping them to tariff codes\u2014but the sequence is relatively short and loosely coupled.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably handle document parsing and rule-based classification across these steps without significant degradation over the sequence length.",
+      "_timestamp": "2026-04-06T01:12:06"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and interpreting structured import/export documents and applying tariff codes, which are fundamentally text-based activities.",
+      "adequacy_evidence": "Current AI systems handle text and scanned document parsing (via OCR) reliably, and no substantial multimodal reasoning beyond text is required.",
+      "_timestamp": "2026-04-06T01:12:06"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Tariff classification relies on nuanced interpretation of product descriptions and legal tariff schedules; misclassifications are often subtle and require domain expertise and careful cross-referencing to detect.",
+      "adequacy_evidence": "Current AI systems frequently misclassify HS codes or overlook fine distinctions in product categories, meaning human experts must thoroughly review outputs to catch non-obvious errors.",
+      "_timestamp": "2026-04-06T01:12:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Classification and document checking are part of operational workflows where turnaround in seconds to a few minutes is typical, but not instantaneous real-time decision-making.",
+      "adequacy_evidence": "Frontier AI agents can parse documents and apply tariff codes quickly within the time budget without needing to truncate reasoning, maintaining high accuracy at acceptable speeds.",
+      "_timestamp": "2026-04-06T01:12:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect tariff classification or cargo documentation can lead to fines, shipment delays, customs penalties, or legal compliance issues, so even rare residual errors can have significant consequences.",
+      "adequacy_evidence": "AI can often classify goods accurately with structured data and references, but edge cases, ambiguous descriptions, or nuanced regulatory distinctions still produce nontrivial residual error risk even after standard checks.",
+      "_timestamp": "2026-04-06T01:12:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. customs regulations require that certain filings and classifications be conducted under the authority of a licensed customs broker, who is legally responsible for accuracy. While AI can assist, the requirement for a licensed human to oversee and sign off creates a partial restriction rather than an outright prohibition.",
+      "_timestamp": "2026-04-06T01:12:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task interacts with stakeholders such as customs authorities, shippers, and internal compliance teams who rely on correct classification, but the performer\u2019s personal identity or interpersonal role is not central.",
+      "adequacy_evidence": "Stakeholders already accept automated and software-assisted tariff classification tools, and acceptance is driven primarily by accuracy and compliance rather than whether a human performs the task.",
+      "_timestamp": "2026-04-06T01:12:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

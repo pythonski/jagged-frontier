@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4051.00",
+  "task_id": 2582,
+  "task_statement": "Refer unresolved customer grievances to designated departments for further investigation.",
+  "occupation_title": "Customer Service Representatives",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Referring unresolved grievances is typically done through CRM systems, email, internal messaging, or ticketing platforms, all of which can be handled entirely via computer and internet. The task does not inherently require physical presence or non-digital tools."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied complaint types and organization-specific routing rules, but follows relatively structured patterns of classification and escalation across industries.",
+      "adequacy_evidence": "There is abundant training data in call center logs, ticketing systems, and SOPs, and routing decisions can be well captured via labeled examples or synthetic workflows, leaving little coverage gap.",
+      "_timestamp": "2026-04-06T05:43:48"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While routing often follows documented escalation procedures, some cases require judgment to interpret issue severity, ambiguity, or correct departmental fit based on nuanced customer context.",
+      "adequacy_evidence": "Frontier AI agents can reliably apply escalation rules and pattern-match to appropriate departments, and their residual errors in edge-case judgment are limited and correctable with standard guidance.",
+      "_timestamp": "2026-04-06T05:43:49"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves a short, loosely coupled sequence: identifying an unresolved issue and routing it to the appropriate department, without extended multi-step dependencies.",
+      "adequacy_evidence": "AI agents can reliably handle brief routing workflows without degradation, maintaining consistency across the few required steps.",
+      "_timestamp": "2026-04-06T05:43:49"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Determining that a grievance is truly unresolved and selecting the correct department can depend on context, company policies, and interpretation of customer intent, but these are typically guided by established procedures and routing rules.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably follow decision trees, classify issues, and infer appropriate routing from context and past cases, handling most ambiguity with minimal need for human clarification.",
+      "_timestamp": "2026-04-06T05:43:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires maintaining and summarizing key details of a customer complaint (issue description, prior interactions, account data) to route it \u10e1\u10ec\u10dd\u10e0ly, but the information volume is typically bounded and structured.",
+      "adequacy_evidence": "Current LLM-based agents reliably track, summarize, and pass along relevant within-episode context in customer service workflows, especially when supported by CRM integrations and structured forms.",
+      "_timestamp": "2026-04-06T05:43:49"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Referring unresolved grievances primarily involves reading customer descriptions and routing them via text-based CRM systems; non-text inputs are not central to the task.",
+      "adequacy_evidence": "Current AI agents handle text classification and routing effectively, and any occasional multimodal inputs (e.g., attachments) are not essential to performing the core task.",
+      "_timestamp": "2026-04-06T05:43:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer service workflows expect prompt handling, often within seconds to a minute, to maintain interaction flow and service efficiency.",
+      "adequacy_evidence": "Routing grievances to appropriate departments is a relatively simple classification task that current AI can perform accurately within tight latency constraints without requiring extended reasoning.",
+      "_timestamp": "2026-04-06T05:43:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Determining that a grievance is unresolved and routing it appropriately often relies on prior case history and interaction records, but the required context is typically structured and limited (e.g., status, prior actions).",
+      "adequacy_evidence": "Current AI agents integrated with CRM systems can reliably store and retrieve cross-session case data, making longitudinal context readily accessible with minimal failure rates.",
+      "_timestamp": "2026-04-06T05:43:51"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Misrouting or failing to refer a grievance can delay resolution and harm customer satisfaction, but issues are typically recoverable through follow-up and escalation tracking systems.",
+      "adequacy_evidence": "AI systems can reliably classify and route cases with structured inputs and audit trails, and any residual errors after standard checks are unlikely to create intolerable risk.",
+      "_timestamp": "2026-04-06T05:43:51"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordination with internal departments and indirectly affects customers, but acceptance does not hinge strongly on who or what performs the referral.",
+      "adequacy_evidence": "Internal teams and customers are generally indifferent to whether an AI or human routes grievances, as long as the referral is accurate and timely.",
+      "_timestamp": "2026-04-06T05:43:51"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Correct routing requires understanding the grievance content and matching it to the appropriate department, which involves some judgment but is usually guided by clear categories and can be checked via business rules or feedback loops.",
+      "adequacy_evidence": "AI can generally classify and route cases well, but edge cases and ambiguous complaints still lead to misrouting often enough that periodic human review or monitoring is needed.",
+      "_timestamp": "2026-04-06T05:43:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from routing or referring customer grievances to appropriate departments. While some regulated industries impose oversight or documentation requirements, they do not bar automated triage or referral functions.",
+      "_timestamp": "2026-04-06T05:43:51"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

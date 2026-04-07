@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.01",
+  "task_id": 16253,
+  "task_statement": "Monitor clinical trials or experiments to ensure adherence to established procedures or to verify the quality of data collected.",
+  "occupation_title": "Biostatisticians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Biostatisticians typically monitor trials by reviewing electronic data capture systems, statistical outputs, and reports remotely, but some instances involve on-site monitoring or direct observation of trial procedures to verify protocol adherence or data quality."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many monitoring tasks follow protocols (e.g., checking adherence, flagging missing data), experienced biostatisticians use judgment to recognize subtle protocol deviations, suspicious data patterns, or site-specific anomalies not fully captured by rules.",
+      "adequacy_evidence": "Current AI systems can apply predefined checks and detect statistical irregularities, but they lack robust calibration for nuanced, context-dependent judgments (e.g., distinguishing benign anomalies from meaningful issues) across diverse trial settings.",
+      "_timestamp": "2026-04-05T22:13:16"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clinical trial monitoring spans diverse protocols, therapeutic areas, site practices, regulatory contexts, and data anomaly types, creating a heterogeneous, long-tailed distribution of cases.",
+      "adequacy_evidence": "There is substantial accessible material (GCP guidelines, SOPs, monitoring reports, audit cases) and synthetic simulation is feasible, but many real-world edge cases (site misconduct, rare protocol deviations, nuanced data irregularities) are embedded in proprietary or sparse datasets.",
+      "_timestamp": "2026-04-05T22:13:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring trials involves ongoing, repeated checks across multiple stages (protocol adherence, data validation, audit trails), but many checks are modular and do not form a single tightly coupled dependency chain.",
+      "adequacy_evidence": "AI agents can handle structured, checklist-based monitoring workflows, but over extended sequences they may exhibit some drift or missed constraints without careful orchestration and state management.",
+      "_timestamp": "2026-04-05T22:13:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring clinical trials requires tracking protocol adherence, deviations, and data quality trends over the full lifecycle of a study, often across many sessions and timepoints.",
+      "adequacy_evidence": "Current agents can store and retrieve structured trial data and logs, but maintaining fully coherent, evolving study context (e.g., nuanced deviations, investigator behavior patterns) across long horizons is still imperfect and requires careful system design.",
+      "_timestamp": "2026-04-05T22:13:17"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical trial monitoring relies on formal protocols and SOPs, but also requires contextual judgment about protocol deviations, data anomalies, and site-specific practices that are not fully explicit.",
+      "adequacy_evidence": "Current agents can follow written protocols and flag clear inconsistencies, but often miss subtle contextual cues or implicit quality standards, requiring human oversight to interpret ambiguous cases.",
+      "_timestamp": "2026-04-05T22:13:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring trials requires integrating protocols, case report forms, audit logs, and incoming data streams, where missing small deviations or inconsistencies can affect compliance and data validity.",
+      "adequacy_evidence": "Agent systems with retrieval and tooling can handle large document sets, but they still show weaknesses in reliably tracking fine-grained inconsistencies and maintaining precise state across many heterogeneous inputs.",
+      "_timestamp": "2026-04-05T22:13:18"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring clinical trials for protocol adherence and data quality is typically done through periodic reviews, audits, or scheduled checks rather than requiring immediate, real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform thorough analyses within acceptable timeframes (minutes to hours), so latency does not meaningfully constrain output quality.",
+      "_timestamp": "2026-04-05T22:13:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring trials can involve reviewing charts, data visualizations, or occasional observational inputs (e.g., site procedures or instrument outputs), but much of the work is based on structured/tabular and textual data.",
+      "adequacy_evidence": "Current AI systems can adequately process common multimodal inputs like charts, forms, and basic visual records, and the task rarely hinges on nuanced perceptual judgments beyond their capabilities.",
+      "_timestamp": "2026-04-05T22:13:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Failures in monitoring clinical trials can compromise patient safety, invalidate study results, or lead to regulatory noncompliance, so even rare residual errors can have serious downstream consequences.",
+      "adequacy_evidence": "Even with standard quality checks, current AI systems can miss subtle protocol deviations or context-specific data integrity issues, leaving a non-trivial residual risk, though not uniformly catastrophic in all cases.",
+      "_timestamp": "2026-04-05T22:13:20"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Detecting protocol deviations or data quality issues in clinical trials often requires deep domain expertise, source data verification, and auditing across complex, longitudinal datasets where errors can be subtle and not immediately observable.",
+      "adequacy_evidence": "Current AI systems can flag anomalies but frequently miss nuanced protocol violations or context-specific data issues, meaning their outputs require intensive expert review and cross-checking to ensure reliability.",
+      "_timestamp": "2026-04-05T22:13:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Clinical trial monitoring is governed by FDA regulations and Good Clinical Practice (GCP) guidelines that require qualified human investigators and monitors to be responsible for oversight and data integrity, but they do not explicitly prohibit the use of AI tools. This creates partial restriction, as AI cannot independently fulfill the legally designated human roles.",
+      "_timestamp": "2026-04-05T22:13:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring clinical trials involves investigators, sponsors, and regulators who rely on the monitor\u2019s authority and credibility to ensure protocol adherence and data integrity.",
+      "adequacy_evidence": "While AI tools are increasingly used for data monitoring, stakeholders still expect qualified human oversight for compliance and accountability, leading to some resistance to fully autonomous AI in this role.",
+      "_timestamp": "2026-04-05T22:13:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2071.00",
+  "task_id": 547,
+  "task_statement": "Consult classification manuals to locate information about disease processes.",
+  "occupation_title": "Medical Records and Health Information Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Classification manuals for disease processes (e.g., ICD references) are commonly accessed through digital databases or PDFs, allowing the task to be done on a computer. However, some workplaces still use printed manuals or on-site reference materials, so not all instances are fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderately diverse set of disease classifications and edge cases across standardized manuals (e.g., ICD, DSM), but remains structured and bounded by those systems.",
+      "adequacy_evidence": "These manuals and their usage patterns are extensively digitized and publicly documented, providing ample representative data and procedural examples for training without major gaps.",
+      "_timestamp": "2026-04-06T03:47:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves structured lookup and navigation of standardized classification manuals (e.g., ICD), which are governed by explicit rules, indexing systems, and documented procedures.",
+      "adequacy_evidence": "Current AI agents can reliably follow indexing rules, map terminology, and retrieve relevant sections from manuals without needing experience-based judgment.",
+      "_timestamp": "2026-04-06T03:47:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a small sequence of steps such as identifying the condition, navigating classification manuals, and cross-referencing entries, requiring some consistency but not long, tightly coupled workflows.",
+      "adequacy_evidence": "Current AI agents can reliably follow short to moderate lookup and navigation sequences without noticeable degradation, especially with tool support for retrieval and indexing.",
+      "_timestamp": "2026-04-06T03:47:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves using structured classification manuals (e.g., ICD) where objectives are mostly explicit, but some interpretation of disease terminology and context is needed to select the correct information.",
+      "adequacy_evidence": "Current AI systems with retrieval and medical ontologies can reliably infer user intent and map queries to the correct sections, handling the modest ambiguity with minimal iteration.",
+      "_timestamp": "2026-04-06T03:47:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Consulting classification manuals is a self-contained lookup task; each query can be completed independently without needing prior case history or accumulated context.",
+      "adequacy_evidence": "Since the task does not rely on cross-session memory, current AI systems fully meet the requirement without needing persistent state across episodes.",
+      "_timestamp": "2026-04-06T03:47:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves navigating large classification manuals (e.g., ICD) and extracting relevant disease process details, requiring some active retrieval and short-term tracking of codes and definitions.",
+      "adequacy_evidence": "Well-tooled LLM agents can reliably search, retrieve, and summarize relevant sections without losing context, as the information scope per query is manageable.",
+      "_timestamp": "2026-04-06T03:47:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Consulting classification manuals for disease information is typically a back-office task with no strict real-time requirement; taking minutes to search and verify is acceptable.",
+      "adequacy_evidence": "AI systems can retrieve and reason over classification manuals well within this loose time budget, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-06T03:47:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Classification manuals (e.g., ICD coding guides) are primarily text-based and structured alphanumerically; locating disease process information relies on reading and interpreting text entries and indexes.",
+      "adequacy_evidence": "AI agents can fully handle text-based lookup, indexing, and retrieval tasks without needing multimodal perception or generation, so there is no modality-related shortfall.",
+      "_timestamp": "2026-04-06T03:47:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors can be detected by consulting the same classification manuals or cross-referencing standard coding resources, but doing so requires domain familiarity and careful lookup rather than being immediately obvious.",
+      "adequacy_evidence": "AI can often retrieve plausible but occasionally incorrect or misapplied classifications, so human review against authoritative manuals is still needed, though verification is straightforward for a trained technician.",
+      "_timestamp": "2026-04-06T03:47:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from consulting classification manuals to locate disease process information. Regulations like HIPAA govern data handling but do not restrict this specific task from being performed by AI systems.",
+      "_timestamp": "2026-04-06T03:47:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is an internal information retrieval activity using classification manuals, with outputs typically consumed within workflows where performer identity is not salient.",
+      "adequacy_evidence": "There are no meaningful stakeholders whose acceptance depends on whether a human or AI performs the lookup, and AI use in such back-office reference tasks is generally uncontroversial.",
+      "_timestamp": "2026-04-06T03:47:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in locating or interpreting classification manual information can lead to incorrect coding or documentation, affecting billing accuracy and data quality, but are typically detectable and correctable downstream.",
+      "adequacy_evidence": "With standard verification (e.g., cross-checking codes and references), current AI systems can reliably retrieve and interpret classification manual content, leaving minimal residual risk.",
+      "_timestamp": "2026-04-06T03:47:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-1011.00",
+  "task_id": 9728,
+  "task_statement": "Arrange for necessary maintenance or repair work.",
+  "occupation_title": "First-Line Supervisors of Office and Administrative Support Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Arranging maintenance or repair typically involves contacting vendors, scheduling service, and coordinating through email, phone, or software systems. However, supervisors may sometimes need to physically inspect issues or interact on-site with staff or technicians before arranging repairs."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of scenarios (different equipment types, vendors, urgency levels, and organizational policies) but follows broadly similar workflows like issue identification, vendor selection, and scheduling.",
+      "adequacy_evidence": "There is ample accessible data from helpdesk systems, maintenance logs, SOPs, and vendor coordination workflows, including process-level examples, enabling strong coverage through existing and synthetic training pipelines.",
+      "_timestamp": "2026-04-06T04:19:22"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining what maintenance is 'necessary,' appropriate timing, priority, and acceptable vendors depends on context like office needs, budgets, and stakeholder preferences, which are not fully explicit.",
+      "adequacy_evidence": "Agents can infer typical maintenance needs and propose plans, but often miss local constraints, urgency nuances, or stakeholder expectations, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T04:19:23"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Coordinating maintenance often involves judging urgency, interpreting vague problem reports, and selecting reliable vendors based on past experience and situational tradeoffs not fully captured in procedures.",
+      "adequacy_evidence": "Agents can follow structured workflows and use data on vendors and schedules, but lack experiential calibration for ambiguous issues and nuanced local decision-making, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T04:19:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple coordinated steps such as identifying issues, selecting vendors, scheduling, obtaining approvals, and tracking completion, requiring consistent execution across a moderate sequence.",
+      "adequacy_evidence": "AI agents can manage multi-step workflows with tools and reminders, but may show some degradation over longer sequences, such as missed follow-ups or loss of context across coordination steps.",
+      "_timestamp": "2026-04-06T04:19:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Arranging maintenance often benefits from recalling prior service history, vendor performance, recurring issues, and scheduling patterns, but each request can still be handled with limited historical context.",
+      "adequacy_evidence": "Current agents can store and retrieve maintenance logs and vendor records via standard tools, but may inconsistently surface relevant past context or fail to maintain well-structured longitudinal records without careful system design.",
+      "_timestamp": "2026-04-06T04:19:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordinating details such as maintenance needs, vendor options, schedules, and possibly budgets across multiple requests, requiring moderate tracking and organization within a single episode.",
+      "adequacy_evidence": "Current AI agents with task management tools, retrieval, and structured tracking can reliably maintain and update this level of contextual information without significant loss or drift.",
+      "_timestamp": "2026-04-06T04:19:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Arranging maintenance or repair may involve interpreting photos, diagrams, or physical issue descriptions, but much of the coordination is handled via text, phone, or digital systems.",
+      "adequacy_evidence": "Current AI agents can handle basic image inputs and integrate them with text-based workflows, and the task rarely depends on complex or high-stakes multimodal reasoning.",
+      "_timestamp": "2026-04-06T04:19:25"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Arranging maintenance or repair typically allows minutes to hours for contacting vendors, scheduling, and confirming details; it is not a real-time task requiring instant responses.",
+      "adequacy_evidence": "Current AI agents can generate communications, compare options, and coordinate scheduling well within acceptable timeframes without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T04:19:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from arranging maintenance or repair work. While procurement or contracting may involve organizational policies or human oversight, these are not legal prohibitions on AI performing the task.",
+      "_timestamp": "2026-04-06T04:19:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in arranging maintenance (e.g., delays, wrong vendor, miscommunication) can disrupt operations or increase costs, but are typically reversible and rarely cause severe or irreversible harm in office settings.",
+      "adequacy_evidence": "With standard checks (confirmations, approvals, tracking systems), AI-supported arrangements would leave minimal residual risk, as mistakes are usually detectable and correctable before major consequences occur.",
+      "_timestamp": "2026-04-06T04:19:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking that the correct issue was identified, appropriate vendors were selected, and scheduling/logistics are accurate; some errors (e.g., poor vendor choice or incomplete repair scope) may only become apparent after work is done.",
+      "adequacy_evidence": "AI can handle scheduling and vendor lookup but may misinterpret maintenance needs or constraints, so human review is typically required to confirm details and prevent avoidable coordination errors.",
+      "_timestamp": "2026-04-06T04:19:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordinating with internal staff and external service providers, where communication and basic authority matter but are not highly identity-sensitive.",
+      "adequacy_evidence": "Vendors and staff already commonly interact with automated scheduling and ticketing systems, so an AI agent would generally be accepted without significant resistance.",
+      "_timestamp": "2026-04-06T04:19:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

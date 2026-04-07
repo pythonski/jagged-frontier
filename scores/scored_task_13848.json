@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-9091.00",
+  "task_id": 13848,
+  "task_statement": "Order parts needed for machine repairs.",
+  "occupation_title": "Coin, Vending, and Amusement Machine Servicers and Repairers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Ordering repair parts is typically done through online supplier systems, email, or phone using a computer, but technicians sometimes place orders in person at parts counters or while physically at service locations."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different machine models, parts catalogs, vendors, and compatibility constraints, creating moderate variation but within a structured domain of identifiable parts and ordering workflows.",
+      "adequacy_evidence": "Substantial data exists (manuals, parts lists, supplier catalogs), but some mappings between specific machine issues and correct parts are embedded in proprietary systems or technician experience, leaving partial coverage gaps.",
+      "_timestamp": "2026-04-05T21:02:43"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many parts can be identified via manuals and part numbers, technicians often rely on experience to choose compatible substitutes, anticipate wear patterns, and avoid misordering in ambiguous cases.",
+      "adequacy_evidence": "AI agents can follow catalogs and documentation well but lack reliable experiential calibration for edge cases like non-standard modifications or subtle failure patterns, leading to moderate gaps.",
+      "_timestamp": "2026-04-05T21:02:43"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ordering parts requires interpreting repair diagnoses, matching compatible components, and considering constraints like availability, vendor preferences, and machine variations, which are not always fully explicit.",
+      "adequacy_evidence": "Current agents can often infer correct parts from structured inputs (e.g., model numbers, manuals), but they may miss implicit preferences or context-specific constraints, requiring human clarification.",
+      "_timestamp": "2026-04-05T21:02:43"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering parts involves a short sequence of steps (identify needed components, verify specifications, select supplier, place order) where consistency matters but the chain is not deeply interdependent or long.",
+      "adequacy_evidence": "Modern AI agents can reliably manage short procurement workflows with tool use and tracking, showing little to no degradation across these limited sequential steps.",
+      "_timestamp": "2026-04-05T21:02:44"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking machine model details, diagnosing needed parts, matching part numbers, and referencing supplier catalogs, but the information scope is typically limited and structured.",
+      "adequacy_evidence": "Current agents with retrieval tools and structured inputs can reliably manage part lists, model specifications, and supplier data within a single episode without significant context loss.",
+      "_timestamp": "2026-04-05T21:02:44"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering parts often benefits from knowledge of prior repairs, commonly failing components, supplier preferences, and existing inventory, but each order can still be completed with current job-specific information.",
+      "adequacy_evidence": "Current AI systems integrated with inventory databases and maintenance logs can reliably store and retrieve cross-session information like part histories and supplier records, so persistent memory is not a major limitation.",
+      "_timestamp": "2026-04-05T21:02:45"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering repair parts is typically a non-urgent administrative task where delays of minutes to hours are acceptable, as it does not require real-time responsiveness.",
+      "adequacy_evidence": "AI systems can easily generate accurate part orders within the available time window without needing to truncate reasoning, so speed does not degrade performance.",
+      "_timestamp": "2026-04-05T21:02:45"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While ordering itself is largely text-based (part numbers, catalogs), identifying the correct parts often relies on visual inspection of machines, diagrams, or worn components, making some multimodal input important.",
+      "adequacy_evidence": "Current agents can use images and diagrams to assist in part identification, but they are still unreliable with fine-grained distinctions (e.g., similar-looking components or wear patterns), leading to moderate gaps.",
+      "_timestamp": "2026-04-05T21:02:45"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Correctness can be checked by matching part numbers, machine models, and manufacturer specifications, but this requires consulting manuals or databases and some domain familiarity; compatibility errors may not be immediately obvious until installation.",
+      "adequacy_evidence": "AI can often retrieve plausible parts but may misidentify variants or compatibility details, so human verification against manuals or supplier data is still needed to avoid ordering incorrect components.",
+      "_timestamp": "2026-04-05T21:02:46"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering incorrect parts mainly leads to delays, added costs, or temporary machine downtime, but consequences are typically reversible and not safety-critical.",
+      "adequacy_evidence": "With standard checks like part number verification against manuals and supplier catalogs, AI-generated orders can be reliably validated, leaving minimal residual risk.",
+      "_timestamp": "2026-04-05T21:02:46"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with suppliers or internal procurement systems, where others must process and fulfill the order, but the individual identity of the requester is not central.",
+      "adequacy_evidence": "Automated ordering systems and software agents are already widely used in procurement, and suppliers generally accept orders regardless of whether they originate from a human or an AI system.",
+      "_timestamp": "2026-04-05T21:02:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit or restrict AI systems from ordering parts for machine repairs; this is a routine procurement activity without mandated human-only decision-making.",
+      "_timestamp": "2026-04-05T21:02:46"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

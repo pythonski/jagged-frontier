@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2081.00",
+  "task_id": 5296,
+  "task_statement": "Review filed tax returns to determine whether claimed tax credits and deductions are allowed by law.",
+  "occupation_title": "Tax Examiners and Collectors, and Revenue Agents",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Reviewing tax returns and verifying eligibility for credits and deductions is typically done using electronic filings and digital tax systems, but some cases still involve handling paper returns or physical documentation."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While tax law provides explicit rules and guidance, examiners frequently rely on experience to interpret ambiguous cases (e.g., substance-over-form issues, reasonable business purpose, or borderline deductions) and to spot patterns of noncompliance.",
+      "adequacy_evidence": "Current AI can apply codified tax rules and precedents well but shows gaps in nuanced judgment for gray-area cases and subtle contextual cues, leading to inconsistent calibration in non-routine reviews.",
+      "_timestamp": "2026-04-05T22:37:39"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tax law provides explicit rules, but applying them often requires interpreting context, taxpayer intent, and nuanced eligibility criteria for credits and deductions.",
+      "adequacy_evidence": "Current AI can follow codified rules and guidance but often struggles with edge cases, ambiguous documentation, and inferring nuanced eligibility without human clarification.",
+      "_timestamp": "2026-04-05T22:37:39"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a highly heterogeneous set of tax situations, including diverse income sources, jurisdictions, credits, deductions, and rare edge-case filings requiring nuanced legal interpretation.",
+      "adequacy_evidence": "While tax codes, guidance, and many example filings are publicly available and support synthetic generation, real-world audited returns and nuanced fraud patterns are often private, leaving some important edge cases underrepresented.",
+      "_timestamp": "2026-04-05T22:37:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing tax returns primarily involves interpreting structured and unstructured textual/number data (forms, schedules, and written documentation), even when delivered as digital files.",
+      "adequacy_evidence": "Current AI systems can reliably process tax documents via OCR and structured parsing; no substantial multimodal reasoning beyond text extraction is required.",
+      "_timestamp": "2026-04-05T22:37:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing tax returns is typically a batch, back-office process with turnaround times ranging from hours to days, not requiring immediate responses.",
+      "adequacy_evidence": "AI systems can take ample time to perform detailed reasoning and document checks, so latency does not meaningfully constrain output quality in this task.",
+      "_timestamp": "2026-04-05T22:37:41"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reviewing tax returns can benefit from prior-year filings, audit histories, or taxpayer patterns, but many determinations can be made from the current return and applicable law alone.",
+      "adequacy_evidence": "Current AI systems with standard document storage and retrieval can reliably maintain and access prior filings or case records when needed, with minimal gaps in cross-session memory.",
+      "_timestamp": "2026-04-05T22:37:41"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing tax returns involves multi-step analysis (checking entries, cross-referencing tax law, verifying eligibility criteria), but many checks are modular rather than tightly interdependent across long chains.",
+      "adequacy_evidence": "AI agents can sustain performance across moderate-length review workflows, but may show some drift or missed constraints when handling complex returns with many interrelated elements.",
+      "_timestamp": "2026-04-05T22:37:42"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing tax returns requires integrating information across multiple forms, schedules, supporting documents, and legal rules, where missing a detail (e.g., eligibility thresholds, cross-form inconsistencies) can affect determinations.",
+      "adequacy_evidence": "Current agents can process large document sets with retrieval and chunking, but still show moderate issues with losing or mislinking details across forms and rules, especially in complex or multi-document cases.",
+      "_timestamp": "2026-04-05T22:37:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether tax credits and deductions are legally allowable requires detailed knowledge of tax law, careful review of supporting documentation, and interpretation of nuanced rules; errors may not be obvious without expert analysis.",
+      "adequacy_evidence": "Current AI systems frequently misinterpret complex or context-dependent tax rules and supporting evidence, so their outputs would require thorough expert review to catch subtle but consequential mistakes.",
+      "_timestamp": "2026-04-05T22:37:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect determinations can lead to improper tax liabilities, legal disputes, financial harm to taxpayers or government revenue loss, so even rare residual errors carry significant consequences.",
+      "adequacy_evidence": "While AI outputs can be reviewed against tax law and documentation, nuanced legal interpretation and edge cases mean current systems may still leave non-trivial residual risk after standard checks.",
+      "_timestamp": "2026-04-05T22:37:42"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal review of tax returns for legal compliance, with outputs used within the agency rather than requiring direct stakeholder interaction or acceptance of the reviewer\u2019s identity.",
+      "adequacy_evidence": "Because the task is internal and procedural, stakeholders are largely indifferent to whether an AI or human performs it, provided outcomes meet legal and accuracy standards.",
+      "_timestamp": "2026-04-05T22:37:44"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Tax examinations and determinations are legally vested in authorized IRS personnel, and official decisions (e.g., assessments, audits) must be made by designated human agents. However, there is no explicit prohibition on using AI systems as tools to assist in reviewing returns, creating a partial restriction rather than a full ban.",
+      "_timestamp": "2026-04-05T22:37:45"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

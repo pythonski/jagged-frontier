@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-1043.00",
+  "task_id": 8589,
+  "task_statement": "Review orders, production schedules, blueprints, or shipping or receiving notices to determine work sequences and material shipping dates, types, volumes, or destinations.",
+  "occupation_title": "First-Line Supervisors of Material-Moving Machine and Vehicle Operators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Reviewing orders, schedules, blueprints, and shipping notices is often done through digital systems such as ERP, WMS, or emailed documents. However, in many warehouses and transport operations supervisors still review printed paperwork or on-site documents, so some instances require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied document types (orders, schedules, blueprints, shipping notices) across industries, creating moderate heterogeneity in formats and context but with recurring structural patterns.",
+      "adequacy_evidence": "Large corpora of logistics documents and procedures exist and can be synthetically generated, but proprietary ERP data, real blueprints, and edge-case workflows are partially inaccessible, leaving some gaps.",
+      "_timestamp": "2026-04-06T03:06:12"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many elements follow explicit rules (e.g., schedules, quantities, routing), supervisors must apply experience to resolve conflicts, prioritize jobs, and interpret ambiguous or inconsistent documents in operational context.",
+      "adequacy_evidence": "Current agents can parse and integrate structured and semi-structured documents, but often lack reliable calibration for resolving real-world conflicts, implicit priorities, and context-specific tradeoffs common in non-routine cases.",
+      "_timestamp": "2026-04-06T03:06:13"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing multiple documents (orders, schedules, blueprints, notices) and synthesizing them into coherent work sequences and shipping plans, requiring some multi-step consistency but not long, tightly coupled chains.",
+      "adequacy_evidence": "Frontier AI agents with retrieval and planning tools can reliably integrate multiple documents and maintain consistency across these moderate-length reasoning chains without significant degradation.",
+      "_timestamp": "2026-04-06T03:06:14"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting multiple structured and semi-structured documents (orders, schedules, blueprints) where priorities, constraints, and sequencing rules are partly implicit and context-dependent (e.g., production bottlenecks, delivery urgency).",
+      "adequacy_evidence": "Current agents can extract and synthesize information from these documents but often miss implicit operational priorities or local heuristics, requiring human adjustment to align outputs with real-world constraints.",
+      "_timestamp": "2026-04-06T03:06:15"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating information from multiple documents (orders, schedules, blueprints, shipping notices) and tracking relationships like quantities, dates, and destinations, but the overall scope is structured and bounded per episode.",
+      "adequacy_evidence": "Current agents with retrieval and tool use can manage and cross-reference these documents, but may still lose or misprioritize details when handling many heterogeneous inputs or compressing complex schedules.",
+      "_timestamp": "2026-04-06T03:06:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task includes reviewing blueprints and possibly visual layouts, which require interpreting diagrams and spatial information alongside text documents like schedules and orders.",
+      "adequacy_evidence": "Current AI can process standard documents and some diagrams, but struggles with complex industrial blueprints and nuanced spatial reasoning common in logistics and production contexts.",
+      "_timestamp": "2026-04-06T03:06:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task sometimes benefits from awareness of ongoing production plans or prior scheduling decisions, but most required context is captured in current documents and enterprise systems rather than relying on memory across sessions.",
+      "adequacy_evidence": "Current AI agents can reliably access and persist structured data (e.g., schedules, orders, logs) through external systems, so cross-session retrieval needs are well supported.",
+      "_timestamp": "2026-04-06T03:06:18"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Supervisors must process documents in a timely manner to keep operations flowing, but decisions typically allow seconds to minutes rather than requiring instantaneous reactions.",
+      "adequacy_evidence": "Frontier AI systems can review structured and semi-structured documents and extract scheduling and logistics details quickly without needing prolonged reasoning, fitting well within the task\u2019s time constraints.",
+      "_timestamp": "2026-04-06T03:06:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in sequencing or shipping details can cause delays, misrouted materials, and cost overruns, but are typically detectable and correctable before causing irreversible harm.",
+      "adequacy_evidence": "With standard checks (cross-referencing schedules, inventory systems, and documentation), AI-generated outputs can be validated effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T03:06:20"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Outputs can be checked against source documents (orders, schedules, blueprints) and operational constraints, but doing so requires attention to detail and domain familiarity to catch inconsistencies or misinterpretations.",
+      "adequacy_evidence": "AI systems can extract and synthesize this information but still make non-trivial errors in interpreting specifications or aligning multiple documents, requiring routine human verification to ensure correctness.",
+      "_timestamp": "2026-04-06T03:06:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from reviewing operational documents like schedules, blueprints, or shipping notices to determine work sequences or logistics details. While human supervisors retain accountability, the task itself is not legally restricted from AI assistance or execution.",
+      "_timestamp": "2026-04-06T03:06:20"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal analysis of documents to determine schedules and logistics, with outputs consumed operationally rather than through stakeholder interaction requiring acceptance of the performer.",
+      "adequacy_evidence": "Since stakeholder acceptance of the performer is not central, using an AI agent would not meaningfully affect task effectiveness.",
+      "_timestamp": "2026-04-06T03:06:20"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

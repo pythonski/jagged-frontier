@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-1031.00",
+  "task_id": 8600,
+  "task_statement": "Compute or estimate cash, payroll, transportation, personnel, or storage requirements.",
+  "occupation_title": "First-Line Supervisors of Transportation and Material-Moving Workers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Computing or estimating resource requirements (cash, payroll, transportation, personnel, storage) is typically done using digital data, spreadsheets, or planning software and does not inherently require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied but structured scenarios (different fleet sizes, routes, labor rules, seasonal demand), creating moderate diversity without being highly unbounded.",
+      "adequacy_evidence": "There is substantial accessible data and well-developed methods (operations research, logistics optimization), but some firm-specific constraints and real-world edge cases are proprietary or thinly documented, leaving partial gaps.",
+      "_timestamp": "2026-04-06T02:28:40"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating resource needs involves applying standard calculations but also adjusting for local conditions (e.g., variability in demand, worker productivity, routing constraints) that are often learned through experience.",
+      "adequacy_evidence": "Current AI can perform structured forecasting and optimization well, but may lack reliable calibration for site-specific nuances and informal heuristics used by experienced supervisors in non-routine situations.",
+      "_timestamp": "2026-04-06T02:28:40"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating resource needs depends on contextual factors like demand variability, operational constraints, budgets, and service levels, which are often only partially specified and require interpretation.",
+      "adequacy_evidence": "Current agents can model and estimate given sufficient data and constraints, but they often miss implicit priorities or local operational nuances, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T02:28:41"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating multiple data inputs (e.g., staffing levels, schedules, costs, inventory, and logistics constraints) within a single planning episode, but the scope is typically structured and bounded.",
+      "adequacy_evidence": "With spreadsheet tools, databases, and retrieval scaffolding, current agents can reliably track, aggregate, and manipulate this level of structured information without significant loss or drift.",
+      "_timestamp": "2026-04-06T02:28:42"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves numerical estimation and planning based on structured data such as schedules, inventories, and staffing levels, which are typically text- or table-based.",
+      "adequacy_evidence": "Current AI agents handle text and numerical data processing well, and no meaningful multimodal perception or generation is required for competent performance.",
+      "_timestamp": "2026-04-06T02:28:42"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step estimation processes (collecting inputs, applying formulas, projecting needs), but sequences are typically bounded and modular rather than deeply interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents with tools (e.g., spreadsheets, code execution) can reliably maintain consistency across these moderate-length workflows without significant degradation.",
+      "_timestamp": "2026-04-06T02:28:42"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Supervisors often need timely estimates to support operational decisions, but these are typically made on the scale of minutes rather than requiring split-second responses.",
+      "adequacy_evidence": "Current AI systems can generate accurate estimates and run calculations quickly within this time window, without needing to significantly truncate reasoning.",
+      "_timestamp": "2026-04-06T02:28:42"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Estimating resource needs often benefits from prior period data (e.g., past payroll, transportation volumes, storage usage), but each estimate can typically be recomputed from available records without deep longitudinal state.",
+      "adequacy_evidence": "Current AI systems integrated with databases or enterprise systems can reliably store and retrieve historical operational data across sessions, meeting these moderate cross-session memory needs.",
+      "_timestamp": "2026-04-06T02:28:42"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal analytical function (estimating resource needs) whose outputs are used for planning, not requiring direct stakeholder interaction or acceptance of the performer.",
+      "adequacy_evidence": "Since outputs are impersonal calculations typically reviewed within organizational processes, stakeholders are generally indifferent to whether an AI or human produced them.",
+      "_timestamp": "2026-04-06T02:28:44"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimates for cash, staffing, or logistics can be cross-checked against historical data, budgets, and operational constraints, but doing so requires domain knowledge and time; some errors only become apparent during execution.",
+      "adequacy_evidence": "Current AI can generate plausible estimates but may misinterpret inputs or omit constraints, so supervisors would need to review calculations and assumptions using external data, creating a moderate verification burden.",
+      "_timestamp": "2026-04-06T02:28:44"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from computing or estimating operational requirements like cash, payroll, or staffing in transportation supervision; such tasks are not legally restricted to human decision-makers.",
+      "_timestamp": "2026-04-06T02:28:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in estimating cash, staffing, or logistics needs can lead to inefficiencies, delays, or budget overruns, but are typically correctable and rarely catastrophic after review.",
+      "adequacy_evidence": "With standard checks (e.g., reconciliation against historical data or constraints), AI-generated estimates are generally reliable, and remaining errors are unlikely to pose significant residual risk.",
+      "_timestamp": "2026-04-06T02:28:44"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

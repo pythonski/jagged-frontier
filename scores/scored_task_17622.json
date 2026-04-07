@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3031.03",
+  "task_id": 17622,
+  "task_statement": "Buy or sell stocks, bonds, commodity futures, foreign currencies, or other securities on behalf of investment dealers.",
+  "occupation_title": "Securities, Commodities, and Financial Services Sales Agents",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Buying and selling securities is typically executed through electronic trading platforms and communication systems, which can be accessed remotely via computer and internet. While some firms may operate trading floors, the task itself can be fully performed digitally."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective trading relies on tacit understanding of market microstructure, timing, liquidity conditions, and interpreting subtle signals (e.g., order flow, volatility shifts) that are not fully codified in explicit rules.",
+      "adequacy_evidence": "While AI-driven trading systems can execute many strategies and adapt using data, they still show gaps in nuanced discretionary judgment during atypical or rapidly changing market conditions.",
+      "_timestamp": "2026-04-06T03:34:38"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Covers diverse instruments, market regimes, client mandates, liquidity conditions, and execution venues, with long-tailed edge cases (e.g., stressed markets, thinly traded assets).",
+      "adequacy_evidence": "Extensive historical market data and simulators exist, but key distributions (proprietary order flow, real execution microstructure, dealer-specific strategies) are partially inaccessible; process-level labels are limited, though partly recoverable via simulation and RL.",
+      "_timestamp": "2026-04-06T03:34:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Executing trades involves multi-step workflows (market monitoring, decision-making, order placement, confirmation, and compliance checks), but many transactions are relatively discrete and not deeply interdependent over long horizons.",
+      "adequacy_evidence": "AI agents can manage these multi-step processes with tooling, but performance can degrade in longer or rapidly changing trading sequences where maintaining context, timing, and constraint consistency becomes challenging.",
+      "_timestamp": "2026-04-06T03:34:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Executing trades requires tracking rapidly changing market data, client instructions, order parameters, and compliance constraints within a single episode, where missing details can lead to incorrect or costly trades.",
+      "adequacy_evidence": "Current agents can handle structured data feeds and maintain state with tooling, but may struggle with reliably integrating fast-moving, multi-source information without occasional context loss or stale data issues.",
+      "_timestamp": "2026-04-06T03:34:39"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While trade instructions can be explicit (e.g., order type, quantity), effective execution depends on interpreting market conditions, timing, client intent, and regulatory constraints that are often implicit or context-dependent.",
+      "adequacy_evidence": "Current AI agents can incorporate structured instructions and market data but still struggle to consistently infer nuanced intent (e.g., urgency, risk tolerance) and adapt execution strategies without human guidance.",
+      "_timestamp": "2026-04-06T03:34:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective trading on behalf of clients requires maintaining longitudinal knowledge of client portfolios, risk tolerances, prior trades, compliance constraints, and evolving market positions across many sessions.",
+      "adequacy_evidence": "Current agents can store and retrieve structured client and portfolio data via external systems, but they still show gaps in consistently integrating evolving context, handling edge cases, and maintaining reliable long-term state across complex financial workflows.",
+      "_timestamp": "2026-04-06T03:34:40"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Executing trades often requires near-real-time responsiveness to market movements, price changes, and client instructions, where delays of seconds can materially affect outcomes.",
+      "adequacy_evidence": "AI agents can act quickly with pre-specified strategies, but situations requiring deeper analysis or rapid interpretation of new information may force shallower reasoning, causing some quality degradation under tight latency.",
+      "_timestamp": "2026-04-06T03:34:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves counterparties (dealers, exchanges, clients) who rely on the agent to execute trades, but interaction is largely transactional and does not depend heavily on personal identity or relationship.",
+      "adequacy_evidence": "Algorithmic and AI-driven trading systems are already widely accepted in financial markets, and counterparties generally do not require a human identity for trade execution.",
+      "_timestamp": "2026-04-06T03:34:42"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Executing trades primarily involves interpreting numerical and textual market data and entering orders via electronic systems; visual charts are helpful but not essential to the core task.",
+      "adequacy_evidence": "Current AI agents can handle text and structured financial data well, and the task does not rely on challenging multimodal perception or generation.",
+      "_timestamp": "2026-04-06T03:34:43"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Trade details (ticker, size, price, order type) can be checked via confirmations and market data, but verifying correctness (e.g., best execution, suitability, timing) requires domain expertise and may not be instantly obvious.",
+      "adequacy_evidence": "Current AI agents can place and structure orders but still make non-trivial mistakes, requiring routine human or system-level checks (pre-trade controls, post-trade reconciliation) to ensure accuracy.",
+      "_timestamp": "2026-04-06T03:34:43"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Execution errors in trading (wrong asset, size, timing, or price) can cause immediate and potentially large financial losses, regulatory breaches, or market impacts, so very little residual error is tolerable.",
+      "adequacy_evidence": "While automated systems already handle many trades with safeguards, AI agents still exhibit occasional unpredictable failures (e.g., instruction misinterpretation or edge-case behavior) that could slip through checks and create meaningful financial risk.",
+      "_timestamp": "2026-04-06T03:34:44"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. securities law requires trades on behalf of clients to be conducted under the supervision of registered broker-dealers and licensed representatives (e.g., FINRA rules), but does not explicitly prohibit automated or AI-driven trading systems. However, a licensed human remains legally responsible, creating partial regulatory constraints on fully autonomous AI execution.",
+      "_timestamp": "2026-04-06T03:34:44"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

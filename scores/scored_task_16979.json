@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4099.01",
+  "task_id": 16979,
+  "task_statement": "Compile laboratory test data and perform appropriate analyses.",
+  "occupation_title": "Quality Control Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Compiling laboratory test data and performing analyses typically involves working with datasets in laboratory information management systems, spreadsheets, or statistical software, which can be done entirely on a computer. While the underlying tests are physical, this specific task is a digital data-processing activity."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the work follows standardized protocols and statistical procedures, interpreting anomalous results, assessing data quality, and deciding when deviations are meaningful versus noise often require experience-based judgment.",
+      "adequacy_evidence": "Current AI systems can execute statistical analyses and flag anomalies reliably, but they lack consistent calibration in distinguishing context-specific lab artifacts from true quality issues without human-like experiential grounding.",
+      "_timestamp": "2026-04-06T00:05:43"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different laboratory domains (e.g., chemical, biological, manufacturing QC) with varying test types, instruments, and statistical methods, creating moderate diversity in instances.",
+      "adequacy_evidence": "There is extensive accessible data including lab protocols, validation reports, statistical analysis examples, and QC standards, providing strong coverage of both procedures and reasoning processes for this task.",
+      "_timestamp": "2026-04-06T00:05:43"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While data compilation is usually well-specified, selecting 'appropriate analyses' depends on testing protocols, regulatory standards, and context-specific quality thresholds that are not always fully explicit.",
+      "adequacy_evidence": "Current AI agents can often infer suitable analyses when given sufficient context or SOPs, but they still miss nuanced domain expectations or implicit quality criteria without human guidance.",
+      "_timestamp": "2026-04-06T00:05:44"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple sequential steps such as aggregating test results, cleaning/validating data, performing statistical analyses, and interpreting outputs, where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or tightly coupled.",
+      "adequacy_evidence": "Frontier AI agents can generally manage these multi-step analytical workflows with tooling, though they show some degradation over longer pipelines (e.g., minor error propagation or dropped constraints), especially without careful orchestration.",
+      "_timestamp": "2026-04-06T00:05:44"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Quality control analysis often involves comparing current laboratory results to historical data (e.g., control charts, trend analysis), but tasks are typically structured around discrete batches or reports rather than deeply longitudinal case histories.",
+      "adequacy_evidence": "Current AI systems integrated with databases and retrieval tools can reliably store, query, and analyze historical lab data across sessions, meeting the task\u2019s moderate cross-session memory needs.",
+      "_timestamp": "2026-04-06T00:05:46"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling laboratory data and performing analyses is typically batch-oriented with turnaround times ranging from minutes to hours, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform data compilation and analysis well within these relaxed timeframes without needing to truncate reasoning, so speed constraints do not degrade quality.",
+      "_timestamp": "2026-04-06T00:05:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating multiple lab results, metadata, and applying analytical procedures, requiring some active tracking and organization of information within an episode.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., dataframes, scripts) can reliably manage, store, and manipulate these datasets without significant loss or drift in working context.",
+      "_timestamp": "2026-04-06T00:05:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Quality control analysts often work with instrument outputs such as chromatograms, spectra, and other visual plots alongside tabular data, requiring some interpretation of non-text representations.",
+      "adequacy_evidence": "Current agents can interpret standard charts and structured visual outputs reasonably well, but reliability drops for complex, noisy, or domain-specific scientific visualizations like advanced spectra or instrument diagnostics.",
+      "_timestamp": "2026-04-06T00:05:46"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces analyses used by internal teams, auditors, or regulators, so stakeholders rely on the output, but the analyst\u2019s personal identity or interpersonal role is not central.",
+      "adequacy_evidence": "Stakeholders in laboratory and quality control settings already accept automated data processing and analysis tools, so AI-generated outputs would generally be accepted if validated and compliant.",
+      "_timestamp": "2026-04-06T00:05:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Regulated lab environments (e.g., FDA GLP, CLIA) require qualified human personnel to review, validate, and sign off on analyses, but do not explicitly forbid AI use as a tool. This creates partial restriction: AI can assist, but cannot fully replace the legally accountable human role.",
+      "_timestamp": "2026-04-06T00:05:46"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in compiled laboratory data or analyses can lead to incorrect quality decisions, regulatory violations, or unsafe product release, so even rare residual mistakes can have serious consequences.",
+      "adequacy_evidence": "While many calculations and consistency checks can be validated through standard QC procedures, AI systems may still introduce subtle analytical or data-handling errors that are not always caught, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T00:05:46"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking data integrity, correct statistical methods, and adherence to protocols; errors can be subtle (e.g., misapplied tests or data handling issues) and require domain expertise, but are generally detectable through review and validation procedures.",
+      "adequacy_evidence": "AI can assist with analysis but may mis-handle edge cases, data preprocessing, or method selection, so human review remains necessary and non-trivial, though not prohibitively difficult with standard QC checks.",
+      "_timestamp": "2026-04-06T00:05:47"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

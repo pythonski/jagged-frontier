@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1212.00",
+  "task_id": 5319,
+  "task_statement": "Monitor use of data files and regulate access to safeguard information in computer files.",
+  "occupation_title": "Information Security Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Monitoring file usage and regulating access are performed through security software, access control systems, and log analysis on computer networks, which can be done entirely via a computer without physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While access control policies and monitoring goals are often formally documented, their application depends on contextual factors like risk tolerance, user roles, evolving threats, and implicit organizational norms.",
+      "adequacy_evidence": "Current agents can follow explicit policies and infer some intent, but often miss nuanced or context-specific security priorities, requiring human guidance to refine rules and resolve edge cases.",
+      "_timestamp": "2026-04-06T01:10:07"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous environments (different organizations, file systems, access control models, threat patterns, and compliance regimes), with many edge cases and context-specific behaviors in normal vs anomalous access.",
+      "adequacy_evidence": "While there is substantial data (logs, security policies, incident reports) and synthetic generation is feasible, real-world access patterns and insider threat scenarios are often proprietary and underrepresented, leaving some gaps in coverage.",
+      "_timestamp": "2026-04-06T01:10:08"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of access control and monitoring follows explicit policies (RBAC/ABAC, audit rules), effective performance requires experience-based judgment to distinguish benign anomalies from true threats and to balance security with business needs.",
+      "adequacy_evidence": "Current AI agents can apply rules and flag anomalies, but they lack consistent calibration for organization-specific norms and edge cases, leading to over/under-flagging without human tuning.",
+      "_timestamp": "2026-04-06T01:10:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing monitoring and periodic enforcement actions, requiring consistency over time, but individual steps (alerts, access checks, rule applications) are relatively modular rather than tightly interdependent sequences.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably handle continuous monitoring loops and rule-based enforcement without significant degradation, as the task does not require long, fragile chains of reasoning.",
+      "_timestamp": "2026-04-06T01:10:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking multiple concurrent data access events, user permissions, and policy rules, often across log streams and monitoring tools, requiring active retrieval and synthesis of evolving state.",
+      "adequacy_evidence": "Agents can offload much of this to external tools (e.g., SIEM queries), but may still lose or misprioritize relevant context across multiple streams or long monitoring sequences.",
+      "_timestamp": "2026-04-06T01:10:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring and regulating data access relies on longitudinal tracking of user behavior, historical access logs, incident patterns, and evolving security policies over extended periods.",
+      "adequacy_evidence": "Current AI agents can integrate with logging systems and databases to store and retrieve history, but they often struggle with reliably synthesizing long-term patterns and maintaining coherent, evolving context across many sessions.",
+      "_timestamp": "2026-04-06T01:10:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves analyzing system logs, access records, and policy rules, which are text- and data-based; visual or other non-text modalities are not essential to core performance.",
+      "adequacy_evidence": "Since the task is fundamentally text/data-driven, current AI systems can handle the modality requirements without limitation.",
+      "_timestamp": "2026-04-06T01:10:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Monitoring file access and enforcing controls often requires near-real-time or real-time responses to detect and block unauthorized activity before damage occurs.",
+      "adequacy_evidence": "Current AI systems can operate within automated security pipelines with fast inference or precomputed rules, and the task typically does not require deep, time-consuming reasoning at decision time.",
+      "_timestamp": "2026-04-06T01:10:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors such as misconfigured access controls or missed suspicious activity can remain latent and are typically only uncovered through audits, incident investigation, or penetration testing, requiring significant expertise and time.",
+      "adequacy_evidence": "Current AI systems can generate and monitor rules but still miss nuanced threats or introduce subtle misconfigurations, necessitating continuous expert review, log analysis, and validation to ensure correctness.",
+      "_timestamp": "2026-04-06T01:10:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from monitoring data file usage or regulating access controls; in fact, many cybersecurity frameworks (e.g., NIST, HIPAA, FISMA) permit or encourage automated tools. Requirements focus on outcomes (security, auditability), not mandating human-only execution.",
+      "_timestamp": "2026-04-06T01:10:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Failures in monitoring or access control can enable data breaches, unauthorized access, or exfiltration of sensitive information, leading to severe financial, legal, and security consequences even if rare.",
+      "adequacy_evidence": "Even with logging, audits, and automated alerts, AI systems can miss subtle attack patterns or misclassify legitimate vs malicious access, leaving meaningful residual risk that remains concerning but not uniformly catastrophic under layered controls.",
+      "_timestamp": "2026-04-06T01:10:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely automated and internal, involving system monitoring and enforcement rather than direct interaction with stakeholders who evaluate the performer's identity.",
+      "adequacy_evidence": "Access control and monitoring are already widely automated, and users typically accept system-enforced rules regardless of whether they are managed by AI or traditional software.",
+      "_timestamp": "2026-04-06T01:10:13"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

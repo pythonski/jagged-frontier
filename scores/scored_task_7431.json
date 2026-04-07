@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2121.01",
+  "task_id": 7431,
+  "task_statement": "Schedule machine overhauls and the servicing of electrical, heating, ventilation, refrigeration, water, and sewage systems.",
+  "occupation_title": "Marine Engineers and Naval Architects",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Scheduling maintenance and service is typically done using computers, maintenance management software, email, or phone. However, it sometimes relies on on-site assessments or coordination with physical inspections of equipment and facilities."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While maintenance intervals and regulatory requirements are partly explicit, effective scheduling requires interpreting operational priorities, vessel usage patterns, and trade-offs between downtime and risk.",
+      "adequacy_evidence": "Current agents can incorporate formal constraints and optimize schedules, but often miss tacit priorities (e.g., mission readiness, informal practices), requiring human adjustment to fully align with real-world intent.",
+      "_timestamp": "2026-04-05T23:56:28"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different vessel classes, system types (mechanical, electrical, HVAC, plumbing), operating conditions, and maintenance regimes, creating moderate variation but within structured engineering domains.",
+      "adequacy_evidence": "Relevant data exists in manuals, maintenance schedules, and engineering standards, but detailed real-world maintenance logs and fleet-specific practices are often proprietary, leaving some gaps that require synthesis or adaptation.",
+      "_timestamp": "2026-04-05T23:56:28"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While maintenance schedules are guided by manufacturer recommendations, regulations, and planned maintenance systems, engineers must adjust timing based on vessel usage patterns, environmental conditions, and observed equipment behavior, which involves experience-based judgment.",
+      "adequacy_evidence": "AI can apply documented schedules and optimize logistics, but may lack nuanced calibration for vessel-specific wear patterns, operational tradeoffs, and subtle signs of impending failure that experienced engineers incorporate.",
+      "_timestamp": "2026-04-05T23:56:28"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating multiple maintenance activities across different ship systems, requiring sequencing, constraint management (downtime, safety, resource availability), and consistency across planning steps, but not extremely long tightly coupled action chains.",
+      "adequacy_evidence": "Current AI agents can manage multi-step scheduling with tools and constraints, but over longer plans they can exhibit minor goal drift or miss interdependencies, leading to moderate degradation without careful scaffolding.",
+      "_timestamp": "2026-04-05T23:56:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling overhauls and system servicing is a planning task typically performed on hourly to multi-day timescales, not requiring immediate or real-time responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to optimize schedules without latency pressure, so reasoning depth is not constrained by speed requirements.",
+      "_timestamp": "2026-04-05T23:56:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling overhauls and servicing primarily relies on maintenance logs, schedules, equipment specifications, and regulatory requirements, which are largely text or structured data driven.",
+      "adequacy_evidence": "Current AI agents can effectively process and generate schedules from textual and structured inputs without needing advanced multimodal perception or generation.",
+      "_timestamp": "2026-04-05T23:56:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling maintenance for multiple ship systems requires tracking equipment status, maintenance intervals, resource availability, and operational constraints, but the information is structured and typically bounded within planning tools.",
+      "adequacy_evidence": "Current agents can manage structured scheduling data with tools, but may lose or misprioritize constraints (e.g., interdependencies or timing conflicts) without careful orchestration and validation.",
+      "_timestamp": "2026-04-05T23:56:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintenance scheduling depends on longitudinal equipment histories, prior overhaul dates, usage patterns, and regulatory intervals across many systems over time.",
+      "adequacy_evidence": "Current agents can persist and query maintenance records via databases/CMMS integrations, but often show gaps in reliably maintaining, updating, and contextually retrieving evolving asset histories across extended operations.",
+      "_timestamp": "2026-04-05T23:56:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from scheduling maintenance or servicing activities. While licensed marine engineers are ultimately responsible for vessel operations and compliance, using AI as a tool for scheduling does not violate any enforceable rule.",
+      "_timestamp": "2026-04-05T23:56:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintenance schedules can be checked against manufacturer guidelines, class requirements, and maintenance logs, but doing so requires domain expertise and careful cross-referencing of constraints and dependencies.",
+      "adequacy_evidence": "Current AI can generate plausible schedules but may miss operational constraints or regulatory nuances, so human review and adjustment are routinely needed to ensure correctness.",
+      "_timestamp": "2026-04-05T23:56:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling overhauls involves coordination with crew, maintenance personnel, and management who rely on and interact with the planner\u2019s decisions, though the planner\u2019s personal identity is not central.",
+      "adequacy_evidence": "Stakeholders would likely accept AI-assisted scheduling tools, but full delegation to an AI agent may face some resistance due to trust, accountability, and safety concerns in marine operations.",
+      "_timestamp": "2026-04-05T23:56:31"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect scheduling of maintenance for critical ship systems (e.g., propulsion, HVAC, sewage) can lead to system failures, safety hazards, or regulatory violations, where even rare missed or mistimed overhauls can have severe downstream consequences.",
+      "adequacy_evidence": "With standard human review and validation against maintenance logs and regulations, most AI-generated scheduling errors can be caught, but subtle omissions or misprioritizations could still slip through, leaving some residual risk.",
+      "_timestamp": "2026-04-05T23:56:32"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

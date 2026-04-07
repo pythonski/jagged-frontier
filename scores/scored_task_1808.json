@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1051.00",
+  "task_id": 1808,
+  "task_statement": "Review prescriptions to assure accuracy, to ascertain the needed ingredients, and to evaluate their suitability.",
+  "occupation_title": "Pharmacists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Prescription review is typically done through electronic prescribing systems and pharmacy software, which can be accessed remotely. However, many real-world cases still involve paper prescriptions or occur as part of on-site dispensing workflows in a pharmacy."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Prescription review spans a highly heterogeneous space: diverse drugs, combinations, dosing regimens, patient conditions (age, comorbidities, renal/hepatic function), and rare interaction edge cases.",
+      "adequacy_evidence": "Extensive drug databases, clinical guidelines, and case corpora exist and can be augmented with synthetic scenarios, but full real-world patient variability (e.g., rare interactions, nuanced clinical contexts in EHRs) is only partially accessible.",
+      "_timestamp": "2026-04-06T05:37:39"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Prescription review requires nuanced clinical judgment such as evaluating drug interactions, patient-specific contraindications (e.g., renal function, comorbidities), and interpreting ambiguous or unusual orders, which goes beyond explicit rules.",
+      "adequacy_evidence": "Frontier AI systems can apply guidelines and known interaction databases well, but still show gaps in context-sensitive clinical judgment and edge-case discernment that experienced pharmacists handle through tacit knowledge.",
+      "_timestamp": "2026-04-06T05:37:40"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While prescriptions include explicit elements (drug, dose, patient), pharmacists must interpret unclear or incomplete orders, assess clinical appropriateness, and account for patient-specific factors like comorbidities or interactions, which are often implicit.",
+      "adequacy_evidence": "Current AI agents can flag standard errors and interactions but often struggle with ambiguous prescriptions, incomplete context, and nuanced clinical judgment, requiring human oversight to resolve intent and appropriateness.",
+      "_timestamp": "2026-04-06T05:37:40"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple interdependent checks (dosage accuracy, drug interactions, patient factors, ingredient suitability), but the sequence is relatively bounded and standardized rather than long and highly cascading.",
+      "adequacy_evidence": "AI agents can generally follow structured review workflows, but may show some degradation over multi-step checks, occasionally missing constraints or failing to consistently integrate all factors across the sequence.",
+      "_timestamp": "2026-04-06T05:37:41"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing prescriptions requires integrating multiple pieces of information within a single episode, including drug details, patient history, allergies, dosages, and potential interactions, but the total scope is typically bounded and structured.",
+      "adequacy_evidence": "Current AI agents can handle structured retrieval and cross-checking reasonably well, but may still miss or misprioritize relevant details when multiple interacting factors must be tracked simultaneously.",
+      "_timestamp": "2026-04-06T05:37:42"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Evaluating prescription suitability often depends on patient-specific history such as prior medications, allergies, and interactions, which accumulate across encounters but are typically stored in pharmacy or EHR systems.",
+      "adequacy_evidence": "Well-integrated AI agents can reliably retrieve and use longitudinal patient records from existing systems, so cross-session memory needs are largely met through external data infrastructure rather than internal persistence.",
+      "_timestamp": "2026-04-06T05:37:42"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely text-based (drug names, dosages, instructions) but can involve interpreting handwritten prescriptions, labels, or packaging, introducing some visual modality dependence.",
+      "adequacy_evidence": "Current AI systems handle structured digital prescriptions well and perform reasonably on OCR, but remain inconsistent with messy handwriting or ambiguous visual cues, leading to moderate gaps.",
+      "_timestamp": "2026-04-06T05:37:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Prescription review is typically expected to occur within seconds to a few minutes during dispensing workflows, but does not require split-second real-time response.",
+      "adequacy_evidence": "Current AI systems can rapidly cross-check drug interactions, dosages, and contraindications using integrated databases without needing extended reasoning time, maintaining high quality within the time constraints.",
+      "_timestamp": "2026-04-06T05:37:43"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many prescription errors (e.g., drug interactions, incorrect dosing, contraindications) can be checked with established rules and databases, but accurate review still requires professional judgment and patient-specific context.",
+      "adequacy_evidence": "Current AI systems can flag common issues using drug databases, but they still miss context-dependent nuances (e.g., comorbidities, renal dosing), so consistent pharmacist-level verification remains necessary.",
+      "_timestamp": "2026-04-06T05:37:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Medication errors (wrong drug, dose, interaction, or contraindication) can lead to severe harm or death, so even rare residual errors are unacceptable in this task.",
+      "adequacy_evidence": "Even with standard checks, current AI systems can miss subtle drug interactions, patient-specific contraindications, or context-dependent prescribing nuances, leaving residual risk at an unacceptable level for clinical safety.",
+      "_timestamp": "2026-04-06T05:37:45"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State pharmacy practice acts and federal regulations (e.g., OBRA-90 prospective drug utilization review requirements) require a licensed pharmacist to review prescriptions for accuracy and appropriateness. These duties cannot be delegated to unlicensed systems, so AI cannot legally perform this task autonomously.",
+      "_timestamp": "2026-04-06T05:37:45"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Prescription review is a safety-critical task where physicians, patients, and healthcare systems rely on the pharmacist\u2019s professional judgment and licensure, making performer legitimacy central.",
+      "adequacy_evidence": "While some stakeholders may accept AI-assisted review under pharmacist supervision, many would resist fully autonomous AI due to safety, liability, and trust concerns.",
+      "_timestamp": "2026-04-06T05:37:45"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

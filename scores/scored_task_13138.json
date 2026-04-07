@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "39-1022.00",
+  "task_id": 13138,
+  "task_statement": "Assign work schedules, following work requirements, to ensure quality and timely delivery of service.",
+  "occupation_title": "First-Line Supervisors of Personal Service Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Assigning work schedules is commonly done using digital scheduling or communication tools and can be performed remotely, but supervisors often coordinate with staff on-site, consider real-time operational conditions, or post/update physical schedules."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective scheduling requires experiential judgment about worker reliability, preferences, fatigue, interpersonal dynamics, and service quality tradeoffs that are not fully captured in formal rules.",
+      "adequacy_evidence": "Current AI systems can optimize schedules and incorporate constraints, but they struggle with nuanced human factors and edge cases like morale, informal norms, and last-minute disruptions.",
+      "_timestamp": "2026-04-05T21:24:04"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling spans varying worker types, shift constraints, service demand patterns, and labor rules, but follows structured, recurring patterns typical of rostering problems.",
+      "adequacy_evidence": "There is abundant data and well-developed optimization literature (e.g., workforce scheduling, shift planning), plus synthetic generation and RL environments can readily cover most relevant scenarios.",
+      "_timestamp": "2026-04-05T21:24:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling requires balancing explicit requirements (coverage, labor rules) with implicit factors like worker preferences, fairness, service quality, and handling last-minute changes, which are context-dependent.",
+      "adequacy_evidence": "Current agents can optimize schedules given constraints but often miss tacit priorities (e.g., morale, informal norms) and require human input or iteration to align with real-world expectations.",
+      "_timestamp": "2026-04-05T21:24:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Assigning work schedules primarily involves structured data such as availability, staffing requirements, and service timelines, which are typically handled in text or tabular formats without reliance on visual, audio, or spatial inputs.",
+      "adequacy_evidence": "Current AI systems can fully manage text-based and structured scheduling tasks, and no significant multimodal perception or generation is required for competent performance.",
+      "_timestamp": "2026-04-05T21:24:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Creating work schedules involves multiple interdependent steps (collecting availability, aligning staffing levels, ensuring coverage, adjusting for constraints), but the sequence is not \u0985\u09a4\u09cd\u09af long or deeply cascading.",
+      "adequacy_evidence": "AI agents can manage multi-step scheduling with tools, but may lose track of constraints or introduce inconsistencies as complexity grows, leading to moderate degradation over longer or highly constrained schedules.",
+      "_timestamp": "2026-04-05T21:24:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires tracking multiple workers, availability constraints, service requirements, and shift assignments within a single planning episode, but the information is structured and typically bounded (e.g., rosters, time slots).",
+      "adequacy_evidence": "With tool support (spreadsheets, databases), current agents reliably manage, retrieve, and update this level of structured information without significant loss or drift within an episode.",
+      "_timestamp": "2026-04-05T21:24:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires maintaining information across periods such as employee availability, past assignments, time-off history, and evolving staffing needs, but does not demand deeply complex longitudinal state.",
+      "adequacy_evidence": "Current AI systems with standard database integrations and memory stores can reliably persist and retrieve employee and scheduling data across sessions, with minimal limitations.",
+      "_timestamp": "2026-04-05T21:24:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Work scheduling typically allows minutes to hours for planning, though occasional adjustments may be needed quickly in response to absences or demand changes.",
+      "adequacy_evidence": "Current AI systems can generate and adjust schedules well within these timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T21:24:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Schedule quality can be checked against explicit constraints (availability, staffing levels, labor rules), but verifying full adequacy (e.g., fairness, peak coverage, skill matching) requires managerial review and contextual knowledge.",
+      "adequacy_evidence": "Current AI can generate plausible schedules but still makes constraint or judgment errors (e.g., overlooking preferences or subtle workload imbalances), so supervisors must routinely review and adjust outputs.",
+      "_timestamp": "2026-04-05T21:24:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assigning work schedules directly affects employees, who must accept the supervisor\u2019s authority, fairness, and judgment; perceived legitimacy and trust are important for compliance and morale.",
+      "adequacy_evidence": "While AI-generated schedules could be used, many workers would be skeptical of or resist decisions made solely by an AI, especially around fairness or personal needs, though this resistance is not insurmountable with human oversight.",
+      "_timestamp": "2026-04-05T21:24:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations requiring that work scheduling for personal service workers be performed by a human. While labor laws (e.g., wage/hour, predictive scheduling ordinances) constrain how schedules are created, they do not prohibit AI from generating or assigning them.",
+      "_timestamp": "2026-04-05T21:24:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling errors can lead to understaffing, overtime costs, or service delays, but these issues are typically reversible and can be corrected without severe or irreversible harm.",
+      "adequacy_evidence": "After standard checks (e.g., conflict detection, coverage validation), AI-generated schedules would leave minimal residual risk, as most impactful errors are easily identifiable and fixable before execution.",
+      "_timestamp": "2026-04-05T21:24:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1253.00",
+  "task_id": 14641,
+  "task_statement": "Document software defects, using a bug tracking system, and report defects to software developers.",
+  "occupation_title": "Software Quality Assurance Analysts and Testers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Documenting defects in a bug tracking system and reporting them to developers is done through software tools and communication platforms, which can be fully accessed via a computer with internet access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Bug reports vary across software domains, defect types, and reproduction contexts, but follow relatively standardized structures (steps, expected vs actual behavior, logs).",
+      "adequacy_evidence": "Extensive public and private corpora of issue trackers (e.g., GitHub, Jira), along with reproducible examples and templates, provide rich, process-level data easily leveraged via training or synthesis.",
+      "_timestamp": "2026-04-05T20:56:44"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Writing effective bug reports requires some experience-based judgment about what details matter (e.g., reproducibility, severity, likely cause) and how to communicate them clearly to developers, beyond rigid templates.",
+      "adequacy_evidence": "Current agents can generate structured, clear bug reports and infer many relevant details, but they still show gaps in calibrating severity, prioritization, and context-sensitive nuances in less routine or ambiguous defect cases.",
+      "_timestamp": "2026-04-05T20:56:45"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While defect documentation has standard fields (steps, expected vs. actual, severity), important aspects like relevance, prioritization, and level of detail depend on team norms and context, requiring some interpretation.",
+      "adequacy_evidence": "Current agents can generate structured bug reports from inputs and infer common expectations, but often miss contextual nuances (e.g., business impact or repro clarity), requiring human refinement.",
+      "_timestamp": "2026-04-05T20:56:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step process (reproducing defects, gathering details, documenting clearly, and submitting via a tracking system), where consistency across steps matters but sequences are not deeply long or tightly interdependent.",
+      "adequacy_evidence": "Current AI agents can generally maintain coherence across these moderate sequences, though minor issues like missing details or inconsistency in defect descriptions can emerge as steps accumulate.",
+      "_timestamp": "2026-04-05T20:56:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Bug reports often include screenshots, screen recordings, or logs to illustrate defects, though the core activity is primarily text-based description and communication.",
+      "adequacy_evidence": "Current agents can interpret and generate basic multimodal artifacts like screenshots and logs, but may struggle with subtle UI issues, dynamic behaviors in videos, or precise cross-modal diagnosis.",
+      "_timestamp": "2026-04-05T20:56:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves consolidating details such as reproduction steps, system configurations, logs, and expected vs. actual behavior, requiring moderate within-episode organization and summarization.",
+      "adequacy_evidence": "Current agents with tool support can reliably handle structured bug data, summarize logs, and maintain relevant context within a single session without significant loss.",
+      "_timestamp": "2026-04-05T20:56:46"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Documenting and reporting software defects is typically asynchronous, with minutes or longer acceptable for composing accurate bug reports in tracking systems.",
+      "adequacy_evidence": "Current AI agents can generate clear, structured defect reports well within available time budgets, with no meaningful quality degradation due to latency constraints.",
+      "_timestamp": "2026-04-05T20:56:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Effective defect documentation benefits from awareness of prior bugs, duplicate reports, project conventions, and evolving system context, but most necessary history is explicitly stored in bug tracking systems.",
+      "adequacy_evidence": "Current agents can reliably use external tools (issue trackers, databases, retrieval systems) to access and maintain cross-session state, so persistent memory needs are well-supported.",
+      "_timestamp": "2026-04-05T20:56:47"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit or restrict AI systems from documenting software defects or reporting them via bug tracking systems; this is a standard software engineering activity with no regulated human-only mandate.",
+      "_timestamp": "2026-04-05T20:56:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Bug reports can usually be verified by attempting to reproduce the issue, checking logs, and comparing expected vs. actual behavior, but this requires some technical effort and context.",
+      "adequacy_evidence": "AI-generated defect reports are often usable but may omit key reproduction details or misinterpret behavior, so human review and correction are still routinely needed.",
+      "_timestamp": "2026-04-05T20:56:48"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inaccurate or incomplete defect reports can slow debugging or cause misunderstandings, but issues are typically discovered and corrected during development cycles, making occasional errors survivable.",
+      "adequacy_evidence": "With standard review processes (e.g., developer feedback, repro attempts), AI-generated defect reports can be checked and corrected effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T20:56:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Bug reports are consumed by software developers who rely on clarity and accuracy, but the reporter\u2019s identity or authority is not central to their usefulness.",
+      "adequacy_evidence": "Developers already accept automated or AI-assisted bug reporting tools; acceptance depends on report quality rather than whether a human or AI produced it.",
+      "_timestamp": "2026-04-05T20:56:48"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

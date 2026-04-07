@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2043.00",
+  "task_id": 9110,
+  "task_statement": "Answer questions and provide technical assistance and information to contractors or the public regarding issues such as well drilling, code requirements, hydrology, and geology.",
+  "occupation_title": "Hydrologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Providing technical guidance and answering questions can often be done via email, phone, video calls, or written reports, but hydrologists may also meet contractors or the public in person at offices, hearings, or project sites."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Providing guidance on hydrology, geology, and well drilling often requires interpreting site-specific conditions and applying regulatory standards with practical judgment developed through field experience.",
+      "adequacy_evidence": "Current AI can synthesize regulations and general principles but lacks consistent calibration for nuanced, context-sensitive cases such as unusual subsurface conditions or borderline compliance scenarios.",
+      "_timestamp": "2026-04-06T00:56:53"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse technical domains (hydrology, geology, drilling practices, and local code requirements) with strong geographic and case-specific variation, creating a highly heterogeneous and long-tailed distribution of queries.",
+      "adequacy_evidence": "While substantial coverage exists in public documents (regulations, textbooks, technical guides, FAQs), some local, site-specific conditions and edge cases (e.g., unique subsurface conditions or jurisdictional nuances) are underrepresented but partially addressable via targeted retrieval and synthesis.",
+      "_timestamp": "2026-04-06T00:56:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Questions from contractors or the public often omit key context (site conditions, jurisdictional codes, intended outcomes), requiring interpretation and clarification to provide relevant guidance.",
+      "adequacy_evidence": "Current agents can ask follow-up questions and infer common intents, but they frequently miss local regulatory nuances or the asker\u2019s practical constraints, requiring human iteration to fully resolve ambiguity.",
+      "_timestamp": "2026-04-06T00:56:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Providing technical assistance often involves multi-turn interactions where explanations, follow-up questions, and clarifications must remain consistent across a conversation, but sequences are typically not deeply interdependent or long-horizon.",
+      "adequacy_evidence": "LLM-based agents can generally sustain coherent multi-turn technical dialogue, though they show some drift, inconsistency, or loss of constraints over extended exchanges.",
+      "_timestamp": "2026-04-06T00:56:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Providing technical assistance in hydrology often involves interpreting maps, well logs, geological cross-sections, or diagrams, though many inquiries can be handled via text descriptions and regulations.",
+      "adequacy_evidence": "Current agents can interpret common diagrams and maps but struggle with complex, noisy, or highly technical visual data (e.g., detailed stratigraphic logs), leading to occasional reliability gaps.",
+      "_timestamp": "2026-04-06T00:56:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many inquiries are one-off, effective assistance often benefits from recalling prior interactions about specific sites, ongoing projects, or previously provided guidance to ensure consistency and continuity.",
+      "adequacy_evidence": "Current agents can store and retrieve prior context via external memory systems, but maintaining coherent, reliably surfaced long-term histories across diverse clients and cases remains inconsistent.",
+      "_timestamp": "2026-04-06T00:56:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Responding to contractors or the public typically occurs via phone, email, or consultations where answers are expected within seconds to a few minutes, but not instantaneously under strict real-time constraints.",
+      "adequacy_evidence": "Frontier AI agents can deliver technically sound responses on hydrology, geology, and code questions within this time window without needing to significantly truncate reasoning, so speed does not materially degrade quality.",
+      "_timestamp": "2026-04-06T00:56:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Responding to inquiries requires integrating multiple pieces of case-specific information (e.g., site conditions, regulations, and technical details) within a single interaction, but the volume is typically moderate and structured.",
+      "adequacy_evidence": "Current agents can retrieve and organize relevant technical and regulatory information, but may occasionally miss or misprioritize details when multiple constraints or nuanced context must be tracked simultaneously.",
+      "_timestamp": "2026-04-06T00:56:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "Verifying technical guidance on hydrology, geology, and code requirements requires domain expertise and reference checking, but errors can usually be identified through consultation of standards, data, or peer review rather than long feedback loops.",
+      "adequacy_evidence": "Current AI systems frequently produce plausible but incorrect or outdated technical and regulatory information, requiring careful expert validation and cross-checking, making the verification burden substantial in practice.",
+      "_timestamp": "2026-04-06T00:56:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect technical guidance on well drilling, regulatory compliance, or hydrologic conditions can lead to groundwater contamination, legal violations, or costly engineering errors, so even rare residual mistakes can have serious consequences.",
+      "adequacy_evidence": "With expert review and validation, many AI errors can be caught, but subtle misinterpretations of local geology or regulations may still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T00:56:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI systems from providing general technical information or answering questions about hydrology, geology, or code requirements; licensing rules typically apply only to formal sign-off or professional certification, not informational assistance.",
+      "_timestamp": "2026-04-06T00:56:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves direct interaction with contractors and the public who rely on the hydrologist\u2019s guidance, and the perceived expertise and credibility of the source can influence trust and compliance.",
+      "adequacy_evidence": "While some stakeholders would accept AI for informational queries, many would prefer a human expert for authoritative interpretation of codes or site-specific advice, especially where liability or regulatory compliance is involved.",
+      "_timestamp": "2026-04-06T00:56:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

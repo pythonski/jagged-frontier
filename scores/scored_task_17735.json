@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "47-1011.03",
+  "task_id": 17735,
+  "task_statement": "Estimate materials, equipment, and personnel needed for residential or commercial solar installation projects.",
+  "occupation_title": "Solar Energy Installation Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Estimating materials, equipment, and staffing is typically done using project plans, software, and digital documentation, which can be performed remotely. However, accurate estimates sometimes require site visits or physical inspections of roofs and installation conditions."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating solar installation resources depends on site-specific factors (roof condition, shading, local codes, client budget and preferences) that are often implicit or only partially specified, requiring interpretation and contextual judgment.",
+      "adequacy_evidence": "Current agents can incorporate many structured inputs (system size, location, typical costs) but often miss nuanced local constraints, installer practices, or unstated client priorities, requiring human refinement.",
+      "_timestamp": "2026-04-06T04:24:47"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many aspects (panel counts, wiring, equipment specs) follow standardized engineering rules and software tools, accurate estimates often rely on experience with site-specific factors like roof condition, shading nuances, permitting quirks, and crew productivity.",
+      "adequacy_evidence": "Current AI agents can replicate rule-based sizing and cost estimation well, but lack reliable calibration for nuanced, context-specific judgments (e.g., installation difficulty or local permitting variability), leading to moderate gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T04:24:47"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step estimation process (site characteristics, system sizing, equipment selection, labor planning) where outputs from earlier steps inform later ones, but the sequence is not \u0905\u0924\u094d\u092f long or deeply interdependent.",
+      "adequacy_evidence": "Current AI agents can generally maintain coherence across these planning steps with tool support, though some degradation can occur in keeping constraints consistent across all components, especially in more complex projects.",
+      "_timestamp": "2026-04-06T04:24:48"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Projects vary by roof type, building size, location, local codes, and utility requirements, creating meaningful but structured diversity rather than an extreme long tail.",
+      "adequacy_evidence": "Extensive design standards, past project data, and simulation tools exist, but some site-specific constraints (e.g., local permitting nuances, structural quirks) are underrepresented or proprietary, leaving moderate gaps.",
+      "_timestamp": "2026-04-06T04:24:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Estimating materials, equipment, and personnel for solar installations is typically a planning activity performed over minutes to hours, not under real-time constraints.",
+      "adequacy_evidence": "Current AI systems can perform detailed estimation within acceptable timeframes, and there is no need to truncate reasoning to meet latency demands.",
+      "_timestamp": "2026-04-06T04:24:49"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating solar installation needs often involves interpreting site plans, roof layouts, satellite imagery, and shading diagrams alongside textual specs, making multimodal inputs important but not always central.",
+      "adequacy_evidence": "Current agents can analyze basic images and plans, but they are still inconsistent with precise spatial reasoning, measurements, and complex layout interpretation needed for accurate estimates.",
+      "_timestamp": "2026-04-06T04:24:49"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Estimating benefits from access to prior project data (costs, crew productivity, supplier pricing), but each estimate is largely driven by current project specifications and can be completed with fresh inputs.",
+      "adequacy_evidence": "Current AI systems with database integration and retrieval can reliably store and access historical project data and pricing, so cross-session memory needs are well within existing capabilities.",
+      "_timestamp": "2026-04-06T04:24:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple inputs (site specs, system design parameters, equipment options, labor assumptions, and constraints) and maintaining a coherent estimate, but the information volume is structured and typically managed with standard tools.",
+      "adequacy_evidence": "Current agents can track and organize these inputs using tools like spreadsheets and retrieval systems, though they may occasionally lose or misweight details when contexts grow complex or inputs are updated iteratively.",
+      "_timestamp": "2026-04-06T04:24:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The estimates are used by clients, contractors, and internal teams who rely on them for planning and budgeting, but the identity of the estimator is not central to their acceptance.",
+      "adequacy_evidence": "Stakeholders already accept software-assisted estimation tools, and AI-generated estimates would generally be acceptable if validated, with little resistance tied to the agent's identity.",
+      "_timestamp": "2026-04-06T04:24:51"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimates can be cross-checked against site plans, standard sizing rules, and cost databases, but doing so requires domain expertise in solar design, electrical loads, and local conditions; errors are not always immediately obvious without review.",
+      "adequacy_evidence": "Current AI can produce reasonable estimates but often misses site-specific constraints or code nuances, so human experts must still review and adjust outputs with moderate effort.",
+      "_timestamp": "2026-04-06T04:24:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from estimating materials, equipment, or personnel for solar installation projects; such estimation tools are already commonly implemented in software. Licensing requirements apply to contracting and installation work, not to the act of estimation itself.",
+      "_timestamp": "2026-04-06T04:24:51"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Estimation errors can cause cost overruns, delays, or resource shortages, but projects typically include contingencies and opportunities to correct plans before installation, so occasional residual errors are survivable.",
+      "adequacy_evidence": "Outputs can be cross-checked against design specs, site surveys, code requirements, and historical cost databases, making residual AI errors after normal QA unlikely to pose unacceptable risk.",
+      "_timestamp": "2026-04-06T04:24:51"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

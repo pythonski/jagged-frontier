@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4099.03",
+  "task_id": 16991,
+  "task_statement": "Integrate remotely sensed data with other geospatial data.",
+  "occupation_title": "Remote Sensing Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Integrating remotely sensed data with other geospatial datasets is typically performed using GIS or remote sensing software on a computer. It involves digital data processing and analysis without requiring physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Integration requires selecting appropriate projections, resolutions, and correction methods, and handling sensor-specific artifacts\u2014often guided by experience with past datasets rather than purely explicit rules.",
+      "adequacy_evidence": "Current agents can follow standard GIS procedures and toolchains, but they inconsistently handle edge cases like subtle misregistration, sensor noise, or context-specific fusion choices that benefit from practitioner calibration.",
+      "_timestamp": "2026-04-05T22:03:54"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Integration requires choosing projections, resolutions, preprocessing steps, and fusion methods based on project goals that are often only partially specified and context-dependent.",
+      "adequacy_evidence": "Current agents can infer standard geospatial integration workflows, but they often miss project-specific constraints or intended analytical uses without iterative human clarification.",
+      "_timestamp": "2026-04-05T22:03:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Integrating remotely sensed data with other geospatial data involves multi-step workflows (e.g., preprocessing, coordinate alignment, resampling, merging, and validation) where outputs of earlier steps affect later ones, but sequences are typically bounded and modular.",
+      "adequacy_evidence": "LLM-based agents can manage these structured geospatial pipelines with tools, but may show some degradation over multi-step processes (e.g., parameter inconsistencies or missed constraints) without careful orchestration and checks.",
+      "_timestamp": "2026-04-05T22:03:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves managing multiple geospatial layers, metadata (e.g., projections, resolutions), and transformation steps, requiring ongoing retrieval and alignment of heterogeneous information within a session.",
+      "adequacy_evidence": "Current agents can track and manipulate multiple datasets with tools, but they sometimes lose or mis-handle contextual details like coordinate systems or layer relationships, leading to moderate reliability issues.",
+      "_timestamp": "2026-04-05T22:03:56"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple sensor types (satellite, LiDAR, aerial), formats, and application domains, but workflows (e.g., reprojection, fusion, feature extraction) are relatively standardized within GIS practice.",
+      "adequacy_evidence": "There is extensive public data (e.g., Landsat, Sentinel), documented pipelines, code examples, and training materials that expose step-by-step integration processes, making representative coverage readily attainable.",
+      "_timestamp": "2026-04-05T22:03:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Integration work often spans projects where prior datasets, coordinate systems, metadata standards, and preprocessing choices are reused, but many individual integrations can still be completed within a single project context.",
+      "adequacy_evidence": "Current AI systems with standard data pipelines, databases, and retrieval tools can reliably store and recall geospatial layers, metadata, and prior configurations across sessions, meeting these moderate persistence needs.",
+      "_timestamp": "2026-04-05T22:03:56"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally involves interpreting and combining raster imagery (e.g., satellite or aerial data) with other spatial datasets, requiring visual-spatial reasoning and geospatial alignment beyond text-only inputs.",
+      "adequacy_evidence": "Current agents can integrate geospatial and image data using GIS tools and pipelines, but struggle with complex spatial transformations, sensor-specific nuances, and fine-grained visual interpretation.",
+      "_timestamp": "2026-04-05T22:03:57"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Geospatial data integration tasks are typically batch or project-based workflows where minutes to hours of processing time are acceptable, rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can perform data integration steps (e.g., reprojection, alignment, fusion) within acceptable timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T22:03:57"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Integration errors such as coordinate reference system mismatches, misregistration, temporal misalignment, or improper resampling can be subtle and require GIS expertise, visual inspection, and cross-validation against ground truth to detect.",
+      "adequacy_evidence": "Current AI agents can perform geospatial integration steps but frequently make non-obvious mistakes in projections, metadata interpretation, or alignment, requiring expert review and careful validation to ensure correctness.",
+      "_timestamp": "2026-04-05T22:03:58"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from integrating remotely sensed data with other geospatial datasets. While data use may be subject to privacy, security, or export controls, these regulate the data itself, not whether AI can perform the integration.",
+      "_timestamp": "2026-04-05T22:03:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Integrating remotely sensed data with geospatial data is a technical, back-end task typically performed within internal workflows, with no direct stakeholder interaction or dependence on performer identity.",
+      "adequacy_evidence": "Because stakeholders do not engage with the performer directly and care primarily about the technical output, there is little to no resistance to AI performing this task.",
+      "_timestamp": "2026-04-05T22:03:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in integrating geospatial datasets (e.g., misaligned projections, temporal mismatches) can affect downstream analyses and decisions, but are typically detectable and correctable without catastrophic consequences.",
+      "adequacy_evidence": "Current AI systems can perform geospatial data integration with tooling, but may still introduce subtle alignment or metadata errors that persist after routine checks, leaving some residual risk.",
+      "_timestamp": "2026-04-05T22:03:58"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

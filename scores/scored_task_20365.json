@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1241.01",
+  "task_id": 20365,
+  "task_statement": "Order or maintain inventory of telecommunications equipment for customer premises equipment (CPE), facilities, access networks, or backbone networks.",
+  "occupation_title": "Telecommunications Engineering Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Ordering equipment and tracking inventory are typically done through procurement and inventory management software, but maintaining inventory may sometimes involve physical stock checks or coordination with on-site equipment storage."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Inventory decisions involve some experience-based judgment about demand variability, vendor reliability, equipment compatibility, and network deployment nuances that are not fully captured in formal rules.",
+      "adequacy_evidence": "AI agents can leverage historical data, forecasting models, and documented constraints effectively, but may still lack calibration for edge cases like atypical deployment contexts or subtle supplier performance patterns.",
+      "_timestamp": "2026-04-06T04:57:45"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple equipment categories (CPE, access, backbone), vendors, and organizational contexts, but follows structured procurement and inventory management patterns rather than a highly long-tailed distribution.",
+      "adequacy_evidence": "While general procurement workflows and telecom equipment catalogs are well-documented and can be synthesized, detailed enterprise-specific demand patterns, vendor agreements, and inventory policies are often proprietary, leaving some gaps that require targeted adaptation.",
+      "_timestamp": "2026-04-06T04:57:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows such as assessing inventory levels, forecasting needs, placing orders, tracking deliveries, and updating records, with some interdependence across steps.",
+      "adequacy_evidence": "AI agents can generally manage these structured workflows with tools, but may exhibit mild degradation over longer sequences (e.g., losing constraints or mis-tracking state) without careful orchestration.",
+      "_timestamp": "2026-04-06T04:57:46"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Inventory management involves context-dependent factors like demand forecasting, equipment compatibility, project timelines, and budget constraints that are not always fully specified and require some interpretation.",
+      "adequacy_evidence": "Current AI agents can use historical data and rules to infer needs but often miss tacit constraints such as vendor reliability, local deployment nuances, or shifting operational priorities, requiring human adjustment.",
+      "_timestamp": "2026-04-06T04:57:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering and maintaining telecom equipment inventory relies primarily on textual data such as part numbers, specifications, supplier records, and inventory databases rather than images or other modalities.",
+      "adequacy_evidence": "Since the task is effectively text-based, current AI systems handle the required inputs and outputs without needing multimodal capabilities.",
+      "_timestamp": "2026-04-06T04:57:47"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple items, specifications, quantities, vendor details, and stock levels, requiring coordination of structured but manageable information within a single workflow.",
+      "adequacy_evidence": "Current AI agents with database access and tool integration can reliably track, retrieve, and update such structured inventory information without significant loss or drift within an episode.",
+      "_timestamp": "2026-04-06T04:57:47"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Inventory ordering and maintenance for telecommunications equipment is typically planned and executed over minutes to hours or longer, with no need for real-time decision-making.",
+      "adequacy_evidence": "Current AI agents can easily operate within these relaxed time constraints, allowing full reasoning and tool use without any quality degradation due to latency.",
+      "_timestamp": "2026-04-06T04:57:47"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inventory management depends on ongoing records of stock levels, past orders, supplier performance, and usage trends across time, but does not require highly complex longitudinal context.",
+      "adequacy_evidence": "Current AI agents can reliably integrate with databases and inventory systems to store and retrieve cross-session information, so persistent state needs are well-supported.",
+      "_timestamp": "2026-04-06T04:57:48"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from ordering or managing inventory of telecommunications equipment. While procurement may be subject to internal controls or export compliance rules, these do not mandate a human decision-maker or exclude AI use.",
+      "_timestamp": "2026-04-06T04:57:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in equipment type, compatibility, or quantities can usually be checked against inventory systems, network design specs, and vendor catalogs, but require domain knowledge and careful review to ensure correctness.",
+      "adequacy_evidence": "AI can generate reasonable orders but may misinterpret specifications or select incompatible components, so human verification of items, quantities, and fit with network requirements is still routinely needed.",
+      "_timestamp": "2026-04-06T04:57:48"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering or maintaining telecom equipment inventory has cost, delay, and potential service impact consequences, but most errors (e.g., wrong quantities or models) are detectable and correctable without catastrophic outcomes.",
+      "adequacy_evidence": "With standard checks like inventory reconciliation, vendor validation, and specification matching, AI-generated errors are likely to be caught, and residual risk is generally acceptable given current system capabilities.",
+      "_timestamp": "2026-04-06T04:57:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interaction with vendors and internal teams for ordering and maintaining inventory, so stakeholders are present, but the performer\u2019s identity is not central to trust or effectiveness.",
+      "adequacy_evidence": "Procurement and inventory management are already commonly automated or system-mediated, and vendors and colleagues generally accept AI-assisted or fully automated ordering processes.",
+      "_timestamp": "2026-04-06T04:57:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

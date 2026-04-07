@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2052.00",
+  "task_id": 20183,
+  "task_statement": "Review clients' accounts and plans regularly to determine whether life changes, economic changes, environmental concerns, or financial performance indicate a need for plan reassessment.",
+  "occupation_title": "Personal Financial Advisors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Reviewing clients' financial accounts, plans, and relevant economic or personal updates can be done entirely using digital financial records, planning software, and remote communication with clients; no physical presence or specialized equipment is required."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining whether changes in a client\u2019s life or environment warrant plan reassessment requires interpreting implicit goals, evolving risk tolerance, and context-specific financial priorities that are often not fully specified or explicitly stated.",
+      "adequacy_evidence": "Current agents can flag obvious triggers (market shifts, major life events) but often miss nuanced, client-specific priorities or subtle contextual cues, requiring human judgment to refine whether reassessment is truly needed.",
+      "_timestamp": "2026-04-06T01:45:51"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Client reviews span highly heterogeneous situations involving diverse life events, financial products, economic conditions, and personal goals, creating a long-tailed and context-sensitive distribution.",
+      "adequacy_evidence": "While there is substantial financial planning literature and some case data, much real-world client variation (especially nuanced personal circumstances and longitudinal plan adjustments) is private or under-documented, though partially recoverable via synthesis and simulation.",
+      "_timestamp": "2026-04-06T01:45:51"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves iterating through multiple information sources (client updates, market conditions, plan details) and integrating them over a review cycle, but steps are modular rather than tightly interdependent.",
+      "adequacy_evidence": "AI agents can generally sustain performance across these moderate-length review workflows, though some degradation can occur in maintaining consistency across multiple factors and iterations without careful scaffolding.",
+      "_timestamp": "2026-04-06T01:45:51"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining when changes in a client\u2019s life, market conditions, or financial trajectory warrant plan reassessment relies on nuanced, experience-based judgment about materiality, client preferences, and risk tolerance that is not fully codified.",
+      "adequacy_evidence": "Current agents can apply rules and flag obvious triggers but lack consistent calibration in subtle, context-dependent cases (e.g., balancing competing risks or interpreting ambiguous client situations), leading to moderate gaps.",
+      "_timestamp": "2026-04-06T01:45:51"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective review depends on detailed longitudinal knowledge of each client's financial history, prior plans, life events, preferences, and past advice outcomes across many years.",
+      "adequacy_evidence": "Current agents can use external memory systems (CRMs, vector databases) to store and retrieve client histories, but they often struggle with consistently updating, prioritizing, and contextually integrating this information across sessions without careful system design.",
+      "_timestamp": "2026-04-06T01:45:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires synthesizing multiple information streams (client financial data, life events, market conditions, and plan details) within a single review, but the volume is typically bounded per client and can be structured.",
+      "adequacy_evidence": "Current agents can aggregate and summarize structured financial data, but may lose nuance when integrating heterogeneous signals (e.g., qualitative life changes with quantitative performance), leading to occasional context gaps.",
+      "_timestamp": "2026-04-06T01:45:53"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task involves periodic reviews of client accounts and plans, typically scheduled and allowing ample time for analysis; there is no need for immediate or real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform thorough analysis within minutes to hours, which fits comfortably within the task's time expectations without compromising quality.",
+      "_timestamp": "2026-04-06T01:45:53"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing financial data, plans, and client information that are typically represented in text, tables, and numerical formats; visual elements like charts are helpful but not essential.",
+      "adequacy_evidence": "Current AI agents can adequately process structured financial data and basic visualizations when present, and the task can be fully performed in text-based form without multimodal limitations.",
+      "_timestamp": "2026-04-06T01:45:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "This task is embedded in an ongoing advisor-client relationship where trust, perceived expertise, and understanding of personal circumstances are central to effective engagement and client compliance.",
+      "adequacy_evidence": "While some clients may accept AI-assisted monitoring and alerts, many would be hesitant to rely solely on an AI for nuanced financial reassessment tied to life events, preferring human judgment and relational trust.",
+      "_timestamp": "2026-04-06T01:45:54"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Missed signals for plan reassessment can lead to suboptimal financial decisions, tax inefficiencies, or unmanaged risk exposure, but consequences are typically gradual and correctable rather than immediately catastrophic.",
+      "adequacy_evidence": "Even with review, AI may overlook subtle contextual cues (e.g., nuanced life changes or client intent), leaving some meaningful residual risk that could affect advice quality over time.",
+      "_timestamp": "2026-04-06T01:45:54"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Providing personalized financial advice is regulated under SEC/FINRA frameworks and typically requires a licensed human advisor to be responsible for recommendations. While AI can assist, there is no clear authorization for fully autonomous AI to perform this function independently, creating partial restriction.",
+      "_timestamp": "2026-04-06T01:45:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether changes warrant plan reassessment involves nuanced financial judgment, interpreting incomplete client data, and forecasting impacts; mistakes can be subtle and may not surface until much later.",
+      "adequacy_evidence": "Current AI systems can miss context-specific factors or misinterpret financial signals, and their recommendations require detailed expert review to validate assumptions and completeness, making verification burdens high.",
+      "_timestamp": "2026-04-06T01:45:55"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

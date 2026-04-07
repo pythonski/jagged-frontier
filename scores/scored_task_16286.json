@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2051.02",
+  "task_id": 16286,
+  "task_statement": "Design forms for receiving, processing, or tracking data.",
+  "occupation_title": "Clinical Data Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Designing data collection or tracking forms (e.g., case report forms or database input forms) is done using software tools and documentation systems, which can be fully created and managed on a computer without physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing clinical data forms requires interpreting study protocols, regulatory requirements, and stakeholder preferences, which are partly implicit and context-dependent rather than fully specified upfront.",
+      "adequacy_evidence": "Current agents can extract structure from protocols and standards but often miss nuanced clinical intent or sponsor-specific conventions, requiring iterative human clarification and refinement.",
+      "_timestamp": "2026-04-06T03:21:05"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Form design for clinical data management varies across study types, therapeutic areas, and regulatory requirements, but follows well-documented standards (e.g., CDISC, CRFs) and recurring design patterns.",
+      "adequacy_evidence": "Extensive public and proprietary examples of case report forms, design guidelines, and annotated standards exist, providing rich process-level signal that can be supplemented with synthetic tasks and expert demonstrations.",
+      "_timestamp": "2026-04-06T03:21:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing clinical data collection forms requires practical judgment about protocol interpretation, site workflows, and anticipating user errors, which is partly experience-based beyond written standards like CDISC.",
+      "adequacy_evidence": "Current AI agents can apply standards and known best practices but show gaps in nuanced, context-specific usability calibration and edge-case anticipation that experienced practitioners handle.",
+      "_timestamp": "2026-04-06T03:21:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing clinical data forms requires integrating protocol specifications, regulatory standards (e.g., CDISC), variable definitions, and validation rules, involving multiple structured information sources within a single workflow.",
+      "adequacy_evidence": "Current agents can track and organize these requirements with tool support, but may lose constraints or introduce inconsistencies when managing many interdependent fields or compressing complex specifications.",
+      "_timestamp": "2026-04-06T03:21:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing clinical data forms typically requires referencing prior study designs, sponsor standards, regulatory conventions (e.g., CDISC), and evolving project-specific preferences across sessions.",
+      "adequacy_evidence": "Current agents can persist and retrieve project documents and standards with external memory tools, but they still show inconsistencies in maintaining and correctly applying evolving cross-session context without careful scaffolding.",
+      "_timestamp": "2026-04-06T03:21:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing clinical data collection or tracking forms is an offline, iterative task where turnaround times of hours to days are acceptable rather than real-time responsiveness.",
+      "adequacy_evidence": "AI systems can take sufficient time to generate, refine, and validate form designs without any meaningful degradation due to latency constraints.",
+      "_timestamp": "2026-04-06T03:21:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing clinical data forms involves multiple interdependent steps such as defining data fields, aligning with standards (e.g., CDISC), setting validation rules, and iterating with stakeholders, but sequences are not \u0905\u0924\u094d\u092f long or deeply stateful.",
+      "adequacy_evidence": "LLM-based agents can generally sustain coherence across these moderate workflows, but may show some drift in maintaining all constraints and dependencies across iterative design steps without careful scaffolding.",
+      "_timestamp": "2026-04-06T03:21:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The forms are used by clinicians, site staff, and regulators, so stakeholders interact with the output, but the designer\u2019s personal identity or presence is not central to their use.",
+      "adequacy_evidence": "Stakeholders generally care about compliance, usability, and accuracy of the forms rather than who designed them, and AI-assisted design is already broadly acceptable if outputs meet standards.",
+      "_timestamp": "2026-04-06T03:21:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing clinical data collection forms (e.g., CRFs) primarily involves specifying structured text fields, variable definitions, and validation rules; visual layout is secondary and can be described textually.",
+      "adequacy_evidence": "Current AI agents can generate structured form schemas and even basic visual layouts via code or templates, with no significant reliance on advanced multimodal perception or generation.",
+      "_timestamp": "2026-04-06T03:21:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "FDA regulations (e.g., 21 CFR Part 11, GxP) require validated systems and accountable qualified personnel for clinical data processes, but do not explicitly prohibit AI from designing forms; they impose oversight, validation, and responsibility requirements that partially constrain autonomous AI use.",
+      "_timestamp": "2026-04-06T03:21:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in clinical data collection forms can lead to missing, biased, or invalid trial data, potentially affecting patient safety, regulatory compliance, and trial outcomes, so even rare residual errors can have serious downstream consequences.",
+      "adequacy_evidence": "While many issues can be caught through validation rules and human review, AI may still introduce subtle design flaws (e.g., ambiguous fields, protocol misalignment) that are not easily detected, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T03:21:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Form design errors (e.g., incorrect field definitions, missing constraints, flawed skip logic, or noncompliance with standards like CDISC) can be subtle and may only surface during data collection or analysis, requiring domain expertise and testing to detect.",
+      "adequacy_evidence": "AI-generated forms can follow templates but still require expert review and validation against protocols and standards; errors are common enough that meaningful checking is necessary, though not prohibitively difficult with established review processes.",
+      "_timestamp": "2026-04-06T03:21:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

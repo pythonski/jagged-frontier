@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1253.00",
+  "task_id": 14647,
+  "task_statement": "Review software documentation to ensure technical accuracy, compliance, or completeness, or to mitigate risks.",
+  "occupation_title": "Software Quality Assurance Analysts and Testers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Software documentation for modern development is typically stored and reviewed digitally (e.g., in repositories, wikis, or document files), allowing accuracy and compliance checks entirely via computer. The task does not require physical presence or non-computer tools."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While accuracy and compliance can be checked against specifications and standards, completeness and risk mitigation often depend on implicit expectations (audience needs, system context, organizational norms) that are not fully spelled out.",
+      "adequacy_evidence": "Current agents can apply explicit rules and known standards well, but they often miss implicit expectations or context-specific risks without human guidance, requiring iteration to fully align with stakeholder intent.",
+      "_timestamp": "2026-04-06T02:40:23"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Beyond checklists, reviewers must use experience to judge whether documentation adequately reflects real system behavior, anticipate user misunderstandings, and prioritize risks or omissions that are not explicitly specified.",
+      "adequacy_evidence": "Well-scaffolded agents can systematically compare docs to code, specs, and standards, but they still show gaps in nuanced judgment about user impact, implicit requirements, and risk prioritization in edge or context-dependent cases.",
+      "_timestamp": "2026-04-06T02:40:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing documentation involves reading and cross-checking multiple sections for consistency, accuracy, and compliance, requiring sustained attention across a moderate sequence of interrelated steps.",
+      "adequacy_evidence": "LLM agents can handle multi-step review workflows but show some degradation over long documents (e.g., missing earlier constraints or inconsistencies), especially when context windows or iterative passes are required.",
+      "_timestamp": "2026-04-06T02:40:23"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different types of software documentation (API docs, user guides, compliance materials) and domains, but follows broadly similar review patterns and standards rather than a highly long-tailed distribution.",
+      "adequacy_evidence": "There is abundant public documentation, style guides, and review examples to train on, but some organization-specific standards, proprietary systems, and niche compliance contexts are underrepresented and only partially recoverable via synthesis.",
+      "_timestamp": "2026-04-06T02:40:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing large, heterogeneous materials (documentation, code references, standards, compliance rules) where small omissions or inconsistencies can introduce risk, requiring sustained tracking of many interrelated details.",
+      "adequacy_evidence": "Current agents with long context and retrieval can handle substantial documentation, but still show gaps in reliably tracking cross-document dependencies and may miss or misalign details over extended contexts.",
+      "_timestamp": "2026-04-06T02:40:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing software documentation is primarily a text-based activity involving written specifications, comments, and requirements; diagrams or screenshots are supplementary rather than essential.",
+      "adequacy_evidence": "Current AI systems handle text-based review tasks well, and any occasional multimodal elements (e.g., simple diagrams) are within existing capabilities and not a bottleneck.",
+      "_timestamp": "2026-04-06T02:40:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing documentation often benefits from awareness of prior review findings, project standards, and known risk areas, but many reviews can still be conducted on a per-document basis.",
+      "adequacy_evidence": "Current agents can use external memory stores and retrieval systems to track prior issues and standards, but they still show gaps in consistently surfacing the most relevant historical context across sessions.",
+      "_timestamp": "2026-04-06T02:40:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing software documentation for accuracy and completeness is typically an offline task with flexible deadlines; minutes to hours (or longer) are acceptable for thorough review.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to perform multi-step analysis without meaningful degradation from latency constraints, as no strict speed requirement forces truncation of reasoning.",
+      "_timestamp": "2026-04-06T02:40:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from reviewing software documentation. While certain regulated industries may require human sign-off for compliance, AI use in the review process itself is not restricted.",
+      "_timestamp": "2026-04-06T02:40:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is typically internal and document-focused; outputs are evaluated on correctness rather than who produced them, with minimal need for stakeholder engagement tied to performer identity.",
+      "adequacy_evidence": "Organizations already accept automated and AI-assisted tooling in QA and documentation review, and stakeholders are generally indifferent to whether an AI or human performed the check.",
+      "_timestamp": "2026-04-06T02:40:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying documentation accuracy and completeness requires comparing against code, specifications, and standards, which takes expertise and time but is generally feasible with established review practices.",
+      "adequacy_evidence": "AI-generated or reviewed documentation can contain subtle inaccuracies or omissions, so human reviewers must consistently cross-check outputs, though errors are usually detectable with routine QA effort.",
+      "_timestamp": "2026-04-06T02:40:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in reviewed documentation can propagate misunderstandings, compliance gaps, or missed risks, but these are typically correctable downstream and rarely cause immediate irreversible harm.",
+      "adequacy_evidence": "AI can miss subtle inconsistencies or regulatory nuances in documentation; even after review processes, its residual error patterns (e.g., overconfidence in incorrect edits) remain somewhat problematic but not catastrophic.",
+      "_timestamp": "2026-04-06T02:40:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

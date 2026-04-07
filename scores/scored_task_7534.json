@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2011.00",
+  "task_id": 7534,
+  "task_statement": "Calculate orbits and determine sizes, shapes, brightness, and motions of different celestial bodies.",
+  "occupation_title": "Astronomers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Calculating orbits and determining physical properties of celestial bodies is done through mathematical modeling and analysis of observational data using computers and software, which can be performed entirely remotely."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "The task spans a wide range of celestial objects (planets, stars, galaxies, transient events) and observational regimes, each with different physical models, data types, and edge cases, making the instance distribution highly heterogeneous.",
+      "adequacy_evidence": "There is extensive accessible coverage via textbooks, research papers, simulation code, astronomical survey data, and worked examples, providing rich process-level signal across essentially all major subdomains.",
+      "_timestamp": "2026-04-05T21:13:01"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While core objectives (calculating orbital parameters and physical properties) are well-defined by physics, choices about models, data preprocessing, and acceptable uncertainty introduce some context-dependent interpretation.",
+      "adequacy_evidence": "Current AI agents can reliably infer appropriate scientific goals and apply standard astrophysical methods when given data and context, with minimal ambiguity-related failure.",
+      "_timestamp": "2026-04-05T21:13:01"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Core computations rely on well-defined physical laws and statistical methods, but practical work involves judgment in handling noisy observational data, model selection, and instrument-specific calibration nuances.",
+      "adequacy_evidence": "AI systems can execute standard orbital mechanics and data-fitting procedures, but show gaps in nuanced handling of observational systematics and context-sensitive modeling choices in non-routine cases.",
+      "_timestamp": "2026-04-05T21:13:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analytical workflows (data collection, preprocessing, model fitting, iterative refinement), where outputs from earlier steps inform later calculations, but many steps can be modularly validated.",
+      "adequacy_evidence": "LLM-based agents with tools can sustain these workflows reasonably well, though some degradation appears in longer chains (e.g., error propagation or missed constraints), requiring oversight or intermediate checks.",
+      "_timestamp": "2026-04-05T21:13:02"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Astronomical calculations require tracking many interdependent parameters (e.g., positional data, velocities, time steps, observational inputs) and maintaining consistency across extended computational workflows, often with large datasets or iterative models.",
+      "adequacy_evidence": "Current agents can offload much of this to external tools (e.g., code execution, data storage), but still show occasional context loss or drift in complex multi-step reasoning and parameter tracking within a single episode.",
+      "_timestamp": "2026-04-05T21:13:02"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Astronomers rely heavily on non-text data such as telescope images, spectral plots, and time-series measurements to infer orbits, shapes, brightness, and motion; these modalities are central, not optional.",
+      "adequacy_evidence": "Current AI systems can analyze astronomical images and structured data reasonably well with tools, but struggle with highly precise, noise-sensitive, or instrument-specific interpretations and complex cross-modal scientific inference.",
+      "_timestamp": "2026-04-05T21:13:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Astronomical calculations often build on prior observations, datasets, and model refinements accumulated over time, but individual computations (e.g., orbit determination) can usually be performed with self-contained inputs if data are provided.",
+      "adequacy_evidence": "Current AI systems with standard database integration and retrieval can reliably store and access prior observational data and model parameters across sessions, so cross-session memory is not a major limitation.",
+      "_timestamp": "2026-04-05T21:13:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Astronomical calculations of orbits and physical properties are typically conducted offline using observational data, with no need for real-time responses; minutes to hours of computation are acceptable.",
+      "adequacy_evidence": "Frontier AI systems can use extended reasoning and external tools (e.g., numerical solvers, code execution) within generous time budgets, so latency does not meaningfully constrain output quality.",
+      "_timestamp": "2026-04-05T21:13:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit or restrict AI systems from calculating orbits or analyzing properties of celestial bodies. This work is not regulated in a way that mandates human-only performance.",
+      "_timestamp": "2026-04-05T21:13:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily technical and analytical, with outputs (orbital parameters, measurements) consumed impersonally by the scientific community rather than requiring stakeholder interaction with the performer.",
+      "adequacy_evidence": "Astronomy already relies heavily on automated computational tools, and stakeholders generally accept machine-generated results as long as they are accurate and validated.",
+      "_timestamp": "2026-04-05T21:13:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in calculated orbits or physical properties can mislead research conclusions or downstream analyses, but they are typically caught through replication, peer review, and consistency with physical laws, making consequences meaningful but not catastrophic.",
+      "adequacy_evidence": "With standard validation methods (e.g., cross-checking with observational data, physical constraints, and independent recomputation), AI-generated outputs can be reliably verified, leaving little unacceptable residual risk.",
+      "_timestamp": "2026-04-05T21:13:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Validating orbital calculations and inferred properties requires expert analysis, comparison with observational data, and consistency checks against physical models; errors can be subtle and may only emerge over time or with new observations.",
+      "adequacy_evidence": "AI systems can perform calculations and simulations, but they still produce nontrivial errors in assumptions, data interpretation, or numerical setup, requiring expert review and cross-checking with empirical data.",
+      "_timestamp": "2026-04-05T21:13:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

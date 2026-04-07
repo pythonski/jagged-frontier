@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1199.04",
+  "task_id": 18111,
+  "task_statement": "Collect, compile, or integrate Geographic Information Systems (GIS) data, such as remote sensing or cartographic data for inclusion in map manuscripts.",
+  "occupation_title": "Geospatial Information Scientists and Technologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "GIS data collection and integration is usually performed on a computer using digital datasets such as remote sensing imagery, existing GIS layers, and online repositories. However, some instances may involve field data collection with GPS or other instruments before the data are compiled digitally."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Integrating GIS data often requires judgment about data quality, coordinate systems, resolution mismatches, and appropriate transformations that are not fully captured by explicit rules.",
+      "adequacy_evidence": "Current agents can follow documented GIS procedures and handle standard integrations, but they still struggle with nuanced data quality assessment and context-specific decisions in non-routine cases.",
+      "_timestamp": "2026-04-06T11:21:25"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves selecting and integrating GIS data appropriate for a specific map purpose, which requires interpreting implicit criteria like scale, projection, data quality, and thematic relevance based on project context.",
+      "adequacy_evidence": "Current agents can follow explicit specifications and infer some context, but they often miss nuanced cartographic intent or dataset suitability without iterative human guidance.",
+      "_timestamp": "2026-04-06T11:21:26"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans diverse data sources (e.g., satellite imagery, LiDAR, vector maps), formats, projections, and domain-specific conventions, creating moderate heterogeneity in instances.",
+      "adequacy_evidence": "Extensive open GIS datasets, documented workflows, and tooling (e.g., QGIS, ArcGIS tutorials, remote sensing benchmarks) provide rich, process-level training signal across nearly all common subcases.",
+      "_timestamp": "2026-04-06T11:21:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (data sourcing, cleaning, coordinate transformation, integration, and validation) where consistency matters, but many steps are modular and can be checked independently.",
+      "adequacy_evidence": "LLM-based agents can generally manage these pipelines with tools, but may show moderate degradation over longer sequences, such as losing track of constraints (e.g., projections or metadata standards) without careful orchestration.",
+      "_timestamp": "2026-04-06T11:21:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves handling multiple GIS datasets (e.g., remote sensing imagery, vector layers, projections, metadata) and integrating them coherently, requiring active tracking and compression of heterogeneous information within a session.",
+      "adequacy_evidence": "Current agents can offload much data handling to tools, but they still show weaknesses in consistently tracking metadata details (e.g., coordinate systems, layer alignment), leading to occasional context loss or integration errors.",
+      "_timestamp": "2026-04-06T11:21:28"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in GIS data integration can propagate into maps and analyses, potentially affecting planning or decisions, but most applications tolerate occasional minor inaccuracies after standard validation workflows.",
+      "adequacy_evidence": "With existing QA processes (e.g., spatial validation, cross-referencing datasets), AI-generated outputs can be sufficiently checked so that remaining error risk is generally acceptable.",
+      "_timestamp": "2026-04-06T11:21:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on non-text data such as satellite imagery, raster layers, and spatial vector data, requiring interpretation, alignment, and integration across visual and geospatial formats.",
+      "adequacy_evidence": "Current AI agents can process and manipulate GIS data with tools, but struggle with complex spatial reasoning, projection nuances, and high-precision integration of heterogeneous geospatial layers.",
+      "_timestamp": "2026-04-06T11:21:29"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying GIS data integration requires domain expertise (e.g., checking coordinate systems, projections, alignment, and metadata consistency), but established tools and validation workflows (visual overlays, topology checks) make many errors detectable with effort.",
+      "adequacy_evidence": "Current AI systems can mishandle projections, metadata interpretation, or data fusion steps, so human review using GIS tools is still needed at a moderate level to catch non-obvious inconsistencies.",
+      "_timestamp": "2026-04-06T11:21:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily technical data collection and integration, typically performed within a workflow where outputs are consumed impersonally by systems or internal teams, with little dependence on the performer's identity.",
+      "adequacy_evidence": "There are no meaningful stakeholder acceptance barriers; GIS data processing is already heavily automated and users are generally indifferent to whether outputs are produced by humans or AI.",
+      "_timestamp": "2026-04-06T11:21:29"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "GIS data collection and integration often occurs within ongoing projects where prior datasets, metadata standards, and integration decisions must be reused across sessions, but these are typically well-documented and externally stored.",
+      "adequacy_evidence": "Current AI systems can rely on databases, file systems, and metadata management tools to persist and retrieve geospatial data and project context effectively, with little inherent limitation in cross-session memory.",
+      "_timestamp": "2026-04-06T11:21:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI from collecting, compiling, or integrating GIS data. While certain datasets may have access controls (e.g., classified or restricted geospatial data), these restrictions apply to any actor and do not specifically bar AI systems from performing the task.",
+      "_timestamp": "2026-04-06T11:21:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "GIS data collection and integration for map manuscripts is typically an offline, project-based workflow where minutes to hours of processing time are acceptable.",
+      "adequacy_evidence": "Current AI agents can perform data ingestion, transformation, and integration well within these relaxed time constraints without needing to sacrifice reasoning quality.",
+      "_timestamp": "2026-04-06T11:21:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

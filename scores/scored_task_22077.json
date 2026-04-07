@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3027.00",
+  "task_id": 22077,
+  "task_statement": "Design molds, tools, dies, jigs, or fixtures for use in manufacturing processes.",
+  "occupation_title": "Mechanical Engineering Technologists and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Designing molds, tools, dies, jigs, or fixtures is typically done using CAD and other engineering software on a computer. However, technicians often need to inspect physical parts, take measurements, or validate designs with shop-floor equipment, which requires in-person interaction."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective design of molds, dies, jigs, and fixtures relies heavily on experiential judgment about manufacturability, material behavior, tolerances, and shop-floor constraints that are not fully captured in explicit rules or documentation.",
+      "adequacy_evidence": "Current AI agents can apply design rules and simulations but lack consistent real-world calibration and experiential nuance, leading to gaps in handling non-routine or context-sensitive manufacturing scenarios.",
+      "_timestamp": "2026-04-05T23:53:02"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing molds, dies, jigs, and fixtures spans many manufacturing processes, materials, tolerances, and industry-specific constraints, creating a highly heterogeneous and long-tailed distribution of cases.",
+      "adequacy_evidence": "There is substantial coverage via CAD repositories, engineering texts, and simulation-based synthetic data, but many real-world designs and process rationales are proprietary or sparsely documented, leaving some gaps in representative process-level data.",
+      "_timestamp": "2026-04-05T23:53:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing manufacturing tooling involves long, interdependent sequences (requirements capture, material selection, tolerance analysis, CAD modeling, simulation, and iterative refinement) where early decisions strongly constrain later steps.",
+      "adequacy_evidence": "Current AI agents can manage multi-step design workflows with tooling support, but they show some drift and error accumulation across extended iterative design cycles, especially when constraints evolve or need consistent tracking.",
+      "_timestamp": "2026-04-05T23:53:03"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing molds and fixtures requires integrating many concurrent details\u2014geometries, tolerances, material properties, manufacturing constraints, and client specifications\u2014where missing a single parameter can invalidate the design.",
+      "adequacy_evidence": "Current agents can offload some complexity to CAD tools and structured workflows, but they still show weaknesses in consistently tracking all constraints and maintaining coherent compressed representations across extended design iterations.",
+      "_timestamp": "2026-04-05T23:53:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Design work often spans multiple sessions with iterative revisions, reuse of prior designs, and adherence to client or organizational standards, but individual design tasks can sometimes be handled largely within a single project context.",
+      "adequacy_evidence": "Current agents can persist and retrieve project files and prior designs using external storage and retrieval systems, but they still show gaps in consistently surfacing relevant historical context and maintaining nuanced project continuity over time.",
+      "_timestamp": "2026-04-05T23:53:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While inputs like part geometry, tolerances, and production requirements are often specified, key criteria (e.g., manufacturability tradeoffs, shop constraints, durability, ease of use) are partly implicit and require interpretation and iteration with stakeholders.",
+      "adequacy_evidence": "Current agents can infer many design constraints from provided specs and standards, but they frequently miss context-specific manufacturing nuances and require human feedback loops to converge on fully acceptable tooling designs.",
+      "_timestamp": "2026-04-05T23:53:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing molds, tools, dies, jigs, or fixtures is a deliberative engineering task typically conducted over hours or days, with no expectation of near-real-time responses.",
+      "adequacy_evidence": "Current AI systems can take ample time to perform multi-step reasoning, simulations, and iterations without being constrained by latency, so speed does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T23:53:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing molds, dies, jigs, and fixtures inherently relies on geometric reasoning, CAD models, technical drawings, and spatial constraints that cannot be fully expressed or evaluated in text alone.",
+      "adequacy_evidence": "Current AI systems can generate and interpret CAD-like outputs and assist with geometry, but they remain unreliable on complex tolerancing, manufacturability constraints, and precise spatial reasoning required for production-ready designs.",
+      "_timestamp": "2026-04-05T23:53:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing design work, but in some contexts (e.g., regulated industries or safety-critical components) final designs may require review or sign-off by a licensed professional engineer. This creates partial restriction rather than a full ban.",
+      "_timestamp": "2026-04-05T23:53:06"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Designing manufacturing tooling involves complex tolerances, material behavior, and process constraints; errors (e.g., in fit, stress, or thermal performance) are often subtle and require simulation, prototyping, or expert review to detect.",
+      "adequacy_evidence": "AI-generated designs frequently require detailed engineering validation (e.g., CAD checks, FEA, manufacturability review), and mistakes are common enough that thorough, expert-led verification is necessary before use.",
+      "_timestamp": "2026-04-05T23:53:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The designs are used by engineers, machinists, and production managers who must rely on their correctness and manufacturability, so stakeholder trust in the output matters to some degree.",
+      "adequacy_evidence": "In manufacturing design contexts, stakeholders already accept CAD automation and generative design tools; AI-generated designs are generally acceptable if they meet specifications and pass validation checks.",
+      "_timestamp": "2026-04-05T23:53:07"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in molds, dies, or fixtures can cause large-scale production defects, equipment damage, or safety hazards, so even rare residual mistakes after review can have major cost and operational consequences.",
+      "adequacy_evidence": "While simulations, prototyping, and engineering review can catch many AI errors, current systems still risk subtle issues in tolerancing, material behavior, or manufacturability that may slip through, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-05T23:53:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

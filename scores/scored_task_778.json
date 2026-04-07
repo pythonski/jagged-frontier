@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-6013.00",
+  "task_id": 778,
+  "task_statement": "Receive and route messages or documents, such as laboratory results, to appropriate staff.",
+  "occupation_title": "Medical Secretaries and Administrative Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Messages and lab results are often received and routed through electronic health record systems, email, or digital messaging, which can be handled remotely. However, some instances involve handling physical documents, printed results, phone messages, or in-person routing within a clinic."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of document types (e.g., lab results, messages, referrals) and routing rules that vary by clinic, specialty, and urgency, but follows relatively standardized administrative patterns.",
+      "adequacy_evidence": "Representative workflows, routing protocols, and examples are well-documented in medical administration training materials and EHR systems, and can be supplemented with synthetic cases, providing sufficient coverage for current AI systems.",
+      "_timestamp": "2026-04-06T00:27:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Routing messages like lab results generally follows established protocols (e.g., by test type, urgency, or provider assignment), but some judgment is needed for borderline urgency or unclear ownership cases.",
+      "adequacy_evidence": "Current AI agents can reliably apply routing rules and handle most context-based variations using structured data and learned patterns, with minimal shortfall in the limited tacit judgment required.",
+      "_timestamp": "2026-04-06T00:27:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Routing medical messages requires interpreting context such as urgency, patient status, provider roles, and implicit clinic workflows, which are not always fully specified in the message itself.",
+      "adequacy_evidence": "Current AI agents can follow structured routing rules and infer intent in many cases, but they still struggle with nuanced clinical context and exceptions, often requiring human oversight to ensure correct routing.",
+      "_timestamp": "2026-04-06T00:27:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of short, repeatable steps (receive, identify, route) that are largely independent per item and do not form long, interdependent sequences.",
+      "adequacy_evidence": "AI agents can reliably handle these brief workflows without degradation, maintaining consistency across such simple, low-depth task sequences.",
+      "_timestamp": "2026-04-06T00:27:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Routing often depends on up-to-date staff roles, contact preferences, and prior routing conventions, which persist across instances but are relatively structured and limited in scope.",
+      "adequacy_evidence": "Current systems can reliably store and retrieve directories, routing rules, and historical patterns via databases or simple memory layers, with minimal failure in cross-session recall.",
+      "_timestamp": "2026-04-06T00:27:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and routing textual messages or documents (e.g., lab results, memos), with minimal reliance on non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle text processing and basic document ingestion (including OCR for simple scans) reliably, so there is no meaningful multimodal shortfall.",
+      "_timestamp": "2026-04-06T00:27:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Routing messages or documents in medical offices is typically handled within minutes and does not require instantaneous response; brief delays rarely affect outcomes.",
+      "adequacy_evidence": "AI systems can classify and route messages quickly with high accuracy well within acceptable time windows, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T00:27:37"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Each routing decision requires tracking key fields (sender, patient identifiers, urgency, content type, intended recipient), but the information per item is limited and structured.",
+      "adequacy_evidence": "Current agents can reliably extract, hold, and route based on structured fields within a single episode, with minimal loss of context or retrieval failure.",
+      "_timestamp": "2026-04-06T00:27:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Correct routing can usually be checked via document metadata, patient identifiers, and standard workflows, but may require attention to context (e.g., specialty, urgency) and is not always instantly obvious if misrouted.",
+      "adequacy_evidence": "Current AI can classify and route messages with reasonable accuracy, but still makes occasional context or labeling errors, so routine human review or audit checks are needed to ensure correct delivery.",
+      "_timestamp": "2026-04-06T00:27:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws requiring a human to perform message or document routing in healthcare settings. While HIPAA and related regulations impose strict privacy and security requirements, they permit automated systems as long as compliance safeguards are met.",
+      "_timestamp": "2026-04-06T00:27:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal administrative function where messages or documents are routed within an organization, and recipients do not rely on or engage with the performer's identity.",
+      "adequacy_evidence": "Staff are generally indifferent to whether routing is done by a human or automated system, and such workflows are already commonly handled by software without resistance.",
+      "_timestamp": "2026-04-06T00:27:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misrouting or delaying laboratory results can lead to missed or delayed clinical decisions, potentially causing significant patient harm even if such errors are infrequent.",
+      "adequacy_evidence": "With structured systems and verification (e.g., EHR routing rules, staff oversight), AI can reduce many errors, but edge cases (ambiguous recipients, unusual workflows) still leave some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T00:27:40"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1229.06",
+  "task_id": 17269,
+  "task_statement": "Inform coaches, trainers, or other interested parties regarding the medical conditions of athletes.",
+  "occupation_title": "Sports Medicine Physicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Communicating athletes\u2019 medical conditions to coaches or trainers can often be done via email, electronic health records, or video/phone communication. However, in sports settings it is also frequently done face-to-face during practices, games, or team meetings."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied medical conditions, sports contexts, and stakeholder needs (e.g., coaches vs. trainers), but follows relatively standard patterns of clinical communication and disclosure.",
+      "adequacy_evidence": "Medical literature, case reports, and communication guidelines provide substantial coverage, but real-world, context-rich examples (e.g., team dynamics, sensitive disclosures) are less systematically captured and only partially reproducible via synthesis.",
+      "_timestamp": "2026-04-06T02:06:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effectively informing coaches requires judgment about what details are clinically relevant, how to frame risk and return-to-play implications, and how to balance medical accuracy with team context and privacy norms.",
+      "adequacy_evidence": "AI can summarize conditions and general guidance, but often lacks nuanced calibration around stakeholder dynamics, confidentiality boundaries, and sport-specific contextual judgment in non-routine cases.",
+      "_timestamp": "2026-04-06T02:06:03"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "What to communicate, how much detail to share, and how to frame risks depend on implicit factors like consent, privacy law (e.g., HIPAA), team needs, and situational judgment about athlete safety and performance.",
+      "adequacy_evidence": "Agents can follow explicit guidelines if provided, but often struggle to infer nuanced disclosure boundaries and stakeholder-specific communication needs without iterative human direction.",
+      "_timestamp": "2026-04-06T02:06:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering relevant medical information, tailoring it to the audience, and possibly engaging in brief back-and-forth clarification, requiring some consistency across steps but not long, tightly coupled sequences.",
+      "adequacy_evidence": "Frontier AI agents can maintain coherence over short to moderate informational exchanges and structured explanations with minimal degradation, especially with tool support and context tracking.",
+      "_timestamp": "2026-04-06T02:06:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily communicative\u2014conveying medical information verbally or in written form\u2014without inherent dependence on interpreting or generating non-text modalities.",
+      "adequacy_evidence": "Current AI agents handle text-based and conversational communication effectively, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-06T02:06:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Communicating athletes' medical conditions to coaches or trainers is often expected within minutes, especially around games or practices, but rarely requires split-second real-time responses.",
+      "adequacy_evidence": "Frontier AI systems can generate clear, accurate summaries of medical information within seconds, so meeting these moderate latency expectations does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T02:06:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires synthesizing relevant details from an athlete\u2019s medical status (diagnosis, restrictions, recovery status) and communicating them clearly, but the information volume is typically bounded and structured.",
+      "adequacy_evidence": "Current agents can generally track and summarize this level of information, but may omit or misprioritize subtle clinical nuances (e.g., conditional restrictions or evolving symptoms) during compression.",
+      "_timestamp": "2026-04-06T02:06:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often depends on accumulated athlete medical history (e.g., prior injuries, recovery progress, restrictions) across multiple visits, but each communication can usually be grounded in current records rather than deeply complex longitudinal tracking.",
+      "adequacy_evidence": "Current AI systems with EHR integration and structured storage can retain and retrieve cross-session information, but they still show reliability gaps in consistently surfacing the right historical context across cases.",
+      "_timestamp": "2026-04-06T02:06:06"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Communicating athletes\u2019 medical conditions requires accurate interpretation of clinical findings, prognosis, and activity restrictions; errors can be subtle and require medical expertise and chart review to detect before dissemination.",
+      "adequacy_evidence": "Current AI can misinterpret clinical nuances or omit critical caveats in medical summaries, and these errors are not easily spotted without expert review, making thorough human verification necessary.",
+      "_timestamp": "2026-04-06T02:06:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Miscommunicating an athlete\u2019s medical condition can lead to inappropriate training decisions, worsening injury, or violations of medical privacy, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "With physician oversight and standard review, many AI errors can be caught, but risks around subtle misinterpretation of clinical nuance or confidentiality still make residual risk somewhat problematic.",
+      "_timestamp": "2026-04-06T02:06:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task requires communicating sensitive medical information to coaches and trainers, where the physician\u2019s credibility, clinical authority, and trusted professional judgment are central to how the information is received and acted upon.",
+      "adequacy_evidence": "Stakeholders are unlikely to accept an AI as the source of authoritative medical disclosures due to expectations of licensed physician oversight, liability concerns, and trust in human clinical judgment, making resistance substantial.",
+      "_timestamp": "2026-04-06T02:06:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "HIPAA and related privacy laws strictly regulate disclosure of athletes\u2019 medical information, requiring authorization and accountability by licensed healthcare providers. While AI can assist, these rules effectively require a human clinician to oversee and be responsible for such communications, creating partial restrictions rather than an outright prohibition.",
+      "_timestamp": "2026-04-06T02:06:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

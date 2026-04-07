@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "35-3022.00",
+  "task_id": 2270,
+  "task_statement": "Order items needed to replenish supplies.",
+  "occupation_title": "Counter Attendants, Cafeteria, Food Concession, and Coffee Shop",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Ordering supplies is commonly done through online vendor portals or inventory software, but in some workplaces it may involve phone calls, paper forms, or coordination with on-site inventory checks, which ties it to the physical workplace."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves variability in inventory types, supplier options, demand patterns, and seasonal fluctuations, but these variations are relatively structured and repetitive within food service contexts.",
+      "adequacy_evidence": "There is abundant accessible data (e.g., sales logs, inventory systems, ordering records) and clear procedural examples, making it feasible to train agents with representative coverage across typical scenarios.",
+      "_timestamp": "2026-04-06T02:44:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While basic ordering can follow par levels and sales data, effective performance often relies on experience with demand fluctuations, spoilage rates, and local customer patterns that are not fully captured in explicit rules.",
+      "adequacy_evidence": "AI systems can use historical data and forecasting tools to approximate ordering decisions, but may lack nuanced calibration for atypical demand shifts, supplier inconsistencies, or context-specific adjustments.",
+      "_timestamp": "2026-04-06T02:44:36"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Replenishing supplies requires interpreting par levels, demand patterns, storage constraints, and informal preferences (e.g., preferred brands or substitutions), which are often not fully specified in explicit rules.",
+      "adequacy_evidence": "Agents can use inventory data and past orders to infer needs, but they often miss tacit factors like sudden demand shifts, informal staff preferences, or context-specific substitutions without human input.",
+      "_timestamp": "2026-04-06T02:44:37"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking current stock levels, par levels, and supplier options, requiring some aggregation and comparison of multiple pieces of information within a single ordering episode.",
+      "adequacy_evidence": "Current AI agents can reliably manage structured lists, inventory data, and ordering rules within a session without significant loss or distortion of information.",
+      "_timestamp": "2026-04-06T02:44:37"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence of steps such as checking current inventory, identifying needed items, and placing an order, where consistency across steps matters but the chain is not deeply interdependent or long.",
+      "adequacy_evidence": "Frontier AI agents can reliably execute these short, structured workflows with minimal degradation, especially when supported by inventory systems and ordering tools.",
+      "_timestamp": "2026-04-06T02:44:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Effective ordering depends on past inventory levels, consumption rates, and prior ordering patterns, but this information is typically stored in external systems rather than requiring rich implicit memory.",
+      "adequacy_evidence": "Current AI agents can reliably access and update persistent records via inventory systems or databases, so cross-session memory needs are well-supported with standard tooling.",
+      "_timestamp": "2026-04-06T02:44:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering supplies is primarily based on inventory counts, sales records, and supplier catalogs, all of which are typically represented in text or numeric form; visual inspection is helpful but not essential.",
+      "adequacy_evidence": "Current AI agents can fully handle text- and data-based inventory tracking and ordering workflows without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T02:44:38"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering supplies is typically a back-of-house task with flexible timing, often done during slower periods or scheduled inventory checks rather than under immediate time pressure.",
+      "adequacy_evidence": "AI agents can easily generate accurate replenishment orders within seconds to minutes, well within acceptable timeframes, without any meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-06T02:44:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Errors such as wrong items or quantities can be quickly checked against inventory levels, order histories, and upcoming demand, making mistakes easy to detect before ordering.",
+      "adequacy_evidence": "AI-generated orders can be readily reviewed using simple stock and usage checks, and current systems make discrepancies obvious with minimal effort.",
+      "_timestamp": "2026-04-06T02:44:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from ordering supplies for food service operations; this is a routine administrative task without mandated human licensure or decision-maker requirements.",
+      "_timestamp": "2026-04-06T02:44:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interaction with suppliers or internal inventory systems, but the performer\u2019s identity is not central as long as orders are accurate and timely.",
+      "adequacy_evidence": "Automated ordering and inventory management systems are already widely accepted, and stakeholders generally do not object to AI handling routine procurement tasks.",
+      "_timestamp": "2026-04-06T02:44:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors like overordering, underordering, or selecting wrong items can disrupt operations or increase costs, but impacts are typically reversible and not safety-critical.",
+      "adequacy_evidence": "With standard checks (inventory review, supplier confirmation), AI-generated orders can be validated easily, leaving minimal residual risk at acceptable levels.",
+      "_timestamp": "2026-04-06T02:44:40"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

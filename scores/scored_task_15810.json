@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9199.09",
+  "task_id": 15810,
+  "task_statement": "Provide technical support to wind field customers, employees, or subcontractors.",
+  "occupation_title": "Wind Energy Operations Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Technical support for wind field stakeholders is often delivered via phone, email, remote monitoring systems, or software dashboards. However, some situations require on-site troubleshooting, inspections, or direct interaction with equipment or personnel in the field."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Technical support in wind field operations involves interpreting user-reported issues, site-specific conditions, and operational constraints, which are often partially implicit and require contextual understanding of equipment, environment, and stakeholder needs.",
+      "adequacy_evidence": "Current AI agents can gather clarifications and use structured diagnostics, but they still miss context-specific nuances (e.g., site conditions, urgency, stakeholder expectations) and often require iterative human input to fully resolve ambiguous support requests.",
+      "_timestamp": "2026-04-06T03:14:48"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Technical support spans a wide range of turbine models, site conditions, failure modes, software systems (SCADA), and stakeholder contexts, creating a highly heterogeneous and long-tailed distribution of cases.",
+      "adequacy_evidence": "There is substantial documentation, manuals, and historical ticket data available, but much is proprietary and rare edge-case failures or site-specific issues are thinly represented, though partially recoverable via synthesis and fine-tuning.",
+      "_timestamp": "2026-04-06T03:14:49"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Technical support often involves interpreting equipment images, schematics, sensor dashboards, and possibly audio/video from turbines, though many interactions are still text or data-log based.",
+      "adequacy_evidence": "Current agents can handle basic image and diagram interpretation but are less reliable with specialized industrial visuals, complex telemetry interfaces, or cross-modal troubleshooting in real-world field conditions.",
+      "_timestamp": "2026-04-06T03:14:49"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Technical support often benefits from prior case histories, maintenance records, and ongoing issue tracking, but many individual support interactions can be handled using current documentation and system data without deep longitudinal context.",
+      "adequacy_evidence": "Current AI agents integrated with ticketing systems and databases can store and retrieve prior interactions, though they may inconsistently surface relevant historical context or maintain continuity across fragmented systems.",
+      "_timestamp": "2026-04-06T03:14:50"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Technical support in wind operations involves troubleshooting equipment issues, interpreting sensor data, and adapting guidance to site-specific conditions, which often requires experience-based judgment beyond written procedures.",
+      "adequacy_evidence": "Current AI agents can follow diagnostic trees and analyze logs but lack robust real-world calibration for edge cases, environmental nuances, and practical field constraints, leading to gaps in non-routine situations.",
+      "_timestamp": "2026-04-06T03:14:50"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Technical support involves multi-step troubleshooting, back-and-forth clarification, and iterative resolution, but sequences are typically bounded to a single issue rather than long, tightly coupled workflows.",
+      "adequacy_evidence": "AI agents can generally sustain coherent multi-step interactions, but may show some drift or lose constraints over longer troubleshooting exchanges, requiring occasional correction.",
+      "_timestamp": "2026-04-06T03:14:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Technical support often requires timely responses (seconds to a few minutes) to diagnose issues and minimize turbine downtime, but does not generally demand split-second decisions.",
+      "adequacy_evidence": "Current AI agents can deliver high-quality troubleshooting guidance within these time constraints using retrieval and diagnostic workflows, without significant degradation from latency limits.",
+      "_timestamp": "2026-04-06T03:14:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Technical support involves integrating equipment data, maintenance histories, manuals, and ongoing troubleshooting context within a session, but the volume is typically bounded and structured rather than overwhelming.",
+      "adequacy_evidence": "Current agents with retrieval and tool use can track and reference multiple information sources, but may lose context or misprioritize details during extended, multi-step troubleshooting interactions.",
+      "_timestamp": "2026-04-06T03:14:51"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying technical support guidance for wind turbines requires domain expertise, access to SCADA data, and sometimes physical inspection; errors are not always immediately obvious but can often be cross-checked against manuals and diagnostics.",
+      "adequacy_evidence": "Current AI can provide plausible troubleshooting steps but may misdiagnose or overlook context-specific factors, so human review and validation against system data and procedures are still routinely needed.",
+      "_timestamp": "2026-04-06T03:14:52"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from providing technical support in wind energy operations. While safety and reliability standards (e.g., OSHA, NERC) require qualified oversight, they do not forbid AI-assisted or autonomous support roles.",
+      "_timestamp": "2026-04-06T03:14:53"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect technical guidance in wind energy operations can lead to equipment damage, safety incidents, or costly downtime, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "While many support interactions can be checked against manuals or escalated, AI may still produce subtly incorrect or context-mismatched advice, leaving some non-trivial residual risk in edge or safety-critical cases.",
+      "_timestamp": "2026-04-06T03:14:53"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves direct interaction with customers, employees, and subcontractors who rely on the support provided, and responsiveness and credibility of the support provider can influence effectiveness.",
+      "adequacy_evidence": "AI-based technical support is increasingly accepted for routine issues, but stakeholders in a safety- and reliability-critical industry may resist or escalate to human experts for complex or high-stakes problems.",
+      "_timestamp": "2026-04-06T03:14:53"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

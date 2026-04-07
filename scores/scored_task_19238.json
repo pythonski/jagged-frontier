@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2035.00",
+  "task_id": 19238,
+  "task_statement": "Write reports or notes to summarize testing procedures or outcomes for physicians or other medical professionals.",
+  "occupation_title": "Magnetic Resonance Imaging Technologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Writing summaries or notes for physicians is a documentation task typically completed in electronic health record systems or word processors and can be done entirely on a computer. While the underlying MRI work is physical, the report-writing activity itself does not require physical presence or specialized equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "MRI report writing follows semi-standardized clinical conventions but still requires judgment about what findings, technical details, and impressions are most relevant to the referring physician and clinical context.",
+      "adequacy_evidence": "Current AI can generate structured medical summaries when given sufficient input, but often misses subtle clinical priorities or over/under-emphasizes findings without iterative human correction.",
+      "_timestamp": "2026-04-06T02:21:34"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of imaging procedures, patient conditions, and institutional documentation styles, but remains structured and relatively standardized in format and content across cases.",
+      "adequacy_evidence": "Extensive corpora of radiology reports, clinical notes, and procedural documentation exist, and the reporting process is well-captured through examples and guidelines, making coverage broadly sufficient for training.",
+      "_timestamp": "2026-04-06T02:21:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves assembling and organizing information from a procedure into a coherent report, requiring multiple steps (reviewing data, structuring, summarizing) but not long or tightly interdependent sequences.",
+      "adequacy_evidence": "Frontier AI systems can reliably maintain coherence and consistency across moderate-length report-writing tasks, with little degradation over the required sequence length.",
+      "_timestamp": "2026-04-06T02:21:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reporting by MRI technologists follows standardized formats but still involves some experience-based judgment about which procedural details, artifacts, or patient responses are clinically relevant to note.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably reproduce these conventions and selectively summarize relevant details using learned patterns, with little remaining gap in tacit calibration for typical cases.",
+      "_timestamp": "2026-04-06T02:21:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves consolidating procedure details, imaging parameters, and observed outcomes into a coherent report, requiring moderate tracking and summarization of structured clinical information.",
+      "adequacy_evidence": "Current AI systems handle within-episode summarization and structured information synthesis reliably when provided with complete inputs, with minimal loss of relevant detail in this context.",
+      "_timestamp": "2026-04-06T02:21:35"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Report writing for imaging procedures is typically completed after the scan, with minutes to longer available; there is no strict real-time requirement.",
+      "adequacy_evidence": "Current AI systems can generate high-quality summaries well within these relaxed time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T02:21:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Report writing may reference patient history or prior imaging, but the necessary context is typically provided within each case via medical records rather than requiring the author to recall information across sessions.",
+      "adequacy_evidence": "Current AI systems with EHR integration and retrieval can reliably access and incorporate prior records, so persistent cross-session memory is not a limiting factor.",
+      "_timestamp": "2026-04-06T02:21:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Summarizing MRI procedures and outcomes may involve interpreting imaging results and technical scan data, though the final output is text-based and often supported by structured inputs.",
+      "adequacy_evidence": "Current agents can handle text summarization well and have some capability with medical images via specialized tools, but reliability on nuanced MRI interpretation and cross-modal integration remains inconsistent.",
+      "_timestamp": "2026-04-06T02:21:37"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Physicians and other medical professionals rely on these summaries for clinical interpretation, and the credibility of the technologist or author can influence trust in the report.",
+      "adequacy_evidence": "Clinicians may accept AI-assisted documentation, but full replacement by AI without human sign-off faces moderate resistance due to concerns about accuracy, accountability, and professional standards.",
+      "_timestamp": "2026-04-06T02:21:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in summarizing MRI procedures or outcomes can usually be caught by a trained clinician cross-checking against imaging data and standard reporting formats, but this requires domain expertise and careful review.",
+      "adequacy_evidence": "Current AI can produce plausible but occasionally inaccurate or incomplete clinical summaries, so human review is still needed to verify correctness and ensure alignment with source data.",
+      "_timestamp": "2026-04-06T02:21:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Medical documentation must be entered and authenticated by authorized, licensed personnel under healthcare regulations (e.g., CMS Conditions of Participation, state scope-of-practice rules), which do not explicitly ban AI drafting but require human responsibility and sign-off. This creates partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-06T02:21:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "These reports feed directly into clinical decision-making; inaccuracies in procedure details or outcomes can mislead physicians and impact diagnosis or treatment, so very little residual error is tolerable.",
+      "adequacy_evidence": "With structured inputs, logs, and clinician review, many errors can be caught, but current AI can still introduce subtle omissions or misstatements that may slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T02:21:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

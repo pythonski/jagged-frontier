@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3031.00",
+  "task_id": 2509,
+  "task_statement": "Match order forms with invoices, and record the necessary information.",
+  "occupation_title": "Bookkeeping, Accounting, and Auditing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "In many organizations order forms and invoices are matched within accounting or ERP systems using digital documents. However, some workplaces still handle paper order forms and invoices that must be physically reviewed or handled."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves straightforward reconciliation of order forms and invoices using explicit fields (e.g., dates, amounts, item descriptions), with clear criteria for matching and recording information.",
+      "adequacy_evidence": "Current AI agents can reliably extract structured data, align records, and flag mismatches using well-defined rules, with minimal difficulty inferring intent.",
+      "_timestamp": "2026-04-06T02:36:33"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves some variability in document formats, vendor conventions, and edge cases (e.g., partial shipments, mismatched quantities), but remains within a relatively structured and repetitive domain of financial documents.",
+      "adequacy_evidence": "There is abundant real and synthetic data (invoices, purchase orders, ERP records) with clear matching procedures, and modern pipelines can readily capture the relevant variation and step-by-step reconciliation processes.",
+      "_timestamp": "2026-04-06T02:36:34"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves comparing details across order forms and invoices and tracking a small set of fields, requiring some active retrieval but within a limited and structured information scope.",
+      "adequacy_evidence": "Current agents with document parsing and retrieval tools can reliably handle this scale of structured information matching without losing context or mismanaging state.",
+      "_timestamp": "2026-04-06T02:36:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves repeated multi-step processing (retrieve documents, compare fields, confirm matches, record data), but each instance is relatively short and largely independent of others.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably handle these short, repetitive sequences with minimal degradation, especially with structured data extraction and validation tools.",
+      "_timestamp": "2026-04-06T02:36:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each matching task is typically self-contained, relying on the current order form and invoice rather than accumulated cross-session context.",
+      "adequacy_evidence": "Existing systems already store and retrieve any needed records (e.g., past invoices or vendor data), so AI agents can meet the minimal cross-session memory needs without difficulty.",
+      "_timestamp": "2026-04-06T02:36:35"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Matching order forms with invoices is typically a back-office batch task with flexible deadlines; minutes or longer per batch are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform document matching and data extraction well within these loose time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T02:36:36"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Matching order forms with invoices and recording information is largely governed by explicit rules, standardized formats, and clear matching criteria (e.g., IDs, quantities, prices). Little experiential judgment is required beyond basic procedural adherence.",
+      "adequacy_evidence": "Current AI agents can reliably apply deterministic matching rules and handle minor variations in format or wording, with minimal need for tacit calibration.",
+      "_timestamp": "2026-04-06T02:36:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and comparing textual/structured data on order forms and invoices; any visual layout elements are secondary to the underlying text content.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing can reliably extract and match relevant fields from typical invoices and forms, with minimal multimodal limitations.",
+      "_timestamp": "2026-04-06T02:36:36"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors can usually be detected by cross-checking quantities, prices, totals, and identifiers between order forms and invoices, often with standard reconciliation procedures, but this still requires attention and some domain familiarity.",
+      "adequacy_evidence": "AI systems can automate matching and flag discrepancies, but extraction errors, edge cases (e.g., partial shipments, inconsistent formats), and occasional mismatches mean routine human review is still needed.",
+      "_timestamp": "2026-04-06T02:36:37"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from matching order forms with invoices or recording related information; this is a routine clerical task that can be automated under current regulations.",
+      "_timestamp": "2026-04-06T02:36:37"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is an internal back-office reconciliation task with outputs consumed within accounting systems, not requiring interaction with external stakeholders or reliance on performer identity.",
+      "adequacy_evidence": "Organizations already widely accept automation and software for invoice matching, and there is little to no stakeholder sensitivity to whether a human or AI performs this task.",
+      "_timestamp": "2026-04-06T02:36:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Mismatches or recording errors can cause payment discrepancies, audit issues, or temporary financial misstatements, but these are typically correctable and rarely catastrophic after standard reconciliation processes.",
+      "adequacy_evidence": "With structured data extraction, cross-checking rules, and reconciliation workflows, current AI systems can reduce residual errors to a low, acceptable level after normal quality control.",
+      "_timestamp": "2026-04-06T02:36:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

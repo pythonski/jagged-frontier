@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9199.09",
+  "task_id": 15809,
+  "task_statement": "Track and maintain records for wind operations, such as site performance, downtime events, parts usage, or substation events.",
+  "occupation_title": "Wind Energy Operations Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Tracking and maintaining operational records (performance, downtime, parts usage, substation events) is typically done in digital management, SCADA, or maintenance record systems and can be performed entirely on a computer without on-site presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple event types (performance metrics, downtime causes, parts usage, substation incidents) across different wind sites, but is largely structured and follows standardized logging practices.",
+      "adequacy_evidence": "While general schemas and example logs are well-documented, much high-quality, process-level data (e.g., real SCADA streams and maintenance records) is proprietary, making coverage only partially accessible without targeted partnerships or synthesis.",
+      "_timestamp": "2026-04-06T03:44:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While much of the task follows standardized logging procedures and data entry rules, some judgment is needed to correctly classify events (e.g., causes of downtime or component failures) based on operational context.",
+      "adequacy_evidence": "Current AI agents with access to historical records, taxonomies, and rule sets can reliably replicate this classification and logging behavior, including handling edge cases through pattern matching and retrieval.",
+      "_timestamp": "2026-04-06T03:44:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While core categories (performance, downtime, parts, substation events) are defined, implementation varies by site, reporting standards, and stakeholder needs, requiring some interpretation of what to log and how.",
+      "adequacy_evidence": "Well-scaffolded agents can infer schemas, follow templates, and adapt to site-specific conventions with minimal iteration, as ambiguity is limited and typically documented or learnable.",
+      "_timestamp": "2026-04-06T03:44:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing, repeated recording and updating of operational data where consistency over time matters, but individual entries are largely modular and not tightly interdependent.",
+      "adequacy_evidence": "AI systems can reliably handle extended logging and record-keeping workflows with minimal degradation, especially when supported by structured databases and automated validation checks.",
+      "_timestamp": "2026-04-06T03:44:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves recording and managing structured data such as performance metrics, downtime logs, and parts usage, which are typically text- and number-based from digital systems.",
+      "adequacy_evidence": "Current AI agents can fully handle text and structured data ingestion, logging, and summarization without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T03:44:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintaining operational records for wind sites inherently requires continuous accumulation and retrieval of longitudinal data such as performance trends, maintenance history, and event logs over extended periods.",
+      "adequacy_evidence": "Current AI systems integrated with standard databases and asset management platforms can reliably store, retrieve, and update persistent records across sessions, with no fundamental memory limitation.",
+      "_timestamp": "2026-04-06T03:44:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple structured data streams (performance metrics, downtime logs, parts usage, substation events) and maintaining consistency within an episode, but information is typically organized in databases or standardized logs.",
+      "adequacy_evidence": "Current AI agents with database integrations and retrieval tools can reliably manage, update, and reconcile structured operational records within a session without significant loss of context.",
+      "_timestamp": "2026-04-06T03:44:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining operational records (performance logs, downtime events, parts usage) is typically done on minute-to-hour timescales, often in batch or periodic updates rather than real-time decision loops.",
+      "adequacy_evidence": "Current AI agents can process, structure, and log such information well within acceptable time windows without needing to truncate reasoning, so latency does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T03:44:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in operational records (e.g., downtime or parts usage) can affect maintenance planning, regulatory reporting, and performance analysis, but are typically correctable and rarely cause immediate severe consequences.",
+      "adequacy_evidence": "With standard validation systems, audits, and cross-checks against sensor data and logs, AI-generated records can be verified effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T03:44:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Records like site performance, downtime, and parts usage can be cross-checked against SCADA data, maintenance logs, and event reports, but verification requires domain familiarity and careful reconciliation across sources.",
+      "adequacy_evidence": "AI can structure and extract these records but may misclassify events or miss context, requiring routine human validation against primary data systems to ensure accuracy.",
+      "_timestamp": "2026-04-06T03:44:07"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from tracking and maintaining operational records in wind energy. While standards (e.g., NERC reliability requirements) mandate accurate recordkeeping and accountability by licensed entities, they do not restrict the use of AI tools to perform these tasks.",
+      "_timestamp": "2026-04-06T03:44:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The records are used by internal teams, auditors, and regulators, so others rely on the output, but the identity of the record-keeper is not central to trust or engagement.",
+      "adequacy_evidence": "Organizations already accept automated systems for operational logging and record-keeping, and stakeholders generally do not object to AI maintaining such records as long as accuracy is ensured.",
+      "_timestamp": "2026-04-06T03:44:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-9162.00",
+  "task_id": 24013,
+  "task_statement": "Order tooling for jobs.",
+  "occupation_title": "Computer Numerically Controlled Tool Programmers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Tooling is often ordered through ERP systems, supplier websites, email, or phone, which can be done remotely. However, determining the correct tooling frequently requires in-person inspection of machines, tool holders, or existing inventory on the shop floor."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tool ordering spans different materials, machining operations, machine types, and vendor catalogs, but follows structured, repeatable patterns with well-defined parameters.",
+      "adequacy_evidence": "Extensive coverage exists in tooling catalogs, machining guides, ERP/procurement logs, and CAM documentation, and synthetic generation of scenarios is straightforward, providing ample process-level training signal.",
+      "_timestamp": "2026-04-05T22:03:48"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate tooling involves experience-based judgment about material behavior, machine-specific constraints, supplier reliability, and cost\u2013performance tradeoffs that are not fully captured in explicit rules or catalogs.",
+      "adequacy_evidence": "Current agents can use specifications, tooling databases, and past cases to make reasonable selections, but may lack nuanced calibration for shop-specific preferences, edge cases, or subtle performance tradeoffs.",
+      "_timestamp": "2026-04-05T22:03:49"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ordering tooling requires interpreting job specifications, materials, tolerances, machine capabilities, and often implicit shop preferences or vendor constraints not fully codified in formal instructions.",
+      "adequacy_evidence": "Current agents can map explicit specs to tooling catalogs, but often miss implicit preferences (e.g., brand choices, shop standards, edge-case compatibility), requiring human clarification or iteration.",
+      "_timestamp": "2026-04-05T22:03:49"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ordering tooling involves a multi-step process (identifying tooling needs from job specs, selecting vendors, checking compatibility, placing orders), where consistency across steps matters but sequences are not highly long or tightly coupled.",
+      "adequacy_evidence": "Frontier agents can manage moderate multi-step procurement workflows with tools, but may show some degradation such as missed constraints or minor inconsistencies across steps without careful orchestration.",
+      "_timestamp": "2026-04-05T22:03:50"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering tooling is primarily based on textual specifications such as part programs, tooling lists, vendor catalogs, and written requirements; visual or spatial inputs are not essential to execute the task.",
+      "adequacy_evidence": "Current AI agents can reliably process and generate the necessary text-based specifications and ordering information without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-05T22:03:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering tooling is a planning and procurement task where delays of minutes to hours (or longer) are typically acceptable, as it is not performed under real-time production constraints.",
+      "adequacy_evidence": "AI agents can easily operate within these relaxed timeframes, allowing full reasoning and checks without any meaningful degradation in output quality due to latency constraints.",
+      "_timestamp": "2026-04-05T22:03:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering tooling often benefits from remembering past supplier choices, standard tool sets for recurring jobs, and inventory history, but each order can typically be completed with current job specs and available records.",
+      "adequacy_evidence": "Current AI agents can reliably use integrated databases, ERP systems, and persistent storage to retrieve prior orders, supplier data, and inventory, with minimal limitations in cross-session memory.",
+      "_timestamp": "2026-04-05T22:03:50"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering tooling requires tracking part specifications, machine compatibility, tooling types, quantities, and vendor options, but the information is structured and bounded within a single job context.",
+      "adequacy_evidence": "Current agents can reliably manage and organize these structured inputs using tool integration and retrieval without significant loss of context or state drift.",
+      "_timestamp": "2026-04-05T22:03:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from ordering tooling or handling procurement tasks; such activities are generally governed by internal company policies rather than licensure or legal mandates requiring a human decision-maker.",
+      "_timestamp": "2026-04-05T22:03:52"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering incorrect tooling can cause production delays, increased costs, or rework, but these issues are typically recoverable and do not usually create severe or irreversible consequences.",
+      "adequacy_evidence": "With standard checks like part specification review and supplier validation, AI-generated tooling orders can be reliably verified, leaving minimal residual risk that is generally acceptable in practice.",
+      "_timestamp": "2026-04-05T22:03:52"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Correct tooling orders must match detailed job specifications (material, tolerances, machine compatibility), requiring knowledgeable cross-checking against drawings and process plans; errors are usually detectable but not trivially so.",
+      "adequacy_evidence": "AI can generate plausible tooling lists, but it may mis-specify dimensions or compatibility, so a skilled human must review selections against job requirements, creating a moderate but manageable verification burden.",
+      "_timestamp": "2026-04-05T22:03:53"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering tooling involves interaction with suppliers or internal purchasing systems, but these stakeholders primarily care about correct specifications and timely orders rather than who (or what) places them.",
+      "adequacy_evidence": "Automated procurement systems are already widely accepted, and stakeholders are generally indifferent to whether orders are placed by a human or AI as long as accuracy and compliance are maintained.",
+      "_timestamp": "2026-04-05T22:03:54"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

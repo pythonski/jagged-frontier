@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2199.08",
+  "task_id": 16522,
+  "task_statement": "Design end-of-arm tooling.",
+  "occupation_title": "Robotics Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "End-of-arm tooling is typically designed using CAD software, simulations, and digital specifications, which can be done remotely. However, many real-world instances involve prototyping, fitting, and testing the tooling on physical robotic systems, requiring in-person work."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "End-of-arm tooling design spans highly heterogeneous applications (grippers, welders, suction, custom fixtures) across varied materials, geometries, environments, and task constraints, producing a long-tailed distribution of cases.",
+      "adequacy_evidence": "There is substantial data in CAD libraries, robotics literature, and simulation environments, but many real-world designs and failure modes are proprietary or undocumented, leaving gaps that require targeted synthesis or domain-specific data collection.",
+      "_timestamp": "2026-04-05T22:09:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing end-of-arm tooling requires practical judgment about materials, tolerances, contact forces, wear, and variability in real-world objects that is typically gained through hands-on experience and iterative prototyping.",
+      "adequacy_evidence": "AI agents can leverage CAD, simulation, and prior designs, but still lack robust calibration for physical edge cases (e.g., friction, compliance, unexpected object variation), leading to gaps in non-routine or tightly constrained applications.",
+      "_timestamp": "2026-04-05T22:09:47"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing end-of-arm tooling requires inferring task-specific needs (object properties, tolerances, environment, safety, integration constraints) that are often only partially specified and evolve through stakeholder interaction and testing.",
+      "adequacy_evidence": "Current agents can generate plausible designs given detailed prompts but frequently miss latent constraints (e.g., edge-case handling, manufacturability, real-world variability), requiring iterative human clarification and refinement.",
+      "_timestamp": "2026-04-05T22:09:47"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing end-of-arm tooling involves tightly coupled multi-step processes (requirements capture, kinematic constraints, CAD modeling, simulation, iteration) where early decisions strongly constrain later steps.",
+      "adequacy_evidence": "Frontier agents can sustain multi-step engineering workflows with tooling, but they show some drift and inconsistency over longer design iterations, especially in maintaining constraints across revisions.",
+      "_timestamp": "2026-04-05T22:09:47"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing end-of-arm tooling often benefits from prior project data (robot specs, past designs, client preferences), but many instances can still be executed with primarily current project inputs.",
+      "adequacy_evidence": "Current agents can use external memory stores and retrieval to access prior designs and specifications, but they inconsistently maintain and surface relevant historical context across projects without careful system setup.",
+      "_timestamp": "2026-04-05T22:09:48"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing end-of-arm tooling requires tracking multiple constraints (robot kinematics, payload limits, task requirements, materials, and environment) and integrating them during iterative design, but the information volume is structured and decomposable.",
+      "adequacy_evidence": "Current agents can manage and retrieve these constraints with tools and structured prompts, but may lose or inconsistently apply details across iterative steps, especially in longer design workflows.",
+      "_timestamp": "2026-04-05T22:09:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing end-of-arm tooling is an engineering design task typically performed over hours to days, with no requirement for rapid or real-time responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to reason, iterate, and optimize designs without any meaningful degradation due to latency constraints.",
+      "_timestamp": "2026-04-05T22:09:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing end-of-arm tooling requires 3D spatial reasoning, CAD modeling, interpretation of geometry, forces, and often visual/schematic outputs; text alone is insufficient to specify or validate designs.",
+      "adequacy_evidence": "Current agents can interface with CAD and simulation tools and generate designs, but they remain inconsistent on fine-grained geometric constraints, tolerances, and physically grounded visual reasoning.",
+      "_timestamp": "2026-04-05T22:09:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "End-of-arm tooling design involves mechanical integrity, force/torque limits, material selection, and task-specific interaction; many errors only surface through simulation, prototyping, or real-world testing rather than immediate inspection.",
+      "adequacy_evidence": "Current AI-generated designs require extensive expert review, CAD validation, and physical or simulated testing, as errors in geometry, tolerances, or load assumptions are common and not easily detectable upfront.",
+      "_timestamp": "2026-04-05T22:09:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing end-of-arm tooling involves coordination with internal engineering teams, manufacturing stakeholders, and clients who must approve and implement the design, so stakeholders do engage with the output and sometimes the designer.",
+      "adequacy_evidence": "While stakeholders may initially prefer human engineers for accountability and trust, many would accept AI-assisted or AI-generated designs if validated, though some resistance and preference for human oversight would remain.",
+      "_timestamp": "2026-04-05T22:09:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "End-of-arm tooling directly interfaces with physical objects and robots; design flaws can cause equipment damage, safety hazards, or production failures, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "Simulation, prototyping, and testing can catch many issues, but AI-generated designs may still harbor subtle mechanical or integration flaws that are not fully eliminated by standard checks, leaving some residual risk.",
+      "_timestamp": "2026-04-05T22:09:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from designing robotic end-of-arm tooling. While certain applications may require a licensed engineer\u2019s review or sign-off for safety or liability reasons, this does not restrict AI from performing the design work itself.",
+      "_timestamp": "2026-04-05T22:09:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

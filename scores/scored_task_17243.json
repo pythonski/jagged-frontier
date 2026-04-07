@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1224.00",
+  "task_id": 17243,
+  "task_statement": "Obtain patients' histories from electronic records, patient interviews, dictated reports, or by communicating with referring clinicians.",
+  "occupation_title": "Radiologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Radiologists often obtain patient histories from electronic health records, dictated reports, or electronic communication with referring clinicians, which can be done remotely. However, some instances involve direct patient interviews conducted in person, especially in clinical or procedural settings."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining which elements of a patient's history are clinically relevant depends on context (e.g., imaging indication, suspected pathology), requiring selective interpretation beyond literal data retrieval.",
+      "adequacy_evidence": "Current agents can extract and summarize histories but often miss nuanced clinical relevance or implicit priorities, requiring human guidance to ensure the right details are emphasized.",
+      "_timestamp": "2026-04-06T03:23:20"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting and prioritizing clinically relevant history, probing ambiguities in patient interviews, and reconciling conflicting sources require some experience-based clinical judgment beyond explicit rules.",
+      "adequacy_evidence": "Current agents can extract and summarize records and generate reasonable follow-up questions, but they show gaps in nuanced probing and context-sensitive prioritization across non-routine cases.",
+      "_timestamp": "2026-04-06T03:23:20"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Patient history gathering spans diverse sources (structured EHRs, free-text notes, verbal interviews, inter-clinician communication) and highly variable patient conditions, making the distribution heterogeneous and context-sensitive.",
+      "adequacy_evidence": "Large corpora of medical text and some de-identified EHR data exist, but key portions (real clinical conversations, institution-specific records, edge cases) are private or sparse, leaving partial but not severe coverage gaps.",
+      "_timestamp": "2026-04-06T03:23:22"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves both text (electronic records, written communications) and audio (patient interviews, dictated reports), requiring some multimodal input processing but not complex cross-modal reasoning.",
+      "adequacy_evidence": "Current AI systems with speech-to-text and communication tools can reliably handle interviews, dictated reports, and text records, with minimal performance gaps in typical cases.",
+      "_timestamp": "2026-04-06T03:23:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps\u2014reviewing records, conducting or interpreting interviews, and synthesizing information from clinicians\u2014but these are moderately long and only loosely interdependent.",
+      "adequacy_evidence": "Frontier AI agents can reliably handle multi-step information gathering and synthesis workflows of this length with minimal degradation, especially with structured retrieval and note integration tools.",
+      "_timestamp": "2026-04-06T03:23:23"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Radiologists typically need patient history within seconds to a few minutes during case review or reporting, but not strict real-time constraints; short delays are generally acceptable within clinical workflow.",
+      "adequacy_evidence": "Well-scaffolded AI systems can rapidly retrieve, synthesize, and summarize patient histories from records or communications within the required timeframe without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T03:23:23"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Patient histories can be cross-checked against source records or clarified with patients/clinicians, but doing so requires clinical judgment and time, and omissions or misinterpretations are not always immediately obvious.",
+      "adequacy_evidence": "Current AI systems can mis-summarize or omit clinically relevant details, so clinicians must routinely verify outputs against source materials, creating a consistent but manageable review burden.",
+      "_timestamp": "2026-04-06T03:23:25"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task regularly involves accessing longitudinal patient histories from EHRs and prior reports, but the information is externally stored rather than requiring the radiologist to personally retain it across sessions.",
+      "adequacy_evidence": "Current AI systems can integrate with records and retrieve prior data, but they still show gaps in consistently aggregating, prioritizing, and correctly surfacing relevant longitudinal context across fragmented sources.",
+      "_timestamp": "2026-04-06T03:23:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incomplete or incorrect patient history can lead to missed or incorrect radiologic interpretations, affecting diagnosis and treatment decisions with potentially serious clinical consequences.",
+      "adequacy_evidence": "Even with review, AI systems may omit subtle but clinically relevant details or misinterpret context from heterogeneous sources, leaving some residual risk that is concerning but often catchable in clinical workflows.",
+      "_timestamp": "2026-04-06T03:23:25"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing patient information from multiple sources (EHRs, interviews, reports, clinicians), requiring active retrieval and summarization but typically within a bounded clinical scope.",
+      "adequacy_evidence": "Current agents can handle multi-source inputs but may miss or misprioritize details in long or fragmented records, especially when relevant context is buried or inconsistently documented.",
+      "_timestamp": "2026-04-06T03:23:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves direct interaction with patients and referring clinicians, where cooperation, trust, and willingness to share accurate information are important to obtaining a complete history.",
+      "adequacy_evidence": "While structured digital intake and record retrieval are widely accepted, some patients and clinicians may be hesitant to fully trust or engage with an AI agent for nuanced history-taking or professional communication.",
+      "_timestamp": "2026-04-06T03:23:27"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI retrieving or aggregating patient history data, but healthcare regulations (e.g., HIPAA, state licensure rules) impose constraints on access, use, and patient interaction that typically require oversight by licensed professionals. This creates partial restriction and ambiguity rather than a clear ban.",
+      "_timestamp": "2026-04-06T03:23:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

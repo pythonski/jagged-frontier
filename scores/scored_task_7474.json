@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3031.02",
+  "task_id": 7474,
+  "task_statement": "Redraw or correct maps, such as revising parcel maps, to reflect tax code area changes, using information from official records or surveys.",
+  "occupation_title": "Surveying and Mapping Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Redrawing or correcting parcel maps is typically done in GIS or CAD software using digital records and survey data. However, some instances may involve consulting physical survey documents or coordination with field survey outputs, introducing occasional non-digital elements."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task follows documented GIS procedures and official records, technicians must interpret discrepancies between surveys and records, resolve boundary ambiguities, and apply practical judgment in map corrections.",
+      "adequacy_evidence": "Current AI agents with GIS tooling can execute standard revisions but struggle with context-sensitive discrepancies and nuanced boundary interpretation, especially when records conflict or require experiential judgment.",
+      "_timestamp": "2026-04-06T03:03:14"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Objectives are largely defined by official records, survey data, and mapping standards, but some interpretation is required when resolving discrepancies, boundary ambiguities, or incomplete records.",
+      "adequacy_evidence": "Current agents can follow explicit instructions and integrate structured data, but they struggle with resolving conflicting sources or inferring correct adjustments without human guidance in edge cases.",
+      "_timestamp": "2026-04-06T03:03:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple data sources (parcel maps, survey data, tax code boundaries) and maintaining consistency across spatial features, requiring moderate tracking and reconciliation of details within a session.",
+      "adequacy_evidence": "Current agents can offload much of this to GIS tools and structured data handling, but may still lose or misalign intermediate spatial details or layer relationships without careful scaffolding.",
+      "_timestamp": "2026-04-06T03:03:15"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Revising parcel maps requires a multi-step workflow (interpreting records, editing geometries, updating attributes, and validating topology), where consistency across steps matters but sequences are not extremely long or deeply interdependent.",
+      "adequacy_evidence": "AI agents with GIS tooling can generally sustain performance across these workflows, but may exhibit some drift or small compounding errors (e.g., topology inconsistencies or missed constraints) over longer editing sequences.",
+      "_timestamp": "2026-04-06T03:03:15"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Map revisions can depend on prior project files, historical parcel boundaries, and accumulated survey records, but each update is largely driven by current official data inputs.",
+      "adequacy_evidence": "Current AI systems can reliably store, retrieve, and reference prior maps, records, and project context via external databases and document management, with minimal cross-session memory gaps.",
+      "_timestamp": "2026-04-06T03:03:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centers on interpreting and modifying spatial map data (parcel boundaries, survey inputs, geospatial layouts), requiring visual-spatial reasoning and precise graphical output beyond text-only representation.",
+      "adequacy_evidence": "Current AI agents with GIS tooling can process and edit geospatial data, but they remain less reliable on fine-grained boundary corrections, projection nuances, and complex spatial inconsistencies compared to skilled technicians.",
+      "_timestamp": "2026-04-06T03:03:16"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Redrawing or correcting parcel maps based on official records is an offline, detail-oriented task where minutes to hours of processing time are acceptable and typical.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to reason through geospatial data and revisions without any meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T03:03:16"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Parcel map revision spans different jurisdictions, coordinate systems, survey methods, and regulatory conventions, but follows relatively standardized GIS and cadastral mapping practices.",
+      "adequacy_evidence": "Extensive GIS datasets, cadastral records, and mapping workflows are available for training, but some local, proprietary, or poorly digitized survey records create partial gaps in fully representative coverage.",
+      "_timestamp": "2026-04-06T03:03:16"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Parcel and tax map corrections directly affect legal boundaries, taxation, and property rights, so even small residual errors can lead to disputes, financial harm, or regulatory issues.",
+      "adequacy_evidence": "With standard GIS validation, cross-referencing official records, and human review, many AI errors can be caught, but subtle geospatial inaccuracies or misinterpretations could still slip through at a non-negligible rate.",
+      "_timestamp": "2026-04-06T03:03:17"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Surveying products like parcel maps often must be reviewed and sealed by a licensed professional surveyor, which restricts fully autonomous AI execution. However, there is no explicit prohibition on AI-assisted drafting or revision itself, only on unsupervised final approval.",
+      "_timestamp": "2026-04-06T03:03:18"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The revised maps are used by government agencies, surveyors, and possibly property owners who rely on their accuracy, but interaction with the individual performer is minimal and largely output-focused.",
+      "adequacy_evidence": "Stakeholders already accept GIS software and automated tools, but full replacement by an AI agent may face some resistance due to trust, accountability, and professional standards around official mapping updates.",
+      "_timestamp": "2026-04-06T03:03:18"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in parcel boundaries, projections, or attribute linkage require comparison against authoritative records and GIS validation; while some topology checks are automated, expert review is typically needed to confirm correctness.",
+      "adequacy_evidence": "AI-generated map revisions can be validated with existing GIS tools (e.g., overlay, topology rules), but models still make non-obvious geospatial or data-integration mistakes, so routine expert checking remains necessary.",
+      "_timestamp": "2026-04-06T03:03:20"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

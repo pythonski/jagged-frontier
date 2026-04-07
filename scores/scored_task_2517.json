@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3051.00",
+  "task_id": 2517,
+  "task_statement": "Compile employee time, production, and payroll data from time sheets and other records.",
+  "occupation_title": "Payroll and Timekeeping Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Payroll data compilation is typically done using digital payroll or HR systems, but in many workplaces clerks still collect or reference physical timesheets or paper records, requiring occasional on-site handling."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderately diverse formats (different timesheets, payroll systems, and record-keeping practices), but the underlying structure\u2014extracting and compiling standardized fields\u2014is consistent across instances.",
+      "adequacy_evidence": "There is abundant accessible data (forms, payroll records, synthetic variants) and clear procedural examples, allowing training pipelines to cover essentially all relevant cases with structured extraction and transformation workflows.",
+      "_timestamp": "2026-04-06T11:09:58"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling time, production, and payroll data primarily follows standardized procedures, rules, and formats with clear documentation and minimal need for experiential judgment.",
+      "adequacy_evidence": "Current AI systems can reliably follow structured rules, extract and aggregate data, and handle routine edge cases using explicit logic without needing tacit calibration.",
+      "_timestamp": "2026-04-06T11:09:58"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps\u2014collecting records, extracting relevant fields, and consolidating them into payroll datasets\u2014but these steps are relatively modular and not deeply interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably handle multi-step data extraction and compilation workflows with consistent performance, especially when supported by structured tools and validation checks.",
+      "_timestamp": "2026-04-06T11:10:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task follows largely standardized procedures (e.g., extracting hours, wages, and production figures), but may involve some context-specific rules like pay codes, overtime policies, or record inconsistencies that require interpretation.",
+      "adequacy_evidence": "With access to organizational rules and examples, current AI agents can reliably infer how to compile and structure the data, handling minor ambiguities through pattern recognition and rule application.",
+      "_timestamp": "2026-04-06T11:10:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling payroll and timekeeping data is typically a batch administrative task with deadlines on the order of hours or days, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can process and aggregate such records well within the available time window without needing to sacrifice reasoning quality for speed.",
+      "_timestamp": "2026-04-06T11:10:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves reading time sheets and records that may be scanned documents or handwritten forms, requiring some visual/OCR capability beyond pure text input.",
+      "adequacy_evidence": "Current AI systems handle structured documents and printed text well but are still inconsistent with messy layouts or handwritten entries, leading to moderate reliability gaps.",
+      "_timestamp": "2026-04-06T11:10:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating and reconciling data from multiple records (time sheets, production logs, payroll inputs), requiring tracking and organizing moderate amounts of structured information within a single workflow.",
+      "adequacy_evidence": "Modern AI agents with tool use (e.g., spreadsheets, databases) can reliably manage, retrieve, and reconcile this level of structured data within an episode without significant context loss.",
+      "_timestamp": "2026-04-06T11:10:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves structured data with built-in cross-checks (totals, pay rates, hours, reconciliation with source records), but verification still requires careful review and consistency checks across multiple documents.",
+      "adequacy_evidence": "Current AI can extract and compile such data but still makes occasional extraction or alignment errors, requiring routine reconciliation and human spot-checking to ensure accuracy.",
+      "_timestamp": "2026-04-06T11:10:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Payroll compilation regularly relies on persistent records such as employee profiles, pay rates, prior pay periods, and adjustments carried across cycles, but these are stored in structured systems rather than requiring rich episodic memory.",
+      "adequacy_evidence": "Current AI agents integrated with databases and payroll systems can reliably store and retrieve cross-session records, so there is little inherent limitation in maintaining the required persistent state.",
+      "_timestamp": "2026-04-06T11:10:02"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors can lead to incorrect employee pay or reporting discrepancies, which matter financially and administratively, but are typically detectable and correctable in subsequent payroll cycles.",
+      "adequacy_evidence": "With standard validation checks (totals, cross-referencing records, anomaly detection), AI systems can reduce residual errors to a low, acceptable level for this task.",
+      "_timestamp": "2026-04-06T11:10:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is an internal data compilation task with outputs consumed within payroll systems or by internal staff; it does not require stakeholder interaction or reliance on the performer\u2019s identity.",
+      "adequacy_evidence": "Because there are no meaningful stakeholder-facing elements, acceptance of an AI agent is not a factor; automation is already common and uncontroversial in this context.",
+      "_timestamp": "2026-04-06T11:10:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from compiling payroll, time, and production data; such tasks are already widely automated in payroll software. Existing regulations (e.g., labor or privacy laws) govern data handling and accuracy but do not restrict AI from performing the task.",
+      "_timestamp": "2026-04-06T11:10:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

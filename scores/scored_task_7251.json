@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1032.00",
+  "task_id": 7251,
+  "task_statement": "Prepare insurance forms to indicate repair cost estimates and recommendations.",
+  "occupation_title": "Insurance Appraisers, Auto Damage",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Preparing insurance forms with repair cost estimates and recommendations is a documentation task typically completed in claims or office software and can be done entirely on a computer using existing appraisal information."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While insurance forms and estimating procedures are standardized, appraisers must interpret damage, apply policy-specific rules, and exercise judgment in recommendations, introducing moderate context-dependent ambiguity.",
+      "adequacy_evidence": "Current AI can follow structured estimating guidelines but may miss insurer-specific conventions, edge-case interpretations, or implicit expectations, often requiring human review and adjustment.",
+      "_timestamp": "2026-04-06T04:13:50"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating repair costs and making recommendations involves some experience-based judgment about damage severity, parts vs. labor tradeoffs, and insurer norms that go beyond strict rules.",
+      "adequacy_evidence": "Current AI can apply pricing databases and guidelines but often lacks nuanced calibration for edge cases (e.g., borderline total loss, hidden damage likelihood), leading to moderate gaps in non-routine situations.",
+      "_timestamp": "2026-04-06T04:13:50"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple linked steps\u2014reviewing damage estimates, applying pricing standards, and completing structured insurance forms\u2014but the sequence is moderately bounded and not highly interdependent over long horizons.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute these structured, mid-length workflows with minimal drift, especially when supported by templates, validation checks, and tool use.",
+      "_timestamp": "2026-04-06T04:13:51"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a moderate range of cases (different vehicle types, damage patterns, insurer rules, and regional cost variations) but is structured around standardized forms and estimating conventions.",
+      "adequacy_evidence": "While general repair procedures and estimating logic are well-documented, key data such as proprietary pricing databases, insurer-specific guidelines, and detailed claims histories are partially inaccessible, leaving some coverage gaps that are only partly addressable via synthesis.",
+      "_timestamp": "2026-04-06T04:13:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves integrating inspection notes, damage descriptions, parts and labor estimates, and policy details, requiring moderate tracking and organization of multiple information elements within a single episode.",
+      "adequacy_evidence": "Well-scaffolded agents can reliably handle structured data aggregation and form-filling workflows, with tool support minimizing loss or mismanagement of relevant within-episode information.",
+      "_timestamp": "2026-04-06T04:13:51"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing insurance forms for auto damage estimates is typically case-specific, relying on current inspection data, standard pricing databases, and insurer guidelines rather than accumulated cross-session context.",
+      "adequacy_evidence": "Since the task is largely self-contained per claim, existing AI systems can easily handle any minimal persistence needs (e.g., retrieving prior estimates) without significant limitations.",
+      "_timestamp": "2026-04-06T04:13:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating repair costs typically relies on interpreting photos or visual inspections of vehicle damage, though the final output is structured text in forms.",
+      "adequacy_evidence": "Current AI vision systems can interpret common damage patterns but struggle with fine-grained assessment, hidden damage, and precise cost estimation across varied real-world conditions.",
+      "_timestamp": "2026-04-06T04:13:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing insurance forms and documenting repair estimates is an administrative task typically completed over minutes to hours, with no need for real-time or rapid-response output.",
+      "adequacy_evidence": "Frontier AI agents can generate accurate structured forms and estimates well within acceptable timeframes without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T04:13:52"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying insurance repair estimates requires domain knowledge of auto damage, parts pricing, and insurer guidelines, but errors can usually be detected through review of photos, estimates, and standard costing references.",
+      "adequacy_evidence": "AI can draft plausible forms, but it may misestimate costs or misclassify damage, so a human appraiser would still need to review details and validate assumptions with moderate effort.",
+      "_timestamp": "2026-04-06T04:13:54"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Many states require licensed insurance adjusters/appraisers to prepare or approve damage estimates and recommendations, implying a human licensee must be responsible. AI can assist, but autonomous performance without human oversight is not clearly permitted, creating partial regulatory constraint.",
+      "_timestamp": "2026-04-06T04:13:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The forms are reviewed and relied upon by insurers, repair shops, and sometimes customers, so stakeholders engage with the output, but the individual preparer\u2019s identity is not usually central.",
+      "adequacy_evidence": "Many stakeholders would accept AI-assisted estimates if validated, but some may distrust fully automated assessments or require human sign-off for legitimacy and dispute resolution.",
+      "_timestamp": "2026-04-06T04:13:55"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors affect claim payouts and customer satisfaction, leading to financial discrepancies or disputes, but they are typically correctable through audits, supplements, or appeals rather than causing irreversible harm.",
+      "adequacy_evidence": "With standard checks (human review, estimate validation tools, parts/pricing databases), AI-generated forms can be verified effectively, leaving residual risk at an acceptable level for this task.",
+      "_timestamp": "2026-04-06T04:13:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

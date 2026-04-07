@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3061.00",
+  "task_id": 2542,
+  "task_statement": "Compare suppliers' bills with bids and purchase orders to verify accuracy.",
+  "occupation_title": "Procurement Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Procurement clerks typically compare invoices, bids, and purchase orders within accounting or procurement software and digital documents, but some workplaces still use or receive physical bills that require manual handling."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans some variability in document formats, line-item structures, pricing terms, and industry-specific conventions, but remains within a relatively structured and repetitive comparison domain.",
+      "adequacy_evidence": "There is abundant real and synthetic data (invoices, purchase orders, bids) with clear alignment signals, and training pipelines can readily generate step-by-step comparison examples across formats.",
+      "_timestamp": "2026-04-06T05:25:55"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Most comparisons rely on explicit matching rules (prices, quantities, terms), but some cases require experience-based judgment to interpret minor discrepancies, substitutions, or acceptable variances.",
+      "adequacy_evidence": "Current AI agents can reliably apply comparison rules and learned patterns from past cases, including handling common discrepancies, leaving little unmet tacit knowledge in typical scenarios.",
+      "_timestamp": "2026-04-06T05:25:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires comparing multiple documents (bids, purchase orders, invoices) and tracking line items, quantities, and prices across them, but the information scope is typically bounded and structured.",
+      "adequacy_evidence": "Current agents can extract and align structured fields across documents, but may lose track of fine-grained discrepancies or misalign items in multi-page or inconsistently formatted records.",
+      "_timestamp": "2026-04-06T05:25:56"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reconciling documents where some details (e.g., acceptable price variances, shipping charges, partial deliveries) may require contextual interpretation beyond literal matching.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably apply reconciliation rules, flag discrepancies, and handle typical edge cases when provided organizational policies, with minimal ambiguity-related failure.",
+      "_timestamp": "2026-04-06T05:25:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps\u2014retrieving documents, aligning line items, and checking quantities and prices\u2014but these steps are relatively short and loosely coupled rather than long, interdependent sequences.",
+      "adequacy_evidence": "Frontier AI agents with document parsing and comparison tools can reliably maintain consistency across these short workflows without noticeable degradation in performance.",
+      "_timestamp": "2026-04-06T05:25:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each comparison is typically a self-contained transaction using the current supplier bill, bid, and purchase order, all of which are available within the same workflow or system.",
+      "adequacy_evidence": "Current AI agents integrated with procurement or ERP systems can reliably access and retrieve relevant documents per transaction without needing persistent cross-session memory.",
+      "_timestamp": "2026-04-06T05:25:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves comparing structured textual and numerical information across documents (bills, bids, purchase orders), which are fundamentally text-based even if stored as PDFs or digital records.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing handle these text-centric comparisons reliably, with no meaningful dependence on complex multimodal perception.",
+      "_timestamp": "2026-04-06T05:25:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Comparing invoices to bids and purchase orders is a routine clerical task with no strict real-time requirement; it is typically completed in batches where minutes or longer are acceptable.",
+      "adequacy_evidence": "AI systems can perform document comparison and discrepancy detection quickly within the available time window, so latency does not meaningfully constrain output quality.",
+      "_timestamp": "2026-04-06T05:25:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal reconciliation activity comparing documents; outputs are used within organizational processes without requiring stakeholder interaction or acceptance of the performer.",
+      "adequacy_evidence": "Since there are no meaningful external stakeholders and performer identity is irrelevant, AI execution would not face acceptance barriers.",
+      "_timestamp": "2026-04-06T05:25:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from comparing invoices, bids, and purchase orders for accuracy. This is a routine administrative/accounting task that can be automated without licensing or mandated human decision-maker requirements.",
+      "_timestamp": "2026-04-06T05:25:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors can lead to overpayments, accounting discrepancies, or audit issues, but these are typically financial and correctable rather than catastrophic or irreversible.",
+      "adequacy_evidence": "AI systems can reliably match structured data across invoices and purchase orders, and remaining errors are usually detectable through standard reconciliation checks, leaving acceptable residual risk.",
+      "_timestamp": "2026-04-06T05:25:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "The task involves structured comparisons (prices, quantities, terms) across bills, bids, and purchase orders, where discrepancies are typically explicit and can be detected with straightforward reconciliation rules or automated checks.",
+      "adequacy_evidence": "AI systems can perform document extraction and comparison well, but still make occasional parsing or alignment errors, requiring routine human or rule-based verification to ensure accuracy.",
+      "_timestamp": "2026-04-06T05:26:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

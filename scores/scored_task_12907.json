@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2052.00",
+  "task_id": 12907,
+  "task_statement": "Interview clients to determine their current income, expenses, insurance coverage, tax status, financial objectives, risk tolerance, or other information needed to develop a financial plan.",
+  "occupation_title": "Personal Financial Advisors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Interviewing clients to gather financial information can be conducted entirely through video calls, phone calls, email, or online questionnaires without requiring physical presence or non-computer tools."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Client interviews span highly diverse financial situations, demographics, goals, and regulatory contexts, with many edge cases and sensitive, context-dependent disclosures.",
+      "adequacy_evidence": "While training data can be sourced from scripts, roleplays, and some advisory transcripts, real-world nuanced conversations are often private and underrepresented, though partially recoverable via synthetic generation and targeted fine-tuning.",
+      "_timestamp": "2026-04-06T04:06:09"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective client interviews require nuanced judgment in probing, interpreting vague or inconsistent responses, assessing true risk tolerance, and building trust\u2014skills typically refined through experience rather than explicit rules.",
+      "adequacy_evidence": "Well-designed agents can follow structured interview protocols and adapt somewhat, but they still struggle with subtle interpersonal cues, credibility assessment, and dynamic calibration in complex or sensitive cases.",
+      "_timestamp": "2026-04-06T04:06:10"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Eliciting true financial objectives, risk tolerance, and constraints requires interpreting vague, shifting, and often unarticulated client preferences, along with probing beyond surface answers.",
+      "adequacy_evidence": "Current agents can follow structured intake scripts and iteratively clarify responses, but often miss subtle cues, inconsistencies, and latent goals that skilled advisors uncover through adaptive questioning and rapport.",
+      "_timestamp": "2026-04-06T04:06:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Client interviews involve multi-turn conversations where information gathered earlier must be consistently incorporated into later questions, but the sequence is not extremely long or tightly interdependent.",
+      "adequacy_evidence": "AI agents can generally sustain coherent multi-turn interviews, but may exhibit some drift, missed follow-ups, or inconsistencies as conversations extend.",
+      "_timestamp": "2026-04-06T04:06:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Client interviews often involve spoken conversation and can benefit from interpreting tone, hesitation, or reviewing financial documents, but core information can be captured via text alone.",
+      "adequacy_evidence": "Current agents handle structured questioning and document ingestion well, but are less reliable at interpreting subtle vocal cues, body language, or nuanced multimodal signals during live interactions.",
+      "_timestamp": "2026-04-06T04:06:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves gathering and organizing multiple categories of client data (income, expenses, goals, risk tolerance) during a single interaction, requiring structured tracking and synthesis but not extreme volume or rapid change.",
+      "adequacy_evidence": "Current agents can capture and structure such information with tools (forms, memory buffers), but in longer or less-structured interviews they may omit, misattribute, or inconsistently summarize details.",
+      "_timestamp": "2026-04-06T04:06:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Client interviews often build on prior meetings, using historical financial data, prior goals, and evolving risk preferences, but each session can still proceed by re-eliciting information if needed.",
+      "adequacy_evidence": "Current AI systems integrated with CRM-style databases can reliably store and retrieve structured client profiles across sessions, with minimal technical barriers to maintaining this level of longitudinal context.",
+      "_timestamp": "2026-04-06T04:06:11"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Client interviews are synchronous conversations requiring near-real-time responsiveness to maintain rapport, ask follow-up questions, and adapt dynamically.",
+      "adequacy_evidence": "Frontier agents can generate coherent, context-aware questions and responses within seconds, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T04:06:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Collected information can be cross-checked against documents (e.g., pay stubs, tax returns) or clarified with the client, but detecting omissions, misunderstandings, or subtle misstatements requires attentive review and domain awareness.",
+      "adequacy_evidence": "AI systems may misinterpret client responses, miss follow-up questions, or incorrectly structure gathered data, so human verification against source documents and client confirmation is still needed but not prohibitively difficult.",
+      "_timestamp": "2026-04-06T04:06:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "This task is a direct client-facing interview requiring trust, rapport, and perceived credibility to elicit sensitive financial and personal information.",
+      "adequacy_evidence": "While some clients accept robo-advisors, many would be hesitant to disclose detailed financial information or rely on an AI for nuanced, trust-based conversations, though resistance is not universal.",
+      "_timestamp": "2026-04-06T04:06:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in eliciting or recording client financial details can lead to flawed plans, but they are usually correctable through follow-up and do not immediately cause irreversible harm.",
+      "adequacy_evidence": "Even with review (e.g., summaries, confirmations), AI may still miss nuances or misinterpret client responses, leaving some residual risk that is manageable but not negligible.",
+      "_timestamp": "2026-04-06T04:06:14"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. securities regulations require licensed individuals (e.g., registered investment adviser representatives) to provide financial advice, and firms must supervise client interactions, but there is no explicit prohibition on AI systems conducting client intake interviews under supervision. This creates partial restriction due to licensing and supervision requirements rather than a direct ban.",
+      "_timestamp": "2026-04-06T04:06:15"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

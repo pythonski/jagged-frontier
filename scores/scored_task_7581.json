@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4013.00",
+  "task_id": 7581,
+  "task_statement": "Analyze test results to classify products or compare results with standard tables.",
+  "occupation_title": "Food Science Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Analyzing test results and comparing them with standard tables is typically done using computers, spreadsheets, or laboratory information systems. However, in some labs technicians may review instrument printouts, lab notebooks, or physical reference tables on-site, so not all instances are fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different food products, testing methods (microbial, chemical, sensory), and regulatory standards, creating moderate variation but within well-structured and standardized domains.",
+      "adequacy_evidence": "Extensive lab protocols, regulatory tables, training materials, and example datasets exist, and synthetic or simulated data can cover gaps, providing sufficient process-level signal for current AI systems.",
+      "_timestamp": "2026-04-06T01:16:00"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Most classifications rely on standardized test methods and comparison to established thresholds or tables, but borderline cases or anomalous results can require some experience-based judgment.",
+      "adequacy_evidence": "Given representative data and standards, current AI systems can reliably apply rules and handle most edge cases through pattern recognition and probabilistic reasoning, with minimal shortfall in tacit calibration.",
+      "_timestamp": "2026-04-06T01:16:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing lab test results and comparing them to standards is typically done off-line, with minutes to hours available rather than real-time constraints.",
+      "adequacy_evidence": "Current AI systems can perform these analyses well within the available time window, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T01:16:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple measurements and reference standards or tables within a single analysis, requiring comparison and some structured data tracking, but the volume is typically bounded and well-organized.",
+      "adequacy_evidence": "Current AI agents handle tabular data comparison and multi-field reasoning reliably within a single episode, with minimal risk of losing relevant context at this scale.",
+      "_timestamp": "2026-04-06T01:16:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short-to-moderate sequence of steps such as interpreting lab results, performing calculations or normalization, and comparing outputs to standard reference tables, where consistency across steps matters but sequences are not deeply interdependent or long.",
+      "adequacy_evidence": "Frontier AI agents can reliably handle these structured, moderately sequential workflows with tools and code execution, showing little to no degradation over the required number of steps.",
+      "_timestamp": "2026-04-06T01:16:01"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task generally follows explicit standards and tables for classification, but requires some contextual judgment in selecting appropriate standards and interpreting borderline or conflicting results.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably map test outputs to known standards and handle minor ambiguity through prompting or rules, with little difficulty inferring intended criteria.",
+      "_timestamp": "2026-04-06T01:16:01"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily relies on current test results and predefined standard tables; each analysis instance is largely self-contained without needing historical context.",
+      "adequacy_evidence": "Since cross-session memory is not required, existing AI systems fully meet the task\u2019s minimal retention needs.",
+      "_timestamp": "2026-04-06T01:16:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task may involve interpreting instrument outputs such as charts, spectra, or lab readouts alongside numeric/tabular data, requiring some visual or cross-modal reasoning beyond pure text.",
+      "adequacy_evidence": "Current agents handle structured tables and simple visualizations well, but can be unreliable on complex scientific visuals like chromatograms or nuanced lab instrument outputs.",
+      "_timestamp": "2026-04-06T01:16:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking calculations, units, and alignment with standard tables, which requires domain knowledge but is typically systematic and supported by reference materials and repeatable procedures.",
+      "adequacy_evidence": "AI can perform structured comparisons reliably, but still makes occasional errors with units, edge cases, or table interpretation, so routine expert review remains necessary.",
+      "_timestamp": "2026-04-06T01:16:03"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Misclassifying food test results against standards can lead to unsafe products reaching consumers, regulatory violations, or recalls, so even rare residual errors can have serious health and compliance consequences.",
+      "adequacy_evidence": "The task is largely rule-based (comparing measured values to defined thresholds), and with standard validation checks in place, AI systems can reduce residual errors to an acceptable level.",
+      "_timestamp": "2026-04-06T01:16:04"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces analytical results used by internal teams, quality assurance, and regulators, but relies primarily on objective comparison to standards rather than interpersonal trust or identity.",
+      "adequacy_evidence": "Automated instruments and software are already widely accepted for analyzing and classifying test results, and stakeholders generally prioritize accuracy and compliance over whether a human or AI performs the analysis.",
+      "_timestamp": "2026-04-06T01:16:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Food testing is regulated (e.g., FDA/USDA standards, lab accreditation requirements) and typically requires qualified personnel to validate and sign off on analyses, but there is no explicit prohibition on AI use. The rules create partial constraints by requiring human oversight and accountability rather than banning AI outright.",
+      "_timestamp": "2026-04-06T01:16:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

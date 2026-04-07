@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2071.00",
+  "task_id": 18933,
+  "task_statement": "Advise clients or respond to inquiries about financial matters in person or via phone, email, Web site, or Internet chat.",
+  "occupation_title": "Credit Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Client advising and inquiries can often be handled via phone, email, websites, or online chat, making many instances fully remote. However, credit counseling frequently also occurs through in-person meetings with clients, so not all instances are fully digital."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising clients on financial matters involves interpreting individual circumstances, prioritizing debts, and tailoring guidance using experience-based judgment beyond strict rules.",
+      "adequacy_evidence": "Current AI can apply general financial guidance but often lacks nuanced calibration for complex personal situations, emotional context, and edge-case tradeoffs, leading to moderate gaps.",
+      "_timestamp": "2026-04-06T05:55:40"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clients often present vague or emotionally framed financial concerns, requiring the counselor to infer underlying goals, constraints, and priorities that are not explicitly stated and may evolve \u062e\u0644\u0627\u0644 interaction.",
+      "adequacy_evidence": "Current AI agents can infer intent in many routine inquiries but still struggle with nuanced, context-heavy financial situations, often requiring iterative clarification or human oversight to fully capture client needs.",
+      "_timestamp": "2026-04-06T05:55:40"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Client financial counseling spans highly heterogeneous situations (varying debts, income levels, legal contexts, and personal constraints), with many edge cases and context-sensitive adaptations.",
+      "adequacy_evidence": "There is substantial accessible data (financial advice content, counseling scripts, synthetic personas), but real-world counseling transcripts and nuanced case progression are partly private, leaving some gaps that require approximation via simulation.",
+      "_timestamp": "2026-04-06T05:55:40"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Client advising involves multi-turn interactions (gathering financial details, clarifying goals, providing tailored guidance), but each exchange is only moderately long and not highly interdependent across many steps.",
+      "adequacy_evidence": "LLM agents can handle multi-turn financial conversations reasonably well, but may show drift, inconsistency, or missed constraints over longer dialogues, especially when tracking nuanced client context.",
+      "_timestamp": "2026-04-06T05:55:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Client interactions over phone, chat, or in person typically require responses within seconds to a few minutes to maintain conversational flow and client engagement.",
+      "adequacy_evidence": "Current AI agents can deliver high-quality financial guidance within these timeframes using tool-assisted retrieval and reasoning, without significant degradation from latency constraints.",
+      "_timestamp": "2026-04-06T05:55:42"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising clients requires tracking multiple pieces of client-specific financial information (income, debts, expenses, goals) and integrating them during a conversation, but the scope is typically bounded to a single client profile per session.",
+      "adequacy_evidence": "Current agents can manage moderate context using large context windows and tool support, but may still lose or misweight details over extended interactions or complex financial profiles without careful structuring.",
+      "_timestamp": "2026-04-06T05:55:43"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Credit counseling typically involves ongoing client relationships where advisors must track financial histories, debt repayment plans, prior advice, and evolving circumstances across multiple interactions.",
+      "adequacy_evidence": "Current AI agents can use external memory systems (CRMs, databases) to store and retrieve client data, but they still show gaps in reliably updating, integrating, and contextually using longitudinal information across sessions.",
+      "_timestamp": "2026-04-06T05:55:43"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task includes communication via phone and in-person interactions, which involve audio (and potentially visual/social cues), though core advisory content can be delivered textually.",
+      "adequacy_evidence": "Current AI agents handle text and structured financial dialogue well, and speech interfaces are sufficiently mature for typical advisory exchanges without significant multimodal gaps.",
+      "_timestamp": "2026-04-06T05:55:43"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Checking financial advice requires domain knowledge (e.g., debt management rules, interest calculations, regulatory constraints), but many elements can be verified through standard calculations and guidelines, making errors detectable with moderate effort.",
+      "adequacy_evidence": "Current AI can produce generally sound financial guidance but still makes occasional factual or contextual errors, requiring consistent human review to ensure correctness and compliance.",
+      "_timestamp": "2026-04-06T05:55:43"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incorrect financial advice (e.g., on debt management or credit actions) can lead to monetary harm or worsened credit, but impacts are typically reversible or mitigable and not immediately catastrophic.",
+      "adequacy_evidence": "Even with review, AI may misinterpret client-specific financial contexts or provide subtly inappropriate guidance, leaving a non-trivial residual risk that remains somewhat problematic in practice.",
+      "_timestamp": "2026-04-06T05:55:43"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Credit counseling and debt management services are subject to state licensing and federal oversight (e.g., nonprofit accreditation, CFPB rules), which generally assume a human or licensed entity is responsible. While there is no explicit ban on AI delivering advice, these frameworks create ambiguity about whether an autonomous AI could legally fulfill the role without human supervision.",
+      "_timestamp": "2026-04-06T05:55:44"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Credit counseling relies heavily on client trust, perceived expertise, and empathy when discussing sensitive personal financial situations, making stakeholder acceptance central to effectiveness.",
+      "adequacy_evidence": "While some clients accept AI for basic financial inquiries via chat or web, many are hesitant to rely on AI for personalized debt or credit counseling, especially in high-stakes or emotionally sensitive cases.",
+      "_timestamp": "2026-04-06T05:55:45"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

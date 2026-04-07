@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-6013.00",
+  "task_id": 786,
+  "task_statement": "Transcribe recorded messages or practitioners' diagnoses or recommendations into patients' medical records.",
+  "occupation_title": "Medical Secretaries and Administrative Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Transcribing recorded diagnoses or messages into electronic health records can usually be done on a computer remotely. However, some settings still involve paper charts or on-site medical record systems, requiring physical presence in a minority of cases."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of medical specialties, accents, audio qualities, and terminology, but remains relatively structured around clinical dictation and standardized record formats.",
+      "adequacy_evidence": "There is substantial available data from medical transcription, ASR corpora, and synthetic audio generation, though gaps remain for rare accents, noisy recordings, and highly specialized jargon.",
+      "_timestamp": "2026-04-06T01:23:49"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves some experience with medical terminology, formatting conventions, and resolving minor ambiguities in dictation, but is largely governed by explicit transcription and documentation rules.",
+      "adequacy_evidence": "Current AI systems with medical speech recognition and domain adaptation can reliably transcribe and structure such content with minimal need for tacit human judgment.",
+      "_timestamp": "2026-04-06T01:23:50"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves processing potentially extended recordings and consistently transcribing and formatting them into structured medical records, requiring coherence across multiple segments but with limited interdependence between steps.",
+      "adequacy_evidence": "Modern AI transcription systems with tooling maintain high consistency over long audio inputs, with minimal degradation across sequences when properly chunked and integrated into workflows.",
+      "_timestamp": "2026-04-06T01:23:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves holding and accurately transferring details from audio recordings (which may be moderately long and information-dense) into structured records, requiring some active tracking of content across the transcription process.",
+      "adequacy_evidence": "Current AI systems with transcription tools and chunking strategies can reliably handle long audio inputs and maintain within-episode context, with minimal loss of relevant information in typical use cases.",
+      "_timestamp": "2026-04-06T01:23:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely to accurately transcribe spoken or recorded medical information into structured records, with clear expectations for fidelity and standard formatting.",
+      "adequacy_evidence": "Current AI systems with speech recognition and medical language support can reliably infer intent and perform transcription with minimal ambiguity, aside from occasional audio or terminology errors.",
+      "_timestamp": "2026-04-06T01:23:52"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Each transcription must be correctly attached to the appropriate patient\u2019s ongoing medical record, requiring retrieval and updating of longitudinal case files across sessions.",
+      "adequacy_evidence": "Current systems (EHR integrations, databases) already handle persistent patient records reliably, and AI agents can interface with these systems without needing complex intrinsic long-term memory.",
+      "_timestamp": "2026-04-06T01:23:52"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often requires converting spoken audio recordings (e.g., dictated diagnoses or messages) into written text, making audio perception a meaningful component.",
+      "adequacy_evidence": "Modern speech-to-text systems handle clear medical dictation reasonably well but still struggle with accents, background noise, and specialized terminology, leading to moderate error rates.",
+      "_timestamp": "2026-04-06T01:23:53"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Transcribing recorded messages into medical records is typically an asynchronous task where delays of minutes or longer are acceptable and do not impact care delivery in real time.",
+      "adequacy_evidence": "Current AI systems can perform high-quality transcription and structuring well within acceptable timeframes, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T01:23:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification typically involves comparing the transcript against the original audio and checking medical terminology, which requires attention and some domain familiarity but is straightforward with access to the source recording.",
+      "adequacy_evidence": "Current AI transcription can misrecognize drug names, dosages, or clinical terms, so human review against the audio is still routinely needed, though errors are usually detectable with focused checking.",
+      "_timestamp": "2026-04-06T01:23:55"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in transcribing diagnoses or recommendations into medical records can directly impact patient care, treatment decisions, and legal documentation, so even rare residual mistakes can have serious consequences.",
+      "adequacy_evidence": "With standard quality control (e.g., human review or structured validation), most AI transcription errors can be caught, but subtle clinical misinterpretations or omissions may still occasionally slip through, leaving some residual risk.",
+      "_timestamp": "2026-04-06T01:23:55"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Clinicians and healthcare organizations rely on the transcribed records, but the task is primarily technical and accuracy-focused, with little dependence on the performer\u2019s personal identity or interpersonal role.",
+      "adequacy_evidence": "AI medical scribes and transcription tools are already widely accepted in healthcare workflows, and stakeholders generally prioritize accuracy and efficiency over whether a human or AI performs the transcription.",
+      "_timestamp": "2026-04-06T01:23:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws prohibiting AI from transcribing clinical dictation into medical records. Existing regulations (e.g., HIPAA) impose privacy and security requirements but allow use of automated transcription tools if compliant, and such tools are already widely used in practice.",
+      "_timestamp": "2026-04-06T01:23:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4012.01",
+  "task_id": 20875,
+  "task_statement": "Analyze geospatial data to determine agricultural implications of factors such as soil quality, terrain, field productivity, fertilizers, or weather conditions.",
+  "occupation_title": "Precision Agriculture Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Analyzing geospatial datasets (GIS layers, remote sensing imagery, weather and soil databases) is performed on a computer using software tools and does not require physical presence in the field. Field data collection may be physical, but the analysis task itself is fully computer-based."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous conditions across geographies, crop types, soil compositions, weather patterns, and management practices, creating a long-tailed and context-sensitive distribution.",
+      "adequacy_evidence": "There is substantial coverage via satellite imagery, agronomic studies, weather data, and farm datasets, but important subpopulations (e.g., proprietary farm-level yield responses, rare edge conditions) remain partially inaccessible or thin.",
+      "_timestamp": "2026-04-05T22:05:16"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting geospatial and agronomic factors in light of context-specific goals (e.g., yield vs. sustainability), requiring some inference about priorities and local conditions beyond explicit instructions.",
+      "adequacy_evidence": "Current agents can synthesize geospatial and agronomic data but often miss implicit farm-specific objectives or constraints, requiring human guidance to refine recommendations.",
+      "_timestamp": "2026-04-05T22:05:16"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting geospatial agricultural data involves contextual judgment (e.g., local soil behavior, microclimates, crop responses) that goes beyond fixed rules, but much of the analysis is guided by established agronomic models and data-driven procedures.",
+      "adequacy_evidence": "Current AI agents can apply agronomic models and analyze geospatial datasets effectively, but they often lack fine-grained, experience-based calibration for local conditions and edge cases, leading to moderate gaps in nuanced judgment.",
+      "_timestamp": "2026-04-05T22:05:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (data ingestion, cleaning, spatial analysis, modeling, and interpretation), where intermediate outputs inform later steps, but these steps are typically modular rather than tightly interdependent over long horizons.",
+      "adequacy_evidence": "Current AI agents can handle multi-step analytical pipelines with tooling, but may show some degradation over longer workflows (e.g., losing constraints or consistency across stages), especially when chaining complex geospatial transformations.",
+      "_timestamp": "2026-04-05T22:05:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on geospatial data such as satellite imagery, terrain maps, soil maps, and weather visualizations, requiring spatial and cross-modal reasoning beyond text.",
+      "adequacy_evidence": "Current agents can process geospatial and remote sensing data with tools, but performance is uneven on fine-grained spatial patterns, layered map interpretation, and integrating heterogeneous modalities.",
+      "_timestamp": "2026-04-05T22:05:17"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large, heterogeneous geospatial datasets (e.g., soil maps, weather time series, terrain models) and tracking multiple interacting variables, where missing or misaligning layers can affect conclusions.",
+      "adequacy_evidence": "With proper GIS and data-processing tools, agents can handle large datasets, but they still show weaknesses in reliably maintaining and summarizing complex multi-layer spatial context without losing important details.",
+      "_timestamp": "2026-04-05T22:05:17"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Geospatial analysis for agricultural planning is typically conducted offline using datasets (e.g., soil maps, weather trends), where turnaround times of minutes to hours are acceptable rather than real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform multi-step geospatial and agronomic analysis within these relaxed time constraints without needing to truncate reasoning, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T22:05:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Analyses often benefit from historical field data (e.g., past yields, soil tests, weather patterns), but individual analyses can still be performed on self-contained datasets.",
+      "adequacy_evidence": "Current AI systems can integrate with databases and retrieve historical data, but maintaining consistent, well-structured longitudinal context across seasons and projects is still error-prone and requires careful system design.",
+      "_timestamp": "2026-04-05T22:05:18"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from analyzing geospatial agricultural data. While certain downstream uses (e.g., regulated agronomic recommendations involving restricted chemicals) may involve licensed professionals, the analysis task itself is not legally restricted.",
+      "_timestamp": "2026-04-05T22:05:19"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing agricultural implications from geospatial data involves integrating soil, weather, and productivity signals where errors can be subtle and may only become evident after a growing season or through field validation, requiring expert interpretation.",
+      "adequacy_evidence": "Current AI can perform geospatial analysis but still makes non-obvious mistakes in data interpretation and agronomic inference, requiring extensive expert review and often ground-truthing to ensure reliability.",
+      "_timestamp": "2026-04-05T22:05:19"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Farmers, agronomists, and farm managers rely on the analysis to make operational decisions, so stakeholders engage with and depend on the output, though personal identity of the analyst is not central.",
+      "adequacy_evidence": "AI-driven precision agriculture tools are increasingly used, but some stakeholders remain cautious about fully trusting automated recommendations, especially for high-stakes crop decisions.",
+      "_timestamp": "2026-04-05T22:05:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors can lead to reduced yields, inefficient input use, or environmental impacts, but consequences are typically economic and gradual rather than immediately catastrophic, making some residual error tolerable.",
+      "adequacy_evidence": "With standard validation (e.g., cross-checking datasets, agronomic review, and historical comparisons), current AI systems can reduce residual errors to a level generally acceptable for decision support in this domain.",
+      "_timestamp": "2026-04-05T22:05:19"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

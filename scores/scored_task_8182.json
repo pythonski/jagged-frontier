@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4041.02",
+  "task_id": 8182,
+  "task_statement": "Obtain information about potential creditors from banks, credit bureaus, and other credit services, and provide reciprocal information if requested.",
+  "occupation_title": "Credit Authorizers, Checkers, and Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Obtaining and sharing creditor information is typically done through online credit bureau systems, databases, email, or phone from a computer. The task does not inherently require physical presence or non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple institutions (banks, credit bureaus, service providers) with varying formats, protocols, and edge cases, but follows broadly standardized credit reporting and information exchange procedures.",
+      "adequacy_evidence": "There is abundant documentation, regulatory guidance, sample workflows, and structured data formats (e.g., credit reports, API specs), providing sufficient process-level signal for training without major inaccessible subpopulations.",
+      "_timestamp": "2026-04-05T22:14:29"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely governed by standardized procedures, data formats, and compliance rules for exchanging credit information, with minimal need for experience-based judgment beyond following protocols.",
+      "adequacy_evidence": "Current AI agents can reliably execute structured information retrieval and exchange workflows, including handling routine exceptions via predefined rules or escalation, with little reliance on tacit knowledge.",
+      "_timestamp": "2026-04-05T22:14:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step interactions (querying multiple institutions, verifying data, and responding with reciprocal information), but each step is relatively structured and loosely coupled rather than deeply interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute such procedural, tool-mediated workflows across several steps without significant degradation, maintaining consistency over the sequence length required.",
+      "_timestamp": "2026-04-05T22:14:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering and reconciling structured credit information from multiple external sources and possibly tracking reciprocal disclosures, requiring moderate within-episode organization but not large or highly complex state.",
+      "adequacy_evidence": "Current AI agents can reliably manage and integrate structured data from multiple sources within a session using tools and retrieval, with little risk of losing critical context at this scale.",
+      "_timestamp": "2026-04-05T22:14:30"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves some context-dependent judgment (e.g., what specific creditor information is relevant and what can be shared reciprocally under policy), but is largely governed by standardized procedures and regulatory guidelines.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably follow institutional rules, request appropriate data, and handle reciprocal information-sharing protocols, with minimal difficulty resolving the limited ambiguity present.",
+      "_timestamp": "2026-04-05T22:14:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves exchanging financial and credit information through databases, reports, and records that are fundamentally text and numeric data.",
+      "adequacy_evidence": "Current AI systems can fully handle text- and data-based information retrieval and exchange without needing non-text modalities.",
+      "_timestamp": "2026-04-05T22:14:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each information request about a potential creditor is typically handled as a discrete transaction, with needed history retrieved from external databases rather than relying on the agent\u2019s own accumulated memory.",
+      "adequacy_evidence": "Current AI systems can query and update persistent databases or records, so there is no meaningful gap in cross-session memory for this task.",
+      "_timestamp": "2026-04-05T22:14:32"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Obtaining and sharing creditor information typically occurs over minutes to hours via database queries, reports, or communications, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI agents can perform data retrieval, integration, and communication tasks well within these relaxed time constraints without sacrificing quality.",
+      "_timestamp": "2026-04-05T22:14:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interaction with external institutions (banks, credit bureaus) that rely on the accuracy and legitimacy of the requester, but these exchanges are standardized and procedural rather than relationship-driven.",
+      "adequacy_evidence": "These interactions are already highly automated via APIs and electronic data interchange, and institutions generally accept system-to-system communication without concern for human versus AI involvement.",
+      "_timestamp": "2026-04-05T22:14:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Information is standardized and can be cross-checked against multiple institutional records (credit reports, bank data), but verification requires careful matching of identities and reconciliation across sources.",
+      "adequacy_evidence": "AI systems can retrieve and compile such data, but may make matching or extraction errors, so human or system-level verification (e.g., identity checks, record reconciliation) remains necessary.",
+      "_timestamp": "2026-04-05T22:14:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in obtaining or sharing creditor information can affect lending decisions, credit histories, and regulatory compliance (e.g., FCRA), where even rare mistakes can have significant financial or legal consequences for individuals and institutions.",
+      "adequacy_evidence": "With structured data sources and routine verification (e.g., cross-checking bureau data), many AI errors can be caught, but risks like misattribution, stale data, or privacy mishandling still leave some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T22:14:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "The Fair Credit Reporting Act (FCRA) and related financial privacy laws (e.g., GLBA) impose strict requirements on accessing, sharing, and verifying credit information, including permissible purpose and accountability. These rules constrain how the task is performed but do not explicitly prohibit AI systems from carrying it out under compliant oversight.",
+      "_timestamp": "2026-04-05T22:14:35"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5032.00",
+  "task_id": 2734,
+  "task_statement": "Ensure timely and efficient movement of trains, according to train orders and schedules.",
+  "occupation_title": "Dispatchers, Except Police, Fire, and Ambulance",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Train movement is coordinated primarily through computerized dispatching systems, schedules, and radio/telecom communications, which are digital activities. However, in practice dispatchers usually work from dedicated control centers with specialized systems and may need on-site presence for safety and infrastructure access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Train dispatching spans highly variable conditions including network topologies, traffic density, disruptions (weather, equipment failure), and strict safety constraints, creating a long-tailed and context-sensitive distribution of cases.",
+      "adequacy_evidence": "While real-world dispatch logs and rail simulators exist, much high-quality operational data and expert decision rationale are proprietary or sparse, though partially recoverable via simulation and targeted data generation.",
+      "_timestamp": "2026-04-05T21:16:29"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While governed by formal schedules and signaling rules, dispatching routinely requires experience-based judgment to resolve conflicts, manage delays, and anticipate downstream effects under uncertainty.",
+      "adequacy_evidence": "Current AI systems can optimize routing and scheduling under defined constraints, but they struggle with nuanced, context-sensitive tradeoffs and rare disruptions that human dispatchers handle through practiced intuition.",
+      "_timestamp": "2026-04-05T21:16:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While train orders and schedules provide explicit structure, dispatchers must interpret priorities, resolve conflicts, and adapt to delays or disruptions using context-dependent judgment about safety and efficiency.",
+      "adequacy_evidence": "Current AI agents can follow explicit schedules and optimize routing, but they still struggle to consistently infer implicit priorities and handle evolving, context-sensitive tradeoffs without human guidance.",
+      "_timestamp": "2026-04-05T21:16:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Train dispatching involves continuous, tightly coupled decision-making over long time horizons, where each routing or scheduling action affects downstream network flow and safety constraints.",
+      "adequacy_evidence": "Current AI agents struggle to maintain consistent performance over long, real-time, interdependent control sequences, with error accumulation and difficulty adapting coherently to evolving system states.",
+      "_timestamp": "2026-04-05T21:16:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Train dispatching requires tracking many trains simultaneously, including positions, schedules, track availability, delays, and conflicts, all of which update continuously and must be integrated to avoid collisions or inefficiencies.",
+      "adequacy_evidence": "With structured tools (real-time tracking systems, state tables), agents can manage much of this information, but maintaining coherent, up-to-date representations across many interacting entities remains error-prone under complex, rapidly changing conditions.",
+      "_timestamp": "2026-04-05T21:16:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatching primarily relies on real-time schedules and current network state within a shift, but some continuity (e.g., recurring delays, maintenance constraints, prior incidents) carries across sessions.",
+      "adequacy_evidence": "Modern AI systems with standard database integration can reliably store and retrieve persistent operational data (schedules, logs, constraints), so cross-session memory needs are well within current capabilities.",
+      "_timestamp": "2026-04-05T21:16:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Train dispatching involves interpreting track diagrams, signal systems, and sometimes audio radio communications in addition to textual schedules and orders, requiring some multimodal awareness.",
+      "adequacy_evidence": "Current agents can handle structured data and basic visualizations, but real-time integration of dynamic spatial layouts, signal states, and noisy audio communication remains only moderately reliable.",
+      "_timestamp": "2026-04-05T21:16:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Train dispatching requires near-real-time decisions to adjust routing, prevent conflicts, and maintain schedules, often within seconds as conditions change on the network.",
+      "adequacy_evidence": "LLM-based agents can generate responses quickly, but complex, safety-critical coordination under tight time constraints can force shallower reasoning, reducing reliability in dynamic or congested scenarios.",
+      "_timestamp": "2026-04-05T21:16:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Dispatching trains is safety-critical: even rare residual errors can cause collisions, derailments, or major service disruptions with severe human and economic consequences.",
+      "adequacy_evidence": "Current AI systems still exhibit occasional unpredictable failures and reasoning gaps in dynamic, safety-critical control contexts, leaving residual risk unacceptably high even after monitoring and checks.",
+      "_timestamp": "2026-04-05T21:16:33"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Federal Railroad Administration regulations require qualified human dispatchers to control train movements and ensure safety, and current rules are written around human responsibility, creating implicit constraints on full AI autonomy. However, there is no explicit prohibition on AI assistance, and automation (e.g., Positive Train Control) is already permitted under human oversight.",
+      "_timestamp": "2026-04-05T21:16:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Detecting errors in train dispatching (e.g., routing conflicts, unsafe spacing, schedule knock-on effects) requires specialized domain knowledge and may involve latent issues that only surface downstream in network operations.",
+      "adequacy_evidence": "Current AI systems would require intensive human oversight because their mistakes in complex, real-time scheduling and safety constraints are both non-trivial to detect and too consequential to leave unchecked.",
+      "_timestamp": "2026-04-05T21:16:34"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires coordination with train crews, operators, and control centers who rely on dispatch decisions, but acceptance depends more on operational accuracy than personal identity.",
+      "adequacy_evidence": "Rail systems already incorporate automated dispatching and control technologies, and stakeholders are generally indifferent to whether decisions originate from humans or AI as long as safety and efficiency are maintained.",
+      "_timestamp": "2026-04-05T21:16:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

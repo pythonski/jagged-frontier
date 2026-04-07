@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9111.00",
+  "task_id": 9796,
+  "task_statement": "Select statistical tests for analyzing data.",
+  "occupation_title": "Statistical Assistants",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Selecting appropriate statistical tests is an analytical decision made while reviewing datasets and research objectives, typically using statistical software or documentation, which can be done entirely on a computer."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Test selection often follows codified decision rules (data type, sample size, design), but real cases require some judgment about assumptions, robustness, and edge conditions.",
+      "adequacy_evidence": "Current agents handle standard decision frameworks well but show gaps in nuanced assumption checking and context-sensitive tradeoffs, leading to occasional mis-specification in non-routine cases.",
+      "_timestamp": "2026-04-05T23:50:46"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of data types, experimental designs, and assumption checks (e.g., parametric vs nonparametric, regression, multivariate cases), but is largely structured and covered by well-defined decision frameworks.",
+      "adequacy_evidence": "Extensive textbooks, tutorials, worked examples, and synthetic data generation pipelines provide rich, process-level supervision for test selection across nearly all common scenarios.",
+      "_timestamp": "2026-04-05T23:50:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Selecting appropriate statistical tests involves a short-to-moderate sequence of interdependent steps (e.g., identifying variable types, checking assumptions, aligning with research questions), where earlier choices inform later ones.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain coherence across these limited-step workflows, with little degradation since the sequence length is modest and easily scaffolded.",
+      "_timestamp": "2026-04-05T23:50:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Selecting appropriate statistical tests requires keeping track of dataset characteristics (e.g., variable types, sample size, distributional assumptions, study design) and mapping them to test criteria, but the information volume is typically moderate and structured.",
+      "adequacy_evidence": "Current AI agents can reliably manage and reason over these factors within a single episode using structured prompts or tool support, with little evidence of systematic context loss or memory failure.",
+      "_timestamp": "2026-04-05T23:50:47"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Selecting statistical tests is typically based on the current dataset, research question, and assumptions provided within a single instance, without needing prior case history.",
+      "adequacy_evidence": "Since the task is largely self-contained, existing AI systems do not require persistent cross-session memory to perform it effectively.",
+      "_timestamp": "2026-04-05T23:50:47"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Selecting statistical tests is primarily based on textual descriptions of variables, study design, and assumptions; any use of visualizations like plots is optional rather than essential.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI systems can handle the modality requirements without relying on advanced multimodal capabilities.",
+      "_timestamp": "2026-04-05T23:50:47"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Choosing appropriate statistical tests depends on implicit factors like study design, variable types, assumptions, and analysis goals, which are often only partially specified and require contextual interpretation.",
+      "adequacy_evidence": "Current agents can usually propose reasonable tests when given typical cues but often miss nuances (e.g., dependence structures, assumption violations, or analytic intent), requiring human clarification and iteration.",
+      "_timestamp": "2026-04-05T23:50:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Choosing appropriate statistical tests is typically an analytical task performed offline where minutes or longer are acceptable, with no strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can generate high-quality test selection recommendations quickly (seconds), well within the task\u2019s time tolerance, without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T23:50:48"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from selecting statistical tests. While regulated industries may require human oversight for final analyses, the act of choosing statistical methods itself is not legally restricted.",
+      "_timestamp": "2026-04-05T23:50:49"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Choosing an inappropriate statistical test can lead to incorrect inferences, but such errors are often detectable in review and typically do not cause irreversible harm in most assistant-level analytical contexts.",
+      "adequacy_evidence": "Current AI systems can reliably recommend appropriate statistical tests given well-specified data and goals, and remaining errors are usually caught through standard human or procedural checks, leaving acceptable residual risk.",
+      "_timestamp": "2026-04-05T23:50:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying correct test selection requires statistical expertise to assess data types, assumptions, and study design; mistakes (e.g., violated assumptions or inappropriate models) are not always immediately obvious.",
+      "adequacy_evidence": "Current AI often proposes plausible tests but can miss contextual nuances or assumptions, so outputs require expert review and cross-checking in practice.",
+      "_timestamp": "2026-04-05T23:50:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task\u2019s output is used by analysts or researchers, so others rely on the recommendation, but the performer\u2019s identity or interpersonal role is not central.",
+      "adequacy_evidence": "Stakeholders already accept statistical software and automated recommendations for test selection, so AI performing this role would face little to no resistance.",
+      "_timestamp": "2026-04-05T23:50:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

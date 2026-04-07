@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2081.00",
+  "task_id": 20016,
+  "task_statement": "Answer questions from taxpayers and assist them in completing tax forms.",
+  "occupation_title": "Tax Examiners and Collectors, and Revenue Agents",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Taxpayer questions and form assistance are often handled via phone, email, or online systems, allowing fully remote work. However, tax offices also commonly provide in-person assistance for taxpayers with paper forms or identity verification needs."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Taxpayer assistance spans a highly heterogeneous space of filing statuses, income types, deductions, credits, and rare edge cases (e.g., international income, audits, complex business structures).",
+      "adequacy_evidence": "There is extensive public data (IRS publications, tax prep guides, worked examples, forums), but some nuanced real-world cases and expert reasoning traces (especially rare or sensitive scenarios) are underrepresented and partially inaccessible.",
+      "_timestamp": "2026-04-06T01:19:59"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Much of tax assistance follows explicit statutes, regulations, and form instructions, but practitioners still rely on experience to interpret ambiguous taxpayer situations, apply judgment on borderline cases, and communicate appropriately.",
+      "adequacy_evidence": "Current AI agents can handle standard cases well using codified rules, but they show gaps in nuanced interpretation and context-sensitive judgment for atypical or ambiguous taxpayer scenarios.",
+      "_timestamp": "2026-04-06T01:19:59"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Taxpayer inquiries often omit key details (income sources, filing status nuances, jurisdictional specifics), requiring interpretation and clarification to determine the correct guidance and form entries.",
+      "adequacy_evidence": "Current AI agents can often infer intent and guide form completion but frequently need iterative clarification and may miss edge-case nuances or implicit constraints without human correction.",
+      "_timestamp": "2026-04-06T01:20:00"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assisting taxpayers involves multi-step interactions (clarifying questions, gathering information, guiding through form sections) where earlier answers influence later steps, but sequences are typically moderate in length rather than deeply interdependent over long horizons.",
+      "adequacy_evidence": "Frontier AI agents can generally handle multi-turn guidance and form completion, but they show some degradation over extended interactions, such as losing track of prior details or inconsistently applying earlier constraints.",
+      "_timestamp": "2026-04-06T01:20:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple data points (income sources, deductions, taxpayer details, and form fields) and integrating them accurately within a session, but the volume is structured and bounded by the tax return context.",
+      "adequacy_evidence": "Current agents can manage structured financial data with tools, but may occasionally lose track of details or mis-handle intermediate values across steps, especially in longer or more complex filings.",
+      "_timestamp": "2026-04-06T01:20:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves reading and interpreting tax forms, supporting documents, and occasionally scanned or handwritten materials, but is largely text-centric overall.",
+      "adequacy_evidence": "Current agents handle digital forms and standard documents well, but can be unreliable with low-quality scans, handwritten inputs, or complex document layouts.",
+      "_timestamp": "2026-04-06T01:20:02"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Taxpayer assistance typically occurs in conversational settings (phone, in-person, or chat) where responses are expected within seconds to a few minutes, but not instantaneously; brief pauses for checking rules or forms are acceptable.",
+      "adequacy_evidence": "Current AI agents can deliver accurate tax guidance and form assistance within these time bounds, even with some reasoning or tool use, without significant degradation in quality.",
+      "_timestamp": "2026-04-06T01:20:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Correctness of tax guidance and form completion often depends on nuanced interpretation of tax law, taxpayer-specific facts, and edge cases; errors may not be obvious without expert review and can surface only later (e.g., audits).",
+      "adequacy_evidence": "Current AI systems still make non-obvious mistakes in tax interpretation and form logic, and verifying outputs requires substantial domain expertise and careful cross-checking against regulations and case details.",
+      "_timestamp": "2026-04-06T01:20:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Taxpayer assistance often involves follow-up interactions, prior filings, and ongoing case notes, but many inquiries can still be handled in a single session with provided documents.",
+      "adequacy_evidence": "Current AI systems can store and retrieve prior interactions via external systems, but they can miss or inconsistently use relevant historical context across sessions without careful integration.",
+      "_timestamp": "2026-04-06T01:20:02"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect guidance on tax obligations or form completion can lead to penalties, audits, or legal consequences, and some errors may not be easily reversible once filed, so very low residual error tolerance is required.",
+      "adequacy_evidence": "Even with review and validation tools, AI systems can miss nuanced tax rules or context-specific details, leaving a non-negligible residual risk that remains concerning but not universally prohibitive.",
+      "_timestamp": "2026-04-06T01:20:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires direct interaction with taxpayers, where trust, perceived authority, and clarity are central to ensuring compliance and accurate form completion.",
+      "adequacy_evidence": "Many taxpayers already use automated tax help tools, but for official government interactions\u2014especially involving audits or nuanced guidance\u2014some would still prefer or trust a human agent over AI.",
+      "_timestamp": "2026-04-06T01:20:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "US law does not prohibit software or AI from assisting taxpayers or answering tax questions; such tools are widely used (e.g., tax preparation software). While paid preparers must have a PTIN and certain representation roles require licensed humans, these rules do not bar AI from performing this assistive task.",
+      "_timestamp": "2026-04-06T01:20:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

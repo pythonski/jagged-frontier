@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1224.00",
+  "task_id": 17245,
+  "task_statement": "Confer with medical professionals regarding image-based diagnoses.",
+  "occupation_title": "Radiologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Radiologists often discuss imaging findings with other clinicians via phone, messaging systems, or video while viewing digital images, which can be done remotely. However, in many hospital settings these consultations also occur in person during clinical rounds or face\u2011to\u2011face discussions."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Consultative discussions among radiologists and other clinicians rely heavily on experience-based judgment to contextualize ambiguous imaging findings, weigh differential diagnoses, and integrate clinical nuances not fully captured in explicit rules.",
+      "adequacy_evidence": "Current AI systems can summarize imaging features and suggest differentials, but they lack the nuanced clinical calibration and situational judgment needed for complex, context-sensitive consultations, especially in atypical or high-stakes cases.",
+      "_timestamp": "2026-04-05T21:16:46"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Covers diverse imaging modalities (CT, MRI, X-ray, ultrasound), pathologies, patient contexts, and interdisciplinary consultation styles, producing a highly heterogeneous and long-tailed distribution of cases and interactions.",
+      "adequacy_evidence": "Large corpora of medical images, reports, and some clinical dialogues exist, but real-world consultative exchanges and nuanced reasoning processes are often private and under-recorded, leaving some subpopulations thin though partially addressable via synthesis and fine-tuning.",
+      "_timestamp": "2026-04-05T21:16:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "This task involves multi-turn discussions with clinicians, integrating imaging findings, clinical context, and follow-up questions, requiring consistency across an interaction but not extremely long or tightly coupled sequences.",
+      "adequacy_evidence": "Current AI agents can sustain coherent multi-turn medical discussions, but may exhibit some context drift or inconsistency over extended exchanges, especially when integrating evolving clinical details.",
+      "_timestamp": "2026-04-05T21:16:47"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating imaging findings, patient history, prior reports, and real-time discussion points, requiring active retrieval and summarization of multiple information sources within a single interaction.",
+      "adequacy_evidence": "Current agents can handle moderate context windows and multimodal inputs but still show weaknesses in consistently tracking all relevant clinical details and maintaining accurate summaries during extended, information-rich exchanges.",
+      "_timestamp": "2026-04-05T21:16:47"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Consultations between radiologists and other clinicians involve interpreting partially specified clinical questions, reconciling differing mental models, and surfacing implicit concerns (e.g., diagnostic uncertainty, risk tolerance, next steps). Success depends heavily on context, interpersonal cues, and evolving dialogue.",
+      "adequacy_evidence": "Current agents can extract and clarify explicit clinical questions but often miss subtle intent, shifting priorities, or unspoken concerns in back-and-forth medical discussions, requiring human guidance to fully align on objectives.",
+      "_timestamp": "2026-04-05T21:16:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Consultations between radiologists and other medical professionals typically occur on the order of seconds to minutes, especially during case discussions or rounds, but rarely require split-second responses.",
+      "adequacy_evidence": "Frontier AI agents can generate clinically relevant insights within seconds, so meeting these moderate latency expectations does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T21:16:48"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Consultations often reference prior imaging studies, patient history, and earlier discussions with colleagues, but many individual consults can still be conducted with retrieved records rather than deeply accumulated state.",
+      "adequacy_evidence": "Current agents can use EHR integrations and retrieval systems to access prior cases, but maintaining and consistently surfacing relevant longitudinal context across systems and interactions remains imperfect.",
+      "_timestamp": "2026-04-05T21:16:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centers on interpreting and discussing medical images (e.g., CT, MRI, X-ray), requiring detailed visual perception and cross-modal reasoning with clinical context; text alone is insufficient.",
+      "adequacy_evidence": "Current agents can analyze many medical images but remain inconsistent on subtle findings, rare pathologies, and nuanced cross-modal interpretation needed for expert radiology discussions.",
+      "_timestamp": "2026-04-05T21:16:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing the correctness of image-based diagnostic opinions in professional consultation requires expert radiological judgment, review of imaging and clinical context, and errors can be subtle or only apparent after outcomes unfold.",
+      "adequacy_evidence": "Current AI systems can produce plausible but incorrect interpretations or rationales, so expert radiologist review is still necessary and nontrivial, making verification burdens high in practice.",
+      "_timestamp": "2026-04-05T21:16:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "These consultations directly influence diagnostic decisions and downstream treatment, so even rare residual errors can lead to serious patient harm or missed conditions.",
+      "adequacy_evidence": "With human medical professionals reviewing and engaging in the discussion, many AI errors can be caught, but current systems still exhibit occasional misleading interpretations or overconfident suggestions that leave non-trivial residual risk.",
+      "_timestamp": "2026-04-05T21:16:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Providing diagnostic input and participating in clinical decision-making is considered the practice of medicine, which legally requires a licensed physician in the U.S. AI systems cannot independently fulfill this role or substitute for a licensed radiologist in professional medical consultations.",
+      "_timestamp": "2026-04-05T21:16:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves direct interaction with other medical professionals, where clinical credibility and professional authority are central to effective collaboration and decision-making.",
+      "adequacy_evidence": "While clinicians increasingly accept AI as decision support, many would be hesitant to treat an AI agent as a peer collaborator in diagnostic discussions, though this resistance is not absolute.",
+      "_timestamp": "2026-04-05T21:16:51"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

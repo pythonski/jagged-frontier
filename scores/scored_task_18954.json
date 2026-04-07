@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2071.00",
+  "task_id": 18954,
+  "task_statement": "Investigate missing checks, payment histories, held funds, returned checks, or other related issues to resolve client or creditor problems.",
+  "occupation_title": "Credit Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Investigations typically involve reviewing electronic payment records, account histories, and communicating with clients or creditors via phone or online systems. However, some cases may require handling or reviewing physical checks or mailed documents."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting financial records and resolving discrepancies, which often requires experience-based judgment to distinguish errors, client misunderstandings, or irregular but valid patterns.",
+      "adequacy_evidence": "Current AI can analyze structured financial data and flag inconsistencies, but may lack nuanced judgment in ambiguous or context-sensitive cases such as disputed transactions or informal payment arrangements.",
+      "_timestamp": "2026-04-06T01:52:42"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cases vary across financial institutions, payment methods, and error types (e.g., missing checks, held funds, returned payments), creating moderate diversity but within a bounded financial dispute domain.",
+      "adequacy_evidence": "General procedures and many example cases are documented in training data, but detailed, institution-specific workflows and rare edge cases rely on proprietary or private data that is only partially accessible or synthesizable.",
+      "_timestamp": "2026-04-06T01:52:42"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting incomplete financial records and client complaints, where key details and success criteria (e.g., what counts as resolution) are often context-dependent but still broadly defined by standard financial procedures.",
+      "adequacy_evidence": "Current agents can infer likely issues and follow investigative workflows, but they often miss nuanced client intent or situational subtleties, requiring human clarification or iterative refinement.",
+      "_timestamp": "2026-04-06T01:52:43"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Resolving payment discrepancies requires multi-step investigation (reviewing records, tracing transactions, contacting parties, reconciling inconsistencies) where each step builds on prior findings but sequences are not \u0905\u0924\u094d\u092f long or deeply interdependent.",
+      "adequacy_evidence": "AI agents can handle structured multi-step workflows but may exhibit some drift or lose track of intermediate findings over extended investigations, especially when integrating information from multiple sources.",
+      "_timestamp": "2026-04-06T01:52:44"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing financial records, transaction logs, and account histories, which are predominantly text and numeric data rather than images or other modalities.",
+      "adequacy_evidence": "Current AI agents handle text-based financial data and structured records effectively, with minimal reliance on multimodal capabilities for this task.",
+      "_timestamp": "2026-04-06T01:52:44"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires reviewing and reconciling multiple financial records (payment histories, check statuses, account notes), often across systems, and maintaining a coherent picture of timelines and discrepancies within a single case.",
+      "adequacy_evidence": "Current agents with retrieval and tool use can track and summarize these records, but may still lose subtle details or misalign timelines when information is fragmented or updated dynamically.",
+      "_timestamp": "2026-04-06T01:52:44"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Resolving payment issues often requires referencing prior client interactions, payment histories, and earlier investigations, but each case is typically bounded and documented in existing records rather than requiring deep longitudinal tracking.",
+      "adequacy_evidence": "Current AI systems can reliably use external databases, CRMs, and document retrieval to store and access cross-session financial records, with established tooling for persistent state and history retrieval.",
+      "_timestamp": "2026-04-06T01:52:45"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Investigations are often done during client interactions or within short service windows, creating expectations of responses within seconds to a few minutes, but not true real-time constraints.",
+      "adequacy_evidence": "Current AI agents can retrieve, cross-reference, and analyze financial records quickly within this timeframe without needing to truncate reasoning, so speed constraints rarely degrade output quality.",
+      "_timestamp": "2026-04-06T01:52:45"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves cross-checking financial records (payment histories, returned checks, account statuses), which requires domain knowledge and access to authoritative data but is generally feasible with standard reconciliation practices.",
+      "adequacy_evidence": "AI can assist in identifying discrepancies, but its outputs would still need human validation against source financial records to ensure accuracy, as errors in interpretation or data linkage are plausible.",
+      "_timestamp": "2026-04-06T01:52:45"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in investigating payment histories or missing checks can lead to incorrect account resolutions, financial disputes, or client mistrust, but issues are typically traceable and correctable through records and follow-up.",
+      "adequacy_evidence": "Even with checks, AI may miss nuanced discrepancies or misinterpret financial records, leaving some residual risk that could affect outcomes, though most errors would be detectable and fixable.",
+      "_timestamp": "2026-04-06T01:52:45"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task directly involves interacting with clients and creditors to resolve financial discrepancies, where trust, credibility, and perceived legitimacy of the agent affect cooperation and information sharing.",
+      "adequacy_evidence": "While AI is increasingly used in customer service, clients and creditors may still distrust or escalate cases when they learn an AI is handling sensitive financial issues, though this resistance is not absolute.",
+      "_timestamp": "2026-04-06T01:52:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from performing investigative back-office tasks like reviewing payment histories or resolving account discrepancies. While data privacy (e.g., GLBA) and licensing frameworks apply to the organization, they do not mandate that a human exclusively perform this specific task.",
+      "_timestamp": "2026-04-06T01:52:47"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

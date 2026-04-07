@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2041.00",
+  "task_id": 1256,
+  "task_statement": "Review individual or commercial customer files to identify and select delinquent accounts for collection.",
+  "occupation_title": "Credit Analysts",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Customer credit files and delinquency records are typically stored and reviewed in digital banking or credit management systems, allowing the task to be done entirely on a computer. However, some organizations may still maintain or review physical documents, making a minority of instances non-digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a moderate range of cases (individual vs. commercial accounts, varying credit histories, industries, and delinquency patterns) but follows relatively structured financial and policy-driven criteria.",
+      "adequacy_evidence": "While general credit decision processes and examples are well-documented, much real-world data is proprietary financial records, making full coverage incomplete though partially addressable via synthetic data and enterprise fine-tuning.",
+      "_timestamp": "2026-04-06T04:59:23"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many criteria (days past due, credit scores, policy thresholds) are rule-based, analysts often apply experience to weigh contextual factors like customer history, likelihood of recovery, or strategic account value.",
+      "adequacy_evidence": "Current agents can apply formal criteria and learned patterns well, but show weaker calibration in nuanced cases involving soft signals or business-specific tradeoffs not fully captured in explicit rules.",
+      "_timestamp": "2026-04-06T04:59:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing multiple customer files and applying consistent criteria across them, requiring some sustained attention but with largely independent evaluations per file.",
+      "adequacy_evidence": "AI agents can reliably process batches of records with consistent rule application, and sequence length does not significantly degrade performance since each case is mostly self-contained.",
+      "_timestamp": "2026-04-06T04:59:24"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many criteria (e.g., days past due, account status, policy thresholds) are explicitly defined, analysts often apply context-sensitive judgment for edge cases such as partial payments, customer history, or strategic account importance.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably apply documented rules and incorporate contextual signals from structured files, with minimal difficulty inferring typical collection criteria when policies and examples are available.",
+      "_timestamp": "2026-04-06T04:59:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Selecting delinquent accounts often involves referencing historical payment behavior and prior account actions, but this information is typically stored within structured customer files rather than requiring independent longitudinal memory.",
+      "adequacy_evidence": "Current AI systems can reliably retrieve and use cross-session account histories from databases or case management systems, so persistent memory limitations are not a significant bottleneck.",
+      "_timestamp": "2026-04-06T04:59:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing structured financial records, account histories, and written documentation, which are fundamentally text and numeric data rather than multimodal inputs.",
+      "adequacy_evidence": "Current AI systems handle text and structured data processing effectively, and any minor use of scanned documents or simple visuals is well within existing capabilities.",
+      "_timestamp": "2026-04-06T04:59:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing multiple data points within customer files (payment histories, balances, notes), requiring aggregation and comparison but typically within structured, bounded records.",
+      "adequacy_evidence": "Current AI agents with database access and retrieval tools can reliably handle and track this level of structured, within-episode information without significant loss or drift.",
+      "_timestamp": "2026-04-06T04:59:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing customer files for delinquency is typically a batch or periodic process where minutes to hours of latency are acceptable, with no need for immediate real-time decisions.",
+      "adequacy_evidence": "Current AI agents can comfortably process and analyze account data within these timeframes without sacrificing reasoning quality, so speed constraints do not degrade performance.",
+      "_timestamp": "2026-04-06T04:59:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining delinquency relies on reviewing payment histories, contractual terms, and policy thresholds, which are structured and auditable but still require careful checking to avoid misclassification.",
+      "adequacy_evidence": "AI can process account data and apply rules, but may misinterpret edge cases or incomplete records, so outputs would require routine human verification against source financial data.",
+      "_timestamp": "2026-04-06T04:59:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal analytical review of account data, with outputs used within the organization rather than requiring direct interaction with or acceptance by customers or external stakeholders.",
+      "adequacy_evidence": "Since there are no meaningful external stakeholders engaged in this step, acceptance of AI versus a human performer is largely irrelevant and unlikely to affect task effectiveness.",
+      "_timestamp": "2026-04-06T04:59:27"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from reviewing customer files and identifying delinquent accounts. While financial institutions must comply with fair lending, consumer protection, and model risk management rules, these govern outcomes and oversight rather than banning AI use for this task.",
+      "_timestamp": "2026-04-06T04:59:27"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Misidentifying delinquent accounts can lead to improper collection actions or missed recoveries, with financial and reputational impacts, but errors are typically reversible and not catastrophic.",
+      "adequacy_evidence": "The task relies on structured financial data and clear criteria (e.g., payment aging), making AI outputs easy to audit; after standard checks, residual AI error risk is generally acceptable.",
+      "_timestamp": "2026-04-06T04:59:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

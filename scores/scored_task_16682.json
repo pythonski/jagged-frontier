@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3029.05",
+  "task_id": 16682,
+  "task_statement": "Analyze operational, production, economic, or other data, using statistical procedures.",
+  "occupation_title": "Engineering Technologists and Technicians, Except Drafters, All Other",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Analyzing operational, production, or economic data using statistical procedures is performed on a computer with statistical or data analysis software, and does not require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While statistical procedures are well-documented, selecting appropriate methods, handling messy real-world data, and interpreting results in operational context often require experience-based judgment.",
+      "adequacy_evidence": "Current agents can execute statistical analyses and suggest methods, but they show gaps in context-sensitive judgment (e.g., choosing among plausible models or interpreting ambiguous signals) in non-routine cases.",
+      "_timestamp": "2026-04-05T22:30:01"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied domains (operational, production, economic data) with differing structures and edge cases, but relies on broadly standardized statistical methods applicable across contexts.",
+      "adequacy_evidence": "There is extensive availability of datasets, worked examples, textbooks, code, and synthetic data generation methods covering statistical analysis workflows, making representative training signal widely accessible.",
+      "_timestamp": "2026-04-05T22:30:01"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task typically requires understanding the purpose of the analysis (e.g., optimization, troubleshooting, forecasting), which is often implicit and context-dependent rather than fully specified in the instruction.",
+      "adequacy_evidence": "Current agents can infer common analytical goals and iterate with feedback, but they often miss nuanced stakeholder intent or domain-specific priorities without human clarification.",
+      "_timestamp": "2026-04-05T22:30:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Statistical data analysis typically involves multi-step workflows (data preparation, method selection, modeling, validation, interpretation) where consistency across steps matters but components are often modular and independently checkable.",
+      "adequacy_evidence": "AI agents can generally sustain coherent multi-step analytical workflows with tooling, but may show some degradation over longer sequences (e.g., dropped assumptions or inconsistencies between steps) without careful orchestration.",
+      "_timestamp": "2026-04-05T22:30:02"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling datasets, selecting variables, and tracking intermediate statistical outputs, requiring some active retrieval and compression of information within an analysis session.",
+      "adequacy_evidence": "Current agents with code execution and data tools can externalize memory to dataframes and scripts, reliably managing large datasets without significant loss of context within an episode.",
+      "_timestamp": "2026-04-05T22:30:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Statistical analysis tasks are typically self-contained within a given dataset or project, with necessary context provided at the time of analysis rather than requiring accumulated cross-session history.",
+      "adequacy_evidence": "Current AI systems with standard file storage and retrieval can easily handle any occasional need to reference prior analyses, and such needs are minimal for this task type.",
+      "_timestamp": "2026-04-05T22:30:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves numerical and tabular data analysis using statistical methods, which can be fully represented and processed in text or structured data formats without reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based and structured data analysis well, and any occasional visualization needs (e.g., charts) are straightforward and do not pose a significant multimodal challenge.",
+      "_timestamp": "2026-04-05T22:30:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Statistical analysis of operational or production data is typically performed in batch workflows where minutes to hours of latency are acceptable, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can complete statistical analyses with tool support well within these timeframes, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T22:30:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Statistical analyses can be checked through replication, diagnostic tests, and sanity checks, but doing so requires domain and statistical expertise and is not always trivial.",
+      "adequacy_evidence": "AI systems can produce plausible but incorrect analyses (e.g., wrong model choice or misinterpreted outputs), so human verification remains necessary and requires moderate effort.",
+      "_timestamp": "2026-04-05T22:30:04"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task typically produces analytical outputs (e.g., statistical summaries, models) consumed internally, where the identity of the analyst is not central to use or interpretation.",
+      "adequacy_evidence": "Stakeholders generally care about accuracy and usefulness of results rather than whether a human or AI produced them, and AI-generated analysis is already widely accepted in such contexts.",
+      "_timestamp": "2026-04-05T22:30:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from performing statistical data analysis tasks; such tools are widely permitted. While some regulated industries may require human oversight or sign-off, this does not constitute a direct legal ban on AI performing the analysis itself.",
+      "_timestamp": "2026-04-05T22:30:05"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Statistical analyses in engineering contexts inform operational or economic decisions where errors can lead to inefficiencies or suboptimal choices, but are typically not catastrophic and can often be corrected downstream.",
+      "adequacy_evidence": "With standard validation steps (e.g., cross-checking outputs, sanity checks, and reproducible code), current AI systems can produce sufficiently reliable analyses such that residual errors are generally acceptable.",
+      "_timestamp": "2026-04-05T22:30:06"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

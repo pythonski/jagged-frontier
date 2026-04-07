@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-9141.00",
+  "task_id": 12586,
+  "task_statement": "Calculate etching time based on thickness of material to be removed from wafers or crystals.",
+  "occupation_title": "Semiconductor Processing Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "The task consists of calculating etch duration from material thickness using formulas, tables, or software, which can be done entirely on a computer once the measurement data are available. No physical manipulation of wafers or equipment is required for the calculation itself."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task varies across materials, etch chemistries, and process conditions, but is governed by well-understood formulas and parameter tables, yielding a moderately diverse but structured distribution.",
+      "adequacy_evidence": "Extensive semiconductor process documentation, textbooks, and simulation tools provide clear procedural and quantitative examples, making representative training data readily accessible.",
+      "_timestamp": "2026-04-05T22:47:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is a straightforward calculation using known parameters (material thickness and etch rate), involving minimal or no multi-step dependency.",
+      "adequacy_evidence": "AI systems can reliably perform simple calculations without degradation, as the task does not require extended sequential reasoning.",
+      "_timestamp": "2026-04-05T22:47:37"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task typically involves a small set of parameters (e.g., material thickness and etch rate) and a straightforward calculation, with minimal need to track or manage multiple evolving pieces of information.",
+      "adequacy_evidence": "Current AI agents can reliably handle simple parameter-based calculations within a single episode without losing context or mismanaging information.",
+      "_timestamp": "2026-04-05T22:47:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Etching time calculations are typically based on current wafer thickness, material properties, and known etch rates, making each instance largely self-contained.",
+      "adequacy_evidence": "Since the task does not depend on cross-session context, current AI systems do not face any meaningful limitations in long-term memory for this activity.",
+      "_timestamp": "2026-04-05T22:47:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The core calculation follows explicit relationships (etch rate \u00d7 time = thickness removed), but in practice technicians often adjust for process variability, tool condition, and material differences based on experience.",
+      "adequacy_evidence": "Given documented etch rates, process parameters, and historical calibration data, current AI systems can reliably reproduce these adjustments and calculations with minimal reliance on tacit human judgment.",
+      "_timestamp": "2026-04-05T22:47:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is governed by explicit parameters (material type, etch rate, and thickness), typically using well-defined formulas or lookup tables in semiconductor process documentation.",
+      "adequacy_evidence": "Current AI systems can reliably apply formulas and process specifications to compute etching time when given the relevant inputs, with little need for interpreting latent objectives.",
+      "_timestamp": "2026-04-05T22:47:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is a numerical calculation based on measured thickness values and etch rates, typically provided as structured or textual data rather than requiring direct interpretation of images or other modalities.",
+      "adequacy_evidence": "Current AI agents can reliably perform formula-based calculations and handle structured inputs without needing multimodal perception, so there is no meaningful shortfall.",
+      "_timestamp": "2026-04-05T22:47:40"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating etching time from material thickness is a straightforward parameter-based computation typically done offline or as part of process setup, where seconds to minutes of latency are acceptable.",
+      "adequacy_evidence": "Frontier AI systems can perform these calculations instantly with high accuracy, so there is no meaningful quality degradation due to speed constraints.",
+      "_timestamp": "2026-04-05T22:47:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Incorrect etching time can over-etch or under-etch wafers, causing irreversible damage to expensive semiconductor materials and degrading device performance or yield.",
+      "adequacy_evidence": "The calculation is formula-based and can be cross-checked with process recipes, metrology data, and automated controls, so AI-generated results can be reliably validated with minimal residual risk.",
+      "_timestamp": "2026-04-05T22:47:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal technical calculation used in process control, with no direct interaction with external stakeholders where performer identity matters.",
+      "adequacy_evidence": "Since there are no relevant stakeholders concerned with who performs the calculation, AI use would not face acceptance barriers in this context.",
+      "_timestamp": "2026-04-05T22:47:41"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from performing calculations such as etching time determination in semiconductor processing. While the industry is regulated for safety and quality, these rules do not mandate that such calculations be performed by a human.",
+      "_timestamp": "2026-04-05T22:47:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Etching time is typically computed from known etch rates and target thickness, and can be checked against standard process recipes or verified with post-etch metrology, but requires some domain knowledge and measurement effort.",
+      "adequacy_evidence": "AI can reliably perform the calculation if given correct inputs, but unit errors, incorrect rate assumptions, or process nuances mean technicians would still need to cross-check against known recipes or measurements.",
+      "_timestamp": "2026-04-05T22:47:42"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

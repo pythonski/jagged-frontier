@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1216.00",
+  "task_id": 7786,
+  "task_statement": "Analyze records, reports, test results, or examination information to diagnose medical condition of patient.",
+  "occupation_title": "General Internal Medicine Physicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Reviewing medical records, lab results, imaging reports, and other test data is commonly done through electronic health record systems and can be performed remotely. However, interpretation often relies on information from in-person physical examinations or direct patient interaction that cannot always be replicated digitally."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosing from medical records spans a highly heterogeneous, long-tailed distribution of diseases, comorbidities, demographics, and presentation patterns, including rare and atypical cases.",
+      "adequacy_evidence": "Large medical corpora, case reports, and synthetic clinical data provide substantial coverage of common conditions and reasoning processes, but access to comprehensive real-world patient records and rare edge cases remains limited and uneven.",
+      "_timestamp": "2026-04-05T22:34:55"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnosing medical conditions in internal medicine relies heavily on experiential pattern recognition, probabilistic reasoning under uncertainty, and nuanced integration of comorbidities, patient history, and subtle clinical cues that are not fully codified in rules.",
+      "adequacy_evidence": "Current AI agents can assist with differential diagnosis but lack reliable calibration and holistic clinical judgment in complex, ambiguous, or multi-morbidity cases, leading to systematic gaps in real-world diagnostic performance.",
+      "_timestamp": "2026-04-05T22:34:56"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosis requires integrating incomplete and context-dependent clinical data, inferring relevance of findings, and adapting hypotheses as new information emerges; success criteria are often implicit and evolve during evaluation.",
+      "adequacy_evidence": "Frontier agents can generate plausible differentials and interpret structured data, but they often miss subtle contextual cues, patient-specific nuances, and shifting diagnostic priorities without iterative human guidance.",
+      "_timestamp": "2026-04-05T22:34:57"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosing medical conditions requires integrating large volumes of heterogeneous data (history, labs, imaging, prior notes) and tracking subtle interactions where missing a detail can change the diagnosis.",
+      "adequacy_evidence": "Current agents can ingest and summarize large records with tooling, but they still exhibit context loss, imperfect prioritization, and occasional omission of clinically salient details during compression.",
+      "_timestamp": "2026-04-05T22:34:57"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosing a patient requires integrating multiple interdependent steps\u2014reviewing history, interpreting test results, synthesizing findings, and iteratively refining hypotheses\u2014where early errors can cascade into incorrect conclusions.",
+      "adequacy_evidence": "Frontier AI can handle multi-step diagnostic reasoning but shows some degradation over extended chains, including dropped context or premature conclusions, especially in complex or ambiguous cases.",
+      "_timestamp": "2026-04-05T22:34:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosing patients in internal medicine relies heavily on longitudinal history (prior visits, chronic conditions, medications, past test results) accumulated across many encounters over time.",
+      "adequacy_evidence": "AI systems can access and store longitudinal records via EHR integrations, but they still show gaps in reliably retrieving, synthesizing, and prioritizing relevant historical context across complex patient timelines.",
+      "_timestamp": "2026-04-05T22:34:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Diagnostic reasoning in internal medicine typically allows seconds to minutes, though some cases (e.g., acute presentations) require relatively prompt decisions without long deliberation.",
+      "adequacy_evidence": "Frontier AI systems can perform multi-step diagnostic reasoning within this time window, and extended reasoning usually fits within acceptable clinical latency without major quality loss.",
+      "_timestamp": "2026-04-05T22:35:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosis in internal medicine routinely depends on interpreting non-text data such as imaging (X-rays, CT, MRI), waveforms (ECG), and physical exam findings alongside textual records.",
+      "adequacy_evidence": "Current agents can handle some structured data and certain imaging tasks but remain inconsistent on complex, fine-grained medical images and integrating multimodal clinical context at physician-level reliability.",
+      "_timestamp": "2026-04-05T22:35:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnostic errors can be subtle, involve complex synthesis of heterogeneous data (history, labs, imaging), and may only become apparent after disease progression or treatment failure, making pre-reliance verification difficult and expertise-intensive.",
+      "adequacy_evidence": "Current AI systems can produce plausible but incorrect diagnoses and reasoning; detecting these errors requires expert review and often additional testing, creating a heavy and unavoidable verification burden.",
+      "_timestamp": "2026-04-05T22:35:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnosing a patient\u2019s condition depends heavily on patient trust in the clinician\u2019s expertise, judgment, and legitimacy, and often requires patient engagement and acceptance of the diagnosis.",
+      "adequacy_evidence": "Many patients and healthcare stakeholders are reluctant to accept AI as the primary diagnostician, especially without physician oversight, and this resistance can undermine trust, adherence, and perceived legitimacy.",
+      "_timestamp": "2026-04-05T22:35:02"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Diagnosing a patient\u2019s medical condition constitutes the practice of medicine, which is legally restricted to licensed physicians in all US states. Unlicensed entities, including autonomous AI systems, are prohibited from independently performing this function without physician oversight or involvement.",
+      "_timestamp": "2026-04-05T22:35:03"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnostic decisions directly affect treatment, and even rare residual errors can lead to severe harm, delayed care, or death, making tolerance for error extremely low.",
+      "adequacy_evidence": "Even with clinician oversight, current AI systems exhibit non-negligible rates of diagnostic error, omission of rare conditions, and overconfidence, leaving residual risk that is still too high for safe independent use.",
+      "_timestamp": "2026-04-05T22:35:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

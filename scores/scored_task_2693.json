@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4161.00",
+  "task_id": 2693,
+  "task_statement": "Gather personnel records from other departments or employees.",
+  "occupation_title": "Human Resources Assistants, Except Payroll and Timekeeping",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Personnel records are often gathered through email, HR information systems, or shared digital folders, but many workplaces still require collecting or receiving physical documents from departments or employees."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans moderate variability across organizations (different HR systems, record types, access protocols, and privacy rules) but follows fairly standardized administrative patterns.",
+      "adequacy_evidence": "Training data can cover general request workflows and communication patterns, but real-world internal systems, permissions handling, and sensitive personnel data contexts are often inaccessible and only partially approximable via synthetic or proxy data.",
+      "_timestamp": "2026-04-06T00:39:22"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is largely procedural (identifying needed records, contacting appropriate parties, and following established protocols), but may involve some experience-based judgment around prioritization, communication tone, and handling sensitive information.",
+      "adequacy_evidence": "Current AI agents can reliably follow documented procedures, generate appropriate communications, and apply basic privacy and escalation rules, covering most of the modest tacit judgment involved.",
+      "_timestamp": "2026-04-06T00:39:23"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Gathering personnel records typically occurs over minutes to hours via emails, internal systems, or requests, with no strict real-time requirement.",
+      "adequacy_evidence": "AI agents can easily operate within these relaxed timeframes, so there is no meaningful quality degradation due to speed constraints.",
+      "_timestamp": "2026-04-06T00:39:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordinating requests and collecting multiple personnel records from different sources, requiring tracking of which records have been received and ensuring completeness, but the volume and complexity are typically manageable.",
+      "adequacy_evidence": "Current AI agents can reliably track, retrieve, and organize multiple documents and requests within a single session using standard tooling without significant loss of context or errors.",
+      "_timestamp": "2026-04-06T00:39:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Gathering personnel records primarily involves locating, requesting, and transferring text-based documents (digital files, forms, emails) with minimal reliance on non-text modalities.",
+      "adequacy_evidence": "Current AI agents can handle document retrieval, communication, and basic file processing without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T00:39:24"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a small sequence of steps\u2014identifying needed records, requesting them, following up, and organizing responses\u2014but each step is relatively independent and not tightly coupled.",
+      "adequacy_evidence": "Current AI agents can reliably manage short multi-step workflows like sending requests, tracking responses, and organizing documents without meaningful degradation over the sequence length.",
+      "_timestamp": "2026-04-06T00:39:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each request to gather personnel records is typically self-contained, tied to a specific employee or need, and does not require retaining historical context across sessions.",
+      "adequacy_evidence": "Current AI systems can easily handle any minimal need for record tracking via standard database integrations, and no substantial cross-session memory is required for task completion.",
+      "_timestamp": "2026-04-06T00:39:24"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors like incomplete or misattributed personnel records can cause administrative delays or minor compliance issues, but are typically detectable and correctable without severe consequences.",
+      "adequacy_evidence": "With standard checks (e.g., cross-referencing employee IDs or department records), AI-generated mistakes would be caught; residual risk after such checks is low and acceptable.",
+      "_timestamp": "2026-04-06T00:39:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying gathered personnel records requires checking for completeness, correct identity matching, and up-to-date information across sources, which takes some coordination and cross-referencing but is not deeply complex.",
+      "adequacy_evidence": "AI systems may miss edge cases like incomplete responses, outdated documents, or misattributed records, so human review and reconciliation are still needed to ensure accuracy.",
+      "_timestamp": "2026-04-06T00:39:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are privacy and data protection laws (e.g., HIPAA for health data, ADA, and general employment confidentiality rules), but none explicitly prohibit AI systems from gathering personnel records. Compliance obligations apply regardless of whether a human or AI performs the task.",
+      "_timestamp": "2026-04-06T00:39:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires interacting with internal stakeholders (employees, department staff) who must respond to requests for personnel records, so the performer's role and legitimacy matter somewhat.",
+      "adequacy_evidence": "Many organizations already use automated HR systems for record requests, but some employees may hesitate to share sensitive personnel data with an AI agent due to privacy and trust concerns.",
+      "_timestamp": "2026-04-06T00:39:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires some contextual interpretation (which records, scope, authorization, format, and urgency), often depending on the requestor\u2019s intent and organizational policies.",
+      "adequacy_evidence": "Agents can usually infer and request missing details, but may miss implicit constraints like privacy rules or departmental norms, requiring human clarification.",
+      "_timestamp": "2026-04-06T11:26:46"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

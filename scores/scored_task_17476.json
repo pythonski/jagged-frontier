@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-9099.01",
+  "task_id": 17476,
+  "task_statement": "Evaluate patients' laboratory and medical records, requesting assistance from other practitioners when necessary.",
+  "occupation_title": "Midwives",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Reviewing laboratory and medical records is typically done through electronic health record systems and consultations can occur via phone or digital messaging, but in some cases records may be paper-based or discussions occur in person within clinical settings."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a wide range of patient conditions, lab results, comorbidities, and pregnancy-related complications, including rare and context-specific cases requiring broad clinical coverage.",
+      "adequacy_evidence": "Medical literature, guidelines, and some clinical datasets provide substantial coverage, but real-world EHR data is often private and edge cases (e.g., rare complications, nuanced social contexts) remain underrepresented, though partially addressable via synthesis.",
+      "_timestamp": "2026-04-05T22:45:48"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step review of records, synthesis of findings, and potential consultation with other practitioners, requiring consistent reasoning across several linked steps but not extremely long chains.",
+      "adequacy_evidence": "AI agents can generally handle multi-step record evaluation workflows, but may show some degradation over longer or more complex cases, such as losing context or inconsistently applying earlier findings.",
+      "_timestamp": "2026-04-05T22:45:48"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical evaluation of lab results and medical records involves contextual interpretation (e.g., patient history, pregnancy stage, risk factors) and judgment about when consultation is warranted, which is not fully explicit in guidelines.",
+      "adequacy_evidence": "Current AI can interpret structured medical data and guidelines but often misses nuanced contextual cues or appropriate escalation thresholds, requiring human oversight to resolve ambiguity.",
+      "_timestamp": "2026-04-05T22:45:48"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting labs and medical records in midwifery requires nuanced clinical judgment, including recognizing subtle patterns, pregnancy-specific norms, and when to escalate care\u2014skills built through experience beyond explicit guidelines.",
+      "adequacy_evidence": "Current AI can follow clinical rules and flag abnormalities but lacks reliable calibration in context-sensitive cases (e.g., borderline values, evolving complications), leading to gaps in nuanced decision-making and escalation judgment.",
+      "_timestamp": "2026-04-05T22:45:48"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Midwifery care relies on longitudinal tracking of a patient's medical history, lab trends, pregnancy progression, and prior clinical decisions across multiple visits over time.",
+      "adequacy_evidence": "Current AI systems can access and retrieve structured EHR data, but often struggle with fragmented records, temporal integration, and consistently maintaining coherent patient state across systems and sessions.",
+      "_timestamp": "2026-04-05T22:45:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Requires integrating heterogeneous data (lab results, medical history, pregnancy timeline, prior notes) where small missed details can materially affect clinical judgment.",
+      "adequacy_evidence": "Agents can ingest and summarize large records with tools, but still show weaknesses in reliably tracking temporal trends and preserving all clinically salient details across long contexts.",
+      "_timestamp": "2026-04-05T22:45:50"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task primarily involves interpreting structured text and numeric lab results, but can include non-text elements like fetal monitoring tracings, imaging, or scanned records that require visual interpretation.",
+      "adequacy_evidence": "Current agents handle structured text and numeric data well, but are less reliable with complex visual inputs like waveforms, low-quality scans, or nuanced medical imaging interpretations.",
+      "_timestamp": "2026-04-05T22:45:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Evaluating lab results and medical records in midwifery typically allows for seconds to minutes, though urgent situations may require quicker interpretation.",
+      "adequacy_evidence": "Current AI systems can analyze structured and unstructured medical data with high quality well within these time bounds, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T22:45:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task directly affects patient care decisions and involves collaboration with other healthcare practitioners, where professional judgment, trust, and clinical authority are central to acceptance.",
+      "adequacy_evidence": "Patients and clinicians may accept AI-assisted analysis, but full delegation to an AI midwife would face notable resistance due to trust, liability, and expectations of human clinical oversight.",
+      "_timestamp": "2026-04-05T22:45:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Evaluating patient medical records and making clinical judgments constitutes the practice of medicine, which legally requires a licensed human provider in the U.S. AI systems cannot independently perform or be the accountable decision-maker for such tasks under current licensure and scope-of-practice laws.",
+      "_timestamp": "2026-04-05T22:45:51"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting lab and medical records in midwifery directly affects maternal and fetal outcomes; missed or incorrect evaluations can lead to severe complications, making even rare residual errors potentially high-impact.",
+      "adequacy_evidence": "Even with standard clinical review, AI systems can exhibit subtle misinterpretations or context gaps in complex patient records, leaving a non-trivial residual risk that remains concerning but not uniformly prohibitive under supervision.",
+      "_timestamp": "2026-04-05T22:45:51"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Lab values and medical records can be cross-checked against reference ranges and clinical guidelines, but correct interpretation often requires clinical expertise and contextual judgment, making verification non-trivial.",
+      "adequacy_evidence": "AI systems can extract and summarize records but still make interpretation or contextual errors, requiring clinicians to review outputs carefully against guidelines and patient context.",
+      "_timestamp": "2026-04-05T22:45:52"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

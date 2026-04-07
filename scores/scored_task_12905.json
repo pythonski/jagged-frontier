@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2052.00",
+  "task_id": 12905,
+  "task_statement": "Answer clients' questions about the purposes and details of financial plans and strategies.",
+  "occupation_title": "Personal Financial Advisors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Clients\u2019 questions are often answered via email, messaging, phone, or video calls, which are fully digital. However, many financial advisors also address such questions during in-person meetings with clients, so a significant minority of instances involve physical presence."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Client interactions often involve multi-turn conversations where explanations build on prior statements and must remain consistent with the financial plan, but they are typically limited in length and modular across questions.",
+      "adequacy_evidence": "Current AI agents can handle moderate multi-turn dialogues with reasonable consistency, though they may exhibit some drift or lose constraints over longer exchanges, especially when tracking nuanced financial details.",
+      "_timestamp": "2026-04-06T01:25:19"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Explaining financial plans requires tailoring to clients\u2019 risk tolerance, financial literacy, and situational nuances, which involves some experience-based judgment beyond explicit rules.",
+      "adequacy_evidence": "Current AI can generally explain financial strategies clearly but often lacks nuanced calibration to individual client context, especially in edge cases involving subtle preferences or behavioral cues.",
+      "_timestamp": "2026-04-06T01:25:19"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clients\u2019 questions often mask underlying concerns (risk tolerance, time horizon, emotional comfort), requiring interpretation and tailored explanation beyond the literal query.",
+      "adequacy_evidence": "Current agents can infer intent and ask clarifying questions, but they still miss nuanced client context and priorities often enough to require human guidance.",
+      "_timestamp": "2026-04-06T01:25:20"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Client questions span diverse financial situations (income levels, tax regimes, life stages, goals, and products), creating a moderately heterogeneous distribution of cases and edge conditions.",
+      "adequacy_evidence": "There is extensive public and proprietary data (financial planning curricula, FAQs, advisory transcripts, regulations), but detailed real-world client interactions\u2014especially nuanced, high-net-worth or idiosyncratic cases\u2014are less accessible and only partially reproducible via synthesis.",
+      "_timestamp": "2026-04-06T01:25:20"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Answering client questions depends heavily on persistent knowledge of the client\u2019s financial history, prior plans, risk tolerance, goals, and past advice across multiple interactions over time.",
+      "adequacy_evidence": "Current agents can store and retrieve structured client profiles via external memory systems, but often struggle with completeness, updating nuanced preferences, and reliably surfacing the right context across long time horizons.",
+      "_timestamp": "2026-04-06T01:25:21"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Client interactions typically expect prompt, conversational responses within seconds to a minute, but not true real-time constraints; brief pauses for explanation are acceptable.",
+      "adequacy_evidence": "Frontier agents can generate accurate, context-aware financial explanations well within this time window without needing to truncate reasoning in most cases.",
+      "_timestamp": "2026-04-06T01:25:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Advisors often reference charts, portfolio visualizations, or documents when explaining plans, but the core task\u2014answering client questions\u2014is primarily conversational and can be done via text or speech alone.",
+      "adequacy_evidence": "Current AI systems can interpret and generate common financial visuals (e.g., charts, tables) and explain them effectively, so multimodal demands in this task are well within capability.",
+      "_timestamp": "2026-04-06T01:25:21"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advisors must reference multiple elements of a client\u2019s financial plan (goals, assets, timelines, tax considerations) and integrate them coherently when answering questions, but the information scope is typically bounded within a single client case.",
+      "adequacy_evidence": "Current agents can track and retrieve structured financial details within a session using tools and context management, but may occasionally lose or misprioritize details when plans are complex or information is spread across sources.",
+      "_timestamp": "2026-04-06T01:25:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Misstatements about financial plans can lead clients to make suboptimal or costly decisions, but impacts are typically reversible or correctable with follow-up advice or review.",
+      "adequacy_evidence": "Even after review, AI systems can introduce subtle misunderstandings or incorrect explanations of financial strategies, leaving a non-trivial residual risk that could misguide clients.",
+      "_timestamp": "2026-04-06T01:25:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clients rely on trust, perceived expertise, and personalized explanation when discussing financial plans, making the advisor\u2019s credibility and interpersonal engagement central to effectiveness.",
+      "adequacy_evidence": "While robo-advisors and AI chat tools are increasingly accepted for basic financial guidance, many clients remain hesitant to rely solely on AI for nuanced explanations of financial strategies, preferring human reassurance and accountability.",
+      "_timestamp": "2026-04-06T01:25:23"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Providing personalized financial advice generally requires registration (e.g., as an investment adviser or under a licensed firm), and current regulations expect a responsible human or registered entity to supervise and be accountable. AI tools can be used (e.g., robo-advisors), but fully autonomous, unsupervised AI delivering such advice without a licensed entity is not clearly permitted.",
+      "_timestamp": "2026-04-06T01:25:23"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing correctness requires financial expertise (tax rules, investment principles, client-specific constraints), and some errors may not be immediately obvious without careful review, though they are generally checkable.",
+      "adequacy_evidence": "AI can produce plausible but occasionally incorrect or misapplied financial guidance, so expert review is typically needed, but errors are usually detectable with standard professional checks rather than being deeply hidden.",
+      "_timestamp": "2026-04-06T01:25:23"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

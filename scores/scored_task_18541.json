@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2099.06",
+  "task_id": 18541,
+  "task_statement": "Collect and maintain records of patients examined, examinations performed, patient medical histories, views taken, or technical factors used.",
+  "occupation_title": "Health Technologists and Technicians, All Other",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Maintaining and updating patient examination records is usually done in electronic health record or imaging systems on a computer, but in practice it often occurs alongside in-person clinical work and may involve handling or verifying physical documentation on-site."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different medical specialties, record types, and documentation standards, but follows broadly standardized formats (e.g., EHR fields, clinical documentation conventions).",
+      "adequacy_evidence": "There is extensive accessible data in clinical documentation, training materials, and synthetic EHR simulations that capture both structure and process, enabling strong coverage of relevant instances.",
+      "_timestamp": "2026-04-06T02:53:30"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves structured data entry and maintenance following standardized medical documentation protocols, with clear rules for what information to record and how.",
+      "adequacy_evidence": "Current AI systems can reliably extract, organize, and maintain such records using explicit guidelines and structured templates, with minimal need for tacit judgment.",
+      "_timestamp": "2026-04-06T02:53:30"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is largely governed by established medical record standards, protocols, and compliance requirements, but still involves some context-dependent judgment about what details are relevant and how to document them accurately.",
+      "adequacy_evidence": "Current AI systems can reliably follow structured documentation standards, infer relevant fields, and adapt to common variations in medical record-keeping with minimal ambiguity remaining.",
+      "_timestamp": "2026-04-06T02:53:31"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining patient records involves ongoing, multi-step data entry and updates over time, but each entry is largely modular rather than tightly interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably handle structured record-keeping across extended sequences using databases and validation checks, with minimal degradation over time.",
+      "_timestamp": "2026-04-06T02:53:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintaining patient records inherently requires persistent, longitudinal tracking of medical histories, exams, and technical details across many encounters over time.",
+      "adequacy_evidence": "Current AI systems integrated with databases and EHR infrastructure can reliably store, retrieve, and update cross-session records, so long-term memory is well-supported with existing tooling.",
+      "_timestamp": "2026-04-06T02:53:32"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining and updating patient records is typically done with flexible timing; brief delays of minutes are acceptable and do not compromise task performance.",
+      "adequacy_evidence": "Current AI systems can generate and update structured records quickly and accurately within the available time, with no meaningful degradation due to latency constraints.",
+      "_timestamp": "2026-04-06T02:53:32"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple data fields per patient (histories, exam details, technical parameters), requiring organized tracking and accurate entry within an episode, but the information volume is structured and bounded.",
+      "adequacy_evidence": "Current AI systems with tool integration (e.g., forms, databases) can reliably manage, retrieve, and update structured patient record information within a session without significant loss or drift.",
+      "_timestamp": "2026-04-06T02:53:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task may involve referencing non-text sources such as medical images or device outputs (e.g., views taken, technical factors), but the core activity is recording structured textual and numerical information.",
+      "adequacy_evidence": "Current AI systems can reliably extract, organize, and store structured data from both text and standard medical device outputs, with minimal need for complex multimodal reasoning.",
+      "_timestamp": "2026-04-06T02:53:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves cross-checking entries against source documents or imaging metadata; while many fields are structured and auditable, some errors (e.g., incorrect technical factors or histories) require domain knowledge and careful review.",
+      "adequacy_evidence": "Current AI can assist with data extraction and entry but still makes occasional transcription or context errors, necessitating routine human review to ensure medical record accuracy.",
+      "_timestamp": "2026-04-06T02:53:33"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Accurate patient records are important for clinical decision-making and continuity of care, but many errors (e.g., misentries or omissions) are typically detectable and correctable without immediate irreversible harm.",
+      "adequacy_evidence": "With structured data entry, validation rules, and human oversight, AI-generated records can be checked effectively, but residual risks like subtle inaccuracies or omissions still pose moderate concern.",
+      "_timestamp": "2026-04-06T02:53:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws prohibiting AI systems from collecting or maintaining patient records; such functions are already commonly performed by electronic health record systems. Regulations like HIPAA impose privacy, security, and accountability requirements, but they do not restrict the use of AI as a tool for this task.",
+      "_timestamp": "2026-04-06T02:53:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces medical records used by clinicians and healthcare organizations, so stakeholders rely on the output, but the individual performer\u2019s identity or interpersonal role is not central.",
+      "adequacy_evidence": "Electronic health record systems and automated data capture are already widely accepted, and stakeholders generally do not require a human identity for routine record maintenance tasks.",
+      "_timestamp": "2026-04-06T02:53:35"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

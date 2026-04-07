@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9121.01",
+  "task_id": 15588,
+  "task_statement": "Interpret protocols and advise treating physicians on appropriate dosage modifications or treatment calculations based on patient characteristics.",
+  "occupation_title": "Clinical Research Coordinators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Interpreting protocols and calculating dosage adjustments can be done using digital documents and patient records on a computer, and advice can be communicated electronically. However, in practice clinical research coordinators often discuss these recommendations with treating physicians within clinical settings, involving in-person interaction."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "While protocols provide structured guidance, applying them to individual patients (e.g., comorbidities, atypical responses, borderline lab values) requires experience-based clinical judgment and nuanced interpretation beyond explicit rules.",
+      "adequacy_evidence": "Current agents can follow protocol logic and incorporate patient variables, but they show gaps in nuanced clinical calibration and handling edge cases where experienced human discernment is critical.",
+      "_timestamp": "2026-04-06T05:08:57"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous patient populations, drug classes, comorbidities, and protocol variations, including many edge cases (e.g., renal impairment, rare conditions, polypharmacy) that create a long-tailed distribution.",
+      "adequacy_evidence": "Extensive clinical guidelines, trial data, pharmacology references, and case literature provide broad coverage, but rare patient subpopulations and nuanced real-world protocol deviations remain underrepresented or embedded in proprietary clinical data.",
+      "_timestamp": "2026-04-06T05:08:58"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step reasoning\u2014reviewing protocols, integrating patient-specific variables, and performing calculations\u2014but these sequences are moderately bounded rather than long, open-ended workflows.",
+      "adequacy_evidence": "Current AI agents can generally maintain coherence across these moderate-length reasoning chains, though they sometimes drop constraints or make calculation inconsistencies as steps accumulate.",
+      "_timestamp": "2026-04-06T05:08:59"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical protocols provide structured guidance, but applying them to individual patients requires contextual interpretation (e.g., comorbidities, lab trends, edge cases) and judgment beyond literal text.",
+      "adequacy_evidence": "Current AI agents can generally parse protocols and suggest dosage adjustments, but they often miss nuanced clinical context or implicit constraints, requiring human oversight to refine recommendations.",
+      "_timestamp": "2026-04-06T05:08:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Advising on protocol-based dosage adjustments is time-sensitive within clinical workflows but typically allows seconds to a few minutes rather than requiring instant real-time responses.",
+      "adequacy_evidence": "Frontier AI agents can interpret protocols and perform dosage calculations quickly within this time window without needing to truncate reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T05:09:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Interpreting protocols and advising on dosage relies primarily on textual guidelines and structured patient data (e.g., age, weight, lab values), which are typically represented in text or numeric form.",
+      "adequacy_evidence": "Current AI agents handle text and structured numeric inputs well, and no meaningful multimodal perception or generation is required for competent performance.",
+      "_timestamp": "2026-04-06T05:09:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying dosage modifications and treatment calculations requires clinical expertise, careful review of protocols, and cross-checking patient-specific variables; errors can be subtle and not immediately observable.",
+      "adequacy_evidence": "Current AI systems can misinterpret nuanced protocol language or patient factors, and their errors in calculations or clinical judgment are not always obvious, necessitating thorough expert review.",
+      "_timestamp": "2026-04-06T05:09:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Dosage modifications and treatment calculations directly affect patient safety; even rare errors can cause serious harm, adverse events, or compromised trial integrity.",
+      "adequacy_evidence": "Even with clinical oversight and protocol checks, AI systems can produce subtle but critical mistakes in patient-specific calculations or protocol interpretation, leaving unacceptable residual risk in high-stakes medical contexts.",
+      "_timestamp": "2026-04-06T05:09:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating detailed protocol documents with multiple patient-specific variables (e.g., labs, demographics, comorbidities) and tracking conditional rules where small omissions can lead to incorrect dosing recommendations.",
+      "adequacy_evidence": "Current agents can manage multi-source inputs with retrieval and structured prompting, but may still drop or misweight specific patient factors or protocol clauses when context becomes dense or highly conditional.",
+      "_timestamp": "2026-04-06T05:09:02"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task directly involves advising treating physicians, who must trust the source's clinical judgment and credentials when acting on dosage or treatment recommendations.",
+      "adequacy_evidence": "While clinical decision support tools are increasingly accepted, physicians still place significant weight on human expert oversight and may be hesitant to rely solely on an AI agent for treatment advice, especially in high-stakes contexts.",
+      "_timestamp": "2026-04-06T05:09:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising on dosage often benefits from access to prior patient data, treatment history, and protocol updates across visits, but much of this information is typically available in structured records at each instance.",
+      "adequacy_evidence": "Current agents can maintain and retrieve cross-session context via external memory systems and EHR integration, but inconsistencies in persistence, updating, and retrieval across cases still occur in practice.",
+      "_timestamp": "2026-04-06T05:09:02"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Providing patient-specific dosage recommendations constitutes the practice of medicine, which legally requires a licensed clinician in the U.S. Clinical decision support tools may assist, but regulations and state medical practice laws require a human licensed professional to make and be responsible for such decisions, preventing fully autonomous AI performance.",
+      "_timestamp": "2026-04-06T05:09:03"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2141.02",
+  "task_id": 16429,
+  "task_statement": "Perform failure, variation, or root cause analyses.",
+  "occupation_title": "Automotive Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Root cause or failure analyses are often performed using digital data such as test results, simulations, logs, and engineering reports. However, many cases also involve physical inspection or testing of failed components or prototypes in labs or test facilities."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Automotive failure and root cause analyses span highly heterogeneous scenarios (mechanical, electrical, software, environmental conditions, manufacturing defects) with long-tailed, context-specific cases.",
+      "adequacy_evidence": "While many examples exist in engineering literature, service reports, and test data, critical edge cases and detailed diagnostic processes are often proprietary or sparsely documented, though partially recoverable via simulation and synthetic data.",
+      "_timestamp": "2026-04-05T21:58:47"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Failure and root cause analysis in automotive systems relies heavily on experience with past failure modes, subtle system interactions, and engineering judgment to distinguish signal from noise in complex, real-world conditions.",
+      "adequacy_evidence": "Current agents can follow structured methods (e.g., FMEA, fault trees) and analyze data, but lack robust experiential calibration for novel, ambiguous, or cross-system failure patterns that seasoned engineers recognize.",
+      "_timestamp": "2026-04-05T21:58:48"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Root cause and failure analyses require multi-step, tightly coupled workflows: data collection, hypothesis generation, testing, iteration, and validation, where early errors can propagate through the analysis.",
+      "adequacy_evidence": "Well-scaffolded agents can execute multi-step analyses with tool support, but still show some degradation over long sequences (e.g., losing intermediate assumptions or compounding reasoning errors).",
+      "_timestamp": "2026-04-05T21:58:48"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The goal (identify root causes of failures or variation) is broadly defined, but what counts as sufficient evidence, which factors to prioritize, and acceptable corrective actions depend on context, engineering judgment, and stakeholder expectations.",
+      "adequacy_evidence": "Current agents can follow structured root cause methodologies but often miss implicit constraints, domain-specific priorities, or nuanced causal interactions, requiring human guidance to refine the analysis.",
+      "_timestamp": "2026-04-05T21:58:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Root cause analyses in automotive engineering require integrating large volumes of heterogeneous data (sensor logs, test results, design specs, environmental conditions) and tracking causal chains where missing details can lead to incorrect conclusions.",
+      "adequacy_evidence": "Current agents can use tools and retrieval to handle large datasets, but they still exhibit context fragmentation and imperfect compression, occasionally losing or misweighting critical details during multi-step analysis.",
+      "_timestamp": "2026-04-05T21:58:49"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Root cause analyses often draw on prior failure cases, historical test data, and design iterations, but many instances can still be conducted using current-case data plus retrieved records rather than deeply persistent longitudinal state.",
+      "adequacy_evidence": "Current AI systems with retrieval and database integration can access historical engineering data, but they may inconsistently surface relevant past cases or maintain continuity across projects without careful system design.",
+      "_timestamp": "2026-04-05T21:58:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Root cause and failure analyses in automotive engineering often need timely responses (e.g., during production issues), but typically allow minutes to hours for careful investigation rather than requiring real-time decisions.",
+      "adequacy_evidence": "Frontier AI agents can deliver high-quality analytical reasoning within these timeframes, so latency constraints rarely force meaningful degradation in output quality.",
+      "_timestamp": "2026-04-05T21:58:50"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Root cause analyses in automotive engineering often involve complex system interactions, noisy data, and latent failure modes that require deep domain expertise, testing, and sometimes physical validation to confirm or refute conclusions.",
+      "adequacy_evidence": "Current AI can propose plausible causes but frequently misses nuanced interactions or overfits to surface patterns, requiring extensive expert review, simulation, and empirical testing to verify correctness.",
+      "_timestamp": "2026-04-05T21:58:50"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Root cause and failure analyses in automotive engineering often rely on interpreting physical evidence (e.g., component wear, fracture surfaces), sensor traces, and diagnostic plots, not just text descriptions.",
+      "adequacy_evidence": "Current agents can process images, logs, and plots reasonably well with tools, but struggle with nuanced physical interpretation and integrating multiple modalities in complex, real-world failure cases.",
+      "_timestamp": "2026-04-05T21:58:51"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Root cause analyses are typically reviewed and acted upon by engineering teams, management, and sometimes regulators or suppliers, who rely on the analyst\u2019s credibility but do not require strong personal interaction or identity cues.",
+      "adequacy_evidence": "Stakeholders may accept AI-assisted analyses, but full trust in AI-generated root cause conclusions\u2014especially for safety-critical automotive issues\u2014remains limited, with preference for human validation.",
+      "_timestamp": "2026-04-05T21:58:51"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect failure or root cause analyses in automotive systems can lead to unresolved safety defects, recalls, or accidents, so even rare residual errors can have severe downstream consequences.",
+      "adequacy_evidence": "While human review, testing, and validation can catch many AI errors, current systems can still miss subtle causal factors or propose plausible but incorrect explanations, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-05T21:58:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from performing failure, variation, or root cause analyses in automotive engineering. While certain outcomes may require human review or sign-off (e.g., by licensed engineers in specific contexts), AI use itself is not restricted.",
+      "_timestamp": "2026-04-05T21:58:52"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

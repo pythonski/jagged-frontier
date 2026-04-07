@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4031.01",
+  "task_id": 4685,
+  "task_statement": "Search files and contact witnesses, attorneys, or litigants to obtain information for the court.",
+  "occupation_title": "Court, Municipal, and License Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Much of the work can be done by searching electronic case records and contacting parties via email or phone. However, some instances require locating physical files in courthouse archives or speaking with individuals in person."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans moderately diverse situations (different case types, parties, and information sources) but follows recurring procedural patterns in court administration.",
+      "adequacy_evidence": "While procedural aspects and document search are well-represented in public/legal corpora, real-world interaction data with witnesses and litigants is often private and thin, though partially approximable via synthetic or role-play data.",
+      "_timestamp": "2026-04-06T00:34:57"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (locating records, identifying relevant parties, initiating and tracking communications), but many steps are loosely coupled and can be handled semi-independently.",
+      "adequacy_evidence": "AI agents can manage these workflows with tools and tracking, but over longer sequences may show mild goal drift or missed follow-ups, requiring some supervision.",
+      "_timestamp": "2026-04-06T00:34:57"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task follows procedural rules (locating records, contacting parties), clerks often rely on experience to judge how to phrase requests, handle uncooperative contacts, and prioritize sources based on case context.",
+      "adequacy_evidence": "AI agents can follow standard procedures and generate appropriate communications, but they lack consistent calibration in handling nuanced interpersonal dynamics or atypical situations that benefit from human experience.",
+      "_timestamp": "2026-04-06T00:34:58"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires determining what specific information is relevant to a case and who to contact, which depends on procedural context, case details, and implicit legal priorities not always fully specified.",
+      "adequacy_evidence": "Current AI agents can infer likely information needs and draft or guide outreach, but they often miss context-specific nuances or appropriateness, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T00:34:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves handling information from multiple sources (case files, contact details, responses from witnesses or attorneys) and keeping track of ongoing retrieval and communication within a single episode, but the volume is typically bounded and structured.",
+      "adequacy_evidence": "Current agents can manage document retrieval and track interactions with tool support, but may lose or misprioritize details across multiple contacts or evolving updates without careful orchestration.",
+      "_timestamp": "2026-04-06T00:34:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Searching records and contacting parties for court information typically occurs over hours or days, not under tight real-time constraints.",
+      "adequacy_evidence": "AI systems can easily operate within these loose timeframes without needing to truncate reasoning, so speed does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T00:35:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing text-based records and communicating via written channels (emails, documents), with any audio (phone calls) being optional rather than essential.",
+      "adequacy_evidence": "Current AI agents can handle text retrieval and drafting communications effectively, and can manage optional modalities like speech through existing integrations without significant limitation.",
+      "_timestamp": "2026-04-06T00:35:00"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often requires tracking prior contact attempts, responses, and case file findings across multiple interactions within a case, but does not typically require deep longitudinal memory beyond case-level history.",
+      "adequacy_evidence": "Current AI systems can store and retrieve case logs and contact histories via standard tools, but integration gaps and inconsistent state tracking can still lead to missed or poorly surfaced prior interactions in some instances.",
+      "_timestamp": "2026-04-06T00:35:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying correctness involves checking that the right files were searched, appropriate parties were contacted, and information was accurately recorded, which requires cross-referencing records and communication logs but is generally feasible.",
+      "adequacy_evidence": "AI systems may miss relevant records, contact incorrect parties, or misinterpret responses, so human review of search coverage and communication outcomes is needed, though errors are usually detectable with standard checks.",
+      "_timestamp": "2026-04-06T00:35:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors (e.g., contacting wrong parties, missing or misrecording information) can delay proceedings or cause procedural issues, but are usually correctable and rarely irreversible.",
+      "adequacy_evidence": "With standard verification of identities, contact details, and logged communications, most AI errors can be caught, but risks like misidentification or incomplete retrieval still occur at a non-trivial rate.",
+      "_timestamp": "2026-04-06T00:35:02"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires direct interaction with witnesses, attorneys, and litigants, where responsiveness to a recognized court authority and trust in the requester are important for cooperation.",
+      "adequacy_evidence": "While some routine outreach could be automated, many stakeholders may be hesitant to fully engage with an AI agent in legal contexts, especially when authenticity and authority are salient, leading to partial resistance.",
+      "_timestamp": "2026-04-06T00:35:02"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations that prohibit AI systems from searching records or contacting parties for administrative information-gathering in a court context. While privacy, record-handling, and communication rules apply, they do not specifically bar AI from performing these tasks.",
+      "_timestamp": "2026-04-06T00:35:03"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "47-2152.00",
+  "task_id": 23475,
+  "task_statement": "Review blueprints, building codes, or specifications to determine work details or procedures.",
+  "occupation_title": "Plumbers, Pipefitters, and Steamfitters",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Reviewing blueprints, codes, or specifications is primarily an information-reading task that can be done on a computer using digital plans and online code documents. However, plumbers often review printed blueprints or documents on-site during construction, so some instances are not fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Blueprints, specifications, and building codes vary widely by jurisdiction, building type, system complexity, and project context, creating a heterogeneous and long-tailed distribution of cases.",
+      "adequacy_evidence": "Large corpora of building codes, technical manuals, and example plans exist, but detailed step-by-step expert reasoning linking plans to actionable work decisions is less consistently available and often proprietary, leaving some gaps that are only partially addressable via synthesis.",
+      "_timestamp": "2026-04-06T02:51:18"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing and cross-referencing blueprints, codes, and specifications, requiring multi-step interpretation and consistency across documents, but not extremely long or tightly coupled sequences.",
+      "adequacy_evidence": "AI agents can generally handle multi-document analysis, but may miss constraints or lose consistency over longer or more complex specifications, leading to moderate degradation.",
+      "_timestamp": "2026-04-06T02:51:19"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Blueprints and codes are largely explicit, but require interpretation of symbols, conventions, and context (e.g., site conditions, sequencing, coordination with other trades) that are not always fully spelled out.",
+      "adequacy_evidence": "Current agents can parse drawings and codes and extract many requirements, but often miss implicit trade practices or context-specific constraints, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T02:51:19"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating large blueprints, detailed specifications, and extensive building codes, requiring tracking many interdependent details where missing a single constraint can lead to incorrect procedures.",
+      "adequacy_evidence": "Current agents can use retrieval and chunking tools to manage large documents, but they still exhibit context fragmentation and can overlook or misprioritize critical details across sources.",
+      "_timestamp": "2026-04-06T02:51:19"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting blueprints and codes often involves resolving ambiguities, anticipating constructability issues, and applying trade-specific conventions that go beyond explicit written rules.",
+      "adequacy_evidence": "Current AI can parse plans and codes and apply rules, but lacks reliable calibration for field-specific nuances, local practices, and non-obvious conflicts, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T02:51:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting blueprints and specifications requires understanding visual-spatial layouts, symbols, and diagrams that cannot be reduced to text alone; cross-modal reasoning is central to determining work procedures.",
+      "adequacy_evidence": "Current agents can parse simple diagrams and annotated plans but struggle with dense, domain-specific construction drawings and nuanced spatial relationships, leading to reliability gaps in complex cases.",
+      "_timestamp": "2026-04-06T02:51:20"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing blueprints and codes is typically self-contained within the current project documents; necessary information is provided in the materials being reviewed rather than accumulated across past jobs.",
+      "adequacy_evidence": "Current agents can handle any minimal cross-session context (e.g., storing project files) with existing retrieval systems, and the task does not rely on persistent longitudinal memory.",
+      "_timestamp": "2026-04-06T02:51:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing blueprints and codes is typically done during planning phases where minutes to hours are acceptable; it is not a real-time task requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to analyze documents and reason through requirements without meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-06T02:51:20"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misinterpretation of blueprints or building codes can lead to unsafe installations (e.g., gas leaks, pressure failures, code violations) with potentially severe safety, legal, and financial consequences, so very little residual error is tolerable.",
+      "adequacy_evidence": "Even after review processes, AI systems can still miss nuanced code requirements or context-specific constraints, leaving non-trivial residual risk that would concern practitioners, though not to the level of outright infeasibility.",
+      "_timestamp": "2026-04-06T02:51:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing blueprints and codes is primarily an internal technical task; outputs are used for planning and execution without requiring stakeholder interaction or acceptance of the performer\u2019s identity.",
+      "adequacy_evidence": "Since there are no meaningful counterpart stakeholders involved in this task, acceptance of an AI agent is not a relevant constraint.",
+      "_timestamp": "2026-04-06T02:51:22"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Building code interpretation and work planning are typically required to be overseen or approved by a licensed professional, but there is no explicit prohibition on AI assisting with or performing the review. Regulations create ambiguity by mandating human responsibility rather than banning AI use outright.",
+      "_timestamp": "2026-04-06T02:51:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting blueprints and building codes involves nuanced technical details where mistakes (e.g., misreading symbols or code requirements) may not be obvious until later stages, requiring expert review to catch.",
+      "adequacy_evidence": "AI can parse documents but still makes interpretation errors or misses context-specific code nuances, so outputs require careful expert checking, though verification is feasible with available materials.",
+      "_timestamp": "2026-04-06T02:51:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

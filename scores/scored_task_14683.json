@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1299.08",
+  "task_id": 14683,
+  "task_statement": "Design and conduct hardware or software tests.",
+  "occupation_title": "Computer Systems Engineers/Architects",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Software test design and execution can be done entirely on a computer, but hardware testing often requires access to physical devices, lab setups, or instrumentation that cannot be fully replicated remotely."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Test design spans highly heterogeneous systems, including varied hardware configurations, software stacks, edge cases, and failure modes, often tailored to specific architectures and use contexts.",
+      "adequacy_evidence": "There is substantial coverage via open-source codebases, testing frameworks, CI logs, and documentation, but real-world hardware failure data and proprietary system behaviors are often sparse or inaccessible, leaving some gaps.",
+      "_timestamp": "2026-04-05T20:38:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Test design depends on interpreting system requirements, risk tolerances, and implicit quality criteria (e.g., edge cases, performance thresholds), which are often only partially specified and require contextual judgment.",
+      "adequacy_evidence": "Current agents can generate reasonable test plans from documentation but often miss implicit priorities or domain-specific edge cases, requiring iterative human guidance to align with true testing objectives.",
+      "_timestamp": "2026-04-05T20:38:34"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Test design and execution rely on experience to choose realistic workloads, anticipate edge cases, and interpret ambiguous or flaky results, especially in complex systems, though many procedures are partially codified.",
+      "adequacy_evidence": "Agents can generate structured test plans and apply known patterns, but often lack calibration for nuanced, context-specific judgments like prioritizing failure modes or diagnosing intermittent issues in real-world environments.",
+      "_timestamp": "2026-04-05T20:38:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing and conducting tests typically builds on prior test plans, historical results, system configurations, and evolving project requirements, but many individual tests can still be scoped and executed with limited historical context.",
+      "adequacy_evidence": "Current agents can store and retrieve prior artifacts via external memory systems, but integration is imperfect and they may miss or inconsistently use relevant historical context across sessions.",
+      "_timestamp": "2026-04-05T20:38:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing and conducting tests involves multi-stage workflows (test planning, environment setup, execution, data collection, analysis, and iteration) where earlier decisions constrain later steps and errors can propagate.",
+      "adequacy_evidence": "Current AI agents can manage multi-step testing workflows with tooling, but over long sequences they show some degradation such as missed dependencies, inconsistent assumptions, or drift in experimental intent.",
+      "_timestamp": "2026-04-05T20:38:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing and executing tests requires tracking detailed system specifications, test plans, configurations, edge cases, and large volumes of intermediate results or logs within a single workflow.",
+      "adequacy_evidence": "Agents with tooling can manage large contexts via retrieval and structured storage, but still exhibit failures in consistently tracking evolving test state, dependencies, and subtle details across complex test sequences.",
+      "_timestamp": "2026-04-05T20:38:35"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of test design and analysis is text/code/log-based, hardware testing often involves interpreting signals, waveforms, or device behavior, and software testing can include UI interactions or performance visualizations.",
+      "adequacy_evidence": "Current agents handle text-based logs, code, and structured outputs well, but are less reliable with complex visual or physical signal interpretation (e.g., oscilloscope traces, nuanced UI behavior) and cross-modal reasoning.",
+      "_timestamp": "2026-04-05T20:38:36"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing and conducting tests for hardware or software systems typically operates on timelines of minutes to days, with no need for immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time for extended reasoning and planning without violating task constraints, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T20:38:36"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from designing or conducting hardware or software tests. While certain safety-critical industries may impose human oversight requirements, these are context-specific and do not constitute a general legal restriction on AI performing this task.",
+      "_timestamp": "2026-04-05T20:38:37"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether hardware/software tests are correctly designed and executed requires deep expertise in coverage, edge cases, and system behavior; many faults only surface under rare conditions or long-running scenarios.",
+      "adequacy_evidence": "AI-generated test plans and executions often miss subtle edge cases or misinterpret system requirements, and verifying completeness and correctness demands substantial expert review and iterative validation.",
+      "_timestamp": "2026-04-05T20:38:38"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Test results are consumed by internal engineering teams who rely on their accuracy, but the identity of who or what performed the testing is generally not central to acceptance.",
+      "adequacy_evidence": "Automated and AI-assisted testing is already widely accepted in software and hardware engineering, with stakeholders primarily valuing reliability and coverage over performer identity.",
+      "_timestamp": "2026-04-05T20:38:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incomplete or flawed test design can allow critical system defects to escape detection, leading to failures in production systems with potentially severe operational, financial, or safety consequences.",
+      "adequacy_evidence": "Even with review and automated validation, AI-generated test plans may miss edge cases or subtle integration issues, leaving a non-trivial residual risk compared to expert human judgment.",
+      "_timestamp": "2026-04-05T20:38:38"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

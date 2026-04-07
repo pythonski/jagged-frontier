@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5011.01",
+  "task_id": 17683,
+  "task_statement": "Arrange delivery or storage of goods at destinations.",
+  "occupation_title": "Freight Forwarders",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Arranging delivery or storage typically involves coordinating with carriers, warehouses, and clients via logistics software, email, and phone. However, some instances may involve on-site coordination, physical document handling, or in-person interactions at ports or warehouses."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many logistics arrangements follow standard procedures and documented constraints, effective routing, carrier selection, and storage decisions often rely on experiential judgment about reliability, local conditions, and exception handling.",
+      "adequacy_evidence": "Current agents can replicate routine planning and optimization but lack robust calibration for irregular disruptions, nuanced vendor reliability, and context-specific tradeoffs that experienced freight forwarders handle.",
+      "_timestamp": "2026-04-05T20:58:13"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous scenarios: different transport modes, international regulations, customs requirements, cargo types (e.g., hazardous, perishable), and frequent edge cases like disruptions or rerouting.",
+      "adequacy_evidence": "There is substantial coverage via logistics records, shipping documentation, and simulation environments, but much high-quality operational data is proprietary and rare edge cases (e.g., crisis rerouting, unusual cargo constraints) are thinly represented.",
+      "_timestamp": "2026-04-05T20:58:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Arranging delivery or storage involves coordinating bookings, documentation, routing, and handoffs across multiple parties, requiring consistent execution across several interdependent steps but not extremely long chains.",
+      "adequacy_evidence": "Well-scaffolded agents can manage multi-step logistics workflows, but over longer sequences they can lose track of constraints or coordination details, leading to moderate error accumulation.",
+      "_timestamp": "2026-04-05T20:58:14"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Arranging delivery or storage involves balancing client preferences (cost, speed, risk), regulatory constraints, and logistics contingencies that are often only partially specified and require interpretation.",
+      "adequacy_evidence": "Current agents can infer common logistics objectives and constraints but often miss nuanced tradeoffs or evolving client priorities, requiring human clarification or iteration.",
+      "_timestamp": "2026-04-05T20:58:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking shipment details (origins, destinations, schedules, storage needs, documentation, and constraints) from multiple sources within a single workflow, but the information volume is structured and typically manageable.",
+      "adequacy_evidence": "Current agents can handle structured logistics data reasonably well, but may lose or misprioritize details over multi-step coordination (e.g., deadlines or special handling constraints), especially as task complexity grows.",
+      "_timestamp": "2026-04-05T20:58:15"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Arranging freight often benefits from prior shipment histories, client preferences, carrier relationships, and ongoing contracts, but many shipments can still be handled with case-specific information.",
+      "adequacy_evidence": "Current AI systems can integrate with databases/CRMs to retain and retrieve cross-session logistics data, but may inconsistently surface relevant past context or maintain coherent long-term state without careful system design.",
+      "_timestamp": "2026-04-05T20:58:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task can largely be performed via text-based information (shipping documents, schedules, addresses), but may occasionally involve spatial understanding of warehouse layouts, maps, or cargo conditions.",
+      "adequacy_evidence": "Current AI agents can adequately handle maps, basic spatial data, and image inputs when needed, and these modalities are not central enough to create significant performance gaps.",
+      "_timestamp": "2026-04-05T20:58:16"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Arranging delivery or storage typically requires timely coordination with carriers, warehouses, and clients, often within minutes to ensure smooth logistics, but does not demand split-second decisions.",
+      "adequacy_evidence": "Current AI agents can generate and coordinate plans, communications, and scheduling well within these time windows without needing to truncate reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T20:58:16"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Arrangements can be checked against shipping documents, booking confirmations, and logistics constraints, but verifying correctness requires coordination across carriers, schedules, and storage requirements, and some issues only surface after execution.",
+      "adequacy_evidence": "AI can generate plausible logistics plans, but errors in routing, timing, or constraints are common enough that human review of bookings, compliance, and feasibility is still needed.",
+      "_timestamp": "2026-04-05T20:58:17"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors (e.g., misrouting, timing mistakes, improper storage arrangements) can cause financial loss, delays, or spoilage, but are typically recoverable and rarely catastrophic.",
+      "adequacy_evidence": "With standard checks like confirmations, tracking systems, and documentation review, AI-generated plans can be validated sufficiently that remaining errors are unlikely to pose unacceptable risk.",
+      "_timestamp": "2026-04-05T20:58:18"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires coordination with carriers, warehouses, and clients who must act on arrangements, so stakeholders are involved, but the performer's personal identity is not central.",
+      "adequacy_evidence": "Logistics coordination is already heavily automated (e.g., EDI systems, booking platforms), and stakeholders generally accept non-human agents as long as arrangements are accurate and timely.",
+      "_timestamp": "2026-04-05T20:58:18"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. freight forwarding (especially ocean freight) requires licensing (e.g., FMC OTI license) and a legally responsible qualified individual or entity, which implies human oversight and accountability. While AI can assist, there is no clear pathway for it to operate autonomously as the licensed party, creating partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-05T20:58:19"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

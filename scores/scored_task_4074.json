@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1071.00",
+  "task_id": 4074,
+  "task_statement": "Interpret diagnostic test results for deviations from normal.",
+  "occupation_title": "Physician Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Interpreting diagnostic test results typically involves reviewing lab values, imaging reports, or electronic health records on a computer and can often be done remotely. However, in many clinical settings it occurs on-site and may involve access to specialized systems, physical films, or coordination with in-person care workflows."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting diagnostic results requires integrating lab values with patient history, comorbidities, pretest probability, and subtle context-dependent thresholds, which rely on experiential clinical judgment beyond explicit rules.",
+      "adequacy_evidence": "Frontier agents can apply guidelines and statistical reasoning but still lack reliable calibration in nuanced, context-rich or borderline cases where experienced clinicians draw on tacit pattern recognition and judgment.",
+      "_timestamp": "2026-04-06T04:43:14"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting diagnostic results spans many test types (labs, imaging, pathology), patient subpopulations, comorbidities, and context-dependent reference ranges, yielding a highly heterogeneous, long-tailed distribution.",
+      "adequacy_evidence": "Extensive medical literature, guidelines, and de-identified datasets provide broad coverage and worked examples, but gaps remain for rare conditions, local assay variations, and complex multimorbidity patterns that are underrepresented or siloed.",
+      "_timestamp": "2026-04-06T04:43:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpreting diagnostic results involves multiple steps\u2014reviewing values, comparing to reference ranges, integrating patient context\u2014but the sequence is typically short to moderately extended rather than deeply long or tightly interdependent.",
+      "adequacy_evidence": "Frontier AI agents can reliably handle these short-to-moderate reasoning chains with tool support (e.g., lab reference lookup, pattern recognition) without meaningful degradation over the sequence length required.",
+      "_timestamp": "2026-04-06T04:43:16"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting diagnostic results depends on patient-specific context (age, history, comorbidities, medications) and clinical judgment about what constitutes a meaningful deviation, which is not fully explicit in the test output alone.",
+      "adequacy_evidence": "Current AI can apply reference ranges and incorporate provided context, but often misses subtle clinical nuances or implicit priorities, requiring human clarification or oversight to resolve ambiguity reliably.",
+      "_timestamp": "2026-04-06T04:43:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting diagnostic results often relies on prior test values, patient history, and trends over time, but some instances can be handled with current results alone.",
+      "adequacy_evidence": "AI systems can access and retrieve longitudinal patient data via EHR integrations, but maintaining consistent, contextually appropriate use of that history across sessions remains imperfect and error-prone.",
+      "_timestamp": "2026-04-06T04:43:17"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpreting diagnostic results requires integrating multiple data points (lab values, reference ranges, patient history, medications) within a single encounter, but the volume is typically structured and bounded.",
+      "adequacy_evidence": "Current AI systems reliably handle multi-parameter lab interpretation and can track relevant values within context windows or tool-assisted workflows without significant information loss.",
+      "_timestamp": "2026-04-06T04:43:18"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpretation of diagnostic tests is often expected within seconds to a few minutes in clinical workflows, especially in acute settings, but rarely requires split-second decisions.",
+      "adequacy_evidence": "Frontier AI systems can generate high-quality interpretations within seconds, so meeting typical clinical latency constraints does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T04:43:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many diagnostic results are numeric or textual (labs), but competent interpretation also often involves imaging (e.g., X-rays, CT scans) or waveforms (e.g., ECGs), requiring cross-modal reasoning.",
+      "adequacy_evidence": "Current AI systems perform well on structured lab data and some imaging tasks but remain inconsistent on complex, fine-grained medical images and integrated cross-modal interpretation.",
+      "_timestamp": "2026-04-06T04:43:20"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting diagnostic results is embedded in patient care, where patients and supervising clinicians rely on the PA\u2019s clinical judgment and professional authority to guide decisions.",
+      "adequacy_evidence": "While AI-assisted interpretation is increasingly accepted, many patients and clinicians would be hesitant to rely solely on an AI agent for diagnostic judgment, preferring human oversight for trust and accountability.",
+      "_timestamp": "2026-04-06T04:43:21"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting diagnostic results involves subtle pattern recognition, clinical context integration, and awareness of edge cases (e.g., comorbidities, lab variability), making errors non-obvious and often requiring expert review to detect.",
+      "adequacy_evidence": "AI outputs can be cross-checked against reference ranges, guidelines, and patient data, but require clinician effort to validate context-sensitive interpretations and catch nuanced or spurious conclusions.",
+      "_timestamp": "2026-04-06T04:43:21"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misinterpreting diagnostic results can lead to missed or incorrect diagnoses, delayed treatment, or inappropriate interventions, with potentially severe or irreversible patient harm even when errors are rare.",
+      "adequacy_evidence": "Current AI can interpret many test results accurately with support tools, but still exhibits occasional clinically significant errors or context misses, leaving non-trivial residual risk even after standard review processes.",
+      "_timestamp": "2026-04-06T04:43:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State medical practice laws require that diagnostic interpretation be performed by a licensed clinician (e.g., physician or supervised physician assistant), and clinical decisions must be attributable to a licensed provider. AI may assist, but cannot legally act as the autonomous decision-maker for interpreting diagnostic results.",
+      "_timestamp": "2026-04-06T04:43:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

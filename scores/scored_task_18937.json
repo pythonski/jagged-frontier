@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2071.00",
+  "task_id": 18937,
+  "task_statement": "Estimate time for debt repayment, given amount of debt, interest rates, and available funds.",
+  "occupation_title": "Credit Counselors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Estimating debt repayment time is a financial calculation typically done using software, spreadsheets, or online calculators and requires only debt figures, interest rates, and payment amounts, all of which can be handled digitally."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different loan structures (e.g., fixed vs variable rates, compounding schedules, minimum payments), but the space is still structured and governed by well-defined financial formulas.",
+      "adequacy_evidence": "Extensive financial literature, calculators, and synthetic generation pipelines provide abundant step-by-step examples, making full coverage of relevant cases readily achievable with current methods.",
+      "_timestamp": "2026-04-06T00:46:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Estimating debt repayment time involves a multi-step calculation (applying interest formulas, iterating over payment schedules), but the sequence is relatively short and structured.",
+      "adequacy_evidence": "Frontier AI agents can reliably execute these bounded financial calculations with consistent accuracy across steps, with little degradation over the required sequence length.",
+      "_timestamp": "2026-04-06T00:46:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task typically involves a small set of structured inputs (debt amount, interest rate, payment amount) and straightforward calculations, with minimal need to track large or evolving information within the episode.",
+      "adequacy_evidence": "Current AI agents can reliably handle and manipulate these limited variables and intermediate calculations without losing context or mismanaging state.",
+      "_timestamp": "2026-04-06T00:46:14"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Estimating debt repayment time is typically a self-contained calculation based on current inputs (debt amount, interest rate, payment capacity) without needing prior session context.",
+      "adequacy_evidence": "Since the task does not depend on cross-session memory, existing AI systems can fully meet its requirements without persistent state.",
+      "_timestamp": "2026-04-06T00:46:14"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Estimating debt repayment time relies on numeric inputs (debt amount, interest rates, payment capacity) and produces a numerical or textual output, with no inherent need for images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents handle text and numerical reasoning for this task fully; no multimodal capabilities are required or missing.",
+      "_timestamp": "2026-04-06T00:46:14"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While the core calculation is explicit, details like compounding frequency, payment timing, variable rates, and prioritization rules are often implicit or context-dependent.",
+      "adequacy_evidence": "Current AI agents can reliably infer or request these missing assumptions and iterate with users, resolving ambiguity with minimal difficulty.",
+      "_timestamp": "2026-04-06T00:46:14"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Estimating debt repayment time primarily relies on explicit financial formulas (amortization, interest accrual) and clearly defined inputs, with little need for experience-based judgment once assumptions are specified.",
+      "adequacy_evidence": "Current AI systems can reliably apply these formulas and handle scenario variations (e.g., different payment schedules or rates) with high accuracy, leaving no meaningful gap in tacit knowledge.",
+      "_timestamp": "2026-04-06T00:46:14"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Estimating debt repayment time is a straightforward financial calculation typically performed during counseling sessions where seconds to minutes are acceptable.",
+      "adequacy_evidence": "Frontier AI systems can compute amortization schedules and repayment timelines \u05db\u05de\u05e2\u05d8 instantly, with no need to trade off reasoning depth for speed.",
+      "_timestamp": "2026-04-06T00:46:15"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from performing debt repayment time calculations; such computations are commonly automated in financial tools. Licensing requirements for credit counselors do not restrict the use of AI for this specific analytical task.",
+      "_timestamp": "2026-04-06T00:46:17"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Debt repayment timelines are determined by well-defined financial formulas (amortization), and results can be quickly cross-checked with calculators or spreadsheets using the same inputs.",
+      "adequacy_evidence": "AI outputs can be easily verified with standard financial tools, and discrepancies are straightforward to detect, so verification requires minimal effort even given occasional AI mistakes.",
+      "_timestamp": "2026-04-06T00:46:17"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in estimating repayment time can mislead clients\u2019 financial planning and expectations, but they are typically reversible and can be corrected without severe or irreversible harm.",
+      "adequacy_evidence": "Given structured inputs and standard formulas, AI systems can produce highly reliable calculations, and any remaining errors after routine checks are unlikely to pose significant residual risk.",
+      "_timestamp": "2026-04-06T00:46:17"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The calculation is typically presented to a client, but the core task is a straightforward financial estimate where interpersonal trust or identity is not central.",
+      "adequacy_evidence": "Stakeholders already accept automated tools (e.g., online calculators) for debt repayment estimates, so AI performing this function would face little to no resistance.",
+      "_timestamp": "2026-04-06T00:46:17"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

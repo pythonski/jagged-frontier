@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-3041.00",
+  "task_id": 1795,
+  "task_statement": "Read material to determine index items and arrange them alphabetically or topically, indicating page or chapter location.",
+  "occupation_title": "Editors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Indexing is commonly done using digital manuscripts and publishing software, allowing the task to be completed entirely on a computer. However, some editors still create indexes from printed proofs or physical manuscripts, requiring manual review of physical pages."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Creating useful indexes requires judgment about what concepts readers will search for, appropriate term granularity, and cross-referencing\u2014choices that go beyond strict rules and benefit from editorial experience.",
+      "adequacy_evidence": "Current AI can generate reasonable index terms and structure, but often lacks consistent user-centric judgment about term selection and hierarchy, especially in nuanced or domain-specific texts.",
+      "_timestamp": "2026-04-06T03:35:46"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Indexing spans diverse subject matters, writing styles, and organizational schemes (alphabetical vs. topical), but follows relatively standardized conventions across domains.",
+      "adequacy_evidence": "There is abundant accessible data (books with indexes, editorial guidelines, training manuals) that demonstrate both outputs and underlying processes, enabling strong coverage through existing corpora and synthesis.",
+      "_timestamp": "2026-04-06T03:35:46"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting index terms requires judgment about what concepts are salient, how granular entries should be, and how users will search, which are partly implicit and context-dependent.",
+      "adequacy_evidence": "Current agents can generate reasonable index candidates but often miss nuanced relevance, over/under-index topics, or misalign with user search expectations, requiring human refinement.",
+      "_timestamp": "2026-04-06T03:35:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Creating an index requires tracking many terms and their locations across a document and organizing them, but this information can be systematically externalized (e.g., via notes or tables) rather than held entirely in memory.",
+      "adequacy_evidence": "Current agents can offload and manage this information using retrieval, chunking, and structured storage (e.g., tables or vectors), maintaining accurate mappings without significant loss of context.",
+      "_timestamp": "2026-04-06T03:35:47"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Indexing is typically done offline during the editorial process, where minutes to hours per section are acceptable and no real-time responsiveness is required.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to read, extract, and organize index entries without latency pressure, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T03:35:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is fundamentally text-based: reading written material, selecting index terms, and organizing them alphabetically or topically with page references.",
+      "adequacy_evidence": "Since the task is text-in/text-out, current AI systems handle the modality requirements fully without reliance on non-text perception or generation.",
+      "_timestamp": "2026-04-06T03:35:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is a back-end editorial function producing an index; end users (readers) consume the output without interacting with or considering the identity of the indexer.",
+      "adequacy_evidence": "Publishers and readers are generally indifferent to whether indexing is done by humans or AI as long as the index is accurate and useful, and AI-assisted indexing is already common.",
+      "_timestamp": "2026-04-06T03:35:49"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Indexing a work often spans multiple sessions and benefits from maintaining consistent term choices and structure across the same document, but does not require long-term memory beyond the specific project.",
+      "adequacy_evidence": "Current agents can persist and retrieve project files, term lists, and prior decisions using standard tooling, making cross-session consistency manageable with little capability gap.",
+      "_timestamp": "2026-04-06T03:35:49"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws, regulations, or licensing requirements that prohibit or restrict AI from performing indexing tasks such as identifying index terms and organizing them alphabetically or topically. This work is not legally reserved for licensed professionals.",
+      "_timestamp": "2026-04-06T03:35:49"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Indexing errors (missed entries, mislabeling, wrong page references) reduce usability but rarely cause severe or irreversible harm; users can still access content through other means.",
+      "adequacy_evidence": "After standard proofreading or cross-checking, AI-generated indexes can reach sufficiently low error rates, and remaining mistakes are typically minor and tolerable.",
+      "_timestamp": "2026-04-06T03:35:50"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves processing a full document and consistently identifying and organizing index terms across many sections, but most steps (term extraction, sorting, page tagging) are loosely coupled rather than tightly interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI systems can process long texts in chunks, maintain consistent indexing rules, and aggregate results without significant degradation over sequence length.",
+      "_timestamp": "2026-04-06T03:35:50"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Checking an index requires reviewing term selection, alphabetical/topical arrangement, and verifying page references against the text; this takes time and editorial judgment but errors (e.g., wrong page numbers or obvious omissions) are generally discoverable with systematic review.",
+      "adequacy_evidence": "Current AI can generate plausible indexes but often misses important concepts, misjudges term granularity, or introduces incorrect references, so human editors must perform careful but not prohibitive verification and correction.",
+      "_timestamp": "2026-04-06T03:35:52"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

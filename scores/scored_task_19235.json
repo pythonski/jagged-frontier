@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2035.00",
+  "task_id": 19235,
+  "task_statement": "Schedule appointments for research subjects or clinical patients.",
+  "occupation_title": "Magnetic Resonance Imaging Technologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Scheduling appointments is typically done through electronic scheduling systems, email, or phone using a computer-based calendar or hospital information system, all of which can be performed remotely. While sometimes done in person, physical presence is not required for the task."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Appointment scheduling spans varied but structured cases (patient availability, scan type, prep requirements, urgency, contraindications), creating moderate diversity without extreme long-tail complexity.",
+      "adequacy_evidence": "There is abundant accessible data (scheduling logs, clinical protocols, administrative scripts) and clear procedural workflows, allowing training pipelines to cover essentially all relevant cases with representative process information.",
+      "_timestamp": "2026-04-05T21:35:48"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling involves some experience-based judgment (e.g., prioritizing urgent cases, accounting for protocol-specific timing, patient preparation constraints, and contraindications), but much is governed by explicit rules and workflows.",
+      "adequacy_evidence": "Current agents can handle standard scheduling logic and constraints well, but may lack reliable calibration in edge cases like nuanced clinical prioritization or coordinating complex patient-specific considerations.",
+      "_timestamp": "2026-04-05T21:35:48"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling requires interpreting clinical priorities, prep constraints (e.g., fasting, contrast use), equipment availability, and patient-specific factors, which are partly implicit and context-dependent.",
+      "adequacy_evidence": "Agents can handle standard scheduling rules and constraints, but often miss nuanced clinical considerations or unstated priorities, requiring human oversight for edge cases.",
+      "_timestamp": "2026-04-05T21:35:49"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling involves multi-step coordination (checking scanner availability, patient constraints, prep requirements, and confirming bookings), but sequences are relatively short and loosely coupled.",
+      "adequacy_evidence": "Well-scaffolded agents can reliably handle calendar management and constraint checking over these short workflows with minimal degradation, especially using scheduling tools and structured data.",
+      "_timestamp": "2026-04-05T21:35:50"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments is primarily handled through text-based systems (EHRs, scheduling software) or structured data entry, with minimal reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents can fully manage text-based scheduling workflows and basic voice interactions, so there is no meaningful multimodal gap affecting performance.",
+      "_timestamp": "2026-04-05T21:35:50"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires coordinating patient details, scanner availability, prep constraints, and sometimes contraindications, involving multiple data points but within a bounded, structured scope.",
+      "adequacy_evidence": "Current AI agents with calendar integration and structured data handling can reliably track and update these details within a session without significant context loss.",
+      "_timestamp": "2026-04-05T21:35:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires accessing existing patient records, prior appointments, and possibly preferences or protocol timing constraints across visits, but does not depend on rich longitudinal reasoning.",
+      "adequacy_evidence": "Current AI systems integrated with scheduling databases and EHRs can reliably store and retrieve cross-session information like patient history and appointment logs, with minimal gaps.",
+      "_timestamp": "2026-04-05T21:35:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments typically requires prompt responses within seconds to a few minutes during patient interactions, but does not demand instantaneous real-time decisions.",
+      "adequacy_evidence": "Current AI agents can generate and adjust schedules quickly within this time frame without sacrificing quality, as the reasoning required is relatively straightforward and well-supported by tools.",
+      "_timestamp": "2026-04-05T21:35:51"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling errors can lead to missed or delayed imaging, patient inconvenience, or workflow disruptions, but these are typically recoverable and rarely cause direct irreversible harm.",
+      "adequacy_evidence": "With standard safeguards like confirmation messages, calendar checks, and staff oversight, AI scheduling errors are usually caught or corrected, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T21:35:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from scheduling patient appointments. While HIPAA and healthcare privacy rules apply to handling patient information, they govern data protection rather than who or what performs scheduling, allowing AI use if compliant.",
+      "_timestamp": "2026-04-05T21:35:52"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Most scheduling errors (e.g., double-booking, wrong time, missing prep instructions) can be detected through calendar systems and standard checks, but some constraints like protocol timing or patient-specific requirements require attentive review.",
+      "adequacy_evidence": "Current AI systems can handle basic scheduling but still make constraint or coordination errors often enough that staff must routinely verify details against clinical requirements and system availability.",
+      "_timestamp": "2026-04-05T21:35:52"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires interacting with patients or research subjects to coordinate availability, so stakeholders are directly involved, but deep trust or professional authority is not central.",
+      "adequacy_evidence": "Automated and AI-assisted scheduling systems (online portals, chatbots, IVR) are already widely accepted, and most stakeholders are comfortable with AI handling appointment logistics.",
+      "_timestamp": "2026-04-05T21:35:52"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1224.00",
+  "task_id": 17239,
+  "task_statement": "Review or transmit images and information using picture archiving or communications systems.",
+  "occupation_title": "Radiologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Reviewing or transmitting medical images through PACS is entirely computer-based and can be done remotely using networked imaging systems, a common practice in teleradiology."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple imaging modalities, hospital IT systems, and workflow variations, but is largely procedural and standardized within PACS environments.",
+      "adequacy_evidence": "There is substantial documentation and simulated interfaces for PACS workflows, but real-world system heterogeneity and restricted clinical data access create gaps that are only partially addressable through synthetic or limited-access data.",
+      "_timestamp": "2026-04-06T05:04:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely procedural, involving accessing, reviewing, and transmitting imaging data through established PACS workflows with explicit instructions and standardized protocols.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured workflows and infer straightforward transmission or review objectives when inputs and system context are clearly defined.",
+      "_timestamp": "2026-04-06T05:04:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing or transmitting images in PACS primarily involves standardized workflows (retrieval, routing, labeling) governed by explicit procedures rather than diagnostic judgment.",
+      "adequacy_evidence": "Current AI systems and software tools can reliably execute these procedural tasks with minimal need for experiential calibration or tacit knowledge.",
+      "_timestamp": "2026-04-06T05:04:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a small sequence of steps (retrieving images, checking metadata, possibly annotating or routing), where consistency matters but the chain is not long or highly interdependent.",
+      "adequacy_evidence": "Frontier AI agents can reliably execute short to moderate workflows like data retrieval, validation, and transmission without noticeable degradation over the sequence length.",
+      "_timestamp": "2026-04-06T05:04:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centers on viewing, interpreting, and transmitting medical images (e.g., CT, MRI, X-ray) via PACS, which requires detailed visual perception and often spatial reasoning; text alone is insufficient.",
+      "adequacy_evidence": "Current AI systems can process and analyze medical images and integrate them with text, but they remain less reliable for subtle findings, edge cases, and clinically nuanced interpretation compared to expert radiologists.",
+      "_timestamp": "2026-04-06T05:04:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Radiologists often need to review and transmit images within minutes, especially in acute care settings, but many cases allow short delays rather than strict real-time response.",
+      "adequacy_evidence": "Current AI systems can process and transmit medical images rapidly, with inference times well within clinical turnaround expectations, so speed constraints do not significantly degrade quality.",
+      "_timestamp": "2026-04-06T05:04:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Radiologists often compare current images with prior studies and reference patient history across encounters, but this information is typically stored and retrieved via PACS/EHR systems rather than personal memory.",
+      "adequacy_evidence": "Current AI systems can reliably access and retrieve longitudinal imaging and patient data from integrated systems, so cross-session memory needs are well supported by existing infrastructure.",
+      "_timestamp": "2026-04-06T05:04:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiologists must handle large volumes of imaging data (often hundreds to thousands of slices), integrate metadata, and compare with prior studies within a single review episode, where missing subtle details can affect diagnosis.",
+      "adequacy_evidence": "Agentic systems can offload storage and retrieval to tools (e.g., PACS integrations), but still struggle with consistent tracking, cross-referencing, and compression of high-volume multimodal data across many images.",
+      "_timestamp": "2026-04-06T05:04:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying correct image routing, patient matching, and completeness in PACS requires attention and domain familiarity, but errors (e.g., wrong patient, missing series) are often detectable through standard checks and system safeguards.",
+      "adequacy_evidence": "AI systems can manage metadata and transmission workflows but still make occasional mismatches or omissions, requiring routine human verification to ensure accuracy and prevent clerical or routing errors.",
+      "_timestamp": "2026-04-06T05:04:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves transmitting and reviewing imaging data for other clinicians, who rely on the output, but the performer\u2019s personal identity is not central to its effectiveness.",
+      "adequacy_evidence": "Clinicians already accept automated and AI-assisted systems in PACS workflows, and there is little resistance to AI handling image transmission or preliminary handling tasks.",
+      "_timestamp": "2026-04-06T05:04:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in transmitting or organizing images (e.g., mislabeling or routing) can delay diagnosis or care, but are typically recoverable and rarely directly cause irreversible harm.",
+      "adequacy_evidence": "Current AI-integrated PACS workflows with logging, redundancy, and human oversight can reduce residual error risk to acceptable levels; failures are usually detectable and correctable post hoc.",
+      "_timestamp": "2026-04-06T05:04:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Transmitting images via PACS is not restricted, but reviewing radiological images for clinical purposes is generally considered part of the practice of medicine, which requires a licensed physician. AI can be used as an FDA-regulated medical device to assist, but fully autonomous review without physician oversight sits in a partially restricted, ambiguous regulatory space rather than being clearly permitted.",
+      "_timestamp": "2026-04-06T05:04:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2072.00",
+  "task_id": 3411,
+  "task_statement": "Obtain and compile copies of loan applicants' credit histories, corporate financial statements, and other financial information.",
+  "occupation_title": "Loan Officers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Loan officers usually obtain credit reports and financial documents through online credit bureaus, email, and digital document systems, but some applicants still provide physical paperwork that must be collected or scanned."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different applicant types (individuals, small businesses, corporations) and document sources, but follows standardized financial document categories and procedures.",
+      "adequacy_evidence": "Extensive documentation, forms, workflows, and synthetic data can replicate these processes, and there is no major gap in accessible examples of how to gather and compile such financial information.",
+      "_timestamp": "2026-04-06T00:16:42"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely procedural, involving gathering specified documents from known sources and compiling them according to standard requirements, with minimal need for experience-based judgment.",
+      "adequacy_evidence": "Current AI agents with tool access can reliably follow documented procedures, query databases, and organize retrieved financial information without needing tacit, experience-derived calibration.",
+      "_timestamp": "2026-04-06T00:16:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling applicants' financial documents is a back-office task with turnaround times typically measured in minutes to hours or longer, not requiring immediate responses.",
+      "adequacy_evidence": "Current AI agents can retrieve, organize, and compile such information well within acceptable timeframes without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-06T00:16:43"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps\u2014requesting, retrieving, verifying, and organizing financial documents\u2014but these are moderately interdependent and do not form highly complex or tightly coupled sequences.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute multi-step document retrieval and compilation workflows with minimal degradation, as the sequence length and dependency structure are manageable.",
+      "_timestamp": "2026-04-06T00:16:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering and organizing multiple financial documents (credit histories, financial statements) from different sources, requiring some tracking and consolidation within a single workflow.",
+      "adequacy_evidence": "Current AI agents with tool use and document handling can reliably retrieve, store, and organize multiple documents within a session without significant loss of context or state.",
+      "_timestamp": "2026-04-06T00:16:43"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves collecting and organizing textual and numeric financial documents such as credit reports and financial statements, which are fundamentally text-based.",
+      "adequacy_evidence": "Current AI agents can reliably process, extract, and compile information from digital financial documents, with no meaningful multimodal limitations for this task.",
+      "_timestamp": "2026-04-06T00:16:44"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task follows established underwriting guidelines, but required documents and acceptable sources vary by loan type, applicant profile, and institutional policy, requiring some contextual judgment.",
+      "adequacy_evidence": "Current agents can follow standard checklists and infer typical requirements, but may miss institution-specific nuances or edge cases without human clarification.",
+      "_timestamp": "2026-04-06T00:16:44"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves ensuring documents are complete, up-to-date, and correctly matched to the applicant, often requiring cross-checking against authoritative sources and checklists but not deep forensic analysis.",
+      "adequacy_evidence": "AI systems can gather and organize documents but may mislabel, omit items, or pull outdated records, so human review is still needed to confirm completeness and correctness.",
+      "_timestamp": "2026-04-06T00:16:45"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in compiling applicant financial information can affect loan decisions, but they are typically caught in underwriting reviews and are rarely irreversible or catastrophic on their own.",
+      "adequacy_evidence": "AI-generated compilations can be cross-checked against source documents and databases, and standard verification processes make residual errors unlikely to persist at problematic levels.",
+      "_timestamp": "2026-04-06T00:16:45"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each loan application is typically handled as a discrete case, with required documents gathered and compiled independently of prior applicants or long-term history.",
+      "adequacy_evidence": "Since the task is largely self-contained per applicant, existing data storage and retrieval systems already fully meet any minimal cross-session needs.",
+      "_timestamp": "2026-04-06T00:16:46"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with applicants and financial institutions to collect documents, but success does not depend on the performer's personal authority or identity.",
+      "adequacy_evidence": "Applicants and institutions already accept automated systems (e.g., online portals, credit pulls) for document collection, so AI involvement would not meaningfully reduce acceptance.",
+      "_timestamp": "2026-04-06T00:16:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "No explicit law prohibits AI from obtaining and compiling applicants\u2019 financial and credit information, provided the entity using the AI complies with regulations like the Fair Credit Reporting Act and GLBA. These rules govern permissible access and data handling, not whether AI tools can be used.",
+      "_timestamp": "2026-04-06T00:16:46"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

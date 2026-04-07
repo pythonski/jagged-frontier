@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.01",
+  "task_id": 16246,
+  "task_statement": "Calculate sample size requirements for clinical studies.",
+  "occupation_title": "Biostatisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Sample size calculations are performed using statistical formulas and software based on study parameters, which can be done entirely on a computer without any physical presence or specialized equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Sample size calculations vary across study designs (e.g., RCTs, survival analysis, non-inferiority, cluster trials) and assumptions (effect size, variance, power, dropout), but these variations are well-characterized and follow structured statistical frameworks.",
+      "adequacy_evidence": "Extensive textbooks, guidelines (e.g., FDA, CONSORT), software documentation, and worked examples provide detailed, step-by-step procedures across nearly all common scenarios, making representative training coverage readily achievable.",
+      "_timestamp": "2026-04-05T20:44:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Sample size calculation involves a structured multi-step process (defining endpoints, assumptions, statistical models, power, effect sizes), where earlier choices influence later computations but the sequence is not \u0905\u0924\u094d\u092f long or deeply interdependent.",
+      "adequacy_evidence": "AI agents can generally follow the sequence with tools, but may show moderate degradation through missed constraints, inconsistent assumptions, or small compounding errors across steps.",
+      "_timestamp": "2026-04-05T20:44:07"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While core formulas and power calculations are well-specified, choosing inputs like effect sizes, variance estimates, dropout rates, and clinically meaningful differences requires experience and domain judgment.",
+      "adequacy_evidence": "Agents can execute calculations and suggest reasonable defaults, but often lack calibrated judgment for context-specific assumptions, especially in novel or high-stakes study designs.",
+      "_timestamp": "2026-04-05T20:44:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Sample size calculations depend on implicitly chosen parameters (effect size, variance, endpoints, dropout rates, multiplicity adjustments, regulatory standards) that are often not fully specified and require domain-informed assumptions.",
+      "adequacy_evidence": "Agents can identify required inputs and perform calculations, but often struggle to infer realistic clinical assumptions and stakeholder intent without iterative clarification from experts.",
+      "_timestamp": "2026-04-05T20:44:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Requires tracking multiple parameters (effect size, variance, power, alpha, study design features) and possibly iterating across scenarios, but the total information volume is structured and manageable.",
+      "adequacy_evidence": "Current agents reliably handle parameter tracking, formula application, and scenario comparisons within a single session without significant context loss.",
+      "_timestamp": "2026-04-05T20:44:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Sample size calculations are typically self-contained given a study protocol's parameters (effect size, power, significance level, design), without needing historical or cross-session context.",
+      "adequacy_evidence": "Current AI systems can handle any minimal context persistence (e.g., protocol documents) via standard storage and retrieval, with no meaningful gaps for this task.",
+      "_timestamp": "2026-04-05T20:44:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Sample size calculation relies on numerical inputs, statistical formulas, and study design parameters that are fully representable in text and structured data.",
+      "adequacy_evidence": "Current AI systems handle text and numerical reasoning for statistical calculations without needing multimodal perception or generation.",
+      "_timestamp": "2026-04-05T20:44:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Sample size calculations for clinical studies are typically performed in planning phases where minutes to hours of computation and deliberation are acceptable, with no real-time pressure.",
+      "adequacy_evidence": "Current AI systems can perform statistical calculations and iterative scenario analyses well within these generous time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T20:44:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "FDA and clinical research regulations require that trial design and statistical methods be overseen by qualified human experts (e.g., biostatisticians), but they do not explicitly prohibit the use of AI tools to perform calculations. This creates partial restriction because a human remains legally responsible for the work.",
+      "_timestamp": "2026-04-05T20:44:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Sample size calculations are used by clinical investigators, sponsors, and regulators who rely on the biostatistician\u2019s output, though the interpersonal role is limited and mostly technical.",
+      "adequacy_evidence": "Stakeholders may accept AI-assisted calculations, but full replacement by an AI agent may face resistance due to trust, accountability, and regulatory expectations for qualified human statisticians to review and sign off.",
+      "_timestamp": "2026-04-05T20:44:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect sample size calculations can lead to underpowered or overpowered clinical trials, resulting in invalid conclusions, wasted resources, or exposing patients to unnecessary risk, making even rare residual errors consequential.",
+      "adequacy_evidence": "With standard statistical formulas, software validation, and expert review, many errors can be caught, but AI may still miss nuanced design assumptions or context-specific factors, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T20:44:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Sample size calculations can be checked via established formulas, software, or simulation, but require statistical expertise to verify assumptions (effect size, variance, power, design) and ensure correctness.",
+      "adequacy_evidence": "AI can produce plausible calculations but may mis-specify assumptions or misuse methods, so outputs require expert review and recomputation, though verification is feasible with standard tools.",
+      "_timestamp": "2026-04-05T20:44:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

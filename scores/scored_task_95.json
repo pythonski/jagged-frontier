@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1151.00",
+  "task_id": 95,
+  "task_statement": "Schedule classes based on availability of classrooms, equipment, or instructors.",
+  "occupation_title": "Training and Development Specialists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Scheduling classes by coordinating availability of classrooms, equipment, and instructors is typically done using calendars, scheduling software, email, or learning management systems, all of which can be handled entirely online without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Class scheduling spans varied constraint combinations (room capacity, equipment, instructor availability, institutional policies), but these fall within a well-structured and repeatedly studied timetabling problem space.",
+      "adequacy_evidence": "There are abundant real and synthetic timetabling datasets, optimization benchmarks, and procedural examples, and new instances can be easily generated with full process visibility for training and evaluation.",
+      "_timestamp": "2026-04-05T21:06:01"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Beyond explicit constraints (room capacity, availability), schedulers often apply soft preferences (e.g., instructor convenience, cohort flow, minimizing conflicts) that benefit from experience-based tradeoffs.",
+      "adequacy_evidence": "These preferences can be formalized as optimization criteria or learned from examples, and current AI agents with constraint solvers can reliably replicate such judgment once specified.",
+      "_timestamp": "2026-04-05T21:06:02"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While core constraints (room availability, instructor schedules, equipment) are explicit, important preferences like instructor convenience, class sequencing, and organizational priorities are often implicit and require interpretation.",
+      "adequacy_evidence": "Current agents can optimize over explicit constraints but often miss or misweight latent preferences and informal priorities, requiring human iteration to refine schedules.",
+      "_timestamp": "2026-04-05T21:06:03"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires tracking multiple constraints (room capacities, instructor availability, equipment needs) and resolving conflicts within a single planning instance, but the information is typically structured and bounded.",
+      "adequacy_evidence": "Current agents with tool use (e.g., constraint solvers, spreadsheets) can reliably manage and update this information within an episode without significant loss or misretrieval.",
+      "_timestamp": "2026-04-05T21:06:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Class scheduling involves multiple interdependent steps (matching instructors, rooms, equipment, and time slots) where earlier decisions constrain later ones, but the sequence is typically bounded and can be iteratively adjusted.",
+      "adequacy_evidence": "LLM-based agents with scheduling tools can handle multi-step constraint satisfaction reasonably well, but may show some degradation over longer sequences through missed constraints or need for re-optimization.",
+      "_timestamp": "2026-04-05T21:06:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires maintaining and updating ongoing calendars, resource availability, and constraints across planning cycles (e.g., semesters or training programs), but does not depend on deep longitudinal case histories.",
+      "adequacy_evidence": "Current AI systems integrated with databases and calendar tools can reliably store, update, and retrieve scheduling state across sessions, with minimal gaps in persistent memory functionality.",
+      "_timestamp": "2026-04-05T21:06:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling classes based on availability of rooms, equipment, and instructors is primarily a structured, text/data-driven task using calendars, databases, and constraints rather than images or other modalities.",
+      "adequacy_evidence": "Current AI agents handle text-based scheduling, constraint satisfaction, and calendar integration well, with no meaningful need for multimodal perception or generation.",
+      "_timestamp": "2026-04-05T21:06:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Class scheduling is typically a planning task performed over minutes to hours, often iteratively, without real-time pressure.",
+      "adequacy_evidence": "Current AI systems can compute and optimize schedules within acceptable timeframes without needing to truncate reasoning, so latency does not degrade quality.",
+      "_timestamp": "2026-04-05T21:06:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from scheduling classes or allocating resources like classrooms, equipment, or instructors. This is an administrative task without licensing or mandated human decision-maker requirements.",
+      "_timestamp": "2026-04-05T21:06:06"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling errors (e.g., double-bookings, resource conflicts) can usually be detected through systematic checks against constraints, but verifying all constraints and edge cases requires some care and coordination.",
+      "adequacy_evidence": "Current AI systems can generate plausible schedules but still make constraint or edge-case errors, so routine validation with scheduling tools or human review is needed to ensure correctness.",
+      "_timestamp": "2026-04-05T21:06:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling errors (e.g., double-booked rooms or instructors) disrupt operations and cause inefficiencies, but are typically reversible and do not create severe or irreversible harm.",
+      "adequacy_evidence": "Modern AI systems combined with constraint-checking tools can reliably detect conflicts and inconsistencies, leaving minimal residual risk after standard validation processes.",
+      "_timestamp": "2026-04-05T21:06:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordinating schedules with instructors, learners, and facilities staff, who must use and sometimes negotiate the resulting timetable, but the scheduler\u2019s personal identity is not central.",
+      "adequacy_evidence": "Scheduling is already widely handled by software systems, and stakeholders generally accept automated or AI-assisted scheduling as long as constraints are met and results are accurate.",
+      "_timestamp": "2026-04-05T21:06:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-1022.00",
+  "task_id": 3536,
+  "task_statement": "Search legal records, survey records, and land titles to obtain information about property boundaries in areas to be surveyed.",
+  "occupation_title": "Surveyors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Many legal records, survey records, and land titles are now accessible through online government databases and digital archives, allowing remote research. However, some jurisdictions still require accessing physical records or archives at county offices or courthouses."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task follows documented procedures for locating and extracting records, interpreting ambiguous legal descriptions, resolving conflicting deeds, and recognizing relevant boundary evidence requires experience-based judgment.",
+      "adequacy_evidence": "Current agents can retrieve and parse records well but show gaps in nuanced legal interpretation and contextual judgment in edge cases, especially when records are inconsistent or require professional inference.",
+      "_timestamp": "2026-04-05T21:33:32"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different jurisdictions, document types (deeds, plats, title reports), and historical formats, creating moderate variability but within a structured legal-record domain.",
+      "adequacy_evidence": "Many records are digitized and accessible for training, but important portions (local archives, handwritten or poorly scanned documents, jurisdiction-specific quirks) remain thin or inconsistently available.",
+      "_timestamp": "2026-04-05T21:33:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the goal is clear (obtain boundary information), determining which records are authoritative, resolving conflicting descriptions, and interpreting legal language requires contextual judgment about jurisdiction and case specifics.",
+      "adequacy_evidence": "Agents can retrieve and parse records, but often struggle with resolving ambiguities in legal descriptions and selecting the most relevant or authoritative sources without human guidance.",
+      "_timestamp": "2026-04-05T21:33:32"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step research across different record systems (legal, survey, title), requiring consistent tracking of parcels and boundaries, but steps are relatively modular rather than tightly interdependent.",
+      "adequacy_evidence": "AI agents can generally sustain multi-step document retrieval and synthesis, though they may exhibit some drift or inconsistency when chaining searches and reconciling records across sources.",
+      "_timestamp": "2026-04-05T21:33:33"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating information from multiple heterogeneous documents (legal records, surveys, land titles) and tracking relevant boundary details, but the volume is typically manageable with structured retrieval and note consolidation.",
+      "adequacy_evidence": "Current agents can use retrieval tools and summarize documents effectively, but may occasionally miss or misalign key details across sources, especially when records are complex or inconsistently formatted.",
+      "_timestamp": "2026-04-05T21:33:33"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Searching legal and land records for boundary information is typically a deliberative research task where minutes to hours are acceptable, not requiring real-time responsiveness.",
+      "adequacy_evidence": "Current AI agents can retrieve, parse, and synthesize relevant records well within these loose time constraints, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T21:33:33"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting legal texts but also often requires reading maps, plats, and survey diagrams, which introduces meaningful but not dominant visual modality use.",
+      "adequacy_evidence": "Current agents can handle text and basic document images well, but may struggle with complex survey plats, spatial annotations, or low-quality scans requiring precise visual-spatial interpretation.",
+      "_timestamp": "2026-04-05T21:33:33"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each property boundary search is typically self-contained, relying on external legal, survey, and title records rather than accumulated cross-project memory.",
+      "adequacy_evidence": "Current AI systems can easily retrieve and store any needed project-specific context, and no substantial cross-session memory is required for competent performance.",
+      "_timestamp": "2026-04-05T21:33:34"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Property boundary determination requires cross-referencing multiple legal and survey documents, interpreting technical descriptions (e.g., metes and bounds), and resolving discrepancies\u2014errors can be subtle and require expert review to detect.",
+      "adequacy_evidence": "Current AI systems can retrieve and summarize records but are prone to misinterpret legal language or miss conflicts across documents, meaning outputs require careful, expert-level verification to ensure accuracy.",
+      "_timestamp": "2026-04-05T21:33:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on information from external entities like government offices and title databases, and its outputs may be used by clients or officials, so stakeholder trust in the process and results has some relevance.",
+      "adequacy_evidence": "Many stakeholders would accept AI-assisted record searches if results are accurate, but some legal and professional contexts still expect human oversight, leading to moderate resistance rather than full acceptance.",
+      "_timestamp": "2026-04-05T21:33:35"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing rules prohibiting AI from searching legal, survey, or land title records; these are information-gathering activities that do not require a licensed surveyor. Regulations apply to certifying or signing survey results, not to conducting record searches.",
+      "_timestamp": "2026-04-05T21:33:35"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect boundary information can lead to legal disputes, costly resurveying, or invalid property claims, so even rare residual errors can have significant financial and legal consequences.",
+      "adequacy_evidence": "AI can retrieve and summarize records effectively, but subtle legal descriptions and inconsistencies across documents mean that even after normal checking, some misinterpretation risk remains.",
+      "_timestamp": "2026-04-05T21:33:35"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

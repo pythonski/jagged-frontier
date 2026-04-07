@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2036.00",
+  "task_id": 22836,
+  "task_statement": "Create and transfer reference images and localization markers for treatment delivery, using image-guided radiation therapy.",
+  "occupation_title": "Medical Dosimetrists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 90,
+    "reasoning": "Creating and transferring reference images and localization markers is performed within radiation treatment planning and imaging software systems (e.g., PACS/treatment planning platforms). The work consists of digital image processing and data transfer rather than hands-on patient or equipment interaction."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step workflow (image acquisition, registration, marker placement, and transfer into treatment systems) where consistency across steps matters, but the sequence is relatively bounded and standardized rather than long and highly interdependent.",
+      "adequacy_evidence": "Current AI agents can manage structured multi-step imaging workflows but may show moderate degradation in maintaining alignment accuracy and constraint consistency across steps, especially when handling complex spatial transformations or iterative corrections.",
+      "_timestamp": "2026-04-06T00:15:47"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse cancer sites, anatomies, imaging modalities (CT, CBCT, MRI), and patient-specific setup variations, creating a heterogeneous and context-sensitive distribution of cases.",
+      "adequacy_evidence": "While large medical imaging datasets and some procedural documentation exist, detailed step-by-step expert workflows for marker placement and image registration are often proprietary and sparse, though partially recoverable via simulation and targeted training.",
+      "_timestamp": "2026-04-06T00:15:47"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While protocols define general procedures, selecting appropriate reference images and localization markers depends on patient-specific anatomy, tumor location, and physician intent, requiring some contextual interpretation.",
+      "adequacy_evidence": "Current AI systems can follow standardized imaging and marker placement rules but often miss nuanced clinical preferences or implicit goals, requiring human oversight to refine choices.",
+      "_timestamp": "2026-04-06T00:15:47"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on established imaging protocols and registration techniques but still requires experience-based judgment to handle anatomical variation, imaging artifacts, and patient positioning nuances.",
+      "adequacy_evidence": "Current AI systems can perform image registration and marker placement in many standard cases, but they lack consistent calibration for atypical anatomy, motion effects, and subtle clinical context requiring human-like discernment.",
+      "_timestamp": "2026-04-06T00:15:47"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large, high-resolution 3D imaging datasets, treatment plans, spatial coordinates, and anatomical landmarks while maintaining precise alignment and consistency across systems within a single session.",
+      "adequacy_evidence": "Current agents can track structured data and use tools for image handling, but often struggle with maintaining precise spatial coherence and managing large multimodal contexts without loss or drift.",
+      "_timestamp": "2026-04-06T00:15:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task centrally relies on interpreting and generating medical imaging (e.g., CT, MRI, on-board imaging) and spatially precise localization markers for radiation delivery, requiring high-fidelity cross-modal reasoning over visual and spatial data.",
+      "adequacy_evidence": "Current AI agents lack clinically reliable precision in medical image interpretation, spatial alignment, and DICOM-integrated workflows required for radiation therapy, especially at the fine-grained accuracy and safety standards needed.",
+      "_timestamp": "2026-04-06T00:15:49"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Image-guided radiation therapy workflows require timely creation and transfer of reference images and localization markers during treatment sessions, typically within seconds to a few minutes to avoid delaying patient care.",
+      "adequacy_evidence": "Frontier AI systems can process medical images and generate or transfer markers within these time constraints without needing to truncate reasoning significantly, so speed does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T00:15:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task\u2019s outputs are used by radiation oncologists and therapists for treatment delivery, so professional stakeholders must trust and engage with the work, though direct patient interaction is limited.",
+      "adequacy_evidence": "Clinicians may accept AI-assisted tools if validated, but full replacement by an AI agent could face moderate resistance due to trust, liability, and clinical accountability concerns.",
+      "_timestamp": "2026-04-06T00:15:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying correct placement of reference images and localization markers in image-guided radiation therapy requires expert interpretation of imaging, spatial alignment, and anatomical context; errors can be subtle and not immediately visible without detailed review.",
+      "adequacy_evidence": "Current AI systems can assist with image registration and marker placement but still produce non-obvious errors in complex or noisy clinical cases, necessitating thorough expert checking for each instance.",
+      "_timestamp": "2026-04-06T00:15:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task relies on patient-specific imaging data, prior reference images, and established localization markers across multiple treatment sessions, but this information is typically stored in structured oncology systems rather than requiring evolving informal memory.",
+      "adequacy_evidence": "Current AI systems can reliably access and retrieve longitudinal patient data from integrated medical record and imaging systems, so cross-session memory needs are well supported by existing infrastructure.",
+      "_timestamp": "2026-04-06T00:15:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Radiation therapy procedures, including image-guided setup and localization, must be performed under the supervision of licensed clinicians (e.g., radiation oncologists, medical physicists) per federal/state regulations and accreditation standards, with required human oversight and sign-off. This effectively prohibits fully autonomous AI performance of the task.",
+      "_timestamp": "2026-04-06T00:15:51"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Small errors in image registration or marker placement can lead to radiation being delivered to the wrong location, risking serious harm to healthy tissue or underdosing the tumor, so residual errors must be extremely rare.",
+      "adequacy_evidence": "While AI-assisted image registration can be reviewed with existing QA workflows (e.g., clinician verification and imaging checks), subtle alignment errors or edge cases may still escape detection, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T00:15:51"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

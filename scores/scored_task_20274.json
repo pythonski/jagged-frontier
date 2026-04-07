@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5011.00",
+  "task_id": 20274,
+  "task_statement": "Prepare manifests showing numbers of airplane passengers and baggage, mail, and freight weights, transmitting data to destinations.",
+  "occupation_title": "Cargo and Freight Agents",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Preparing and transmitting manifests is typically done in airline or logistics software systems, making the core work computer-based. However, it often relies on on-site operational data (e.g., baggage counts, cargo weights, coordination with ramp staff), which can require physical presence in the terminal environment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing manifests for passengers, baggage, mail, and freight is largely governed by standardized procedures, documented formats, and explicit weight/count rules with little need for experiential judgment.",
+      "adequacy_evidence": "AI agents can reliably follow structured data entry, aggregation, and transmission procedures, including handling routine discrepancies using predefined rules, with minimal need for tacit calibration.",
+      "_timestamp": "2026-04-06T00:03:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple interdependent steps\u2014collecting counts and weights, aggregating them correctly, formatting manifests, and transmitting data\u2014requiring consistency across a short workflow.",
+      "adequacy_evidence": "Modern AI agents with tool use (e.g., spreadsheets, validation scripts) can reliably maintain accuracy across these moderate-length sequences without noticeable degradation.",
+      "_timestamp": "2026-04-06T00:03:46"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing cargo and passenger manifests follows standardized formats with explicit required fields (counts, weights, categories, destinations) defined by regulations and company procedures.",
+      "adequacy_evidence": "Current AI agents can reliably map structured input data into prescribed manifest formats and transmission protocols with minimal ambiguity or need for iterative interpretation.",
+      "_timestamp": "2026-04-06T00:03:46"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different flight types (passenger vs cargo), shipment categories, airline procedures, and regulatory contexts, but follows largely standardized formats (e.g., IATA manifests) with bounded variation.",
+      "adequacy_evidence": "Extensive documentation, templates, and procedural examples exist for manifests and load reporting, and synthetic or simulated data can readily cover variations, leaving little gap in accessible training signal.",
+      "_timestamp": "2026-04-06T00:03:47"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires aggregating and reconciling multiple structured data inputs (passenger counts, baggage, mail, freight weights) into a manifest, but the information is typically well-defined and bounded within standard forms.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, databases) can reliably track, aggregate, and transmit this level of structured information within an episode without significant loss or drift.",
+      "_timestamp": "2026-04-06T00:03:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily compiling and transmitting structured numerical and textual data (passenger counts, baggage, freight weights) into manifests, which is fundamentally text- and data-driven.",
+      "adequacy_evidence": "Current AI agents can fully handle text and numerical data processing and transmission workflows, so there is no meaningful multimodal gap.",
+      "_timestamp": "2026-04-06T00:03:49"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing manifests is a transactional task based on current flight, passenger, and cargo data; each instance is largely self-contained and does not rely on prior cases.",
+      "adequacy_evidence": "Since cross-session memory is not required for competent performance, existing AI systems are fully adequate with respect to this dimension.",
+      "_timestamp": "2026-04-06T00:03:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves transmitting manifests to other operational stakeholders (airlines, logistics partners) who rely on the data, but the performer\u2019s identity or personal interaction is not central.",
+      "adequacy_evidence": "These stakeholders primarily care about data accuracy and timeliness, and would generally accept AI-generated manifests as long as they meet operational standards.",
+      "_timestamp": "2026-04-06T00:03:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Errors in passenger counts or cargo weights can impact aircraft weight-and-balance calculations, regulatory compliance, and logistics, where even rare residual mistakes can have safety or operational consequences.",
+      "adequacy_evidence": "These tasks are highly structured and cross-checkable (totals, consistency with bookings and load plans), and current AI systems with validation pipelines can reduce residual error to acceptable levels after normal quality control.",
+      "_timestamp": "2026-04-06T00:03:50"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Manifest preparation relies on reconciling structured data (passenger counts, baggage weights, freight totals) against source systems and measurements; errors are usually detectable through cross-checks but require attention and procedural verification.",
+      "adequacy_evidence": "AI systems can compile and format such data but may introduce mismatches or omissions when integrating multiple sources, so human or automated reconciliation checks are still needed at a moderate level.",
+      "_timestamp": "2026-04-06T00:03:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit FAA or other U.S. regulations prohibiting automated or AI systems from preparing and transmitting cargo and passenger manifests; such tasks are already commonly handled by software systems. While accuracy and accountability are regulated, rules do not mandate a human to perform the task itself.",
+      "_timestamp": "2026-04-06T00:03:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Preparing and transmitting cargo and passenger manifests is time-sensitive within operational workflows, but typically allows seconds to a few minutes rather than requiring instantaneous response.",
+      "adequacy_evidence": "LLM-based agents with tooling can generate, verify, and transmit structured manifest data well within these time bounds, with no meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-06T00:03:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

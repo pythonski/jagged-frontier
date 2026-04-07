@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-6041.00",
+  "task_id": 8644,
+  "task_statement": "Review traffic control or barricade plans to issue permits for parades or other special events or for construction work that affects rights of way, providing assistance with plan preparation or revision, as necessary.",
+  "occupation_title": "Traffic Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Reviewing traffic control or barricade plans and issuing permits is typically done using digital documents, email, and permitting systems, but some cases require site visits or in-person coordination to verify conditions or assist with plan revisions."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While guided by standards (e.g., MUTCD) and local regulations, reviewers must apply experience-based judgment to assess real-world traffic flow, safety risks, and practicality of plans in specific contexts.",
+      "adequacy_evidence": "Current AI can apply codified rules and flag obvious issues, but lacks consistent calibration for nuanced, context-specific safety judgments and local traffic behavior, especially in non-routine cases.",
+      "_timestamp": "2026-04-05T23:00:39"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied but structured scenarios (different event types, roadway classes, and local jurisdictions), with meaningful diversity but strong reliance on standardized guidelines (e.g., MUTCD, typical traffic control plans).",
+      "adequacy_evidence": "Public manuals, engineering standards, and example plans provide substantial coverage, but local regulations, site-specific constraints, and proprietary permit datasets create partial gaps that require targeted synthesis or fine-tuning.",
+      "_timestamp": "2026-04-05T23:00:40"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is guided by formal standards (e.g., MUTCD, local ordinances), but reviewers must interpret context-specific factors like site conditions, traffic flow, safety tradeoffs, and stakeholder needs when approving or suggesting revisions.",
+      "adequacy_evidence": "Current agents can apply codified rules and flag obvious issues, but they often miss locally nuanced constraints or implicit safety expectations, requiring human iteration to align with real-world permitting standards.",
+      "_timestamp": "2026-04-05T23:00:40"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing detailed plans, checking compliance with regulations, issuing permits, and iterating with applicants on revisions, requiring a moderate sequence of interdependent steps but not extremely long workflows.",
+      "adequacy_evidence": "AI agents can generally manage multi-step document review and feedback loops, but may exhibit some degradation over iterative revisions, such as missing constraints or inconsistencies across steps.",
+      "_timestamp": "2026-04-05T23:00:41"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing and permitting often benefits from access to prior permits, ongoing project records, and jurisdiction-specific precedents, but each application is largely evaluated as a discrete case with documented inputs.",
+      "adequacy_evidence": "Current AI systems can store and retrieve permit histories and project context via external databases, but may inconsistently surface the most relevant prior cases or evolving local practices without careful system design.",
+      "_timestamp": "2026-04-05T23:00:41"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing traffic control or barricade plans requires integrating multiple documents (maps, regulations, site constraints) and tracking revisions within a single review cycle, but the information volume is structured and bounded.",
+      "adequacy_evidence": "Current agents can handle multi-document review with tools, but may lose track of specific constraints or cross-references across plan components, leading to occasional omissions or inconsistencies.",
+      "_timestamp": "2026-04-05T23:00:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing traffic control or barricade plans for permits is an administrative process that typically allows minutes to hours (or longer), not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can easily operate within these generous time windows, using extended reasoning without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T23:00:42"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on interpreting and evaluating visual-spatial plans (e.g., traffic control diagrams, barricade layouts, maps of rights-of-way), where correct judgment depends on spatial relationships and graphical details not captured in text alone.",
+      "adequacy_evidence": "Current AI systems can interpret many diagrams and maps, but still struggle with complex, fine-grained spatial reasoning, domain-specific plan conventions, and ensuring regulatory compliance across varied visual formats.",
+      "_timestamp": "2026-04-05T23:00:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in traffic control or barricade plans can lead to accidents, injuries, or major disruptions, so even rare residual mistakes after review can have serious safety and liability consequences.",
+      "adequacy_evidence": "While human oversight and standard checks can catch many issues, AI may still miss context-specific hazards or local constraints, leaving a non-negligible residual risk in safety-critical scenarios.",
+      "_timestamp": "2026-04-05T23:00:44"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Permit issuance for traffic control and right-of-way impacts is typically legally vested in designated public officials or licensed authorities, requiring a human decision-maker and signature. This effectively prohibits fully autonomous AI execution of the task under current regulations.",
+      "_timestamp": "2026-04-05T23:00:44"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task involves direct interaction with event organizers, contractors, and public agencies, where the technician\u2019s authority and legitimacy are central to issuing permits and guiding plan revisions.",
+      "adequacy_evidence": "Stakeholders are unlikely to accept permit decisions or regulatory guidance from an AI alone, as legal authority, accountability, and trust in a human official are critical in this context.",
+      "_timestamp": "2026-04-05T23:00:44"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Plans can be checked against established standards (e.g., MUTCD), site constraints, and safety principles, but doing so requires domain expertise and careful review; some issues (e.g., traffic flow impacts) are not immediately obvious.",
+      "adequacy_evidence": "AI can draft and review plans but will still miss context-specific constraints or subtle compliance issues, so human experts must perform a meaningful review to verify safety and regulatory adherence.",
+      "_timestamp": "2026-04-05T23:00:45"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

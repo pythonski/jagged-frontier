@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2052.00",
+  "task_id": 1955,
+  "task_statement": "Compute charges for medication or equipment dispensed to hospital patients and enter data in computer.",
+  "occupation_title": "Pharmacy Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 90,
+    "reasoning": "Computing charges and entering billing data are computer-based administrative tasks that can be performed entirely within hospital information systems. The task itself does not require handling medications or equipment, only digital records."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing charges for medications or equipment follows standardized pricing schedules, billing codes, and documented procedures with little need for experiential judgment.",
+      "adequacy_evidence": "Current AI systems can reliably apply explicit billing rules, fee schedules, and data entry procedures with minimal need for tacit calibration.",
+      "_timestamp": "2026-04-05T22:20:59"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves variation across drug types, equipment, insurance plans, and hospital billing rules, but follows structured, rule-based coding and pricing procedures.",
+      "adequacy_evidence": "Extensive billing datasets, coding guidelines, and software workflows provide clear, process-level supervision, and remaining variability can be covered through synthetic rule-based generation and fine-tuning.",
+      "_timestamp": "2026-04-05T22:21:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task follows explicit billing rules, fee schedules, and predefined coding systems for medications and equipment, with clear procedures for data entry.",
+      "adequacy_evidence": "Current AI systems can reliably apply structured billing rules and extract required information from records with minimal ambiguity, given proper integration with hospital systems.",
+      "_timestamp": "2026-04-05T22:21:00"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence of steps\u2014retrieving medication or equipment details, applying pricing rules, and entering data\u2014where consistency matters but the chain is not long or highly interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably execute these structured, moderately sequential workflows without noticeable degradation, especially with tool support and validation checks.",
+      "_timestamp": "2026-04-05T22:21:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling patient identifiers, medication/equipment details, pricing, and possibly billing codes within a single episode, requiring some integration of multiple data fields but not large or highly dynamic information loads.",
+      "adequacy_evidence": "Current AI agents with tool integration handle structured data entry, retrieval, and simple computations reliably within a single session without significant context loss.",
+      "_timestamp": "2026-04-05T22:21:01"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Charge computation and data entry occur within active pharmacy workflows, so results are expected within seconds to a minute to avoid slowing dispensing processes.",
+      "adequacy_evidence": "LLM-based agents with calculator and database tools can perform pricing lookups and arithmetic almost instantly, well within the time constraints without degrading accuracy.",
+      "_timestamp": "2026-04-05T22:21:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily numerical and text-based, involving billing codes, medication records, and data entry in computer systems with minimal reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI systems handle text and numerical processing well, and no meaningful multimodal capability is required for competent performance.",
+      "_timestamp": "2026-04-05T22:21:01"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each charging task is typically a discrete transaction based on current prescription and billing data retrieved from hospital systems; it does not rely on the technician personally maintaining longitudinal context across sessions.",
+      "adequacy_evidence": "Existing IT systems (EHRs, billing platforms) already store and retrieve necessary patient and charge history, so AI agents do not face meaningful gaps in cross-session memory for this task.",
+      "_timestamp": "2026-04-05T22:21:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is a back-office data entry and billing computation task with no direct interaction requiring stakeholder acceptance of the performer.",
+      "adequacy_evidence": "Hospitals already use automated billing systems, and stakeholders are indifferent to whether a human or AI performs these internal calculations.",
+      "_timestamp": "2026-04-05T22:21:02"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors mainly affect billing accuracy, reimbursement, and patient charges; while important, they are typically correctable and rarely pose direct clinical harm after standard checks.",
+      "adequacy_evidence": "AI systems can reliably perform structured billing calculations and data entry, and with routine verification (e.g., audits, system checks), residual error rates are low and acceptable.",
+      "_timestamp": "2026-04-05T22:21:02"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from performing billing calculations or data entry for medication or equipment charges. While pharmacy operations are regulated, this specific administrative task does not legally require a licensed human to execute it.",
+      "_timestamp": "2026-04-05T22:21:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Billing is governed by structured fee schedules, codes, and order records, so many errors can be detected through reconciliation and system checks, though some mismatches (e.g., incorrect codes or quantities) require review and may not be immediately obvious.",
+      "adequacy_evidence": "AI can apply pricing rules and data entry reliably but still makes occasional coding or mapping errors, so routine verification against orders and billing systems remains necessary.",
+      "_timestamp": "2026-04-05T22:21:03"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2071.01",
+  "task_id": 7335,
+  "task_statement": "Interview applicants and request specified information for loan applications.",
+  "occupation_title": "Credit Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Loan application interviews are frequently conducted by phone or video and the information is entered into digital systems, making them easily done remotely. However, many banks and credit unions still conduct a significant share of interviews face-to-face in branches."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of applicant profiles (income types, credit histories, communication styles), but interactions are largely structured around standardized forms and predefined information requirements.",
+      "adequacy_evidence": "Extensive training data exists in the form of loan interview scripts, call center transcripts, and financial intake workflows, and missing variations can be effectively covered through synthetic dialogue generation and role-play environments.",
+      "_timestamp": "2026-04-06T01:03:13"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task follows standardized questions and documentation requirements, effective interviewing often involves some experiential judgment in probing unclear answers, building rapport, and recognizing inconsistencies.",
+      "adequacy_evidence": "Current AI agents can handle structured questioning and basic clarification well, but show gaps in nuanced interpersonal calibration and adaptive probing in less routine or sensitive cases.",
+      "_timestamp": "2026-04-06T01:03:13"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While loan applications have defined required information, effective interviewing involves some contextual judgment (e.g., clarifying incomplete answers, adapting phrasing, probing inconsistencies).",
+      "adequacy_evidence": "Current AI agents can reliably follow structured interview protocols, ask clarifying questions, and iteratively refine responses, handling most ambiguity in this task with minimal difficulty.",
+      "_timestamp": "2026-04-06T01:03:13"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-turn interviews where the counselor must consistently gather required information across a structured but moderately extended interaction.",
+      "adequacy_evidence": "AI agents can generally sustain coherent multi-step dialogues, but may occasionally miss required fields, lose context, or drift over longer conversations.",
+      "_timestamp": "2026-04-06T01:03:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple pieces of applicant-provided information (income, debts, personal details) during an interview, requiring some structured state management and retrieval within the session.",
+      "adequacy_evidence": "Modern LLM agents with form-filling scaffolds and memory buffers can reliably track and update structured fields during a single interaction, with minimal loss or drift in typical cases.",
+      "_timestamp": "2026-04-06T01:03:14"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily conversational and information-gathering, which can be fully conducted via text (e.g., forms, chat) without reliance on visual or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents can handle text-based interviews and information collection effectively, and any optional audio interface is already well-supported by existing systems.",
+      "_timestamp": "2026-04-06T01:03:15"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan application interviews are often per applicant but may require recalling prior interactions, existing client records, or previously submitted financial details across sessions.",
+      "adequacy_evidence": "Current AI agents can integrate with CRM systems to store and retrieve applicant histories, but retrieval can be inconsistent or incomplete across systems, leading to moderate gaps.",
+      "_timestamp": "2026-04-06T01:03:15"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves live or near-live interaction with applicants, requiring responses within seconds to maintain conversational flow, but not split-second precision.",
+      "adequacy_evidence": "Frontier AI agents can sustain coherent, accurate conversational exchanges within these latency bounds without needing to truncate reasoning in a way that harms performance.",
+      "_timestamp": "2026-04-06T01:03:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is structured around collecting specified information, and errors (missing fields, inconsistencies, misrecorded responses) can be detected through document checks, validation rules, or follow-up, though this requires some effort and attention.",
+      "adequacy_evidence": "Current AI agents can misinterpret responses or omit required details, so human review or validation workflows are still needed, but errors are generally detectable without deep expertise or long feedback loops.",
+      "_timestamp": "2026-04-06T01:03:16"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in collecting or recording applicant information can affect loan decisions, compliance, and customer experience, but are typically correctable and rarely irreversible if caught later.",
+      "adequacy_evidence": "AI can follow structured interview scripts, but may still misinterpret responses or miss nuances; even with review and validation checks, some residual risk around accuracy and compliance remains.",
+      "_timestamp": "2026-04-06T01:03:17"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves direct interaction with loan applicants who must provide sensitive financial information, so stakeholder engagement matters, but the role is primarily structured information gathering rather than deep relational trust-building.",
+      "adequacy_evidence": "Many applicants already accept automated or AI-assisted intake (e.g., online forms, chatbots), but some would be hesitant to disclose sensitive financial details to an AI, leading to moderate resistance.",
+      "_timestamp": "2026-04-06T01:03:17"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. regulations (e.g., SAFE Act for mortgage loan originators, fair lending and disclosure laws) require licensed individuals and compliance oversight when taking loan applications, but do not explicitly prohibit AI from conducting applicant interviews or collecting information under supervision. This creates partial constraint rather than a full ban.",
+      "_timestamp": "2026-04-06T01:03:17"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1199.06",
+  "task_id": 15704,
+  "task_statement": "Order or purchase merchandise to maintain optimal inventory levels.",
+  "occupation_title": "Online Merchants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Online merchants typically order merchandise through supplier websites, email, EDI systems, or online marketplaces, which can be done entirely on a computer. However, some cases involve visiting wholesalers, trade shows, or inspecting products in person before purchasing."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied product categories, demand patterns, seasonality, and supplier constraints, but follows broadly similar inventory management principles across contexts.",
+      "adequacy_evidence": "There is abundant data (e.g., retail logs, supply chain case studies, forecasting methods), but much high-quality signal on firm-specific demand patterns and supplier dynamics is proprietary, leaving some gaps that require approximation or synthesis.",
+      "_timestamp": "2026-04-06T03:38:21"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintaining optimal inventory involves judgment about demand variability, seasonality, promotions, and supplier reliability, which often relies on experience beyond fixed rules.",
+      "adequacy_evidence": "Current agents can model demand and optimize ordering using data-driven methods, but they still struggle with nuanced, context-specific adjustments (e.g., sudden market shifts or informal supplier knowledge) that experienced merchants handle.",
+      "_timestamp": "2026-04-06T03:38:22"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintaining inventory involves multi-step processes (forecasting demand, checking stock levels, selecting suppliers, placing and tracking orders), where consistency across steps matters but tasks are often modular and repeatable.",
+      "adequacy_evidence": "AI agents can generally manage these workflows with tools and automation, but may show some degradation over longer sequences (e.g., missed constraints or inconsistent updates) without careful orchestration.",
+      "_timestamp": "2026-04-06T03:38:22"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "\u201cOptimal inventory levels\u201d depend on context-specific factors like demand forecasts, seasonality, cash flow, supplier reliability, and risk tolerance, which are not fully explicit and require interpretation.",
+      "adequacy_evidence": "Current agents can model demand and constraints with data and tools, but often miss implicit business priorities (e.g., strategic overstocking, supplier relationships), requiring human adjustment.",
+      "_timestamp": "2026-04-06T03:38:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintaining optimal inventory depends on longitudinal data such as past sales trends, seasonality, supplier reliability, and evolving demand patterns across many prior ordering cycles.",
+      "adequacy_evidence": "Current agents can integrate with databases and retain structured history, but they still show gaps in consistently surfacing and correctly weighting long-term patterns like shifting demand or nuanced supplier performance.",
+      "_timestamp": "2026-04-06T03:38:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Inventory purchasing decisions are typically made on hourly to daily cycles using forecasts and reports; there is no need for immediate, real-time responses.",
+      "adequacy_evidence": "AI agents can take seconds to minutes to analyze data and optimize orders without impacting task performance, so latency does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T03:38:24"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying purchase decisions requires reviewing demand forecasts, inventory data, and supplier constraints; mistakes like overstocking or stockouts may only become evident over time rather than immediately.",
+      "adequacy_evidence": "Current AI can generate reasonable ordering recommendations, but errors in demand estimation or constraints handling are common enough that human review of quantities, timing, and assumptions is still needed.",
+      "_timestamp": "2026-04-06T03:38:25"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating inventory counts, sales trends, supplier constraints, and reorder thresholds within a session, but the information is typically structured and bounded (e.g., SKUs, dashboards, spreadsheets).",
+      "adequacy_evidence": "Agents can handle structured data retrieval and summarization with tools, but may occasionally lose track of evolving state or mis-handle edge cases when multiple constraints interact.",
+      "_timestamp": "2026-04-06T03:38:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from making purchasing or inventory ordering decisions for online retail operations. Businesses may impose internal controls, but these are not legal restrictions on AI use.",
+      "_timestamp": "2026-04-06T03:38:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inventory ordering errors can lead to overstock, stockouts, and financial inefficiencies, but these impacts are typically reversible and manageable rather than catastrophic.",
+      "adequacy_evidence": "With standard controls like approval workflows, inventory monitoring systems, and sales data checks, AI-generated recommendations can be validated effectively, leaving acceptable residual risk.",
+      "_timestamp": "2026-04-06T03:38:25"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily relies on structured data such as inventory counts, sales reports, supplier catalogs, and pricing information, all of which are text- and number-based.",
+      "adequacy_evidence": "Current AI agents can fully handle text and structured data workflows involved in ordering and inventory management without needing multimodal capabilities.",
+      "_timestamp": "2026-04-06T03:38:25"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves suppliers or vendors who receive and fulfill orders, but interaction is largely transactional and does not depend heavily on the performer's personal identity.",
+      "adequacy_evidence": "Automated procurement systems and AI-driven replenishment are already widely accepted in vendor relationships, with little resistance as long as orders are accurate and timely.",
+      "_timestamp": "2026-04-06T03:38:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.00",
+  "task_id": 21364,
+  "task_statement": "Negotiate with carriers, warehouse operators, or insurance company representatives for services and preferential rates.",
+  "occupation_title": "Transportation, Storage, and Distribution Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Rate and service negotiations with carriers, warehouses, or insurers are commonly conducted via email, phone, or video conferencing using digital documents. However, some negotiations still occur in person during site visits, conferences, or relationship-building meetings."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Negotiations involve multi-turn, interdependent exchanges where offers, concessions, and constraints must be tracked and adjusted consistently across the interaction.",
+      "adequacy_evidence": "AI agents can manage structured multi-step dialogues but often exhibit drift in goals, lose track of prior commitments, or inconsistently apply constraints over extended negotiations.",
+      "_timestamp": "2026-04-05T20:46:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective negotiation for logistics services relies heavily on experience-based judgment about market rates, counterpart behavior, timing, and trade-offs that are not fully codified in rules or data.",
+      "adequacy_evidence": "Current agents can approximate pricing benchmarks and negotiation tactics from data, but lack robust calibration in nuanced, relationship-driven, and adversarial negotiation contexts, leading to weaker performance in non-routine cases.",
+      "_timestamp": "2026-04-05T20:46:39"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Negotiation involves implicit priorities (cost vs. reliability, risk tolerance, relationship value), shifting constraints, and reading counterpart signals, making success criteria highly context-dependent and not fully specified upfront.",
+      "adequacy_evidence": "Current agents can model stated objectives and iterate offers, but often miss unstated priorities, strategic signaling, and nuanced trade-offs, requiring human guidance to converge on optimal agreements.",
+      "_timestamp": "2026-04-05T20:46:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Negotiations require tracking multiple offers, constraints (rates, service levels, liability terms), and evolving positions across parties, but the information volume is typically bounded and can be summarized.",
+      "adequacy_evidence": "Current agents can manage structured negotiation context with tools, but may lose or misprioritize details over extended exchanges or when many terms shift simultaneously.",
+      "_timestamp": "2026-04-05T20:46:39"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Negotiations vary widely by mode (trucking, maritime, air), contract structure, market conditions, shipment characteristics, and counterpart behavior, creating a highly heterogeneous, context-sensitive distribution.",
+      "adequacy_evidence": "While general negotiation tactics and some examples are available, high-quality real-world negotiation transcripts and step-by-step expert reasoning are often proprietary, leaving gaps that can only be partially filled via simulation and synthetic training.",
+      "_timestamp": "2026-04-05T20:46:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Negotiations benefit from remembering prior rates, service performance, and relationship history with carriers or insurers, but individual negotiations can still be conducted with current market data and contract specifics alone.",
+      "adequacy_evidence": "Current agents can persist and retrieve structured negotiation histories via CRM-like systems, but they may inconsistently surface nuanced past interactions or evolving relationship context without careful system design.",
+      "_timestamp": "2026-04-05T20:46:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Negotiation is primarily conducted via text (emails, contracts) or speech that can be transcribed; it does not inherently rely on visual or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents can handle text-based negotiation and even speech via transcription pipelines without meaningful loss, so multimodal limitations are not a bottleneck.",
+      "_timestamp": "2026-04-05T20:46:40"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Negotiations typically occur over calls, meetings, or email exchanges where responses are expected within seconds to minutes, but not instantaneously; participants can pause, deliberate, or follow up asynchronously.",
+      "adequacy_evidence": "Frontier AI agents can generate negotiation strategies and responses within this time window without significant degradation, and can pre-compute positions or assist in real time without needing extended reasoning delays.",
+      "_timestamp": "2026-04-05T20:46:41"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from conducting negotiations for logistics services; firms may delegate negotiation to software agents as long as contractual authority and accountability rest with a legal entity or human principal.",
+      "_timestamp": "2026-04-05T20:46:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task is inherently interpersonal, requiring negotiation with external parties where perceived authority, trustworthiness, and relationship management directly affect outcomes like pricing and terms.",
+      "adequacy_evidence": "While some negotiations could be conducted by AI agents (e.g., standardized rate discussions), many counterparties would be hesitant to engage or may alter their behavior if they know they are negotiating with AI, especially in higher-stakes or relationship-driven contexts.",
+      "_timestamp": "2026-04-05T20:46:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Negotiation outcomes affect costs, service levels, and contractual terms, so errors can have meaningful financial and operational impacts, but most mistakes are reversible or renegotiable rather than catastrophic.",
+      "adequacy_evidence": "Even with review, AI may miss nuanced trade-offs, implicit terms, or strategic positioning, leaving some residual risk of suboptimal agreements that remains non-trivial but not severely unacceptable.",
+      "_timestamp": "2026-04-05T20:46:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing negotiated rates and terms requires domain expertise to evaluate market benchmarks, hidden fees, service levels, and contractual nuances; mistakes may not surface until later operational or financial outcomes.",
+      "adequacy_evidence": "AI-generated negotiation outputs (e.g., proposed terms or summaries) can miss subtle but critical details or misjudge market norms, requiring thorough expert review to avoid costly or latent errors.",
+      "_timestamp": "2026-04-05T20:46:41"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

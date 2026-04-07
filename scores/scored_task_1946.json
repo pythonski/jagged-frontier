@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2052.00",
+  "task_id": 1946,
+  "task_statement": "Establish or maintain patient profiles, including lists of medications taken by individual patients.",
+  "occupation_title": "Pharmacy Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Maintaining patient medication profiles is primarily done by entering and updating records in pharmacy information systems. However, technicians often gather or verify the information from in\u2011person interactions or physical prescriptions at the pharmacy, so some instances require on-site presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining patient medication profiles is largely governed by explicit procedures (data entry, reconciliation rules), but some experience helps in resolving discrepancies or interpreting incomplete patient-reported information.",
+      "adequacy_evidence": "Current AI systems with access to structured data sources and reconciliation rules can reliably perform these tasks, with minimal gaps in handling the limited judgment required.",
+      "_timestamp": "2026-04-05T20:34:51"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Patient profiles span varied medications, comorbidities, demographics, and record formats, but the structure of the task (data entry, reconciliation, updating lists) is relatively standardized across cases.",
+      "adequacy_evidence": "There is substantial documentation and de-identified clinical data for medication management, but real-world edge cases and longitudinal patient histories are often locked in private EHR systems, leaving some gaps in fully representative training coverage.",
+      "_timestamp": "2026-04-05T20:34:51"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely governed by explicit documentation standards, but requires some judgment in reconciling incomplete, conflicting, or patient-reported medication information and deciding what to include or flag.",
+      "adequacy_evidence": "Current agents can structure and aggregate medication data but may struggle with resolving discrepancies, inferring missing context (e.g., OTC use), and aligning with implicit clinical documentation norms without human oversight.",
+      "_timestamp": "2026-04-05T20:34:52"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining patient profiles requires integrating multiple pieces of structured information (medication names, dosages, histories) within a session, but the volume is moderate and typically well-organized in records systems.",
+      "adequacy_evidence": "Current AI agents with tool support handle structured data entry, retrieval, and updating reliably within a session, with minimal loss or distortion of relevant details.",
+      "_timestamp": "2026-04-05T20:34:52"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintaining patient profiles involves multiple steps (collecting, verifying, updating medication lists) where consistency matters, but each update cycle is relatively bounded rather than a long, tightly coupled sequence.",
+      "adequacy_evidence": "AI agents can generally handle structured, multi-step record maintenance with tools, though they may show some drift or inconsistency across steps, especially when integrating updates over time.",
+      "_timestamp": "2026-04-05T20:34:52"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Updating or retrieving patient medication profiles typically occurs during dispensing workflows where responses are expected within seconds to a minute, but not instantaneously critical.",
+      "adequacy_evidence": "Frontier AI systems can perform structured data entry, retrieval, and reconciliation tasks \u0628\u0633\u0631\u0639\u0629 within the required time window without sacrificing accuracy.",
+      "_timestamp": "2026-04-05T20:34:53"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining patient profiles and medication lists is primarily a text-based task involving structured data entry and retrieval from prescriptions and electronic records.",
+      "adequacy_evidence": "Since the task is largely text-in/text-out, current AI systems can handle the modality requirements without meaningful limitation.",
+      "_timestamp": "2026-04-05T20:34:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintaining patient profiles and medication lists inherently requires persistent, longitudinal records that are updated and referenced across many encounters over time.",
+      "adequacy_evidence": "Current systems (EHRs, pharmacy databases) already provide robust cross-session storage and retrieval, and LLM-based agents can reliably interface with these structured records without fundamental memory limitations.",
+      "_timestamp": "2026-04-05T20:34:53"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate patient medication profiles are critical for preventing drug interactions, duplications, and contraindications; even rare residual errors can lead to serious patient harm.",
+      "adequacy_evidence": "While pharmacy systems and pharmacist oversight can catch many errors, AI-generated or maintained profiles may still introduce subtle inconsistencies or omissions that are not always detected, leaving some meaningful residual risk.",
+      "_timestamp": "2026-04-05T20:34:54"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Medication lists can be verified against prescriptions, EHRs, pharmacy dispensing records, and patient interviews, but this requires careful reconciliation and domain attention to catch omissions or outdated entries.",
+      "adequacy_evidence": "AI can compile and update lists from records, but still makes integration and attribution errors often enough that human review and cross-checking remain necessary.",
+      "_timestamp": "2026-04-05T20:34:55"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves patient data management where patients and pharmacists rely on accurate records, and trust in the handler of sensitive health information matters to some extent.",
+      "adequacy_evidence": "Electronic health record systems are already widely accepted, but a fully AI-managed role may still raise moderate concerns around privacy, accountability, and trust among patients and healthcare staff.",
+      "_timestamp": "2026-04-05T20:34:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from establishing or maintaining patient medication profiles; these tasks are governed by pharmacy practice and HIPAA privacy rules, which constrain handling of data but do not forbid AI use. Oversight requirements (e.g., pharmacist supervision) apply to humans but do not explicitly bar AI as a tool.",
+      "_timestamp": "2026-04-05T20:34:55"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

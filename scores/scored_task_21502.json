@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1199.07",
+  "task_id": 21502,
+  "task_statement": "Review design drawings or technical documents for completeness, correctness, or appropriateness.",
+  "occupation_title": "Security Management Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Design drawings and technical documents are most often reviewed electronically (e.g., CAD files, PDFs) on a computer, which can be done remotely. However, some cases involve reviewing printed plans or coordinating with on-site design reviews tied to physical facilities."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many criteria (codes, standards, specifications) are explicit, assessing appropriateness for security contexts requires interpreting intent, threat models, and stakeholder priorities that are not fully specified in the documents.",
+      "adequacy_evidence": "Current agents can reference standards and identify obvious gaps, but they often miss context-specific security considerations or implicit design intent without iterative human guidance.",
+      "_timestamp": "2026-04-05T21:49:08"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse document types (architectural plans, security system schematics, procedural documents) across varied facilities, threat models, and regulatory contexts, creating a broad and heterogeneous distribution.",
+      "adequacy_evidence": "While general engineering drawings and standards are available, many real-world security designs and expert review processes are proprietary or sensitive, leaving gaps that can only be partially filled through synthetic data and public guidelines.",
+      "_timestamp": "2026-04-05T21:49:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves systematically reviewing multiple sections of drawings or documents against standards and cross-referencing elements, requiring consistent attention across a moderate sequence of checks.",
+      "adequacy_evidence": "AI agents can generally maintain coherence over document review workflows, but performance can degrade with very long or complex materials, leading to missed inconsistencies or dropped criteria.",
+      "_timestamp": "2026-04-05T21:49:09"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing security-related designs involves applying standards and checklists but also requires experience-based judgment about threat models, context-specific risks, and practical appropriateness beyond explicit rules.",
+      "adequacy_evidence": "Current agents can apply documented standards and identify obvious issues, but often lack nuanced calibration for context-specific risks and subtle security tradeoffs that practitioners develop through experience.",
+      "_timestamp": "2026-04-05T21:49:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviews often benefit from knowledge of prior project iterations, organizational standards, and recurring issues, but many individual document reviews can be conducted largely independently using provided materials.",
+      "adequacy_evidence": "Current agents with retrieval and document management can store and access prior versions and standards, but they can inconsistently surface the most relevant historical context or maintain nuanced project continuity across sessions.",
+      "_timestamp": "2026-04-05T21:49:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing design drawings and technical documents requires tracking numerous interrelated details (specifications, standards, annotations, revisions) across multiple pages and formats, where missing a small inconsistency can affect correctness.",
+      "adequacy_evidence": "Current agents can use retrieval and chunking to manage large documents, but still struggle with reliably maintaining and cross-referencing all relevant details across long, complex technical materials without occasional omissions or drift.",
+      "_timestamp": "2026-04-05T21:49:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing design drawings or technical documents for completeness and correctness is typically an offline analytical task with no strict real-time constraints; minutes to hours are acceptable.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to perform detailed analysis without meaningful degradation from latency constraints, as speed is not a limiting factor for task quality.",
+      "_timestamp": "2026-04-05T21:49:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing design drawings often involves interpreting schematics, layouts, and visual-spatial relationships alongside textual specifications, making visual input meaningfully important.",
+      "adequacy_evidence": "Current agents can interpret many diagrams and technical visuals, but struggle with dense, specialized schematics and fine-grained spatial or domain-specific details.",
+      "_timestamp": "2026-04-05T21:49:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing design drawings for security completeness and correctness involves identifying subtle omissions, misconfigurations, or context-specific risks that often require deep domain expertise and careful cross-referencing with standards and threat models.",
+      "adequacy_evidence": "Current AI systems can miss nuanced security flaws or misinterpret technical diagrams, and their outputs require thorough expert review, as errors are neither reliably obvious nor easily detectable without significant effort.",
+      "_timestamp": "2026-04-05T21:49:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in reviewing security-related design drawings can lead to serious vulnerabilities, safety failures, or regulatory non-compliance, where even rare mistakes may have high-impact consequences.",
+      "adequacy_evidence": "Even after standard checks, AI systems can miss subtle or context-specific security flaws, leaving a non-trivial residual risk that remains concerning but not uniformly prohibitive.",
+      "_timestamp": "2026-04-05T21:49:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "While no blanket prohibition exists, in many contexts (e.g., engineering, security systems design) licensed professionals are legally required to review and approve drawings, which limits fully autonomous AI performance. AI can assist, but final responsibility and sign-off must rest with a human licensee.",
+      "_timestamp": "2026-04-05T21:49:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Reviewed designs are relied upon by engineers, security teams, and regulators, and often require sign-off from a credentialed specialist whose authority and accountability are central to acceptance.",
+      "adequacy_evidence": "Many stakeholders and regulatory frameworks require a human expert to certify design reviews, so an AI agent alone would face strong resistance and lack legitimacy without human endorsement.",
+      "_timestamp": "2026-04-05T21:49:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

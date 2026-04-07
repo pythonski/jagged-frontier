@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3011.00",
+  "task_id": 2478,
+  "task_statement": "Persuade customers to pay amounts due on credit accounts, damage claims, or nonpayable checks, or to return merchandise.",
+  "occupation_title": "Bill and Account Collectors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Bill and account collectors typically persuade customers via phone calls, emails, or other computer-based communications that can be done remotely. However, some cases involve in-person collection visits or physical merchandise returns, preventing the task from being fully digital."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Persuading customers typically involves multi-step, back-and-forth interactions (handling objections, negotiating payment plans), but these sequences are usually moderate in length rather than highly extended or tightly coupled.",
+      "adequacy_evidence": "LLM-based agents can sustain coherent multi-turn conversations, but over longer or more complex negotiations they may lose consistency in strategy or constraints, leading to moderate degradation.",
+      "_timestamp": "2026-04-06T05:23:28"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective debt collection persuasion depends heavily on reading customer tone, tailoring negotiation strategies, and applying situational judgment about when to escalate, concede, or offer alternatives\u2014skills built through experience rather than explicit rules.",
+      "adequacy_evidence": "Current AI agents can follow scripts and adapt somewhat using prior data, but they lack reliable calibration in emotionally charged or adversarial interactions and may misjudge subtle cues, limiting performance in complex or sensitive cases.",
+      "_timestamp": "2026-04-06T05:23:28"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a wide range of customer situations (financial hardship, disputes, fraud claims, cultural differences, varying legal contexts), requiring coverage of many nuanced interaction patterns and edge cases.",
+      "adequacy_evidence": "While call transcripts, negotiation examples, and compliance scripts exist and can be augmented with synthetic data, much real-world data is proprietary and emotionally nuanced cases are only partially captured, leaving some gaps.",
+      "_timestamp": "2026-04-06T05:23:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Collectors must track account details (balances, history, terms) and adapt to customer responses during a conversation, but the information scope per interaction is bounded and structured.",
+      "adequacy_evidence": "Current agents with CRM integration and conversation tracking can reliably manage and reference this level of structured, within-episode information without significant loss or drift.",
+      "_timestamp": "2026-04-06T05:23:28"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective collection relies on maintaining detailed case histories across multiple contacts, including prior promises, payment plans, disputes, and customer responsiveness over time.",
+      "adequacy_evidence": "Current AI agents can integrate with CRM systems to store and retrieve structured histories, but they still show inconsistencies in leveraging nuanced longitudinal context (e.g., tone adaptation, implicit patterns) across repeated interactions.",
+      "_timestamp": "2026-04-06T05:23:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "While the end goal (secure payment or return) is clear, effective persuasion depends heavily on interpreting each customer's financial situation, emotional state, and responsiveness, with success criteria shifting based on negotiation dynamics and context.",
+      "adequacy_evidence": "Current agents can follow scripts and adapt somewhat, but they often miss nuanced cues and struggle to iteratively refine persuasion strategies in real-time, requiring human oversight in complex or sensitive cases.",
+      "_timestamp": "2026-04-06T05:23:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves phone conversations where vocal tone, timing, and listening (audio modality) support persuasion, though it can also be performed via text-based channels like email or letters.",
+      "adequacy_evidence": "Current AI agents with speech recognition and synthesis can handle routine persuasive conversations adequately, with sufficient voice quality and comprehension for typical collection scenarios.",
+      "_timestamp": "2026-04-06T05:23:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Collection work often occurs in live phone calls or chat interactions where agents must respond immediately to customer objections and questions, requiring near-real-time conversational turnaround.",
+      "adequacy_evidence": "Frontier LLM agents can generate persuasive, context-aware responses within seconds, and the reasoning required for typical negotiation scripts does not demand long deliberation, so quality is not meaningfully degraded by speed constraints.",
+      "_timestamp": "2026-04-06T05:23:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Some aspects (e.g., script adherence, legal compliance, correct account details) can be checked, but persuasion effectiveness and subtle tone errors are only observable after interaction outcomes, creating a moderate verification burden.",
+      "adequacy_evidence": "AI systems can generate plausible collection dialogues but may mishandle tone, compliance nuances, or negotiation tactics, requiring routine human review or monitoring to catch issues.",
+      "_timestamp": "2026-04-06T05:23:31"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Debt collection is governed by laws like the FDCPA and TCPA, which restrict practices (e.g., harassment, disclosures, automated calls without consent) but do not explicitly prohibit AI agents. These rules create partial constraints on how AI can operate, especially in communications, but do not ban its use.",
+      "_timestamp": "2026-04-06T05:23:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task is inherently interpersonal and relies on convincing debtors, where perceived authority, empathy, and negotiation skill directly affect compliance.",
+      "adequacy_evidence": "Automated and AI-assisted collection systems already exist, but many customers react negatively or are less responsive when they know they are dealing with a machine, reducing effectiveness without fully preventing use.",
+      "_timestamp": "2026-04-06T05:23:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Collection activities are legally sensitive (e.g., FDCPA compliance), and residual errors like misrepresentation, harassment, or incorrect claims can trigger lawsuits, fines, or reputational harm, making low error tolerance important.",
+      "adequacy_evidence": "Even with scripts and monitoring, AI can still produce non-compliant phrasing or mis-handle edge cases, leaving some residual legal and reputational risk, though guardrails can reduce it to a moderate level.",
+      "_timestamp": "2026-04-06T05:23:32"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

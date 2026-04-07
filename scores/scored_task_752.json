@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4171.00",
+  "task_id": 752,
+  "task_statement": "Analyze data to determine answers to questions from customers or members of the public.",
+  "occupation_title": "Receptionists and Information Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Receptionists commonly analyze information from digital sources such as databases, schedules, or internal systems to answer questions, which can be done on a computer. However, some instances involve consulting physical materials, signage, or colleagues in person within the facility."
+  },
+  "scores": {
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Handling customer inquiries may require consulting multiple data sources (e.g., schedules, directories, policies) and briefly tracking query context, but the information scope is typically limited and short-lived.",
+      "adequacy_evidence": "Modern AI agents can reliably retrieve, summarize, and maintain relevant context within a single interaction for such bounded queries without significant loss or drift.",
+      "_timestamp": "2026-04-06T00:29:24"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer inquiries span a range of topics (policies, schedules, directions, account info), but follow recurring patterns typical of customer service interactions rather than a highly long-tailed domain.",
+      "adequacy_evidence": "Extensive customer service transcripts, FAQs, and support logs exist, and synthetic generation can readily cover variations, providing strong process-level training signal for this task.",
+      "_timestamp": "2026-04-06T00:29:24"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customer questions are often loosely phrased or lack full context, requiring the clerk to interpret intent, select relevant data, and sometimes ask follow-up questions to determine what answer is actually needed.",
+      "adequacy_evidence": "Current AI agents can often infer intent and ask clarifying questions, but they still misinterpret vague queries or miss subtle contextual cues, requiring human oversight or iteration in non-trivial cases.",
+      "_timestamp": "2026-04-06T00:29:24"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting customer intent and selecting relevant data or explanations, which requires some experience-based judgment beyond explicit procedures, especially in ambiguous or context-sensitive inquiries.",
+      "adequacy_evidence": "Current AI agents can handle many routine and moderately ambiguous queries, but they still show gaps in nuanced judgment and context calibration in less standard or customer-specific cases.",
+      "_timestamp": "2026-04-06T00:29:25"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task typically involves a short-to-moderate sequence: retrieving relevant data, interpreting it, and formulating a response, with some dependency between steps but not long, tightly coupled workflows.",
+      "adequacy_evidence": "Frontier AI agents can generally maintain coherence over these moderate sequences, though occasional issues like misinterpreting earlier context or minor goal drift can occur as steps accumulate.",
+      "_timestamp": "2026-04-06T00:29:25"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Receptionists and information clerks are typically expected to respond to public inquiries promptly, often within seconds to a minute, limiting time for extended analysis.",
+      "adequacy_evidence": "Well-scaffolded AI agents can retrieve and synthesize relevant information within seconds, maintaining adequate accuracy without needing prolonged reasoning in most cases.",
+      "_timestamp": "2026-04-06T00:29:25"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Most customer inquiries handled by receptionists are one-off and can be resolved using current information without needing prior interaction history.",
+      "adequacy_evidence": "Since the task is largely self-contained per interaction, existing AI systems do not require persistent cross-session memory to perform effectively.",
+      "_timestamp": "2026-04-06T00:29:25"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves interpreting structured or textual data (databases, records, FAQs) to answer questions; multimodal inputs like images or audio are not central to typical performance.",
+      "adequacy_evidence": "Since the task is largely text- and data-based, current AI agents already handle the required modalities effectively without meaningful gaps.",
+      "_timestamp": "2026-04-06T00:29:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Answers are typically based on accessible records or datasets that can be cross-checked, but verifying correctness may require reviewing source data and interpreting whether it was analyzed appropriately.",
+      "adequacy_evidence": "Current AI can misinterpret data or apply incorrect assumptions, so outputs usually need human review against underlying records, though errors are generally catchable with routine checks.",
+      "_timestamp": "2026-04-06T00:29:27"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect answers from receptionists or information clerks typically cause inconvenience or minor confusion (e.g., wrong directions or hours), but are rarely severe or irreversible.",
+      "adequacy_evidence": "After normal checking or easy correction opportunities (e.g., follow-up clarification), current AI systems' residual errors are generally tolerable for these low- to moderate-stakes interactions.",
+      "_timestamp": "2026-04-06T00:29:27"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from analyzing data to answer public inquiries in receptionist or information clerk roles; while privacy and sector-specific rules may govern data use, they do not bar AI from performing this task.",
+      "_timestamp": "2026-04-06T00:29:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task directly serves customers or the public, who must engage with and rely on the provided answers, though deep personal trust or authority is not typically central.",
+      "adequacy_evidence": "AI systems are already widely used for customer information queries, but some users still prefer human interaction, especially for nuanced or frustrating cases, indicating moderate resistance.",
+      "_timestamp": "2026-04-06T00:29:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

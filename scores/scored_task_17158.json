@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1069.05",
+  "task_id": 17158,
+  "task_statement": "Interpret imaging data and confer with other medical specialists to formulate diagnoses.",
+  "occupation_title": "Nuclear Medicine Physicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Interpreting medical images is typically done on computer workstations using digital imaging systems, and consultation with other specialists can occur via phone, messaging, or video; the task itself does not require physical presence with the patient or imaging equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Nuclear medicine interpretation spans diverse imaging modalities (PET, SPECT), rare diseases, varied patient histories, and context-dependent diagnostic reasoning, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "While large imaging datasets and reports exist, much expert reasoning and multidisciplinary deliberation is implicit or locked in private clinical settings, leaving some subpopulations and process-level signals only partially covered.",
+      "_timestamp": "2026-04-05T21:53:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting nuclear imaging and forming diagnoses depends heavily on implicit clinical context, patient history, evolving hypotheses, and nuanced collaboration with other specialists to refine goals and conclusions.",
+      "adequacy_evidence": "Current agents struggle to infer and integrate latent clinical intent, reconcile conflicting contextual cues, and iteratively refine diagnostic framing through specialist interaction, leading to frequent misalignment with true objectives.",
+      "_timestamp": "2026-04-05T21:53:27"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting nuclear imaging requires nuanced pattern recognition, probabilistic reasoning under uncertainty, and integration with patient history and specialist input\u2014skills refined through extensive clinical experience rather than explicit rules.",
+      "adequacy_evidence": "Current AI systems can match many imaging patterns but still lack consistent calibration in ambiguous, context-dependent cases and multidisciplinary synthesis, leading to gaps in non-routine clinical judgment.",
+      "_timestamp": "2026-04-05T21:53:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting nuclear imaging requires integrating large, heterogeneous data (imaging slices, radiotracer patterns, patient history, labs) and maintaining coherence while incorporating input from multiple specialists within the same episode.",
+      "adequacy_evidence": "Current agents can handle multi-source inputs with tooling but still show context loss or imperfect prioritization when managing complex, high-volume clinical data streams, especially across long interpretive workflows.",
+      "_timestamp": "2026-04-05T21:53:28"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate interpretation and diagnosis often depend on longitudinal patient data, including prior imaging studies, treatment history, and evolving clinical context across multiple encounters.",
+      "adequacy_evidence": "Current agents can store and retrieve cross-session data via EHR integrations and databases, but they still show gaps in reliably surfacing the most relevant historical context and maintaining coherent long-term clinical narratives.",
+      "_timestamp": "2026-04-05T21:53:28"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step interpretation of imaging, integration with patient history, and iterative consultation with other specialists, where earlier judgments directly influence subsequent reasoning and diagnostic conclusions.",
+      "adequacy_evidence": "Frontier AI agents can sustain multi-step reasoning and coordination, but performance can degrade over extended clinical workflows with iterative updates and cross-step dependencies, leading to occasional inconsistency or drift.",
+      "_timestamp": "2026-04-05T21:53:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpreting nuclear imaging and discussing findings with specialists typically allows minutes rather than requiring instant responses, though some clinical contexts (e.g., urgent cases) impose moderate time pressure.",
+      "adequacy_evidence": "Frontier AI systems can generate high-quality interpretations within seconds to minutes, well within typical clinical time windows, so speed constraints do not significantly degrade performance.",
+      "_timestamp": "2026-04-05T21:53:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally involves interpreting complex medical imaging modalities (e.g., PET, SPECT, CT) and integrating visual-spatial findings with clinical context, which cannot be reduced to text-only inputs.",
+      "adequacy_evidence": "Current AI systems can analyze medical images in structured settings but remain unreliable for nuanced, cross-modal clinical interpretation and synthesis required in real-world diagnostic decision-making.",
+      "_timestamp": "2026-04-05T21:53:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnostic interpretation of nuclear imaging directly informs treatment decisions for serious conditions (e.g., cancer, cardiac disease), where errors can lead to misdiagnosis, inappropriate therapy, or missed life-threatening conditions.",
+      "adequacy_evidence": "Even with physician oversight and standard checks, current AI systems exhibit non-negligible rates of subtle misinterpretation and inconsistent clinical reasoning, leaving residual risks that are unacceptable in high-stakes diagnostic contexts.",
+      "_timestamp": "2026-04-05T21:53:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting nuclear imaging (e.g., PET/SPECT) involves subtle pattern recognition, clinical context integration, and differential diagnosis; errors may not be immediately apparent and often require expert review or follow-up outcomes to detect.",
+      "adequacy_evidence": "Current AI systems can misinterpret subtle uptake patterns or lack full clinical context integration, and their errors are not always obvious, requiring intensive expert verification before results can be trusted.",
+      "_timestamp": "2026-04-05T21:53:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Medical diagnosis and interpretation of imaging are legally defined as the practice of medicine, which requires a licensed physician under U.S. law. AI systems may assist, but regulations and liability frameworks require a human physician to make and sign off on diagnoses, prohibiting fully autonomous AI performance.",
+      "_timestamp": "2026-04-05T21:53:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Formulating diagnoses and consulting with other specialists relies heavily on professional credibility, trust, and clinical authority among physicians, and indirectly affects patient trust in care decisions.",
+      "adequacy_evidence": "While AI decision-support tools are increasingly accepted, many physicians remain hesitant to rely on or defer to fully autonomous AI for diagnosis, especially in high-stakes medical contexts, leading to partial but not complete resistance.",
+      "_timestamp": "2026-04-05T21:53:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

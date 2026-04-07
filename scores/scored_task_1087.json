@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9051.00",
+  "task_id": 1087,
+  "task_statement": "Estimate food, liquor, wine, and other beverage consumption to anticipate amounts to be purchased or requisitioned.",
+  "occupation_title": "Food Service Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Estimating consumption is often done using sales reports, reservations, and historical data in spreadsheets or POS systems, which can be accessed remotely. However, managers frequently incorporate on-site inventory checks and direct observation of stock levels, requiring some physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating consumption relies partly on experience with local demand patterns, seasonality, promotions, and event-driven variability that are not fully captured by fixed rules.",
+      "adequacy_evidence": "Well-instrumented agents can model historical sales, reservations, and external signals to approximate these judgments, but may still miscalibrate for atypical events or subtle venue-specific patterns.",
+      "_timestamp": "2026-04-06T03:46:17"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating consumption depends on contextual factors like seasonality, local customer preferences, upcoming events, and menu changes, which are not fully specified and require interpretation.",
+      "adequacy_evidence": "Current agents can model historical data and known factors well, but often miss nuanced or implicit context (e.g., informal events, shifting trends), requiring human input to refine estimates.",
+      "_timestamp": "2026-04-06T03:46:17"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Demand patterns vary across venue types, customer demographics, seasonality, and event contexts, but follow recurring, structured patterns rather than extreme long-tail uniqueness.",
+      "adequacy_evidence": "Extensive POS datasets, inventory logs, and forecasting literature exist, and synthetic data can approximate many scenarios, but much high-quality data is proprietary and some niche contexts (e.g., unique events or locations) remain underrepresented.",
+      "_timestamp": "2026-04-06T03:46:18"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a moderate sequence of steps such as gathering historical consumption data, adjusting for events or seasonality, and calculating purchase quantities, but these steps are not highly interdependent or long-running.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute multi-step forecasting and estimation workflows without significant degradation over this sequence length.",
+      "_timestamp": "2026-04-06T03:46:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Estimating consumption requires integrating multiple inputs (historical sales, reservations, event details, seasonality, current inventory) within a single planning episode, but the total information volume is manageable and structured.",
+      "adequacy_evidence": "Current AI agents can reliably track and manipulate these data sources within a session using tools like spreadsheets or databases, with minimal risk of losing or mismanaging relevant context.",
+      "_timestamp": "2026-04-06T03:46:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Estimating consumption primarily relies on numerical sales records, reservations, and written reports; it is fundamentally a text- and data-driven forecasting task with minimal need for perceptual inputs like images or audio.",
+      "adequacy_evidence": "Current AI systems handle structured data analysis and forecasting well in text/numeric formats, so there is no meaningful multimodal gap affecting performance.",
+      "_timestamp": "2026-04-06T03:46:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Estimating food and beverage consumption is typically done during planning cycles (daily, weekly, or event-based), allowing minutes to hours for analysis rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can perform forecasting, aggregation, and scenario analysis well within these timeframes, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T03:46:19"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Estimating consumption benefits from historical sales data, seasonal trends, and past event patterns, but each estimation can be performed with stored records rather than requiring complex evolving context.",
+      "adequacy_evidence": "Current AI systems can reliably store, retrieve, and analyze historical consumption data using standard databases and integrations, with little difficulty maintaining relevant cross-session information.",
+      "_timestamp": "2026-04-06T03:46:20"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimates can be checked against historical sales, reservations, and inventory data, but require some analysis and may only be validated after service periods when discrepancies appear.",
+      "adequacy_evidence": "AI-generated forecasts can be compared to existing data and trends, but current systems may mis-handle local events or anomalies, so managers would still need to review and adjust outputs.",
+      "_timestamp": "2026-04-06T03:46:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements that prohibit AI from estimating food or beverage consumption for inventory planning. Regulations around alcohol pertain to purchasing, distribution, and service, not to internal forecasting or estimation processes.",
+      "_timestamp": "2026-04-06T03:46:20"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Forecasting errors can lead to overstock (waste, higher costs) or understock (lost sales, customer dissatisfaction), which are meaningful but generally not severe or irreversible.",
+      "adequacy_evidence": "With routine checks like reviewing historical sales and adjusting for events, AI-generated estimates can be validated easily, leaving residual errors at an acceptable level.",
+      "_timestamp": "2026-04-06T03:46:20"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Estimating consumption for purchasing is an internal planning task; outputs are used operationally and do not depend on stakeholder perception of who performed the estimation.",
+      "adequacy_evidence": "Stakeholders such as kitchen staff or suppliers care about accuracy of forecasts, not whether they were generated by a human or AI, and AI-based demand forecasting is already widely accepted.",
+      "_timestamp": "2026-04-06T03:46:20"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

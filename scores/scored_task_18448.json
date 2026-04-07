@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1161.00",
+  "task_id": 18448,
+  "task_statement": "Document findings of physical examinations.",
+  "occupation_title": "Nurse Midwives",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Documenting exam findings is typically done in electronic health records using a computer, but some settings still use paper charts or require on-site system access, so not every instance is fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Physical exam documentation spans varied patient conditions (e.g., prenatal, labor, postpartum complications), but follows relatively standardized clinical structures and terminology across cases.",
+      "adequacy_evidence": "Large corpora of clinical notes and templates exist, but access is restricted and some nuanced or rare presentation documentation is underrepresented; however, targeted de-identification and synthesis make most coverage tractable.",
+      "_timestamp": "2026-04-06T05:34:21"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Accurate documentation requires judgment about which findings are clinically salient, how to interpret borderline or context-dependent signs in obstetric care, and how to phrase them appropriately, which draws on experience beyond explicit templates.",
+      "adequacy_evidence": "Current agents can generate structured clinical notes and follow documentation standards, but they lack consistent calibration in interpreting nuanced or context-sensitive findings, especially in non-routine or ambiguous cases.",
+      "_timestamp": "2026-04-06T05:34:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Documenting physical exam findings involves organizing multiple observed data points into a coherent clinical note with consistent terminology and structure, but the sequence is relatively bounded and routine.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably maintain consistency across short-to-moderate documentation tasks, with minimal degradation over the required sequence length.",
+      "_timestamp": "2026-04-06T05:34:22"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Documentation follows established formats (e.g., SOAP notes, EHR templates), but clinicians must decide what findings are salient, how to phrase them, and how much detail is appropriate given context and medico-legal norms.",
+      "adequacy_evidence": "Current AI can generate structured clinical notes from inputs, but it often misses nuanced clinical relevance, prioritization, and context-sensitive phrasing, requiring human review and adjustment.",
+      "_timestamp": "2026-04-06T05:34:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves capturing multiple observations (vital signs, physical findings, patient-reported symptoms) and organizing them into a coherent record, requiring moderate information aggregation and structuring within a single encounter.",
+      "adequacy_evidence": "Current AI systems can reliably track, structure, and summarize this level of within-episode clinical information using templates and structured inputs, with minimal loss or mismanagement of details.",
+      "_timestamp": "2026-04-06T05:34:23"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task focuses on writing textual documentation of examination findings; although the underlying exam involves sensory input, the documentation itself is text-based.",
+      "adequacy_evidence": "Current AI systems can reliably generate structured clinical documentation from textual or dictated inputs, with no significant multimodal limitations for this task.",
+      "_timestamp": "2026-04-06T05:34:23"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Documentation is typically expected during or shortly after the patient encounter, requiring turnaround within minutes but not real-time split-second response.",
+      "adequacy_evidence": "Current AI systems can generate structured clinical documentation rapidly within seconds, well within the available time window without sacrificing quality.",
+      "_timestamp": "2026-04-06T05:34:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Documenting physical exam findings often references prior visits, obstetric history, and trends (e.g., fundal height, fetal heart rate), but each note can still be created with primarily current-visit information plus optional chart lookup.",
+      "adequacy_evidence": "Current AI systems can integrate with EHRs to retrieve prior records, but they can inconsistently surface the most relevant longitudinal details or maintain coherent patient context across sessions without careful system design.",
+      "_timestamp": "2026-04-06T05:34:24"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying documentation of physical exam findings requires clinical expertise and cross-checking against observed signs, patient reports, and measurements; some inconsistencies may not be immediately obvious without domain knowledge.",
+      "adequacy_evidence": "AI-generated clinical notes can contain omissions, misinterpretations, or subtle inaccuracies, requiring clinician review and correction, but these are typically detectable with standard chart review practices.",
+      "_timestamp": "2026-04-06T05:34:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Documentation errors can affect clinical decision-making, continuity of care, and legal records, but most residual mistakes after normal review are unlikely to cause immediate severe harm.",
+      "adequacy_evidence": "With standard clinician review and EHR checks, AI-generated documentation errors (e.g., omissions or phrasing issues) are typically detectable and correctable, leaving acceptable residual risk.",
+      "_timestamp": "2026-04-06T05:34:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The documentation is used by other clinicians and becomes part of the legal medical record, so stakeholders rely on it and the author\u2019s role has some relevance, though direct patient interaction is limited.",
+      "adequacy_evidence": "AI-assisted clinical documentation is increasingly accepted, but full replacement may face some resistance due to liability and trust concerns, requiring human sign-off or oversight.",
+      "_timestamp": "2026-04-06T05:34:27"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. healthcare regulations allow use of tools like medical scribes or AI to assist with documentation, but require a licensed clinician (e.g., nurse midwife) to review, authenticate, and sign the medical record. This creates a partial restriction: AI can draft documentation but cannot independently fulfill the legal documentation responsibility.",
+      "_timestamp": "2026-04-06T05:34:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4051.00",
+  "task_id": 2590,
+  "task_statement": "Order tests that could determine the causes of product malfunctions.",
+  "occupation_title": "Customer Service Representatives",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 97,
+    "reasoning": "The task involves requesting or scheduling diagnostic tests through customer service systems, emails, or service tickets; the representative does not perform the physical test. Ordering such tests can be done entirely via computer-based systems."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of product types, failure modes, and diagnostic pathways, but is typically structured around known troubleshooting frameworks and documented procedures.",
+      "adequacy_evidence": "Extensive troubleshooting guides, diagnostic decision trees, service manuals, and historical support logs provide rich, process-level training data, and gaps in proprietary data can be reasonably approximated via synthesis or fine-tuning.",
+      "_timestamp": "2026-04-05T23:18:16"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many troubleshooting protocols are documented, representatives often rely on experience to interpret ambiguous symptoms, prioritize tests, and handle atypical customer descriptions.",
+      "adequacy_evidence": "Agents can follow structured diagnostic flows well, but may lack the nuanced judgment needed for edge cases or poorly specified issues where human experience guides test selection.",
+      "_timestamp": "2026-04-05T23:18:17"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate tests depends on interpreting customer-reported symptoms, product context, and constraints like cost or urgency, which are not always fully specified and require some judgment.",
+      "adequacy_evidence": "Current AI agents can follow troubleshooting logic and infer likely tests in many cases, but they still often miss nuanced contextual cues or implicit priorities, requiring human guidance to refine choices.",
+      "_timestamp": "2026-04-05T23:18:17"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence: interpreting the malfunction description, selecting appropriate diagnostic tests, and placing the order, with some dependency between steps but limited overall length.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain coherence over short, structured workflows like selecting and ordering tests, with minimal degradation across the required steps.",
+      "_timestamp": "2026-04-05T23:18:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking customer-reported symptoms, product details, prior troubleshooting steps, and available diagnostic tests, but the information volume is moderate and typically structured.",
+      "adequacy_evidence": "Current AI agents can reliably manage and reference this level of contextual information within a single interaction using standard context windows and retrieval tools without significant loss or drift.",
+      "_timestamp": "2026-04-05T23:18:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering diagnostic tests is typically based on textual descriptions of malfunctions, product manuals, and troubleshooting scripts; non-text inputs are not essential to the core task.",
+      "adequacy_evidence": "Since the task is fundamentally text-driven, current AI systems can handle the modality requirements without meaningful gaps.",
+      "_timestamp": "2026-04-05T23:18:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer service interactions often occur in real time (e.g., during a call or chat), so test recommendations are expected within seconds to a minute, though not instantaneously.",
+      "adequacy_evidence": "Current AI systems can generate plausible diagnostic test suggestions quickly within these time constraints without requiring extended reasoning, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T23:18:20"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Determining appropriate diagnostic tests often benefits from prior interaction history, such as previous troubleshooting steps, past malfunctions, or warranty context, but many cases can still be handled with current-session information.",
+      "adequacy_evidence": "Modern AI systems integrated with CRM tools can reliably store and retrieve customer histories and prior case data, and this level of longitudinal memory is generally sufficient for the task.",
+      "_timestamp": "2026-04-05T23:18:20"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining whether the correct diagnostic tests were ordered requires product knowledge and may only be validated after results come back or troubleshooting progresses, but errors are usually catchable through review or escalation.",
+      "adequacy_evidence": "AI can suggest plausible tests but may misinterpret symptoms or context, so human review is typically needed to confirm appropriateness, though verification is not prohibitively difficult.",
+      "_timestamp": "2026-04-05T23:18:20"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering incorrect diagnostic tests typically leads to delays, added costs, or customer dissatisfaction, but rarely causes severe or irreversible harm, making the task moderately tolerant to residual errors.",
+      "adequacy_evidence": "With standard troubleshooting protocols and review mechanisms, AI-generated test orders can be checked against known procedures, leaving residual risk at an acceptable level under current capabilities.",
+      "_timestamp": "2026-04-05T23:18:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from ordering diagnostic tests for product malfunctions in a customer service context. While specific industries may have internal compliance procedures, these do not constitute broad legal restrictions on AI performing this task.",
+      "_timestamp": "2026-04-05T23:18:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating with customers and possibly technical teams who rely on the representative\u2019s decisions, but success does not strongly depend on personal authority or human identity.",
+      "adequacy_evidence": "Many stakeholders would accept AI-driven ordering of diagnostic tests, though some customers or internal staff may prefer human judgment or oversight, especially for complex or high-stakes issues.",
+      "_timestamp": "2026-04-05T23:18:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

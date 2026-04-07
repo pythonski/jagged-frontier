@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1041.08",
+  "task_id": 15924,
+  "task_statement": "Sign documents on behalf of clients, using powers of attorney.",
+  "occupation_title": "Customs Brokers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Many customs filings and authorizations are submitted electronically using digital signatures or online systems, allowing remote signing. However, some transactions still require wet signatures on physical documents or handling original paperwork."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple document types (e.g., customs forms, declarations, authorizations) and client-specific contexts, but these are largely standardized and governed by well-defined procedures.",
+      "adequacy_evidence": "There is abundant accessible data on document formats, signing procedures, and power-of-attorney usage, including templates and workflows, enabling strong coverage through existing corpora and synthetic generation.",
+      "_timestamp": "2026-04-05T21:05:24"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely procedural: verifying valid power of attorney, ensuring documents fall within its scope, and executing signatures per established legal and organizational rules.",
+      "adequacy_evidence": "Given clear documentation and rules, current AI agents can reliably follow verification and execution steps without needing experience-based judgment.",
+      "_timestamp": "2026-04-05T21:05:25"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many documents and procedures are standardized, determining when and how to sign on a client\u2019s behalf requires interpreting the scope of the power of attorney, client intent, and situational context (e.g., specific transactions or exceptions).",
+      "adequacy_evidence": "Current agents can follow explicit instructions and templates but may miss nuanced constraints in legal authority or client-specific preferences, often requiring human oversight to resolve ambiguities.",
+      "_timestamp": "2026-04-05T21:05:25"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is typically a short, discrete action: verifying authority and applying a signature to a document, without extended multi-step interdependencies.",
+      "adequacy_evidence": "AI systems can reliably handle such brief, well-scoped sequences without degradation, as there is minimal need for sustained multi-step coherence.",
+      "_timestamp": "2026-04-05T21:05:26"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is fundamentally text-based, involving reviewing and signing legal documents (often digitally) under a power of attorney, with minimal reliance on non-text modalities.",
+      "adequacy_evidence": "Current AI systems can handle document processing and digital signature workflows without meaningful limitations in multimodal perception or generation for this task.",
+      "_timestamp": "2026-04-05T21:05:26"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Signing documents under power of attorney is not a time-critical task; it typically allows minutes to hours for review and execution without impacting outcomes.",
+      "adequacy_evidence": "Current AI agents can operate well within these loose time constraints, so latency does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T21:05:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires keeping track of client identity, scope and limits of the power of attorney, and the specific document details, but the information volume is typically small and structured.",
+      "adequacy_evidence": "Current agents can reliably manage and reference this limited set of within-episode details without significant loss or drift in context.",
+      "_timestamp": "2026-04-05T21:05:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires retaining client-specific authorization details (e.g., powers of attorney, signature authority, validity periods) across engagements, but these are typically stable, well-documented records rather than evolving histories.",
+      "adequacy_evidence": "Current systems can reliably store and retrieve structured client authorization records across sessions via standard databases or document management systems, with minimal gaps in persistence or recall.",
+      "_timestamp": "2026-04-05T21:05:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors such as signing incorrect documents, exceeding granted authority, or misaligning with client intent can be legally subtle and may not surface until disputes or audits, requiring careful document and authorization review.",
+      "adequacy_evidence": "AI agents can misinterpret document context or scope of authority, and verifying correctness requires detailed legal and procedural checks, making unverified use risky and necessitating substantial human oversight.",
+      "_timestamp": "2026-04-05T21:05:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Signing under power of attorney depends on recognized legal authority and trust from clients and regulatory bodies; the signer\u2019s identity and legitimacy are central to the act\u2019s validity.",
+      "adequacy_evidence": "Regulators and clients generally require a licensed human agent to exercise POA, and current legal frameworks do not recognize AI as a valid signatory, leading to strong resistance or outright prohibition.",
+      "_timestamp": "2026-04-05T21:05:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "U.S. customs regulations (19 CFR Part 111) require that customs business, including signing documents under a power of attorney, be conducted by licensed brokers or their supervised employees; legal responsibility and signature authority are tied to identifiable human licensees. There is no provision allowing an autonomous AI system to act as the legal signatory, making this effectively prohibited.",
+      "_timestamp": "2026-04-05T21:05:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Signing documents under power of attorney carries legal authority; errors can create binding obligations, regulatory violations, financial penalties, or fraud exposure, so even rare mistakes can have severe consequences.",
+      "adequacy_evidence": "Even with review, AI systems may introduce subtle authorization, identity, or content errors that are hard to fully eliminate, leaving residual risk that is too high given the legal liability attached to delegated signatures.",
+      "_timestamp": "2026-04-05T21:05:30"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

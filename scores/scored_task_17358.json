@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1291.00",
+  "task_id": 17358,
+  "task_statement": "Maintain detailed and complete records of health care plans and prognoses.",
+  "occupation_title": "Acupuncturists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Maintaining patient records is often done in electronic health record systems and can be performed on a computer, but some practices still use paper charts or require on-site access to clinic record systems."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Accurate records require some clinical judgment in summarizing patient condition, treatment rationale, and prognosis in a way that reflects nuanced, case-specific understanding beyond simple templates.",
+      "adequacy_evidence": "Current agents can structure and draft clinical documentation well, but may miss subtle practitioner-specific judgments or culturally grounded diagnostic nuances common in acupuncture practice.",
+      "_timestamp": "2026-04-06T05:21:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintaining detailed healthcare records involves ongoing, structured documentation across visits, requiring consistency in terminology, completeness, and updates over time, but each entry is partially modular.",
+      "adequacy_evidence": "AI systems can handle structured documentation workflows reasonably well, but over extended sequences they may exhibit drift, omit details, or lose consistency without careful scaffolding and validation.",
+      "_timestamp": "2026-04-06T05:21:30"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse patient conditions, treatment plans, and prognoses, but is typically structured through standardized clinical documentation formats (e.g., SOAP notes) that bound variability.",
+      "adequacy_evidence": "There are many clinical documentation guidelines, de-identified records, and training examples available, but access to rich, real-world longitudinal patient records is limited due to privacy, leaving some edge cases underrepresented.",
+      "_timestamp": "2026-04-06T05:21:31"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining detailed health care records requires organizing patient histories, treatment plans, and prognoses from multiple inputs within a session, but the information is structured and not excessively large or rapidly changing.",
+      "adequacy_evidence": "Current AI agents can reliably track, structure, and summarize this level of information within a single episode using standard context management and external memory tools without significant loss.",
+      "_timestamp": "2026-04-06T05:21:31"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical record-keeping has structured requirements (e.g., documenting plans, progress, prognoses), but deciding what details are clinically relevant, sufficiently complete, and compliant with local standards involves context-dependent judgment.",
+      "adequacy_evidence": "Well-scaffolded agents can follow templates and infer typical documentation needs, but they often miss nuanced clinical relevance or practitioner-specific standards, requiring human review and iteration.",
+      "_timestamp": "2026-04-06T05:21:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintaining health care plans and prognoses requires continuous, longitudinal tracking of patient histories, treatment responses, and evolving conditions across many visits over time.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured records via databases or EHR integrations, but often show gaps in reliably updating, contextualizing, and surfacing nuanced longitudinal information across sessions without careful system design.",
+      "_timestamp": "2026-04-06T05:21:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining records of health care plans and prognoses is primarily a text-based documentation task, involving written notes, structured fields, and clinical terminology.",
+      "adequacy_evidence": "Current AI agents can handle text generation, structuring, and summarization for recordkeeping effectively, with no meaningful reliance on non-text modalities.",
+      "_timestamp": "2026-04-06T05:21:32"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining detailed health care records is typically done after or between patient interactions, with minutes to hours available for completion and no strict real-time constraint.",
+      "adequacy_evidence": "Current AI systems can generate and organize detailed clinical documentation well within these relaxed timeframes without needing to sacrifice reasoning quality.",
+      "_timestamp": "2026-04-06T05:21:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing whether health care plans and prognoses are accurately and completely documented requires clinical knowledge, attention to nuanced patient details, and cross-checking against standards; errors may be subtle or only evident over time.",
+      "adequacy_evidence": "AI can generate structured clinical documentation, but it still makes omissions or subtle inaccuracies, so expert review is necessary though not prohibitively difficult for a trained practitioner.",
+      "_timestamp": "2026-04-06T05:21:33"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Healthcare recordkeeping is regulated (e.g., HIPAA, state licensure rules) and typically requires a licensed practitioner to be responsible for and authenticate records, but there is no explicit prohibition on AI tools assisting with documentation. This creates partial restriction because AI cannot independently fulfill the legal responsibility without human oversight and sign-off.",
+      "_timestamp": "2026-04-06T05:21:34"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The records are used by other healthcare providers and may be referenced in patient care, so stakeholders rely on their accuracy, though the recorder\u2019s identity is not central.",
+      "adequacy_evidence": "AI-assisted documentation in healthcare is already widely accepted for record-keeping tasks, especially when clinicians oversee and validate entries.",
+      "_timestamp": "2026-04-06T05:21:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Medical records documenting care plans and prognoses are legal and clinical documents; even small residual errors can misguide future treatment, create liability, or affect patient outcomes.",
+      "adequacy_evidence": "With standard review and structured documentation checks, most AI-generated errors can be caught, but occasional subtle inaccuracies or omissions may still slip through and pose non-trivial risk.",
+      "_timestamp": "2026-04-06T05:21:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

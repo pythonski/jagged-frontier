@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "23-2093.00",
+  "task_id": 9245,
+  "task_statement": "Determine whether land-related documents can be registered under the relevant legislation such as the Land Titles Act.",
+  "occupation_title": "Title Examiners, Abstractors, and Searchers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Assessing whether documents meet statutory requirements is largely done by reviewing legal criteria and document contents on a computer. However, some cases still involve examining or verifying physical documents or records held at registries, requiring in-person handling."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on applying explicit statutory criteria and documented registration rules, but also involves some experience-based judgment in interpreting ambiguous document defects, local registry practices, and edge cases.",
+      "adequacy_evidence": "Current AI can follow statutes and check formal requirements well, but lacks consistent calibration for nuanced, jurisdiction-specific interpretations and borderline cases that experienced examiners handle.",
+      "_timestamp": "2026-04-06T02:01:29"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple document types, jurisdiction-specific statutes, and edge cases (e.g., defects, encumbrances, priority issues), but remains structured within well-defined legal frameworks.",
+      "adequacy_evidence": "Statutes, regulations, case law, and sample filings are widely available, but detailed datasets on borderline or rejected registrations and nuanced clerk-level decisions are relatively sparse, requiring some synthesis.",
+      "_timestamp": "2026-04-06T02:01:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Relevant statutes and regulations provide explicit criteria, but applying them requires interpreting legal language, jurisdiction-specific rules, and document context (e.g., defects, prior encumbrances).",
+      "adequacy_evidence": "Current agents can parse statutes and compare document features to rules, but often struggle with nuanced legal interpretation and edge cases, requiring human clarification or review.",
+      "_timestamp": "2026-04-06T02:01:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple documents (deeds, prior registrations, legal descriptions) and matching them against statutory criteria, requiring integration and tracking of several pieces of information within a single episode.",
+      "adequacy_evidence": "Current agents can handle moderate document sets and statutory cross-referencing, but may lose track of nuanced details (e.g., exceptions, inconsistencies across documents) or compress legal context imperfectly.",
+      "_timestamp": "2026-04-06T02:01:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each determination is typically based on the specific document and current statutory requirements; prior case history is not required to complete new instances.",
+      "adequacy_evidence": "Since the task is largely self-contained per instance, existing agent memory systems are sufficient and no meaningful cross-session retention gap affects performance.",
+      "_timestamp": "2026-04-06T02:01:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step review process\u2014interpreting legislation, examining document details, and checking compliance criteria\u2014but the sequence is moderately bounded rather than deeply interdependent over long horizons.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across these moderate-length legal reasoning steps, though some degradation can occur in tracking all constraints and cross-references consistently over the full review.",
+      "_timestamp": "2026-04-06T02:01:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves interpreting legal text in land-related documents and statutes; any maps or diagrams are ancillary and not central to determining registrability.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI systems can adequately process the required inputs without meaningful multimodal limitations.",
+      "_timestamp": "2026-04-06T02:01:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining registrability of land documents is a deliberative legal review task where minutes to hours are typically acceptable, with no expectation of real-time response.",
+      "adequacy_evidence": "Frontier agents can take sufficient time to apply statutory rules and checks without meaningful degradation from latency constraints, as speed is not a binding factor.",
+      "_timestamp": "2026-04-06T02:01:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining registrability under land titles legislation requires careful legal interpretation of statutes, document compliance, and jurisdiction-specific rules; errors can be subtle and require expert review to detect.",
+      "adequacy_evidence": "Current AI systems can misinterpret legal provisions or miss edge-case restrictions, and their errors are not easily detectable without detailed legal checking, making substantial expert verification necessary.",
+      "_timestamp": "2026-04-06T02:01:33"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrectly determining registrability under land title legislation can lead to invalid title registration, legal disputes, financial loss, and long-term property rights issues, making even rare residual errors highly consequential.",
+      "adequacy_evidence": "Even with standard legal review and checks, AI systems can miss nuanced statutory interpretations or jurisdiction-specific exceptions, leaving a non-trivial residual risk that remains problematic for such high-stakes determinations.",
+      "_timestamp": "2026-04-06T02:01:33"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Determining whether documents meet statutory registration requirements can constitute legal judgment, which in many states falls under unauthorized practice of law rules requiring a licensed human professional. While AI can assist, regulations are not yet explicit about AI, creating partial restriction rather than a clear prohibition.",
+      "_timestamp": "2026-04-06T02:01:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The determination must be accepted by clients, attorneys, and land registry officials, and hinges on recognized professional authority and legal accountability of the examiner.",
+      "adequacy_evidence": "Stakeholders and registries typically require decisions from licensed or accountable human professionals; an AI agent would face strong resistance and likely be deemed unacceptable without human sign-off.",
+      "_timestamp": "2026-04-06T02:01:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

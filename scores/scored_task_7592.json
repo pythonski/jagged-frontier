@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4051.01",
+  "task_id": 7592,
+  "task_statement": "Calculate equipment operating factors, such as radiation times, dosages, temperatures, gamma intensities, or pressures, using standard formulas and conversion tables.",
+  "occupation_title": "Nuclear Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "The task involves calculating operating factors using formulas and conversion tables, which can be done entirely with computer software or digital tools if the necessary input data are available. Physical presence near the equipment is not required for the calculation itself."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different equipment types, physical parameters, and operating contexts, but relies on well-defined physics formulas and standardized conversion tables rather than highly heterogeneous cases.",
+      "adequacy_evidence": "Extensive textbooks, technical manuals, worked examples, and simulation environments provide rich, process-level coverage of these calculations, making the distribution well-represented in current training pipelines.",
+      "_timestamp": "2026-04-06T00:12:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on applying well-defined formulas, unit conversions, and lookup tables, with little need for experience-based judgment beyond procedural correctness.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., calculators, code execution) can reliably perform these rule-based computations without requiring tacit calibration.",
+      "_timestamp": "2026-04-06T00:12:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step calculations (e.g., applying formulas, unit conversions, and table lookups) where intermediate results feed into final outputs, but sequences are typically bounded and procedural.",
+      "adequacy_evidence": "LLM-based agents with tools (e.g., calculators, code execution) reliably maintain accuracy across these short-to-moderate computational sequences without significant degradation.",
+      "_timestamp": "2026-04-06T00:12:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "These calculations are typically self-contained, relying on current measurement inputs, standard formulas, and reference tables rather than accumulated historical context.",
+      "adequacy_evidence": "Since the task does not depend on cross-session memory, existing AI systems' limited persistent state does not impede performance.",
+      "_timestamp": "2026-04-06T00:12:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple input parameters (e.g., radiation levels, temperature, pressure) and applying formulas and conversion tables, requiring some active retrieval and organization within a single calculation episode.",
+      "adequacy_evidence": "Current AI agents reliably manage this level of structured, bounded information using tools (e.g., calculators, table lookup) without significant context loss or compression errors.",
+      "_timestamp": "2026-04-06T00:12:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is governed by explicit formulas, known variables, and standard conversion tables, with clear correctness criteria based on physical calculations.",
+      "adequacy_evidence": "Current AI systems reliably interpret structured calculation tasks and apply formulas correctly when inputs are specified, with minimal ambiguity to resolve.",
+      "_timestamp": "2026-04-06T00:12:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is fundamentally numerical and symbolic, involving formulas and conversion tables that can be fully represented in text or structured data.",
+      "adequacy_evidence": "Current AI systems handle text-based calculations and table lookups effectively, with no meaningful multimodal demands to create a capability gap.",
+      "_timestamp": "2026-04-06T00:12:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "These calculations are often performed during ongoing operations where results are expected within seconds to a few minutes to inform adjustments, but not typically at millisecond or reflexive timescales.",
+      "adequacy_evidence": "LLM-based agents with tools can execute formula-based calculations and unit conversions almost instantly, maintaining high accuracy well within the required time window without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T00:12:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "These calculations use standardized formulas and tables, and results can often be cross-checked with independent calculations, reference ranges, or instrumentation, but doing so requires domain expertise and careful review.",
+      "adequacy_evidence": "Current AI can perform these calculations accurately in many cases, but occasional unit errors, misapplied formulas, or context misunderstandings mean technicians must still perform non-trivial verification.",
+      "_timestamp": "2026-04-06T00:12:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Nuclear operations are heavily regulated by the NRC, requiring qualified and often licensed personnel to be responsible for calculations affecting safety-critical parameters. While there is no explicit prohibition on using software or AI to perform calculations, a human must review and take responsibility, creating partial restriction rather than full prohibition.",
+      "_timestamp": "2026-04-06T00:12:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is a technical calculation typically performed internally, with outputs (e.g., dosages, operating factors) consumed as part of a workflow rather than requiring stakeholder interaction or trust in the performer\u2019s identity.",
+      "adequacy_evidence": "There are no meaningful stakeholder acceptance concerns; such calculations are already routinely performed by software and automated systems without regard to whether a human or AI produced them.",
+      "_timestamp": "2026-04-06T00:12:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Miscalculations of radiation dose, exposure time, or pressure in nuclear settings can lead to severe safety hazards, including radiation overexposure or equipment failure, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "These calculations are highly structured and routinely verified using redundant methods (independent calculations, instrumentation checks), so AI outputs can be reliably checked, leaving minimal residual risk after standard quality control.",
+      "_timestamp": "2026-04-06T00:12:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "33-3041.00",
+  "task_id": 7944,
+  "task_statement": "Investigate and answer complaints regarding contested parking citations, determining their validity and routing them appropriately.",
+  "occupation_title": "Parking Enforcement Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Reviewing contested parking citations typically involves examining digital records, photos, and complaint submissions and responding through administrative systems. However, some cases may require physical verification of signage, meters, or locations, so not all instances can be handled entirely remotely."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many decisions follow codified parking regulations and documented procedures, resolving contested citations often involves interpreting ambiguous evidence (e.g., signage visibility, mitigating circumstances) and applying case-based judgment from experience.",
+      "adequacy_evidence": "Current AI can apply rules and handle common scenarios, but it lacks consistent calibration for nuanced or context-sensitive disputes, especially where informal norms or discretionary leniency are involved.",
+      "_timestamp": "2026-04-06T04:51:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While citation rules and procedures are codified, complaints often involve contextual narratives, incomplete information, and judgment about exceptions or mitigating circumstances, requiring some interpretation beyond explicit rules.",
+      "adequacy_evidence": "Current agents can apply formal rules and extract facts from complaints, but they often struggle with nuanced judgment calls and implicit context, leading to moderate need for human review or iteration.",
+      "_timestamp": "2026-04-06T04:51:39"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Investigating contested parking citations is typically an administrative, asynchronous process where responses can take hours to days rather than requiring immediate turnaround.",
+      "adequacy_evidence": "Current AI systems can easily operate within these loose time constraints, allowing full reasoning and document review without meaningful degradation from latency limits.",
+      "_timestamp": "2026-04-06T04:51:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Investigations often involve reviewing photographs of the vehicle, signage, or parking conditions alongside written complaints and citation data, requiring some visual-text integration.",
+      "adequacy_evidence": "Current agents can interpret many straightforward images and documents, but may struggle with ambiguous signage, poor image quality, or nuanced spatial context (e.g., curb markings, angles, or occlusions).",
+      "_timestamp": "2026-04-06T04:51:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Most complaints can be resolved using information within a single case file, but some require referencing prior citations, repeat offenses, or past rulings to ensure consistency.",
+      "adequacy_evidence": "Current AI systems with standard database integration can reliably store and retrieve case histories and prior decisions, meeting the modest cross-session memory needs of this task.",
+      "_timestamp": "2026-04-06T04:51:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step workflow\u2014reviewing complaint details, checking citation records and policies, assessing validity, and routing decisions\u2014but sequences are relatively short and loosely coupled.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably handle these bounded, procedural sequences with minimal drift, especially when supported by structured data access and workflow tools.",
+      "_timestamp": "2026-04-06T04:51:39"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of case types (e.g., signage disputes, meter malfunctions, permit issues, clerical errors), but these follow recurring patterns governed by local regulations and standard evidence types.",
+      "adequacy_evidence": "Municipal records, appeal decisions, enforcement guidelines, and synthetic case generation provide ample, structured examples with reasoning steps, making coverage of key subpopulations readily achievable.",
+      "_timestamp": "2026-04-06T04:51:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing multiple information sources (citation details, complainant statements, possibly photos and local regulations) and synthesizing them, but the total volume is typically bounded and structured per case.",
+      "adequacy_evidence": "Current AI agents with retrieval and tool use can reliably manage and cross-reference these moderate, case-specific information sets without significant loss or confusion.",
+      "_timestamp": "2026-04-06T04:51:40"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining validity involves checking citation details, photos, timestamps, and local parking regulations; errors can be identified but require careful document review and policy knowledge.",
+      "adequacy_evidence": "Current AI can analyze documents but may misinterpret evidence or nuanced local rules, so human review is still needed to reliably catch mistakes.",
+      "_timestamp": "2026-04-06T04:51:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors can lead to improper fines being upheld or dismissed, which has financial and fairness implications, but outcomes are typically reversible through further appeals or corrections.",
+      "adequacy_evidence": "With standard checks (document review, rule-based validation), AI decisions can be reliably audited and corrected, leaving residual risk at an acceptable level for this administrative context.",
+      "_timestamp": "2026-04-06T04:51:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task directly involves members of the public contesting citations, who must accept the decision and reasoning provided by the worker, though deep interpersonal trust or empathy is not central.",
+      "adequacy_evidence": "Some individuals would resist or distrust AI adjudicating disputes involving fines or fairness, especially if decisions impact them financially, but others may accept it if processes are transparent and consistent.",
+      "_timestamp": "2026-04-06T04:51:42"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Many jurisdictions require that final adjudication of contested citations be made or approved by an authorized human official (e.g., a hearing officer), but there is generally no explicit prohibition on AI assisting with investigation or routing. This creates partial restriction rather than a full ban.",
+      "_timestamp": "2026-04-06T04:51:42"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

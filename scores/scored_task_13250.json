@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-2021.00",
+  "task_id": 13250,
+  "task_statement": "Monitor automated systems for placing collect calls and intervene for a callers needing assistance.",
+  "occupation_title": "Telephone Operators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Monitoring automated collect-call systems and assisting callers is done through telecommunications and computer interfaces, which can be accessed remotely with standard call-center software and internet connectivity."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a moderate range of caller issues (e.g., billing problems, system errors, accessibility needs) but follows structured telecom workflows and scripts.",
+      "adequacy_evidence": "Call center transcripts, telecom SOPs, and customer service training data are abundant and capture both outcomes and interaction processes, making coverage readily achievable.",
+      "_timestamp": "2026-04-05T22:53:31"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Operators must recognize when callers are confused, distressed, or deviating from normal system flows, which involves some experience-based judgment beyond explicit scripts.",
+      "adequacy_evidence": "Current AI agents can detect many assistance triggers (e.g., speech patterns, errors, help requests), but still struggle with subtle contextual cues or atypical human behavior that experienced operators handle smoothly.",
+      "_timestamp": "2026-04-05T22:53:32"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each call and intervention is typically independent, with no need to retain caller history or prior interactions across sessions.",
+      "adequacy_evidence": "Current AI systems can easily handle stateless monitoring and intervention without requiring persistent cross-session memory.",
+      "_timestamp": "2026-04-05T22:53:32"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The operator must track the status of ongoing automated collect calls and relevant caller/system states, but the information volume is limited and typically structured within a single interaction.",
+      "adequacy_evidence": "Current AI agents can reliably maintain and update this level of short-term state within an episode using standard memory and tool integration without significant loss or drift.",
+      "_timestamp": "2026-04-05T22:53:33"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires interpreting when a caller 'needs assistance,' which can depend on subtle cues like failed automation attempts, unusual behavior, or tone, but operates within a fairly structured system context.",
+      "adequacy_evidence": "Current agents can detect many explicit failure states and common patterns but still struggle with nuanced or unexpected signals of confusion or distress, leading to missed or mistimed interventions.",
+      "_timestamp": "2026-04-05T22:53:33"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Intervening in live call handling requires near-real-time responsiveness, typically within seconds, to assist callers without disrupting the interaction.",
+      "adequacy_evidence": "Current AI agents can monitor streams and trigger or execute simple assistance actions quickly without needing deep deliberation, so latency constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T22:53:33"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires monitoring live telephone audio and recognizing when callers need assistance, involving speech perception beyond text alone.",
+      "adequacy_evidence": "Current AI handles speech recognition and basic call routing well but can struggle with noisy lines, accents, or nuanced cues indicating a caller needs help, making performance somewhat unreliable in edge cases.",
+      "_timestamp": "2026-04-05T22:53:33"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing monitoring with intermittent intervention, requiring some continuity across steps but typically in short, loosely coupled interaction sequences per call.",
+      "adequacy_evidence": "Current AI agents can sustain monitoring loops and handle brief intervention sequences without meaningful degradation, as the interactions are short and reset between cases.",
+      "_timestamp": "2026-04-05T22:53:33"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Errors in monitoring or assisting collect call systems (e.g., missed assistance, minor billing or connection issues) generally have limited, reversible consequences and do not pose safety or high-stakes risks.",
+      "adequacy_evidence": "Current AI systems, especially with real-time monitoring and fallback to human escalation, can keep residual error rates within acceptable bounds for such low-consequence tasks.",
+      "_timestamp": "2026-04-05T22:53:35"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "System errors (failed connections, billing issues, caller confusion) surface immediately through system alerts or live call interactions, making mistakes easy to observe and correct in real time.",
+      "adequacy_evidence": "AI monitoring outputs can be checked via straightforward signals like call success rates and user complaints, and any errors are quickly apparent without intensive review.",
+      "_timestamp": "2026-04-05T22:53:35"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations requiring a human to perform monitoring or assistance for collect call systems; telecommunications operations of this kind can be automated. Existing FCC rules govern service standards and consumer protections but do not prohibit AI from performing this task.",
+      "_timestamp": "2026-04-05T22:53:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves direct interaction with callers who need assistance, often in potentially sensitive situations (e.g., collect calls), where clarity, trust, and responsiveness matter.",
+      "adequacy_evidence": "Callers are already accustomed to automated phone systems, but many still prefer human assistance when issues arise, so AI would face some resistance though not outright rejection.",
+      "_timestamp": "2026-04-05T22:53:35"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

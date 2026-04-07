@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9081.00",
+  "task_id": 1126,
+  "task_statement": "Book tickets for guests for local tours and attractions.",
+  "occupation_title": "Lodging Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Booking tours and attraction tickets is usually done through online reservation systems, email, or web portals, which can be handled remotely on a computer. However, some situations may require obtaining or handing over physical tickets or coordinating in person with local vendors."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of variability in guest preferences, local attractions, pricing structures, and booking channels, but follows well-structured and repetitive patterns.",
+      "adequacy_evidence": "Extensive data exists from travel platforms, booking systems, and customer service workflows, and the step-by-step booking process is well-documented and easily captured through APIs or synthetic environments.",
+      "_timestamp": "2026-04-06T04:49:43"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Guest preferences (budget, timing, interests, accessibility needs) are often implicit and require clarification beyond a literal request to ensure appropriate bookings.",
+      "adequacy_evidence": "Current agents can gather missing details through prompts and iterative interaction, but they still often miss nuanced preferences or contextual cues, requiring human oversight to fully align with guest expectations.",
+      "_timestamp": "2026-04-06T04:49:44"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Booking tickets involves a short sequence of coordinated steps (gathering guest preferences, checking availability, completing reservations, confirming details), where consistency matters but sequences are not deeply long or highly interdependent.",
+      "adequacy_evidence": "Well-tooled AI agents can reliably handle these moderate-length workflows with minimal degradation, as task steps are structured and supported by APIs, reducing risk of drift or compounding errors.",
+      "_timestamp": "2026-04-06T04:49:45"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Selecting appropriate tours can involve some experiential judgment about guest preferences, timing, and quality of providers, but much of the process follows explicit booking procedures and available information.",
+      "adequacy_evidence": "Current AI agents can reliably match preferences to options, compare offerings, and execute bookings using structured data and reviews, covering most of the required judgment without significant gaps.",
+      "_timestamp": "2026-04-06T04:49:45"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking guest details, dates, preferences, availability, and booking confirmations across a few sources, requiring moderate within-episode state management.",
+      "adequacy_evidence": "Current agents with tool use can reliably manage these bounded details through structured inputs, retrieval, and transaction tracking without significant loss of context.",
+      "_timestamp": "2026-04-06T04:49:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many bookings are one-off, lodging managers often benefit from retaining guest preferences, repeat visitor history, and prior bookings across stays to personalize recommendations and streamline service.",
+      "adequacy_evidence": "Current AI systems integrated with CRM or reservation systems can reliably store and retrieve guest histories and preferences across sessions, making cross-session memory needs well-supported.",
+      "_timestamp": "2026-04-06T04:49:47"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Booking tickets for guests typically requires timely responses (seconds to a few minutes), especially when guests are waiting, but does not demand strict real-time immediacy.",
+      "adequacy_evidence": "Current AI agents can complete search, selection, and booking steps within this time window without needing to truncate reasoning, so quality is not meaningfully degraded.",
+      "_timestamp": "2026-04-06T04:49:47"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Booking tickets for local tours and attractions is primarily conducted via text-based systems (websites, reservation platforms, emails) and does not inherently require interpreting or generating non-text modalities.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based booking workflows, including form filling, availability lookup, and confirmation, without needing multimodal capabilities.",
+      "_timestamp": "2026-04-06T04:49:47"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from booking tickets for tours and attractions. While some jurisdictions require businesses to register as sellers of travel, these rules apply to the operating entity, not whether a human or AI performs the booking function.",
+      "_timestamp": "2026-04-06T04:49:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors like incorrect dates, quantities, or bookings can inconvenience guests and require refunds or rebooking, but consequences are typically reversible and not safety-critical.",
+      "adequacy_evidence": "With standard confirmation checks (dates, names, availability, payment), AI systems can reduce residual errors to an acceptable level, and remaining mistakes are manageable.",
+      "_timestamp": "2026-04-06T04:49:50"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Booking errors (dates, times, quantities, names, pricing) are typically immediately visible in confirmation screens or emails and can be quickly cross-checked against guest requests.",
+      "adequacy_evidence": "AI agents can still misinterpret preferences or select incorrect options, so human review of booking details is often needed, but verification is straightforward and low-cost.",
+      "_timestamp": "2026-04-06T04:49:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Guests rely on the lodging manager to secure appropriate bookings and may interact to specify preferences, but the task does not strongly depend on human authority or emotional rapport.",
+      "adequacy_evidence": "Guests already widely accept online booking platforms and automated concierge tools for tours and attractions, so AI handling this function would face little resistance.",
+      "_timestamp": "2026-04-06T04:49:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

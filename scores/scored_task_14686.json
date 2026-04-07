@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1299.08",
+  "task_id": 14686,
+  "task_statement": "Research, test, or verify proper functioning of software patches and fixes.",
+  "occupation_title": "Computer Systems Engineers/Architects",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Researching, testing, and verifying software patches or fixes is typically done using computers, development environments, and virtual or remote test systems. Physical presence or specialized non-computer equipment is generally not required."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Testing and verifying software patches spans diverse environments (different architectures, dependencies, configurations, failure modes, and edge cases), creating a long-tailed distribution of scenarios.",
+      "adequacy_evidence": "There is extensive public and synthetic data (open-source repos, CI logs, bug reports, test suites) enabling broad coverage, but proprietary systems, rare production edge cases, and organization-specific configurations remain partially inaccessible.",
+      "_timestamp": "2026-04-05T22:03:07"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many aspects of patch testing follow explicit QA procedures and test plans, engineers often rely on experience to anticipate edge cases, environment-specific failures, and subtle system interactions not fully captured in documentation.",
+      "adequacy_evidence": "Current agents can generate and execute test cases and follow documented workflows, but they show gaps in anticipating non-obvious failure modes and context-specific risks that experienced engineers catch through tacit judgment.",
+      "_timestamp": "2026-04-05T22:03:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While basic goals (confirm patches work and don\u2019t break systems) are clear, important success criteria like coverage depth, edge cases, system dependencies, and acceptable risk levels are context-dependent and often implicit.",
+      "adequacy_evidence": "Current agents can generate and execute reasonable test plans, but they often miss organization-specific priorities, hidden dependencies, or nuanced risk tolerances without iterative human guidance.",
+      "_timestamp": "2026-04-05T22:03:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing and verifying software patches involves multi-step workflows (designing test cases, setting up environments, executing tests, analyzing results), but these steps are modular and not tightly interdependent over very long horizons.",
+      "adequacy_evidence": "AI agents can handle structured testing pipelines reasonably well, but over longer sequences they may lose track of edge cases, misinterpret intermediate results, or fail to maintain consistent evaluation criteria without supervision.",
+      "_timestamp": "2026-04-05T22:03:07"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing and verifying patches often benefits from prior knowledge such as historical bugs, regression patterns, environment configurations, and past test results, but many instances can still be executed with current context and documentation.",
+      "adequacy_evidence": "Current agents can leverage external memory systems like issue trackers, version control, and test logs, but they inconsistently maintain and retrieve nuanced historical context (e.g., subtle regression patterns or evolving system assumptions).",
+      "_timestamp": "2026-04-05T22:03:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Testing software patches can involve observing GUI behavior, visual layouts, or system performance dashboards, but much of the work relies on code, logs, and textual test outputs.",
+      "adequacy_evidence": "Current agents can handle screenshots, UI inspection, and log analysis adequately, and multimodal demands in this task are generally straightforward rather than requiring deep perceptual reasoning.",
+      "_timestamp": "2026-04-05T22:03:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking multiple artifacts within a session\u2014test cases, system configurations, logs, and observed behaviors\u2014but these can typically be structured and externalized via tools rather than held entirely in memory.",
+      "adequacy_evidence": "Current agents can offload and retrieve state using tooling (logs, files, test harnesses), but they still sometimes lose track of evolving context or misprioritize relevant details across longer debugging sequences.",
+      "_timestamp": "2026-04-05T22:03:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Testing and verifying software patches typically occurs within development or QA cycles where minutes to hours (or longer) are acceptable; there is no strict real-time latency requirement.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to run analyses, tests, and reasoning without degrading quality, as speed constraints are not binding in this task.",
+      "_timestamp": "2026-04-05T22:03:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations in the US that prohibit AI systems from researching, testing, or verifying software patches. While certain regulated industries may impose validation or documentation requirements, they do not ban AI involvement in this task.",
+      "_timestamp": "2026-04-05T22:03:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily internal technical work; outputs (test results, validation reports) are consumed impersonally by engineering teams without reliance on the performer\u2019s identity.",
+      "adequacy_evidence": "Engineering stakeholders generally accept automated testing tools and AI-assisted validation, and do not require a human performer for trust or engagement in this context.",
+      "_timestamp": "2026-04-05T22:03:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Missed defects in patches can introduce security vulnerabilities, system outages, or data corruption, so even rare residual errors after testing can have serious downstream consequences.",
+      "adequacy_evidence": "AI can generate and execute comprehensive test cases, but still tends to miss edge cases or subtle system interactions, leaving some non-negligible residual risk even after standard QA processes.",
+      "_timestamp": "2026-04-05T22:03:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification relies on test suites, regression testing, and system-level validation, which require expertise and time; while many errors are catchable via automation, subtle integration or edge-case failures may not surface immediately.",
+      "adequacy_evidence": "AI can assist in generating tests and analyzing results, but it still misses edge cases and nuanced system interactions, so meaningful human-led verification and validation effort remains necessary.",
+      "_timestamp": "2026-04-05T22:03:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

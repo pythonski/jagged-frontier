@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5031.00",
+  "task_id": 2706,
+  "task_statement": "Record details of calls, dispatches, and messages.",
+  "occupation_title": "Public Safety Telecommunicators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Recording call, dispatch, and message details is typically done by entering information into computer-aided dispatch or digital logging systems, which can be performed entirely on a computer. While rare paper logs may exist, the task itself is inherently digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of call types, incident categories, and jurisdiction-specific protocols, but follows relatively structured logging formats and standardized fields across contexts.",
+      "adequacy_evidence": "There is ample accessible data (e.g., dispatch logs, 911 transcripts, training materials) and clear procedural patterns, and synthetic generation can readily cover sensitive or rare cases, yielding strong coverage.",
+      "_timestamp": "2026-04-05T22:00:40"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While much of the task follows standardized logging procedures, there is some need for experience-based judgment in deciding which details are salient and how to concisely summarize complex or chaotic communications.",
+      "adequacy_evidence": "Current AI systems perform well at structured information extraction and summarization, reliably capturing relevant details when given appropriate schemas and context, leaving little unmet tacit knowledge gap.",
+      "_timestamp": "2026-04-05T22:00:41"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recording details involves capturing multiple pieces of information per call or dispatch in a structured sequence, but each entry is relatively short and loosely coupled to others.",
+      "adequacy_evidence": "Current AI agents can reliably maintain consistency over short, structured data-entry sequences without noticeable degradation across steps.",
+      "_timestamp": "2026-04-05T22:00:41"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves capturing multiple structured details (caller information, location, incident type, timestamps, unit assignments) from ongoing communications, requiring some active tracking and organization within an episode.",
+      "adequacy_evidence": "Current AI agents with transcription and structured data extraction tools can reliably capture, organize, and store such information within a single interaction without significant loss or drift.",
+      "_timestamp": "2026-04-05T22:00:41"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recording call and dispatch details follows structured protocols, but requires some judgment about what information is salient, how to summarize events, and how to phrase entries based on context.",
+      "adequacy_evidence": "Current AI systems can reliably extract, structure, and summarize relevant details from communications when given appropriate schemas and examples, with minimal difficulty handling the modest ambiguity involved.",
+      "_timestamp": "2026-04-05T22:00:42"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recording often references ongoing incidents, prior calls, or case identifiers, requiring some continuity across shifts and instances, but each entry is largely self-contained.",
+      "adequacy_evidence": "Current AI systems with standard database integrations can reliably store, retrieve, and update cross-session logs and histories, meeting these persistence needs with little difficulty.",
+      "_timestamp": "2026-04-05T22:00:42"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves listening to live phone and radio communications (audio) and converting them into accurate written records, requiring audio-to-text processing.",
+      "adequacy_evidence": "Modern AI systems with speech recognition handle audio transcription reliably in most operational settings, including noisy channels, making multimodal demands largely met.",
+      "_timestamp": "2026-04-05T22:00:42"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Public safety telecommunicators must document call and dispatch details in real time or near-real time while incidents are unfolding, leaving little tolerance for delay.",
+      "adequacy_evidence": "Current AI systems with speech-to-text and structured logging can operate in real time with high speed, so meeting latency requirements does not significantly degrade output quality.",
+      "_timestamp": "2026-04-05T22:00:43"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from recording or logging details of calls, dispatches, and messages. Such functions are already commonly supported by automated computer-aided dispatch and logging systems, with no requirement that only licensed humans perform the recording itself.",
+      "_timestamp": "2026-04-05T22:00:44"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Call and dispatch records can be directly cross-checked against audio recordings, timestamps, and system logs, making discrepancies usually straightforward to detect.",
+      "adequacy_evidence": "AI-generated records (e.g., transcription/summarization) still require routine comparison with source audio due to occasional omissions or misinterpretations, but verification is relatively easy and systematic.",
+      "_timestamp": "2026-04-05T22:00:44"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is an internal documentation function; the recorded details are consumed by systems and colleagues without reliance on who performed the recording.",
+      "adequacy_evidence": "Since there are no external stakeholders sensitive to performer identity, AI-generated records would be readily accepted as long as they are accurate.",
+      "_timestamp": "2026-04-05T22:00:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate records of calls and dispatches are critical for emergency response coordination, legal documentation, and post-incident review; even small residual errors can lead to miscommunication or liability.",
+      "adequacy_evidence": "With transcription tools and human oversight, many errors can be caught, but AI systems still exhibit occasional inaccuracies in noisy, high-stakes, real-time contexts, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T22:00:44"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

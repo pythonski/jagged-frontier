@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2161.00",
+  "task_id": 5384,
+  "task_statement": "Design or develop nuclear equipment, such as reactor cores, radiation shielding, or associated instrumentation or control mechanisms.",
+  "occupation_title": "Nuclear Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Designing nuclear equipment is typically done using computer-based modeling, simulation, and CAD tools, which can be performed remotely. However, development and validation often involve physical prototypes, testing facilities, or integration with real instrumentation, requiring on-site work."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Designing nuclear equipment spans highly heterogeneous contexts (reactor types, materials, safety regimes, site-specific constraints) with long-tailed, rare edge cases and complex physics-informed workflows.",
+      "adequacy_evidence": "Much relevant data is proprietary, classified, or sparsely documented (especially failure cases and detailed design deliberation), and there are limited realistic RL environments capturing full-stack nuclear design processes.",
+      "_timestamp": "2026-04-06T01:55:37"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing nuclear equipment involves long, tightly coupled sequences (physics modeling, safety analysis, materials selection, iterative simulation, regulatory constraints) where early decisions propagate and constrain later stages.",
+      "adequacy_evidence": "Frontier agents can manage multi-step engineering workflows with tooling, but still show degradation over very long, interdependent sequences (e.g., constraint drift, inconsistencies across iterations), especially in highly coupled safety-critical domains.",
+      "_timestamp": "2026-04-06T01:55:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "While nuclear engineering design is guided by formal requirements (safety margins, regulatory codes, physics constraints), key objectives involve tradeoffs (cost, safety, efficiency, maintainability) that are context-dependent and negotiated with stakeholders.",
+      "adequacy_evidence": "Current agents struggle to infer and balance these latent, high-stakes tradeoffs and evolving stakeholder constraints, often requiring substantial human clarification and iterative refinement to reach acceptable specifications.",
+      "_timestamp": "2026-04-06T01:55:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Designing nuclear systems requires nuanced judgment about safety margins, failure modes, materials behavior under radiation, and regulatory interpretation that are not fully captured by explicit rules and rely on accumulated engineering experience.",
+      "adequacy_evidence": "Even with strong data and simulation tools, current AI agents lack the calibrated intuition and conservative judgment needed for high-stakes edge cases and safety-critical tradeoffs, leading to systematic gaps in discernment.",
+      "_timestamp": "2026-04-06T01:55:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing nuclear equipment spans long, multi-phase projects requiring persistent tracking of design iterations, safety analyses, regulatory constraints, and prior decisions across many sessions.",
+      "adequacy_evidence": "Current agents can store and retrieve project data via external memory systems, but they still struggle with maintaining coherent, up-to-date, and fully traceable context over long, complex engineering lifecycles.",
+      "_timestamp": "2026-04-06T01:55:39"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing nuclear equipment is a long-horizon engineering task involving analysis, simulation, and review cycles over days to months, with no requirement for rapid or real-time responses.",
+      "adequacy_evidence": "AI systems can take ample time for extended reasoning, tool use, and iterative refinement without impacting task performance, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-06T01:55:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing nuclear equipment relies heavily on spatial reasoning, CAD models, schematics, radiation field visualizations, and simulation outputs, making non-text modalities central to the task.",
+      "adequacy_evidence": "Current agents can interface with CAD and simulation tools and interpret visual data to some extent, but they remain less reliable on complex, high-fidelity engineering visuals and cross-modal integration.",
+      "_timestamp": "2026-04-06T01:55:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing nuclear equipment requires tracking large volumes of heterogeneous information (physics models, material properties, safety constraints, regulatory limits, and simulation outputs) where missing or mismanaging a single parameter can invalidate the design.",
+      "adequacy_evidence": "While agents can offload some state to tools and external memory, they still exhibit context loss, inconsistent constraint tracking, and drift in long multi-step engineering workflows, though not to the point of routine failure.",
+      "_timestamp": "2026-04-06T01:55:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Designing nuclear reactors and related systems involves extreme safety-critical constraints where even rare residual errors can lead to catastrophic consequences, including radiation release, environmental damage, and loss of life.",
+      "adequacy_evidence": "Even after standard engineering verification and validation, current AI systems exhibit non-negligible risks of subtle design flaws, misunderstood constraints, or unanticipated edge cases that are unacceptable in nuclear engineering contexts.",
+      "_timestamp": "2026-04-06T01:55:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Designing nuclear equipment involves complex physics, safety-critical constraints, and long feedback loops where errors may only surface through detailed simulation, peer review, or physical testing, requiring deep expertise to detect.",
+      "adequacy_evidence": "Current AI systems can produce plausible but error-prone designs or analyses, and verifying correctness demands extensive expert review, simulation, and validation, making the checking burden severe.",
+      "_timestamp": "2026-04-06T01:55:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Designing nuclear equipment requires approval and trust from regulators, utilities, and safety authorities, where the designer\u2019s credentials, licensure, and institutional legitimacy are central to acceptance.",
+      "adequacy_evidence": "Stakeholders are unlikely to accept an AI as the accountable designer of nuclear systems; regulations and norms require licensed human engineers, and resistance would significantly limit deployment without human sign-off.",
+      "_timestamp": "2026-04-06T01:55:42"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. nuclear regulations (e.g., NRC rules and quality assurance requirements under 10 CFR Part 50/Appendix B) require qualified human engineers and licensed entities to be responsible for design control, review, and approval, but do not explicitly prohibit AI use as a tool. This creates partial restriction because AI cannot serve as the legally accountable designer of record.",
+      "_timestamp": "2026-04-06T01:55:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

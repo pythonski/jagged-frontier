@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2082.00",
+  "task_id": 7363,
+  "task_statement": "Furnish taxpayers with sufficient information and advice to ensure correct tax form completion.",
+  "occupation_title": "Tax Preparers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Providing information and advice to taxpayers is primarily a communication task that can be done via email, messaging, phone, or video calls. However, many tax preparers still conduct in-person consultations and review physical documents with clients."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step interactions: eliciting taxpayer information, clarifying details, and guiding form completion in a logically consistent sequence, but not extremely long or deeply interdependent workflows.",
+      "adequacy_evidence": "Current AI agents can generally sustain coherent multi-turn guidance but show some degradation over longer interactions, such as missing constraints or inconsistent advice across steps.",
+      "_timestamp": "2026-04-05T22:43:23"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Tax advice spans a highly heterogeneous distribution including varied income types, life events, deductions, credits, and jurisdictional nuances, with many edge cases and context-dependent scenarios.",
+      "adequacy_evidence": "There is extensive public documentation (IRS guidance, tax prep examples, software workflows), but some edge cases and nuanced client-specific scenarios are underrepresented or only implicitly documented, making coverage incomplete but improvable.",
+      "_timestamp": "2026-04-05T22:43:23"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much tax guidance follows explicit IRS rules and forms, preparers often rely on experience to interpret ambiguous client situations, assess eligibility for deductions/credits, and gauge compliance risk in edge cases.",
+      "adequacy_evidence": "Current AI agents can apply codified tax rules well but show gaps in nuanced, context-sensitive judgment and risk calibration for less straightforward cases, leading to moderate shortfalls.",
+      "_timestamp": "2026-04-05T22:43:23"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The goal (accurate tax form completion) is clear, but relevant constraints and advice depend on taxpayer-specific, often unstated details (income types, deductions, life events), requiring iterative clarification and contextual judgment.",
+      "adequacy_evidence": "Current agents can ask structured follow-up questions and infer many needs, but they still miss nuanced or uncommon taxpayer situations and often require human guidance to fully resolve ambiguities.",
+      "_timestamp": "2026-04-05T22:43:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tax preparation advice requires tracking multiple pieces of client-specific financial information (income sources, deductions, credits, filing status) and integrating them accurately within a single interaction, but the volume is typically structured and bounded.",
+      "adequacy_evidence": "Current agents can handle moderately complex tax contexts with tools, but may lose or misprioritize details across longer interactions or when many interdependent variables are involved.",
+      "_timestamp": "2026-04-05T22:43:23"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing tax advice and instructions for form completion is primarily text- and number-based, relying on written regulations, financial data, and structured forms rather than non-text modalities.",
+      "adequacy_evidence": "Since the task is fundamentally text-driven, current AI systems already handle the required modality adequately without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-05T22:43:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tax preparation advice often relies on prior-year returns, carryforwards (e.g., losses, credits), and client-specific history, but each filing can be reconstructed if needed from documents provided in-session.",
+      "adequacy_evidence": "Current AI systems with standard tooling (databases, retrieval) can store and recall client histories, but inconsistencies in record linkage, updating, and retrieval mean cross-session context is not always reliably maintained.",
+      "_timestamp": "2026-04-05T22:43:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing tax information and advice typically allows for minutes or longer deliberation, with no strict need for immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can deliver accurate tax guidance within acceptable timeframes without needing to truncate reasoning, so speed constraints do not degrade quality.",
+      "_timestamp": "2026-04-05T22:43:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether tax advice is correct requires detailed knowledge of tax law, client-specific facts, and interpretation of regulations; errors can be subtle and may only surface during audits or later filings.",
+      "adequacy_evidence": "Current AI systems can produce plausible but incorrect or incomplete tax guidance, and verifying their outputs requires expert review across nuanced scenarios, making the checking burden substantial.",
+      "_timestamp": "2026-04-05T22:43:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "IRS rules require a human tax preparer with a valid PTIN to sign returns and take responsibility, which an AI system cannot independently fulfill. However, there is no explicit prohibition on using AI to provide tax advice or assist in preparing returns, creating partial but not total restriction.",
+      "_timestamp": "2026-04-05T22:43:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Taxpayers directly rely on the preparer\u2019s advice and must trust the guidance to complete filings correctly, so stakeholder interaction and perceived credibility matter.",
+      "adequacy_evidence": "AI tax software (e.g., guided filing tools) is widely used, but some taxpayers still prefer human advisors for reassurance and complex cases, indicating partial but not universal acceptance.",
+      "_timestamp": "2026-04-05T22:43:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect tax advice can lead to penalties, audits, interest, or legal exposure; even rare residual errors can have significant financial and compliance consequences.",
+      "adequacy_evidence": "Even after typical review and software checks, AI can miss nuanced eligibility rules or edge-case interpretations, leaving some non-trivial residual risk, though not uniformly catastrophic.",
+      "_timestamp": "2026-04-05T22:43:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

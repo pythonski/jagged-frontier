@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9092.00",
+  "task_id": 2042,
+  "task_statement": "Keep financial records or perform other bookkeeping duties, such as handling credit or collections or mailing monthly statements to patients.",
+  "occupation_title": "Medical Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Bookkeeping, financial recordkeeping, and collections are typically done using billing or accounting software and can be handled digitally, but tasks like mailing paper statements or processing in-person payments sometimes require physical handling."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans some variation across clinics, billing systems, and payer rules, but is largely governed by standardized bookkeeping practices and medical billing procedures.",
+      "adequacy_evidence": "Extensive documentation, training materials, billing codes, and synthetic workflows exist, and agent scaffolding can readily simulate end-to-end bookkeeping processes despite some private data gaps.",
+      "_timestamp": "2026-04-06T11:06:59"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists largely of standardized bookkeeping procedures (record-keeping, billing cycles, collections workflows) that are governed by explicit rules and established protocols.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured financial workflows and apply codified rules, with minimal need for experiential judgment beyond what can be explicitly specified.",
+      "_timestamp": "2026-04-06T11:06:59"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Bookkeeping and billing tasks follow defined procedures but involve context-dependent elements like insurance rules, patient account nuances, and office-specific policies that require some interpretation.",
+      "adequacy_evidence": "AI agents can handle standard billing workflows and infer many patterns, but they often miss implicit policy variations or edge cases, requiring human correction or clarification.",
+      "_timestamp": "2026-04-06T11:07:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Bookkeeping tasks involve tracking multiple financial records, transactions, and patient accounts within a session, requiring organized handling and occasional reconciliation of structured data.",
+      "adequacy_evidence": "Current AI agents with database access and tooling can reliably store, retrieve, and update structured financial information within a session without significant loss or drift.",
+      "_timestamp": "2026-04-06T11:07:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Bookkeeping, handling credit, collections, and mailing statements are primarily text- and number-based tasks involving structured data entry and document processing, with minimal reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents handle text and numerical data processing, document generation, and record management effectively, with no meaningful multimodal gaps for this task.",
+      "_timestamp": "2026-04-06T11:07:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Bookkeeping tasks like maintaining records, processing payments, and generating statements involve multi-step workflows with some dependencies, but they are typically structured, repetitive, and modular rather than tightly interdependent over long horizons.",
+      "adequacy_evidence": "Current AI agents with workflow automation and tool integration can reliably execute these structured sequences with minimal drift, as steps are well-defined and can be externally validated or checkpointed.",
+      "_timestamp": "2026-04-06T11:07:01"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Bookkeeping, handling collections, and mailing statements are routine administrative tasks with flexible timelines; they are typically completed in batches or over the course of a workday rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can perform these tasks well within acceptable timeframes, and extended reasoning is not constrained by latency pressures in typical workflows.",
+      "_timestamp": "2026-04-06T11:07:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Bookkeeping and patient billing inherently require maintaining accurate, longitudinal financial records across many encounters, including balances, payment histories, and ongoing collections status.",
+      "adequacy_evidence": "Current AI systems can rely on robust external databases and billing systems for persistent storage and retrieval, and LLM agents can effectively interface with these systems without major cross-session memory limitations.",
+      "_timestamp": "2026-04-06T11:07:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Bookkeeping tasks have structured records and reconciliation processes, but detecting errors like misapplied payments or incorrect patient billing often requires careful review and domain familiarity rather than being instantly obvious.",
+      "adequacy_evidence": "Current AI can perform routine bookkeeping steps, but it still makes non-trivial errors in categorization, patient account handling, or edge cases, requiring consistent human review and reconciliation checks.",
+      "_timestamp": "2026-04-06T11:07:03"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in financial records or patient billing can cause monetary discrepancies, compliance issues, or patient dissatisfaction, but they are typically detectable and correctable without irreversible harm.",
+      "adequacy_evidence": "With standard accounting checks (reconciliation, audits, review of statements), most AI-generated errors would be caught, leaving residual risk at an acceptable level for this task.",
+      "_timestamp": "2026-04-06T11:07:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves patients and possibly insurers who receive statements or interact over billing issues, so stakeholders engage with the output and may care somewhat about who is handling their financial information.",
+      "adequacy_evidence": "Automated billing systems and AI-assisted bookkeeping are already widely used and generally accepted in healthcare administration, with little resistance tied specifically to AI involvement.",
+      "_timestamp": "2026-04-06T11:07:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws requiring a human to perform bookkeeping or billing tasks; AI systems can perform them as long as they comply with regulations like HIPAA and debt collection laws. These rules govern how data is handled, not who or what performs the task.",
+      "_timestamp": "2026-04-06T11:07:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

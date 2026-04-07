@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9041.00",
+  "task_id": 23325,
+  "task_statement": "Examine letters from policyholders or agents, original insurance applications, and other company documents to determine if changes are needed and effects of changes.",
+  "occupation_title": "Insurance Claims and Policy Processing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Reviewing policyholder letters and insurance applications is often done through digital records and document management systems, but a significant share of instances still involve handling or reviewing physical mail or paper documents."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a moderate range of document types (letters, applications, policy records) and insurance contexts, with some variability in language, policy structures, and edge cases but within a structured domain.",
+      "adequacy_evidence": "While large corpora of insurance documents and synthetic workflows are feasible, much real-world variation (company-specific forms, internal guidelines, rare policy scenarios) is proprietary and thinly represented, though partially recoverable via targeted data generation.",
+      "_timestamp": "2026-04-05T21:39:39"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting policy documents and correspondence where rules exist, but clerks often rely on experience to handle ambiguous wording, inconsistencies, or borderline cases not fully specified in procedures.",
+      "adequacy_evidence": "Current AI can follow documented rules and handle many standard cases, but it shows gaps in nuanced judgment for atypical or context-sensitive scenarios where human clerks draw on accumulated case experience.",
+      "_timestamp": "2026-04-05T21:39:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple related documents, cross-referencing details, and forming consistent judgments about changes and their effects, but sequences are typically moderate in length and loosely coupled.",
+      "adequacy_evidence": "Current AI agents can manage multi-document analysis with reasonable consistency, but may exhibit some degradation in maintaining alignment across documents and steps as complexity or document volume increases.",
+      "_timestamp": "2026-04-05T21:39:41"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Inputs like policyholder letters and applications often contain implicit intent, incomplete information, or context-dependent meaning that must be interpreted against policy rules and company guidelines.",
+      "adequacy_evidence": "Current agents can extract and interpret much of the relevant information, but they still miss nuanced intent, edge-case policy implications, or subtle contextual cues, requiring human review to ensure correct interpretation.",
+      "_timestamp": "2026-04-05T21:39:41"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing multiple document types (letters, applications, policy records) and integrating their contents, requiring moderate retrieval and comparison within a single case.",
+      "adequacy_evidence": "Current LLM-based agents with retrieval tools can reliably ingest, cross-reference, and summarize multiple documents within a session without significant loss of relevant details.",
+      "_timestamp": "2026-04-05T21:39:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing insurance documents and correspondence is typically a back-office task with turnaround times of minutes to hours or longer, not requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform careful document analysis without impacting task viability, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T21:39:41"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and analyzing textual documents such as letters, applications, and policy records; any visual structure (e.g., forms) is secondary to text content.",
+      "adequacy_evidence": "Current AI systems can reliably process digitized documents and extract relevant textual information, including from structured forms, with no significant multimodal limitations.",
+      "_timestamp": "2026-04-05T21:39:42"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each evaluation is based on the current case file (letters, applications, and related documents), which already contains the relevant history; the task does not rely on the clerk remembering prior cases across sessions.",
+      "adequacy_evidence": "AI systems can retrieve and process all necessary case documents from storage per instance, so there is no meaningful gap in cross-session memory capability for this task.",
+      "_timestamp": "2026-04-05T21:39:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining needed changes and their effects requires domain knowledge of policy terms and careful cross-checking across documents, but errors can usually be identified through review of source materials and established rules.",
+      "adequacy_evidence": "Current AI can parse and summarize such documents but may misinterpret policy nuances or implications, so consistent human review is needed though not excessively burdensome.",
+      "_timestamp": "2026-04-05T21:39:44"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from reviewing insurance documents or identifying needed changes in a clerical support role. While insurance is regulated, these rules do not mandate that such document examination tasks be performed exclusively by humans.",
+      "_timestamp": "2026-04-05T21:39:44"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal document review and analysis process; outputs are used within the organization without direct interaction with policyholders or agents during the task itself.",
+      "adequacy_evidence": "Because there are no direct stakeholders engaging with the performer, acceptance of AI vs. human identity is largely irrelevant and does not affect task effectiveness.",
+      "_timestamp": "2026-04-05T21:39:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors can affect policy terms, coverage, or premiums, leading to financial or administrative consequences, but issues are typically detectable and correctable through audits or later review.",
+      "adequacy_evidence": "Given structured documents and established review workflows, AI outputs can be checked effectively, leaving residual risk at an acceptable level after normal quality control.",
+      "_timestamp": "2026-04-05T21:39:44"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

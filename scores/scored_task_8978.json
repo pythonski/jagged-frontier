@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2031.00",
+  "task_id": 8978,
+  "task_statement": "Diagnose and interpret bioelectric data, using signal processing techniques.",
+  "occupation_title": "Bioengineers and Biomedical Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Diagnosing and interpreting bioelectric signals (e.g., EEG, ECG, EMG) using signal processing is typically performed on digital datasets with specialized software and can be done remotely once the data are collected."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Bioelectric signal interpretation spans diverse modalities (e.g., EEG, ECG, EMG), patient populations, device configurations, and rare pathological patterns, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "Large annotated datasets and signal-processing pipelines exist for common cases, but rare conditions, proprietary clinical data, and expert-level diagnostic reasoning traces remain partially inaccessible or thinly represented.",
+      "_timestamp": "2026-04-06T05:49:02"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While signal processing steps can be formally defined, interpreting bioelectric data (e.g., distinguishing pathology from artifact) depends on clinical context, patient history, and nuanced judgment, making success criteria partly implicit.",
+      "adequacy_evidence": "Current AI agents can apply standard interpretation patterns and infer some context, but they often miss subtle clinical cues or misinterpret ambiguous signals without iterative human guidance.",
+      "_timestamp": "2026-04-06T05:49:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting bioelectric signals (e.g., ECG, EEG) requires nuanced judgment to distinguish artifacts from true physiological patterns, integrate patient context, and handle atypical or borderline cases\u2014skills typically developed through experience beyond formal rules.",
+      "adequacy_evidence": "Frontier AI systems perform well on standard signal classification and pattern recognition, but show weaker calibration on ambiguous, noisy, or context-dependent cases where expert tacit judgment is critical.",
+      "_timestamp": "2026-04-06T05:49:03"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosing bioelectric signals (e.g., EEG, ECG) involves handling large multichannel time-series data, tracking preprocessing steps, features, and anomalies across segments where missing subtle patterns can change conclusions.",
+      "adequacy_evidence": "Agents can offload data handling to tools and code, but still show some weaknesses in maintaining consistent intermediate representations and recalling relevant signal features across complex workflows.",
+      "_timestamp": "2026-04-06T05:49:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step pipelines (preprocessing, filtering, feature extraction, and interpretation) where intermediate outputs feed later stages, but many steps are modular and can be validated independently.",
+      "adequacy_evidence": "Current AI agents can execute such signal-processing pipelines with tools, but over longer sequences they may show some error propagation or parameter misalignment without careful oversight.",
+      "_timestamp": "2026-04-06T05:49:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting bioelectric signals often benefits from longitudinal context such as prior patient recordings, baseline comparisons, or evolving experimental setups, but many analyses can still be performed on self-contained datasets.",
+      "adequacy_evidence": "Current agents can persist and retrieve prior data via external memory systems, but they may inconsistently surface relevant historical context or manage evolving case histories without careful system design.",
+      "_timestamp": "2026-04-06T05:49:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centers on interpreting bioelectric signals (e.g., EEG, ECG), which are inherently non-textual time-series data requiring visual, numerical, and signal-processing analysis; text alone cannot substitute for these inputs.",
+      "adequacy_evidence": "Current AI systems can process and analyze structured signal data with tools, but reliability drops on noisy, complex, or clinically nuanced patterns requiring fine-grained interpretation and cross-modal judgment.",
+      "_timestamp": "2026-04-06T05:49:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Bioelectric signal interpretation (e.g., ECG, EEG) sometimes occurs in near-real-time monitoring contexts, but many diagnostic and research applications allow seconds to minutes for analysis.",
+      "adequacy_evidence": "Current AI systems with signal-processing tools can deliver high-quality interpretations within these timeframes, and real-time classification tasks are already well-supported without requiring deep, slow reasoning.",
+      "_timestamp": "2026-04-06T05:49:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting bioelectric signals (e.g., EEG, ECG, EMG) involves subtle pattern recognition and context-dependent judgments where errors may not be obvious without expert review or additional clinical correlation.",
+      "adequacy_evidence": "Current AI systems can misinterpret noise, artifacts, or atypical patterns, and their outputs require careful expert validation because mistakes are both non-obvious and consequential.",
+      "_timestamp": "2026-04-06T05:49:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces interpretations that clinicians, researchers, or medical teams rely on, so stakeholders engage with the output, though the performer\u2019s personal identity is not usually central.",
+      "adequacy_evidence": "AI-assisted signal interpretation is increasingly used, but clinicians and institutions often require human oversight and may be cautious about fully accepting AI-only diagnoses.",
+      "_timestamp": "2026-04-06T05:49:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "AI systems can legally perform signal processing and assist in interpreting bioelectric data, but when used for clinical diagnosis they fall under FDA medical device regulation and typically require clearance and human clinical oversight. There is no outright prohibition, but regulatory frameworks impose constraints and limit fully autonomous use in medical contexts.",
+      "_timestamp": "2026-04-06T05:49:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting bioelectric signals (e.g., EEG, ECG) directly informs clinical or device decisions where misdiagnosis can lead to serious harm, delayed treatment, or incorrect interventions, so even rare residual errors are consequential.",
+      "adequacy_evidence": "Current AI systems can perform strong signal analysis, but known failure modes (e.g., misclassification in edge cases, sensitivity to noise/artifacts) mean that even after standard review processes, some non-negligible residual risk remains.",
+      "_timestamp": "2026-04-06T05:49:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

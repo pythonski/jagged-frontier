@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1253.00",
+  "task_id": 14657,
+  "task_statement": "Collaborate with field staff or customers to evaluate or diagnose problems and recommend possible solutions.",
+  "occupation_title": "Software Quality Assurance Analysts and Testers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Software QA analysts typically collaborate with customers or field staff through issue trackers, email, chat, or video calls to diagnose software problems and suggest fixes. However, some situations involve on-site collaboration with field staff or examining issues in a physical deployment environment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous software systems, user environments, and failure modes, often requiring adaptation to diverse customer contexts and edge-case behaviors.",
+      "adequacy_evidence": "Large volumes of bug reports, support tickets, and diagnostic workflows exist, but many real-world instances involve proprietary systems and context-specific interactions that are only partially represented in accessible training data.",
+      "_timestamp": "2026-04-05T20:36:17"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing software issues with users and field staff requires experience-based judgment to interpret ambiguous symptoms, prioritize likely causes, and map them to system behaviors beyond explicit procedures.",
+      "adequacy_evidence": "LLM-based agents can follow logs and known patterns but still lack consistent calibration in messy, context-rich debugging conversations and novel failure modes, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-05T20:36:18"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosing issues from field staff or customers involves interpreting vague, incomplete, or non-technical problem descriptions, with success criteria often shifting based on user context, system behavior, and stakeholder priorities.",
+      "adequacy_evidence": "Current agents can iteratively clarify and infer intent through dialogue, but still frequently miss subtle contextual cues or implicit constraints, requiring human guidance to fully converge on the true problem and acceptable solution.",
+      "_timestamp": "2026-04-05T20:36:19"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing issues with field staff or customers requires tracking problem descriptions, system states, logs, prior troubleshooting steps, and constraints across a conversation, but the volume is typically moderate and structured.",
+      "adequacy_evidence": "Current agents can handle multi-source context with tools and retrieval, but they sometimes lose or misprioritize details across longer troubleshooting exchanges, leading to partial or inconsistent diagnoses.",
+      "_timestamp": "2026-04-05T20:36:19"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective diagnosis often benefits from prior bug reports, system changes, customer environments, and earlier interactions, but many issues can still be handled with current-session context plus accessible records.",
+      "adequacy_evidence": "Agents can use ticketing systems, logs, and retrieval to persist and recall history, but they still show gaps in consistently surfacing the most relevant past context and maintaining coherent cross-session state without careful engineering.",
+      "_timestamp": "2026-04-05T20:36:20"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing issues with field staff or customers typically involves multi-step back-and-forth interactions, gathering information, testing hypotheses, and refining recommendations over several exchanges.",
+      "adequacy_evidence": "LLM-based agents can generally sustain coherent multi-turn diagnostic interactions, but may exhibit some drift, missed details, or inconsistency over longer or more complex sequences.",
+      "_timestamp": "2026-04-05T20:36:20"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing software issues often involves interpreting screenshots, screen recordings, UI behavior, or logs alongside textual descriptions, making multimodal inputs meaningfully useful but not always essential.",
+      "adequacy_evidence": "Current agents can interpret screenshots and basic UI flows, but struggle with complex, dynamic interfaces, subtle visual bugs, or integrating multimodal cues reliably in real-world debugging contexts.",
+      "_timestamp": "2026-04-05T20:36:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is interactive and often performed in real time with staff or customers, so responses are expected within seconds to a few minutes, but not instantaneously.",
+      "adequacy_evidence": "Current agents can deliver high-quality diagnostic suggestions within this time frame; the latency budget generally allows sufficient reasoning without meaningful degradation.",
+      "_timestamp": "2026-04-05T20:36:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit AI from collaborating with staff or customers to diagnose software issues and recommend solutions in a QA context. This task is not regulated in a way that mandates human-only performance.",
+      "_timestamp": "2026-04-05T20:36:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnoses and recommendations can usually be checked by reproducing issues, reviewing logs, or testing proposed fixes, but this requires technical expertise and time rather than being immediately obvious.",
+      "adequacy_evidence": "AI-generated diagnoses and solutions are often plausible but not reliably correct, so practitioners must routinely validate them through testing and investigation, creating a moderate verification burden.",
+      "_timestamp": "2026-04-05T20:36:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires direct interaction with field staff or customers to diagnose issues and recommend solutions, so stakeholders must engage with and trust the performer to some extent.",
+      "adequacy_evidence": "Many stakeholders would accept AI-assisted diagnostics, but some may prefer human judgment for troubleshooting nuances or accountability, leading to moderate resistance.",
+      "_timestamp": "2026-04-05T20:36:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Misdiagnosing software issues or recommending suboptimal fixes can lead to persistent bugs, delays, or customer dissatisfaction, but these errors are typically reversible through further testing and iteration.",
+      "adequacy_evidence": "Even after review and testing, AI may miss edge cases or misinterpret user-reported issues, leaving some residual risk that can affect quality, though it is usually manageable within standard QA workflows.",
+      "_timestamp": "2026-04-05T20:36:23"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

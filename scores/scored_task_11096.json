@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-5012.00",
+  "task_id": 11096,
+  "task_statement": "Review records or reports concerning laboratory results, staffing, floor plans, fire inspections, or sanitation to gather information for the development or enforcement of safety activities.",
+  "occupation_title": "Occupational Health and Safety Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Reviewing records or reports (lab results, staffing data, inspection reports, floor plans) is commonly done using digital documents and databases, but in many workplaces technicians still review paper files or on-site documentation that requires physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple document types (lab reports, staffing logs, floor plans, inspection and sanitation reports) across varied workplaces, creating moderate heterogeneity in formats and contexts.",
+      "adequacy_evidence": "Many relevant document types and review procedures are well-represented in public datasets and training materials, but some important instances (e.g., proprietary inspection reports, detailed floor plans) are less accessible and require synthesis or specialized data pipelines.",
+      "_timestamp": "2026-04-05T20:40:56"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task follows codified safety standards and checklists, technicians must apply experience to interpret ambiguous findings, prioritize risks, and recognize subtle patterns across reports.",
+      "adequacy_evidence": "Current AI can reliably apply explicit rules and extract structured insights from documents, but shows gaps in nuanced risk prioritization and context-sensitive judgment in less clear-cut cases.",
+      "_timestamp": "2026-04-05T20:40:56"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting diverse documents (lab results, inspections, floor plans) to identify safety-relevant information, which requires some context-dependent judgment about what details matter for compliance or risk.",
+      "adequacy_evidence": "Current agents can extract and summarize relevant information but may miss nuanced priorities or implicit safety concerns without human guidance, especially when standards or context are not fully explicit.",
+      "_timestamp": "2026-04-05T20:40:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing multiple documents and synthesizing information, requiring some sustained attention across steps but with relatively loose coupling between items.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably process and summarize multiple documents with minimal degradation, as the sequence length and interdependence are modest.",
+      "_timestamp": "2026-04-05T20:40:57"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reviewing safety-related records can benefit from prior context (e.g., past inspections, recurring violations, facility history), but each review instance is often largely self-contained within the provided documents.",
+      "adequacy_evidence": "Current AI systems with standard retrieval and document management integrations can reliably store and recall prior records or histories when needed, with minimal gaps for this level of longitudinal context.",
+      "_timestamp": "2026-04-05T20:40:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves synthesizing information from multiple heterogeneous documents (lab results, inspections, staffing, plans), requiring moderate retrieval and compression within a single review episode.",
+      "adequacy_evidence": "Frontier AI agents with document ingestion, retrieval, and summarization tools can reliably manage and synthesize this level of information without significant loss or drift.",
+      "_timestamp": "2026-04-05T20:40:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing laboratory reports, staffing records, and inspection documents is an analytical, desk-based task with flexible timelines; minutes to hours of latency are typically acceptable.",
+      "adequacy_evidence": "Current AI systems can process and summarize such documents quickly within the available time window, with no meaningful degradation due to speed constraints.",
+      "_timestamp": "2026-04-05T20:40:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misinterpreting or overlooking critical safety, sanitation, or fire inspection information can lead to regulatory violations, unsafe conditions, or injuries, so even small residual errors can have serious consequences.",
+      "adequacy_evidence": "AI can reliably extract and summarize structured report data with human or procedural checks, but may still miss nuanced compliance issues or context-specific risks, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T20:40:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting structured and semi-structured documents (e.g., lab reports, inspection records) where errors can be identified through cross-checking and domain knowledge, but not always trivially or instantly.",
+      "adequacy_evidence": "Current AI can extract and summarize information but may miss context, misinterpret technical details, or overlook inconsistencies, requiring a knowledgeable human to review outputs with moderate effort.",
+      "_timestamp": "2026-04-05T20:40:59"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily an internal analytical activity involving review of documents and records, with no direct interaction requiring stakeholder acceptance of the performer.",
+      "adequacy_evidence": "Because outputs are informational and typically used internally, stakeholders are largely indifferent to whether the work is performed by a human or an AI system.",
+      "_timestamp": "2026-04-05T20:40:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from reviewing safety-related records or reports. While broader safety enforcement actions may require human oversight or licensed responsibility, the act of reviewing and extracting information itself is not legally restricted to humans.",
+      "_timestamp": "2026-04-05T20:41:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely document review (text reports and records) but can include interpreting floor plans, inspection photos, or diagrams, which require some visual understanding.",
+      "adequacy_evidence": "Current agents can handle basic document and image interpretation, including simple diagrams, but may struggle with complex floor plans, dense visual layouts, or subtle visual compliance cues.",
+      "_timestamp": "2026-04-05T20:41:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

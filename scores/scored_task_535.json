@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2071.00",
+  "task_id": 535,
+  "task_statement": "Release information to persons or agencies according to regulations.",
+  "occupation_title": "Medical Records and Health Information Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Releasing authorized information is often done through electronic health record systems, secure email, or digital portals, but some instances require printing, handling physical records, or processing in-person requests."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple request types (patients, insurers, law enforcement), regulatory frameworks (HIPAA, state laws), and edge cases (minors, sensitive records), creating moderate but structured variation.",
+      "adequacy_evidence": "Regulations, compliance manuals, and de-identified case examples are widely available, but real-world edge cases and nuanced decision rationales are often embedded in private data, leaving some gaps that require synthesis or expert curation.",
+      "_timestamp": "2026-04-05T23:27:41"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves applying privacy regulations (e.g., HIPAA), interpreting authorization validity, requester identity, and minimum necessary standards, which require some contextual judgment beyond literal instructions.",
+      "adequacy_evidence": "Current AI can encode and follow regulatory rules but often struggles with nuanced edge cases (e.g., ambiguous consent forms or unusual requester scenarios), requiring human oversight to ensure correct interpretation.",
+      "_timestamp": "2026-04-05T23:27:41"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires gathering and checking multiple pieces of information within a case (patient records, authorization status, requester identity, and applicable regulations), but the volume is typically bounded and structured.",
+      "adequacy_evidence": "Current agents can reliably track and organize this level of structured, within-episode information using retrieval tools and checklists, with minimal loss or drift in context.",
+      "_timestamp": "2026-04-05T23:27:42"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step workflow (verify requester identity and authorization, interpret applicable regulations, select and possibly redact records, document the release), requiring consistent handling across steps but not an unusually long or deeply interdependent sequence.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably follow structured workflows with checklists and rules, maintaining consistency across these moderate-length sequences with minimal degradation.",
+      "_timestamp": "2026-04-05T23:27:42"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Each release decision depends on accessing existing patient records and prior disclosure logs, but this information is stored in external health information systems rather than requiring the worker to personally maintain longitudinal memory.",
+      "adequacy_evidence": "Current AI agents integrated with databases and EHR systems can reliably retrieve and update cross-session records, so persistent state needs are well handled by existing infrastructure.",
+      "_timestamp": "2026-04-05T23:27:43"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task follows explicit HIPAA rules and organizational procedures, staff often rely on experience to interpret ambiguous requests, assess authorization validity, and apply the 'minimum necessary' standard in context-sensitive cases.",
+      "adequacy_evidence": "Current AI agents can encode and apply formal rules well but show gaps in nuanced judgment for borderline or context-dependent disclosures, especially where intent, authenticity, or subtle policy interpretation is required.",
+      "_timestamp": "2026-04-05T23:27:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Releasing medical information is an administrative process that typically allows minutes to hours for verification of authorization and compliance with regulations, not requiring real-time response.",
+      "adequacy_evidence": "Current AI systems can perform document checks, policy retrieval, and drafting within seconds to minutes, well within the task\u2019s time tolerance without sacrificing quality.",
+      "_timestamp": "2026-04-05T23:27:44"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves handling and transmitting textual health records and regulatory documentation; any non-text inputs (e.g., scanned forms) are incidental and not central to task performance.",
+      "adequacy_evidence": "Current AI systems can adequately process any minor non-text elements such as scanned documents, and the task is fundamentally text-based with no significant multimodal gaps.",
+      "_timestamp": "2026-04-05T23:27:44"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying correct release requires ensuring proper authorization, identity matching, and strict compliance with HIPAA and other regulations; mistakes (e.g., over-disclosure or wrong recipient) may not be immediately visible and require careful audit.",
+      "adequacy_evidence": "Current AI systems are prone to misinterpreting nuanced consent rules and regulatory exceptions, so outputs would require thorough human review to catch subtle but critical compliance errors.",
+      "_timestamp": "2026-04-05T23:27:45"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect release of medical information can cause serious privacy violations, legal penalties (e.g., HIPAA breaches), and irreversible harm to patients, so even rare residual errors are highly consequential.",
+      "adequacy_evidence": "Even with standard checks, AI systems may misinterpret authorization scope or regulatory nuances, leaving a non-trivial risk of improper disclosure, though structured workflows and human oversight can reduce this to a moderate level.",
+      "_timestamp": "2026-04-05T23:27:45"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves external stakeholders (patients, insurers, government agencies) who receive and rely on released information, but interaction is procedural and governed by regulation rather than personal authority or rapport.",
+      "adequacy_evidence": "Stakeholders already accept automated and system-mediated record releases (e.g., EHR portals, automated disclosures), so an AI agent operating within compliant systems would generally be accepted.",
+      "_timestamp": "2026-04-05T23:27:45"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "HIPAA and related health privacy laws regulate how information may be disclosed but do not explicitly prohibit the use of AI or automated systems to carry out compliant releases; responsibility remains with the covered entity rather than mandating a human performer.",
+      "_timestamp": "2026-04-05T23:27:46"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

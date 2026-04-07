@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "33-3051.00",
+  "task_id": 23053,
+  "task_statement": "Record facts to prepare reports that document incidents and activities.",
+  "occupation_title": "Police and Sheriff's Patrol Officers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 90,
+    "reasoning": "Recording facts and preparing incident reports is typically done using digital report-writing systems on a computer. While officers may sometimes jot handwritten notes first, the report preparation itself can be completed entirely on a computer."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While report writing follows structured formats and legal guidelines, officers must decide which facts are relevant, how to frame events, and what details satisfy evidentiary and procedural standards.",
+      "adequacy_evidence": "Current agents can follow templates and infer basic reporting goals, but often miss subtle relevance judgments or legal nuances without human guidance and iteration.",
+      "_timestamp": "2026-04-05T20:59:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of report writing follows standardized formats and explicit guidelines, officers rely on experience to judge which details are legally relevant, how to phrase observations objectively, and how to anticipate how reports will be scrutinized in court.",
+      "adequacy_evidence": "Current agents can generate structured, coherent reports from inputs, but they may miss subtle cues about evidentiary relevance or over/under-emphasize details in ambiguous situations, reflecting a moderate gap in experiential calibration.",
+      "_timestamp": "2026-04-05T20:59:38"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Incident and activity reporting is typically completed after events conclude, with minutes to hours available for accurate documentation rather than real-time response.",
+      "adequacy_evidence": "Current AI systems can generate structured, accurate reports well within these timeframes, with no meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-05T20:59:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Officers often rely on visual observations, audio (statements, radio traffic), and sometimes video or photos to accurately record facts, though the final output is textual.",
+      "adequacy_evidence": "Current agents can process images and audio reasonably well, but may miss nuanced situational details or context from complex, real-world scenes typical of police work.",
+      "_timestamp": "2026-04-05T20:59:38"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves collecting, organizing, and consistently documenting incident details across multiple steps, but sequences are typically bounded to a single report rather than long, tightly interdependent workflows.",
+      "adequacy_evidence": "LLM-based agents can generally maintain coherence over the length of a single report-writing task, though they may exhibit some drift or inconsistency in details or structure as the sequence grows.",
+      "_timestamp": "2026-04-05T20:59:38"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incident reports are primarily tied to specific events but often benefit from referencing prior incidents, individuals, or ongoing cases, requiring some cross-session context.",
+      "adequacy_evidence": "Current AI systems integrated with databases and record management systems can reliably store, retrieve, and link prior reports, making cross-session memory needs largely met.",
+      "_timestamp": "2026-04-05T20:59:38"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing incident reports requires integrating multiple details (times, locations, witness statements, observations, evidence) into a coherent narrative, but the total information volume is typically manageable within a single episode.",
+      "adequacy_evidence": "Current agents can track and organize such details with tools, but may omit or misprioritize specific facts or lose nuance when compressing multiple inputs into a structured report.",
+      "_timestamp": "2026-04-05T20:59:39"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Police incident reports are legal records that influence investigations, prosecutions, and civil rights; even small residual errors can lead to wrongful charges, dismissed cases, or liability.",
+      "adequacy_evidence": "Even with review against notes or bodycam, AI systems can introduce subtle factual distortions or omissions that are hard to catch, leaving a non-trivial residual risk despite feasible checking.",
+      "_timestamp": "2026-04-05T20:59:40"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying incident reports requires cross-checking against evidence (e.g., body cam footage, witness statements, logs), so errors are not always immediately obvious but can be uncovered with standard investigative effort.",
+      "adequacy_evidence": "AI-generated reports would require careful review for factual accuracy, omissions, and subtle mischaracterizations, but available records and evidence streams make verification feasible with moderate effort.",
+      "_timestamp": "2026-04-05T20:59:41"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Police incident reports are typically required to be completed and attested by sworn officers, who bear legal responsibility for their accuracy. While no explicit law forbids AI assistance in drafting, regulations and evidentiary standards require a human officer to author and sign the report, creating a partial restriction on fully autonomous AI performance.",
+      "_timestamp": "2026-04-05T20:59:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Incident reports are used by supervisors, prosecutors, and courts, where the officer\u2019s identity, credibility, and accountability are integral to how the document is received and relied upon.",
+      "adequacy_evidence": "Stakeholders (especially courts and legal actors) would strongly resist AI-authored police reports due to chain-of-custody, accountability, and credibility concerns, often requiring a sworn human officer as the author.",
+      "_timestamp": "2026-04-05T20:59:42"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incident report writing spans diverse situations (e.g., traffic stops, domestic disputes, crimes), but follows relatively standardized structures and conventions across departments.",
+      "adequacy_evidence": "While many report templates and examples exist, high-quality, detailed real incident narratives are often restricted or sensitive, leaving some edge-case coverage thin but partially recoverable via synthetic data and training.",
+      "_timestamp": "2026-04-05T21:00:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

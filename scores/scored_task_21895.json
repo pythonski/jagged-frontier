@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2121.00",
+  "task_id": 21895,
+  "task_statement": "Design layout of craft interior, including cargo space, passenger compartments, ladder wells, and elevators.",
+  "occupation_title": "Marine Engineers and Naval Architects",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Interior layout design for vessels is primarily done using CAD and digital modeling tools on a computer, but it may occasionally require on-site inspections, measurements, or coordination with shipyards that involve physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interior layout design requires balancing stability, weight distribution, safety, human factors, and operational workflows, often relying on experience with past vessel performance and implicit tradeoffs not fully captured in formal rules.",
+      "adequacy_evidence": "Current agents can apply regulations and known design heuristics, but lack lived experience and nuanced calibration for edge cases (e.g., unconventional vessel uses or subtle human-factor issues), leading to gaps in non-routine judgments.",
+      "_timestamp": "2026-04-06T00:15:20"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interior layout design requires balancing many implicit and evolving constraints (safety regulations, weight distribution, human factors, mission needs, and stakeholder preferences) that are not fully specified upfront.",
+      "adequacy_evidence": "Current agents can incorporate explicit requirements and iterate on designs, but they often miss latent tradeoffs and require human guidance to surface and reconcile tacit constraints and stakeholder intent.",
+      "_timestamp": "2026-04-06T00:15:20"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Ship interior layout spans many vessel classes (cargo ships, ferries, submarines, offshore vessels) with varying regulations, safety constraints, and mission-specific configurations, creating a highly heterogeneous and long-tailed design space.",
+      "adequacy_evidence": "While textbooks, standards (e.g., SOLAS), and some design examples are available, detailed, process-level data from real projects are often proprietary, leaving gaps that can be partially mitigated but not fully covered by current training pipelines.",
+      "_timestamp": "2026-04-06T00:15:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interior vessel layout design involves many interdependent steps (space allocation, safety regulations, access routes, structural constraints) where early decisions constrain later ones and must remain consistent across the whole design.",
+      "adequacy_evidence": "AI agents can carry out multi-step design with tools, but they show some drift in maintaining constraints and consistency across long design sequences, requiring iteration and human correction.",
+      "_timestamp": "2026-04-06T00:15:21"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing craft interiors typically unfolds over iterative project phases requiring reference to prior design decisions, constraints, and stakeholder feedback, but does not require lifelong or cross-project memory.",
+      "adequacy_evidence": "Current agents can store and retrieve project documents and prior iterations, but often struggle with consistently maintaining and integrating evolving design context across sessions without careful scaffolding.",
+      "_timestamp": "2026-04-06T00:15:22"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing craft interiors fundamentally requires spatial reasoning and generation of detailed visual artifacts like CAD layouts, schematics, and compartment diagrams; text alone cannot fully specify geometry or arrangement.",
+      "adequacy_evidence": "Current agents can generate and interpret basic layouts with CAD tools and multimodal models, but struggle with complex, constraint-heavy naval architecture designs requiring precise spatial optimization and integration across systems.",
+      "_timestamp": "2026-04-06T00:15:22"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Interior layout design for marine craft is a deliberative engineering task typically conducted over hours to days, with no need for rapid or real-time responses.",
+      "adequacy_evidence": "Current AI systems can take extended reasoning time without penalty in this context, so latency does not meaningfully constrain output quality.",
+      "_timestamp": "2026-04-06T00:15:22"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing a craft interior requires tracking many interdependent constraints (spatial layouts, safety regulations, structural limits, access routes, and functional requirements) across multiple compartments, where missing details can cause design conflicts or safety violations.",
+      "adequacy_evidence": "Current agents can manage large design contexts using tools and structured representations, but they still show drift or omission when juggling many interrelated spatial and regulatory constraints within a single episode.",
+      "_timestamp": "2026-04-06T00:15:23"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The design must be accepted by ship owners, shipyards, and regulators, who rely on the engineer\u2019s output and may consider the credibility of the designer, but the task is primarily evaluated on technical merit.",
+      "adequacy_evidence": "Stakeholders may be cautious about fully AI-generated layouts due to safety and compliance concerns, but would likely accept AI-assisted designs under human oversight.",
+      "_timestamp": "2026-04-06T00:15:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. vessel design and approval processes (e.g., Coast Guard or classification society rules) typically require sign-off by a licensed professional or recognized authority, which an AI cannot provide. However, there is no explicit prohibition on AI generating design work, only a requirement for human accountability and certification.",
+      "_timestamp": "2026-04-06T00:15:24"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interior vessel layout must satisfy complex safety codes, stability constraints, human factors, and integration with ship systems; many errors (e.g., egress paths, weight distribution, interference) are subtle and require expert review, simulation, and standards compliance checks to detect.",
+      "adequacy_evidence": "Current AI can draft layouts but often misses nuanced regulatory, spatial, and systems-integration constraints, so outputs require extensive expert validation with CAD tools and rule checks, making verification effort high and unavoidable.",
+      "_timestamp": "2026-04-06T00:15:24"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interior layout decisions affect vessel stability, evacuation safety, regulatory compliance, and operational functionality, where even small residual design errors can have serious safety and cost consequences.",
+      "adequacy_evidence": "While simulations, code checks, and expert review can catch many issues, AI-generated designs may still introduce subtle integration or safety oversights that are not fully eliminated through standard verification.",
+      "_timestamp": "2026-04-06T00:15:25"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

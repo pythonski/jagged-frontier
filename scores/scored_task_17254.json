@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1224.00",
+  "task_id": 17254,
+  "task_statement": "Perform or interpret the outcomes of diagnostic imaging procedures including magnetic resonance imaging (MRI), computer tomography (CT), positron emission tomography (PET), nuclear cardiology treadmill studies, mammography, or ultrasound.",
+  "occupation_title": "Radiologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Radiologists frequently interpret imaging studies digitally using PACS systems, which can be done remotely (teleradiology). However, some instances involve performing imaging procedures or supervising scans in person with specialized equipment and patients."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate interpretation of imaging relies heavily on experience-based pattern recognition, subtle anomaly detection, and clinical context integration that are not fully captured by explicit rules or static examples.",
+      "adequacy_evidence": "Current AI systems perform well on many standardized imaging tasks but still lack consistent calibration and nuanced judgment in atypical, borderline, or context-dependent cases that radiologists routinely handle.",
+      "_timestamp": "2026-04-05T22:36:52"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiologic interpretation spans many imaging modalities (MRI, CT, PET, ultrasound, etc.), anatomical regions, and a long-tailed distribution of pathologies, including rare diseases and subtle findings across diverse patient populations.",
+      "adequacy_evidence": "Large labeled datasets and clinical archives exist, and synthetic augmentation is feasible, but many clinically important edge cases (rare conditions, multimodal context, longitudinal comparisons) remain underrepresented or locked in private datasets.",
+      "_timestamp": "2026-04-05T22:36:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Imaging interpretation depends heavily on clinical context, implicit diagnostic goals, and prioritization of findings; what counts as salient or reportable varies by patient history and referring question.",
+      "adequacy_evidence": "Current AI systems often miss or misweight context-dependent findings and struggle to infer the true clinical intent behind a study, requiring substantial human guidance and verification.",
+      "_timestamp": "2026-04-05T22:36:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiologists must integrate large volumes of heterogeneous within-episode data, including hundreds to thousands of imaging slices, multiple modalities, prior studies, and patient clinical context, where missing a subtle detail can materially affect diagnosis.",
+      "adequacy_evidence": "Current agents can process large imaging datasets with tooling and retrieval, but still struggle with reliably tracking fine-grained details across many slices and integrating all contextual signals without occasional omission or drift.",
+      "_timestamp": "2026-04-05T22:36:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpreting imaging studies requires reviewing many slices or views and integrating findings into a coherent diagnosis, but each case is relatively bounded and does not involve long, tightly interdependent action chains.",
+      "adequacy_evidence": "Frontier AI systems can maintain consistent performance across multi-image inputs and structured interpretation workflows without significant degradation over the sequence length typical of diagnostic studies.",
+      "_timestamp": "2026-04-05T22:36:53"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Radiologists often work under time pressure for urgent or stat cases (e.g., trauma CTs), where interpretations are expected within minutes, though not strictly real-time for most studies.",
+      "adequacy_evidence": "Current AI systems can generate high-quality image analyses within seconds to minutes, well within clinical time windows, without requiring significant reasoning-time tradeoffs.",
+      "_timestamp": "2026-04-05T22:36:55"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task is fundamentally based on interpreting complex medical images (MRI, CT, PET, ultrasound, etc.), requiring detailed visual and spatial reasoning that cannot be reduced to text alone.",
+      "adequacy_evidence": "Current AI systems can analyze medical images with high accuracy in constrained settings, but remain less reliable on complex, rare, or multimodal diagnostic cases requiring nuanced cross-modal clinical integration.",
+      "_timestamp": "2026-04-05T22:36:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnostic imaging interpretation involves subtle pattern recognition where errors (e.g., small lesions, early disease signs) can be difficult to detect and often require expert review or second reads; mistakes may not become evident until clinical outcomes diverge.",
+      "adequacy_evidence": "Even top AI systems in radiology still miss or misclassify clinically significant findings and require expert radiologist oversight; verification demands careful, time-intensive review and cannot be reliably automated.",
+      "_timestamp": "2026-04-05T22:36:55"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Radiologists frequently compare current images with prior studies and patient history to assess progression or stability, but many individual reads can still be performed with limited longitudinal context.",
+      "adequacy_evidence": "Current AI systems can retrieve and use prior imaging and records when integrated with PACS/EHR, but consistency in linking, surfacing, and correctly contextualizing longitudinal data remains imperfect.",
+      "_timestamp": "2026-04-05T22:36:55"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnostic imaging interpretation directly informs critical medical decisions (e.g., cancer detection, stroke diagnosis), where missed or incorrect findings can lead to severe harm or death even after standard review processes.",
+      "adequacy_evidence": "Current AI systems still exhibit non-negligible rates of false negatives/positives, brittleness to atypical presentations, and calibration issues; even with radiologist oversight, residual risk from AI-supported interpretation remains too high for fully reliable use.",
+      "_timestamp": "2026-04-05T22:36:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Medical practice laws and hospital credentialing requirements in the U.S. require that diagnostic imaging interpretations be performed and signed off by a licensed physician (radiologist). AI may assist, but cannot legally act as the autonomous interpreting clinician or final decision-maker.",
+      "_timestamp": "2026-04-05T22:36:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnostic imaging interpretation is relied upon by referring physicians and patients, and the perceived authority, credentials, and accountability of the radiologist are central to clinical trust and decision-making.",
+      "adequacy_evidence": "While AI-assisted reads are increasingly accepted, many clinicians and patients still prefer or require human radiologist oversight due to trust, liability, and accountability concerns, indicating moderate resistance rather than full rejection.",
+      "_timestamp": "2026-04-05T22:36:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

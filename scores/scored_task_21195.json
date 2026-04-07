@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9096.00",
+  "task_id": 21195,
+  "task_statement": "Place orders to restock inventory of hospital or laboratory supplies.",
+  "occupation_title": "Veterinary Assistants and Laboratory Animal Caretakers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Placing supply orders is typically done through online procurement systems, email, or phone, which can be done on a computer. However, in practice it often relies on physically checking inventory levels in the clinic or laboratory before ordering."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of scenarios (different supply types, vendors, inventory systems, and urgency levels) but follows relatively standardized procurement workflows.",
+      "adequacy_evidence": "There is abundant accessible data (procurement records, ERP workflows, supply chain documentation) and clear process traces, making it feasible to cover the distribution with existing and synthetic training pipelines.",
+      "_timestamp": "2026-04-05T22:12:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While reorder points and inventory systems provide explicit guidance, staff must account for context like upcoming procedures, supply variability, and substitution preferences that are not always fully specified.",
+      "adequacy_evidence": "Current agents can use inventory data and rules but often miss nuanced contextual factors (e.g., clinician preferences or anticipated demand shifts), requiring human oversight to refine orders.",
+      "_timestamp": "2026-04-05T22:12:53"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Restocking relies partly on explicit reorder thresholds and inventory systems, but also on experience-based adjustments for usage variability, seasonality, and supplier reliability.",
+      "adequacy_evidence": "AI agents can follow inventory rules and forecast demand, but may lack nuanced calibration for irregular consumption patterns or informal operational knowledge (e.g., preferred substitutions or supplier quirks).",
+      "_timestamp": "2026-04-05T22:12:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step workflow (checking inventory levels, selecting suppliers, creating and submitting orders), but the sequence is relatively short and loosely coupled.",
+      "adequacy_evidence": "Modern AI agents with tool integration can reliably execute these structured, moderate-length workflows without significant degradation or loss of coherence.",
+      "_timestamp": "2026-04-05T22:12:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Restocking decisions often rely on past usage rates, standing inventory levels, and supplier preferences, which accumulate over time but are typically recorded in inventory systems.",
+      "adequacy_evidence": "Current AI agents can reliably access and update persistent inventory databases or ERP systems, so cross-session memory needs are well-supported by existing tooling.",
+      "_timestamp": "2026-04-05T22:12:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Restocking inventory is typically planned work where delays of minutes to hours are acceptable, with no need for real-time decision-making under tight latency constraints.",
+      "adequacy_evidence": "AI agents can generate and submit accurate purchase orders well within available timeframes without needing to truncate reasoning, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T22:12:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Order accuracy can be checked against inventory records, standard supply lists, and vendor catalogs, but requires attention to detail (e.g., correct quantities, item specifications, and timing). Some errors may not be immediately obvious without cross-checking usage rates or stock levels.",
+      "adequacy_evidence": "AI systems can generate plausible orders but may mis-specify items, quantities, or vendors, requiring routine human review against inventory data and ordering conventions to catch mistakes.",
+      "_timestamp": "2026-04-05T22:12:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering errors can lead to stockouts or excess inventory, potentially disrupting care or operations, but impacts are usually recoverable and not immediately catastrophic.",
+      "adequacy_evidence": "With standard inventory systems, approval workflows, and order verification, AI-generated orders can be checked effectively, leaving low residual risk that is generally acceptable.",
+      "_timestamp": "2026-04-05T22:12:57"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with suppliers or vendors to place orders, so there are external stakeholders, but the interaction is transactional and does not depend strongly on the performer's identity.",
+      "adequacy_evidence": "Automated procurement systems and electronic ordering are already widely accepted by suppliers, so AI agents would face little to no resistance in this role.",
+      "_timestamp": "2026-04-05T22:12:57"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI systems from placing orders for inventory in veterinary or laboratory settings. Procurement tasks like restocking supplies can already be automated, provided general organizational and financial controls are followed.",
+      "_timestamp": "2026-04-05T22:12:57"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking current stock levels, reorder thresholds, supplier options, and quantities across multiple items, but the information volume is structured and typically manageable within standard inventory systems.",
+      "adequacy_evidence": "Current AI agents can reliably handle structured lists, retrieve relevant inventory data, and maintain consistent state within a single ordering episode without significant loss or drift.",
+      "_timestamp": "2026-04-05T22:14:02"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Placing restock orders is primarily a text- and data-driven task using inventory lists, item codes, and supplier systems; any visual inspection of supplies is ancillary rather than integral.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based ordering workflows, including interpreting inventory data and interacting with procurement systems, with no meaningful multimodal limitations.",
+      "_timestamp": "2026-04-05T22:14:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

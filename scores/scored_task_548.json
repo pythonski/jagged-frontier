@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2071.00",
+  "task_id": 548,
+  "task_statement": "Compile medical care and census data for statistical reports on diseases treated, surgery performed, or use of hospital beds.",
+  "occupation_title": "Medical Records and Health Information Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Compiling medical care and census data for statistical reports is typically done using electronic health records and database or spreadsheet software. However, some instances may require accessing or verifying information from paper records or on-site hospital systems."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied hospital systems, coding standards (ICD, CPT), patient populations, and reporting formats, but follows relatively standardized data structures and workflows.",
+      "adequacy_evidence": "While general medical coding and reporting practices are well-documented, much real-world data is protected (HIPAA) and not fully accessible; however, de-identified datasets, synthetic data, and procedural documentation provide partial coverage.",
+      "_timestamp": "2026-04-06T01:57:53"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task largely follows standardized coding rules and reporting procedures, but requires some experience-based judgment to interpret ambiguous records, resolve inconsistencies, and apply coding conventions correctly in edge cases.",
+      "adequacy_evidence": "Current AI can handle routine extraction and aggregation well, but shows gaps in nuanced interpretation of messy or ambiguous clinical documentation, leading to moderate calibration errors in non-routine cases.",
+      "_timestamp": "2026-04-06T01:57:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on established reporting standards (e.g., ICD codes, hospital reporting guidelines), but still involves some context-dependent decisions about inclusion criteria, aggregation, and interpretation of reporting requirements.",
+      "adequacy_evidence": "Current AI can follow explicit reporting schemas but may miss subtle institutional or regulatory nuances without iteration, especially around edge cases or implicit inclusion/exclusion rules.",
+      "_timestamp": "2026-04-06T01:57:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step workflows (data extraction, cleaning, aggregation, and report compilation) where consistency across steps matters, but the sequences are structured and not highly interdependent over long horizons.",
+      "adequacy_evidence": "Well-scaffolded AI systems with data-processing tools can reliably execute structured pipelines with minimal degradation, maintaining consistency across steps through validation and automation.",
+      "_timestamp": "2026-04-06T01:57:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating data from multiple records (medical care, surgeries, bed usage, census data), requiring tracking and organizing moderate volumes of structured information within a reporting episode.",
+      "adequacy_evidence": "Current AI systems with database querying, retrieval, and structured data handling tools can reliably manage and aggregate this level of information without significant loss or drift.",
+      "_timestamp": "2026-04-06T01:57:55"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves extracting and aggregating structured textual and numerical data from medical records and databases; non-text modalities are not central to performance.",
+      "adequacy_evidence": "Current AI agents handle text and structured data processing well, and no significant multimodal perception or generation is required for this task.",
+      "_timestamp": "2026-04-06T01:57:56"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is typically performed in batch workflows for periodic reporting (daily, weekly, monthly), where minutes to hours of processing time are acceptable.",
+      "adequacy_evidence": "Current AI systems can easily complete data aggregation and report compilation within these timeframes without needing to truncate reasoning, so speed constraints do not degrade quality.",
+      "_timestamp": "2026-04-06T01:57:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task may reference prior reporting periods, consistent definitions, or institutional reporting practices, but the underlying patient and census data are stored in external systems rather than relying on the worker\u2019s memory.",
+      "adequacy_evidence": "Current AI systems can rely on databases, EHR systems, and external storage to retrieve longitudinal data, so cross-session retention is well supported and not a bottleneck.",
+      "_timestamp": "2026-04-06T01:57:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is a back-office data compilation function where outputs are consumed internally or for reporting, with no direct interaction requiring stakeholder engagement with the performer.",
+      "adequacy_evidence": "Hospitals and agencies already accept automated and software-assisted data processing; performer identity is largely irrelevant as long as outputs are accurate and compliant.",
+      "_timestamp": "2026-04-06T01:57:57"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Compiled statistics can be checked against source records, coding standards, and internal consistency rules (e.g., totals, rates), but verification requires time, domain knowledge, and access to underlying medical data.",
+      "adequacy_evidence": "AI systems can automate aggregation and flag inconsistencies, but still produce coding or inclusion errors that require human review and reconciliation with source data, creating a moderate verification burden.",
+      "_timestamp": "2026-04-06T01:57:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in compiled healthcare statistics can affect planning, reporting accuracy, and policy decisions, but typically do not cause immediate or irreversible harm at the individual patient level.",
+      "adequacy_evidence": "With standard validation checks (e.g., cross-referencing totals, schema constraints, anomaly detection), current AI systems can reduce residual errors to an acceptable level for this type of administrative reporting.",
+      "_timestamp": "2026-04-06T01:57:58"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "HIPAA and related health data privacy/security regulations impose strict requirements on handling patient information, which constrain how AI systems can be used, but they do not prohibit AI from performing data compilation. Compliance obligations create partial restrictions rather than a ban.",
+      "_timestamp": "2026-04-06T01:57:58"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

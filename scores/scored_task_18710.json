@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "33-3021.02",
+  "task_id": 18710,
+  "task_statement": "Identify, compare, classify, and file fingerprints, using systems such as Automated Fingerprint Identification System (AFIS) or the Henry Classification System.",
+  "occupation_title": "Police Identification and Records Officers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Fingerprint comparison and classification are typically performed using computer-based systems like AFIS on digital images, but some cases still involve handling or scanning physical fingerprint cards or evidence within a secure lab environment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Fingerprint classification systems (e.g., Henry, AFIS) are largely rule-based, but interpreting partial, degraded, or distorted prints requires experience-based judgment in assessing minutiae and match quality.",
+      "adequacy_evidence": "Current AI systems (including AFIS and advanced vision models) handle routine matching well but still lack consistent calibration on ambiguous or low-quality prints where human examiners rely on nuanced judgment.",
+      "_timestamp": "2026-04-06T04:37:05"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Fingerprint identification spans variability in print quality (latent vs rolled), partial prints, distortions, and noise, but remains within a structured and well-defined domain of ridge patterns and classification systems.",
+      "adequacy_evidence": "Large labeled datasets (e.g., AFIS databases, NIST collections) provide substantial coverage, but some critical subpopulations like rare latent prints and forensic edge cases are restricted or underrepresented, limiting full coverage.",
+      "_timestamp": "2026-04-06T04:37:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Fingerprint identification and classification follow standardized, well-documented procedures (e.g., AFIS protocols, Henry system) with explicit criteria for matching and filing, leaving little room for implicit or shifting objectives.",
+      "adequacy_evidence": "Given clear procedural rules and defined success criteria, current AI systems can reliably interpret task goals without needing to resolve significant ambiguity.",
+      "_timestamp": "2026-04-06T04:37:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple fingerprint records, comparing minutiae, and tracking classification results, requiring moderate within-episode information management across images and database outputs.",
+      "adequacy_evidence": "Modern AI systems with tooling can externalize storage (e.g., databases, feature extraction pipelines) and reliably retrieve and compare fingerprint data without significant context loss.",
+      "_timestamp": "2026-04-06T04:37:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Fingerprint identification and classification tasks are typically conducted as part of investigative or records workflows where minutes to hours are acceptable, rather than requiring real-time responses.",
+      "adequacy_evidence": "AI systems can perform pattern comparison and classification within these timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T04:37:08"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Fingerprint comparison and classification involve subtle pattern distinctions (minutiae, ridge flow) that require trained examiners; mistakes are not trivially visible and often need expert review and secondary verification.",
+      "adequacy_evidence": "Current AI-assisted systems (e.g., AFIS) still require human examiners because model errors can be subtle and consequential; outputs would need thorough expert checking in most cases.",
+      "_timestamp": "2026-04-06T04:37:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step workflow (capturing, enhancing, comparing, classifying, and filing prints) where consistency matters, but steps are relatively modular and not deeply interdependent over long horizons.",
+      "adequacy_evidence": "Modern AI systems with tool integration can reliably execute these bounded, moderately sequential workflows without significant degradation across steps.",
+      "_timestamp": "2026-04-06T04:37:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task relies on persistent fingerprint databases (e.g., AFIS) to compare new prints against historical records, requiring access to accumulated data across cases but not complex evolving contextual memory.",
+      "adequacy_evidence": "Current AI systems can reliably interface with structured databases and retrieval systems, so maintaining and accessing cross-session fingerprint records is well within existing capabilities.",
+      "_timestamp": "2026-04-06T04:37:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centers on analyzing fingerprint images, requiring fine-grained visual perception of ridge patterns, minutiae points, and spatial relationships; text alone is insufficient.",
+      "adequacy_evidence": "Modern AI vision systems can perform fingerprint matching and classification reasonably well, but may lack the forensic-grade precision, robustness, and explainability required for high-stakes or degraded/partial prints.",
+      "_timestamp": "2026-04-06T04:37:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task feeds into investigations and court processes where others rely on the results, but direct interaction with stakeholders is minimal and the performer\u2019s identity is not central.",
+      "adequacy_evidence": "Automated systems like AFIS are already widely accepted in this role, and stakeholders generally trust system outputs when properly validated rather than requiring a human performer.",
+      "_timestamp": "2026-04-06T04:37:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Automated systems like AFIS are already legally used, so there is no blanket prohibition on AI assistance. However, for forensic identification used in legal proceedings, a qualified human examiner is typically required to make and attest to the final determination, creating partial restriction on fully autonomous AI performance.",
+      "_timestamp": "2026-04-06T04:37:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misidentifying or misclassifying fingerprints can lead to wrongful arrests or missed identifications, with serious legal and civil consequences, so even rare residual errors are highly consequential.",
+      "adequacy_evidence": "Modern AFIS and similar systems perform strongly but still produce false positives/negatives that require expert human confirmation; residual AI risk after checking is reduced but not fully negligible.",
+      "_timestamp": "2026-04-06T04:37:13"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

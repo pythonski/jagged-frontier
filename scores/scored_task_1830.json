@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1223.00",
+  "task_id": 1830,
+  "task_statement": "Gather and maintain patient information and records, including social or medical history obtained from patients, relatives, or other professionals.",
+  "occupation_title": "Psychiatrists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Patient histories and records are typically gathered, stored, and maintained in electronic health record systems and can be obtained via telehealth or electronic communication. However, many instances still occur during in-person clinical encounters or involve physical documents, so not all cases are fully remote."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Patient information gathering in psychiatry spans highly diverse cases (diagnoses, cultures, communication styles, comorbidities, family dynamics), with nuanced conversational elicitation and interpretation across long-tailed scenarios.",
+      "adequacy_evidence": "While medical records, clinical notes, and some interview transcripts exist, much high-quality, process-level psychiatric intake data is private and sparse; however, partial coverage can be approximated via synthetic data and supervised clinical corpora.",
+      "_timestamp": "2026-04-05T23:17:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing collection and updating of patient histories across multiple interactions, where consistency matters, but each update is relatively modular rather than a tightly coupled multi-step sequence.",
+      "adequacy_evidence": "AI systems can manage sequential documentation reasonably well, but over longer interactions or repeated updates they can show drift, omit details, or inconsistently integrate prior information.",
+      "_timestamp": "2026-04-05T23:17:31"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Eliciting and maintaining psychiatric patient histories requires interpreting vague, incomplete, or sensitive information, adapting questions in real time, and inferring clinically relevant details from context, behavior, and multiple sources.",
+      "adequacy_evidence": "Current AI agents struggle to infer latent clinical priorities, handle nuanced interpersonal dynamics, and iteratively refine information gathering in ambiguous, high-stakes conversations without substantial human guidance.",
+      "_timestamp": "2026-04-05T23:17:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Gathering psychiatric patient information relies partly on spoken interaction and observation of nonverbal cues (tone, affect, behavior), though the resulting records are primarily text-based.",
+      "adequacy_evidence": "Current AI systems can process transcripts and basic audio/video, but struggle with subtle affective cues, nuanced interpersonal signals, and integrating these reliably into clinical records.",
+      "_timestamp": "2026-04-05T23:17:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Psychiatric care depends on detailed longitudinal patient histories, including evolving symptoms, treatments, and psychosocial context tracked across many sessions over months or years.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured records via EHR integrations, but often struggle with maintaining coherent, context-rich longitudinal narratives and reliably surfacing the most relevant history over time.",
+      "_timestamp": "2026-04-05T23:17:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Information gathering occurs during patient interviews where responses should keep conversational pace, but record maintenance itself can tolerate short delays of seconds to minutes.",
+      "adequacy_evidence": "Current AI systems can capture, summarize, and structure patient information in real time or near-real time without needing extended reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T23:17:31"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Eliciting and maintaining psychiatric patient histories requires nuanced judgment about what to probe, how to interpret inconsistencies, and how to adapt questioning based on subtle emotional and contextual cues, which are developed through clinical experience.",
+      "adequacy_evidence": "Current agents can follow structured intake protocols and capture explicit information, but they lack robust calibration in interpreting ambiguous patient narratives, managing rapport, and adapting questioning in complex or sensitive cases.",
+      "_timestamp": "2026-04-05T23:17:31"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Psychiatric intake and record maintenance require integrating large, heterogeneous information (medical history, social context, collateral reports) within a single encounter, where missing or misattributing details can affect diagnosis and care decisions.",
+      "adequacy_evidence": "Current agents with retrieval and note-structuring tools can track and organize large inputs, but still show weaknesses in prioritizing salient details, reconciling conflicting sources, and maintaining nuanced context over long interactions.",
+      "_timestamp": "2026-04-05T23:17:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Patient histories involve subjective reports, nuanced interpretation, and incomplete or conflicting sources; errors (omissions, misinterpretations) may not be immediately apparent and often require clinical expertise and longitudinal context to detect.",
+      "adequacy_evidence": "Current AI systems are prone to subtle fabrication, misattribution, or loss of nuance in sensitive clinical narratives, so thorough expert review and cross-checking with primary sources would be \u0561\u0576\u0570\u0580\u0561\u056a\u0565\u0577\u057f and nontrivial.",
+      "_timestamp": "2026-04-05T23:17:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Eliciting detailed psychiatric histories depends heavily on patient trust, perceived empathy, and the clinician\u2019s professional legitimacy, making stakeholder acceptance central to effective information gathering.",
+      "adequacy_evidence": "Many patients would be reluctant to disclose sensitive mental health information to an AI, and lack of perceived empathy and confidentiality concerns would significantly reduce openness and data quality.",
+      "_timestamp": "2026-04-05T23:17:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate patient histories and records are foundational to psychiatric diagnosis and treatment; even small residual errors can lead to misdiagnosis, inappropriate medication, or missed risk factors (e.g., suicidality), with serious consequences.",
+      "adequacy_evidence": "Even with review, AI systems can introduce subtle distortions or omissions in nuanced, sensitive patient narratives that are hard to detect, leaving some meaningful residual risk, though not uniformly catastrophic under supervision.",
+      "_timestamp": "2026-04-05T23:17:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI systems assisting with collecting or maintaining patient records, but healthcare regulations (e.g., HIPAA, medical licensure laws) require oversight by licensed professionals and impose strict privacy and accountability constraints, limiting fully autonomous AI performance.",
+      "_timestamp": "2026-04-05T23:17:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

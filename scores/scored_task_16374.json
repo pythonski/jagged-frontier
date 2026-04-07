@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2112.01",
+  "task_id": 16374,
+  "task_statement": "Review health, safety, accident, or worker compensation records to evaluate safety program effectiveness or to identify jobs with high incidence of injury.",
+  "occupation_title": "Human Factors Engineers and Ergonomists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Reviewing health, safety, accident, or worker compensation records is typically done using digital databases, reports, or spreadsheets, allowing remote analysis. However, in some organizations records may still be partially paper-based or require on-site access, so not every instance is fully digital."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating 'effectiveness' and identifying 'high incidence' require choosing appropriate metrics, baselines, and controls (e.g., exposure hours, job mix, reporting bias), which are context-dependent and not fully specified in the task.",
+      "adequacy_evidence": "Agents can analyze records and propose reasonable metrics and comparisons, but often miss contextual factors (underreporting, policy changes, confounders) and need human guidance to align with stakeholder definitions and regulatory nuances.",
+      "_timestamp": "2026-04-06T01:50:22"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating safety records requires interpreting injury patterns, accounting for exposure rates, reporting biases, and contextual workplace factors, which often rely on experience-based judgment beyond simple rules.",
+      "adequacy_evidence": "Current AI can perform statistical analysis and pattern detection but lacks consistent calibration for contextual nuances like underreporting or organizational practices, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T01:50:22"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis (data review, pattern identification, comparison across roles, and interpretation), requiring consistency across a moderate sequence of interdependent steps.",
+      "adequacy_evidence": "Current AI agents can manage structured analytical workflows with tools, but may show some degradation over longer chains (e.g., missed patterns or inconsistent criteria) without careful orchestration.",
+      "_timestamp": "2026-04-06T01:50:22"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves analyzing textual and tabular records (e.g., reports, logs, compensation data), which can be fully represented and processed in text form without reliance on other modalities.",
+      "adequacy_evidence": "Current AI systems handle structured and unstructured text data well, so there is no meaningful multimodal gap affecting performance on this task.",
+      "_timestamp": "2026-04-06T01:50:23"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple industries, injury types, and record formats (e.g., OSHA logs, workers\u2019 comp claims), creating moderate heterogeneity but with recurring structures and standardized elements.",
+      "adequacy_evidence": "Substantial public and institutional data (e.g., OSHA datasets, safety reports) and analytical examples exist, but much detailed, high-resolution workplace data is proprietary, leaving some gaps that are only partially recoverable via synthesis.",
+      "_timestamp": "2026-04-06T01:50:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing multiple records (incident reports, compensation claims, safety logs) and tracking patterns across them, but these can typically be structured, filtered, and summarized rather than held in full detail simultaneously.",
+      "adequacy_evidence": "Current agents can offload large datasets to tools (e.g., databases, code execution) and retrieve relevant subsets, but may still lose nuance in aggregation or overlook edge cases when compressing information into summaries.",
+      "_timestamp": "2026-04-06T01:50:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from comparing current analyses to prior periods, tracking trends, and referencing past evaluations, but most required information is contained within accessible records rather than relying on implicit memory.",
+      "adequacy_evidence": "Current AI systems integrated with databases and record systems can reliably store, retrieve, and query longitudinal safety data, so cross-session memory needs are well-supported.",
+      "_timestamp": "2026-04-06T01:50:23"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing safety and incident records is typically a deliberative analytical task conducted over hours or days, not requiring rapid or real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform thorough analysis within acceptable timeframes for this task, so extended reasoning does not conflict with any meaningful latency constraints.",
+      "_timestamp": "2026-04-06T01:50:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from reviewing health, safety, accident, or workers\u2019 compensation records. While privacy regulations like HIPAA impose constraints on data handling, they do not forbid AI use if compliance is maintained.",
+      "_timestamp": "2026-04-06T01:50:25"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces analyses used by managers, safety officers, or regulators who rely on the findings, so stakeholders engage with the output, though the analyst\u2019s identity is not central.",
+      "adequacy_evidence": "Organizations already accept automated analytics for safety and incident data review; as long as results are accurate and auditable, AI use in this back-office analytical role faces little resistance.",
+      "_timestamp": "2026-04-06T01:50:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating safety records involves statistical interpretation, normalization across job types, and identifying confounders; errors are not always obvious and require domain expertise and careful review to detect.",
+      "adequacy_evidence": "Current AI can analyze structured records but may misinterpret causal patterns or overlook data quality issues, so human verification and cross-checking remain necessary but not prohibitively difficult.",
+      "_timestamp": "2026-04-06T01:50:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in analyzing safety and injury records can lead to missed hazards or misprioritized interventions, which have meaningful consequences for worker safety but are typically not immediately catastrophic and can be corrected over time.",
+      "adequacy_evidence": "AI can perform structured record analysis reasonably well, and many errors can be caught through standard review or cross-checking, but subtle misinterpretations or pattern-missing could still leave some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T01:50:25"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

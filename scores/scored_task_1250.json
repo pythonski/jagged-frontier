@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2041.00",
+  "task_id": 1250,
+  "task_statement": "Analyze credit data and financial statements to determine the degree of risk involved in extending credit or lending money.",
+  "occupation_title": "Credit Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Analyzing credit data and financial statements is typically done using digital financial records, spreadsheets, databases, and analytical software, all accessible remotely. Any physical documents can be digitized, and the analytical work itself does not require physical presence."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis (reviewing financial statements, calculating ratios, assessing trends, synthesizing risk), but steps are fairly modular and not deeply interdependent over long horizons.",
+      "adequacy_evidence": "AI agents can generally sustain coherent performance across these analytical steps, though some degradation can occur in longer chains (e.g., inconsistent assumptions or minor calculation drift).",
+      "_timestamp": "2026-04-05T20:50:10"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Beyond financial ratios and formal models, credit analysis relies heavily on experienced judgment about management quality, industry dynamics, cyclicality, and subtle risk signals not fully captured in explicit rules.",
+      "adequacy_evidence": "Current agents can apply financial models and learned patterns well but show gaps in nuanced, experience-based calibration for atypical borrowers or shifting macro/industry conditions.",
+      "_timestamp": "2026-04-05T20:50:10"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Credit risk analysis uses established financial metrics and underwriting frameworks, but requires contextual interpretation of borrower circumstances, industry conditions, and lender risk tolerance that are not fully explicit.",
+      "adequacy_evidence": "Current agents can apply standard ratios and guidelines but often miss nuanced, context-dependent factors (e.g., qualitative management assessment or shifting risk appetite), requiring human refinement.",
+      "_timestamp": "2026-04-05T20:50:11"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Credit risk assessment spans heterogeneous firms (industries, sizes, geographies), varying financial statement quality, and changing macroeconomic conditions, creating a long-tailed, context-sensitive distribution.",
+      "adequacy_evidence": "There is substantial public data (financial filings, rating agency data, case studies) and modeling literature, but key segments\u2014especially private firm data and labeled default outcomes\u2014are proprietary, leaving some important coverage gaps that are only partially addressable via synthesis or proxy datasets.",
+      "_timestamp": "2026-04-05T20:50:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing multiple financial statements, credit reports, and ratio analyses, requiring tracking and integrating several sources but within a bounded and structured scope.",
+      "adequacy_evidence": "Current agents can process and summarize financial documents with tools, but may lose or misweight details across longer inputs or multi-document contexts, leading to occasional retrieval or compression errors.",
+      "_timestamp": "2026-04-05T20:50:12"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves interpreting structured financial data, numerical tables, and textual disclosures in credit reports and financial statements, which are inherently text- and number-based.",
+      "adequacy_evidence": "Current AI systems handle structured financial data, tabular inputs, and text extraction from documents (e.g., PDFs) reliably, with no meaningful multimodal gap affecting performance.",
+      "_timestamp": "2026-04-05T20:50:12"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Credit analysis often references prior financial statements, repayment history, and past credit decisions for the same borrower, but many evaluations can still be performed largely on current application data and recent records.",
+      "adequacy_evidence": "Modern systems (databases, CRMs, retrieval pipelines) reliably store and surface cross-session financial histories, and LLM-based agents can effectively access and use this structured context when properly integrated.",
+      "_timestamp": "2026-04-05T20:50:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Credit risk analysis based on financial statements is typically performed over minutes to hours (or longer), with no need for immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can use extended reasoning and tool use within these relaxed timeframes without meaningful quality degradation from latency constraints.",
+      "_timestamp": "2026-04-05T20:50:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect credit risk assessments can lead to substantial financial losses, regulatory issues, or systemic risk, especially for large exposures, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "Even after standard checks, AI may miss subtle risk signals or context-specific factors (e.g., qualitative management risks), leaving some non-negligible residual risk, though human oversight can mitigate most issues.",
+      "_timestamp": "2026-04-05T20:50:13"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing credit risk analysis, but regulations like the Equal Credit Opportunity Act, Fair Lending laws, and model risk management guidance impose requirements on explainability, accountability, and non-discrimination that can constrain autonomous AI use and typically require human oversight.",
+      "_timestamp": "2026-04-05T20:50:14"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The analysis informs lending decisions used by credit committees, banks, or clients, so stakeholders rely on the output, though the analyst\u2019s personal identity is not central.",
+      "adequacy_evidence": "Financial institutions already use automated credit scoring and risk models, but full acceptance of an AI agent as the primary analyst may face some trust, accountability, and governance concerns.",
+      "_timestamp": "2026-04-05T20:50:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing credit risk involves nuanced interpretation of financial statements, assumptions about future performance, and context-specific judgment; errors (e.g., misweighting risk factors or missing red flags) can be subtle and not immediately observable.",
+      "adequacy_evidence": "Current AI can compute metrics but often makes reasoning or contextual judgment errors, so outputs require careful expert review; these errors are not always obvious and make low-effort verification insufficient.",
+      "_timestamp": "2026-04-05T20:50:15"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

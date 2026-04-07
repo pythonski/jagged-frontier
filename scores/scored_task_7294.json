@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2021.02",
+  "task_id": 7294,
+  "task_statement": "Verify legal descriptions of properties by comparing them to county records.",
+  "occupation_title": "Appraisers, Real Estate",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Most county property records and legal descriptions are stored in digital databases or scanned archives that can be accessed and compared online, making the task largely computer-based. However, in some jurisdictions records may only exist in physical archives at county offices, requiring in-person verification."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Legal property descriptions vary across jurisdictions (e.g., metes and bounds, lot/block systems, parcel IDs) and may include historical or irregular formats, creating moderate distributional diversity.",
+      "adequacy_evidence": "Large volumes of deeds and county records are publicly available for training, but some edge cases (e.g., handwritten records, rare local conventions) are thinly represented and may require targeted synthesis or curation.",
+      "_timestamp": "2026-04-06T04:39:09"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Most verification follows explicit procedures (matching parcel identifiers, metes-and-bounds, lot/block references), but experienced appraisers apply judgment when resolving discrepancies, outdated descriptions, or ambiguous boundary language.",
+      "adequacy_evidence": "AI agents can reliably perform structured comparisons and flag inconsistencies, but they show gaps in handling nuanced or conflicting records where professional judgment about intent, local conventions, or edge cases is needed.",
+      "_timestamp": "2026-04-06T04:39:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying legal property descriptions against county records is a deliberate, document-based task where minutes or longer are acceptable and careful review is prioritized over speed.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to retrieve, compare, and reason over records without meaningful quality loss, as no strict latency pressure constrains performance.",
+      "_timestamp": "2026-04-06T04:39:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves comparing structured but sometimes lengthy legal property descriptions (e.g., metes and bounds, parcel identifiers) against county records, requiring careful tracking of multiple fields and textual details within a single episode.",
+      "adequacy_evidence": "Current agents can ingest and compare documents reasonably well, but may miss or misalign fine-grained details (e.g., boundary clauses or numeric identifiers) when handling longer or complex descriptions.",
+      "_timestamp": "2026-04-06T04:39:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely text-based (legal descriptions, deeds, records) but often involves interpreting plats, survey maps, or scanned documents, requiring some visual-spatial understanding.",
+      "adequacy_evidence": "Current agents can handle OCR and basic map interpretation, but may struggle with complex plats, handwritten records, or precise spatial alignment between textual descriptions and visual documents.",
+      "_timestamp": "2026-04-06T04:39:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps\u2014retrieving county records, parsing legal descriptions, and cross-checking details\u2014but these steps are fairly modular and do not form a long, tightly interdependent chain.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably handle document retrieval and structured comparison across moderate-length workflows without significant degradation, especially with tool support and intermediate checks.",
+      "_timestamp": "2026-04-06T04:39:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each verification is typically self-contained, involving a single property's legal description and corresponding county records without reliance on prior cases.",
+      "adequacy_evidence": "Since cross-session memory is not required, current AI systems already meet the task\u2019s needs without needing persistent state across instances.",
+      "_timestamp": "2026-04-06T04:39:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves careful comparison of legal descriptions (e.g., metes and bounds, lot/block identifiers) against official county records, requiring domain familiarity and attention to subtle discrepancies, but authoritative records make errors generally detectable with effort.",
+      "adequacy_evidence": "Current AI can assist in parsing and matching descriptions but may misinterpret legal phrasing or overlook edge cases, so consistent human review is still needed to ensure accuracy.",
+      "_timestamp": "2026-04-06T04:39:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect verification of legal property descriptions can lead to title defects, boundary disputes, and significant financial or legal consequences, so even rare residual errors can be severe.",
+      "adequacy_evidence": "Although AI can assist in matching and cross-checking records, subtle discrepancies in legal language or record inconsistencies mean that, even after normal review, some non-trivial residual risk remains.",
+      "_timestamp": "2026-04-06T04:39:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Real estate appraisal activities often require a licensed appraiser to take responsibility for the work, but there is no explicit law prohibiting AI from performing sub-tasks like verifying legal descriptions. Regulations create partial constraints because a human licensee must ultimately oversee and sign off on the work.",
+      "_timestamp": "2026-04-06T04:39:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces documentation relied on by clients, lenders, and regulators, and typically requires a credentialed appraiser\u2019s sign-off, but involves minimal direct stakeholder interaction.",
+      "adequacy_evidence": "Stakeholders may accept AI-assisted verification if overseen by a licensed professional, but full substitution could face moderate resistance due to liability, trust, and regulatory expectations around human certification.",
+      "_timestamp": "2026-04-06T04:39:13"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The core objective\u2014checking a property's legal description against official county records\u2014is well-defined, but some interpretation is needed for formatting differences, legal phrasing, and resolving minor discrepancies.",
+      "adequacy_evidence": "Current AI agents can reliably infer the goal and handle most ambiguities through text comparison, normalization, and rule-based checks, with only minor edge cases requiring human input.",
+      "_timestamp": "2026-04-06T04:39:13"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

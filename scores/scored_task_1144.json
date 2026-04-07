@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1023.00",
+  "task_id": 1144,
+  "task_statement": "Research and evaluate suppliers, based on price, quality, selection, service, support, availability, reliability, production and distribution capabilities, and the supplier's reputation and history.",
+  "occupation_title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Supplier research and evaluation is often conducted through online information, databases, emails, and virtual meetings, but in many cases purchasing agents also perform in-person supplier visits, facility audits, or trade show evaluations to assess capabilities and quality."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Supplier evaluation spans many industries, geographies, and criteria combinations (price, logistics, reliability, reputation), with heterogeneous and context-specific cases including rare or failure scenarios.",
+      "adequacy_evidence": "Public data (reviews, financials, case studies) and synthetic scenarios cover many common cases, but critical signals like true supplier performance, negotiated terms, and internal evaluations are often proprietary and thinly represented.",
+      "_timestamp": "2026-04-06T04:45:00"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step information gathering, comparison across multiple criteria, and synthesis into an evaluation, requiring consistent reasoning across a moderate sequence of steps.",
+      "adequacy_evidence": "Current AI agents can carry out multi-step research and comparisons, but may lose track of criteria, inconsistently weight factors, or introduce drift over longer evaluation chains.",
+      "_timestamp": "2026-04-06T04:45:00"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Supplier evaluation involves weighing qualitative factors like reliability, service quality, and reputation, which require experience-based judgment beyond explicit scoring rules, though many criteria can be partially formalized.",
+      "adequacy_evidence": "AI can aggregate and analyze structured metrics and documented histories, but it remains less calibrated on nuanced, context-dependent signals (e.g., trustworthiness, informal reputation, risk tradeoffs) that practitioners infer from experience.",
+      "_timestamp": "2026-04-06T04:45:01"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While evaluation dimensions are listed, their relative weighting, acceptable tradeoffs, and context-specific priorities (e.g., risk tolerance, strategic partnerships, hidden constraints) are often implicit and vary by organization and situation.",
+      "adequacy_evidence": "Current AI agents can synthesize supplier data and apply generic criteria, but they often misinfer organization-specific priorities and soft factors, requiring human clarification and iteration to align with true objectives.",
+      "_timestamp": "2026-04-06T04:45:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating suppliers requires tracking multiple criteria across several candidates, synthesizing data from documents, quotes, and histories into a comparative judgment.",
+      "adequacy_evidence": "Current agents can manage this with retrieval and structured notes, but may lose nuance or misweight criteria when context grows or comparisons become complex.",
+      "_timestamp": "2026-04-06T04:45:01"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Supplier evaluation benefits from accumulated records on past performance, reliability, and prior interactions, but individual evaluations can still be conducted using current data and external sources.",
+      "adequacy_evidence": "Agents can store and retrieve supplier histories via databases or RAG systems, but maintaining clean, consistently updated, and well-integrated longitudinal supplier profiles across workflows remains somewhat error-prone.",
+      "_timestamp": "2026-04-06T04:45:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Supplier research and evaluation is typically conducted over hours to days within procurement cycles, not under real-time constraints.",
+      "adequacy_evidence": "AI agents can use extended reasoning, retrieval, and analysis well within these relaxed timeframes without meaningful degradation in output quality.",
+      "_timestamp": "2026-04-06T04:45:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from conducting supplier research and evaluation; this task does not require licensed human judgment or mandated human sign-off under current rules.",
+      "_timestamp": "2026-04-06T04:45:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Supplier research and evaluation is primarily based on textual and structured data such as reports, contracts, reviews, and performance metrics; non-text modalities are not central to the task.",
+      "adequacy_evidence": "Since the task is fundamentally text- and data-driven, current AI systems handle the required modalities adequately without meaningful gaps.",
+      "_timestamp": "2026-04-06T04:45:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing supplier quality, reliability, and reputation involves qualitative judgments and forward-looking risks that are not directly observable and often require audits, references, or historical performance data to verify.",
+      "adequacy_evidence": "Current AI systems can misinterpret or fabricate supplier information and lack direct access to ground-truth operational performance, so verifying outputs requires substantial human validation and external checks.",
+      "_timestamp": "2026-04-06T04:45:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting suboptimal suppliers can lead to higher costs, delays, or quality issues, but organizations can often mitigate or reverse decisions over time (e.g., switching vendors), so occasional errors are survivable.",
+      "adequacy_evidence": "Even with standard checks like data validation and human review, AI may still miss nuanced reputational or reliability signals, leaving some meaningful residual risk in supplier choice decisions.",
+      "_timestamp": "2026-04-06T04:45:04"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces evaluations that internal stakeholders (e.g., managers, procurement teams) rely on, and their trust in the evaluator can influence decisions.",
+      "adequacy_evidence": "While many organizations accept AI-assisted supplier analysis, some stakeholders may still prefer human judgment for credibility, especially in high-stakes or relationship-sensitive procurement contexts.",
+      "_timestamp": "2026-04-06T04:45:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

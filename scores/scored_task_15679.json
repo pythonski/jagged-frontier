@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3031.03",
+  "task_id": 15679,
+  "task_statement": "Select specific investments or investment mixes for purchase by an investment fund.",
+  "occupation_title": "Investment Fund Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Selecting investments or portfolio mixes is based on financial analysis, market research, and decision-making using digital data, models, and trading platforms, all of which can be performed entirely via computer and internet."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a highly heterogeneous space: different asset classes, market regimes, fund mandates, geographies, and idiosyncratic opportunities, requiring coverage of many diverse and evolving scenarios.",
+      "adequacy_evidence": "There is abundant public data (prices, filings, research, historical decisions) and some synthetic training avenues, but key areas like proprietary deal flow, internal investment deliberations, and certain private market data remain thin or inaccessible.",
+      "_timestamp": "2026-04-05T22:32:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting investments involves multi-step analysis (research, screening, portfolio fit, risk assessment), but many steps can be modularized rather than forming a single tightly coupled chain.",
+      "adequacy_evidence": "AI agents can handle multi-step financial analysis workflows, but performance can degrade over longer chains with shifting constraints (e.g., portfolio context, risk limits), leading to some inconsistency across steps.",
+      "_timestamp": "2026-04-05T22:32:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting investments requires interpreting ambiguous market signals, assessing management quality, timing entry/exit, and adapting to regime shifts\u2014skills built through experience and not fully captured by explicit rules or static examples.",
+      "adequacy_evidence": "Current agents can replicate many analytical frameworks and historical patterns but lack robust real-world calibration and intuitive judgment in novel or shifting market conditions, leading to gaps in higher-stakes, context-sensitive decisions.",
+      "_timestamp": "2026-04-05T22:32:03"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting investments requires interpreting often implicit fund mandates, risk appetites, market conditions, and evolving stakeholder expectations, with success criteria that are context-dependent and not fully specified ex ante.",
+      "adequacy_evidence": "Current agents can parse explicit mandates and optimize against defined metrics, but they struggle to fully infer shifting, tacit objectives and nuanced judgment calls without substantial human guidance and iteration.",
+      "_timestamp": "2026-04-05T22:32:03"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting investments requires integrating large volumes of heterogeneous, rapidly updating information (financial statements, market data, risk models, portfolio constraints), where missing or misweighting details can materially affect outcomes.",
+      "adequacy_evidence": "Current agents can aggregate and retrieve large financial datasets with tooling, but still show weaknesses in maintaining coherent compressed representations over many assets and constraints, occasionally losing or misprioritizing key context.",
+      "_timestamp": "2026-04-05T22:32:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting investments depends heavily on persistent knowledge of portfolio composition, past trades, fund mandates, risk exposures, and evolving market theses accumulated over time.",
+      "adequacy_evidence": "Current agents can store and query structured portfolio and market history via databases, but often struggle with reliably integrating evolving qualitative context and investment rationale across sessions.",
+      "_timestamp": "2026-04-05T22:32:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Selecting investments primarily relies on structured financial data, quantitative models, and textual information; visualizations like charts are helpful but not essential since underlying data can be represented textually or numerically.",
+      "adequacy_evidence": "Current AI systems can process financial data, reports, and even interpret charts when needed, so there is no meaningful shortfall related to multimodal capabilities for this task.",
+      "_timestamp": "2026-04-05T22:32:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Investment selection is time-sensitive to market conditions, but typically allows seconds to minutes (or longer for portfolio decisions), not strict real-time response.",
+      "adequacy_evidence": "Current AI agents can perform deep analysis within these time windows, so latency does not significantly constrain reasoning quality in most cases.",
+      "_timestamp": "2026-04-05T22:32:06"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether an investment choice is sound requires deep financial expertise, forward-looking judgment, and often long time horizons before outcomes reveal errors; many mistakes are subtle and not immediately observable.",
+      "adequacy_evidence": "Current AI systems can generate plausible but flawed investment rationales or miss nuanced risk factors, requiring extensive expert review and independent analysis to validate recommendations before use.",
+      "_timestamp": "2026-04-05T22:32:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Investment selection is performed on behalf of clients and fund stakeholders who care about decision quality and governance, and may consider the manager\u2019s identity and credibility.",
+      "adequacy_evidence": "Algorithmic and quant-driven funds are already accepted, but some investors still prefer human judgment and may resist fully AI-managed portfolios, especially for trust and accountability reasons.",
+      "_timestamp": "2026-04-05T22:32:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. securities law (e.g., Investment Advisers Act) requires a registered human or legal entity to be responsible for investment decisions and fiduciary duties, but does not explicitly prohibit the use of AI tools in making those decisions. AI can be used, but a licensed human adviser must oversee and bear responsibility, creating partial restriction.",
+      "_timestamp": "2026-04-05T22:32:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Investment selection directly affects fund performance and fiduciary outcomes; even rare errors can lead to large financial losses, regulatory consequences, and reputational damage.",
+      "adequacy_evidence": "Even with standard checks like risk models, backtesting, and committee review, AI-driven selections can embed subtle model errors or regime-mismatch risks that remain difficult to fully detect, leaving some meaningful residual risk.",
+      "_timestamp": "2026-04-05T22:32:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

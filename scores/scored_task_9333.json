@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-3091.00",
+  "task_id": 9333,
+  "task_statement": "Compile terminology and information to be used in translations, including technical terms such as those for legal or medical material.",
+  "occupation_title": "Interpreters and Translators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Compiling terminology and reference information for translations typically involves online research, digital glossaries, databases, and document review, all of which can be done entirely on a computer. Physical presence or specialized non-computer equipment is not required."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans many domains (e.g., legal, medical, technical) across languages, each with specialized, evolving terminology and context-specific usage, creating a broad and heterogeneous distribution.",
+      "adequacy_evidence": "Large parallel corpora, domain-specific glossaries, and technical documentation provide substantial coverage, but important segments (e.g., proprietary termbases, emerging terminology, and niche subdomains) remain thin or inaccessible.",
+      "_timestamp": "2026-04-05T23:14:08"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting and standardizing terminology, especially in legal or medical domains, often requires experience with domain conventions, subtle distinctions, and context-dependent usage beyond explicit rules.",
+      "adequacy_evidence": "Current AI can generate and align terminology using large corpora and glossaries, but still shows gaps in nuanced domain calibration, such as jurisdiction-specific legal terms or context-sensitive medical phrasing.",
+      "_timestamp": "2026-04-05T23:14:09"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Compiling translation terminology requires inferring domain, audience, register, and client or jurisdiction-specific preferences that are often not fully specified upfront.",
+      "adequacy_evidence": "Current agents can generate domain-specific glossaries and infer many contextual cues, but they still miss subtle preference, jurisdictional nuance, or evolving client expectations without human iteration.",
+      "_timestamp": "2026-04-05T23:14:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating and organizing terminology from multiple sources, sometimes across domains (e.g., legal or medical), requiring moderate within-episode tracking and structuring of terms and definitions.",
+      "adequacy_evidence": "Current AI agents with retrieval tools and structured output handling can reliably gather, organize, and maintain such terminology lists within a session without significant loss or drift.",
+      "_timestamp": "2026-04-05T23:14:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Compiling terminology involves multiple steps\u2014collecting terms from sources, verifying meanings, standardizing usage, and organizing them into a glossary\u2014requiring some consistency across steps but not highly interdependent long chains.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across these steps, but over longer compilations may show inconsistencies in term selection or formatting, indicating moderate degradation rather than failure.",
+      "_timestamp": "2026-04-05T23:14:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Terminology compilation often benefits from retaining glossaries, client-specific term preferences, and domain conventions across projects, but many instances can still be handled with project-local resources.",
+      "adequacy_evidence": "Current agents can store and retrieve terminology via databases or vector memory, but they can inconsistently surface the right prior terms or maintain strict consistency across sessions without careful system design.",
+      "_timestamp": "2026-04-05T23:14:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling terminology and reference information for translation is fundamentally a text-based activity involving documents, glossaries, and written sources.",
+      "adequacy_evidence": "Since the task is almost entirely text-in/text-out, current AI agents handle it well without reliance on multimodal capabilities.",
+      "_timestamp": "2026-04-05T23:14:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling terminology lists and reference materials is typically an offline, preparatory task where minutes to hours of latency are acceptable.",
+      "adequacy_evidence": "Current AI agents can produce high-quality terminology compilations well within these loose time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T23:14:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from compiling terminology or reference materials for translation, even in legal or medical contexts. While certain translation uses may require certified human translators, the preparatory task of terminology compilation itself is not restricted.",
+      "_timestamp": "2026-04-05T23:14:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying terminology lists for legal/medical translation requires domain expertise and cross-checking authoritative sources; errors can be subtle (e.g., near-synonyms, jurisdiction-specific terms) and not immediately obvious.",
+      "adequacy_evidence": "Current AI frequently produces plausible but incorrect or non-standard terms and incomplete context, so outputs need expert validation against trusted references, making verification effort substantial.",
+      "_timestamp": "2026-04-05T23:14:12"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling terminology databases is largely an internal or preparatory task, with outputs consumed impersonally by translators rather than requiring stakeholder interaction with the compiler.",
+      "adequacy_evidence": "Stakeholders generally do not care whether terminology resources are compiled by humans or AI, and AI-generated glossaries are already widely accepted in practice.",
+      "_timestamp": "2026-04-05T23:14:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Terminology lists for legal and medical translation feed directly into high-stakes downstream use, where incorrect terms can cause legal misinterpretation or clinical harm, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "With human review and cross-referencing against authoritative sources, many AI errors can be caught, but models still occasionally introduce subtle or context-inappropriate terms that may slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T23:14:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

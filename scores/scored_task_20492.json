@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2051.00",
+  "task_id": 20492,
+  "task_statement": "Analyze survey reports, maps, drawings, blueprints, aerial photography, or other topographical or geologic data.",
+  "occupation_title": "Civil Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Civil engineers typically analyze survey reports, GIS data, maps, and drawings using CAD, GIS, and other digital tools on a computer. However, some instances still involve reviewing large physical blueprints or printed maps in office or project settings."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting technical materials like survey reports and blueprints requires understanding project goals, local conditions, and implicit engineering standards that are not always fully specified in the inputs.",
+      "adequacy_evidence": "Current agents can extract and summarize structured information well, but often miss context-specific priorities or implicit design intent without iterative human guidance.",
+      "_timestamp": "2026-04-05T22:54:42"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous data types (maps, blueprints, aerial imagery, geologic surveys) across diverse geographies, project types, and environmental conditions, creating a long-tailed distribution of cases.",
+      "adequacy_evidence": "There is substantial public and synthetic data for maps, imagery, and engineering drawings, but real-world survey datasets and expert interpretive processes are often proprietary or sparsely documented, leaving some gaps that are only partially addressable.",
+      "_timestamp": "2026-04-05T22:54:43"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting geologic and topographical data requires judgment about data reliability, site-specific anomalies, and engineering implications that are shaped by field experience and prior cases, not just explicit rules.",
+      "adequacy_evidence": "Current AI can process and cross-reference multimodal technical data but often lacks calibrated judgment for ambiguous, context-sensitive conditions (e.g., subtle geotechnical risks), leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-05T22:54:44"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple data sources (maps, surveys, blueprints, imagery) through a series of analytical steps where intermediate interpretations inform later ones, but sequences are typically bounded and modular rather than deeply interdependent over long horizons.",
+      "adequacy_evidence": "AI agents can generally handle multi-step data interpretation workflows, but may show some degradation in consistency when chaining many heterogeneous inputs, occasionally losing constraints or misaligning intermediate conclusions.",
+      "_timestamp": "2026-04-05T22:54:44"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally involves interpreting maps, blueprints, aerial imagery, and geologic visuals, requiring spatial reasoning and visual-text integration that cannot be reduced to text alone.",
+      "adequacy_evidence": "Current agents can parse many visual documents and extract features, but struggle with precise scale interpretation, complex engineering drawings, and nuanced spatial/geologic reasoning, leading to partial but not fully reliable performance.",
+      "_timestamp": "2026-04-05T22:54:45"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large, heterogeneous inputs (maps, blueprints, aerial imagery, geologic reports) with many interdependent details where omissions can lead to engineering errors.",
+      "adequacy_evidence": "Current agents can use retrieval and multimodal tools to manage large inputs, but still struggle with consistently preserving and integrating fine-grained spatial and cross-document details over extended analyses.",
+      "_timestamp": "2026-04-05T22:54:45"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing survey reports, maps, and geologic data is typically an offline task with flexible timelines, where minutes to hours of processing is acceptable.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform detailed analysis without meaningful quality loss, as there is no strong pressure for rapid, real-time responses.",
+      "_timestamp": "2026-04-05T22:54:46"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in interpreting geospatial, survey, or blueprint data can be subtle and require domain expertise, cross-referencing, and sometimes field validation to detect, with consequences not immediately observable.",
+      "adequacy_evidence": "Current AI systems frequently misinterpret spatial relationships, units, or domain-specific conventions, and their outputs require thorough expert review and cross-checking to ensure reliability.",
+      "_timestamp": "2026-04-05T22:54:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Analysis often occurs within ongoing projects where prior surveys, historical site data, and evolving design context inform current interpretation, but individual analyses can sometimes be performed with self-contained inputs.",
+      "adequacy_evidence": "Current agents with retrieval systems can store and access prior project documents, but they still show gaps in reliably surfacing the most relevant historical context and maintaining coherent long-term project state.",
+      "_timestamp": "2026-04-05T22:54:46"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The analysis informs decisions by colleagues, clients, or regulators, so others rely on the output, but the performer\u2019s identity is usually secondary to the technical correctness of results.",
+      "adequacy_evidence": "Engineering teams already accept software and automated tools for data analysis; an AI agent performing this role would face little resistance if outputs meet standards.",
+      "_timestamp": "2026-04-05T22:54:46"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in interpreting survey data, maps, or geologic information can propagate into flawed designs, leading to structural failures, safety hazards, or costly rework, so even rare residual errors can have severe consequences.",
+      "adequacy_evidence": "While many outputs can be cross-checked against source data and standards, AI systems still exhibit occasional misinterpretations of spatial or technical inputs, leaving some non-negligible residual risk even after typical quality control.",
+      "_timestamp": "2026-04-05T22:54:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI analyzing engineering data, but civil engineering work tied to licensed practice typically requires oversight and final approval by a licensed Professional Engineer. This creates partial regulatory constraints on fully autonomous AI use in practice contexts.",
+      "_timestamp": "2026-04-05T22:54:47"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

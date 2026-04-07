@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2099.01",
+  "task_id": 18265,
+  "task_statement": "Compile and format image data to increase its usefulness.",
+  "occupation_title": "Remote Sensing Scientists and Technologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Compiling and formatting remote sensing image data is typically done using GIS, image processing, or data analysis software on a computer. The task involves digital datasets and software tools, with no inherent need for physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "What constitutes \"usefulness\" depends on downstream applications (e.g., classification, change detection, geospatial analysis), requiring interpretation of implicit goals like resolution, labeling, and preprocessing standards.",
+      "adequacy_evidence": "Current agents can infer common preprocessing goals but often miss context-specific requirements (e.g., domain-specific formats or analytic intent), requiring iterative human clarification.",
+      "_timestamp": "2026-04-05T20:54:28"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different sensor types (satellite, aerial), resolutions, spectral bands, and formatting standards, but these variations are well-characterized and follow established preprocessing conventions.",
+      "adequacy_evidence": "Extensive open and commercial remote sensing datasets, along with documented preprocessing pipelines and tooling, provide strong coverage of both inputs and step-by-step transformation processes.",
+      "_timestamp": "2026-04-05T20:54:28"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many image compilation and formatting steps (e.g., georeferencing, reprojection, radiometric correction) follow established procedures, practitioners often rely on experience to choose parameters, handle artifacts, and adapt workflows to specific sensor characteristics or environmental conditions.",
+      "adequacy_evidence": "Current AI agents can execute standard preprocessing pipelines and mimic documented practices, but they show gaps in nuanced calibration and context-specific adjustments for atypical imagery or edge cases.",
+      "_timestamp": "2026-04-05T20:54:28"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step workflows (e.g., ingesting, cleaning, georeferencing, mosaicking, and formatting image datasets) where outputs from earlier steps feed into later ones, but steps are typically modular and well-defined.",
+      "adequacy_evidence": "Current AI agents with tool use can reliably execute such structured pipelines end-to-end using scripts or workflow orchestration, with minimal degradation across steps when properly scaffolded.",
+      "_timestamp": "2026-04-05T20:54:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task often involves handling large volumes of geospatial imagery, associated metadata, and preprocessing parameters simultaneously, where losing track of file relationships or transformations can cause significant errors.",
+      "adequacy_evidence": "Current agents can offload data handling to external tools and pipelines, but still show limitations in reliably tracking complex, multi-file transformations and metadata dependencies within a single workflow.",
+      "_timestamp": "2026-04-05T20:54:29"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling and formatting remote sensing image data is typically performed in offline or batch workflows where minutes to hours of processing time are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform data organization, transformation, and formatting within these timeframes without needing to sacrifice reasoning quality for speed.",
+      "_timestamp": "2026-04-05T20:54:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centers on handling and transforming image data (often multispectral or geospatial), requiring direct perception and manipulation of non-text modalities where text-only approaches are insufficient.",
+      "adequacy_evidence": "Current agents can process and reformat standard images, but struggle with complex remote sensing data such as high-dimensional spectral bands, geospatial alignment, and domain-specific image corrections, leading to moderate limitations.",
+      "_timestamp": "2026-04-05T20:54:29"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tasks may benefit from consistency across sessions (e.g., standardized formatting conventions, calibration parameters, or project-specific metadata), but many instances can be completed using self-contained inputs and documented procedures.",
+      "adequacy_evidence": "Current AI systems with standard storage and retrieval integrations can reliably persist and recall formatting rules, metadata schemas, and prior outputs across sessions, meeting these moderate memory needs.",
+      "_timestamp": "2026-04-05T20:54:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit AI from compiling and formatting image data. While certain datasets (e.g., classified or export-controlled imagery) are regulated, those restrictions apply to access and handling, not to AI performing the processing task itself.",
+      "_timestamp": "2026-04-05T20:54:30"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling and formatting image data is a back-end technical task typically consumed internally by analysts or systems, with no direct stakeholder interaction requiring acceptance of the performer.",
+      "adequacy_evidence": "Because there are no meaningful counterparties for this task, acceptance of AI is not an issue and such processing is already commonly automated.",
+      "_timestamp": "2026-04-05T20:54:31"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in compiling or formatting remote sensing image data can propagate into analyses (e.g., misaligned geospatial layers or incorrect metadata), but are typically detectable and correctable without catastrophic consequences.",
+      "adequacy_evidence": "Current AI systems, with standard validation checks (e.g., metadata verification, visual inspection, georegistration tests), can reduce residual errors to acceptable levels for this task.",
+      "_timestamp": "2026-04-05T20:54:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification typically involves inspecting geospatial alignment, metadata correctness, and image transformations using established tools, but subtle errors (e.g., misregistration or projection issues) may require domain expertise to detect.",
+      "adequacy_evidence": "Current AI can perform formatting and compilation but may introduce metadata inconsistencies or processing errors, so practitioners still need to run standard checks and visual inspections to ensure correctness.",
+      "_timestamp": "2026-04-05T20:54:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

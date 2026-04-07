@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-9162.00",
+  "task_id": 11971,
+  "task_statement": "Sort shop orders into groups to maximize materials utilization and minimize machine setup time.",
+  "occupation_title": "Computer Numerically Controlled Tool Programmers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Grouping shop orders to optimize material use and reduce setup time is typically done using scheduling, ERP, or CAM planning software, which can be handled on a computer. However, in some shops it may involve consulting physical job travelers, material availability on the shop floor, or in-person coordination with operators."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans variations in machine types, materials, order mixes, and shop constraints, but follows well-structured combinatorial scheduling patterns common across manufacturing settings.",
+      "adequacy_evidence": "There is abundant accessible data and well-established simulation/optimization frameworks (e.g., job-shop scheduling, batching problems) that provide rich training signals, including step-by-step solution methods.",
+      "_timestamp": "2026-04-06T05:53:08"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the objective can be formalized as a scheduling/optimization problem, effective grouping often relies on experiential heuristics about machine behavior, tooling wear, and shop-specific workflows not fully captured in explicit rules.",
+      "adequacy_evidence": "Current agents can apply optimization algorithms and learned heuristics, but they lack fine-grained, experience-based calibration for idiosyncratic shop conditions and non-standard tradeoffs.",
+      "_timestamp": "2026-04-06T05:53:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The core objectives are stated, but real-world execution involves implicit tradeoffs (e.g., due dates, tooling constraints, machine availability) that require contextual judgment beyond the literal instruction.",
+      "adequacy_evidence": "Agents can optimize grouping when constraints are well-specified, but they often miss implicit shop-floor priorities and require human iteration to fully align with practical objectives.",
+      "_timestamp": "2026-04-06T05:53:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves evaluating multiple orders, constraints, and grouping decisions in a structured but not deeply sequential workflow; steps are somewhat interdependent but do not form long cascading chains.",
+      "adequacy_evidence": "Well-scaffolded AI systems with optimization routines can maintain consistency across these moderate-length decision processes without significant drift or compounding errors.",
+      "_timestamp": "2026-04-06T05:53:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking many concurrent shop orders with attributes like material type, dimensions, machine requirements, and setup dependencies, where effective grouping requires integrating and updating a large, structured state.",
+      "adequacy_evidence": "With tool use (e.g., optimization libraries, databases), current agents can reliably store, retrieve, and manipulate large structured datasets without losing within-episode context.",
+      "_timestamp": "2026-04-06T05:53:11"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Shop order grouping is typically a pre-production planning task where minutes or longer runtimes are acceptable, not requiring real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform combinatorial grouping and optimization within this time budget without meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-06T05:53:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily relies on structured order data (material types, dimensions, machine requirements, setup parameters) and optimization logic, which can be handled in text/numeric form without needing visual or other sensory inputs.",
+      "adequacy_evidence": "Current AI agents can process and optimize structured and textual production data effectively, with no meaningful dependence on multimodal perception or generation for this task.",
+      "_timestamp": "2026-04-06T05:53:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Grouping shop orders is typically based on the current set of jobs, materials, and machine setup states; each scheduling instance can be solved using present data without relying on historical context.",
+      "adequacy_evidence": "Since the task is largely self-contained per batch, existing agent memory systems are sufficient and no meaningful cross-session retention gaps arise.",
+      "_timestamp": "2026-04-06T05:53:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing whether grouping truly minimizes setup time and maximizes material use requires domain expertise and often comparison against alternative schedules or simulation; errors are not immediately obvious from inspection alone.",
+      "adequacy_evidence": "Current AI can generate plausible groupings but may miss subtle optimization opportunities or constraints, so practitioners would need to run checks or evaluate performance metrics, creating a moderate verification burden.",
+      "_timestamp": "2026-04-06T05:53:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the US that prohibit or restrict AI from performing production planning or order grouping tasks in CNC manufacturing. These are internal operational decisions typically left to firms without mandated human-only control.",
+      "_timestamp": "2026-04-06T05:53:14"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is an internal production-planning task where outputs are used within the manufacturing workflow, not requiring stakeholder interaction or trust in the performer's identity.",
+      "adequacy_evidence": "Since there are no meaningful external stakeholders, acceptance of AI is not a barrier; such optimization tasks are already commonly automated or delegated to software systems.",
+      "_timestamp": "2026-04-06T05:53:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors mainly lead to reduced material efficiency, increased setup time, and scheduling inefficiencies rather than safety-critical failures; these are economically meaningful but generally recoverable.",
+      "adequacy_evidence": "AI-generated groupings can be reviewed against clear objective metrics (utilization, setup counts) and adjusted, leaving little residual risk after normal quality control.",
+      "_timestamp": "2026-04-06T05:53:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "23-2093.00",
+  "task_id": 9230,
+  "task_statement": "Prepare lists of all legal instruments applying to a specific piece of land and the buildings on it.",
+  "occupation_title": "Title Examiners, Abstractors, and Searchers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Preparing the list is typically done using digital records and documents on a computer, but title examiners sometimes must access physical records at courthouses or archives that are not fully digitized."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task has a clear goal (compile all applicable legal instruments) but requires contextual judgment about what qualifies as relevant (e.g., easements, liens, covenants) and how completeness is defined in a given jurisdiction.",
+      "adequacy_evidence": "Agents can generally infer the scope using legal schemas and records but may miss context-specific inclusions or exclusions, requiring human review to ensure completeness and correct interpretation.",
+      "_timestamp": "2026-04-06T05:06:14"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task largely follows documented procedures (searching grantor/grantee indexes, recording statutes), but requires some experience-based judgment to recognize relevant instruments, handle ambiguous records, and account for local recording practices.",
+      "adequacy_evidence": "Well-scaffolded agents can follow standard search procedures and identify most instruments, but they show gaps in handling edge cases like ambiguous chain-of-title breaks or jurisdiction-specific nuances that experienced examiners resolve through practice.",
+      "_timestamp": "2026-04-06T05:06:15"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse but structured variations across jurisdictions, property histories, and instrument types (e.g., liens, easements, covenants), creating moderate heterogeneity rather than an extreme long tail.",
+      "adequacy_evidence": "While many public records, title manuals, and examples exist, key data sources (e.g., local title plants, historical records, and proprietary datasets) are fragmented or inaccessible, leaving some coverage gaps that are only partially addressable through synthesis.",
+      "_timestamp": "2026-04-06T05:06:15"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires aggregating and tracking numerous legal documents (deeds, liens, easements, covenants) from multiple sources, with cross-references and dependencies where missing a single item can materially affect completeness.",
+      "adequacy_evidence": "Current agents can retrieve and summarize many documents with tooling, but they still struggle with maintaining full, lossless coverage across large document sets and may omit or mis-track items when context becomes extensive.",
+      "_timestamp": "2026-04-06T05:06:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each title search is typically conducted independently using current public records for a specific parcel, without needing prior case history or accumulated context across sessions.",
+      "adequacy_evidence": "Since the task is self-contained per instance, existing AI systems do not require persistent cross-session memory to perform it effectively.",
+      "_timestamp": "2026-04-06T05:06:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step review of property records (deeds, liens, easements, etc.) across time, requiring consistent tracking of parcel history, but steps are partly modular rather than tightly interdependent.",
+      "adequacy_evidence": "AI agents can follow structured search and extraction workflows, but over longer record chains they show some degradation (e.g., missed instruments or broken chains of title) due to attention drift and imperfect state tracking.",
+      "_timestamp": "2026-04-06T05:06:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing and synthesizing textual legal documents such as deeds, liens, and records; any maps or plats are supplementary and typically interpretable via textual descriptions.",
+      "adequacy_evidence": "Current AI systems can handle the largely text-based inputs and outputs effectively, and do not face meaningful limitations from multimodal requirements in this task.",
+      "_timestamp": "2026-04-06T05:06:16"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing comprehensive lists of legal instruments for a property is a research-heavy task typically performed over hours or days, with no expectation of real-time or near-instant turnaround.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to retrieve, cross-reference, and compile records without meaningful pressure to truncate reasoning, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-06T05:06:17"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Omitting or misidentifying legal instruments (e.g., liens, easements, covenants) can lead to major financial loss, title defects, or litigation, so even rare residual errors have serious consequences.",
+      "adequacy_evidence": "With standard title search verification (cross-checking records, human review), many AI errors can be caught, but current systems may still miss edge cases or obscure filings, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T05:06:18"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Completeness is critical and omissions (e.g., unrecorded easements, misindexed liens, breaks in chain of title) are hard to detect without re-performing a thorough title search across multiple record systems, requiring domain expertise and time.",
+      "adequacy_evidence": "Current AI agents can miss or misinterpret instruments in heterogeneous public records, so outputs require near full manual re-verification; omissions are not easily flagged, making the checking burden severe.",
+      "_timestamp": "2026-04-06T05:06:18"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Many states require licensed title agents, abstractors, or attorneys to conduct or certify title searches, which implies a human must be responsible for the work. However, there is no explicit prohibition on AI assisting in preparing such lists, creating a partial constraint rather than a full ban.",
+      "_timestamp": "2026-04-06T05:06:19"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The output is used by lenders, attorneys, and buyers who rely on its accuracy, and the preparer's credibility and accountability matter, though direct interaction is limited.",
+      "adequacy_evidence": "Stakeholders in real estate transactions are somewhat conservative and may be wary of fully AI-generated title work due to liability and trust concerns, though acceptance is growing for AI-assisted processes.",
+      "_timestamp": "2026-04-06T05:06:19"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

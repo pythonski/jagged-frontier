@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2131.00",
+  "task_id": 9010,
+  "task_statement": "Review new product plans, and make recommendations for material selection, based on design objectives such as strength, weight, heat resistance, electrical conductivity, and cost.",
+  "occupation_title": "Materials Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Reviewing product plans and recommending materials is typically done using digital design documents, CAD files, specifications, and databases. However, some instances involve examining physical prototypes or material samples in person, so not all cases are fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Material selection spans diverse applications (aerospace, electronics, biomedical, etc.), each with different constraints, tradeoffs, and edge cases involving complex property interactions and environments.",
+      "adequacy_evidence": "There is extensive public data (materials databases, engineering textbooks, case studies), but much high-value decision data (proprietary performance data, failure analyses, cost structures) is private or sparse, leaving some gaps that are only partially recoverable via synthesis.",
+      "_timestamp": "2026-04-06T00:27:45"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Design objectives like strength, weight, heat resistance, and cost are often incomplete proxies for real-world constraints, requiring interpretation of trade-offs, manufacturing context, and stakeholder priorities not fully specified in the plan.",
+      "adequacy_evidence": "Current agents can reason over stated criteria and suggest materials, but often miss implicit priorities (e.g., manufacturability, lifecycle considerations) and require iterative human clarification to align with true design intent.",
+      "_timestamp": "2026-04-06T00:27:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Material selection requires nuanced tradeoffs among competing properties (e.g., strength vs. weight vs. cost) and context-specific factors like manufacturability, failure modes, and lifecycle conditions, which are often guided by experience and case-based judgment.",
+      "adequacy_evidence": "Current agents can synthesize material properties and known tradeoffs from extensive data, but they lack fully reliable calibration for edge cases, real-world constraints, and subtle context-specific judgments that experienced engineers develop.",
+      "_timestamp": "2026-04-06T00:27:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step evaluation process\u2014interpreting design objectives, comparing material properties, and balancing trade-offs\u2014but sequences are typically bounded and modular rather than deeply interdependent over long horizons.",
+      "adequacy_evidence": "Frontier agents can handle these multi-step analyses reasonably well, but may show some drift in maintaining all constraints (e.g., cost vs. performance trade-offs) across longer reasoning chains.",
+      "_timestamp": "2026-04-06T00:27:47"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing product plans and recommending materials is typically an offline engineering task with hours to days available for analysis, iteration, and consultation.",
+      "adequacy_evidence": "Current AI systems can take seconds to minutes for deep analysis without impacting usability, so latency does not meaningfully constrain output quality in this task.",
+      "_timestamp": "2026-04-06T00:27:48"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple design criteria (mechanical, thermal, electrical, and cost) and product specifications, requiring active comparison and tradeoff tracking across several information sources within a single review episode.",
+      "adequacy_evidence": "Current agents can ingest and summarize multi-criteria inputs but may lose or misweight constraints during longer analyses, especially when balancing tradeoffs or referencing dispersed technical details.",
+      "_timestamp": "2026-04-06T00:27:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing product plans often involves interpreting CAD drawings, schematics, and material layouts alongside textual specifications, but much of the key information can also be conveyed in structured text and tables.",
+      "adequacy_evidence": "Current agents can extract and reason over simpler diagrams and specifications, but struggle with complex engineering drawings, spatial relationships, and nuanced cross-modal interpretation in detailed design plans.",
+      "_timestamp": "2026-04-06T00:27:48"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Material selection benefits from accumulated knowledge such as prior project choices, organizational preferences, and performance outcomes, but each product review is largely driven by the current design specifications and constraints.",
+      "adequacy_evidence": "Current AI systems with retrieval and persistent storage can effectively retain and access prior cases, material databases, and preferences, meeting the modest cross-session memory needs of this task.",
+      "_timestamp": "2026-04-06T00:27:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing material recommendations requires domain expertise, simulation, and sometimes physical testing; errors (e.g., in fatigue, corrosion, or thermal behavior) may only surface under specific conditions and are not trivially detectable.",
+      "adequacy_evidence": "Current AI systems can suggest plausible materials but frequently miss nuanced tradeoffs or context-specific constraints, so expert review, validation calculations, and testing are still necessary to catch non-obvious mistakes.",
+      "_timestamp": "2026-04-06T00:27:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves advising design teams and decision-makers who rely on the engineer\u2019s recommendations, so stakeholder trust and perceived expertise matter to some extent.",
+      "adequacy_evidence": "Many organizations would consider AI-generated recommendations but still prefer human validation or oversight, especially for high-stakes engineering decisions, leading to partial resistance.",
+      "_timestamp": "2026-04-06T00:27:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no blanket prohibition on AI generating material recommendations, but in regulated contexts (e.g., infrastructure, aerospace, or safety-critical products), a licensed professional engineer must review and approve final decisions. This creates partial restrictions on fully autonomous AI use.",
+      "_timestamp": "2026-04-06T00:27:51"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Material selection errors can lead to structural failure, safety hazards, or major cost overruns, especially in high-stakes applications like aerospace or infrastructure, so very low residual error is required.",
+      "adequacy_evidence": "Even with review and testing, AI may miss edge-case material behaviors or context-specific constraints, leaving some non-negligible residual risk, though it can be mitigated with human oversight.",
+      "_timestamp": "2026-04-06T00:27:51"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4181.00",
+  "task_id": 9750,
+  "task_statement": "Make and confirm reservations for transportation and accommodations, using telephones, faxes, mail, and computers.",
+  "occupation_title": "Reservation and Transportation Ticket Agents and Travel Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most reservation and confirmation work is performed through computer reservation systems, email, or phone and can be done remotely. However, some instances may involve handling physical mail, printed documents, or office-based communication processes."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Most reservation tasks follow standardized procedures, but some experience helps in handling customer preferences, exceptions (e.g., overbooking, special requests), and tradeoffs between options.",
+      "adequacy_evidence": "Current AI agents, with access to booking systems and policies, can replicate these judgment patterns reliably using rules, historical data, and user interaction, with minimal shortfall in practical cases.",
+      "_timestamp": "2026-04-06T05:33:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customer requests often omit key constraints (budget, timing flexibility, preferences, loyalty programs), requiring the agent to elicit and interpret context to complete suitable reservations.",
+      "adequacy_evidence": "Current agents can ask clarifying questions and iterate, but they still miss implicit preferences or fail to proactively resolve common ambiguities without human guidance.",
+      "_timestamp": "2026-04-06T05:33:08"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple vendors, channels (phone, online systems), and edge cases (itineraries, fare rules, special requests), but follows relatively standardized booking workflows.",
+      "adequacy_evidence": "Extensive data exists in the form of booking interfaces, APIs, customer service transcripts, and synthetic simulations, providing strong coverage of the relevant processes and variations.",
+      "_timestamp": "2026-04-06T05:33:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple structured details (dates, times, passenger info, preferences, availability) across systems within a single interaction, requiring some active information management.",
+      "adequacy_evidence": "Current AI agents with tool integration reliably track and manipulate these structured fields within a session, with minimal loss or drift in context.",
+      "_timestamp": "2026-04-06T05:33:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step workflows (gathering requirements, checking availability, booking, and confirming), but sequences are relatively short and loosely coupled rather than deeply interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute these transactional workflows end-to-end with tool integration, showing little degradation across the sequence length typical of reservation tasks.",
+      "_timestamp": "2026-04-06T05:33:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many reservations are one-off transactions, repeat customers, loyalty programs, and itinerary changes create some need to recall prior bookings, preferences, and customer details across sessions.",
+      "adequacy_evidence": "Current AI systems integrated with standard databases/CRMs can reliably store and retrieve customer histories and preferences, so cross-session memory needs are well within existing capabilities.",
+      "_timestamp": "2026-04-06T05:33:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reservations tasks typically occur in live customer interactions (phone or in-person) where responses are expected within seconds to a few minutes, but not sub-second real-time constraints.",
+      "adequacy_evidence": "Current AI agents can search availability, compare options, and complete bookings well within these time bounds without needing to truncate reasoning, so speed does not significantly degrade quality.",
+      "_timestamp": "2026-04-06T05:33:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task includes telephone interactions (audio) and handling faxes/mail (which may involve scanned documents), so some non-text modalities are involved alongside primarily text-based systems.",
+      "adequacy_evidence": "Current AI agents with speech recognition, text-to-speech, and document parsing can reliably handle routine phone conversations and basic document inputs, with minimal performance gaps for this task type.",
+      "_timestamp": "2026-04-06T05:33:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from making or confirming travel reservations; booking systems are already automated in many contexts. While general consumer protection and disclosure rules apply, they do not restrict AI from performing this task.",
+      "_timestamp": "2026-04-06T05:33:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in reservations (wrong dates, locations, or bookings) can cause significant inconvenience, financial costs, or travel disruption, but are usually reversible or correctable with remediation.",
+      "adequacy_evidence": "Modern AI systems operating with structured booking tools and confirmation workflows can reduce residual errors to low, acceptable levels after standard verification (e.g., confirmations, cross-checks).",
+      "_timestamp": "2026-04-06T05:33:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves direct interaction with customers and service providers to arrange bookings, so stakeholders must engage with the performer, though deep personal trust or authority is not central.",
+      "adequacy_evidence": "Customers already widely accept automated systems (online booking platforms, chatbots, IVR) for reservations, indicating minimal resistance to AI performing this role.",
+      "_timestamp": "2026-04-06T05:33:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Most errors (wrong dates, locations, names, or missing bookings) can be detected by reviewing confirmation numbers, itineraries, and provider records, but this requires deliberate cross-checking and attention to detail rather than being fully automatic.",
+      "adequacy_evidence": "Current AI agents can complete bookings but still make occasional coordination or data-entry mistakes, so humans typically need to verify confirmations and details, creating a moderate but manageable checking burden.",
+      "_timestamp": "2026-04-06T05:33:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

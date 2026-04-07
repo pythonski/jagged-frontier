@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-2031.00",
+  "task_id": 705,
+  "task_statement": "Place special orders or call other stores to find desired items.",
+  "occupation_title": "Retail Salespersons",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Placing special orders or contacting other stores typically involves using a phone, email, or retail ordering system, all of which can be performed via computer and internet without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderate variation across product types, store policies, inventory systems, and customer requests, but follows fairly standardized procedures and interaction patterns.",
+      "adequacy_evidence": "Training data for retail workflows, customer service calls, and inventory lookup processes is widely available or easily synthesized, providing sufficient coverage of typical and edge-case scenarios.",
+      "_timestamp": "2026-04-05T22:11:36"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves some situational judgment (e.g., selecting acceptable substitutes, prioritizing stores, or handling customer preferences), but largely follows straightforward procedures and scripts.",
+      "adequacy_evidence": "Current AI agents can reliably follow ordering workflows, query inventories, and apply basic preference rules, with minimal reliance on hard-to-replicate experiential judgment.",
+      "_timestamp": "2026-04-05T22:11:37"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting a customer's desired item, acceptable substitutes, timing, and constraints (e.g., budget, brand preference), which are often only partially specified and require clarification.",
+      "adequacy_evidence": "Current agents can handle structured queries and ask follow-up questions, but they still often miss nuanced preferences or situational factors, requiring human guidance to fully resolve ambiguity.",
+      "_timestamp": "2026-04-05T22:11:38"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking item specifications, customer preferences, and responses from multiple stores within a single interaction, but the information volume is limited and structured.",
+      "adequacy_evidence": "Current AI agents can reliably manage and recall this level of structured, short-horizon information using standard context handling and tool-supported note tracking without significant loss.",
+      "_timestamp": "2026-04-05T22:11:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves verbal or text-based communication (phone calls, order systems) and does not inherently require interpreting or generating non-text modalities.",
+      "adequacy_evidence": "Current AI agents can handle text and voice communication workflows effectively, and no significant multimodal capabilities are needed for competent performance.",
+      "_timestamp": "2026-04-05T22:11:38"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Placing special orders or contacting other stores is typically a self-contained transaction tied to a single customer request, with necessary details captured in order systems rather than relying on memory across sessions.",
+      "adequacy_evidence": "Current AI systems can easily log and retrieve order details through standard databases or CRM integrations, so there is no meaningful gap in cross-session memory for this task.",
+      "_timestamp": "2026-04-05T22:11:39"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Mistakes such as incorrect item details, availability, or store contact can usually be caught immediately through confirmations, receipts, or direct follow-up calls with minimal effort.",
+      "adequacy_evidence": "AI agents may occasionally mis-specify product details or mis-handle calls, so some routine verification (e.g., checking order confirmations or call summaries) is still needed, though errors are generally easy to detect.",
+      "_timestamp": "2026-04-05T22:11:40"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from placing special orders or contacting other stores on behalf of a retailer. General regulations like telemarketing or robocall rules may apply to how calls are made, but they do not bar AI from performing this task.",
+      "_timestamp": "2026-04-05T22:11:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interacting with customers and staff at other stores, who rely on the salesperson to locate and secure items, but does not hinge strongly on personal authority or deep trust.",
+      "adequacy_evidence": "While stakeholders may accept AI handling routine inventory checks or order placement, some resistance or friction could arise in phone interactions or customer-facing contexts where human presence is expected.",
+      "_timestamp": "2026-04-05T22:11:41"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence of steps such as checking availability, contacting other stores, and relaying or recording information, where some consistency across steps matters but sequences are not long or tightly interdependent.",
+      "adequacy_evidence": "Frontier AI agents can reliably manage these short, structured workflows with tool use (e.g., calling APIs, logging results) without noticeable degradation over the sequence length.",
+      "_timestamp": "2026-04-05T22:11:42"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers typically expect a response within seconds to a few minutes while in-store, but brief delays (e.g., placing a call or checking systems) are acceptable.",
+      "adequacy_evidence": "AI agents can quickly search inventory systems or initiate scripted calls within the available time window, with little need for extended reasoning that would exceed latency constraints.",
+      "_timestamp": "2026-04-05T22:12:00"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Errors (e.g., ordering the wrong item or contacting the wrong store) typically result in minor inconvenience, delays, or refunds, and are usually reversible without serious consequences.",
+      "adequacy_evidence": "With standard confirmation steps (order verification, customer confirmation, inventory checks), current AI systems can reduce residual errors to a level that is acceptable for this low-stakes retail task.",
+      "_timestamp": "2026-04-05T22:12:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

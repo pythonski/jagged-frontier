@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1211.01",
+  "task_id": 18101,
+  "task_statement": "Identify, collect, record, or analyze data relevant to the nursing care of patients.",
+  "occupation_title": "Health Informatics Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Health informatics specialists usually identify, collect, record, and analyze patient care data through electronic health records, databases, and analytics tools. However, some instances involve gathering information from clinicians, workflows, or paper records in clinical settings, requiring limited in-person interaction."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous patient populations, conditions, care settings, and data types (clinical notes, vitals, labs, workflows), with substantial context sensitivity across cases.",
+      "adequacy_evidence": "Large-scale clinical datasets, guidelines, and synthetic EHR data provide substantial coverage, but access restrictions and limited visibility into real-world nursing workflows and edge cases leave some gaps.",
+      "_timestamp": "2026-04-06T05:10:20"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (identifying relevant data, collecting from sources, recording accurately, and analyzing), where consistency across steps matters but steps are often modular and partially independent.",
+      "adequacy_evidence": "AI agents can generally handle structured data workflows, but over longer sequences may show some drift (e.g., schema inconsistency or missed constraints), especially when integrating heterogeneous data sources.",
+      "_timestamp": "2026-04-06T05:10:20"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many data elements are standardized (e.g., vitals, labs, documentation fields), determining what is 'relevant' to nursing care often depends on clinical context, patient condition, and care priorities, requiring some interpretation.",
+      "adequacy_evidence": "Current AI agents can follow structured data schemas and guidelines but often miss context-specific nuances or shifting clinical priorities, requiring human guidance to ensure the right data is captured and interpreted.",
+      "_timestamp": "2026-04-06T05:10:20"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves applying clinical context to determine which data are relevant, interpreting documentation nuances, and handling edge cases in patient records, which requires some experience-based judgment beyond strict rules.",
+      "adequacy_evidence": "Current AI systems can follow structured data protocols and recognize common clinical patterns but show gaps in nuanced clinical relevance judgments and handling atypical or context-sensitive cases.",
+      "_timestamp": "2026-04-06T05:10:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Tasks involve integrating large volumes of heterogeneous patient data (EHR records, lab results, clinical notes, device outputs), where missing or misinterpreting details can affect care decisions.",
+      "adequacy_evidence": "Agent systems with retrieval and tool use can manage and query large datasets, but still face occasional context loss, imperfect summarization, and retrieval gaps when handling complex, multi-source clinical information.",
+      "_timestamp": "2026-04-06T05:10:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task primarily involves structured and textual clinical data (EHRs, notes, codes) but can include integration of non-text inputs like medical images, waveforms, or device data relevant to patient care.",
+      "adequacy_evidence": "Current agents can process standard clinical text and some multimodal inputs, but performance is less reliable for nuanced interpretation of medical images or complex cross-modal integration in clinical contexts.",
+      "_timestamp": "2026-04-06T05:10:22"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from identifying, collecting, recording, or analyzing patient care data. Existing rules (e.g., HIPAA) govern privacy and security but allow automated systems if compliant, and do not mandate that a licensed human perform these specific data-processing tasks.",
+      "_timestamp": "2026-04-06T05:10:22"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Health informatics data collection and analysis tasks are typically performed asynchronously, with acceptable latencies ranging from minutes to hours rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can easily operate within these timeframes, allowing sufficient reasoning without meaningful degradation in output quality.",
+      "_timestamp": "2026-04-06T05:10:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task supports clinicians and care teams who rely on the data, but direct interaction with patients or identity-sensitive engagement is limited; outputs are primarily technical and internal.",
+      "adequacy_evidence": "Healthcare stakeholders already accept AI-assisted data collection and analysis (e.g., EHR systems, clinical decision support), and performer identity is generally not a barrier if outputs are accurate and compliant.",
+      "_timestamp": "2026-04-06T05:10:23"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in patient data handling can propagate into clinical decisions, affecting treatment quality, safety, and outcomes, so even small residual errors can have serious consequences.",
+      "adequacy_evidence": "While many outputs (e.g., structured data, summaries) can be checked against source records, AI systems still exhibit occasional inconsistencies or omissions that may slip through standard review, leaving some residual risk.",
+      "_timestamp": "2026-04-06T05:10:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task regularly depends on accessing and updating longitudinal patient records and prior clinical data, but this information is typically stored in external systems (e.g., EHRs) rather than requiring internal memory.",
+      "adequacy_evidence": "Current AI agents can reliably use external databases and persistent storage to retrieve and update cross-session information, so memory infrastructure does not meaningfully limit performance.",
+      "_timestamp": "2026-04-06T05:10:23"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "Verification typically involves cross-checking structured and unstructured clinical data, requiring domain expertise and time, but is supported by established auditing practices and data validation rules.",
+      "adequacy_evidence": "Current AI systems frequently make subtle extraction, coding, or interpretation errors in clinical data that are not trivially detectable, necessitating thorough expert review and making verification burdensome in practice.",
+      "_timestamp": "2026-04-06T05:10:24"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

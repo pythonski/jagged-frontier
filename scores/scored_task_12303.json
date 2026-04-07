@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-8012.00",
+  "task_id": 12303,
+  "task_statement": "Direct personnel engaged in controlling or operating distribution equipment or machinery, such as instructing control room operators to start boilers or generators.",
+  "occupation_title": "Power Distributors and Dispatchers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Directing operators is typically done through computer-based control systems, radios, phones, or messaging from a control room, which could be performed remotely. However, in practice it often occurs within on-site control centers and may involve in-person coordination with operating staff."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse operating conditions (normal load balancing, faults, emergencies, equipment variability, regional grid differences) requiring coverage of many context-dependent scenarios and edge cases.",
+      "adequacy_evidence": "There are substantial training resources (operator manuals, simulators, historical logs), but much real-world data\u2014especially rare failures and live grid contingencies\u2014is proprietary or sparse, leaving some gaps that are only partially addressable via simulation.",
+      "_timestamp": "2026-04-05T23:17:53"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Directing control room operations during power generation and distribution involves nuanced judgment about grid stability, safety margins, and contingency handling that relies on experience beyond written procedures.",
+      "adequacy_evidence": "Current agents can follow protocols and assist with standard scenarios, but they lack robust calibration for rare, high-stakes grid disturbances and subtle context-dependent tradeoffs that experienced dispatchers handle.",
+      "_timestamp": "2026-04-05T23:17:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task has clear high-level goals (safe, stable power distribution) but requires interpreting real-time grid conditions, operator capabilities, and situational priorities that are not fully explicit in instructions.",
+      "adequacy_evidence": "Current agents can use procedures and sensor data to infer appropriate directives in many cases, but they still struggle with nuanced, context-dependent judgment and adapting instructions under evolving or ambiguous conditions without human input.",
+      "_timestamp": "2026-04-05T23:17:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Directing grid operations involves ongoing, tightly coupled sequences (monitoring conditions, issuing timed instructions, adjusting to feedback) where errors can cascade across steps and affect system stability.",
+      "adequacy_evidence": "Well-scaffolded AI can track multi-step workflows and maintain plans, but still shows some degradation in long, real-time coordination loops with evolving state, especially under dynamic or unexpected conditions.",
+      "_timestamp": "2026-04-05T23:17:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Directing control room operations requires tracking multiple concurrent system states (load levels, equipment status, safety constraints, grid conditions) and integrating updates in real time, where missing a detail can cause operational or safety issues.",
+      "adequacy_evidence": "While agents can aggregate and summarize streaming data with tools, they still show fragility in maintaining accurate, continuously updated internal representations under rapid change and may lose or misprioritize critical details.",
+      "_timestamp": "2026-04-05T23:17:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting visual control system displays, alarms, and possibly auditory signals, alongside issuing spoken or written instructions to operators, so multimodal input is relevant but not dominant.",
+      "adequacy_evidence": "Current AI agents can process structured dashboard data and basic visual/audio inputs with integrations, but reliability drops for complex, real-time control room environments and nuanced signal interpretation.",
+      "_timestamp": "2026-04-05T23:17:55"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Effective direction benefits from awareness of prior incidents, equipment history, and operator performance across shifts, but much of this context is formally logged in operational systems and shift reports rather than relying on personal memory.",
+      "adequacy_evidence": "Current AI agents can integrate with databases, logs, and monitoring systems to retrieve and maintain cross-session context, so persistent memory needs are largely met with existing tooling.",
+      "_timestamp": "2026-04-05T23:17:55"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Grid control and dispatch operations require near-real-time directives to maintain stability, often within seconds during disturbances or load changes.",
+      "adequacy_evidence": "LLM-based agents can generate instructions quickly, but tight latency limits can constrain deeper reasoning during complex or novel grid events, leading to some quality degradation.",
+      "_timestamp": "2026-04-05T23:17:55"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Directing operation of power distribution equipment (e.g., starting boilers or generators) carries high stakes: errors can cause grid instability, equipment damage, outages, or safety incidents, so even rare residual mistakes are unacceptable.",
+      "adequacy_evidence": "Even with monitoring and standard checks, AI systems can misinterpret system state or timing in complex, dynamic grid conditions, leaving residual failure modes that are too severe and unpredictable for such safety-critical control decisions.",
+      "_timestamp": "2026-04-05T23:17:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "NERC reliability standards require certified human system operators to be responsible for real-time control and direction of bulk power system operations, including issuing operational instructions. These rules effectively mandate a licensed human decision-maker, prohibiting fully autonomous AI from performing this directing role.",
+      "_timestamp": "2026-04-05T23:17:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves issuing real-time operational directives to human operators, where perceived authority, trust, and accountability are central to compliance and coordination.",
+      "adequacy_evidence": "Operators may hesitate to fully trust or accept AI-issued commands in high-stakes grid operations, though acceptance could grow with validation and oversight, making resistance moderate rather than prohibitive.",
+      "_timestamp": "2026-04-05T23:17:56"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "Operators can cross-check instructions against established switching procedures, SCADA telemetry, and protective system feedback, but this requires domain expertise and careful review rather than trivial validation.",
+      "adequacy_evidence": "Current AI would require continuous expert oversight because incorrect switching instructions can appear plausible yet be unsafe, and verifying each step against grid conditions and protocols imposes a substantial, unavoidable burden.",
+      "_timestamp": "2026-04-05T23:17:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

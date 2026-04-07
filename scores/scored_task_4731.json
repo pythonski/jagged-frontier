@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4141.00",
+  "task_id": 4731,
+  "task_statement": "Execute wire transfers of funds.",
+  "occupation_title": "New Accounts Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Executing wire transfers is done through electronic banking systems and financial software, requiring only a computer and secure network access. The task itself does not require physical presence or non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Wire transfers involve some variation (domestic vs. international, compliance checks, fraud flags, differing bank protocols), but the workflows are largely standardized and well-documented.",
+      "adequacy_evidence": "There is abundant procedural documentation, transaction logs, training materials, and synthetic simulation capacity covering all major cases, making representative training data readily obtainable.",
+      "_timestamp": "2026-04-06T05:46:22"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Executing wire transfers largely follows standardized procedures (verification, data entry, compliance checks), but some experience-based judgment may be used to flag unusual or suspicious transactions.",
+      "adequacy_evidence": "Current AI agents, with rules engines and fraud-detection tools, can reliably replicate these judgments in most cases, leaving little unmet tacit knowledge.",
+      "_timestamp": "2026-04-06T05:46:24"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Executing wire transfers involves a defined multi-step workflow (verify details, compliance checks, input, authorization, confirmation) where each step must be completed correctly but sequences are relatively short and standardized.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably follow structured, checklist-driven workflows without significant degradation over this sequence length, especially with tool integration and validation steps.",
+      "_timestamp": "2026-04-06T05:46:24"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Wire transfers are executed based on explicit instructions (amount, recipient details, routing info) and standardized procedures, with clear success criteria defined by completion and compliance checks.",
+      "adequacy_evidence": "Current AI systems can reliably interpret structured financial instructions and follow rule-based workflows, with minimal ambiguity requiring interpretation.",
+      "_timestamp": "2026-04-06T05:46:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Executing wire transfers requires tracking multiple structured data fields (account numbers, routing details, amounts, authorization status, compliance checks) within a single transaction episode, but the information is bounded and standardized.",
+      "adequacy_evidence": "Current agents handle structured data tracking and retrieval reliably within a single workflow, especially with tool support and form-based interfaces, with minimal risk of losing critical within-episode information.",
+      "_timestamp": "2026-04-06T05:46:25"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Executing wire transfers primarily involves handling structured textual and numerical information (account numbers, routing codes, amounts, and written instructions). Any occasional document or ID viewing is peripheral and not central to task execution.",
+      "adequacy_evidence": "Current AI agents can fully handle the text-based and structured data aspects of wire transfers; no meaningful multimodal capability gap affects performance.",
+      "_timestamp": "2026-04-06T05:46:25"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Wire transfers are expected to be processed promptly, often within seconds to a few minutes, especially for customer-facing transactions, but do not require split-second real-time reactions.",
+      "adequacy_evidence": "Current AI agents can complete the necessary validation, data entry, and compliance checks well within these time bounds without sacrificing quality, as the reasoning demands are relatively straightforward.",
+      "_timestamp": "2026-04-06T05:46:25"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Wire transfers are typically executed as discrete transactions using current instructions and account records, with necessary historical data (e.g., authorization status) retrieved from existing systems rather than relying on clerk memory.",
+      "adequacy_evidence": "Current AI agents integrated with banking systems can reliably access and use stored customer and transaction data, so cross-session memory needs are already well supported.",
+      "_timestamp": "2026-04-06T05:46:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Wire transfers are high-stakes, often irreversible financial transactions where even rare residual errors (e.g., wrong recipient, amount, or fraud) can cause significant financial loss and legal consequences.",
+      "adequacy_evidence": "Even with standard controls like dual authorization and validation checks, AI systems remain vulnerable to subtle data errors, instruction ambiguity, or manipulation (e.g., social engineering), leaving non-negligible residual risk.",
+      "_timestamp": "2026-04-06T05:46:27"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There is no explicit US law prohibiting AI systems from executing wire transfers; banks already use automated systems for payment processing. Regulations (e.g., KYC, AML, authorization controls) govern how transfers are conducted but do not mandate a human must perform the execution step.",
+      "_timestamp": "2026-04-06T05:46:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Executing wire transfers involves interaction with customers and financial institutions, where stakeholders rely on the correctness and authorization of the transaction, though personal identity of the clerk is not central.",
+      "adequacy_evidence": "Automated and AI-assisted systems are already widely accepted in banking for executing wire transfers, with trust anchored in institutional safeguards rather than the human identity of the operator.",
+      "_timestamp": "2026-04-06T05:46:27"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Wire transfers rely on structured data (account numbers, routing codes, amounts) with built-in validation and reconciliation processes, but detecting errors like incorrect beneficiaries or subtle data entry mistakes requires careful review and may not be immediately obvious.",
+      "adequacy_evidence": "AI can populate and process transfer details, but given current error rates and sensitivity to small inaccuracies, human verification and standard banking controls (e.g., dual authorization) remain necessary to catch mistakes.",
+      "_timestamp": "2026-04-06T05:46:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

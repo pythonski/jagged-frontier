@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "21-1011.00",
+  "task_id": 5584,
+  "task_statement": "Complete and maintain accurate records or reports regarding the patients' histories and progress, services provided, or other required information.",
+  "occupation_title": "Substance Abuse and Behavioral Disorder Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Counselors typically document patient histories, progress, and services in electronic health record systems or digital reports, which can be completed on a computer. Some settings still involve paper charts or on-site record systems, requiring occasional physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical documentation must align with regulatory, billing, and therapeutic relevance standards, requiring judgment about what details of patient history and progress are salient and compliant beyond explicit templates.",
+      "adequacy_evidence": "Agents can follow structured formats and guidelines but often miss nuanced clinical significance or context-dependent inclusion criteria, requiring human review and correction.",
+      "_timestamp": "2026-04-06T00:29:45"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While documentation follows structured formats and compliance rules, counselors must use clinical judgment to decide what details are salient, how to characterize progress, and how to phrase sensitive observations appropriately.",
+      "adequacy_evidence": "Current AI can generate well-structured clinical notes but often lacks consistent calibration in highlighting clinically meaningful nuances or risk-relevant details across varied cases.",
+      "_timestamp": "2026-04-06T00:29:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing documentation across sessions, requiring consistency in how patient history and progress are recorded, but each entry is partially modular rather than a single tightly coupled long sequence.",
+      "adequacy_evidence": "AI systems can generally maintain coherence within individual notes, but over extended sequences (e.g., longitudinal records) they may lose consistency or omit details without careful context management, leading to moderate degradation.",
+      "_timestamp": "2026-04-06T00:29:46"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied patient histories, treatment modalities, and documentation standards, but is typically structured around common clinical note formats (e.g., SOAP, progress notes) and recurring patterns in behavioral health care.",
+      "adequacy_evidence": "Large corpora of clinical documentation, templates, and training examples exist, though real-world data is often privacy-restricted; synthetic data and de-identified notes partially cover the space but may miss some edge-case complexity.",
+      "_timestamp": "2026-04-06T00:29:47"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintaining patient records requires continuous aggregation of detailed histories, treatment plans, session notes, and progress over long time horizons across many encounters.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured records via EHR integrations, but they still show gaps in consistently surfacing nuanced longitudinal context, handling evolving narratives, and maintaining coherent cross-session summaries without errors.",
+      "_timestamp": "2026-04-06T00:29:47"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily text-based documentation of patient histories, progress, and services; while source information may originate from speech or observation, the task itself is fundamentally text-in/text-out.",
+      "adequacy_evidence": "Current AI systems can handle text-based record generation and summarization effectively, and any upstream transcription of speech is already well-supported, leaving no meaningful multimodal gap.",
+      "_timestamp": "2026-04-06T00:29:48"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing multiple pieces of patient information (history, session details, services provided) within a documentation episode, requiring organized retrieval and concise summarization but typically within structured formats.",
+      "adequacy_evidence": "Current agents can manage note-taking and structured record updates with tools, but may omit details or introduce inconsistencies when handling evolving or multi-source session information.",
+      "_timestamp": "2026-04-06T00:29:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Clinical documentation involves nuanced patient histories, subjective assessments, and longitudinal progress notes where inaccuracies can be subtle, internally consistent, and not immediately observable without domain expertise or follow-up context.",
+      "adequacy_evidence": "Current AI systems can generate plausible but incorrect or fabricated clinical details, requiring thorough expert review and cross-checking with source information, making verification burdens high in practice.",
+      "_timestamp": "2026-04-06T00:29:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Clinical documentation and record maintenance are typically completed after sessions or within administrative time windows, where minutes to hours of latency are acceptable.",
+      "adequacy_evidence": "Current AI systems can generate and organize clinical notes well within these timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T00:29:49"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Healthcare documentation is governed by HIPAA and professional licensing rules requiring that records be created, maintained, and signed by a licensed provider, but these do not explicitly forbid AI assistance. AI can be used as a tool, though ultimate responsibility and authentication must rest with the human clinician, creating partial regulatory constraints.",
+      "_timestamp": "2026-04-06T00:29:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The records are used by clinicians, administrators, and insurers who rely on their accuracy, but the identity of who documents them is not central to their use.",
+      "adequacy_evidence": "AI-assisted documentation is increasingly accepted, but some stakeholders (e.g., clinicians, regulators) may require human oversight or attribution, leading to moderate resistance rather than full acceptance.",
+      "_timestamp": "2026-04-06T00:29:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clinical records for behavioral health guide treatment decisions, legal compliance, and continuity of care; even small residual errors (e.g., in history, risk factors, or services provided) can have significant downstream consequences.",
+      "adequacy_evidence": "With structured templates and human review, many AI-generated documentation errors can be caught, but risks like subtle mischaracterization or omission may still slip through at non-trivial rates.",
+      "_timestamp": "2026-04-06T00:29:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-3023.00",
+  "task_id": 22636,
+  "task_statement": "Review and evaluate notes taken about news events to isolate pertinent facts and details.",
+  "occupation_title": "News Analysts, Reporters, and Journalists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Journalists often review and analyze notes digitally (typed notes, documents, transcripts), but many still use handwritten notebooks or physical materials, requiring occasional non-digital review."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining which facts are 'pertinent' depends on editorial judgment, newsworthiness criteria, and context such as audience and story angle, which are not fully explicit in the notes.",
+      "adequacy_evidence": "Current agents can extract salient facts and summarize notes, but often miss subtle editorial priorities or context-specific relevance, requiring human refinement.",
+      "_timestamp": "2026-04-06T04:17:06"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans diverse topics, note styles, and event types across domains (politics, crime, sports, etc.), but the core activity\u2014extracting salient facts from notes\u2014is relatively consistent.",
+      "adequacy_evidence": "There is abundant coverage in journalism corpora, summarization datasets, annotated reporting workflows, and synthetic data generation, providing strong access to both inputs and demonstrated reasoning processes.",
+      "_timestamp": "2026-04-06T04:17:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reading through notes and systematically identifying and extracting relevant facts, requiring some consistency across multiple items but not a long, tightly interdependent sequence.",
+      "adequacy_evidence": "Frontier AI systems handle multi-step text review and extraction reliably, maintaining consistency across such moderate-length sequences without significant degradation.",
+      "_timestamp": "2026-04-06T04:17:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Identifying which details are 'pertinent' depends on journalistic judgment about newsworthiness, relevance to audience, and context, which is partly experience-driven rather than fully rule-based.",
+      "adequacy_evidence": "Current AI can extract salient facts in routine cases but often lacks consistent calibration on what is editorially important or contextually significant, especially in nuanced or ambiguous news situations.",
+      "_timestamp": "2026-04-06T04:17:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves scanning potentially multiple notes and extracting key facts, requiring some active selection and compression but typically within manageable document sizes.",
+      "adequacy_evidence": "Current LLM-based agents handle summarization and fact extraction from moderate-length inputs reliably, with minimal loss of relevant context in typical use cases.",
+      "_timestamp": "2026-04-06T04:17:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task focuses on reviewing written notes about news events, which is fundamentally text-based and does not require interpreting or generating non-text modalities.",
+      "adequacy_evidence": "Since the task is text-in, text-out, current AI systems fully meet the modality requirements without any multimodal limitations.",
+      "_timestamp": "2026-04-06T04:17:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Journalists often work under deadlines, so reviewing notes is expected to be done within seconds to a few minutes rather than hours, though it is not strictly real-time.",
+      "adequacy_evidence": "Current AI systems can extract and summarize pertinent facts from notes quickly with little loss in quality, well within typical time constraints for this task.",
+      "_timestamp": "2026-04-06T04:17:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is typically performed on a given set of notes about specific events, which are self-contained and do not inherently require recalling prior sessions or longitudinal context.",
+      "adequacy_evidence": "When cross-session context is occasionally useful (e.g., ongoing stories), current agents can store and retrieve such information reliably using standard memory and retrieval systems.",
+      "_timestamp": "2026-04-06T04:17:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is an internal analytical task focused on processing notes; it does not require direct interaction with or acceptance by external stakeholders.",
+      "adequacy_evidence": "Because there are no relevant stakeholders whose acceptance matters for this task, AI use would not face acceptance barriers.",
+      "_timestamp": "2026-04-06T04:17:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit AI from reviewing and evaluating notes about news events. This task is an internal analytical activity without regulated decision authority or mandated human oversight.",
+      "_timestamp": "2026-04-06T04:17:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Facts and details can usually be checked against original notes, recordings, or external sources, but doing so requires time and journalistic judgment to ensure accuracy and relevance.",
+      "adequacy_evidence": "AI systems can misinterpret notes or introduce subtle inaccuracies, so human review and cross-checking remain necessary, though errors are generally detectable with standard verification practices.",
+      "_timestamp": "2026-04-06T04:17:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in isolating key facts can lead to misreporting or loss of nuance, which has reputational and informational consequences, but such mistakes are typically correctable and not catastrophic.",
+      "adequacy_evidence": "With standard editorial review and fact-checking processes, AI-generated summaries can be reliably vetted, and remaining errors are usually detectable and tolerable in practice.",
+      "_timestamp": "2026-04-06T04:17:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

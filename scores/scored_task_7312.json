@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2051.00",
+  "task_id": 7312,
+  "task_statement": "Contact brokers and purchase investments for companies, according to company policy.",
+  "occupation_title": "Financial and Investment Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Contacting brokers and executing investment purchases are typically done via electronic trading platforms, email, messaging systems, or phone, all of which can be performed entirely with a computer and internet access."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Although company policy provides explicit constraints, selecting and executing investments requires interpreting risk tolerance, market conditions, and strategic fit that are often only partially specified.",
+      "adequacy_evidence": "Current agents can follow formal policies and infer general objectives, but they often miss nuanced strategic intent or evolving contextual priorities without human guidance.",
+      "_timestamp": "2026-04-06T02:48:23"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task follows explicit company policies and execution procedures, effective performance often involves judgment about timing, broker selection, and interpreting policy flexibility in context, which draws on experience.",
+      "adequacy_evidence": "Current agents can execute rule-based trades and follow policies, but they show weaker calibration in nuanced market judgment and relationship-sensitive broker interactions, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T02:48:23"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different asset classes, broker interactions, and firm-specific policies, but follows relatively structured financial transaction workflows with recurring patterns.",
+      "adequacy_evidence": "While general trading procedures and market data are well-covered, detailed firm policies and real broker negotiation/communication traces are often proprietary, leaving some gaps that require synthesis or approximation.",
+      "_timestamp": "2026-04-06T02:48:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step workflow\u2014identifying investment opportunities, communicating with brokers, ensuring compliance with company policy, and executing transactions\u2014requiring consistency across several dependent steps.",
+      "adequacy_evidence": "AI agents can manage structured multi-step financial workflows with tooling, but may show moderate degradation over longer sequences, such as losing track of constraints or mishandling evolving transaction details.",
+      "_timestamp": "2026-04-06T02:48:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking company investment policies, current holdings, broker quotes, and transaction details within a single workflow, but the information volume is structured and manageable with standard tools.",
+      "adequacy_evidence": "Current AI agents can reliably manage this level of structured financial context using tool integration and state tracking, with minimal risk of losing critical within-episode information.",
+      "_timestamp": "2026-04-06T02:48:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves textual and numeric information exchange (orders, policies, confirmations) via email, messaging, or structured systems; audio calls are optional and not essential to task competence.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI agents can handle the modality requirements without meaningful limitation.",
+      "_timestamp": "2026-04-06T02:48:25"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Executing investment purchases can be time-sensitive, especially in volatile markets, but typically allows seconds to minutes rather than requiring millisecond-level reactions.",
+      "adequacy_evidence": "Frontier agents can analyze instructions, apply policy constraints, and execute trades via APIs within acceptable timeframes without needing to truncate reasoning in most cases.",
+      "_timestamp": "2026-04-06T02:48:25"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Executing trades requires awareness of existing portfolios, prior transactions, and evolving company policies, but these are typically stored in structured systems rather than requiring rich longitudinal reasoning.",
+      "adequacy_evidence": "Current AI agents can integrate with databases and CRMs to retrieve historical investment and policy data, but may still show gaps in consistently surfacing the right context across systems or over time without careful engineering.",
+      "_timestamp": "2026-04-06T02:48:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Trade details (instrument, price, quantity, compliance with policy) are recorded and can be checked via confirmations and audit trails, but verifying best execution, suitability, and policy adherence requires financial expertise and careful review.",
+      "adequacy_evidence": "AI can generate and execute orders but may misinterpret policy constraints or select suboptimal trades, so human review of confirmations and compliance checks remains necessary at a moderate level.",
+      "_timestamp": "2026-04-06T02:48:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Executing investment trades involves financial, legal, and fiduciary consequences; even small residual errors (wrong asset, quantity, timing, or counterparty) can lead to material losses or compliance breaches.",
+      "adequacy_evidence": "While standard controls (trade approvals, confirmations, reconciliations) catch many issues, AI systems can still introduce subtle execution or interpretation errors that may pass checks, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T02:48:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires interacting with brokers as counterparties, who must execute trades based on the analyst\u2019s instructions, so there is some reliance on the performer as a recognized trading party.",
+      "adequacy_evidence": "Financial markets \u10e3\u10d9\u10d5\u10d4 widely accept algorithmic and automated trading systems; as long as the agent is authorized and compliant, brokers are generally indifferent to whether orders originate from a human or AI.",
+      "_timestamp": "2026-04-06T02:48:27"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "US securities regulations require trades to be executed through registered broker-dealers and supervised by licensed entities, but they do not prohibit the use of AI or automated systems to contact brokers or execute investment decisions. Algorithmic and automated trading are already permitted under existing rules.",
+      "_timestamp": "2026-04-06T02:48:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

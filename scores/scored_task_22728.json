@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1214.00",
+  "task_id": 22728,
+  "task_statement": "Refer patients to specialists or other practitioners.",
+  "occupation_title": "Emergency Medicine Physicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Referring patients is commonly done by entering consult or referral orders in an electronic health record or contacting specialists via digital systems, but in emergency departments it is also frequently coordinated through in-person discussions or phone communication with on-site specialists."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions depend on context such as clinical severity, suspected diagnosis, specialist availability, insurance constraints, and patient preferences, requiring interpretation beyond explicit rules.",
+      "adequacy_evidence": "Current agents can incorporate guidelines and structured data but often miss nuanced contextual factors (e.g., local practice patterns, patient-specific tradeoffs), requiring clinician oversight to resolve ambiguity.",
+      "_timestamp": "2026-04-06T04:15:59"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions in emergency medicine rely on clinical judgment about severity, risk of deterioration, and appropriateness of specialty care, often informed by experience beyond strict protocols but still partly guided by guidelines and criteria.",
+      "adequacy_evidence": "Current AI can follow referral guidelines and synthesize clinical factors, but lacks reliable experiential calibration for edge cases, local practice norms, and nuanced risk tolerance, leading to gaps in non-routine situations.",
+      "_timestamp": "2026-04-06T04:15:59"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions span a range of clinical presentations, specialties, patient demographics, and urgency levels, but are partially structured by established clinical pathways and guidelines.",
+      "adequacy_evidence": "There is substantial data in clinical guidelines, case records, and training materials, but real-world referral patterns tied to local resources, insurance constraints, and nuanced context are often private or underrepresented.",
+      "_timestamp": "2026-04-06T04:16:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions require synthesizing multiple in-episode data sources such as presenting symptoms, medical history, diagnostic results, and urgency to choose an appropriate specialist and communicate relevant details.",
+      "adequacy_evidence": "Current agents can aggregate and summarize structured and textual clinical information, but may inconsistently retain or prioritize subtle but important clinical details, leading to occasional omissions or misweighting.",
+      "_timestamp": "2026-04-06T04:16:01"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Referral decisions may consider prior history, comorbidities, or previous specialist involvement, but this information is typically retrieved from the medical record rather than requiring the physician to personally maintain longitudinal memory.",
+      "adequacy_evidence": "Current AI systems integrated with EHRs can access and retrieve relevant patient history across sessions, so persistent cross-session memory is not a major bottleneck for performing this task.",
+      "_timestamp": "2026-04-06T04:16:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions often incorporate multimodal clinical inputs such as imaging, physical exam findings, and occasionally audio (e.g., heart/lung sounds), though much of the reasoning can be summarized textually in records.",
+      "adequacy_evidence": "Current agents can interpret many standard medical images and structured data but remain inconsistent on nuanced or complex multimodal clinical synthesis, especially across heterogeneous inputs.",
+      "_timestamp": "2026-04-06T04:16:02"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Referral decisions in emergency settings are typically made within seconds to minutes to avoid delays in care, but they do not usually require split-second reactions like immediate life-saving interventions.",
+      "adequacy_evidence": "Frontier AI agents can generate appropriate referral recommendations within seconds, and the reasoning required is well within their fast-response capabilities without significant quality degradation.",
+      "_timestamp": "2026-04-06T04:16:02"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Referral decisions in emergency medicine determine access to specialized care; missed or inappropriate referrals can lead to delayed diagnosis, deterioration, or irreversible harm, so even rare errors can have serious consequences.",
+      "adequacy_evidence": "Even with review (e.g., supervising physicians, protocols), AI may still miss subtle clinical cues or context leading to inappropriate referrals, leaving some non-trivial residual risk, though not uniformly catastrophic in all cases.",
+      "_timestamp": "2026-04-06T04:16:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The referral process involves multiple coordinated steps (clinical decision, identifying appropriate specialist, communicating rationale, and arranging transfer or follow-up), but the sequence is relatively short and not deeply interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute these structured, moderately sequential workflows without meaningful degradation, as each step is discrete and supported by standard protocols and tools.",
+      "_timestamp": "2026-04-06T04:16:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Referrals require patients and receiving specialists to trust the physician\u2019s clinical judgment, authority, and responsibility for care coordination, making performer identity central.",
+      "adequacy_evidence": "Patients and medical professionals are unlikely to accept an AI independently making referral decisions in emergency contexts, as trust, liability, and perceived clinical authority are critical and not easily transferred to AI.",
+      "_timestamp": "2026-04-06T04:16:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Making patient referrals is part of the practice of medicine and must be performed or authorized by a licensed physician under state medical practice laws and hospital credentialing rules. AI systems cannot independently practice medicine or issue referrals without a licensed clinician\u2019s involvement.",
+      "_timestamp": "2026-04-06T04:16:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Checking a referral requires clinical judgment about the appropriate specialty, urgency, and completeness of information; errors are not always obvious without reviewing the patient context and may not surface immediately.",
+      "adequacy_evidence": "Current AI can suggest plausible referrals but still makes nontrivial mistakes in specialty choice or urgency, so clinician review is routinely needed, though the verification process is manageable.",
+      "_timestamp": "2026-04-06T04:16:05"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

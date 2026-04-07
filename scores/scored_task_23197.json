@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3031.00",
+  "task_id": 23197,
+  "task_statement": "Complete sales order tickets and submit for processing of client-requested transactions.",
+  "occupation_title": "Securities, Commodities, and Financial Services Sales Agents",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Most securities transactions are entered and submitted through electronic trading or order management systems, which can be done remotely on a computer. However, some firms still involve physical paperwork, signatures, or in-office compliance handling for certain orders."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of order types, asset classes, and client instructions, but follows standardized formats, procedures, and compliance rules across cases.",
+      "adequacy_evidence": "Abundant structured examples (forms, workflows, transaction records) and clear procedural documentation make it straightforward to generate representative training data, including synthetic variants.",
+      "_timestamp": "2026-04-06T00:50:20"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While order tickets are highly structured, correctly capturing client intent (e.g., order type, timing, special instructions) can require some interpretation of context and communication nuances.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably extract and map client instructions into structured order fields, with minimal difficulty resolving the limited ambiguity present.",
+      "_timestamp": "2026-04-06T00:50:20"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Completing and submitting sales order tickets is largely a structured, rule-based process with standardized fields, compliance checks, and explicit procedures guiding correct entry and routing.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured workflows, map client instructions to form fields, and apply rule-based validation without needing experience-derived judgment.",
+      "_timestamp": "2026-04-06T00:50:21"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Sales order tickets are typically completed during or shortly after client interactions, requiring turnaround within seconds to a few minutes but not true real-time reflexes.",
+      "adequacy_evidence": "Frontier AI agents can generate and validate structured transaction entries almost instantly, well within the time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T00:50:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Completing sales order tickets involves a multi-step process (gathering client details, verifying transaction parameters, entering data, and submitting), requiring consistent accuracy across several interdependent steps but not long or highly complex sequences.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably handle structured, form-based multi-step workflows with minimal degradation, especially when supported by validation checks and tool integrations.",
+      "_timestamp": "2026-04-06T00:50:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Completing and submitting sales order tickets is primarily a text- and number-based process involving client instructions, transaction details, and form entry.",
+      "adequacy_evidence": "Current AI agents handle text and structured data entry tasks well, with no meaningful reliance on non-text modalities for this task.",
+      "_timestamp": "2026-04-06T00:50:21"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Completing sales order tickets requires tracking multiple fields (client identity, security details, quantities, pricing, instructions) and ensuring consistency, but the information is structured and bounded within a single transaction.",
+      "adequacy_evidence": "Modern AI agents handle structured data entry, form completion, and short-context information management reliably, with minimal loss or distortion in typical transaction-sized contexts.",
+      "_timestamp": "2026-04-06T00:50:22"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Processing sales orders may draw on stored client account details and prior preferences, but each ticket is largely a discrete transaction with relevant data retrieved from systems of record.",
+      "adequacy_evidence": "Current AI agents integrated with CRM and transaction systems can reliably store and retrieve client histories across sessions, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T00:50:23"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in sales order tickets can result in incorrect financial transactions, regulatory violations, or client losses, and even rare residual mistakes can have significant monetary and legal consequences.",
+      "adequacy_evidence": "While structured forms and validation checks can catch many issues, AI systems still exhibit occasional misinterpretation of client instructions or data entry errors, leaving some non-negligible residual risk even after review.",
+      "_timestamp": "2026-04-06T00:50:23"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "FINRA and SEC rules require that securities transactions be handled under the supervision of registered representatives and broker-dealers, and certain approvals or recordkeeping must be tied to licensed individuals. However, there is no explicit prohibition on AI systems assisting with or preparing order tickets, creating partial rather than full restriction.",
+      "_timestamp": "2026-04-06T00:50:23"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Sales order tickets contain structured fields (e.g., ticker, quantity, price, account) that can be checked against client instructions and system validations, but some errors (e.g., wrong security or quantity) may not be immediately obvious without careful review.",
+      "adequacy_evidence": "AI can populate structured forms reliably, but still makes occasional field-level or interpretation errors, requiring routine human or system verification to ensure accuracy before submission.",
+      "_timestamp": "2026-04-06T00:50:24"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task operationalizes client instructions into formal order tickets, so it involves client-derived inputs, but the act itself is largely administrative and does not rely heavily on personal trust or relationship dynamics.",
+      "adequacy_evidence": "Clients already widely accept automated and electronic order entry systems in financial services, so an AI performing this back-office function would face minimal resistance.",
+      "_timestamp": "2026-04-06T00:50:24"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

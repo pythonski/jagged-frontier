@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-1021.00",
+  "task_id": 8577,
+  "task_statement": "Schedule times of shipment and modes of transportation for materials.",
+  "occupation_title": "First-Line Supervisors of Helpers, Laborers, and Material Movers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Scheduling shipment times and selecting transportation modes is a planning and coordination task typically done using logistics software, email, or phone without requiring physical presence or handling materials."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied but structured scenarios (different materials, routes, constraints, carrier options), creating moderate diversity but within well-understood logistics patterns.",
+      "adequacy_evidence": "Extensive logistics data, routing benchmarks, and operational records exist, and synthetic environments (e.g., vehicle routing simulations) can readily capture the decision process, providing strong coverage.",
+      "_timestamp": "2026-04-06T03:25:39"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling shipments and transportation modes involves balancing deadlines, costs, capacity, and operational priorities that are often implicit or context-dependent rather than fully specified.",
+      "adequacy_evidence": "Current agents can optimize based on explicit constraints and historical patterns, but they often miss shifting priorities or unstated tradeoffs without human clarification.",
+      "_timestamp": "2026-04-06T03:25:39"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting shipment times and transport modes involves tradeoffs (cost, urgency, carrier reliability, congestion) that often rely on experience with local conditions and past outcomes beyond fixed rules.",
+      "adequacy_evidence": "Agents can optimize using logistics data and APIs, but they still lack robust calibration for nuanced, context-specific factors like informal carrier performance or site-specific constraints.",
+      "_timestamp": "2026-04-06T03:25:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling shipments involves coordinating multiple constraints (timing, transportation modes, availability, costs) across several interdependent steps, but the sequences are typically bounded and structured rather than deeply long-horizon.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across these moderate planning sequences, though some degradation can occur in tracking constraints or dependencies over multiple steps without careful scaffolding.",
+      "_timestamp": "2026-04-06T03:25:40"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling shipments often depends on ongoing operational context such as recurring routes, supplier relationships, delivery windows, and past scheduling patterns, but each instance is still largely bounded by current orders and constraints.",
+      "adequacy_evidence": "Current AI agents can reliably use external systems (databases, ERP integrations) to store and retrieve persistent scheduling data across sessions, so cross-session memory needs are well-supported.",
+      "_timestamp": "2026-04-06T03:25:41"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling shipment times and transportation modes is primarily based on structured data such as orders, schedules, routes, and costs, which are typically represented in text or tabular systems rather than requiring visual or sensory input.",
+      "adequacy_evidence": "Current AI agents handle text- and data-driven planning tasks effectively, with no meaningful multimodal perception or generation required for competent performance.",
+      "_timestamp": "2026-04-06T03:25:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Schedules can be checked against known constraints (delivery deadlines, carrier availability, capacity, routes), but verifying correctness requires reviewing multiple variables and coordination details rather than immediate obvious feedback.",
+      "adequacy_evidence": "AI can generate plausible schedules but may miss constraints or edge cases (e.g., timing conflicts, capacity limits), so human review or system validation is still needed to catch non-obvious errors.",
+      "_timestamp": "2026-04-06T03:25:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in shipment scheduling can cause delays, increased costs, or coordination issues, but are usually recoverable and rarely catastrophic after standard checks.",
+      "adequacy_evidence": "With routing tools, constraints checking, and human oversight, current AI systems can reduce residual errors to a level that is generally acceptable for this task.",
+      "_timestamp": "2026-04-06T03:25:42"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple constraints such as delivery deadlines, transportation options, material characteristics, and availability, requiring moderate integration of structured information within an episode.",
+      "adequacy_evidence": "Current AI agents with tool use and structured data access (e.g., databases, scheduling systems) can reliably manage and update this level of information without significant loss or drift.",
+      "_timestamp": "2026-04-06T03:25:42"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from scheduling shipment times or selecting transportation modes. While transportation is regulated (e.g., DOT rules), these do not mandate that a human personally perform scheduling decisions.",
+      "_timestamp": "2026-04-06T03:25:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Shipment scheduling typically allows for seconds to minutes of planning using available logistics data; it is not usually a split-second, real-time control task.",
+      "adequacy_evidence": "Current AI agents can generate high-quality routing and scheduling plans within these time windows without needing to truncate reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T03:25:43"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires coordination with carriers, suppliers, and internal teams who rely on the schedule, so stakeholders do engage with the output, though personal identity of the scheduler is not central.",
+      "adequacy_evidence": "Logistics scheduling is already widely handled by software systems, and stakeholders generally accept automated or AI-assisted coordination as long as it is accurate and reliable.",
+      "_timestamp": "2026-04-06T03:25:44"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

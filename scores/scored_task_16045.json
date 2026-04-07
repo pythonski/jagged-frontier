@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2099.04",
+  "task_id": 16045,
+  "task_statement": "Review reports of suspected fraud to determine need for further investigation.",
+  "occupation_title": "Fraud Examiners, Investigators and Analysts",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Fraud reports are typically received and reviewed through digital case management systems, emails, or databases. However, some instances may involve reviewing physical reports or documents submitted on paper."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing suspected fraud reports involves applying known red flags and investigative frameworks, but also requires experience-based judgment to weigh contextual cues, assess plausibility, and prioritize cases.",
+      "adequacy_evidence": "Current AI agents can apply rules and surface anomalies well, but they show gaps in nuanced calibration for borderline or context-dependent cases, where human investigators rely on accumulated experience.",
+      "_timestamp": "2026-04-06T02:32:58"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reports vary widely in quality and completeness, and determining whether suspicion merits escalation requires contextual judgment about risk, patterns, and organizational thresholds that are not fully explicit.",
+      "adequacy_evidence": "Current agents can extract signals and apply known fraud indicators, but often miss subtle contextual cues or misalign with organization-specific escalation standards without human guidance.",
+      "_timestamp": "2026-04-06T02:32:59"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Fraud reports vary widely across industries, schemes (financial fraud, insurance, cyber, identity theft), and formats, creating a highly heterogeneous, long-tailed distribution with many edge cases and evolving patterns.",
+      "adequacy_evidence": "While public case studies, enforcement actions, and synthetic data can cover many patterns, critical real-world signals (e.g., SARs, internal reports) are often private and not fully accessible, leaving some subpopulations underrepresented but partially reproducible.",
+      "_timestamp": "2026-04-06T02:32:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many reports can be reviewed individually, effective fraud assessment often benefits from access to prior case histories, known patterns, and entity-level context across cases.",
+      "adequacy_evidence": "Current agents can integrate with databases and retrieval systems to persist and access cross-case information, but they still show gaps in consistently linking and surfacing relevant historical context across sessions.",
+      "_timestamp": "2026-04-06T02:32:59"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis\u2014reading reports, cross-referencing facts, applying investigative criteria, and forming a judgment\u2014but sequences are typically bounded rather than long and tightly interdependent.",
+      "adequacy_evidence": "Frontier AI agents can sustain performance across these moderate-length analytical sequences, though some degradation can occur in maintaining consistent criteria application or tracking details across longer or more complex reports.",
+      "_timestamp": "2026-04-06T02:33:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing reports of suspected fraud is primarily a text-based activity involving written narratives, financial records, and structured data; non-text inputs are not central to the task.",
+      "adequacy_evidence": "Since the task is largely text-driven, current AI agents handle the modality requirements well without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T02:33:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing multiple documents (transaction records, alerts, prior case notes) and tracking salient details, but typically within a bounded case file rather than massive or continuously evolving data streams.",
+      "adequacy_evidence": "Current agents can ingest and summarize multi-document inputs, but may miss subtle cross-document inconsistencies or lose fidelity when compressing complex financial details, leading to moderate reliability issues.",
+      "_timestamp": "2026-04-06T02:33:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing suspected fraud reports is typically an asynchronous analytical task where minutes to hours are acceptable for careful assessment rather than immediate real-time response.",
+      "adequacy_evidence": "Current AI agents can perform thorough analysis within these relaxed timeframes without needing to truncate reasoning, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T02:33:00"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether a report warrants further investigation involves nuanced judgment over incomplete, potentially misleading financial or behavioral signals; mistakes are often subtle and require domain expertise and additional data checks to uncover.",
+      "adequacy_evidence": "Current AI systems can misinterpret context, over- or under-flag suspicious patterns, and lack reliable grounding in real-world evidence, so their outputs require intensive expert review and cross-validation to ensure correctness.",
+      "_timestamp": "2026-04-06T02:33:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on internal stakeholders (e.g., compliance teams, management, or law enforcement partners) who use the analyst\u2019s judgment, and credibility can matter but is not inherently tied to personal identity or rapport.",
+      "adequacy_evidence": "Organizations may be cautious about relying solely on AI for fraud determinations due to trust, accountability, and auditability concerns, though AI-assisted review is increasingly accepted with human oversight.",
+      "_timestamp": "2026-04-06T02:33:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misjudging whether a suspected fraud case warrants further investigation can allow significant financial crimes to go undetected or trigger costly, unjustified investigations, with legal and reputational consequences.",
+      "adequacy_evidence": "Even after review processes, AI may still miss subtle fraud indicators or over-flag benign cases due to limited contextual judgment, leaving some meaningful residual risk though not uniformly catastrophic.",
+      "_timestamp": "2026-04-06T02:33:02"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from reviewing suspected fraud reports or recommending further investigation. While regulated sectors (e.g., banking, insurance) require human accountability and oversight, they do not bar AI from performing this analytical task.",
+      "_timestamp": "2026-04-06T02:34:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

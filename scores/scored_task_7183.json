@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-7081.00",
+  "task_id": 7183,
+  "task_statement": "Organize schedules for refuse collection.",
+  "occupation_title": "Refuse and Recyclable Material Collectors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Organizing refuse collection schedules is typically done using routing or scheduling software, spreadsheets, or digital dispatch systems. However, in some operations it may involve in-person coordination with drivers or use of physical maps/whiteboards at a depot."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves moderate variability across municipalities (route layouts, pickup frequencies, regulations, and constraints like traffic or weather), but it largely fits structured vehicle routing and scheduling problem classes.",
+      "adequacy_evidence": "There is extensive accessible data and well-developed synthetic environments (e.g., vehicle routing problems, logistics datasets) that capture the underlying processes, enabling strong coverage through training and simulation.",
+      "_timestamp": "2026-04-06T04:58:48"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of refuse collection scheduling can be formalized (routes, capacities, service frequencies), experienced planners rely on local knowledge like traffic patterns, neighborhood idiosyncrasies, and informal service expectations.",
+      "adequacy_evidence": "Current agents with routing optimization and data integration can handle standard cases well, but often lack nuanced calibration for local quirks and evolving on-the-ground conditions without human input.",
+      "_timestamp": "2026-04-06T04:58:48"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Organizing refuse collection schedules involves coordinating routes, timing, and resource allocation across multiple stops, where consistency across steps matters but sequences are not extremely long or tightly coupled.",
+      "adequacy_evidence": "AI agents with routing and scheduling tools can maintain coherence across these moderate-length planning sequences, with little evidence of degradation over the required step chains.",
+      "_timestamp": "2026-04-06T04:58:49"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling refuse collection involves some context-dependent factors like local regulations, traffic patterns, service priorities, and coordination with crews, but core objectives (coverage, efficiency, timeliness) are largely explicit.",
+      "adequacy_evidence": "Current AI agents with routing, optimization, and data integration tools can reliably infer and operationalize these constraints, with only minor need for human clarification in edge cases.",
+      "_timestamp": "2026-04-06T04:58:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires tracking multiple routes, collection frequencies, vehicle assignments, and timing constraints within a single planning episode, but the information is structured and bounded.",
+      "adequacy_evidence": "Current AI systems with planning and optimization tools can reliably manage and retrieve this level of structured scheduling information without significant context loss.",
+      "_timestamp": "2026-04-06T04:58:49"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling relies on recurring routes, service frequencies, and known pickup locations that persist over time, but the structure is relatively stable and standardized rather than deeply evolving case history.",
+      "adequacy_evidence": "Current systems can store and retrieve schedules, routes, and customer data reliably via databases and integrations, and LLM-based agents can access and update this persistent state without major limitations.",
+      "_timestamp": "2026-04-06T04:58:49"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Refuse collection schedules are typically planned in advance (daily or weekly), allowing minutes to hours for optimization rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can generate high-quality routing and scheduling plans well within these relaxed time constraints, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T04:58:50"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling refuse collection often involves spatial information such as routes, maps, and geographic constraints, which are inherently non-textual but can be represented in structured or textual forms.",
+      "adequacy_evidence": "Current AI systems can effectively handle routing and scheduling using map APIs and structured data, so multimodal demands are well-supported with existing tools.",
+      "_timestamp": "2026-04-06T04:58:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling errors can lead to missed or delayed pickups, route inefficiencies, and public complaints, but consequences are generally reversible and not safety-critical.",
+      "adequacy_evidence": "With standard checks (route validation, supervisor review, operational feedback), remaining AI errors are likely minor and correctable, leaving acceptable residual risk.",
+      "_timestamp": "2026-04-06T04:58:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from organizing schedules for refuse collection. Scheduling is an administrative function without mandated human licensure or decision-making requirements.",
+      "_timestamp": "2026-04-06T04:58:51"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Schedules can be checked against clear constraints (routes, timing, vehicle capacity, coverage), and many errors like overlaps or gaps are detectable with standard validation tools, though some issues (e.g., local traffic patterns) require domain awareness.",
+      "adequacy_evidence": "Current AI can generate plausible schedules but still makes constraint or practicality errors often enough that routine human or software-based validation is needed to ensure feasibility.",
+      "_timestamp": "2026-04-06T04:58:52"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling affects residents and municipal clients who rely on predictable service, but they interact with the schedule itself rather than the scheduler\u2019s identity.",
+      "adequacy_evidence": "Automated routing and scheduling systems are already widely used in waste management, and stakeholders are generally indifferent to whether schedules are produced by humans or AI.",
+      "_timestamp": "2026-04-06T04:58:52"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

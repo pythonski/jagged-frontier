@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1071.00",
+  "task_id": 18868,
+  "task_statement": "Review employment applications and job orders to match applicants with job requirements.",
+  "occupation_title": "Human Resources Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Most organizations review applications and job orders through digital applicant tracking systems, emails, and online job platforms. However, some employers still handle paper applications or physical job orders, requiring in-person review."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied industries, roles, and candidate backgrounds, with differing job requirements and resume formats, but follows broadly consistent matching patterns and criteria across cases.",
+      "adequacy_evidence": "Large corpora of resumes, job descriptions, and recruiting guidelines exist, and matching processes can be well captured via examples and synthetic data, providing strong coverage of relevant scenarios.",
+      "_timestamp": "2026-04-05T22:48:11"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Matching applicants to job requirements often involves interpreting transferable skills, career trajectories, and soft factors like cultural fit that are not fully codified in job descriptions or resumes.",
+      "adequacy_evidence": "Current AI can handle structured matching and infer skills reasonably well, but still shows gaps in nuanced judgment around ambiguous qualifications, soft skills, and context-specific fit.",
+      "_timestamp": "2026-04-05T22:48:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Job requirements and applicant fit often include implicit criteria such as cultural fit, soft skills, and hiring manager preferences that are not fully specified in job orders or resumes.",
+      "adequacy_evidence": "Current AI can extract and align explicit qualifications but frequently misses nuanced or context-dependent preferences, requiring human input to refine matches.",
+      "_timestamp": "2026-04-05T22:48:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves comparing information across resumes, applications, and job requirements, requiring tracking multiple attributes and criteria within a single matching episode.",
+      "adequacy_evidence": "Current AI systems with retrieval and structured parsing tools can reliably manage and compare multiple documents in-context without significant loss of relevant information.",
+      "_timestamp": "2026-04-05T22:48:12"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step comparison\u2014parsing job requirements, extracting candidate qualifications, and matching them\u2014but these steps are moderately scoped and not deeply interdependent over long sequences.",
+      "adequacy_evidence": "Frontier AI agents can reliably handle structured comparison and matching across multiple documents without significant degradation, especially with batching and retrieval support.",
+      "_timestamp": "2026-04-05T22:48:12"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Applications and job orders are primarily textual documents (resumes, cover letters, job descriptions) with minimal reliance on images or other non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based matching tasks well, and no significant multimodal perception or generation is required for competent performance.",
+      "_timestamp": "2026-04-05T22:48:13"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Matching applicants to job requirements is typically a batch or workflow task where minutes or longer turnaround times are acceptable; it does not require real-time interaction.",
+      "adequacy_evidence": "Current AI systems can easily perform resume screening and matching within these loose time constraints without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-05T22:48:13"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Effective matching benefits from retaining candidate histories, prior applications, and employer preferences across sessions, but each matching decision can largely be made from current application and job data.",
+      "adequacy_evidence": "Current AI systems can integrate with databases and applicant tracking systems to reliably store and retrieve cross-session information, so persistent memory is not a significant limitation.",
+      "_timestamp": "2026-04-05T22:48:13"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Mismatching candidates to job requirements can lead to inefficient hiring, missed opportunities, or poor fits, but these outcomes are typically reversible through later screening stages or rehiring.",
+      "adequacy_evidence": "With standard quality control such as recruiter review and interviews, remaining AI errors in initial matching are likely to be caught, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T22:48:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Matching decisions can be checked by comparing applicant qualifications against stated job requirements, but nuanced fit (e.g., transferable skills, culture fit) requires human judgment and time to verify.",
+      "adequacy_evidence": "AI systems can perform initial matching but still make non-obvious errors (e.g., misinterpreting experience or over-relying on keywords), so consistent human review is needed though not excessively burdensome.",
+      "_timestamp": "2026-04-05T22:48:15"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task affects applicants and hiring managers who rely on matching decisions, but interaction is indirect and does not hinge strongly on the performer's personal identity.",
+      "adequacy_evidence": "Automated resume screening and matching systems are already widely used and generally accepted, with limited concern about AI performing this specific function.",
+      "_timestamp": "2026-04-05T22:48:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no blanket prohibition on AI performing applicant screening, but regulations like EEOC guidance and laws such as NYC Local Law 144 impose requirements (e.g., bias audits, transparency) on automated employment decision tools, creating partial constraints without banning their use.",
+      "_timestamp": "2026-04-05T22:48:16"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

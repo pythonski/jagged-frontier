@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2112.02",
+  "task_id": 18131,
+  "task_statement": "Analyze validation test data to determine whether systems or processes have met validation criteria or to identify root causes of production problems.",
+  "occupation_title": "Validation Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Analyzing validation test data is typically performed using software tools and digital datasets on a computer, but in some cases engineers may need to be on-site to access systems, verify process conditions, or correlate results with physical equipment or production activities."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Validation engineers encounter highly heterogeneous data across different systems (software, hardware, manufacturing), with diverse failure modes, test protocols, and domain-specific signals requiring broad coverage of scenarios and root-cause patterns.",
+      "adequacy_evidence": "While public datasets, logs, and synthetic simulations can cover many validation and debugging patterns, much real-world data is proprietary and system-specific, leaving gaps in rare failure modes and nuanced production contexts.",
+      "_timestamp": "2026-04-06T05:38:27"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Validation criteria are typically documented in protocols and test plans, but interpreting whether deviations are acceptable and identifying root causes often requires contextual judgment about system behavior and edge cases.",
+      "adequacy_evidence": "Current agents can follow explicit validation rules and analyze data patterns, but they often struggle to fully infer nuanced acceptance thresholds or contextual factors behind anomalies without iterative human guidance.",
+      "_timestamp": "2026-04-06T05:38:28"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting validation data and diagnosing root causes often involves recognizing subtle patterns, noise vs. signal distinctions, and context-specific failure modes that are not fully captured by explicit rules.",
+      "adequacy_evidence": "Current AI agents can perform statistical analysis and suggest plausible causes, but they often lack calibrated judgment for edge cases and nuanced domain-specific interpretations seen in real production environments.",
+      "_timestamp": "2026-04-06T05:38:28"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis (data review, comparison to criteria, anomaly detection, and root cause tracing) where earlier steps inform later conclusions, but sequences are typically bounded and modular rather than deeply long or tightly coupled.",
+      "adequacy_evidence": "Current AI agents can generally sustain coherent multi-step analytical workflows, but may show some degradation in longer root-cause investigations, including missed dependencies or mild goal drift across steps.",
+      "_timestamp": "2026-04-06T05:38:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Validation engineers often work with plots, sensor traces, schematics, and other visual or signal-based data alongside logs and tables, making some multimodal interpretation useful though not always central.",
+      "adequacy_evidence": "Current agents can interpret standard charts, images, and structured data reasonably well, but may struggle with complex signal patterns, noisy visual diagnostics, or tightly coupled cross-modal reasoning in advanced validation contexts.",
+      "_timestamp": "2026-04-06T05:38:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Root cause analysis and validation often benefit from comparing current test results to prior runs, historical defects, and evolving system baselines, but many individual analyses can still be performed with locally provided data and documentation.",
+      "adequacy_evidence": "Current agents can integrate with external databases and retrieval systems to access historical records, but they still show gaps in consistently maintaining and surfacing evolving project context across sessions without careful system design.",
+      "_timestamp": "2026-04-06T05:38:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Validation data analysis and root cause investigation are typically conducted offline with no strict real-time constraints; engineers often have minutes to hours (or longer) to complete thorough analysis.",
+      "adequacy_evidence": "Current AI agents can perform deep, multi-step analysis well within these timeframes, so there is no meaningful degradation in quality due to speed constraints.",
+      "_timestamp": "2026-04-06T05:38:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating large, heterogeneous data sources such as test results, logs, specifications, and historical baselines, where missing or misaligning details can lead to incorrect validation conclusions or root cause identification.",
+      "adequacy_evidence": "Well-tooled agents can offload much of the data handling to code and retrieval systems, but they still exhibit occasional context loss or imperfect summarization when tracking complex, multi-source relationships within a single analysis episode.",
+      "_timestamp": "2026-04-06T05:38:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining compliance with validation criteria and diagnosing root causes requires careful statistical analysis, domain expertise, and cross-checking against test protocols and system behavior; errors can be subtle and not immediately observable.",
+      "adequacy_evidence": "Current AI systems can misinterpret data patterns or propose incorrect causal explanations, and verifying their conclusions typically requires re-analysis by experts, making the checking burden substantial and unavoidable.",
+      "_timestamp": "2026-04-06T05:38:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The analysis is primarily consumed by internal stakeholders (engineering, quality, regulatory teams) who rely on the conclusions, but the analyst\u2019s personal identity is not usually central beyond credibility and traceability.",
+      "adequacy_evidence": "Organizations may accept AI-assisted analysis, but full replacement can face moderate resistance due to trust, auditability, and regulatory expectations requiring accountable human sign-off.",
+      "_timestamp": "2026-04-06T05:38:32"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing data analysis, but in regulated sectors (e.g., FDA-regulated pharma, medical devices), validation and root-cause determinations typically require qualified human review and sign-off, creating partial restrictions on fully autonomous AI use.",
+      "_timestamp": "2026-04-06T05:38:33"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect conclusions about validation criteria or root causes can lead to release of faulty systems or unresolved production issues, with potential safety, regulatory, and financial consequences, so very low residual error is tolerable.",
+      "adequacy_evidence": "While results can often be cross-checked against test data and criteria, AI may still miss subtle patterns or causal factors, leaving some non-trivial residual risk even after standard review.",
+      "_timestamp": "2026-04-06T05:38:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

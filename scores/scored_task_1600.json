@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "21-1014.00",
+  "task_id": 1600,
+  "task_statement": "Evaluate clients' physical or mental condition, based on review of client information.",
+  "occupation_title": "Mental Health Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Evaluating a client\u2019s condition based on reviewing records, assessments, and notes can often be done through electronic files and telehealth sessions. However, many counselors still perform evaluations during in-person sessions where direct observation of the client occurs."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing a client\u2019s mental or physical condition from records involves interpreting nuanced, context-dependent cues (e.g., symptom presentation, history, cultural factors) and aligning them with partially implicit clinical criteria and evolving hypotheses.",
+      "adequacy_evidence": "Current AI agents struggle to reliably infer latent clinical meaning, weigh subtle contextual factors, and iteratively refine interpretations in line with professional judgment, often missing or oversimplifying key ambiguities.",
+      "_timestamp": "2026-04-06T02:12:58"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Client evaluation spans diverse diagnoses, comorbidities, cultural contexts, and idiosyncratic histories, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "There is substantial training signal from clinical literature, case studies, and de-identified records, but real-world longitudinal notes and nuanced, context-rich cases are often private or sparse, leaving partial coverage gaps.",
+      "_timestamp": "2026-04-06T02:12:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing a client's mental condition relies heavily on longitudinal case history, including prior symptoms, treatment responses, and evolving behavioral patterns across multiple sessions.",
+      "adequacy_evidence": "Current agents can store and retrieve structured case histories, but often struggle with reliably synthesizing nuanced, evolving context over long time horizons and across fragmented records.",
+      "_timestamp": "2026-04-06T02:12:59"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Accurate evaluation of clients\u2019 mental or physical condition requires nuanced clinical judgment, including interpreting subtle cues, contextual factors, comorbidities, and culturally shaped expressions of distress that are not fully captured by explicit rules.",
+      "adequacy_evidence": "Current AI agents can summarize and pattern-match from client information but lack the experiential calibration and situational discernment needed for reliable clinical judgment, especially in ambiguous, high-stakes, or context-sensitive cases.",
+      "_timestamp": "2026-04-06T02:12:59"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluation often incorporates non-text cues such as vocal tone, facial expression, and observed behavior, though written case notes and histories can carry substantial weight.",
+      "adequacy_evidence": "Current agents can process text well and handle basic audio/visual signals, but they are still unreliable at nuanced interpretation of affect, demeanor, and subtle behavioral cues critical in mental health assessment.",
+      "_timestamp": "2026-04-06T02:13:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Evaluations are typically conducted during or shortly after sessions, with expectations of responsiveness within minutes rather than hours, but not strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can perform careful review and reasoning within this time window without needing to truncate deliberation, so speed does not significantly degrade quality.",
+      "_timestamp": "2026-04-06T02:13:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Counselors must synthesize multiple sources (intake forms, history, session notes, observed symptoms) within a single evaluation, requiring active retrieval and integration but typically within manageable scope.",
+      "adequacy_evidence": "Current agents can summarize and retrieve structured client information effectively with tooling, but may miss subtle contextual cues or misweight details when compressing complex psychological profiles.",
+      "_timestamp": "2026-04-06T02:13:00"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing mental or physical condition from client information involves nuanced clinical judgment, interpretation of subtle cues, and integration of context; errors are often not immediately observable and may require expert review over time to detect.",
+      "adequacy_evidence": "Current AI systems frequently misinterpret clinical nuance, lack reliable judgment on ambiguous or sensitive cases, and would require intensive expert verification, as errors are both common and difficult to spot without domain expertise.",
+      "_timestamp": "2026-04-06T02:13:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Evaluating a client's mental or physical condition in counseling relies heavily on trust, perceived empathy, and professional legitimacy, all of which are central to client engagement and disclosure.",
+      "adequacy_evidence": "Many clients would be uncomfortable or unwilling to have an AI evaluate their mental state, and this resistance would likely reduce openness and undermine the effectiveness of the assessment.",
+      "_timestamp": "2026-04-06T02:13:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Misjudging a client\u2019s mental or physical condition can lead to missed risk of self-harm, inappropriate treatment, or escalation failures, with potentially severe or irreversible consequences.",
+      "adequacy_evidence": "Even with supervision or review, current AI systems can miss subtle contextual, behavioral, and interpersonal cues critical to mental health assessment, leaving unacceptable residual risk.",
+      "_timestamp": "2026-04-06T02:13:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State licensing laws require that mental health assessment and evaluation be performed by licensed professionals (e.g., LPCs, psychologists), and unlicensed entities\u2014including AI systems\u2014cannot legally provide these services independently. AI may assist, but cannot autonomously perform or be recognized as the evaluator under current regulations.",
+      "_timestamp": "2026-04-06T02:13:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple pieces of client information and synthesizing them into an evaluation, requiring a moderate sequence of interdependent steps but not long, tightly coupled workflows.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across moderate-length document review and synthesis tasks, though some degradation (e.g., missed details or mild inconsistency) can occur as information volume grows.",
+      "_timestamp": "2026-04-06T02:13:02"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5061.00",
+  "task_id": 11368,
+  "task_statement": "Requisition and maintain inventories of materials or supplies necessary to meet production demands.",
+  "occupation_title": "Production, Planning, and Expediting Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Requisitioning supplies and tracking inventory levels are typically done through ERP or inventory management systems, emails, and spreadsheets. However, maintaining accurate inventories often involves coordination with warehouse staff or occasional physical verification of stock, which requires on-site presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varying demand patterns, supplier conditions, and inventory policies across industries, but follows broadly standardized workflows (forecasting, ordering, tracking) with recurring structures.",
+      "adequacy_evidence": "Extensive ERP logs, supply chain datasets, and procedural documentation provide rich, process-level examples, and synthetic simulation of inventory systems is straightforward, leaving no major coverage gaps.",
+      "_timestamp": "2026-04-06T05:38:21"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of inventory requisition follows explicit rules (e.g., reorder points, lead times, demand forecasts), experienced clerks often adjust for supplier reliability, demand volatility, and production nuances using practical judgment.",
+      "adequacy_evidence": "AI agents can optimize inventory using historical data and rules, but they may lack nuanced calibration for atypical disruptions, informal supplier behaviors, or context-specific adjustments that experienced clerks apply.",
+      "_timestamp": "2026-04-06T05:38:22"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While production targets and inventory policies provide explicit guidance, effective requisitioning requires interpreting shifting demand forecasts, supplier constraints, and implicit tradeoffs like safety stock vs. cost.",
+      "adequacy_evidence": "Current agents can optimize against stated parameters and historical data but often miss unstated priorities or sudden contextual shifts, requiring human adjustment to align with real operational intent.",
+      "_timestamp": "2026-04-06T05:38:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step workflows such as monitoring inventory levels, generating purchase orders, tracking deliveries, and updating records, where consistency across steps matters but sequences are not highly complex or tightly coupled.",
+      "adequacy_evidence": "Well-scaffolded AI agents with tools (e.g., inventory systems, databases) can reliably execute and track these moderate-length workflows with minimal degradation over time.",
+      "_timestamp": "2026-04-06T05:38:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking inventory levels, supplier data, and production requirements across multiple sources, requiring organized retrieval and updating of structured information within an episode.",
+      "adequacy_evidence": "With access to databases or ERP systems, current agents can reliably store, query, and update this structured information without significant loss or drift within a single workflow.",
+      "_timestamp": "2026-04-06T05:38:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintaining inventories requires persistent tracking of stock levels, usage rates, reorder points, and supplier performance over time, all of which depend on accumulated historical data across many sessions.",
+      "adequacy_evidence": "Current AI agents can reliably interface with inventory databases and ERP systems that store and retrieve longitudinal state, so cross-session memory needs are effectively met with existing tooling.",
+      "_timestamp": "2026-04-06T05:38:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily performed through text- and number-based systems such as inventory databases, spreadsheets, and procurement software, with minimal reliance on images, audio, or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents handle text and structured data workflows well, and no significant multimodal capability is required for typical execution of this task.",
+      "_timestamp": "2026-04-06T05:38:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Inventory requisitioning and maintenance are typically planned and batch-updated processes where delays of minutes to hours are acceptable, with no strict real-time decision pressure.",
+      "adequacy_evidence": "Current AI agents can perform inventory tracking, forecasting, and ordering within these relaxed timeframes without needing to truncate reasoning, so speed constraints do not meaningfully impact output quality.",
+      "_timestamp": "2026-04-06T05:38:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in requisitioning or inventory maintenance can cause stockouts, overstock, or production delays, which have meaningful cost and efficiency impacts but are typically reversible and rarely catastrophic.",
+      "adequacy_evidence": "With standard checks (inventory audits, ERP constraints, reorder thresholds), AI-generated decisions can be validated effectively, leaving residual risk at an acceptable level for typical operations.",
+      "_timestamp": "2026-04-06T05:38:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordinating with internal teams and external suppliers, who rely on timely and accurate orders, but the performer\u2019s personal identity or human qualities are not central.",
+      "adequacy_evidence": "Procurement and inventory management are already widely automated via ERP systems, and suppliers and colleagues typically accept system-generated orders without concern for whether a human or AI initiated them.",
+      "_timestamp": "2026-04-06T05:38:26"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from managing inventory requisition or maintenance tasks in production settings; these are routine operational functions without mandated human decision-makers.",
+      "_timestamp": "2026-04-06T05:38:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Inventory errors (e.g., incorrect quantities, timing, or item selection) can often be checked against ERP systems, stock counts, and reorder thresholds, but some issues only become evident through downstream effects like stockouts or excess inventory.",
+      "adequacy_evidence": "Current AI can generate plausible requisitions but still makes occasional context or data-integration errors, requiring routine human review against inventory systems and demand forecasts.",
+      "_timestamp": "2026-04-06T05:38:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

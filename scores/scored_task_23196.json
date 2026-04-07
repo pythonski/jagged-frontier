@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3031.00",
+  "task_id": 23196,
+  "task_statement": "Buy or sell stocks, bonds, commodity futures, foreign currencies, or other securities on behalf of investment dealers.",
+  "occupation_title": "Securities, Commodities, and Financial Services Sales Agents",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Executing trades in securities or commodities is typically done through electronic trading platforms and communication systems that can be accessed remotely via computer and internet. Physical presence on a trading floor is not inherently required for the task itself."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective trading relies on experience-based intuition about market dynamics, timing, liquidity, and client risk tolerance that are not fully captured by explicit rules or static data, even with strong coverage.",
+      "adequacy_evidence": "Current AI agents can model patterns and execute strategies but lack robust real-time calibration and adaptive judgment under novel or rapidly shifting market conditions, leading to gaps in non-routine scenarios.",
+      "_timestamp": "2026-04-06T01:27:31"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Executing trades involves a sequence of steps (interpreting instructions, checking market conditions, placing orders, confirming execution), but many trades are relatively discrete and not deeply interdependent over long horizons.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across these moderate-length workflows with tooling, though some degradation (e.g., missed constraints or minor coordination errors) can appear in multi-step, real-time trading contexts.",
+      "_timestamp": "2026-04-06T01:27:32"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse instruments, market regimes, client objectives, and real-time conditions, creating a highly heterogeneous and context-sensitive distribution of cases.",
+      "adequacy_evidence": "Extensive market data, historical trades, and simulated environments exist, but key proprietary datasets (e.g., client order flow, dealer strategies) are partially inaccessible, leaving some gaps that can only be approximated via synthesis.",
+      "_timestamp": "2026-04-06T01:27:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Executing trades involves implicit objectives like best execution, timing, risk tolerance, and adapting to rapidly changing market conditions and client intent, which are often only partially specified.",
+      "adequacy_evidence": "Current agents can incorporate explicit parameters and infer some goals from context, but they struggle with nuanced, shifting trader intent and tacit judgment, often requiring human oversight to refine decisions.",
+      "_timestamp": "2026-04-06T01:27:32"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Executing trades often depends on accumulated client information such as portfolio holdings, risk tolerance, prior transactions, and evolving investment strategies across sessions.",
+      "adequacy_evidence": "Current AI systems integrated with databases and portfolio management tools can reliably store and retrieve client histories and account states across sessions, with relatively mature infrastructure for this type of persistence.",
+      "_timestamp": "2026-04-06T01:27:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Executing trades relies primarily on textual and numerical data (orders, prices, market feeds) rather than inherently multimodal inputs or outputs; visualizations like charts are optional aids, not core requirements.",
+      "adequacy_evidence": "Current AI agents can fully handle text- and data-driven trading workflows, with no meaningful dependence on advanced multimodal perception or generation.",
+      "_timestamp": "2026-04-06T01:27:33"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Executing trades requires tracking multiple inputs (client orders, current prices, order types, risk limits) and updating state as market conditions change, but each transaction typically involves a bounded, structured set of information.",
+      "adequacy_evidence": "Current agents can manage structured trading context with tool support, but may lose or mis-handle rapidly updating details (e.g., price movements or partial fills) without careful system design and state tracking.",
+      "_timestamp": "2026-04-06T01:27:33"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Executing trades often requires near-real-time responsiveness to market movements, with delays of seconds potentially affecting prices and outcomes.",
+      "adequacy_evidence": "LLM-based agents can execute trades quickly with automation, but tighter latency limits can restrict deeper reasoning or analysis in volatile or complex market conditions, leading to some quality tradeoffs.",
+      "_timestamp": "2026-04-06T01:27:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves executing trades on behalf of dealers and interacting with market infrastructure and sometimes clients, but success depends more on execution quality than on personal identity or relationship.",
+      "adequacy_evidence": "Algorithmic and AI-driven trading systems are already widely accepted in financial markets, and stakeholders generally do not require a human identity for trade execution.",
+      "_timestamp": "2026-04-06T01:27:35"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "SEC and FINRA rules require trades to be executed under a registered broker-dealer with licensed supervision, but do not explicitly prohibit automated or AI-driven trading systems; firms already use algorithmic trading. The constraint is that a licensed human entity must oversee and be responsible, creating partial restriction rather than a full ban.",
+      "_timestamp": "2026-04-06T01:27:35"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Executing trades carries immediate financial consequences; even small residual errors (e.g., wrong quantity, instrument, or timing) can cause significant, sometimes irreversible losses or regulatory issues.",
+      "adequacy_evidence": "While automated checks (order validation, limits, human oversight) can catch many errors, LLM-based agents still exhibit occasional unpredictable mistakes, leaving a non-trivial residual risk in high-stakes trading contexts.",
+      "_timestamp": "2026-04-06T01:27:35"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Trade execution errors (wrong ticker, size, price, or side) are quickly visible via order confirmations, fills, and real-time market data, with well-established automated reconciliation systems making mistakes easy to detect.",
+      "adequacy_evidence": "AI agents may misinterpret instructions or select incorrect parameters, so human or system-level checks are still needed, but existing trading infrastructure makes verification relatively straightforward and not overly burdensome.",
+      "_timestamp": "2026-04-06T01:27:36"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

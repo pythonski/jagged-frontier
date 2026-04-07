@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1126.00",
+  "task_id": 408,
+  "task_statement": "Relay blood analysis results to a physician.",
+  "occupation_title": "Respiratory Therapists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Relaying blood analysis results is typically done through electronic health records, messaging systems, or phone calls, which can be handled digitally. However, in many clinical settings it is sometimes communicated face-to-face with physicians on-site."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying blood analysis results is a highly standardized communication task with well-defined formats, terminology, and limited variation in structure across cases.",
+      "adequacy_evidence": "There is abundant accessible data (EHR notes, lab reports, clinical communication examples) and straightforward synthetic generation, providing full coverage of relevant instances and processes.",
+      "_timestamp": "2026-04-05T21:07:47"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Relaying blood analysis results involves some context-dependent judgment (e.g., highlighting critical values, urgency, or relevant trends), but is largely governed by established clinical communication protocols.",
+      "adequacy_evidence": "Current AI agents can reliably structure and present lab results, flag abnormalities, and adapt format or emphasis with minimal ambiguity when given standard clinical context.",
+      "_timestamp": "2026-04-05T21:07:48"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying blood analysis results is largely a procedural communication task governed by standardized reporting formats and clearly defined critical value thresholds, with minimal reliance on experiential judgment.",
+      "adequacy_evidence": "Current AI systems can reliably extract, format, and communicate lab results according to explicit rules, with little to no need for tacit calibration beyond those procedures.",
+      "_timestamp": "2026-04-05T21:07:48"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying blood analysis results is typically a short, discrete communication task (e.g., reporting values or transmitting a report) with minimal sequential dependency.",
+      "adequacy_evidence": "AI systems can reliably handle brief, single-step communication without degradation, as the sequence length is minimal and does not strain coherence.",
+      "_timestamp": "2026-04-05T21:07:48"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying blood analysis results typically involves a limited, structured set of values and identifiers that fit easily within working memory during a single interaction.",
+      "adequacy_evidence": "Current AI agents reliably handle small, structured information payloads like lab results without losing or distorting key details within an episode.",
+      "_timestamp": "2026-04-05T21:07:49"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying blood analysis results primarily involves communicating numeric values and textual interpretations from lab reports, which are inherently text-based.",
+      "adequacy_evidence": "Current AI systems can reliably process and transmit structured lab values and associated text without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-05T21:07:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Relaying blood analysis results typically requires prompt communication within seconds to a few minutes, especially in clinical settings, but does not demand split-second real-time response.",
+      "adequacy_evidence": "Current AI systems can process and relay structured lab results \u05db\u05de\u05e2\u05d8 instantly, well within the time constraints, without needing to sacrifice reasoning quality.",
+      "_timestamp": "2026-04-05T21:07:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying blood analysis results is a discrete, self-contained communication task; relevant patient history is typically retrieved from records rather than remembered across sessions.",
+      "adequacy_evidence": "Current AI systems can access and relay stored lab results without needing persistent cross-session memory, as the necessary data is externally stored and retrieved per instance.",
+      "_timestamp": "2026-04-05T21:07:51"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Relaying blood analysis results is a straightforward transmission task where values can be directly cross-checked against the original lab report or electronic record, making errors easy to detect.",
+      "adequacy_evidence": "Current AI systems can reliably extract and relay structured lab values, and any mistakes are trivial to verify against source data, requiring minimal checking effort.",
+      "_timestamp": "2026-04-05T21:07:51"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Incorrectly relayed blood results can lead to inappropriate or delayed treatment decisions, with potentially serious or irreversible patient harm, so very low residual error tolerance is required.",
+      "adequacy_evidence": "Results are typically structured, digitally recorded, and cross-checkable (e.g., via lab systems or EHRs), so after standard verification steps, AI-mediated relaying introduces minimal additional residual risk.",
+      "_timestamp": "2026-04-05T21:07:52"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Clinical lab reporting is governed by CLIA and related regulations requiring qualified personnel to validate and communicate results, but there is no explicit prohibition on AI-assisted transmission. However, responsibility must remain with licensed or authorized human professionals, creating partial constraint.",
+      "_timestamp": "2026-04-05T21:07:53"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves communicating clinical information to a physician, who is a stakeholder relying on accurate and timely delivery, though the sender\u2019s identity is not central to interpretation.",
+      "adequacy_evidence": "Physicians already routinely accept lab results via automated systems (EHRs, lab information systems), so AI-mediated relay would face little to no resistance.",
+      "_timestamp": "2026-04-05T21:07:53"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

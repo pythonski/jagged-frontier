@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2011.00",
+  "task_id": 1341,
+  "task_statement": "Analyze project requests, proposals, or engineering data to determine feasibility, productibility, cost, or production time of aerospace or aeronautical products.",
+  "occupation_title": "Aerospace Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Feasibility, cost, and production-time analyses are typically performed using digital engineering data, simulations, spreadsheets, and documents on a computer. However, some cases involve reviewing physical prototypes, manufacturing processes, or facilities in person, making a minority of instances non-digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly diverse project types (aircraft, spacecraft, components, materials, mission profiles) with context-specific constraints, creating a long-tailed distribution of engineering, cost, and production scenarios.",
+      "adequacy_evidence": "While core engineering methods and many example analyses are documented in literature and training data, much real-world feasibility data (cost models, proprietary designs, production constraints) is private or sparse, leaving some gaps that are only partially recoverable via synthesis or simulation.",
+      "_timestamp": "2026-04-06T00:20:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Feasibility and cost analyses depend on interpreting incomplete proposals, implicit design assumptions, trade-offs, and stakeholder priorities (e.g., safety margins, manufacturability, certification constraints), which are often not fully specified.",
+      "adequacy_evidence": "Current agents can extract explicit constraints and apply engineering heuristics, but often miss unstated priorities or misinterpret context-specific trade-offs, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T00:20:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step evaluation of technical data, integrating feasibility, cost, and production considerations where each step builds on prior assumptions and calculations.",
+      "adequacy_evidence": "Current AI agents can handle extended analytical workflows but show some degradation over long, interdependent sequences, with risks of compounding errors or losing constraints across steps.",
+      "_timestamp": "2026-04-06T00:20:53"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Feasibility, cost, and production analyses in aerospace engineering are typically conducted over hours to days, not under real-time or sub-minute constraints.",
+      "adequacy_evidence": "Frontier AI agents can take sufficient time to perform extended reasoning and tool use without violating practical timelines, so speed does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T00:20:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating feasibility and production characteristics often requires interpreting engineering drawings, CAD models, schematics, and simulation outputs alongside textual specifications.",
+      "adequacy_evidence": "Current agents can process many visual and structured engineering artifacts, but reliability drops on complex CAD geometries, nuanced diagrams, and tightly coupled cross-modal reasoning tasks.",
+      "_timestamp": "2026-04-06T00:20:55"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing feasibility, producibility, cost, and schedule in aerospace engineering relies heavily on experience-based judgment about trade-offs, manufacturing realities, failure modes, and supplier or process variability that are not fully captured in explicit rules or documentation.",
+      "adequacy_evidence": "Current AI agents can replicate structured analyses and known trade studies, but they lack the deep experiential calibration needed for edge cases, nuanced risk assessment, and integrating informal engineering heuristics across novel or high-stakes scenarios.",
+      "_timestamp": "2026-04-06T00:20:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large volumes of heterogeneous information (engineering specs, performance models, cost data, manufacturing constraints) where missing or misrepresenting details can materially affect conclusions.",
+      "adequacy_evidence": "Current agents can use retrieval and long-context tools to manage large inputs, but still exhibit context loss, imperfect prioritization, and compression errors when handling complex, multi-document engineering analyses.",
+      "_timestamp": "2026-04-06T00:20:55"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Feasibility and cost analyses often draw on prior project data, historical estimates, and evolving organizational knowledge, but many individual analyses can still be conducted from provided documentation alone.",
+      "adequacy_evidence": "Current agents can persist and retrieve project documents and prior analyses via external memory systems, but they inconsistently maintain and surface relevant historical context across complex, multi-project timelines.",
+      "_timestamp": "2026-04-06T00:20:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Feasibility, cost, and production-time analyses in aerospace depend on complex engineering models, assumptions, and trade-offs; errors can be subtle and may only surface after detailed simulation, peer review, or downstream testing.",
+      "adequacy_evidence": "Current AI systems can produce plausible but flawed engineering analyses and assumptions, requiring extensive expert validation, recalculation, and simulation to catch non-obvious mistakes before use.",
+      "_timestamp": "2026-04-06T00:20:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Feasibility and cost analyses are used by managers, clients, and regulators who rely on the engineer\u2019s credibility and professional judgment to make high-stakes decisions, so performer legitimacy matters.",
+      "adequacy_evidence": "Stakeholders are likely to accept AI-assisted analysis but still expect human engineers to validate and take responsibility, especially in safety-critical aerospace contexts.",
+      "_timestamp": "2026-04-06T00:20:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Feasibility, cost, and production-time analyses in aerospace directly affect safety, certification, and multi-million-dollar program decisions, so even rare residual errors can propagate into severe technical or financial consequences.",
+      "adequacy_evidence": "With standard engineering review, simulation, and validation pipelines, many AI errors can be caught, but current systems still exhibit occasional subtle reasoning or modeling flaws that could leave non-negligible residual risk.",
+      "_timestamp": "2026-04-06T00:20:57"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing analytical work, but aerospace engineering outputs often require review and sign-off by licensed engineers (e.g., FAA DERs or PE licensure) for certification and compliance. This creates a partial restriction where AI cannot autonomously fulfill the legally recognized role in final decision-making.",
+      "_timestamp": "2026-04-06T00:20:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

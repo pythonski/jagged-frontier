@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1212.00",
+  "task_id": 5316,
+  "task_statement": "Monitor current reports of computer viruses to determine when to update virus protection systems.",
+  "occupation_title": "Information Security Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Monitoring reports of computer viruses typically involves reviewing online threat intelligence feeds, security bulletins, and digital reports through software or web sources, which can be done entirely on a computer with internet access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans diverse but well-structured inputs such as threat intelligence feeds, CVE reports, vendor advisories, and malware analyses, covering a moderately varied but well-defined distribution.",
+      "adequacy_evidence": "Extensive public and commercial datasets, reports, and real-time feeds provide rich, process-level signal, and synthetic or curated pipelines can readily cover most relevant scenarios.",
+      "_timestamp": "2026-04-06T04:01:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting threat intelligence feeds, assessing relevance, and deciding update timing involves some experience-based judgment (e.g., distinguishing hype from actionable threats), but is partially guided by documented indicators and vendor guidance.",
+      "adequacy_evidence": "Current agents can aggregate feeds, apply rules, and flag updates effectively, but may lack nuanced calibration in ambiguous or rapidly evolving threat contexts, leading to occasional over- or under-reaction.",
+      "_timestamp": "2026-04-06T04:01:36"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Deciding when to update protection systems depends on contextual factors like threat severity, relevance to the organization\u2019s environment, and risk tolerance, which are not fully explicit in raw virus reports.",
+      "adequacy_evidence": "Current agents can aggregate and analyze threat intelligence feeds, but often struggle to consistently align update decisions with implicit organizational priorities without human tuning or feedback.",
+      "_timestamp": "2026-04-06T04:01:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from tracking historical threat trends, past update decisions, and organization-specific system states, but each monitoring cycle can largely rely on current threat intelligence feeds.",
+      "adequacy_evidence": "Current AI systems can reliably store and retrieve persistent logs, threat histories, and system context using standard databases and retrieval tools, meeting the task\u2019s cross-session memory needs.",
+      "_timestamp": "2026-04-06T04:01:38"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating and interpreting multiple contemporaneous reports (e.g., threat feeds, CVEs, vendor alerts), requiring some active filtering and synthesis within a session.",
+      "adequacy_evidence": "Current LLM-based agents with retrieval and summarization tools can reliably track, filter, and condense such streams within a session without significant loss of critical context.",
+      "_timestamp": "2026-04-06T04:01:38"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing monitoring, aggregating threat reports, analyzing relevance, and deciding on updates, requiring a multi-step but not deeply interdependent sequence.",
+      "adequacy_evidence": "AI agents can manage monitoring pipelines and periodic analysis, but may show some drift or inconsistency over extended monitoring cycles without careful orchestration and checks.",
+      "_timestamp": "2026-04-06T04:01:38"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires timely awareness of emerging threats, but decisions are typically made on the scale of minutes to hours rather than real-time seconds, allowing some deliberation.",
+      "adequacy_evidence": "Current AI systems can rapidly ingest threat intelligence feeds and synthesize updates within the available time window without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T04:01:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Analysts can verify conclusions by cross-checking multiple threat intelligence feeds, vendor advisories, and observable indicators, but this requires domain expertise and careful comparison rather than trivial checks.",
+      "adequacy_evidence": "AI can aggregate and summarize reports but may misinterpret threat relevance or miss nuances, so human review and corroboration across sources remain necessary to ensure correct update decisions.",
+      "_timestamp": "2026-04-06T04:01:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring virus reports primarily involves reading and interpreting text-based threat intelligence feeds, advisories, and logs; non-text modalities are not central to the task.",
+      "adequacy_evidence": "Since the task is effectively text-in/text-out, current AI systems handle the modality requirements without meaningful limitation.",
+      "_timestamp": "2026-04-06T04:01:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily an internal analytical activity involving monitoring threat reports and making update decisions, with no direct stakeholder interaction requiring acceptance of the performer.",
+      "adequacy_evidence": "Since there are no meaningful stakeholders whose acceptance depends on performer identity, AI systems can perform this task without resistance or behavioral impact.",
+      "_timestamp": "2026-04-06T04:01:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Failing to update protections in response to emerging virus threats can expose systems to breaches, data loss, and widespread compromise, so even rare missed signals can have serious consequences.",
+      "adequacy_evidence": "With multiple threat intelligence feeds, automated alerts, and human review, AI-supported monitoring can reduce residual risk to acceptable levels, as missed detections are typically mitigated by layered defenses and redundancy.",
+      "_timestamp": "2026-04-06T04:01:41"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements that prohibit or restrict AI systems from monitoring virus reports and informing updates to protection systems; this task is fully permissible under current US regulations.",
+      "_timestamp": "2026-04-06T04:01:41"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

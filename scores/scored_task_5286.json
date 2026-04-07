@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1031.01",
+  "task_id": 5286,
+  "task_statement": "Conduct detailed bill reviews to implement sound litigation management and expense control.",
+  "occupation_title": "Claims Adjusters, Examiners, and Investigators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Bill reviews for litigation and expense control are typically conducted using electronic billing systems, digital invoices, and case management software, allowing remote computer-based analysis. However, some instances may involve reviewing physical documents or coordinating with in-person legal or claims teams."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Bill review in litigation management involves applying explicit billing guidelines, but also requires contextual judgment about reasonableness, case strategy, and implicit norms around legal spend.",
+      "adequacy_evidence": "Agents can apply documented billing rules and flag anomalies, but often struggle to fully infer nuanced legal context or unwritten expectations, requiring human adjustment and oversight.",
+      "_timestamp": "2026-04-06T05:36:04"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining whether billed legal services and expenses are reasonable requires experience with litigation practices, customary billing patterns, and subtle red flags that are not fully captured in explicit rules or guidelines.",
+      "adequacy_evidence": "Current agents can apply billing guidelines and benchmark data, but they show gaps in nuanced judgment about context-specific necessity, strategic legal value, and detecting sophisticated overbilling patterns.",
+      "_timestamp": "2026-04-06T05:36:05"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous bill types (legal, medical, expert services), jurisdictional rules, firm-specific billing practices, and insurer guidelines, with many edge cases and context-sensitive judgments.",
+      "adequacy_evidence": "While general billing standards and some audit examples exist, detailed line-item review data and insurer-specific decision processes are largely proprietary, though partially approximable via synthetic data and available guidelines.",
+      "_timestamp": "2026-04-06T05:36:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Detailed bill reviews for litigation management are typically conducted over hours or days, not in real-time, allowing ample time for careful analysis.",
+      "adequacy_evidence": "Current AI systems can take the necessary time to perform thorough multi-step reasoning without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T05:36:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Detailed bill reviews require tracking many line items, coding rules, policy terms, litigation guidelines, and inconsistencies across documents within a single review episode, where missing a detail can affect cost control decisions.",
+      "adequacy_evidence": "Current agents can use tools and structured retrieval to handle large documents, but they still exhibit context drift or miss fine-grained inconsistencies across long, complex bills without careful scaffolding and chunking.",
+      "_timestamp": "2026-04-06T05:36:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing complex legal billing records across multiple line items, applying guidelines consistently, and synthesizing findings, but each review is largely self-contained rather than a long interdependent chain of steps.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across document-length reviews, but may show some drift in applying criteria consistently over many entries or miss earlier constraints as context grows.",
+      "_timestamp": "2026-04-06T05:36:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Bill review in claims adjusting primarily involves analyzing textual invoices, billing codes, and written documentation; any non-text elements (e.g., scanned PDFs) are easily converted to text and are not central to reasoning.",
+      "adequacy_evidence": "Current AI systems can reliably process and extract information from standard billing documents using OCR and text analysis, with no meaningful multimodal limitation affecting performance.",
+      "_timestamp": "2026-04-06T05:36:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Bill review relies on accumulated claim history, prior billing patterns, negotiated rates, and litigation context across multiple interactions, but is typically bounded within a single case lifecycle.",
+      "adequacy_evidence": "Current agents can use databases and retrieval systems to track case files, but inconsistencies in updating, retrieving, and correctly prioritizing longitudinal context still occur in a meaningful share of cases.",
+      "_timestamp": "2026-04-06T05:36:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Insurance claims handling often requires licensed adjusters to make final determinations, and some state regulations imply human accountability for claim decisions, but there is no explicit prohibition on AI assisting with or performing bill review tasks under supervision. This creates partial constraint rather than a full ban.",
+      "_timestamp": "2026-04-06T05:36:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Reviewing litigation-related bills requires detailed knowledge of billing codes, legal guidelines, medical necessity, and contractual fee arrangements; errors can be subtle (e.g., upcoding, duplicate charges) and require expert scrutiny to detect.",
+      "adequacy_evidence": "Current AI can flag anomalies but still makes nuanced judgment errors and misses context-specific billing rules, so outputs require thorough expert review to ensure accuracy and compliance.",
+      "_timestamp": "2026-04-06T05:36:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in bill review can lead to financial leakage, disputes with vendors, or missed cost-control opportunities, but are typically recoverable and not catastrophic.",
+      "adequacy_evidence": "Even with review processes, AI may miss nuanced billing irregularities or context-specific guidelines, leaving a non-trivial but manageable level of residual risk.",
+      "_timestamp": "2026-04-06T05:36:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interaction with internal stakeholders (claims teams, legal counsel, possibly external law firms or vendors) who rely on and may question the reviewer\u2019s judgments, so performer identity has some relevance.",
+      "adequacy_evidence": "While many organizations may accept AI-assisted bill review, legal professionals and vendors may be skeptical of AI judgments or challenge them, leading to moderate resistance that is not fully eliminated by performance quality.",
+      "_timestamp": "2026-04-06T05:36:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

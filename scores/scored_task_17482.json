@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-9099.01",
+  "task_id": 17482,
+  "task_statement": "Maintain documentation of all patients' contacts, reviewing and updating records as necessary.",
+  "occupation_title": "Midwives",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Maintaining and updating patient contact documentation is usually done in electronic health record systems on a computer, but some settings still involve paper charts or on-site record systems tied to in-person clinical workflows."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Patient contact documentation spans varied clinical scenarios, patient histories, and communication types, but is structured by standardized EHR formats and clinical documentation norms.",
+      "adequacy_evidence": "While general documentation practices are well represented in medical corpora and guidelines, access to rich, real-world patient interaction records is constrained by privacy, leaving some edge cases underrepresented but partially addressable via de-identified and synthetic data.",
+      "_timestamp": "2026-04-06T00:33:12"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining and updating patient contact records is largely governed by standardized documentation protocols, but some experience-based judgment is needed to decide what information is clinically relevant or how to summarize nuanced patient interactions.",
+      "adequacy_evidence": "Current AI systems can reliably follow documentation standards and capture relevant details from structured inputs or transcripts, with minimal gaps in judgment for this routine, well-specified task.",
+      "_timestamp": "2026-04-06T00:33:13"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Medical documentation follows established standards and formats, but requires context-sensitive judgment about what details are clinically relevant, how to summarize interactions, and when updates are necessary.",
+      "adequacy_evidence": "AI agents can follow templates and infer many documentation norms, but often miss nuanced clinical relevance or implicit expectations, requiring human review and correction.",
+      "_timestamp": "2026-04-06T00:33:13"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing, multi-step documentation and periodic review across many patient records, where consistency matters but individual updates are largely modular rather than tightly interdependent.",
+      "adequacy_evidence": "AI agents can generally handle structured documentation workflows with tool support, but over longer sequences may show some drift or inconsistency in maintaining context and applying updates uniformly.",
+      "_timestamp": "2026-04-06T00:33:14"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining and updating patient contact records is an administrative task that can be completed over minutes or longer without immediate real-time pressure.",
+      "adequacy_evidence": "Current AI systems can generate and update structured documentation quickly within acceptable timeframes, with no meaningful degradation in quality due to speed constraints.",
+      "_timestamp": "2026-04-06T00:33:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Updating patient contact records requires tracking multiple data fields (dates, outcomes, notes) and integrating new information into existing records, but typically within a bounded, structured context per patient.",
+      "adequacy_evidence": "Current agents can manage structured record updates and retrieval reasonably well, but may occasionally lose context across multiple fields or mis-handle nuanced updates without careful scaffolding.",
+      "_timestamp": "2026-04-06T00:33:14"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining and updating patient contact documentation is primarily a text-based task involving written records in electronic health systems, with minimal reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based documentation and record management well, and the lack of multimodal demands means there is no meaningful capability gap in this dimension.",
+      "_timestamp": "2026-04-06T00:33:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in patient contact documentation (e.g., omissions, incorrect details, or misattributed notes) typically require cross-checking against source records or clinician knowledge, but are generally detectable with routine review processes.",
+      "adequacy_evidence": "AI-generated or updated records would still need consistent human verification to catch transcription errors, context misinterpretations, or missing information, though these issues are usually identifiable with standard chart review effort.",
+      "_timestamp": "2026-04-06T00:33:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintaining and updating patient contact records requires persistent, longitudinal tracking of each patient's history across many visits and over extended care periods (e.g., pregnancy through postpartum).",
+      "adequacy_evidence": "Modern AI systems can rely on external databases/EHR integrations for persistent storage and retrieval, but they still show gaps in reliably surfacing relevant historical details and maintaining consistency across updates in all cases.",
+      "_timestamp": "2026-04-06T00:33:16"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in patient contact documentation can affect continuity of care and clinical decisions, but most mistakes (e.g., omissions or minor inaccuracies) are typically identifiable and correctable without immediate severe harm.",
+      "adequacy_evidence": "With standard review processes and structured electronic records, AI-generated or assisted documentation can be checked effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T00:33:16"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal record-keeping; while clinicians and regulators rely on the documentation, they do not engage with the performer directly or depend on their identity.",
+      "adequacy_evidence": "Healthcare settings already accept electronic and partially automated documentation systems, so AI involvement in maintaining records would not meaningfully affect stakeholder acceptance.",
+      "_timestamp": "2026-04-06T00:33:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws prohibiting AI systems from maintaining or updating patient records; such tasks are often delegated to electronic health record systems or support staff. Regulations like HIPAA govern privacy and security, but do not bar AI from performing documentation functions under appropriate supervision and compliance.",
+      "_timestamp": "2026-04-06T00:33:16"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1241.00",
+  "task_id": 18979,
+  "task_statement": "Monitor and analyze network performance and reports on data input or output to detect problems, identify inefficient use of computer resources, or perform capacity planning.",
+  "occupation_title": "Computer Network Architects",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Monitoring and analyzing network performance relies on software dashboards, logs, and analytics tools that are accessed via computer systems. The task can be performed entirely remotely without any need for physical interaction with hardware."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Network performance monitoring spans highly heterogeneous environments (enterprise, cloud, hybrid, varying protocols, traffic patterns, and failure modes), with long-tailed anomalies and context-specific baselines.",
+      "adequacy_evidence": "While large volumes of logs, telemetry, and incident reports exist (and can be synthetically generated), much high-quality data is proprietary and lacks detailed expert reasoning traces, leaving some edge cases and nuanced diagnostic processes underrepresented.",
+      "_timestamp": "2026-04-06T00:53:30"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many aspects of network monitoring rely on documented metrics and thresholds, effective diagnosis and capacity planning often require experience-based judgment to interpret noisy signals, distinguish transient anomalies from real issues, and anticipate future demand patterns.",
+      "adequacy_evidence": "Current AI agents can analyze metrics and detect anomalies using learned patterns, but they often lack the nuanced calibration and contextual judgment needed for non-routine cases, such as distinguishing benign irregularities from early signs of systemic failure.",
+      "_timestamp": "2026-04-06T00:53:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves iterative monitoring, analysis, and reporting cycles where findings inform subsequent checks, but steps are loosely coupled and can often be revisited or corrected without cascading failure.",
+      "adequacy_evidence": "AI agents can manage multi-step monitoring and analysis workflows, but over longer investigative sequences they may exhibit some goal drift or miss evolving context without careful orchestration and state management.",
+      "_timestamp": "2026-04-06T00:53:31"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing data from multiple sources (logs, performance metrics, traffic reports) and tracking evolving network states, but much of it is structured and can be summarized via dashboards and tools.",
+      "adequacy_evidence": "Agents can use tools to query and aggregate network data, but may lose nuance across large log streams or evolving contexts, leading to occasional gaps in maintaining a fully accurate working state.",
+      "_timestamp": "2026-04-06T00:53:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many metrics and tools are well-defined, key success criteria (e.g., what counts as a 'problem,' acceptable performance thresholds, or prioritization of resource use) depend on organizational context, SLAs, and evolving business needs.",
+      "adequacy_evidence": "Current agents can analyze metrics and flag anomalies, but often miss context-specific priorities or misinterpret implicit thresholds, requiring human guidance to align outputs with real operational goals.",
+      "_timestamp": "2026-04-06T00:53:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Network performance monitoring often involves interpreting dashboards, charts, and visualizations of traffic, latency, and resource utilization, though underlying data can also be accessed in textual/log form.",
+      "adequacy_evidence": "Current AI systems can reliably interpret standard network graphs, logs, and metrics and generate visual summaries, with little limitation in typical monitoring and reporting scenarios.",
+      "_timestamp": "2026-04-06T00:53:33"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective network performance monitoring and capacity planning depend on longitudinal data such as historical traffic patterns, prior incidents, baselines, and evolving infrastructure changes across many sessions.",
+      "adequacy_evidence": "Current AI agents can integrate with monitoring systems and databases to store and retrieve historical metrics, but they still show gaps in consistently maintaining, contextualizing, and surfacing long-horizon trends without careful system design.",
+      "_timestamp": "2026-04-06T00:53:33"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Network monitoring can involve near-real-time alerting, but deeper analysis, inefficiency detection, and capacity planning typically tolerate seconds-to-minutes latency rather than strict real-time constraints.",
+      "adequacy_evidence": "Current AI agents can ingest metrics and produce analyses within the required time window without needing to truncate reasoning, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T00:53:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Network performance analyses can be cross-checked against logs, metrics, and monitoring tools, but interpreting anomalies or capacity needs often requires expert judgment and may not be immediately obvious.",
+      "adequacy_evidence": "AI can process telemetry and generate analyses, but it still misinterprets edge cases or context, so human review of conclusions and recommendations is typically required.",
+      "_timestamp": "2026-04-06T00:53:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces analyses and reports used by internal stakeholders like IT teams and management, who rely on the output but do not heavily depend on the individual performer\u2019s identity.",
+      "adequacy_evidence": "Automated monitoring and analytics tools are already widely accepted in this domain, and stakeholders generally trust AI-generated insights if they are accurate and verifiable.",
+      "_timestamp": "2026-04-06T00:53:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Undetected performance issues or misinterpreted capacity signals can lead to outages, degraded service, or inefficient resource use, but these impacts are typically reversible and mitigated by ongoing monitoring and redundancy.",
+      "adequacy_evidence": "Even with dashboards and alerts, AI systems may miss subtle anomalies or misprioritize signals, leaving a non-trivial residual risk that still requires human oversight in practice.",
+      "_timestamp": "2026-04-06T00:53:35"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements prohibiting AI systems from monitoring or analyzing network performance. While certain sectors (e.g., critical infrastructure, government systems) may impose oversight or security compliance requirements, these do not ban or specifically restrict AI from performing this task.",
+      "_timestamp": "2026-04-06T00:53:35"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

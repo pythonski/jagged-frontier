@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2071.00",
+  "task_id": 18951,
+  "task_statement": "Disburse funds from client accounts to creditors.",
+  "occupation_title": "Credit Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Funds are typically disbursed electronically through banking or debt management software (ACH transfers or online payments). However, some cases may involve issuing and mailing physical checks, introducing a non-digital component."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different creditor types, payment schedules, account conditions, and compliance requirements, but follows relatively standardized financial workflows.",
+      "adequacy_evidence": "There is abundant documentation, transaction data, and procedural guidance for payment processing, and realistic workflows can be readily simulated or learned from existing systems.",
+      "_timestamp": "2026-04-06T01:51:42"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Disbursing funds requires adhering to agreed repayment plans, creditor priorities, and client constraints, which can involve some context-dependent interpretation but is largely governed by explicit rules and schedules.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably follow structured payment plans, apply prioritization rules, and reconcile constraints when provided with account data and policies, with little difficulty inferring remaining intent.",
+      "_timestamp": "2026-04-06T01:51:43"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Disbursing funds generally follows established repayment plans, creditor agreements, and compliance rules, with limited need for nuanced judgment beyond handling occasional exceptions or prioritization.",
+      "adequacy_evidence": "Current AI agents can reliably execute rule-based financial disbursement workflows and handle standard exceptions when policies are specified, with little gap in tacit judgment.",
+      "_timestamp": "2026-04-06T01:51:44"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a sequence of steps such as verifying account balances, matching creditors, initiating payments, and recording transactions, where consistency across steps matters but the workflow is fairly structured and bounded.",
+      "adequacy_evidence": "Well-scaffolded AI agents integrated with financial systems can reliably execute multi-step transactional workflows with minimal degradation, as steps are standardized and supported by validation checks.",
+      "_timestamp": "2026-04-06T01:51:44"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Disbursing funds from client accounts to creditors is primarily a text- and number-based task involving account data, payment instructions, and financial records within software systems.",
+      "adequacy_evidence": "Current AI agents can fully handle text- and data-based workflows; no meaningful multimodal perception or generation is required for this task.",
+      "_timestamp": "2026-04-06T01:51:45"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Fund disbursement in credit counseling is typically scheduled or batched, with processing times that can span minutes to hours rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can easily operate within these relaxed time constraints without sacrificing reasoning quality, as no strict latency pressure limits their performance.",
+      "_timestamp": "2026-04-06T01:51:45"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking client account balances, creditor details, payment amounts, and authorization constraints within a single workflow, requiring coordination of multiple structured data elements but not at extreme scale.",
+      "adequacy_evidence": "Well-scaffolded AI systems with tool use and structured data handling can reliably store, retrieve, and update this level of transactional information without significant loss or drift.",
+      "_timestamp": "2026-04-06T01:51:45"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Disbursing funds relies on ongoing client account balances, agreed repayment plans, and creditor details that persist across sessions, but the state is structured and transactional rather than deeply evolving.",
+      "adequacy_evidence": "Current AI systems integrated with standard financial databases and ledgers can reliably store and retrieve this structured cross-session information, with minimal inherent memory limitations.",
+      "_timestamp": "2026-04-06T01:51:45"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Disbursements can be verified through transaction records, account reconciliation, and confirmations from creditors, but errors like incorrect amounts or misdirected payments may require careful review to detect and correct.",
+      "adequacy_evidence": "Current AI systems can execute structured payment workflows, but still require human oversight and reconciliation checks due to occasional errors in data handling or instruction interpretation.",
+      "_timestamp": "2026-04-06T01:51:46"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves clients and creditors who rely on accurate fund transfers, but interaction is largely transactional and does not depend heavily on personal authority or relationship beyond trust in the system.",
+      "adequacy_evidence": "Automated systems already handle many financial disbursements, but some clients may still prefer human oversight for trust and accountability, leading to moderate resistance to fully AI-driven handling.",
+      "_timestamp": "2026-04-06T01:51:47"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Handling and disbursing client funds is regulated (e.g., trust account rules, licensed credit counseling agencies, authorized signatories), requiring accountable human or licensed entities, but there is no explicit prohibition on using AI as part of the process; restrictions are indirect and tied to oversight and authorization rather than banning AI itself.",
+      "_timestamp": "2026-04-06T01:51:48"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Disbursing client funds involves direct financial transfers where errors (wrong amount, wrong creditor, timing issues) can cause irreversible financial loss, legal liability, and client harm, so residual error tolerance is extremely low.",
+      "adequacy_evidence": "Even with standard controls like transaction verification, reconciliation, and approval workflows, AI systems may still introduce occasional mapping or instruction errors, leaving some residual risk that is non-trivial but can be mitigated with strong safeguards.",
+      "_timestamp": "2026-04-06T01:51:48"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

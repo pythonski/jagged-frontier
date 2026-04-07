@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-6051.00",
+  "task_id": 23855,
+  "task_statement": "Recommend remedial procedures to correct any violations found during inspections.",
+  "occupation_title": "Transportation Inspectors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Formulating and communicating remedial procedures is typically done through written reports, emails, or digital documentation after inspections, though inspectors may sometimes discuss or demonstrate corrective actions in person on-site."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many violations map to standard corrective actions in regulations and manuals, inspectors must often tailor remedies based on severity, operational context, and feasibility, drawing on experience-based judgment.",
+      "adequacy_evidence": "Agents can retrieve and apply rule-based remedies for common violations, but may lack calibration in nuanced, context-sensitive cases (e.g., prioritizing fixes under operational constraints or interpreting borderline conditions).",
+      "_timestamp": "2026-04-06T03:41:42"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple transportation modes (aviation, rail, maritime, trucking), each with distinct regulations, violation types, and context-specific remediation, creating a heterogeneous and long-tailed distribution of cases.",
+      "adequacy_evidence": "Regulatory manuals, inspection reports, and corrective action guidelines provide substantial coverage, but real-world edge cases and nuanced, context-specific remedies are often embedded in less accessible or tacit sources, leaving some gaps.",
+      "_timestamp": "2026-04-06T03:41:42"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many violations map to established regulations and standard corrective actions, selecting appropriate remedies often depends on context such as severity, operational constraints, and safety tradeoffs, requiring some interpretation.",
+      "adequacy_evidence": "Current agents can link violations to typical remedial procedures using regulatory knowledge, but they may miss context-specific nuances or prioritize suboptimally without human guidance.",
+      "_timestamp": "2026-04-06T03:41:42"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing identified violations, interpreting relevant regulations, and mapping each issue to appropriate corrective actions, requiring a moderately extended but not highly interdependent reasoning sequence.",
+      "adequacy_evidence": "Frontier AI agents can generally sustain performance across these moderate sequences, but may show some degradation such as missed constraints or inconsistent recommendations when handling multiple violations or complex regulatory mappings.",
+      "_timestamp": "2026-04-06T03:41:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple inspection findings, applicable regulations, and contextual details about the transportation system, but the information volume is typically bounded and structured (e.g., inspection reports and rule sets).",
+      "adequacy_evidence": "Current agents can generally track and synthesize these inputs with tool support, but may occasionally miss or misprioritize specific violations or constraints when context becomes moderately complex.",
+      "_timestamp": "2026-04-06T03:41:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recommending remedial procedures after inspections is typically a deliberative task where inspectors can take minutes to hours to review findings and formulate appropriate corrective actions.",
+      "adequacy_evidence": "Current AI systems can generate high-quality recommendations well within these relaxed time constraints, with no need to truncate reasoning due to latency pressure.",
+      "_timestamp": "2026-04-06T03:41:44"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recommendations can benefit from knowledge of prior inspections, recurring violations, and previously attempted remedies, but each inspection can still be handled largely as a standalone case using current findings and regulations.",
+      "adequacy_evidence": "Existing systems can reliably store and retrieve inspection histories and prior corrective actions, and LLM-based agents with standard database integrations can effectively use this information across sessions.",
+      "_timestamp": "2026-04-06T03:41:44"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommendations are based on inspection findings that often originate from visual or spatial assessments (e.g., structural defects, equipment condition), though these are frequently documented in text or standardized reports.",
+      "adequacy_evidence": "Current agents can interpret images and structured inspection data reasonably well, but may struggle with nuanced, context-dependent physical defects or translating complex visual conditions into appropriate remedial actions.",
+      "_timestamp": "2026-04-06T03:41:45"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect remedial recommendations in transportation safety contexts (e.g., aviation, rail, pipelines) can lead to accidents, regulatory violations, or systemic hazards, so even rare residual errors can have severe consequences.",
+      "adequacy_evidence": "While recommendations can be reviewed by human inspectors and cross-checked against regulations, AI may still miss context-specific safety nuances or edge cases, leaving some non-negligible residual risk after standard quality control.",
+      "_timestamp": "2026-04-06T03:41:45"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommended remedial procedures can be checked against established regulations, safety standards, and inspection manuals, but doing so requires domain expertise and careful review of context-specific factors.",
+      "adequacy_evidence": "AI-generated recommendations may be plausible but can miss nuances or misapply regulations, so human inspectors would need to review outputs against applicable codes and situational details.",
+      "_timestamp": "2026-04-06T03:41:45"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Transportation inspection activities are often governed by regulations requiring certified or licensed human inspectors to make and sign off on findings and recommendations (e.g., FAA, FRA, FMCSA rules). While AI can assist, these rules implicitly restrict fully autonomous AI from performing the task without human oversight or approval.",
+      "_timestamp": "2026-04-06T03:41:46"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires conveying corrective actions to regulated parties, where the inspector\u2019s authority and legitimacy strongly influence compliance and acceptance.",
+      "adequacy_evidence": "Stakeholders may be wary of or resist directives generated solely by AI, typically expecting a human inspector\u2019s judgment and authority, though AI-supported recommendations could be accepted with human endorsement.",
+      "_timestamp": "2026-04-06T03:41:46"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

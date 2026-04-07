@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2199.10",
+  "task_id": 16560,
+  "task_statement": "Create models to optimize the layout of wind farm access roads, crane pads, crane paths, collection systems, substations, switchyards, or transmission lines.",
+  "occupation_title": "Wind Energy Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Creating optimization models for wind farm layouts is typically done using computer-based tools such as CAD, GIS, and simulation software, using digital terrain and infrastructure data. The modeling work itself can be performed entirely on a computer without physical presence."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Optimizing wind farm infrastructure layout involves multi-stage modeling (terrain analysis, constraints integration, routing, cost optimization, iteration) where earlier decisions propagate and constrain later steps.",
+      "adequacy_evidence": "AI agents can manage structured pipelines with tools (GIS, optimization solvers), but still show some degradation in maintaining consistency across many interdependent steps, especially when constraints evolve or require iterative refinement.",
+      "_timestamp": "2026-04-06T04:14:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Optimizing wind farm infrastructure layout involves balancing many partially implicit and shifting criteria (cost, terrain, environmental impact, permitting, constructability, stakeholder preferences), with tradeoffs that are not fully specified upfront and often emerge during design iteration.",
+      "adequacy_evidence": "Current agents can model multi-objective optimization and incorporate explicit constraints, but they often miss tacit engineering judgments, local regulatory nuances, and evolving stakeholder priorities without iterative human guidance.",
+      "_timestamp": "2026-04-06T04:14:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Optimizing wind farm layouts requires integrating large heterogeneous datasets (terrain, geotechnical data, turbine locations, environmental constraints, electrical routing, equipment specs) and maintaining consistency across many interdependent design elements within a single workflow.",
+      "adequacy_evidence": "Current agents can use external tools (GIS, optimization solvers) to offload memory, but still struggle to consistently track all constraints and dependencies across complex layouts, with some risk of dropping or misprioritizing details.",
+      "_timestamp": "2026-04-06T04:14:08"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly variable site conditions (terrain, soil, wind regimes, environmental constraints, grid interconnection requirements) and multiple engineering subdomains, creating a broad, context-sensitive distribution of cases.",
+      "adequacy_evidence": "While physics models, GIS data, and some project examples are available and can be simulated, much high-quality training signal (detailed cost data, proprietary layouts, and iterative design rationale) is fragmented or private, leaving partial but not complete coverage.",
+      "_timestamp": "2026-04-06T04:14:08"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While optimization can be framed with explicit cost, terrain, and engineering constraints, effective layouts often require experience-based judgment about constructability, site-specific quirks, and tradeoffs not fully captured in formal models.",
+      "adequacy_evidence": "Well-scaffolded agents can implement optimization and integrate GIS/engineering data, but they show gaps in nuanced, experience-driven judgments (e.g., practical construction constraints or atypical site conditions), especially in non-routine cases.",
+      "_timestamp": "2026-04-06T04:14:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Work on wind farm layout optimization typically spans multiple iterations where prior design versions, site constraints, and stakeholder preferences must be revisited, but this information is usually externalized in project files and documentation rather than requiring deep implicit memory.",
+      "adequacy_evidence": "Current agents can persist and retrieve project data via external tools (files, databases), but they still show gaps in reliably surfacing the most relevant prior context and maintaining continuity across extended, evolving projects.",
+      "_timestamp": "2026-04-06T04:14:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Wind farm layout optimization is an offline engineering task involving simulation, optimization, and iterative design, typically conducted over hours to days rather than requiring rapid responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to run complex reasoning, simulations, or tool-based optimization workflows without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T04:14:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Optimizing wind farm layouts involves complex geospatial, geotechnical, electrical, and logistical constraints where errors (e.g., suboptimal routing, load miscalculations, or constructability issues) may only surface through detailed simulation, engineering review, or during construction, making verification resource-intensive.",
+      "adequacy_evidence": "Current AI systems can generate plausible layouts but frequently miss site-specific constraints, regulatory nuances, or engineering edge cases, requiring thorough expert validation, simulations, and cross-disciplinary checks before results can be trusted.",
+      "_timestamp": "2026-04-06T04:14:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Layout optimization for wind farm infrastructure directly affects structural safety, construction feasibility, environmental impact, and long-term operational efficiency, so even small residual errors can lead to costly failures or safety hazards.",
+      "adequacy_evidence": "While simulations, engineering review, and compliance checks can catch many issues, AI-generated designs may still harbor subtle optimization or constraint violations that are not easily detectable, leaving some residual risk after standard quality control.",
+      "_timestamp": "2026-04-06T04:14:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on spatial/geospatial information (terrain maps, site layouts, infrastructure placement) and often produces visual layouts or CAD/GIS outputs, though much of this can be represented in structured data rather than raw imagery.",
+      "adequacy_evidence": "Current agents can interface with GIS/CAD tools and handle structured spatial data, but they are less reliable on complex, fine-grained spatial reasoning and high-fidelity layout generation without human validation.",
+      "_timestamp": "2026-04-06T04:14:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI generating optimization models, but engineering outputs used for construction typically require review and sign-off by a licensed Professional Engineer (PE). This creates a partial constraint where AI can assist but cannot independently fulfill the legally recognized role.",
+      "_timestamp": "2026-04-06T04:14:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task\u2019s outputs are used by project developers, engineers, and regulators, but interaction is primarily with the technical results rather than the individual producing them.",
+      "adequacy_evidence": "Stakeholders already rely heavily on software and computational models for layout optimization, so AI-generated outputs would generally be accepted if validated, with little concern about the performer\u2019s identity.",
+      "_timestamp": "2026-04-06T04:14:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

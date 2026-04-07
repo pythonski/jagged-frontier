@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1251.00",
+  "task_id": 1267,
+  "task_statement": "Correct errors by making appropriate changes and rechecking the program to ensure that the desired results are produced.",
+  "occupation_title": "Computer Programmers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Correcting code errors and re-running or testing programs is performed within software development environments on a computer. It does not inherently require physical presence or non-computer equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While some correctness criteria are explicit (e.g., tests, error messages), programmers often must infer intended behavior, edge cases, and performance expectations from partial specs or context.",
+      "adequacy_evidence": "Current agents can use tests and code context to infer intent but frequently miss unstated requirements or subtle constraints, requiring human iteration to fully align with expected behavior.",
+      "_timestamp": "2026-04-05T22:51:45"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Debugging spans many languages, frameworks, runtime environments, and bug types (logic, concurrency, performance, integration), creating a highly heterogeneous and long-tailed distribution of instances.",
+      "adequacy_evidence": "Large public code corpora, issue trackers, commit diffs, and synthetic bug-generation pipelines provide substantial coverage of debugging processes, though gaps remain for proprietary systems, rare production failures, and highly context-specific environments.",
+      "_timestamp": "2026-04-05T22:51:45"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Debugging involves iterative cycles of identifying errors, modifying code, and re-running tests, requiring consistency across multiple dependent steps but typically within bounded workflows.",
+      "adequacy_evidence": "AI agents can generally sustain performance over these iterative debugging loops, but may exhibit some drift or introduce new errors as sequences lengthen, especially in more complex codebases.",
+      "_timestamp": "2026-04-05T22:51:45"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Debugging often benefits from experience-based heuristics (e.g., recognizing common failure patterns, interpreting ambiguous symptoms), but much of the process can be guided by explicit methods like testing, logging, and systematic isolation.",
+      "adequacy_evidence": "Frontier agents can handle many standard debugging scenarios using structured approaches, but they still struggle with subtle, context-dependent bugs and complex system interactions that rely on accumulated practitioner intuition.",
+      "_timestamp": "2026-04-05T22:51:45"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Debugging requires tracking multiple interacting code components, variable states, error logs, and prior fixes within a single session, where missing a detail can lead to incorrect corrections or regressions.",
+      "adequacy_evidence": "Current agents can use tools (IDE integration, retrieval, execution traces) to manage context, but still struggle with long codebases and may lose or misprioritize relevant details as context grows.",
+      "_timestamp": "2026-04-05T22:51:45"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Error correction often benefits from knowledge of prior bugs, codebase conventions, and earlier fixes, but many instances can be handled with the current program context alone.",
+      "adequacy_evidence": "Agents can use repositories, issue history, and retrieval tools to access prior context, but they still inconsistently retain and integrate cross-session project knowledge.",
+      "_timestamp": "2026-04-05T22:51:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Debugging and correcting program code is fundamentally text-based, involving source code, logs, and textual error messages.",
+      "adequacy_evidence": "Since the task is primarily text-in/text-out, current AI agents handle the modality requirements without limitation.",
+      "_timestamp": "2026-04-05T22:51:47"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Debugging and correcting program errors typically allows minutes to hours for analysis, testing, and iteration rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to run tests, reason through code, and iterate fixes without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T22:51:47"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Correcting and rechecking program errors is an internal technical task; outputs are typically validated through tests or code review rather than stakeholder interaction tied to performer identity.",
+      "adequacy_evidence": "There are no meaningful stakeholders whose acceptance depends on whether the performer is human or AI; automated debugging tools are already widely accepted in this context.",
+      "_timestamp": "2026-04-05T22:51:47"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit AI systems from correcting programming errors. This task is not legally restricted and can be performed by automated tools without mandated human involvement.",
+      "_timestamp": "2026-04-05T22:51:47"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Residual bugs after debugging and testing can cause functional issues, security vulnerabilities, or crashes, but many are recoverable through patches and monitoring rather than catastrophic irreversible harm.",
+      "adequacy_evidence": "Even after standard testing and review, AI-generated fixes can introduce subtle logic or edge-case errors that escape detection, leaving a non-trivial but usually manageable level of residual risk.",
+      "_timestamp": "2026-04-05T22:51:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many programming errors can be detected through compilation, testing, and observable outputs, but subtle logic bugs or edge cases often require deliberate test design and expert review to uncover.",
+      "adequacy_evidence": "AI-generated or corrected code frequently passes superficial checks but still requires meaningful human validation, test creation, and debugging to catch non-obvious errors.",
+      "_timestamp": "2026-04-05T22:51:48"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

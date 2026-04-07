@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2052.00",
+  "task_id": 1952,
+  "task_statement": "Prepare and process medical insurance claim forms and records.",
+  "occupation_title": "Pharmacy Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Insurance claims are typically prepared and submitted through electronic pharmacy or billing systems, making most of the work computer-based. However, technicians may sometimes handle physical prescriptions, insurance cards, or paper documentation that requires on-site interaction."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of claims processing follows standardized billing codes and insurer rules, technicians often rely on experience to resolve denials, interpret ambiguous coverage details, and handle edge-case documentation issues.",
+      "adequacy_evidence": "Current AI can apply coding rules and common workflows reliably, but shows gaps in nuanced insurer-specific judgment and exception handling that experienced technicians manage through tacit case familiarity.",
+      "_timestamp": "2026-04-06T03:35:11"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple insurers, plan rules, formularies, rejection codes, and claim formats (e.g., NCPDP standards), creating moderate but structured variation across cases.",
+      "adequacy_evidence": "While extensive procedural documentation and standardized formats exist, much real-world claims data is proprietary and protected (HIPAA), so coverage of edge cases relies partly on limited access or synthetic reconstruction.",
+      "_timestamp": "2026-04-06T03:35:12"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple dependent steps\u2014collecting patient and prescription data, verifying insurance details, coding claims, submitting, and possibly handling rejections\u2014where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long.",
+      "adequacy_evidence": "Current AI agents can manage structured multi-step workflows with tools, but may show moderate degradation through missed fields, constraint drift, or errors propagating across steps without careful orchestration.",
+      "_timestamp": "2026-04-06T03:35:12"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing medical insurance claims involves interpreting payer-specific rules, coverage nuances, and incomplete or inconsistent patient information, requiring some context-dependent judgment beyond literal form completion.",
+      "adequacy_evidence": "Current agents can follow structured billing rules and infer many requirements from documentation, but they still struggle with edge cases, ambiguous coverage scenarios, and payer-specific exceptions without human clarification.",
+      "_timestamp": "2026-04-06T03:35:12"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating multiple structured data elements (patient details, prescription data, insurance codes, claim fields) within a single workflow, requiring accurate retrieval and alignment but not extreme volume or complexity.",
+      "adequacy_evidence": "Current agents can generally track and populate structured information across a claim, but may occasionally lose or misalign fields, especially when handling heterogeneous records or partial inputs.",
+      "_timestamp": "2026-04-06T03:35:13"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing and processing medical insurance claims is typically a back-office administrative task with turnaround times measured in minutes to hours, not real-time interaction.",
+      "adequacy_evidence": "Current AI agents can achieve high-quality outputs within these generous time windows, so latency does not meaningfully constrain performance or force reduced reasoning.",
+      "_timestamp": "2026-04-06T03:35:13"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves processing scanned forms, insurance cards, or handwritten prescriptions, requiring basic image/OCR capabilities alongside structured text handling.",
+      "adequacy_evidence": "Current AI systems handle standard printed forms and OCR well but remain less reliable with poor-quality scans, handwriting, or complex document layouts.",
+      "_timestamp": "2026-04-06T03:35:14"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing claims often relies on stored patient demographics, insurance details, and prior claim history, but each claim is largely handled as a discrete transaction using existing records.",
+      "adequacy_evidence": "Current agents can retrieve and use structured records from external systems, but may inconsistently track updates or reconcile longitudinal claim histories across systems without robust integration.",
+      "_timestamp": "2026-04-06T03:35:14"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from preparing or processing medical insurance claims, as long as privacy rules like HIPAA are followed. Such administrative tasks are already commonly automated in practice.",
+      "_timestamp": "2026-04-06T03:35:15"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interaction with insurers and indirectly affects patients, so external stakeholders rely on the output, though the performer\u2019s personal identity is not central.",
+      "adequacy_evidence": "Insurance claim processing is already heavily automated, and stakeholders generally accept system-generated submissions as long as they are accurate and compliant.",
+      "_timestamp": "2026-04-06T03:35:15"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in insurance claims can lead to payment delays, denials, or compliance issues, but they are typically detectable and correctable without irreversible harm.",
+      "adequacy_evidence": "With standard validation checks, structured data constraints, and human oversight, AI-generated outputs can be reliably reviewed, leaving residual error risk at an acceptable level.",
+      "_timestamp": "2026-04-06T03:35:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Claims processing uses structured forms, coding standards, and automated validation (e.g., clearinghouse edits), so many errors are detectable, but verifying correct coding, eligibility, and compliance still requires domain knowledge and review.",
+      "adequacy_evidence": "AI can populate and check many fields, but given variability in payer rules and coding nuances, outputs would still need routine human verification to catch non-obvious errors, creating a moderate checking burden.",
+      "_timestamp": "2026-04-06T03:35:19"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

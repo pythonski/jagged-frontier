@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1031.01",
+  "task_id": 5274,
+  "task_statement": "Adjust reserves or provide reserve recommendations to ensure that reserve activities are consistent with corporate policies.",
+  "occupation_title": "Claims Adjusters, Examiners, and Investigators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Setting or recommending claim reserves involves reviewing claim files, financial estimates, and corporate policies within digital claims management systems, which can be done entirely on a computer without physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Corporate reserve policies provide structured guidance, but applying them requires interpreting case-specific factors, risk tolerance, and implicit organizational practices.",
+      "adequacy_evidence": "Current AI can parse policies and case data but often misses nuanced judgment or unwritten norms, requiring human oversight to align recommendations with true organizational intent.",
+      "_timestamp": "2026-04-06T04:42:19"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing claim details, applying policy guidelines, evaluating financial exposure, and ensuring consistency with corporate standards across several interdependent steps, but not extremely long chains.",
+      "adequacy_evidence": "AI agents can generally handle multi-step evaluation and policy application, but may show some degradation in maintaining consistency across all constraints over extended reasoning sequences.",
+      "_timestamp": "2026-04-06T04:42:20"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Setting or adjusting reserves requires experienced judgment about claim severity, future liability, litigation risk, and evolving case dynamics that are not fully captured by explicit rules or policies.",
+      "adequacy_evidence": "AI systems can leverage historical data and guidelines to approximate reserve decisions, but often lack the nuanced calibration for atypical claims, legal strategy shifts, and subtle contextual cues that experienced adjusters use.",
+      "_timestamp": "2026-04-06T04:42:20"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reserve setting spans diverse claim types (auto, health, property, liability), jurisdictions, policy structures, and evolving case facts, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "While general principles and some case examples are documented, detailed claim-level histories, internal reserving practices, and policy-specific nuances are largely proprietary, leaving partial but not complete coverage achievable via public data and synthesis.",
+      "_timestamp": "2026-04-06T04:42:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires synthesizing claim details, prior reserve history, policy guidelines, and possibly medical or repair estimates, but the information is typically bounded within a manageable case file.",
+      "adequacy_evidence": "Current agents can retrieve and summarize multi-document case information, but may occasionally miss or misweight details when context is dispersed or evolves during analysis.",
+      "_timestamp": "2026-04-06T04:42:21"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reserve adjustment decisions are typically part of ongoing claim evaluation workflows and can be made over minutes to hours, not requiring immediate real-time response.",
+      "adequacy_evidence": "AI systems can take sufficient time to gather information, apply policy rules, and reason through reserve recommendations without any meaningful degradation due to latency constraints.",
+      "_timestamp": "2026-04-06T04:42:22"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reserve adjustments depend on the evolving history of individual claims (prior reserve levels, claim developments, policy interpretations), requiring access to accumulated case records across multiple interactions.",
+      "adequacy_evidence": "Current AI systems integrated with claims databases can reliably store and retrieve structured case histories and policy data, making cross-session memory needs largely manageable with existing tooling.",
+      "_timestamp": "2026-04-06T04:42:22"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Setting or recommending reserves is primarily based on textual claim documentation, policy language, and numerical estimates; images or other modalities are supplementary rather than essential.",
+      "adequacy_evidence": "Current AI systems handle text and structured data well, and the minimal reliance on non-text inputs means there is no meaningful multimodal shortfall for this task.",
+      "_timestamp": "2026-04-06T04:42:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Evaluating reserve adequacy involves nuanced judgment about claim severity, future liability, and policy compliance; errors may not surface until claims develop over time and require expert review of case details.",
+      "adequacy_evidence": "Current AI systems can misestimate claim trajectories or miss contextual factors, and their outputs would require thorough expert auditing since mistakes are subtle and not easily caught through simple checks.",
+      "_timestamp": "2026-04-06T04:42:23"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect reserve levels can materially misstate insurer liabilities, affect financial reporting, regulatory compliance, and capital adequacy, so even infrequent residual errors can have significant consequences.",
+      "adequacy_evidence": "With standard actuarial and managerial review processes, many AI errors could be caught, but model-driven misjudgments in complex or atypical claims could still leave non-trivial residual risk.",
+      "_timestamp": "2026-04-06T04:42:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Many states require licensed claims adjusters to be responsible for claim handling decisions, including reserve setting, which implies a human licensee must oversee or make final determinations. There is no explicit prohibition on AI assistance, but AI cannot independently fulfill licensure requirements, creating a partial regulatory constraint.",
+      "_timestamp": "2026-04-06T04:42:24"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reserve adjustments and recommendations are reviewed and relied upon by internal stakeholders such as supervisors, auditors, and management, so others must engage with and trust the output.",
+      "adequacy_evidence": "These internal stakeholders are generally indifferent to whether analysis is AI-assisted as long as it aligns with policy and is auditable, and such uses are already common in analytics workflows.",
+      "_timestamp": "2026-04-06T04:42:24"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

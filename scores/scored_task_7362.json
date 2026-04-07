@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2082.00",
+  "task_id": 7362,
+  "task_statement": "Review financial records, such as income statements and documentation of expenditures to determine forms needed to prepare tax returns.",
+  "occupation_title": "Tax Preparers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Tax preparers typically review digital financial statements and records using tax software and electronic documents, but in many real-world cases clients provide paper receipts or statements that must be handled or reviewed physically."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining required tax forms is largely governed by explicit IRS rules, but practitioners use experience to interpret ambiguous income types, mixed-use expenses, or unusual documentation patterns.",
+      "adequacy_evidence": "Current agents handle standard mappings well but show gaps in nuanced classification and edge-case judgment (e.g., borderline business vs. hobby income or complex expense categorization), indicating partial but incomplete tacit calibration.",
+      "_timestamp": "2026-04-05T21:46:10"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of taxpayer situations (e.g., employment types, deductions, business income), but follows structured patterns defined by tax codes and standard financial documents.",
+      "adequacy_evidence": "There is abundant public and synthetic data (tax forms, examples, guides), but some edge cases (complex, rare financial arrangements or messy real-world records) are underrepresented and harder to capture fully.",
+      "_timestamp": "2026-04-05T21:46:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining required tax forms involves interpreting financial documents in light of tax rules and situational factors (e.g., income types, deductions, filing status), which are partly context-dependent but largely codified.",
+      "adequacy_evidence": "Current AI agents can often infer appropriate forms from structured financial data and rules, but they still struggle with incomplete records, nuanced edge cases, and implicit taxpayer context, requiring human clarification.",
+      "_timestamp": "2026-04-05T21:46:11"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple financial documents and synthesizing them into determinations about required tax forms, requiring a multi-step but not deeply interdependent sequence.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across document review and classification steps, but may show some degradation in consistency when tracking multiple financial details across longer inputs.",
+      "_timestamp": "2026-04-05T21:46:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing information from multiple financial documents (income statements, expense records) and mapping them to tax form requirements, requiring moderate retrieval and compression within a single episode.",
+      "adequacy_evidence": "Current agents with document ingestion and retrieval tools can generally manage this scope, but may miss or misweight details across multiple records or lose context in longer, heterogeneous document sets.",
+      "_timestamp": "2026-04-05T21:46:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing financial records for tax preparation is typically an offline task with flexible timelines; minutes to hours of analysis are acceptable and common.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to perform multi-step reasoning over documents without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T21:46:13"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tax preparation benefits from prior-year returns and client history (e.g., carryforwards, recurring income types), but each instance can typically be completed using the current year's provided records.",
+      "adequacy_evidence": "Existing systems can reliably store and retrieve client financial histories across sessions via databases and integrations, and LLM agents can access this context when properly scaffolded.",
+      "_timestamp": "2026-04-05T21:46:13"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading structured or semi-structured financial documents (income statements, expense records), which are fundamentally textual/numeric even when presented in PDFs or forms.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing can reliably extract and process relevant information from typical financial records, so non-text modality handling is not a limiting factor.",
+      "_timestamp": "2026-04-05T21:46:13"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Misidentifying required tax forms can lead to filing errors, penalties, or delays, but these are typically correctable through amendments and do not usually cause irreversible harm.",
+      "adequacy_evidence": "Even after standard checks, AI systems may miss nuanced eligibility criteria or edge-case filing requirements, leaving a non-trivial residual risk that could still result in incorrect or incomplete filings.",
+      "_timestamp": "2026-04-05T21:46:13"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining the correct tax forms from financial records requires domain expertise and careful interpretation; mistakes (e.g., missed forms or misclassified items) are often subtle and not immediately obvious without thorough review.",
+      "adequacy_evidence": "Current AI systems can misinterpret financial details or overlook edge cases, and verifying completeness and correctness still demands expert scrutiny, making the checking process both necessary and non-trivial.",
+      "_timestamp": "2026-04-05T21:46:14"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI reviewing financial records, but U.S. tax law requires a human preparer with a PTIN to take responsibility and sign returns. This creates partial restriction, as the task can be performed by AI only under human oversight and cannot fully replace the licensed role.",
+      "_timestamp": "2026-04-05T21:46:14"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves client financial data and feeds into tax preparation decisions, so clients rely on the reviewer\u2019s judgment, though the identity of the performer is not central to the technical outcome.",
+      "adequacy_evidence": "Many clients would accept AI-assisted review, but a significant share may hesitate to trust an AI with sensitive financial records or prefer a human professional, leading to moderate resistance.",
+      "_timestamp": "2026-04-05T21:46:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5032.00",
+  "task_id": 2723,
+  "task_statement": "Schedule or dispatch workers, work crews, equipment, or service vehicles to appropriate locations, according to customer requests, specifications, or needs, using radios or telephones.",
+  "occupation_title": "Dispatchers, Except Police, Fire, and Ambulance",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Dispatching mainly involves communicating assignments and scheduling via phones, radios, and computer systems, which can often be done remotely using digital communication tools. However, many operations rely on dedicated radio consoles or on-site coordination within a dispatch center, making some instances location-dependent."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dispatching involves interpreting customer requests and matching them with available resources while considering priorities, constraints, and situational factors that are often implicit rather than fully specified.",
+      "adequacy_evidence": "Current agents can handle structured scheduling inputs but often miss nuanced priorities or context (e.g., urgency tradeoffs, informal rules), requiring human oversight or iterative adjustment.",
+      "_timestamp": "2026-04-06T03:26:08"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dispatching requires situational judgment such as prioritizing requests, adjusting for traffic or delays, and accounting for worker capabilities and reliability, which go beyond fixed rules but are not deeply intuitive professions.",
+      "adequacy_evidence": "AI systems can handle structured routing and scheduling well, but still struggle with nuanced, context-sensitive tradeoffs (e.g., informal worker knowledge, real-time disruptions, or soft priorities), leading to moderate gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T03:26:08"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatching spans varied but structured scenarios (routing, prioritization, resource allocation) across industries, with recurring patterns and well-defined constraints rather than highly idiosyncratic cases.",
+      "adequacy_evidence": "Extensive real-world data (call logs, routing datasets, fleet management records) and strong simulation environments (logistics, scheduling optimization) provide rich, process-level training signals, making coverage broadly achievable.",
+      "_timestamp": "2026-04-06T03:26:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatching benefits from awareness of ongoing jobs, worker availability, and customer preferences, but much of this is handled through structured scheduling systems rather than rich longitudinal memory.",
+      "adequacy_evidence": "Current AI systems can reliably integrate with databases and scheduling software to store and retrieve cross-session state, with little inherent limitation in maintaining this level of persistent context.",
+      "_timestamp": "2026-04-06T03:26:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dispatching requires tracking multiple simultaneous jobs, locations, resource availability, and incoming requests within a single shift, with frequent updates that must be integrated into a coherent plan.",
+      "adequacy_evidence": "Current agents can manage structured state with tools, but may lose or inconsistently update dynamic details (e.g., last-minute changes or conflicts) without robust external state management, leading to moderate reliability gaps.",
+      "_timestamp": "2026-04-06T03:26:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves exchanging structured information (requests, locations, schedules) that can be fully represented in text; radio/telephone use is a communication channel rather than a source of complex multimodal input.",
+      "adequacy_evidence": "Current AI systems can reliably handle speech-to-text and text-based scheduling/dispatch logic, so there is no meaningful shortfall tied to multimodal capabilities.",
+      "_timestamp": "2026-04-06T03:26:12"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dispatching involves multi-step coordination\u2014receiving requests, matching resources, sequencing assignments, and updating plans as conditions change\u2014but each sequence is typically bounded and episodic rather than deeply long or tightly interdependent.",
+      "adequacy_evidence": "AI agents can manage multi-step scheduling workflows, but performance can degrade with ongoing updates, interruptions, and constraint changes, leading to occasional inconsistencies or dropped constraints over longer interaction chains.",
+      "_timestamp": "2026-04-06T03:26:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatch errors can cause delays, missed appointments, or inefficient resource use, but consequences are typically operational and reversible rather than severe or irreversible.",
+      "adequacy_evidence": "With standard checks (e.g., confirmations, tracking systems), most AI errors would be caught or quickly corrected, leaving residual risk at an acceptable level for this task.",
+      "_timestamp": "2026-04-06T03:26:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assignments can be checked against constraints like location, availability, and customer requirements, but mismatches or inefficiencies may not be immediately obvious without contextual knowledge or follow-up outcomes.",
+      "adequacy_evidence": "Current AI can generate plausible dispatch plans, but errors in constraint handling or prioritization are common enough that human review of assignments and conditions is still routinely necessary.",
+      "_timestamp": "2026-04-06T03:26:12"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dispatchers coordinate with workers and sometimes customers, requiring interaction and trust in instructions, but not deep personal authority or empathy.",
+      "adequacy_evidence": "Many dispatch functions are already partially automated and stakeholders often accept system-generated instructions, though some may still prefer or trust human dispatchers in complex or uncertain situations.",
+      "_timestamp": "2026-04-06T03:26:13"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations requiring a human to perform general (non-emergency) dispatching functions. While industry practices or contractual requirements may favor human oversight, no enforceable rule prohibits AI from carrying out these scheduling or routing tasks.",
+      "_timestamp": "2026-04-06T03:26:13"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatchers must respond promptly to incoming requests, often within seconds to a few minutes, to maintain operational flow and customer satisfaction, but decisions are typically not sub-second critical.",
+      "adequacy_evidence": "Well-scaffolded AI systems can generate and update dispatch plans quickly within these timeframes using optimization heuristics and real-time data, without significant degradation from limited reasoning time.",
+      "_timestamp": "2026-04-06T03:26:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

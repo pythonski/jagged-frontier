@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1023.00",
+  "task_id": 1142,
+  "task_statement": "Purchase the highest quality merchandise at the lowest possible price and in correct amounts.",
+  "occupation_title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Purchasing agents commonly research suppliers, compare prices, negotiate, and place orders using email, procurement software, and online systems. However, some cases involve in-person supplier meetings, site visits, or physical inspection of goods, so not all instances are fully remote."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining 'highest quality' and 'lowest possible price' in correct quantities requires nuanced trade-offs, supplier reliability assessment, and market timing that rely on accumulated experience and judgment beyond explicit rules.",
+      "adequacy_evidence": "AI agents can analyze pricing data and specifications, but still lack robust experiential calibration for supplier trustworthiness, negotiation nuance, and context-specific trade-offs in many real-world cases.",
+      "_timestamp": "2026-04-06T00:52:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Key criteria like 'highest quality,' acceptable tradeoffs between cost and reliability, supplier preferences, and correct quantities depend on implicit organizational priorities, demand forecasts, and stakeholder input rather than fully explicit rules.",
+      "adequacy_evidence": "Agents can elicit and optimize against stated constraints and historical data, but often miss nuanced preferences (e.g., risk tolerance, supplier relationships, shifting priorities) and require human iteration to align with true objectives.",
+      "_timestamp": "2026-04-06T00:52:35"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous contexts (different industries, product categories, supplier markets, contract structures, and demand conditions), with long-tailed variation in pricing dynamics and quality assessment criteria.",
+      "adequacy_evidence": "While general procurement practices and some pricing data are documented, much high-value signal (e.g., negotiated prices, supplier reliability histories, internal demand forecasts) is proprietary or sparsely recorded, though partially approximable via synthetic scenarios and public data.",
+      "_timestamp": "2026-04-06T00:52:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective purchasing depends on maintaining longitudinal records such as supplier performance, historical pricing trends, contract terms, and evolving organizational needs across many transactions over time.",
+      "adequacy_evidence": "Current AI systems can use external databases and retrieval tools to store and access such records, but they still show gaps in consistently updating, prioritizing, and contextually integrating this information across long time horizons.",
+      "_timestamp": "2026-04-06T00:52:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple attributes (quality specs, vendor options, pricing, quantities, constraints) across sources and synthesizing them into a decision, but the information volume is typically structured and bounded within a procurement episode.",
+      "adequacy_evidence": "Current agents can manage multi-source comparisons with tools, but may lose or misweight details (e.g., subtle quality differences or constraints) without careful scaffolding, leading to moderate reliability issues.",
+      "_timestamp": "2026-04-06T00:52:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing merchandise quality and suitability can involve inspecting physical samples, images, or technical specifications, not just text descriptions, especially for materials, craftsmanship, or defects.",
+      "adequacy_evidence": "AI agents can interpret product images and specifications reasonably well but lack reliable physical inspection and fine-grained sensory judgment (e.g., texture, durability), making performance uneven in complex cases.",
+      "_timestamp": "2026-04-06T00:52:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Purchasing decisions typically allow hours to days for supplier research, price comparison, and negotiation, rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can perform sourcing analysis and comparisons well within these relaxed timeframes without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-06T00:52:37"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether purchases truly meet 'highest quality at lowest price in correct amounts' requires domain expertise, supplier evaluation, market benchmarking, and often only reveals mistakes after delivery, use, or inventory outcomes.",
+      "adequacy_evidence": "Current AI can suggest options but frequently misjudges supplier reliability, hidden costs, and demand levels, so extensive human review and cross-checking with market data and organizational needs is still required.",
+      "_timestamp": "2026-04-06T00:52:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interacting with suppliers and internal stakeholders who rely on the agent\u2019s purchasing decisions and negotiations, though personal identity is not deeply central.",
+      "adequacy_evidence": "Many suppliers would tolerate or already engage with automated procurement systems, but some may resist or adjust pricing/negotiation behavior if they know they are dealing with an AI agent.",
+      "_timestamp": "2026-04-06T00:52:39"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in price, quality, or quantity can lead to financial loss, inventory imbalances, or operational disruptions, but these are typically correctable and rarely catastrophic after standard procurement checks and approvals.",
+      "adequacy_evidence": "Even with review processes (quotes, contracts, approvals), AI may still misjudge supplier reliability or total cost factors, leaving a moderate level of residual risk that organizations would likely still want to monitor.",
+      "_timestamp": "2026-04-06T00:52:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from selecting vendors, prices, or quantities for purchasing decisions. While human authorization may be required for contracts or financial approvals, this does not restrict AI from performing the core task itself.",
+      "_timestamp": "2026-04-06T00:52:40"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step, interdependent processes including demand assessment, supplier research, bid comparison, negotiation, ordering, and follow-up, where early decisions affect later outcomes.",
+      "adequacy_evidence": "AI agents can handle multi-step procurement workflows with tooling, but over extended sequences they show some drift in constraint tracking and consistency, especially across negotiation and iterative decision stages.",
+      "_timestamp": "2026-04-06T00:52:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

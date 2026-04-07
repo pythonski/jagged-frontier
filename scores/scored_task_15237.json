@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2031.00",
+  "task_id": 15237,
+  "task_statement": "Transcribe, type, and distribute reports of diagnostic procedures for interpretation by physician.",
+  "occupation_title": "Cardiovascular Technologists and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Transcribing, typing, and distributing diagnostic reports is typically done using computers and electronic health record systems, but in some settings it may involve handling printed reports or distributing documents within a clinical facility."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different cardiovascular procedures, physician dictation styles, accents, and report formats, but remains within a relatively standardized medical transcription domain.",
+      "adequacy_evidence": "Large volumes of medical dictation, transcription corpora, and synthetic audio/text pipelines exist, providing strong coverage of terminology, formats, and variation needed for high-quality performance.",
+      "_timestamp": "2026-04-06T01:24:31"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely procedural\u2014transcribing dictated reports, formatting them \u0568\u057d\u057f established standards, and distributing them\u2014relying on explicit rules and terminology rather than experiential judgment.",
+      "adequacy_evidence": "Current AI systems with speech recognition and medical language capabilities can reliably perform transcription and formatting without needing tacit, experience-based calibration.",
+      "_timestamp": "2026-04-06T01:24:32"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling procedural details, patient identifiers, and diagnostic findings within a single report, requiring accurate capture and organization but not extremely large or rapidly changing information.",
+      "adequacy_evidence": "Current AI systems with transcription, document structuring, and context management can reliably maintain and organize this level of within-episode information without significant loss or drift.",
+      "_timestamp": "2026-04-06T01:24:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely procedural and standardized, involving accurate transcription and formatting of dictated diagnostic reports according to established medical templates and protocols.",
+      "adequacy_evidence": "Current AI systems with speech recognition and document formatting capabilities can reliably infer and apply required structures with minimal ambiguity or need for iterative clarification.",
+      "_timestamp": "2026-04-06T01:24:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step workflow (transcribing diagnostic content, formatting into reports, and distributing them), where consistency across steps matters but steps are relatively modular and not tightly interdependent.",
+      "adequacy_evidence": "Modern AI systems with speech-to-text, document structuring, and workflow automation can handle long transcripts and multi-step processing with stable performance and minimal degradation across the sequence.",
+      "_timestamp": "2026-04-06T01:24:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Transcribing and distributing diagnostic reports typically allows minutes to hours for completion and review rather than requiring immediate real-time output.",
+      "adequacy_evidence": "Current AI systems can generate high-quality transcriptions and formatted reports well within these time windows, with no meaningful degradation due to speed constraints.",
+      "_timestamp": "2026-04-06T01:24:35"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves converting spoken dictation or recorded procedure notes into text, requiring audio-to-text transcription but limited deeper cross-modal reasoning.",
+      "adequacy_evidence": "Current AI systems with medical-grade speech recognition can reliably transcribe and format dictated reports, with manageable error rates that are easily corrected in routine workflows.",
+      "_timestamp": "2026-04-06T01:24:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each report is tied to a specific diagnostic procedure and can be completed using the current dictation and standard templates without needing prior case history.",
+      "adequacy_evidence": "Current systems can easily store and apply templates or user preferences if needed, and no substantial cross-session memory is required for competent performance.",
+      "_timestamp": "2026-04-06T01:24:35"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification requires careful comparison against source recordings or notes and domain knowledge to catch subtle errors (e.g., measurements, terminology, negations), but errors are generally detectable with systematic review.",
+      "adequacy_evidence": "Modern AI transcription is strong but still makes nontrivial errors with medical jargon and numeric details, so consistent human proofreading remains necessary though not prohibitively difficult.",
+      "_timestamp": "2026-04-06T01:24:35"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws requiring a human to perform transcription or report distribution tasks. While HIPAA and data privacy regulations apply, they govern handling of patient information rather than prohibiting AI from performing transcription or documentation functions.",
+      "_timestamp": "2026-04-06T01:24:36"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Physicians rely on the transcribed reports for interpretation, so there is a stakeholder consuming the output, but the transcriber's identity or personal attributes are not central to task effectiveness.",
+      "adequacy_evidence": "AI-based transcription and report generation are already widely accepted in clinical workflows, with little concern about whether a human or AI produced the document as long as accuracy is maintained.",
+      "_timestamp": "2026-04-06T01:24:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Transcription errors in diagnostic procedure reports (e.g., incorrect measurements, terminology, or findings) can directly affect physician interpretation and patient care, so even rare residual mistakes can have serious consequences.",
+      "adequacy_evidence": "Modern AI transcription systems are highly accurate and errors are often detectable during routine review, but occasional subtle mis-transcriptions or formatting issues can still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T01:24:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

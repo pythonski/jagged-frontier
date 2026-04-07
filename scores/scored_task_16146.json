@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2051.01",
+  "task_id": 16146,
+  "task_statement": "Collect business intelligence data from available industry reports, public information, field reports, or purchased sources.",
+  "occupation_title": "Business Intelligence Analysts",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Business intelligence data is typically gathered from online databases, digital industry reports, public datasets, and purchased data services, all accessible via computer. However, some instances may involve collecting or integrating information from in-person field reports or non-digital sources."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting relevant sources, assessing credibility, and interpreting ambiguous or conflicting business information requires some experience-based judgment beyond explicit rules.",
+      "adequacy_evidence": "Current agents can gather and filter data effectively but still show gaps in nuanced source evaluation and contextual relevance, especially in less standardized or higher-stakes domains.",
+      "_timestamp": "2026-04-05T22:15:39"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans heterogeneous sources (public filings, industry reports, proprietary databases, field reports) across industries, formats, and jurisdictions, creating a broad and long-tailed distribution of instances.",
+      "adequacy_evidence": "Large volumes of public and semi-structured business data and examples of extraction workflows exist, but important segments (paid databases, internal field reports) are inaccessible or thin, leaving partial coverage gaps.",
+      "_timestamp": "2026-04-05T22:15:40"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining which data is relevant, credible, and aligned with business goals requires contextual judgment about industry, stakeholder needs, and intended use, which are often only partially specified.",
+      "adequacy_evidence": "Current agents can gather broadly relevant information but often miss subtle priorities (e.g., strategic relevance, source credibility nuances), requiring human guidance to refine scope and selection.",
+      "_timestamp": "2026-04-05T22:15:41"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (identifying sources, retrieving data, filtering relevance, organizing outputs), but steps are only moderately interdependent and can often be decomposed or parallelized.",
+      "adequacy_evidence": "Current AI agents can sustain performance across these retrieval and aggregation sequences with tooling, though some degradation appears in longer workflows (e.g., missed sources, inconsistent filtering criteria).",
+      "_timestamp": "2026-04-05T22:15:41"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves aggregating and synthesizing information from multiple heterogeneous sources (reports, public data, field inputs), requiring active retrieval and summarization within a single workflow.",
+      "adequacy_evidence": "Current agents with retrieval and summarization tools handle multi-source ingestion reasonably well, but can lose nuance or mis-prioritize details when compressing large volumes of information.",
+      "_timestamp": "2026-04-05T22:15:41"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often benefits from retaining knowledge of previously gathered sources, vendor subscriptions, and evolving information needs, but individual data collection efforts can also be performed independently.",
+      "adequacy_evidence": "Current agents can use databases and retrieval systems to store and recall prior sources, but they can inconsistently maintain organized, up-to-date cross-session context (e.g., tracking source reliability or changes over time).",
+      "_timestamp": "2026-04-05T22:15:41"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Business intelligence data often appears in charts, tables, PDFs, and occasional infographics within reports, requiring some visual parsing beyond pure text extraction.",
+      "adequacy_evidence": "Current agents can handle many structured visuals and documents, but performance degrades on complex layouts, low-quality scans, or nuanced chart interpretation.",
+      "_timestamp": "2026-04-05T22:15:42"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Collecting business intelligence data from reports and sources is typically an asynchronous research task with deadlines measured in hours to days, not requiring rapid real-time responses.",
+      "adequacy_evidence": "AI agents can take sufficient time to search, retrieve, and synthesize information without meaningful quality loss, as there is no tight latency constraint forcing rushed reasoning.",
+      "_timestamp": "2026-04-05T22:15:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Collected data can be checked against original reports or sources, but verification requires time, source access, and some domain awareness to ensure accuracy, completeness, and correct interpretation.",
+      "adequacy_evidence": "Current AI systems can misattribute sources, extract data incorrectly, or include outdated or irrelevant information, so human review and cross-checking against primary sources remain necessary.",
+      "_timestamp": "2026-04-05T22:15:43"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements that prohibit AI systems from collecting business intelligence data from public, commercial, or field-report sources; the task is generally governed by standard data use, copyright, and contract terms, which apply equally to humans and AI.",
+      "_timestamp": "2026-04-05T22:15:44"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering information from impersonal sources like reports, databases, and public records, with no need for stakeholder interaction or acceptance of the performer.",
+      "adequacy_evidence": "Since there are no stakeholders whose perceptions matter, AI use in data collection from such sources is already widely accepted and does not face resistance.",
+      "_timestamp": "2026-04-05T22:15:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in collected business intelligence data can misinform downstream analysis or strategy, but they are typically detectable and correctable and rarely cause irreversible harm on their own.",
+      "adequacy_evidence": "With standard source verification and cross-checking, AI-collected data errors can be identified and mitigated effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T11:26:30"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

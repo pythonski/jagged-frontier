@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-1011.00",
+  "task_id": 2919,
+  "task_statement": "Compute estimates and actual costs of factors such as materials, labor, or outside contractors.",
+  "occupation_title": "First-Line Supervisors of Mechanics, Installers, and Repairers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Computing cost estimates for materials, labor, or contractors is typically done using spreadsheets, estimating software, or other digital tools. The task itself involves calculation and data analysis and can be completed remotely with a computer and internet access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating materials, labor, and contractor costs often requires experience-based judgment about hidden damage, job complexity, worker productivity, and local conditions that are not fully captured in explicit rules.",
+      "adequacy_evidence": "AI systems can use historical data and pricing models effectively but often lack reliable calibration for site-specific nuances, unforeseen complications, and informal heuristics that experienced supervisors apply.",
+      "_timestamp": "2026-04-05T21:30:02"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation depends on context such as project scope, local labor rates, material quality, and informal shop practices, requiring interpretation beyond explicit instructions.",
+      "adequacy_evidence": "Agents can use data and prior examples to generate reasonable estimates, but often miss implicit constraints like site-specific conditions or supervisor preferences without iterative human clarification.",
+      "_timestamp": "2026-04-05T21:30:02"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Cost estimation spans different job types, equipment, and local pricing conditions, but follows relatively standardized components (materials, labor rates, contractor quotes) with recurring patterns.",
+      "adequacy_evidence": "Extensive data exists (e.g., historical work orders, invoices, RSMeans-style cost databases, procurement records) and can be supplemented with synthetic scenarios, providing strong coverage of both outcomes and estimation processes.",
+      "_timestamp": "2026-04-05T21:30:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step calculations (gathering inputs, estimating components, aggregating costs, and comparing estimates to actuals), requiring some consistency across steps but not long or highly interdependent sequences.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably maintain accuracy across these moderate-length calculation and aggregation sequences, with minimal degradation over the required steps.",
+      "_timestamp": "2026-04-05T21:30:03"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating multiple cost components (materials, labor hours/rates, contractor quotes) and keeping them consistent, but the information is typically structured and bounded within a project estimate.",
+      "adequacy_evidence": "Current agents with tool use (spreadsheets, code execution) reliably track, update, and compute over such structured cost data without significant context loss or drift.",
+      "_timestamp": "2026-04-05T21:30:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Cost estimation benefits from prior project data, historical material and labor costs, and vendor pricing trends, but each estimate can largely be produced using current records and databases without deep longitudinal state.",
+      "adequacy_evidence": "Current AI systems can reliably store and retrieve structured historical cost data via standard database integrations, with minimal limitations in cross-session memory for this type of task.",
+      "_timestamp": "2026-04-05T21:30:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimates can be checked against known price lists, past jobs, and supplier quotes, but doing so requires domain knowledge and time; errors are not always immediately obvious without review.",
+      "adequacy_evidence": "AI can generate plausible estimates but often makes mistakes in assumptions, local pricing, or scope details, so supervisors would need to cross-check inputs and calculations with moderate effort.",
+      "_timestamp": "2026-04-05T21:30:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation may involve interpreting diagrams, equipment layouts, or site conditions (e.g., blueprints or photos), though much of the work relies on textual specs, catalogs, and numeric data.",
+      "adequacy_evidence": "Current agents can handle basic document and image inputs but are less reliable when extracting detailed quantities or constraints from complex technical drawings or real-world visual conditions.",
+      "_timestamp": "2026-04-05T21:30:05"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in cost estimates can lead to budget overruns, scheduling issues, or reduced profitability, but these are typically correctable and rarely cause irreversible harm.",
+      "adequacy_evidence": "With standard review processes (e.g., comparing to historical costs, supplier quotes, and labor rates), AI-generated estimates can be validated effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T21:30:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Supervisors often need cost estimates within minutes to support planning or customer quotes, but tasks rarely demand instant real-time responses.",
+      "adequacy_evidence": "Current AI agents can generate accurate cost estimates with tool use (spreadsheets, databases) well within these time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T21:30:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimates are used by managers, clients, and contractors who rely on them for budgeting and planning, so stakeholders do engage with the output, though the producer\u2019s identity is not central.",
+      "adequacy_evidence": "Many stakeholders would accept AI-generated estimates if validated, but some may distrust AI for cost projections affecting budgets and contracts, leading to moderate resistance.",
+      "_timestamp": "2026-04-05T21:30:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from computing cost estimates for materials, labor, or contractors. While licensed professionals may be required to approve budgets or bids in some contexts, the estimation task itself can be performed by AI without regulatory restriction.",
+      "_timestamp": "2026-04-05T21:30:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

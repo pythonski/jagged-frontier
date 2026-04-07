@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2082.00",
+  "task_id": 21165,
+  "task_statement": "Schedule appointments with clients.",
+  "occupation_title": "Tax Preparers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Scheduling client appointments can be completed entirely using digital calendars, email, scheduling software, or messaging systems, without any inherent need for physical presence or specialized equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments involves moderate variability in client availability, preferences, time zones, and business rules, but follows broadly standardized patterns across contexts.",
+      "adequacy_evidence": "Extensive real-world data (emails, calendars, booking systems) and easy synthetic generation provide strong coverage of scheduling scenarios, including edge cases like conflicts and rescheduling.",
+      "_timestamp": "2026-04-06T03:09:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires interpreting client availability, urgency (e.g., tax deadlines), and preparer preferences, which are not always fully specified and may require light contextual judgment.",
+      "adequacy_evidence": "Current agents can reliably resolve this ambiguity through calendar integration, constraint checking, and iterative clarification with clients, with minimal difficulty.",
+      "_timestamp": "2026-04-06T03:09:36"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling involves some experience-based judgment, such as prioritizing urgent clients, estimating appointment lengths, and accommodating preferences, but much of it can be reduced to standard rules and policies.",
+      "adequacy_evidence": "Current AI agents with calendar integration and business rules can reliably handle prioritization, availability matching, and client preferences, covering most tacit aspects without significant gaps.",
+      "_timestamp": "2026-04-06T03:09:37"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling involves a short multi-step sequence (checking availability, proposing times, confirming, updating calendars) with some dependency between steps but limited depth.",
+      "adequacy_evidence": "Current AI agents with calendar integrations reliably handle these short interaction loops without significant drift or error accumulation.",
+      "_timestamp": "2026-04-06T03:09:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments primarily involves text-based communication (emails, calendar entries) or structured data entry; any audio (phone calls) can be transcribed without loss of essential information.",
+      "adequacy_evidence": "Current AI agents can handle text-based scheduling workflows and even manage basic voice interactions via transcription, with no meaningful multimodal limitations affecting performance.",
+      "_timestamp": "2026-04-06T03:09:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling benefits from retaining client contact details, availability patterns, and prior appointments, but does not require deep or complex longitudinal histories.",
+      "adequacy_evidence": "Current AI systems integrated with calendars/CRMs can reliably store and retrieve client scheduling data across sessions, with minimal limitations for this task.",
+      "_timestamp": "2026-04-06T03:09:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires tracking multiple clients' availability, preferences, deadlines, and calendar constraints within a single interaction, but the information volume is modest and structured.",
+      "adequacy_evidence": "Current agents with calendar integrations reliably manage availability, constraints, and updates within a session without significant context loss or misretrieval.",
+      "_timestamp": "2026-04-06T03:09:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments requires direct interaction with clients to coordinate availability, so stakeholders are involved, but the task does not rely heavily on personal authority or deep trust.",
+      "adequacy_evidence": "Clients already commonly accept automated scheduling tools (e.g., online booking systems, chatbots), indicating little resistance to AI handling this function.",
+      "_timestamp": "2026-04-06T03:09:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling errors (e.g., wrong time, double booking, missed appointments) cause inconvenience and potential delays but are typically reversible and do not directly compromise tax outcomes.",
+      "adequacy_evidence": "With standard checks like calendar confirmations, reminders, and client verification, current AI systems can reduce residual errors to a low, acceptable level for this task.",
+      "_timestamp": "2026-04-06T03:09:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling client appointments is typically asynchronous and can tolerate delays of minutes or longer without impacting task success.",
+      "adequacy_evidence": "Current AI agents can easily generate and coordinate scheduling options within acceptable timeframes without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T03:09:42"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit AI systems from scheduling client appointments for tax preparers. General data privacy and consumer protection laws apply but do not restrict automation of this administrative task.",
+      "_timestamp": "2026-04-06T03:09:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Appointment scheduling errors (wrong time, conflicts, missing details) are typically obvious and easily detected via calendar systems, confirmations, or client feedback.",
+      "adequacy_evidence": "AI systems can handle scheduling reliably but still occasionally make mistakes with constraints (e.g., availability, time zones), so routine confirmation and light oversight are needed.",
+      "_timestamp": "2026-04-06T03:09:42"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2011.00",
+  "task_id": 1339,
+  "task_statement": "Formulate mathematical models or other methods of computer analysis to develop, evaluate, or modify design, according to customer engineering requirements.",
+  "occupation_title": "Aerospace Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Formulating mathematical models and conducting computer-based analyses are performed using software and digital data, which can be done entirely on a computer without physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing and refining aerospace design models involves long, tightly coupled sequences: translating requirements, selecting modeling approaches, implementing equations or simulations, validating results, and iterating based on feedback, where early errors propagate downstream.",
+      "adequacy_evidence": "LLM-based agents can execute multi-step modeling workflows with tools, but performance degrades over extended sequences due to error accumulation, missed constraints, and difficulty maintaining consistency across iterative refinement cycles.",
+      "_timestamp": "2026-04-05T23:46:42"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customer engineering requirements are often incomplete, evolving, and involve implicit tradeoffs (e.g., weight vs. performance vs. safety), requiring engineers to interpret intent and refine specifications.",
+      "adequacy_evidence": "Current agents can parse stated requirements but often miss implicit constraints or stakeholder priorities, requiring iterative human guidance to converge on appropriate models.",
+      "_timestamp": "2026-04-05T23:46:42"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Aerospace modeling spans highly diverse regimes (aerodynamics, structures, propulsion, control, mission profiles) with context-specific constraints and edge cases tied to particular vehicles, environments, and customer requirements.",
+      "adequacy_evidence": "While textbooks, open research, and simulation data provide strong coverage of core methods, many deployment-relevant cases rely on proprietary design data, specialized test results, and organization-specific practices that are only partially accessible for training.",
+      "_timestamp": "2026-04-05T23:46:42"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate modeling approaches, simplifying assumptions, and interpreting results against real-world aerospace constraints requires substantial engineering judgment built from experience beyond explicit rules.",
+      "adequacy_evidence": "Current agents can apply standard methods and replicate documented workflows, but often lack robust calibration in edge cases, tradeoff decisions, and nuanced interpretation of model validity in complex, safety-critical contexts.",
+      "_timestamp": "2026-04-05T23:46:42"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Model development for aerospace design typically spans projects with evolving requirements, prior simulation results, and design iterations that must be referenced across sessions, but this context is usually documented in artifacts rather than purely remembered.",
+      "adequacy_evidence": "Current agents can use external memory systems and retrieval over project documents, but they still inconsistently capture evolving context, version history, and nuanced design rationale across sessions.",
+      "_timestamp": "2026-04-05T23:46:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing and modifying aerospace models requires tracking many interdependent variables, equations, constraints, simulation outputs, and customer requirements within a single workflow, where missing details can invalidate results.",
+      "adequacy_evidence": "Agentic systems with tool use and external memory can handle large contexts and structured data, but still show weaknesses in reliably maintaining and updating complex, interdependent state without drift or omission.",
+      "_timestamp": "2026-04-05T23:46:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Formulating and evaluating aerospace engineering models is typically an offline, iterative process where hours or longer runtimes are acceptable for accuracy and validation.",
+      "adequacy_evidence": "Current AI agents can take sufficient time for extended reasoning and tool use without violating task constraints, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T23:46:43"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting and producing diagrams, CAD models, simulation outputs, and other visual/spatial representations alongside mathematical formulations.",
+      "adequacy_evidence": "Current agents can handle many text-based and some visual inputs, but struggle with complex engineering diagrams, high-fidelity CAD integration, and nuanced cross-modal reasoning in advanced aerospace contexts.",
+      "_timestamp": "2026-04-05T23:46:43"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Aerospace engineering models often involve complex physics, coupled systems, and safety-critical constraints where errors can be subtle and only revealed through extensive simulation, testing, or expert review.",
+      "adequacy_evidence": "Current AI systems can produce plausible but flawed models or assumptions, and these errors are difficult to detect without deep domain expertise and rigorous validation workflows, requiring intensive human oversight.",
+      "_timestamp": "2026-04-05T23:46:44"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing engineering modeling, but aerospace work is constrained by regulations (e.g., FAA certification processes, ITAR/export controls) that require accountable human engineers to review and approve designs. These create partial restrictions by mandating human responsibility rather than banning AI use outright.",
+      "_timestamp": "2026-04-05T23:46:45"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Aerospace design models directly inform safety-critical systems where even rare residual errors can propagate into catastrophic failures, regulatory noncompliance, or mission loss.",
+      "adequacy_evidence": "While simulation, verification, and peer review can catch many issues, current AI systems still exhibit non-transparent reasoning and occasional subtle modeling errors that may evade detection, leaving non-negligible residual risk.",
+      "_timestamp": "2026-04-05T23:46:45"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is performed to meet customer engineering requirements, so clients and internal reviewers must rely on and accept the resulting models, though success depends more on technical validity than personal authority.",
+      "adequacy_evidence": "Stakeholders in aerospace engineering are cautious about safety and certification, so fully autonomous AI may face some resistance, but AI-assisted modeling is already common and generally acceptable with human oversight.",
+      "_timestamp": "2026-04-05T23:46:47"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

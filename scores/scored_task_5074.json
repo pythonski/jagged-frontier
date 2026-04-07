@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "39-2021.00",
+  "task_id": 5074,
+  "task_statement": "Answer telephones and schedule appointments.",
+  "occupation_title": "Animal Caretakers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Answering calls and scheduling appointments are communication and calendar-management tasks that can be handled via computer, VoIP, and scheduling software. However, in animal care settings they are often performed by on-site staff using facility phones and coordinating with in-person operations and walk-in clients."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a moderate range of caller intents (routine bookings, cancellations, urgent concerns, species-specific needs) but follows fairly standardized conversational and scheduling patterns.",
+      "adequacy_evidence": "Large volumes of call center transcripts, appointment scheduling logs, and customer service training data provide strong coverage, and synthetic dialogue generation can readily fill remaining gaps.",
+      "_timestamp": "2026-04-06T01:28:10"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While much of phone answering and appointment scheduling follows explicit procedures, some cases require light judgment (e.g., recognizing urgency in animal health concerns or handling client nuances).",
+      "adequacy_evidence": "Current AI agents can reliably follow scheduling protocols and handle common edge cases with scripted escalation, showing little gap in this level of tacit judgment.",
+      "_timestamp": "2026-04-06T01:28:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Handling calls and scheduling involves short multi-step interactions (greeting, collecting details, checking availability, confirming), requiring some consistency but limited sequence length and interdependence.",
+      "adequacy_evidence": "Modern AI agents can reliably manage short conversational flows and scheduling workflows without noticeable degradation over such brief sequences.",
+      "_timestamp": "2026-04-06T01:28:10"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Callers often provide incomplete or context-dependent information (e.g., urgency of care, type of service, animal specifics), requiring the scheduler to infer needs and ask follow-up questions to correctly book appointments.",
+      "adequacy_evidence": "Current AI agents can handle structured scheduling and basic clarification, but they still miss nuances like urgency or implicit preferences, often requiring human oversight or iteration.",
+      "_timestamp": "2026-04-06T01:28:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking caller details, pet information, and available appointment slots within a single interaction, requiring modest information management across a few variables.",
+      "adequacy_evidence": "Current AI agents with calendar and CRM integrations can reliably manage and update this limited context within an episode without meaningful loss or confusion.",
+      "_timestamp": "2026-04-06T01:28:11"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Answering phone calls requires near-immediate conversational responses, and scheduling is typically done in real time while the caller is on the line.",
+      "adequacy_evidence": "Modern LLM-based agents with speech interfaces can respond fluidly in real time and handle scheduling logic without needing slow, extended reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T01:28:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Errors in answering phones or scheduling appointments for animal care typically lead to minor inconveniences such as double-bookings or delays, which are easily correctable and rarely have serious consequences.",
+      "adequacy_evidence": "Current AI systems, especially with standard scheduling software and confirmation workflows, can achieve sufficiently low residual error rates, and any remaining mistakes are unlikely to pose significant risk after normal checks.",
+      "_timestamp": "2026-04-06T01:28:12"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments requires access to existing calendars, client contact details, and possibly prior visit history, but does not demand deep or complex longitudinal tracking.",
+      "adequacy_evidence": "Current systems (CRMs, scheduling software, and integrated AI agents) reliably store and retrieve this information across sessions, and LLM-based agents can effectively use these tools without major gaps.",
+      "_timestamp": "2026-04-06T01:28:12"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves spoken phone conversations (audio input/output), requiring speech recognition and generation, though it can be mediated through transcription into text.",
+      "adequacy_evidence": "Current AI systems with speech-to-text and text-to-speech handle routine phone interactions and scheduling reliably, with mature tooling for call handling and calendar integration.",
+      "_timestamp": "2026-04-06T01:28:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from answering phones or scheduling appointments in animal care settings. This is a routine administrative function without licensure or mandated human involvement.",
+      "_timestamp": "2026-04-06T01:28:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments and answering calls produces outputs (times, dates, client details) that are easily cross-checked against calendars and confirmed with clients; errors are immediately visible and correctable.",
+      "adequacy_evidence": "AI systems may occasionally mishear or mis-enter details, but these mistakes are straightforward to detect via routine confirmation (e.g., calendar review or client verification), requiring minimal effort.",
+      "_timestamp": "2026-04-06T01:28:12"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves direct interaction with clients (pet owners) who rely on the information and scheduling, and may have mild preferences about how communication is handled.",
+      "adequacy_evidence": "Automated phone systems and online scheduling are already widely accepted in similar service contexts, and most clients are comfortable interacting with AI for routine booking tasks.",
+      "_timestamp": "2026-04-06T01:28:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1081.02",
+  "task_id": 15902,
+  "task_statement": "Compute reporting metrics, such as on-time delivery rates, order fulfillment rates, or inventory turns.",
+  "occupation_title": "Logistics Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Computing metrics such as delivery rates or inventory turns involves analyzing data in logistics databases, spreadsheets, or analytics software, which can be done entirely on a computer without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While core calculations follow explicit formulas, analysts often need experience to handle edge cases like missing data, inconsistent timestamps, or defining what counts as 'on-time' in ambiguous operational contexts.",
+      "adequacy_evidence": "Given clear definitions and access to data, current AI agents can reliably implement these calculations and apply consistent rules, with minimal need for human-like experiential judgment.",
+      "_timestamp": "2026-04-05T21:56:47"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Computing logistics metrics involves multi-step workflows (data extraction, cleaning, aggregation, and calculation) where consistency across steps matters but sequences are not deeply interdependent or long.",
+      "adequacy_evidence": "Well-scaffolded AI agents with code execution and data tools can reliably maintain coherence across these moderate-length pipelines, with minimal degradation over the required sequence length.",
+      "_timestamp": "2026-04-05T21:56:47"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While the metrics are standard, their precise definitions (e.g., what counts as 'on-time' or how to calculate inventory turns) often vary by organization and require some contextual interpretation.",
+      "adequacy_evidence": "Current AI agents can reliably infer likely definitions or request clarification, and once specified, can consistently apply the correct formulas without difficulty.",
+      "_timestamp": "2026-04-05T21:56:48"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves standard, well-defined quantitative formulas (e.g., on-time delivery, fill rates, inventory turns) applied to structured logistics data, with limited variation in underlying process across contexts.",
+      "adequacy_evidence": "There is abundant coverage in training data (textbooks, ERP documentation, examples, synthetic data), including step-by-step computations, making all relevant instances well-represented and accessible.",
+      "_timestamp": "2026-04-05T21:56:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing logistics metrics like delivery rates or inventory turns relies on structured numerical and tabular data, which are text-based and do not require multimodal inputs or outputs.",
+      "adequacy_evidence": "Current AI systems handle numerical and tabular data processing well within text-based environments, with no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-05T21:56:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing logistics reporting metrics like on-time delivery or inventory turns is typically done in batch or periodic reporting contexts where minutes to hours of latency are acceptable.",
+      "adequacy_evidence": "Current AI systems can easily perform these calculations and aggregations well within the available time, with no meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-05T21:56:48"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Computing logistics metrics involves handling structured datasets (orders, timestamps, inventory levels) and performing joins, filters, and aggregations across multiple fields within a single workflow.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., SQL, pandas) reliably manage and process such structured data without significant context loss, as operations can be offloaded to external systems rather than relying on internal memory.",
+      "_timestamp": "2026-04-05T21:56:48"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "These metrics are computed from existing logistics databases (e.g., order histories, inventory records) and do not require the analyst to retain cross-session state; each computation can be performed from current system data.",
+      "adequacy_evidence": "Modern AI systems can access and query persistent data stores or dashboards directly, so there is no meaningful gap in cross-session memory for this task.",
+      "_timestamp": "2026-04-05T21:56:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is a back-end analytical computation of logistics metrics, typically consumed internally where the identity of the performer is not salient.",
+      "adequacy_evidence": "Organizations already accept automated systems and software for computing such metrics, so AI involvement would not face stakeholder resistance.",
+      "_timestamp": "2026-04-05T21:56:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in logistics metrics can misinform operational decisions and performance evaluations, but they are typically detected over time and rarely cause irreversible harm from a single instance.",
+      "adequacy_evidence": "These metrics are highly structured and easily auditable against source data, so with standard validation checks AI-generated outputs leave little residual risk.",
+      "_timestamp": "2026-04-05T21:56:50"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "These metrics are formulaic and can be recomputed or cross-checked against source data, but verifying correctness often requires inspecting data definitions, filters, and aggregation logic.",
+      "adequacy_evidence": "AI can generate correct calculations but is prone to mistakes in data selection or logic, so routine validation (e.g., reconciliation queries, sanity checks) is still needed.",
+      "_timestamp": "2026-04-05T21:56:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from computing logistics reporting metrics; this is a routine analytical task with no mandated human decision-maker. Any applicable rules (e.g., data privacy or internal controls) govern data handling, not who or what performs the computation.",
+      "_timestamp": "2026-04-05T21:56:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

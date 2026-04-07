@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4141.00",
+  "task_id": 20141,
+  "task_statement": "Process loan applications.",
+  "occupation_title": "New Accounts Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Processing loan applications is largely done through digital banking systems by reviewing applicant data, entering information, and communicating electronically, but some cases still involve handling physical documents or in-branch verification."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing loan applications follows defined policies and criteria, but requires interpreting incomplete information, assessing applicant credibility, and applying context-dependent judgment (e.g., borderline credit cases or exceptions).",
+      "adequacy_evidence": "Current agents can apply explicit rules and flag issues, but often struggle with nuanced judgment and implicit risk tolerance, requiring human review to resolve edge cases and latent criteria.",
+      "_timestamp": "2026-04-06T04:31:57"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan application processing spans varied applicant profiles, financial histories, and loan products, but follows relatively standardized underwriting frameworks and documentation patterns.",
+      "adequacy_evidence": "Large volumes of financial, credit, and underwriting data exist, and processes are well-documented, but proprietary datasets (e.g., internal risk models, edge-case adjudications) limit full coverage; these gaps are partially addressable via synthesis and fine-tuning.",
+      "_timestamp": "2026-04-06T04:31:57"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing loan applications follows standardized criteria (credit scores, income verification, policy thresholds) but includes some case-based judgment in borderline approvals, detecting inconsistencies, or escalating potential fraud.",
+      "adequacy_evidence": "Current AI agents can apply explicit rules and flag anomalies well, but show weaker calibration in nuanced edge cases (e.g., subtle fraud patterns or contextual risk factors) that experienced clerks recognize.",
+      "_timestamp": "2026-04-06T04:31:57"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Processing loan applications involves a multi-step workflow (collecting applicant data, verifying documents, checking credit, ensuring compliance, and recording decisions) where each step builds on prior information.",
+      "adequacy_evidence": "Well-scaffolded AI agents can manage such structured workflows, but over multiple steps they may exhibit some error accumulation or missed constraints, especially when handling exceptions or incomplete data.",
+      "_timestamp": "2026-04-06T04:31:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Loan applications are largely processed as discrete cases using information provided in the application and external databases (e.g., credit bureaus), not relying on memory of prior cases by the clerk.",
+      "adequacy_evidence": "Current AI systems can access persistent records through databases or integrations, so there is no meaningful gap in cross-session memory for this task.",
+      "_timestamp": "2026-04-06T04:31:59"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Processing loan applications involves reviewing multiple structured inputs (forms, credit reports, financial data) and tracking key fields across them, but the information is typically standardized and bounded per application.",
+      "adequacy_evidence": "Current AI agents with tool use and structured data handling can reliably store, retrieve, and cross-reference these inputs within a session without significant loss or drift.",
+      "_timestamp": "2026-04-06T04:31:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Processing loan applications is typically a back-office task with turnaround times ranging from minutes to hours or longer, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI agents can perform document review, data extraction, and eligibility checks well within acceptable timeframes without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-06T04:31:59"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan processing often involves reviewing scanned documents such as IDs, pay stubs, and forms, requiring basic image/OCR handling, though much of the workflow is structured text and data entry.",
+      "adequacy_evidence": "Current agents can handle standard document parsing and OCR reasonably well but still struggle with low-quality scans, varied formats, or subtle visual details, leading to moderate reliability gaps.",
+      "_timestamp": "2026-04-06T04:32:00"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in processing loan applications can lead to financial loss, compliance violations, or customer harm, but institutions typically have layered checks and can remediate most mistakes, making occasional residual errors survivable.",
+      "adequacy_evidence": "Even with standard verification steps, AI systems may still miss nuanced discrepancies or edge-case compliance issues, leaving a non-trivial but not catastrophic level of residual risk.",
+      "_timestamp": "2026-04-06T04:32:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan application processing involves structured data checks (completeness, consistency, eligibility rules) that can be audited with checklists and system validations, but some errors (e.g., misinterpreted documents) require human review and are not instantly obvious.",
+      "adequacy_evidence": "Current AI can automate extraction and rule-checking but still makes non-trivial errors in document interpretation and edge cases, requiring routine human verification to ensure accuracy.",
+      "_timestamp": "2026-04-06T04:32:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There is no explicit U.S. law or regulation prohibiting AI from processing loan applications; automated underwriting and decision systems are widely permitted. Regulations like ECOA and FCRA impose fairness, transparency, and notice requirements, but they do not mandate a human decision-maker.",
+      "_timestamp": "2026-04-06T04:32:02"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan application processing involves interaction with applicants and internal stakeholders, but much of the work is back-office and does not rely heavily on personal authority or rapport.",
+      "adequacy_evidence": "Automated and AI-assisted loan processing is already common, though some applicants may distrust AI decisions due to fairness or transparency concerns, leading to moderate resistance.",
+      "_timestamp": "2026-04-06T04:32:03"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.01",
+  "task_id": 16257,
+  "task_statement": "Develop or implement data analysis algorithms.",
+  "occupation_title": "Biostatisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Developing or implementing data analysis algorithms is done using computers and statistical software to write, test, and refine code or mathematical procedures, which can be performed entirely remotely."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Biostatistical algorithm development spans diverse domains (clinical trials, observational studies, genomics, longitudinal data) with varied data structures, assumptions, and edge cases, requiring broad distributional coverage.",
+      "adequacy_evidence": "There is extensive public literature, code repositories, and some open datasets covering many standard methods, but important real-world clinical data distributions and edge cases remain partially inaccessible due to privacy and sparsity.",
+      "_timestamp": "2026-04-06T00:00:37"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing or implementing biostatistical algorithms involves multi-step workflows (problem formulation, model selection, coding, validation, iteration) where consistency across steps matters but is not typically extremely long-horizon or tightly coupled like large system engineering.",
+      "adequacy_evidence": "LLM-based agents can handle multi-step analytical workflows with tooling, but they show some degradation over longer sequences (e.g., losing constraints, introducing small inconsistencies across iterations), especially in extended development and validation cycles.",
+      "_timestamp": "2026-04-06T00:00:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing biostatistical algorithms requires nuanced judgment about model selection, assumptions, bias correction, and alignment with biomedical context, often relying on experience with real-world data pathologies and study designs.",
+      "adequacy_evidence": "Current AI agents can replicate many standard modeling choices and workflows but still show gaps in handling subtle context-dependent issues (e.g., causal assumptions, edge-case biases), indicating incomplete tacit calibration.",
+      "_timestamp": "2026-04-06T00:00:39"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing data analysis algorithms in biostatistics requires interpreting study goals, endpoints, regulatory standards, and domain-specific constraints that are often only partially specified and evolve with stakeholder input.",
+      "adequacy_evidence": "Current AI agents can infer general analytical goals and propose reasonable methods, but often miss nuanced clinical, regulatory, or study-design-specific criteria, requiring iterative human clarification.",
+      "_timestamp": "2026-04-06T00:00:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing or implementing biostatistical algorithms requires tracking complex datasets, variable definitions, modeling assumptions, intermediate results, and code logic within a single workflow, where omissions can materially affect outcomes.",
+      "adequacy_evidence": "Well-scaffolded agents with tools can manage large contexts via external memory and code execution, but still exhibit occasional context loss or misalignment across long analytical pipelines.",
+      "_timestamp": "2026-04-06T00:00:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Developing or implementing data analysis algorithms is primarily a text- and code-based activity involving mathematical reasoning and structured data, with minimal reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Since the task is fundamentally text/code-centric, current AI agents fully meet its minimal multimodal requirements without limitation.",
+      "_timestamp": "2026-04-06T00:00:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Algorithm development in biostatistics is typically embedded in ongoing studies, requiring reuse of prior model choices, data preprocessing decisions, and project-specific assumptions across sessions, but much of this is externally documented in code and reports.",
+      "adequacy_evidence": "Current agents can leverage repositories, documentation, and retrieval systems to approximate project memory, but they still show gaps in consistently maintaining and updating evolving context across longer, multi-phase analyses.",
+      "_timestamp": "2026-04-06T00:00:40"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Developing or implementing data analysis algorithms in biostatistics is typically an offline task where minutes to hours (or longer) are acceptable for careful design, testing, and validation.",
+      "adequacy_evidence": "Current AI agents can take sufficient time for extended reasoning, code generation, and iteration without meaningful degradation from latency constraints, as speed is not a limiting factor.",
+      "_timestamp": "2026-04-06T00:00:40"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from developing or implementing data analysis algorithms in biostatistics. While regulated domains (e.g., FDA submissions) require human accountability and validation, they do not bar AI use in the underlying analytical work.",
+      "_timestamp": "2026-04-06T00:00:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in biostatistical algorithms (e.g., model specification, assumptions, numerical stability, or bias) can be subtle and require expert review, validation on real data, and sometimes long feedback loops to detect.",
+      "adequacy_evidence": "Current AI systems can generate plausible but flawed statistical code or methods, and given the difficulty of detecting such issues, extensive expert verification and testing are still required.",
+      "_timestamp": "2026-04-06T00:00:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task feeds into work used by researchers, clinicians, and regulators who rely on the resulting algorithms, but direct interaction or personal trust in the developer is not central to task execution.",
+      "adequacy_evidence": "Stakeholders generally focus on methodological validity, reproducibility, and validation rather than who or what produced the algorithm, and AI-assisted development is already broadly acceptable in this context.",
+      "_timestamp": "2026-04-06T00:00:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in data analysis algorithms for biostatistics can lead to incorrect clinical or public health conclusions, affecting patient safety, regulatory approval, and scientific validity, so residual errors must be extremely rare.",
+      "adequacy_evidence": "Even with standard validation (simulation studies, peer review, benchmarking), AI-generated methods may still harbor subtle statistical flaws or mis-specifications that are hard to detect, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T00:00:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

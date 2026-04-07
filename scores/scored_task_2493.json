@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3031.00",
+  "task_id": 2493,
+  "task_statement": "Code documents according to company procedures.",
+  "occupation_title": "Bookkeeping, Accounting, and Auditing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Coding documents (e.g., invoices or receipts) to accounting categories is typically done within accounting or document management software, but in many workplaces it still involves handling or reviewing physical paperwork before entering or marking codes."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different document types (invoices, receipts, expense reports) and company-specific coding schemas, creating moderate variation but within structured accounting conventions.",
+      "adequacy_evidence": "While general accounting coding practices are well-represented in public and synthetic data, many company-specific procedures and edge cases are embedded in private internal documents, leaving partial but tractable coverage gaps.",
+      "_timestamp": "2026-04-06T05:14:39"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Document coding largely follows explicit company procedures and chart-of-accounts rules, but edge cases (e.g., ambiguous transactions or inconsistent documentation) require some experience-based judgment.",
+      "adequacy_evidence": "Current agents can apply codified rules reliably but still show gaps in handling ambiguous or context-sensitive cases that depend on subtle organizational conventions or prior experience.",
+      "_timestamp": "2026-04-06T05:14:40"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Company procedures and charts of accounts provide explicit guidance, but clerks must still interpret ambiguous documents, handle edge cases, and infer correct classifications based on context.",
+      "adequacy_evidence": "Agents can apply codified rules and handle common cases, but they often misinterpret nuanced or atypical documents without human clarification, requiring iteration.",
+      "_timestamp": "2026-04-06T05:14:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves referencing company coding procedures, document contents, and possibly multiple classification rules within a single episode, requiring moderate tracking and retrieval of relevant details.",
+      "adequacy_evidence": "Well-scaffolded agents with retrieval and structured workflows can reliably manage these moderate information demands without significant context loss or drift.",
+      "_timestamp": "2026-04-06T05:14:40"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Coding documents involves following multi-step procedures (reviewing content, assigning codes, cross-checking rules), but each document is handled in a relatively short, repeatable sequence with limited interdependence across steps.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably follow procedural workflows of this length without noticeable degradation, maintaining consistency across steps within each document.",
+      "_timestamp": "2026-04-06T05:14:41"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves processing invoices, receipts, and forms that may be scanned images or PDFs, requiring some visual parsing in addition to text interpretation.",
+      "adequacy_evidence": "Current agents handle clean digital documents and basic OCR well but can be unreliable with low-quality scans, handwritten elements, or complex layouts.",
+      "_timestamp": "2026-04-06T05:14:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Coding documents in bookkeeping contexts is typically a batch or workflow task where minutes per item are acceptable and strict real-time responsiveness is not required.",
+      "adequacy_evidence": "Current AI systems can easily perform document coding within acceptable timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T05:14:41"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Coding documents follows established company procedures and reference materials; each instance can be completed using current documentation without relying on accumulated case history.",
+      "adequacy_evidence": "Agents can readily access and reuse procedural documents or knowledge bases, so no meaningful cross-session memory gap exists for this task.",
+      "_timestamp": "2026-04-06T05:14:42"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements that prohibit AI from coding documents according to company procedures in bookkeeping or accounting clerical work. Existing regulations (e.g., data privacy or financial controls) govern how data is handled, not who or what performs the coding.",
+      "_timestamp": "2026-04-06T05:14:43"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Coding documents can be checked against established company procedures, charts of accounts, and supporting documentation, but doing so requires accounting knowledge and careful review rather than trivial automated detection.",
+      "adequacy_evidence": "Current AI can perform routine coding but still makes classification and context errors on edge cases, so human review is typically needed to verify correctness and ensure compliance with internal standards.",
+      "_timestamp": "2026-04-06T05:14:43"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is an internal clerical function where coded documents are used within accounting systems, with no direct stakeholder interaction requiring performer identity.",
+      "adequacy_evidence": "Since outputs are standardized and consumed impersonally within internal processes, stakeholders are indifferent to whether a human or AI performs the task.",
+      "_timestamp": "2026-04-06T05:14:43"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Miscoding documents can affect financial records and reporting, but errors are typically detectable through reconciliations and audits and are usually reversible without severe consequences.",
+      "adequacy_evidence": "With standard checks like rule-based validations, cross-referencing, and periodic audits, AI miscoding errors are likely to be caught, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T05:14:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

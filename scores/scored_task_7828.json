@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1221.00",
+  "task_id": 7828,
+  "task_statement": "Refer patient to medical specialist or other practitioner when necessary.",
+  "occupation_title": "Pediatricians, General",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Referrals are typically made through electronic health record systems, digital orders, or electronic communication with specialists. However, some referrals occur during in-person visits with paper forms or verbal coordination, so not all instances are fully digital."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining when referral is necessary depends on implicit clinical thresholds, evolving patient context, risk tolerance, and nuanced interpretation of symptoms, guidelines, and family preferences rather than explicit rules.",
+      "adequacy_evidence": "Current AI agents struggle to reliably infer these latent criteria and contextual tradeoffs in real clinical settings, often missing subtle cues or over/under-referring without iterative human oversight.",
+      "_timestamp": "2026-04-06T00:00:32"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Referral decisions require nuanced clinical judgment about symptom severity, atypical presentations, parental concern, and risk tolerance that are not fully captured in guidelines and are refined through experience.",
+      "adequacy_evidence": "Current AI can follow referral guidelines and recognize red flags but lacks consistent calibration in borderline or context-sensitive cases, especially involving subtle presentation or clinician risk judgment.",
+      "_timestamp": "2026-04-06T00:00:32"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Referral decisions span a highly heterogeneous set of pediatric conditions, severities, comorbidities, social contexts, and local resource constraints, with many edge cases and context-sensitive thresholds.",
+      "adequacy_evidence": "Clinical guidelines, textbooks, and case discussions provide substantial coverage of referral criteria and reasoning, but real-world variation (e.g., local specialist availability, insurance constraints, nuanced presentations) is partly captured in private or sparse data, leaving moderate gaps.",
+      "_timestamp": "2026-04-06T00:00:33"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short multi-step process: evaluating the patient\u2019s condition, deciding referral necessity, selecting an appropriate specialist, and communicating/documenting the referral.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain coherence across these limited, loosely coupled steps without meaningful degradation in performance.",
+      "_timestamp": "2026-04-06T00:00:33"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions require integrating multiple pieces of patient information (history, symptoms, test results, comorbidities, and possibly insurance constraints) within a single clinical encounter, but the volume is typically bounded and structured within an EHR.",
+      "adequacy_evidence": "Current agents can summarize and retrieve relevant patient data reasonably well, but may miss or underweight subtle but important details (e.g., rare comorbidities or nuanced clinical cues), leading to moderate reliability gaps.",
+      "_timestamp": "2026-04-06T00:00:34"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions often depend on accumulated patient history (e.g., prior symptoms, treatments, chronic conditions, previous referrals), but do not typically require deeply complex longitudinal state beyond standard medical records.",
+      "adequacy_evidence": "Current AI systems can integrate with EHRs and retrieve prior patient data, but may inconsistently surface the most relevant longitudinal context or maintain nuanced, evolving clinical narratives across encounters.",
+      "_timestamp": "2026-04-06T00:00:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Referral decisions are typically made during or after a consultation, allowing minutes of deliberation rather than requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can generate referral recommendations well within this time window without needing to truncate reasoning, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T00:00:35"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Referral decisions can incorporate non-text inputs such as physical exam findings (e.g., visual signs, developmental cues) or imaging/lab results, but these are typically summarized into clinical notes and do not centrally depend on raw multimodal interpretation.",
+      "adequacy_evidence": "Current AI systems can effectively use structured and summarized clinical information for referral decisions, and while multimodal perception may be imperfect, it is not a primary requirement for this task.",
+      "_timestamp": "2026-04-06T00:00:36"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect referral decisions (failing to refer or inappropriate referral) can delay diagnosis or treatment of serious pediatric conditions, leading to significant or irreversible harm even if rare.",
+      "adequacy_evidence": "Even with review, AI systems may miss subtle clinical cues or context that influence referral thresholds, leaving some non-negligible residual risk, though oversight can mitigate many obvious errors.",
+      "_timestamp": "2026-04-06T00:00:36"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Referrals depend heavily on patient/parent trust in the pediatrician\u2019s judgment and on the physician\u2019s professional authority to guide care transitions and coordinate with specialists.",
+      "adequacy_evidence": "Patients and healthcare systems expect referrals to come from a licensed physician; an AI making referral decisions would face strong trust, liability, and legitimacy barriers that would undermine acceptance.",
+      "_timestamp": "2026-04-06T00:00:36"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether a referral is appropriate depends on nuanced clinical judgment, patient history, and evolving symptoms; incorrect referrals (over- or under-referral) may not be immediately evident and often require expert review or follow-up outcomes to detect.",
+      "adequacy_evidence": "Current AI can suggest referrals but lacks consistently reliable clinical judgment, so outputs require thorough physician verification; errors are not always obvious and impose a high checking burden before safe use.",
+      "_timestamp": "2026-04-06T00:00:36"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Making patient referrals is part of practicing medicine and typically requires a licensed physician\u2019s clinical judgment and authorization; U.S. medical practice laws mandate that such decisions be made or approved by a licensed provider. AI cannot autonomously perform this task without physician oversight or sign-off.",
+      "_timestamp": "2026-04-06T00:00:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

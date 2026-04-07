@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-1031.00",
+  "task_id": 8598,
+  "task_statement": "Plan and establish transportation routes.",
+  "occupation_title": "First-Line Supervisors of Transportation and Material-Moving Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Transportation route planning is typically done using computers, mapping systems, and logistics software, allowing it to be performed remotely. However, some instances may involve on-site coordination with drivers, terminals, or local infrastructure considerations that require physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Route planning involves experience-based adjustments for local traffic patterns, driver behavior, informal constraints, and real-time contingencies that are not fully captured in formal rules.",
+      "adequacy_evidence": "AI systems can optimize routes using rich data and models, but they still lack consistent calibration for nuanced, context-specific factors like informal practices or rapidly shifting on-the-ground conditions.",
+      "_timestamp": "2026-04-06T04:00:26"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Route planning spans highly heterogeneous conditions (geography, traffic patterns, vehicle types, regulatory constraints, weather, and shifting demand), creating a long-tailed distribution of scenarios.",
+      "adequacy_evidence": "Extensive map data, logistics datasets, and simulation environments exist, but fine-grained operational data (e.g., company-specific constraints, real-time disruptions) are often proprietary or sparse, leaving some gaps that can only be partially filled via synthesis.",
+      "_timestamp": "2026-04-06T04:00:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Planning transportation routes involves multiple interdependent steps (analyzing constraints, sequencing stops, allocating resources), but these are structured and modular rather than deeply long-horizon or tightly coupled chains.",
+      "adequacy_evidence": "Modern AI systems with routing algorithms and optimization tools can maintain consistent performance across these steps, with little degradation over sequence length due to the task\u2019s structured, decomposable nature.",
+      "_timestamp": "2026-04-06T04:00:27"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Route planning benefits from historical data such as past route performance, recurring constraints, and evolving operational preferences, but individual planning instances can often be executed with current data inputs.",
+      "adequacy_evidence": "Current AI systems can reliably use external databases and routing software to store and retrieve cross-session logistics data, so persistent memory needs are well-supported.",
+      "_timestamp": "2026-04-06T04:00:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Route planning requires integrating many concurrent variables (locations, delivery windows, vehicle capacities, traffic conditions, regulations) and maintaining consistency across them within a single planning episode.",
+      "adequacy_evidence": "Agents with tools can track and optimize multiple constraints, but still show occasional context loss or simplification errors when juggling many interacting variables.",
+      "_timestamp": "2026-04-06T04:00:28"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Route planning involves balancing cost, time, capacity, safety, regulatory constraints, and shifting stakeholder priorities, many of which are not fully explicit and require contextual judgment.",
+      "adequacy_evidence": "Agents can optimize routes with given parameters, but often miss implicit priorities (e.g., driver preferences, local conditions, informal constraints) and require human iteration to fully align with real-world objectives.",
+      "_timestamp": "2026-04-06T04:00:28"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Planning transportation routes relies on spatial information such as maps, geographic layouts, and sometimes real-time visual data (e.g., traffic conditions), which are not purely text-based.",
+      "adequacy_evidence": "Current agents can use mapping APIs and structured spatial data effectively, but they are less reliable in complex, dynamic, or fine-grained spatial reasoning scenarios involving multiple constraints or real-time visual inputs.",
+      "_timestamp": "2026-04-06T04:00:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Route planning is typically a deliberative task where minutes to hours are acceptable for optimization, analysis, and coordination rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can generate high-quality routing plans well within these timeframes, so latency does not meaningfully constrain performance.",
+      "_timestamp": "2026-04-06T04:00:29"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Route plans can be checked using maps, routing software, and constraint validation (distance, timing, capacity), but verifying all real-world constraints (traffic patterns, regulations, edge cases) requires domain knowledge and careful review.",
+      "adequacy_evidence": "Current AI can generate plausible routes but often misses nuanced constraints (local restrictions, dynamic conditions), so human review and adjustment are still routinely needed to ensure reliability.",
+      "_timestamp": "2026-04-06T04:00:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from planning or establishing transportation routes; such functions are already widely performed by routing software. Human oversight may be customary, but not legally mandated for this task.",
+      "_timestamp": "2026-04-06T04:00:30"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Route planning errors can lead to delays, increased costs, missed deliveries, or regulatory issues, but are usually correctable and rarely catastrophic after standard checks.",
+      "adequacy_evidence": "AI systems can generate strong route plans with optimization tools, but may still miss edge cases (e.g., local restrictions, dynamic conditions), leaving some residual risk even after review.",
+      "_timestamp": "2026-04-06T04:00:30"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Route planning affects drivers, dispatchers, and customers who rely on the output, and coordination with these stakeholders is necessary, though personal authority or identity is not central.",
+      "adequacy_evidence": "Many organizations already use algorithmic routing tools, but some stakeholders (e.g., drivers or supervisors) may resist fully AI-driven planning or prefer human oversight, especially in complex or exception-heavy situations.",
+      "_timestamp": "2026-04-06T04:00:30"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

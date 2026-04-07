@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2034.00",
+  "task_id": 464,
+  "task_statement": "Record, process, and maintain patient data or treatment records and prepare reports.",
+  "occupation_title": "Radiologic Technologists and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Recording and processing patient data and preparing reports are typically done using electronic health record systems and computer software, but in practice radiologic technologists often perform this work onsite within clinical workflows and may occasionally handle paper records or coordinate with in-person procedures."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied patient records, imaging modalities, reporting formats, and institutional workflows, but these follow standardized medical documentation and coding practices.",
+      "adequacy_evidence": "While extensive medical documentation standards and examples exist, real-world EHR data is often private and access-limited, leaving some edge cases and workflow variations underrepresented but partially addressable via synthetic or de-identified data.",
+      "_timestamp": "2026-04-06T00:54:24"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recording, processing, and maintaining patient data and preparing reports are largely governed by standardized documentation protocols, coding systems, and explicit procedural rules.",
+      "adequacy_evidence": "Current AI systems can reliably follow structured documentation rules, extract and organize clinical data, and generate reports with minimal need for experience-based judgment.",
+      "_timestamp": "2026-04-06T00:54:25"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recording and maintaining patient and treatment data follows standardized protocols, coding systems, and regulatory requirements, but some context-dependent judgment is needed for completeness and appropriate categorization.",
+      "adequacy_evidence": "Current AI systems can reliably follow structured documentation standards and infer typical reporting expectations from context, with minimal difficulty resolving remaining ambiguities.",
+      "_timestamp": "2026-04-06T00:54:25"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (data entry, verification, updating records, and report generation) where consistency across steps matters, but sequences are typically bounded and routine rather than highly interdependent over long horizons.",
+      "adequacy_evidence": "Current AI agents can generally manage structured, tool-supported workflows like record handling, but may show moderate degradation over longer sequences through missed updates, formatting inconsistencies, or dropped context.",
+      "_timestamp": "2026-04-06T00:54:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintaining patient data and treatment records requires longitudinal tracking of individual patients across multiple visits, including prior imaging, reports, and updates over time.",
+      "adequacy_evidence": "Current AI systems can rely on established electronic health record (EHR) databases and retrieval tools to store and access persistent patient data across sessions, so long-term memory needs are well-supported.",
+      "_timestamp": "2026-04-06T00:54:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves handling multiple structured and semi-structured data elements (patient demographics, imaging results, treatment notes) within a single workflow, requiring organization and accurate retrieval but not extreme volume or rapid change.",
+      "adequacy_evidence": "Current agents can manage structured data and generate reports with tool support, but may lose or misalign details across fields or steps, especially when synthesizing multiple inputs into coherent records.",
+      "_timestamp": "2026-04-06T00:54:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Documentation and report preparation must be completed within clinical workflow timeframes (often minutes), but not in strict real-time; short delays are generally acceptable.",
+      "adequacy_evidence": "Current AI systems can generate, structure, and process clinical documentation well within these time limits without needing to truncate reasoning, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T00:54:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces medical records and reports used by clinicians, administrators, and indirectly patients, so stakeholders rely on the output, but do not directly engage with or depend on the performer\u2019s identity.",
+      "adequacy_evidence": "Healthcare systems already widely accept automated and AI-assisted data entry and record management tools, with minimal concern about whether a human or AI produced the records as long as accuracy is maintained.",
+      "_timestamp": "2026-04-06T00:54:28"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves text and structured data entry but may incorporate references to imaging outputs (e.g., radiographs, CT scans) and associated metadata, making multimodal inputs relevant but not central.",
+      "adequacy_evidence": "Current AI systems can reliably handle structured records and integrate basic image-linked information, so multimodal demands for this task are adequately met.",
+      "_timestamp": "2026-04-06T00:54:28"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in patient records (e.g., incorrect imaging results, misidentified patients, or incomplete documentation) can directly impact diagnosis, treatment decisions, and legal compliance, making even rare residual errors potentially serious.",
+      "adequacy_evidence": "Even after standard validation (EHR checks, human review), AI systems can still introduce subtle documentation errors or misinterpret structured/unstructured data, leaving some non-negligible residual risk in clinical records.",
+      "_timestamp": "2026-04-06T00:54:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Patient records and radiologic reports are structured and often cross-checked against imaging, orders, and EHR systems, but verifying accuracy still requires clinical attention to detail and domain knowledge to catch mismatches or omissions.",
+      "adequacy_evidence": "AI can assist with data entry and report drafting but still makes nontrivial errors (e.g., mislabeling, incorrect fields, inconsistencies), so routine human review and cross-checking remain necessary.",
+      "_timestamp": "2026-04-06T00:54:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "HIPAA and related healthcare regulations govern privacy, security, and accountability for patient data handling but do not prohibit AI systems from performing documentation or record-processing tasks. AI can be used as a tool under appropriate compliance frameworks (e.g., business associate agreements), with no explicit requirement that only humans perform these functions.",
+      "_timestamp": "2026-04-06T00:54:29"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

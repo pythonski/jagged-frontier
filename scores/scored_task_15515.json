@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3051.06",
+  "task_id": 15515,
+  "task_statement": "Identify and communicate power system emergencies.",
+  "occupation_title": "Hydroelectric Production Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Power system emergencies are typically identified through digital monitoring systems (e.g., SCADA alarms, control software) and communicated via phone, radio, or electronic messaging. However, some situations require on-site observation or coordination with personnel physically at the plant."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Emergency conditions in hydroelectric power systems are largely defined by established thresholds, alarms, and operating procedures, but some context-dependent judgment is needed for borderline or cascading conditions.",
+      "adequacy_evidence": "Current AI systems integrated with monitoring tools can reliably detect threshold breaches and follow predefined escalation protocols, with little difficulty inferring when and how to communicate emergencies.",
+      "_timestamp": "2026-04-06T04:12:16"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Identifying true power system emergencies requires interpreting noisy SCADA signals, understanding plant-specific behaviors, and distinguishing transient anomalies from critical faults\u2014skills built through experience and situational judgment beyond written procedures.",
+      "adequacy_evidence": "While AI agents can encode rules and learn patterns from historical data, they still lack robust calibration for rare, context-dependent edge cases and plant-specific nuances that experienced operators use to avoid false alarms or missed emergencies.",
+      "_timestamp": "2026-04-06T04:12:17"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Power system emergencies span a wide range of rare, context-specific events (e.g., grid instability, equipment failures, cascading outages) that vary by plant configuration, grid conditions, and environmental factors, creating a long-tailed distribution.",
+      "adequacy_evidence": "While training data exists via SCADA logs, incident reports, and power system simulators, many critical edge cases are rare and embedded in proprietary datasets, leaving some gaps that can only be partially filled through simulation and synthetic scenarios.",
+      "_timestamp": "2026-04-06T04:12:17"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves monitoring system indicators, diagnosing abnormal conditions, confirming an emergency, and communicating it to relevant stakeholders in a coordinated sequence, but the sequence is relatively short and operationally structured.",
+      "adequacy_evidence": "Frontier AI agents can generally maintain coherence across these moderate-length workflows, though performance may degrade under rapidly evolving conditions or when multiple concurrent signals must be integrated in real time.",
+      "_timestamp": "2026-04-06T04:12:17"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves continuously integrating and prioritizing multiple rapidly changing data streams (e.g., SCADA readings, alarms, grid conditions), where missing a single parameter or signal can lead to failure to detect an emergency.",
+      "adequacy_evidence": "Agents can aggregate and summarize multiple inputs with tooling, but may struggle with real-time high-frequency updates and maintaining perfectly accurate compressed state representations, leading to occasional missed or misprioritized signals.",
+      "_timestamp": "2026-04-06T04:12:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Emergency identification relies primarily on real-time telemetry and predefined thresholds, but benefits from access to historical incident logs, equipment status, and prior system behavior patterns.",
+      "adequacy_evidence": "Current AI systems can reliably integrate with persistent databases and monitoring systems to store and retrieve cross-session operational history, with minimal limitations for this task.",
+      "_timestamp": "2026-04-06T04:12:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interpreting control room displays, alarms, and sensor dashboards, which may include visual indicators and spatial layouts, though much information is also available as structured numeric/text data.",
+      "adequacy_evidence": "Current AI systems with integrations to telemetry and monitoring tools can reliably process structured data and even basic visual dashboards, so multimodal demands here are well within capability.",
+      "_timestamp": "2026-04-06T04:12:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Misidentifying or failing to communicate power system emergencies can lead to grid instability, equipment damage, widespread outages, or safety hazards, so even rare residual errors have severe consequences.",
+      "adequacy_evidence": "Current AI systems can still miss rare or novel failure patterns or misprioritize alerts, and even with monitoring and checks, the remaining error risk is too unpredictable and consequential for this high-stakes task.",
+      "_timestamp": "2026-04-06T04:12:20"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Power system emergencies are identified through SCADA data, alarms, and system indicators that allow cross-checking, but interpreting whether conditions constitute a true emergency requires domain expertise and situational judgment.",
+      "adequacy_evidence": "Current AI systems can analyze telemetry but may misinterpret edge cases or complex system states, requiring operators to routinely verify alerts against multiple data sources before acting.",
+      "_timestamp": "2026-04-06T04:12:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Power system emergencies (e.g., frequency deviations, outages, equipment failures) require near-instant recognition and communication to prevent cascading failures and ensure grid stability.",
+      "adequacy_evidence": "Well-integrated AI systems with real-time data streams and alerting can detect and communicate emergencies within milliseconds to seconds without requiring slow, deliberative reasoning.",
+      "_timestamp": "2026-04-06T04:12:20"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Communicating power system emergencies requires coordination with grid operators, regulators, and field crews who rely on the communicator\u2019s authority and credibility to take urgent action.",
+      "adequacy_evidence": "While AI-generated alerts could be technically accurate, stakeholders in critical infrastructure contexts are likely to require human oversight and may be hesitant to fully trust or act on AI-originated emergency communications.",
+      "_timestamp": "2026-04-06T04:12:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "NERC reliability standards (e.g., PER-003) require certified human system operators to be responsible for monitoring and communicating real-time grid emergencies. While AI tools can assist, regulations effectively require a certified human in the loop, creating partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-06T04:12:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

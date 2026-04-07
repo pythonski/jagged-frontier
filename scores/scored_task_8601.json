@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-1043.00",
+  "task_id": 8601,
+  "task_statement": "Dispatch personnel and vehicles in response to telephone or radio reports of emergencies.",
+  "occupation_title": "First-Line Supervisors of Material-Moving Machine and Vehicle Operators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Dispatching personnel and vehicles is typically done through phones, radios, or computerized dispatch systems and could often be performed remotely. However, many real-world settings rely on on-site radio consoles, coordination with yard/facility operations, or immediate physical oversight, making a substantial share require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Emergency dispatch spans highly heterogeneous, long-tailed situations (different incident types, locations, resource constraints, and evolving conditions) requiring coverage of many edge cases and contextual factors.",
+      "adequacy_evidence": "While there are substantial training sources (dispatch logs, 911 transcripts, SOPs, and simulators), much real-world data is sensitive and unevenly available, and some rare high-stakes scenarios are underrepresented, though partially addressable via simulation and synthesis.",
+      "_timestamp": "2026-04-06T02:38:45"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Emergency dispatch requires interpreting incomplete, noisy reports, prioritizing incidents, and balancing implicit goals like safety, urgency, and resource constraints that are highly context-dependent.",
+      "adequacy_evidence": "Current agents can infer priorities and suggest dispatch plans from structured inputs, but they still struggle with ambiguous, rapidly evolving situations and implicit tradeoffs, often requiring human oversight to resolve uncertainties.",
+      "_timestamp": "2026-04-06T02:38:45"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dispatching requires situational judgment in prioritizing incidents, allocating limited resources, and adapting to evolving conditions, which often relies on experience beyond written protocols.",
+      "adequacy_evidence": "AI agents can follow dispatch rules and optimize routing, but they lack fully reliable calibration for nuanced, context-sensitive tradeoffs (e.g., ambiguous urgency, local conditions), leading to moderate gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T02:38:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple coordinated steps\u2014receiving reports, assessing urgency, selecting and dispatching resources, and updating assignments\u2014but these are typically bounded and episodic rather than extremely long chains.",
+      "adequacy_evidence": "AI agents can handle multi-step dispatch workflows but may show some degradation in maintaining consistent state and prioritization across evolving incidents, especially under dynamic, real-time conditions.",
+      "_timestamp": "2026-04-06T02:38:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatching benefits from knowledge of personnel availability, past incident patterns, and resource allocation history, but each emergency call is largely handled as a standalone event using current system state.",
+      "adequacy_evidence": "Current AI systems integrated with databases and dispatch software can reliably store and retrieve cross-session information like personnel status and incident logs, with minimal limitations for this task.",
+      "_timestamp": "2026-04-06T02:38:47"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on interpreting audio inputs from telephone or radio communications and often involves spatial reasoning using maps or location data to dispatch resources effectively.",
+      "adequacy_evidence": "Current agents handle standard speech-to-text and mapping tasks well, but performance can degrade with noisy radio transmissions, accents, or fast-paced, high-stakes cross-modal coordination.",
+      "_timestamp": "2026-04-06T02:38:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Emergency dispatch requires near-instant decisions (seconds) to allocate vehicles and personnel based on incoming reports, with delays directly impacting safety and outcomes.",
+      "adequacy_evidence": "AI agents can generate dispatch recommendations quickly, but complex, ambiguous, real-time scenarios may force reduced reasoning depth under tight latency, leading to occasional suboptimal allocations.",
+      "_timestamp": "2026-04-06T02:38:48"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Dispatching in emergencies directly affects response times and resource allocation, where even rare errors can lead to loss of life, injury, or major property damage.",
+      "adequacy_evidence": "Current AI systems can still misinterpret ambiguous reports, fail under novel crisis conditions, or make brittle prioritization decisions, leaving unacceptable residual risk even with human-in-the-loop checks.",
+      "_timestamp": "2026-04-06T02:38:49"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Many jurisdictions require certified human emergency dispatchers (e.g., 911 telecommunicators) and impose training, accountability, and liability standards, which implicitly limit fully autonomous AI dispatch. However, there is no uniform explicit federal prohibition on AI assistance, so restrictions are partial and context-dependent.",
+      "_timestamp": "2026-04-06T02:38:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves direct coordination with emergency callers and field personnel, where trust, clarity, and perceived authority of the dispatcher affect compliance and effectiveness.",
+      "adequacy_evidence": "While agencies and responders may accept AI-assisted dispatch, full replacement with an AI dispatcher would face notable resistance from both the public and professionals due to trust and accountability concerns.",
+      "_timestamp": "2026-04-06T02:38:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "Some errors (e.g., incorrect location, duplicate dispatch, unavailable units) can be caught with systems and operator oversight, but others like suboptimal prioritization or resource allocation may only become apparent after outcomes unfold.",
+      "adequacy_evidence": "Current AI systems would require continuous human monitoring because mistakes in interpreting reports or allocating resources are plausible and not always immediately obvious, creating a substantial verification burden in real time.",
+      "_timestamp": "2026-04-06T02:38:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Dispatching requires tracking multiple simultaneous incidents, vehicle locations, personnel availability, priorities, and evolving status updates from radio/phone in real time, where missing a detail can misallocate resources.",
+      "adequacy_evidence": "Current agents can structure and track multiple data streams with tooling, but still show weaknesses in reliably maintaining and updating rapidly changing state without omissions or inconsistencies under high concurrency.",
+      "_timestamp": "2026-04-06T02:39:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

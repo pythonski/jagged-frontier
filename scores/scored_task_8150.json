@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4011.00",
+  "task_id": 8150,
+  "task_statement": "Monitor daily stock prices and compute fluctuations to determine the need for additional collateral to secure loans.",
+  "occupation_title": "Brokerage Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Monitoring stock prices and calculating fluctuations to assess collateral needs is done using electronic market data and financial software, which can be accessed and analyzed entirely on a computer with internet access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different securities, loan agreements, and market conditions, but operates over well-structured financial data and standardized margin/collateral rules.",
+      "adequacy_evidence": "Extensive historical price data, margin requirement documentation, and worked financial examples are widely available, enabling comprehensive training coverage with existing pipelines.",
+      "_timestamp": "2026-04-06T05:05:32"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely governed by explicit rules (e.g., margin requirements, predefined collateral thresholds, and formulaic fluctuation calculations) with little need for experiential judgment once procedures are defined.",
+      "adequacy_evidence": "Current AI agents can reliably compute price changes, apply rule-based thresholds, and trigger collateral actions without needing tacit calibration, as the task is structured and procedural.",
+      "_timestamp": "2026-04-06T05:05:33"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a recurring multi-step process (data retrieval, calculation of price fluctuations, and threshold comparison), but each cycle is relatively short and loosely coupled rather than a long, tightly interdependent sequence.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute these short, structured workflows with tools (data feeds, calculations) without noticeable degradation over the sequence length required.",
+      "_timestamp": "2026-04-06T05:05:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple securities' price movements, loan exposures, and collateral thresholds within a single episode, requiring structured data handling and some state tracking but not extreme scale or heterogeneity.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, databases, code execution) can reliably manage, retrieve, and update this level of structured financial information without significant context loss.",
+      "_timestamp": "2026-04-06T05:05:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on defined financial rules (e.g., margin thresholds, collateral requirements), but some criteria\u2014like which fluctuation metrics to prioritize or how to handle edge cases\u2014depend on firm policies and context.",
+      "adequacy_evidence": "Current agents can apply explicit rules well but may miss institution-specific interpretations or implicit risk tolerances without iterative clarification or detailed guidance.",
+      "_timestamp": "2026-04-06T05:05:35"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring stock prices and computing fluctuations relies on numerical and textual financial data feeds; visual charts are optional rather than necessary for task completion.",
+      "adequacy_evidence": "Current AI agents handle structured financial data and calculations in text/numeric form without needing multimodal capabilities, so there is no shortfall.",
+      "_timestamp": "2026-04-06T05:05:35"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves daily monitoring and routine calculations, where minute-level or longer latency is acceptable and no real-time response is required.",
+      "adequacy_evidence": "Current AI systems can easily perform these computations well within the available time window without any need to truncate reasoning or sacrifice accuracy.",
+      "_timestamp": "2026-04-06T05:05:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking price changes over time and comparing against prior values and collateral thresholds, implying some dependence on historical data across sessions.",
+      "adequacy_evidence": "In practice, this history is stored in external financial systems and can be reliably retrieved via databases or APIs, which current AI agents can access without needing persistent internal memory.",
+      "_timestamp": "2026-04-06T05:05:35"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from monitoring stock prices or calculating collateral requirements. Financial institutions routinely automate these functions, provided they comply with general risk management and oversight obligations.",
+      "_timestamp": "2026-04-06T05:05:37"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily an internal analytical function (monitoring prices and calculating collateral needs) with outputs consumed impersonally by systems or internal staff, not requiring stakeholder engagement with the performer.",
+      "adequacy_evidence": "Since there are no meaningful stakeholder interactions tied to performer identity, acceptance of AI is already high and does not affect task effectiveness.",
+      "_timestamp": "2026-04-06T05:05:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Stock prices and fluctuation calculations are objective, numerically defined, and easily cross-checked against multiple reliable data feeds, making errors straightforward to detect with simple reconciliation or automated checks.",
+      "adequacy_evidence": "Current AI systems can reliably retrieve market data and perform arithmetic, and any residual errors (e.g., data source mismatches) are easily caught with basic validation, requiring minimal verification effort.",
+      "_timestamp": "2026-04-06T05:05:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Errors in assessing collateral needs can expose the firm to financial risk or regulatory violations, so even small residual mistakes after checking can have significant monetary and compliance consequences.",
+      "adequacy_evidence": "With automated data feeds, deterministic calculations, and reconciliation checks, AI systems can reduce residual errors to a level comparable to existing systems, making remaining risk acceptable.",
+      "_timestamp": "2026-04-06T05:05:38"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

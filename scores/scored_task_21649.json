@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1242.00",
+  "task_id": 21649,
+  "task_statement": "Plan and install upgrades of database management system software to enhance database performance.",
+  "occupation_title": "Database Administrators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Planning and installing database management system upgrades is performed through software tools, remote server access, and administrative interfaces. Even for on\u2011premise databases, the work is typically done via remote login from a computer without requiring physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different DBMS platforms (e.g., Oracle, MySQL, PostgreSQL), deployment environments, and upgrade paths, but follows broadly standardized procedures and documented best practices.",
+      "adequacy_evidence": "Extensive documentation, runbooks, and examples exist, but coverage of rare failure modes, proprietary enterprise setups, and nuanced rollback scenarios is thinner and often locked in internal logs or experience.",
+      "_timestamp": "2026-04-06T05:03:22"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While vendor documentation and standard procedures cover much of upgrade planning, DBAs still rely on experience to judge timing, handle edge-case compatibility issues, anticipate performance impacts, and design safe rollback strategies in complex environments.",
+      "adequacy_evidence": "Current agents can follow documented upgrade paths and simulate plans, but often lack robust calibration for environment-specific quirks, workload nuances, and subtle risk tradeoffs that experienced DBAs handle in non-routine cases.",
+      "_timestamp": "2026-04-06T05:03:23"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the general goal (enhance performance) is clear, key criteria like acceptable downtime, workload characteristics, compatibility constraints, and performance tradeoffs are context-dependent and require interpretation of system and business needs.",
+      "adequacy_evidence": "Current agents can propose reasonable upgrade plans using available metrics and documentation, but often miss implicit organizational constraints or priorities without iterative human clarification.",
+      "_timestamp": "2026-04-06T05:03:24"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Planning and installing DBMS upgrades involves long, interdependent sequences (assessment, compatibility checks, backups, staging tests, rollout, validation, rollback planning) where errors can cascade across steps.",
+      "adequacy_evidence": "AI agents can manage multi-step workflows with tooling, but over long sequences they still show some drift, missed dependencies, or incomplete state tracking, especially in complex system environments.",
+      "_timestamp": "2026-04-06T05:03:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Planning and installing DBMS upgrades relies on textual artifacts such as configuration files, documentation, logs, and command-line tools; visual or other modalities are not central to task completion.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI agents with strong text and code capabilities can fully handle the modality requirements without multimodal limitations.",
+      "_timestamp": "2026-04-06T05:03:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking versions, dependencies, configuration settings, compatibility constraints, and upgrade steps across systems, but the information is structured and bounded within a single upgrade plan.",
+      "adequacy_evidence": "Agents can use tools and external memory to manage structured technical details, but may still lose or mis-prioritize some context (e.g., environment-specific constraints) during multi-step planning.",
+      "_timestamp": "2026-04-06T05:03:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Planning and installing DBMS upgrades often depends on prior system configurations, past upgrade outcomes, compatibility issues, and organizational change history, but each upgrade cycle can largely be reconstructed from documented state and current system inspection.",
+      "adequacy_evidence": "Current agents can persist and retrieve documentation, configs, and logs across sessions, but they still show gaps in reliably maintaining and surfacing evolving system context and nuanced historical lessons without well-engineered memory pipelines.",
+      "_timestamp": "2026-04-06T05:03:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Planning and installing database upgrades is typically scheduled work with maintenance windows; minutes to hours (or longer) of deliberation are acceptable and often expected.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to reason through upgrade plans and steps without meaningful quality loss, as there is no \u099a\u09be\u09aa for rapid, real-time responses.",
+      "_timestamp": "2026-04-06T05:03:26"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements prohibiting AI from planning or installing database software upgrades. While organizations may impose internal controls or sector-specific compliance procedures, these do not constitute legal bans on AI performing the task.",
+      "_timestamp": "2026-04-06T05:03:27"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Upgrade planning and installation can introduce subtle performance regressions, compatibility issues, or data integrity risks that often only surface under production workloads or over time, requiring staging environments, rollback plans, and expert validation.",
+      "adequacy_evidence": "AI-generated upgrade plans or procedures would still require extensive human-led testing, validation, and monitoring because current systems can miss edge cases (e.g., dependency conflicts, workload-specific regressions), making unverified execution risky.",
+      "_timestamp": "2026-04-06T05:03:27"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "DBMS upgrades can cause outages, data corruption, or incompatibilities that disrupt critical systems; even rare residual errors can have major operational and financial impact.",
+      "adequacy_evidence": "With staging, backups, and rollback procedures, many risks can be caught, but AI may still miss edge-case dependencies or environment-specific issues, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T05:03:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordination with internal stakeholders (IT teams, managers, users) who rely on the upgrade plan and must trust its execution, but the performer\u2019s identity is not central beyond perceived competence and reliability.",
+      "adequacy_evidence": "Organizations may be cautious about fully delegating database upgrades to AI due to risk and accountability concerns, but acceptance is growing with human oversight and proven reliability, leading to moderate rather than severe resistance.",
+      "_timestamp": "2026-04-06T05:03:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

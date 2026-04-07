@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-3039.03",
+  "task_id": 22207,
+  "task_statement": "Compare patients' progress before and after pharmacologic, surgical, or behavioral interventions.",
+  "occupation_title": "Clinical Neuropsychologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Comparing patient progress typically involves reviewing neuropsychological test scores, clinical notes, and medical records before and after interventions, which can be done digitally. However, the comparison may also rely on observations from in-person assessments or sessions that cannot be conducted remotely."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining what constitutes meaningful 'progress' depends on patient-specific goals, baseline variability, choice of neuropsychological measures, and clinical context (e.g., comorbidities, intervention type), which are often implicit and require professional judgment.",
+      "adequacy_evidence": "Current AI can apply standardized comparison frameworks and infer common metrics, but often struggles to fully capture individualized clinical intent and subtle contextual factors without iterative human guidance.",
+      "_timestamp": "2026-04-06T02:24:19"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves assembling and comparing pre- and post-intervention data, often across multiple measures and timepoints, requiring a moderate sequence of interdependent analytical steps.",
+      "adequacy_evidence": "Frontier AI agents with structured workflows and tool use can reliably maintain consistency across these moderate-length analytical sequences without significant degradation.",
+      "_timestamp": "2026-04-06T02:24:19"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting pre/post changes in neuropsychological functioning requires nuanced judgment about practice effects, measurement error, individual baselines, comorbidities, and clinically meaningful change\u2014factors that rely heavily on experience-based calibration beyond explicit rules.",
+      "adequacy_evidence": "Current agents can apply statistical rules and documented benchmarks, but often lack reliable calibration for nuanced, context-sensitive interpretations (e.g., distinguishing true change from artifacts) across diverse clinical presentations.",
+      "_timestamp": "2026-04-06T02:24:20"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous patient populations, conditions, interventions, and outcome measures, with substantial variation in longitudinal trajectories and contextual factors.",
+      "adequacy_evidence": "While clinical studies, case reports, and some de-identified datasets provide partial coverage, rich longitudinal patient-level data and nuanced progression comparisons are often private and thin, though partially addressable via synthesis and targeted fine-tuning.",
+      "_timestamp": "2026-04-06T02:24:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Comparing patients' progress is typically done through chart review, test score analysis, and clinical interpretation, where minutes to hours are acceptable and no real-time response is required.",
+      "adequacy_evidence": "Current AI systems can perform detailed comparative analysis well within these relaxed time constraints, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T02:24:20"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Comparing patient progress often incorporates multimodal inputs such as behavioral observations, neuropsychological test performance (including visuospatial or motor tasks), and sometimes imaging or recorded speech, though much is summarized in text and scores.",
+      "adequacy_evidence": "Current agents can handle structured scores and textual summaries well but are less reliable at interpreting nuanced behavioral cues, raw test performances, or integrating clinical imaging and observational subtleties.",
+      "_timestamp": "2026-04-06T02:24:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating extensive heterogeneous data (test scores, behavioral observations, medical history, intervention details) across timepoints and ensuring accurate alignment between pre- and post-intervention states, where missing details can affect conclusions.",
+      "adequacy_evidence": "Agents can process large clinical records with retrieval tools, but may lose or misalign subtle contextual details (e.g., test conditions, norm references), leading to moderate reliability issues in within-episode synthesis.",
+      "_timestamp": "2026-04-06T02:24:21"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating patient progress inherently depends on longitudinal data across multiple sessions, including prior assessments, intervention details, and evolving cognitive or behavioral measures.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured patient histories via EHR integrations, but often struggle with consistent aggregation, contextual interpretation, and reliable cross-session synthesis in complex clinical narratives.",
+      "_timestamp": "2026-04-06T02:24:21"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing patient progress involves interpreting neuropsychological test changes over time, accounting for practice effects, baseline variability, and clinical context, making errors subtle and requiring expert review to detect.",
+      "adequacy_evidence": "Current AI systems can summarize score differences but struggle with nuanced clinical interpretation and confound adjustment, so outputs would require careful expert validation to avoid misleading conclusions.",
+      "_timestamp": "2026-04-06T02:24:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces evaluations that are used by patients and healthcare providers to guide treatment decisions, so stakeholders engage with and rely on the output, though the comparison itself is analytic.",
+      "adequacy_evidence": "Clinicians and patients may be cautious about relying on AI-generated neuropsychological assessments, preferring human expert judgment, but some acceptance is possible if AI is used as a support tool.",
+      "_timestamp": "2026-04-06T02:24:23"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Clinical neuropsychological assessment and interpretation of patient progress are considered the practice of psychology, which generally requires a licensed professional in the U.S. While AI tools can assist, regulations typically require a licensed clinician to oversee and take responsibility, creating partial restrictions rather than an explicit prohibition.",
+      "_timestamp": "2026-04-06T02:24:23"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessments of patient progress directly inform clinical decisions about continuing, modifying, or stopping interventions, where misjudgments can lead to inappropriate treatment, missed deterioration, or harm. Even after review, residual errors can have significant downstream consequences for patient health.",
+      "adequacy_evidence": "With structured data and oversight, AI can support comparisons, but subtle clinical interpretation, confounding factors, and individualized baselines mean residual misinterpretations may persist and remain clinically meaningful even after checking.",
+      "_timestamp": "2026-04-06T02:24:23"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

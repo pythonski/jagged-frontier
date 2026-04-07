@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1124.00",
+  "task_id": 4099,
+  "task_statement": "Help physicians, radiation oncologists, or clinical physicists to prepare physical or technical aspects of radiation treatment plans, using information about patient condition and anatomy.",
+  "occupation_title": "Radiation Therapists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Preparing technical aspects of radiation treatment plans is largely done with computer-based treatment planning software and patient imaging data, but therapists often perform this work within clinical settings and may need to coordinate with equipment setup or in-person clinical workflows."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiation treatment planning spans diverse cancer types, anatomical variations, imaging modalities, and patient-specific constraints, creating a highly heterogeneous and clinically nuanced distribution.",
+      "adequacy_evidence": "While there are substantial medical imaging datasets, treatment plans, and simulation tools, much high-quality, process-level clinical data is proprietary or restricted, leaving some subpopulations underrepresented but partially addressable via synthesis and specialized datasets.",
+      "_timestamp": "2026-04-06T05:21:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Radiation treatment planning follows established protocols and physician directives, but important details (e.g., trade-offs between tumor coverage and organ-at-risk sparing) require interpreting clinician intent and patient-specific context.",
+      "adequacy_evidence": "Current AI agents can use structured inputs and guidelines but often miss nuanced clinical priorities or implicit preferences, requiring iterative clarification from human experts.",
+      "_timestamp": "2026-04-06T05:21:34"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiation treatment planning requires nuanced tradeoffs between tumor coverage and organ-at-risk sparing, adapting to patient-specific anatomy and clinical priorities in ways that rely on experiential judgment beyond fixed rules.",
+      "adequacy_evidence": "Current AI planning and decision-support systems can reproduce many standard patterns, but still lack reliable calibration for edge cases and subtle clinical tradeoffs, requiring human oversight for non-routine or high-stakes scenarios.",
+      "_timestamp": "2026-04-06T05:21:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Preparing radiation treatment plans involves tightly coupled multi-step workflows (image review, contouring inputs, dose calculations, iterative plan optimization) where errors early can propagate and affect downstream safety and efficacy.",
+      "adequacy_evidence": "Well-scaffolded AI can manage multi-step planning with tools and checks, but still shows some degradation over long, constraint-heavy sequences (e.g., missed constraints or drift across iterations), requiring human oversight.",
+      "_timestamp": "2026-04-06T05:21:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Preparing radiation treatment plans requires integrating large volumes of heterogeneous data within a single episode, including imaging (CT/MRI), tumor geometry, dose constraints, and patient-specific clinical parameters where missing a detail can significantly affect outcomes.",
+      "adequacy_evidence": "Current agents can offload some memory demands to tools and structured retrieval, but still struggle with reliably tracking and compressing complex, high-dimensional medical data (especially spatial/anatomical relationships) without loss or drift.",
+      "_timestamp": "2026-04-06T05:21:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Radiation treatment planning routinely draws on prior patient data (imaging, prior plans, clinical history), but this information is typically stored in structured medical records rather than requiring the therapist to personally maintain long-term evolving context.",
+      "adequacy_evidence": "Current AI agents can interface with databases and retrieve patient histories, but integration with heterogeneous clinical systems and reliable longitudinal context tracking remains inconsistent in real-world deployments.",
+      "_timestamp": "2026-04-06T05:21:37"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in radiation treatment planning (e.g., dose distribution, beam geometry, organ-at-risk constraints) can be subtle and require specialized clinical physics expertise, detailed plan review, and sometimes independent calculation checks to detect before patient delivery.",
+      "adequacy_evidence": "Current AI systems can assist but still produce nontrivial errors in complex dosimetry and patient-specific adaptations, and these errors are not easily detectable without expert review, necessitating rigorous and time-consuming verification in practice.",
+      "_timestamp": "2026-04-06T05:21:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Radiation treatment planning is a deliberative process that typically unfolds over minutes to hours, allowing careful analysis of imaging, anatomy, and dose constraints rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can take the necessary time for extended reasoning without impairing workflow, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T05:21:37"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Radiation treatment planning relies heavily on interpreting 3D medical imaging (CT, MRI, PET), anatomical structures, and spatial dose distributions, requiring precise cross-modal reasoning beyond text.",
+      "adequacy_evidence": "While AI tools can process medical images, current LLM-based agents with multimodal capabilities are not reliably precise in fine-grained 3D anatomical delineation and dosimetric planning required for safe clinical use.",
+      "_timestamp": "2026-04-06T05:21:38"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves collaboration with physicians and clinical physicists who rely on the preparer's technical input, and professional credibility influences trust in the work.",
+      "adequacy_evidence": "Clinicians are increasingly open to AI-assisted planning tools, but full acceptance of an autonomous AI in this preparatory role is limited due to trust, accountability, and safety concerns.",
+      "_timestamp": "2026-04-06T05:21:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Radiation treatment planning is governed by medical licensing and radiation safety regulations requiring oversight and approval by licensed physicians and medical physicists, and FDA-cleared software must be used under clinician supervision. AI cannot legally perform this task autonomously without qualified human sign-off.",
+      "_timestamp": "2026-04-06T05:21:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiation treatment planning directly affects dose delivery to tumors and surrounding organs, where even small residual errors can cause severe harm or treatment failure, making tolerance for error extremely low.",
+      "adequacy_evidence": "While multi-layer clinical QA (physicist review, plan checks, dose verification) can catch many issues, AI-generated plans may still introduce subtle or systematic errors that are difficult to fully eliminate, leaving some residual risk concerns.",
+      "_timestamp": "2026-04-06T05:21:38"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9111.00",
+  "task_id": 61,
+  "task_statement": "Review and analyze facility activities and data to aid planning and cash and risk management and to improve service utilization.",
+  "occupation_title": "Medical and Health Services Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Reviewing and analyzing operational, financial, and utilization data is typically done using electronic health records, financial systems, and digital reports, all of which can be accessed and analyzed remotely on a computer."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves aligning financial, operational, and service utilization goals that are often implicit, organization-specific, and shaped by evolving stakeholder priorities, requiring interpretation beyond explicit instructions.",
+      "adequacy_evidence": "Current AI agents can analyze data and suggest plans, but they often miss nuanced institutional priorities, tradeoffs, and shifting managerial intent without iterative human guidance.",
+      "_timestamp": "2026-04-06T05:41:43"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous healthcare settings (different facility types, patient populations, payer mixes, regulatory contexts, and operational structures), requiring coverage of diverse and long-tailed real-world scenarios.",
+      "adequacy_evidence": "While general patterns and some public or synthetic healthcare data exist, much of the most relevant data (detailed operational, financial, and utilization records) is proprietary and fragmented, leaving partial but not complete coverage feasible.",
+      "_timestamp": "2026-04-06T05:41:43"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis of facility data, linking operational patterns to planning, cash, and risk decisions, but these steps are modular and not tightly interdependent in a long continuous chain.",
+      "adequacy_evidence": "AI agents can handle multi-step analytical workflows with reasonable consistency, though over longer sequences they may show some drift or lose intermediate constraints without careful scaffolding.",
+      "_timestamp": "2026-04-06T05:41:44"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting facility data for planning, cash flow, risk, and utilization requires contextual judgment about patient mix, operational constraints, and institutional priorities that go beyond explicit rules.",
+      "adequacy_evidence": "Current agents can perform robust data analysis and pattern detection, but often lack nuanced calibration to local healthcare contexts and organizational tradeoffs, leading to gaps in non-routine or context-sensitive decisions.",
+      "_timestamp": "2026-04-06T05:41:44"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing large, heterogeneous datasets (financial records, utilization metrics, operational reports) and tracking multiple interdependent factors within a single analytical episode, where missing details can affect planning and risk assessments.",
+      "adequacy_evidence": "Current agents with retrieval and tool use can manage and summarize large datasets, but still show limitations in reliably maintaining and integrating all relevant context across complex, multi-source analyses.",
+      "_timestamp": "2026-04-06T05:41:44"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing facility activities, financial data, and utilization trends for planning and risk management is typically done over hours to days, not in real-time, with no strict low-latency requirement.",
+      "adequacy_evidence": "Current AI systems can perform deep analysis within acceptable timeframes (minutes to hours), so extended reasoning does not conflict with the task\u2019s latency expectations.",
+      "_timestamp": "2026-04-06T05:41:45"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves interpreting dashboards, charts, and operational metrics alongside text reports, but these visual elements can generally be translated into structured or textual data without loss of core meaning.",
+      "adequacy_evidence": "Current AI systems can reliably interpret and generate common business visualizations (e.g., charts, tables) and integrate them with textual analysis, with little performance gap for typical use cases.",
+      "_timestamp": "2026-04-06T05:41:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task depends on longitudinal analysis of facility operations, financial trends, and risk patterns over time, requiring persistent access to historical data and evolving organizational context.",
+      "adequacy_evidence": "Current AI systems can leverage databases, EHRs, and analytics platforms to store and retrieve cross-session data, but integration, context synthesis, and consistent use of long-term organizational knowledge can still be uneven.",
+      "_timestamp": "2026-04-06T05:41:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from analyzing facility data for planning, cash, or risk management in healthcare settings; requirements like HIPAA govern data handling but do not restrict AI use itself.",
+      "_timestamp": "2026-04-06T05:41:46"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in financial, utilization, and risk analyses can be subtle, involving misinterpreted trends, incorrect assumptions, or data quality issues that require domain expertise and time to uncover, often with delayed consequences.",
+      "adequacy_evidence": "Current AI systems can generate plausible but flawed analyses or miss context-specific nuances, and verifying correctness requires detailed data auditing and expert review, creating a high and unavoidable checking burden.",
+      "_timestamp": "2026-04-06T05:41:46"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in analysis can lead to suboptimal financial planning, resource allocation, or risk management decisions, with meaningful but generally non-immediate and correctable consequences.",
+      "adequacy_evidence": "AI-generated analyses can be reviewed against data and benchmarks, but subtle misinterpretations or flawed assumptions may still slip through, leaving some residual risk that remains practically significant.",
+      "_timestamp": "2026-04-06T05:41:47"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces analyses used by internal stakeholders (administrators, clinicians, finance teams) who rely on the results for planning and management decisions, but it does not require strong personal authority or interpersonal trust.",
+      "adequacy_evidence": "Healthcare organizations are increasingly open to AI-assisted analytics, but some stakeholders may still be cautious about relying fully on AI for financial and risk-related decisions, requiring human oversight.",
+      "_timestamp": "2026-04-06T05:41:47"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

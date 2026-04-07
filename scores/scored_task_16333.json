@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2051.02",
+  "task_id": 16333,
+  "task_statement": "Perform hydrological analyses, using three-dimensional simulation software, to model the movement of water or forecast the dispersion of chemical pollutants in the water supply.",
+  "occupation_title": "Water/Wastewater Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Running hydrological analyses with three-dimensional simulation software is a computer-based modeling activity that can be performed entirely with digital data and software tools without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate hydrological and contaminant transport modeling requires experience-based calibration of parameters, selection of appropriate model structures, and judgment about boundary conditions and data quality that go beyond explicit procedures.",
+      "adequacy_evidence": "Current AI agents can run simulations and follow documented workflows, but often lack robust judgment in calibrating models and handling site-specific nuances, leading to gaps in non-routine or context-sensitive cases.",
+      "_timestamp": "2026-04-06T01:33:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hydrological modeling requires selecting assumptions, boundary conditions, calibration targets, and scenario definitions based on project goals and regulatory or stakeholder context, which are often only partially specified.",
+      "adequacy_evidence": "Current agents can propose reasonable modeling setups and iterate with feedback, but they frequently miss implicit constraints or priorities (e.g., regulatory thresholds, local hydrology nuances) without human clarification.",
+      "_timestamp": "2026-04-06T01:33:27"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydrological modeling spans diverse terrains, climate regimes, watershed geometries, contaminant types, and regulatory contexts, with many site-specific edge cases and rare extreme events.",
+      "adequacy_evidence": "There is substantial coverage in scientific literature, public datasets, and simulation workflows, but important real-world variation (e.g., proprietary site data, rare contamination scenarios) is unevenly represented and often not fully captured in accessible training pipelines.",
+      "_timestamp": "2026-04-06T01:33:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydrological simulation involves multi-stage workflows (data preprocessing, model setup, parameterization, calibration, iterative runs, and result interpretation) where early-step errors propagate through tightly coupled stages.",
+      "adequacy_evidence": "LLM-based agents can execute multi-step modeling workflows with tools, but show some degradation over long sequences, including parameter drift, missed constraints, or inconsistencies across iterative simulation cycles.",
+      "_timestamp": "2026-04-06T01:33:27"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hydrological modeling projects often span multiple sessions with iterative calibration, scenario comparison, and reuse of prior datasets or model configurations, but much of this context is explicitly stored in project files and documentation.",
+      "adequacy_evidence": "Current agents can persist and retrieve project artifacts via external storage and tools, but they still show gaps in consistently tracking evolving project context, assumptions, and prior decisions across sessions.",
+      "_timestamp": "2026-04-06T01:33:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "3D hydrological modeling requires handling large datasets (e.g., terrain, flow parameters, pollutant properties), multiple model configurations, and iterative simulation outputs, where missing or mismanaging details can significantly affect results.",
+      "adequacy_evidence": "Agents can offload much of the state to external simulation tools and structured data stores, but they still show moderate weaknesses in tracking evolving parameters and ensuring consistency across complex iterative runs.",
+      "_timestamp": "2026-04-06T01:33:28"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies on interpreting and generating spatially rich 3D simulations, geospatial data, and visualizations of water flow and pollutant dispersion, which are inherently non-textual and require cross-modal reasoning.",
+      "adequacy_evidence": "Current AI agents can interface with simulation tools and handle structured geospatial data, but remain less reliable in deeply interpreting complex 3D outputs and ensuring high-fidelity spatial reasoning across varied scenarios.",
+      "_timestamp": "2026-04-06T01:33:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Hydrological simulations and pollutant dispersion modeling are typically conducted over extended timeframes (minutes to hours or longer), with no requirement for immediate or real-time outputs.",
+      "adequacy_evidence": "AI agents have ample time to perform multi-step reasoning, parameter tuning, and simulation setup without compromising quality due to latency constraints.",
+      "_timestamp": "2026-04-06T01:33:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Hydrological 3D modeling involves complex parameterization, boundary conditions, and calibration where errors can be subtle and only revealed through expert validation, sensitivity analysis, or comparison to field data over time.",
+      "adequacy_evidence": "Current AI systems can assist in model setup and interpretation but frequently make non-obvious mistakes in assumptions or configuration, requiring extensive expert review, reruns, and validation to ensure reliability.",
+      "_timestamp": "2026-04-06T01:33:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting the use of AI to perform hydrological analyses or simulations. While licensed engineers may be required to review or approve final work products (e.g., for permitting or design sign-off), the use of software or AI tools to conduct the analysis itself is not restricted.",
+      "_timestamp": "2026-04-06T01:33:30"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The analyses are used by regulators, municipalities, and engineering teams who rely on the results for decision-making, so stakeholders engage with the output and may care about the analyst\u2019s credibility.",
+      "adequacy_evidence": "Stakeholders already accept software-driven modeling, but full replacement by AI without human engineer oversight may face resistance, especially where licensed sign-off and accountability are expected.",
+      "_timestamp": "2026-04-06T01:33:31"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in hydrological modeling or pollutant dispersion forecasts can lead to unsafe water supplies, environmental damage, and regulatory violations, so even rare residual errors can have serious public health and infrastructure consequences.",
+      "adequacy_evidence": "While many outputs can be checked via validation runs and domain review, AI systems still risk subtle mis-specification of models or assumptions, leaving some non-trivial residual risk even after standard quality control.",
+      "_timestamp": "2026-04-06T01:33:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

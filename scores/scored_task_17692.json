@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5011.01",
+  "task_id": 17692,
+  "task_statement": "Monitor or record locations of goods in transit.",
+  "occupation_title": "Freight Forwarders",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Freight forwarders typically monitor and record shipment locations through carrier tracking systems, GPS platforms, EDI updates, emails, or phone communication, all done from a computer. In some cases confirmation may involve coordination with on\u2011site staff at ports or warehouses, introducing a minor non-digital component."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task has clear, explicit objectives: track shipment locations and record them accurately in logistics systems using defined data sources and formats.",
+      "adequacy_evidence": "Current AI agents can reliably interpret tracking data, update records, and follow predefined monitoring rules with minimal ambiguity or need for iterative goal inference.",
+      "_timestamp": "2026-04-06T03:21:48"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring or recording shipment locations primarily involves following standardized tracking systems, logs, and procedures with minimal reliance on experiential judgment.",
+      "adequacy_evidence": "Current AI agents can reliably ingest tracking data, update records, and flag deviations using explicit rules and integrations, with little need for tacit calibration.",
+      "_timestamp": "2026-04-06T03:21:48"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing tracking and updating shipment locations over time, but each update is largely independent and does not tightly couple into a long error-sensitive chain.",
+      "adequacy_evidence": "AI agents can reliably handle repeated tracking queries and logging via APIs or databases with minimal degradation across steps, as the sequence does not require complex interdependent reasoning.",
+      "_timestamp": "2026-04-06T03:21:49"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking goods in transit spans different transport modes, geographies, carriers, and exception scenarios (delays, reroutes), but follows relatively standardized patterns and data structures (e.g., GPS, shipment logs).",
+      "adequacy_evidence": "Extensive real-world logistics data (tracking feeds, TMS logs) and easily simulated environments provide rich, process-level coverage, making representative training data broadly accessible.",
+      "_timestamp": "2026-04-06T03:21:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking goods in transit involves maintaining and updating shipment statuses across multiple records and sources, but the information is structured and typically handled via logistics systems.",
+      "adequacy_evidence": "Current AI agents with database/tool integration can reliably store, retrieve, and update shipment information within an episode without significant context loss or drift.",
+      "_timestamp": "2026-04-06T03:21:49"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking shipments typically requires timely updates (seconds to minutes) to reflect current locations, especially for coordination and exception handling, but not millisecond-level real-time decisions.",
+      "adequacy_evidence": "Current AI systems can ingest and log tracking data or query APIs almost instantly without needing deep reasoning, so meeting latency needs does not degrade output quality.",
+      "_timestamp": "2026-04-06T03:21:51"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking goods in transit requires maintaining shipment identifiers, status updates, and location history across multiple time points, but this state is structured and limited to each shipment lifecycle.",
+      "adequacy_evidence": "Current AI agents integrated with databases or tracking systems can reliably store and retrieve shipment histories across sessions, with no major architectural limitations for this level of persistence.",
+      "_timestamp": "2026-04-06T03:21:52"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in recording or monitoring shipment locations can cause delays, misrouting, or customer dissatisfaction, but are usually detectable and correctable without severe irreversible harm.",
+      "adequacy_evidence": "With standard tracking systems, cross-checks, and audit logs, AI-generated records can be verified effectively, leaving minimal residual risk after normal quality control.",
+      "_timestamp": "2026-04-06T03:21:52"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from monitoring or recording the locations of goods in transit. Existing logistics and freight regulations focus on compliance, documentation, and security, but do not mandate human-only execution of tracking tasks.",
+      "_timestamp": "2026-04-06T03:21:52"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves interpreting spatial data such as GPS coordinates, tracking dashboards, or sensor feeds, which are sometimes presented visually (e.g., maps) rather than purely textually.",
+      "adequacy_evidence": "Current AI agents can reliably process structured tracking data and integrate with logistics APIs; visual map interpretation is not essential, so multimodal demands are well within capability.",
+      "_timestamp": "2026-04-06T03:21:52"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task provides tracking information to clients and internal logistics partners who rely on timely updates, but the identity of the performer is not central to their trust or engagement.",
+      "adequacy_evidence": "Automated tracking systems are already widely used and accepted in freight logistics, so stakeholders are generally indifferent to whether an AI agent performs this task.",
+      "_timestamp": "2026-04-06T03:21:54"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Shipment locations can be verified against carrier tracking systems, GPS data, and logistics platforms, but reconciling discrepancies across sources requires some effort and domain familiarity.",
+      "adequacy_evidence": "AI can aggregate and record tracking data effectively, but inconsistencies, missing updates, or misinterpretation of status codes mean human checks are still needed to ensure accuracy.",
+      "_timestamp": "2026-04-06T03:21:54"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3051.00",
+  "task_id": 2518,
+  "task_statement": "Review time sheets, work charts, wage computation, and other information to detect and reconcile payroll discrepancies.",
+  "occupation_title": "Payroll and Timekeeping Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most payroll discrepancy reviews are performed in payroll software, spreadsheets, or digital timekeeping systems, but some workplaces still use or verify paper timesheets or physical records that require on-site handling."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans moderately diverse cases (different payroll systems, compensation structures, tax rules, and discrepancy types), but follows structured accounting and procedural patterns.",
+      "adequacy_evidence": "While general payroll processes and common discrepancies are well-documented, real-world edge cases and organization-specific policies are often in private datasets, making full coverage only partially accessible without targeted synthesis or fine-tuning.",
+      "_timestamp": "2026-04-06T11:18:56"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Most discrepancy detection follows explicit rules (pay rates, hours, overtime laws, contract terms), but clerks sometimes rely on experience to interpret ambiguous entries, identify unusual patterns, or resolve edge cases like retroactive adjustments.",
+      "adequacy_evidence": "Well-scaffolded AI systems can encode payroll rules, audit logs, and exception patterns, and can reliably flag and reconcile most discrepancies; remaining judgment calls are limited and can be handled with predefined escalation or heuristics.",
+      "_timestamp": "2026-04-06T11:18:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While payroll reconciliation follows formal rules and policies, important aspects (e.g., interpreting discrepancies, applying exception policies, resolving conflicting records) depend on context and organizational norms.",
+      "adequacy_evidence": "Current agents can apply explicit payroll rules and flag inconsistencies, but often struggle with edge cases, implicit policies, or resolving conflicting inputs without human clarification.",
+      "_timestamp": "2026-04-06T11:18:58"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step comparison and reconciliation across timesheets, wage rules, and discrepancy resolution, requiring consistent tracking of intermediate findings but not extremely long or deeply interdependent sequences.",
+      "adequacy_evidence": "Frontier agents can manage these structured multi-step workflows, but may exhibit some error compounding or missed constraints when reconciling multiple records over extended sequences.",
+      "_timestamp": "2026-04-06T11:18:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves comparing multiple structured records (timesheets, wage tables, work charts) and tracking discrepancies, requiring moderate integration and cross-referencing of information within a session.",
+      "adequacy_evidence": "Current agents with spreadsheet tools and retrieval can reliably manage and cross-check these datasets without significant context loss, as the information is structured and fits within typical processing pipelines.",
+      "_timestamp": "2026-04-06T11:18:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Resolving payroll discrepancies often requires referencing prior pay periods, employee histories, and past corrections, but this information is typically stored in payroll systems rather than relying on human memory alone.",
+      "adequacy_evidence": "Current AI agents can reliably use external databases and record systems to retrieve cross-session payroll data, so persistent memory needs are well handled through standard integrations.",
+      "_timestamp": "2026-04-06T11:18:59"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves structured numeric and textual data (timesheets, wage records), but may occasionally require interpreting scanned documents or handwritten entries, introducing some multimodal elements.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing handle typical payroll artifacts (including scanned forms) reliably, with minimal degradation except in rare poor-quality inputs.",
+      "_timestamp": "2026-04-06T11:18:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing and reconciling payroll discrepancies is typically a batch or periodic task with deadlines in hours or days, not requiring immediate responses.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to perform multi-step checks and reconciliations without latency pressure, so quality is not meaningfully degraded by speed constraints.",
+      "_timestamp": "2026-04-06T11:18:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Payroll discrepancies can usually be identified by reconciling records, applying known rules, and cross-checking totals, but this requires careful review of multiple data sources and domain knowledge of payroll policies.",
+      "adequacy_evidence": "AI can assist with comparisons and rule checks, but given error rates and sensitivity to edge cases (e.g., exceptions, benefits, tax nuances), human verification remains necessary and non-trivial.",
+      "_timestamp": "2026-04-06T11:19:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from reviewing payroll records or reconciling discrepancies. Employers remain legally responsible for compliance (e.g., under FLSA), but the use of automated systems for payroll processing and auditing is widely permitted.",
+      "_timestamp": "2026-04-06T11:19:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Payroll errors can affect employee pay, tax reporting, and compliance, creating financial and legal issues, but most discrepancies are reversible and correctable in subsequent pay cycles.",
+      "adequacy_evidence": "Even with checks, AI may miss edge cases or nuanced discrepancies (e.g., unusual compensation rules), leaving some residual risk that organizations would still need to monitor and occasionally correct.",
+      "_timestamp": "2026-04-06T11:19:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily an internal administrative function involving review and reconciliation of payroll data, with minimal direct stakeholder interaction where performer identity matters.",
+      "adequacy_evidence": "Organizations already rely on automated payroll systems, and stakeholders are generally indifferent to whether discrepancies are detected by humans or AI as long as results are accurate.",
+      "_timestamp": "2026-04-06T11:19:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

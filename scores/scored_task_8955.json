@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.00",
+  "task_id": 8955,
+  "task_statement": "Identify relationships and trends in data, as well as any factors that could affect the results of research.",
+  "occupation_title": "Statisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Identifying relationships and trends in data is performed through statistical analysis using software and digital datasets, which can be done entirely on a computer without physical presence or specialized equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Statistical analysis spans highly heterogeneous datasets, domains, and problem settings, with varying structures, noise patterns, and contextual factors influencing relationships and trends.",
+      "adequacy_evidence": "There is extensive availability of datasets, academic literature, worked examples, and synthetic data generation methods covering diverse statistical scenarios, providing strong process-level signal for this task.",
+      "_timestamp": "2026-04-05T20:59:07"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While statistical methods are formally defined, identifying meaningful relationships versus spurious patterns requires experience with model assumptions, confounding, and context-sensitive interpretation beyond explicit rules.",
+      "adequacy_evidence": "Current AI agents can apply statistical techniques and flag common issues, but they show inconsistent calibration in nuanced cases like causal inference, domain-specific confounders, and distinguishing signal from artifact.",
+      "_timestamp": "2026-04-05T20:59:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Statistical analysis of relationships and trends is typically conducted in batch or exploratory workflows where minutes to hours are acceptable, not requiring real-time responsiveness.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform deep analysis without meaningful quality degradation, as there is no strong latency pressure forcing premature outputs.",
+      "_timestamp": "2026-04-05T20:59:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis (data inspection, modeling, validation, and interpretation) where earlier choices influence later conclusions, but sequences are typically bounded and modular rather than deeply long-horizon.",
+      "adequacy_evidence": "LLM-based agents can sustain coherence across typical analysis pipelines with tooling, but show some degradation through error propagation or inconsistent assumptions across steps in longer or more complex analyses.",
+      "_timestamp": "2026-04-05T20:59:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the task has a general objective (find relationships, trends, and influencing factors), what counts as meaningful or relevant depends on domain context, research goals, and implicit standards of statistical significance and causal reasoning.",
+      "adequacy_evidence": "Current AI agents can surface patterns and propose factors but often miss domain-specific priorities or subtle confounders, requiring human guidance to refine which relationships actually matter.",
+      "_timestamp": "2026-04-05T20:59:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple variables, model outputs, and intermediate analytical results, but much of the information can be offloaded to statistical software and summarized during analysis.",
+      "adequacy_evidence": "Current agents can reliably manage within-episode information using tools like dataframes, code execution, and retrieval, with minimal loss of critical context in typical statistical workflows.",
+      "_timestamp": "2026-04-05T20:59:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Statisticians often rely on visualizations (e.g., plots, charts) and sometimes spatial or graphical data representations to detect patterns and trends, though the underlying data can also be represented textually or numerically.",
+      "adequacy_evidence": "Current AI systems can effectively interpret common charts, tables, and numerical data, and perform cross-modal reasoning between visualizations and text with high reliability in most standard statistical contexts.",
+      "_timestamp": "2026-04-05T20:59:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many analyses are self-contained per dataset, statisticians often benefit from retaining context across projects (e.g., prior modeling choices, domain-specific findings, or evolving research questions).",
+      "adequacy_evidence": "Current agents can persist and retrieve prior context using external memory systems, but they still show inconsistencies in recalling and integrating relevant past analyses across sessions.",
+      "_timestamp": "2026-04-05T20:59:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI systems from analyzing data to identify relationships and trends. While certain regulated domains may require human oversight or sign-off, the analytical task itself is not restricted.",
+      "_timestamp": "2026-04-05T20:59:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether identified relationships and trends are valid requires statistical expertise, including checking model assumptions, confounders, and robustness; errors can be subtle and not immediately observable.",
+      "adequacy_evidence": "Current AI systems can suggest plausible but incorrect patterns or overlook key confounders, and verifying their analyses requires careful, expert review, making the checking burden substantial.",
+      "_timestamp": "2026-04-05T20:59:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces analytical insights that stakeholders (e.g., researchers, decision-makers) rely on, but engagement is primarily with the output rather than the analyst\u2019s personal identity.",
+      "adequacy_evidence": "AI-generated statistical analysis is widely accepted in practice as long as results are accurate and transparent, with little resistance tied to the agent\u2019s non-human status.",
+      "_timestamp": "2026-04-05T20:59:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misidentifying relationships or overlooking confounding factors can lead to incorrect scientific conclusions, flawed policy decisions, or invalid research findings, so even rare residual errors can have significant downstream impact.",
+      "adequacy_evidence": "While statistical outputs can often be checked through replication, diagnostics, and peer review, AI may still introduce subtle misinterpretations of causality or omitted-variable bias that are not always caught, leaving some meaningful residual risk.",
+      "_timestamp": "2026-04-05T20:59:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

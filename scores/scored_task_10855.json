@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1041.02",
+  "task_id": 10855,
+  "task_statement": "Evaluate applications, records, or documents to gather information about eligibility or liability issues.",
+  "occupation_title": "Compliance Officers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Evaluating applications and records is typically done using digital documents, databases, and electronic submissions on a computer. However, in some cases inspectors or compliance staff may review physical files or documents collected during on-site inspections."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Compliance evaluation spans many domains (finance, healthcare, environmental, etc.), each with distinct regulations, document types, and edge cases, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "Large corpora of regulations, legal cases, and sample compliance documents exist, but important subpopulations (e.g., proprietary filings, rare edge-case violations, internal audit records) are not fully accessible and must be approximated via synthesis or limited datasets.",
+      "_timestamp": "2026-04-05T20:56:27"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many eligibility and liability determinations follow codified regulations and checklists, compliance officers frequently rely on experience to interpret ambiguous cases, weigh contextual factors, and recognize subtle risk indicators.",
+      "adequacy_evidence": "Current AI agents can apply explicit rules and handle standard cases well, but they lack consistent calibration in edge cases requiring nuanced judgment or context-sensitive interpretation, leading to moderate gaps.",
+      "_timestamp": "2026-04-05T20:56:27"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Regulatory criteria and organizational policies provide a structured basis, but evaluators must interpret incomplete or inconsistent records, infer intent, and apply context-specific judgment to eligibility or liability.",
+      "adequacy_evidence": "Agents can apply explicit rules and extract information reliably, but often miss nuanced red flags or contextual cues, requiring human review to resolve ambiguous cases.",
+      "_timestamp": "2026-04-05T20:56:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple documents, cross-referencing information, and synthesizing findings, requiring a multi-step but not \u0905\u0924\u094d\u092f long or tightly interdependent sequence.",
+      "adequacy_evidence": "AI agents can generally handle multi-step document review workflows, but performance can degrade with longer or more complex document sets, leading to occasional missed details or inconsistencies.",
+      "_timestamp": "2026-04-05T20:56:28"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluations often reference prior filings, past compliance decisions, or organizational history, but many individual application reviews can still be completed largely from the provided documents.",
+      "adequacy_evidence": "Current agents can use databases and retrieval systems to access prior records, but maintaining consistent, well-integrated longitudinal context across systems and surfacing the right history reliably remains imperfect.",
+      "_timestamp": "2026-04-05T20:56:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Evaluating applications and records for eligibility or liability is typically a deliberative task with deadlines measured in hours or days, not requiring real-time responses.",
+      "adequacy_evidence": "Frontier AI systems can take seconds to minutes for deeper analysis without impacting workflow, so latency does not meaningfully constrain quality.",
+      "_timestamp": "2026-04-05T20:56:28"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing textual materials such as applications, records, and documents; any non-text elements (e.g., scanned forms) are typically reducible to text via OCR without requiring substantive visual reasoning.",
+      "adequacy_evidence": "Current AI systems handle text extraction and analysis from documents, including basic OCR, reliably enough that non-text modality demands do not pose a meaningful limitation.",
+      "_timestamp": "2026-04-05T20:56:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in determining eligibility or liability can lead to regulatory violations, financial penalties, or legal exposure, so even rare mistakes can have serious consequences.",
+      "adequacy_evidence": "Even with review, AI may miss nuanced regulatory interpretations or context-specific red flags, leaving some residual risk that remains concerning but not universally disqualifying.",
+      "_timestamp": "2026-04-05T20:56:29"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Compliance officers often must synthesize large volumes of heterogeneous documents (applications, supporting records, regulatory criteria) and track multiple interdependent details where omissions can affect eligibility or liability determinations.",
+      "adequacy_evidence": "LLM agents with retrieval and summarization tools can manage multi-document inputs, but still exhibit context loss and imperfect cross-referencing over long or complex records, leading to moderate reliability gaps.",
+      "_timestamp": "2026-04-05T20:56:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing eligibility or liability often involves interpreting complex regulations, cross-referencing multiple documents, and detecting omissions or inconsistencies that are not immediately obvious without domain expertise.",
+      "adequacy_evidence": "Current AI systems can misinterpret legal nuances or overlook subtle discrepancies, and these errors are difficult to detect without thorough expert review, making verification burdensome and essential.",
+      "_timestamp": "2026-04-05T20:56:30"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves internal analysis of applications and records; outputs are typically consumed within the organization without direct stakeholder interaction or reliance on the evaluator\u2019s identity.",
+      "adequacy_evidence": "Since there are no direct counterpart stakeholders for this task, acceptance of AI is not a meaningful constraint and would not affect task performance.",
+      "_timestamp": "2026-04-05T20:56:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no blanket prohibition on AI evaluating documents for compliance purposes, but many regulated domains require accountable human oversight, licensed sign-off, or auditability (e.g., financial services, insurance, lending). These create partial constraints without fully banning AI use.",
+      "_timestamp": "2026-04-05T20:56:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

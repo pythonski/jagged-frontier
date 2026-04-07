@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2053.00",
+  "task_id": 1263,
+  "task_statement": "Evaluate possibility of losses due to catastrophe or excessive insurance.",
+  "occupation_title": "Insurance Underwriters",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Evaluating potential losses from catastrophes or overinsurance is typically done by analyzing digital data such as risk models, geographic information, historical loss data, and application details using underwriting software and reports, without requiring physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing catastrophe and excess loss risk relies on experiential judgment about tail events, aggregation exposures, and market-specific nuances that are not fully captured by formal models or rules.",
+      "adequacy_evidence": "Well-equipped AI agents can apply actuarial models and historical data but still show gaps in calibrating rare-event risk and nuanced underwriting judgment in non-routine or borderline cases.",
+      "_timestamp": "2026-04-06T00:17:58"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Catastrophic and excessive loss evaluation spans diverse hazards (natural disasters, industrial risks, cyber, etc.), geographies, policy structures, and rare tail events, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "While substantial data exists (e.g., catastrophe models, historical loss datasets, regulatory filings), much high-resolution underwriting and claims data is proprietary and sparse for extreme events, leaving some important subpopulations only partially covered.",
+      "_timestamp": "2026-04-06T00:17:59"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing potential catastrophic losses involves interpreting policy details, external risk factors, and organizational risk tolerance, which are partly implicit and context-dependent rather than fully specified.",
+      "adequacy_evidence": "Current agents can analyze structured data and known risk factors but often miss nuanced contextual judgments (e.g., evolving market conditions or firm-specific underwriting standards), requiring human refinement.",
+      "_timestamp": "2026-04-06T00:17:59"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis (collecting exposure data, applying catastrophe models, interpreting outputs, and aligning with underwriting guidelines), but these steps are moderately sequential rather than tightly interdependent over long horizons.",
+      "adequacy_evidence": "Frontier AI agents can generally sustain coherence across these moderate-length analytical workflows, though some degradation (e.g., missed constraints or slight reasoning drift) can occur over multi-step evaluations.",
+      "_timestamp": "2026-04-06T00:18:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple data sources (policy details, exposure data, catastrophe models, historical loss data) and maintaining consistency across them, but the information is typically structured and bounded per case.",
+      "adequacy_evidence": "Current agents can handle multi-document retrieval and summarization but may occasionally lose or misweight details across sources, especially when compressing complex risk factors into a coherent evaluation.",
+      "_timestamp": "2026-04-06T00:18:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Underwriters often use maps, aerial imagery, inspection photos, and geospatial hazard data (e.g., flood zones, wildfire risk) alongside textual reports to assess catastrophe exposure, though much information is also structured or textual.",
+      "adequacy_evidence": "Current agents can interpret standard images and geospatial data reasonably well but are less reliable on nuanced visual assessments (e.g., subtle property condition risks or complex spatial hazard interactions).",
+      "_timestamp": "2026-04-06T00:18:01"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Underwriters may reference prior claims history, client risk profiles, and historical catastrophe data across cases, but much of this is stored in structured systems and does not require rich evolving memory beyond retrieval.",
+      "adequacy_evidence": "Current AI systems can reliably access and integrate persistent structured data (e.g., claims databases, risk models) across sessions, so cross-session memory needs are well-supported.",
+      "_timestamp": "2026-04-06T00:18:02"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Evaluating catastrophe risk or overinsurance is a deliberative underwriting task typically conducted over minutes to hours, with no need for real-time response.",
+      "adequacy_evidence": "Current AI systems can perform extended analysis within acceptable timeframes, so there is no meaningful quality degradation due to speed constraints.",
+      "_timestamp": "2026-04-06T00:18:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing catastrophe risk and overinsurance involves probabilistic models, assumptions about rare events, and complex financial exposure; errors are often subtle and may only surface after long time horizons or under specific scenarios.",
+      "adequacy_evidence": "Current AI systems can produce plausible but flawed risk assessments, and verifying assumptions, data inputs, and modeling choices requires expert actuarial review, making error detection both difficult and necessary.",
+      "_timestamp": "2026-04-06T00:18:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The evaluation informs decisions used by insurers, brokers, and regulators, who rely on the output, but the specific identity of the analyst is not central as long as standards are met.",
+      "adequacy_evidence": "Insurance firms already use automated risk models, and stakeholders generally accept AI-assisted underwriting analyses when validated and compliant with industry practices.",
+      "_timestamp": "2026-04-06T00:18:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from performing underwriting risk evaluations; insurers may use automated tools. Regulatory requirements focus on insurer accountability, fairness, and compliance, not on banning AI use for this task.",
+      "_timestamp": "2026-04-06T00:18:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misjudging catastrophe or overexposure risk can lead to large financial losses, insolvency risk, or systemic portfolio issues, so even rare residual errors can have severe consequences.",
+      "adequacy_evidence": "Even with review and existing actuarial checks, AI may still misestimate tail risks or novel catastrophe patterns, leaving non-trivial residual risk, though not clearly unacceptable given current human-in-the-loop practices.",
+      "_timestamp": "2026-04-06T00:18:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2011.00",
+  "task_id": 7525,
+  "task_statement": "Analyze research data to determine its significance, using computers.",
+  "occupation_title": "Astronomers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Analyzing research data using computers is performed through software and digital datasets, which can be accessed and processed remotely without physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Astronomical data analysis spans highly heterogeneous modalities (imaging, spectra, time-series), instruments, and scientific goals, with long-tailed edge cases tied to rare phenomena and novel observational setups.",
+      "adequacy_evidence": "Large public datasets, published pipelines, and simulation tools provide substantial coverage of common cases, but cutting-edge or proprietary datasets and novel analysis contexts remain thinner and only partially reproducible via current training pipelines.",
+      "_timestamp": "2026-04-06T00:13:58"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While statistical methods and significance testing are formalized, astronomers routinely apply experience-based judgment to interpret noisy signals, instrument artifacts, and borderline detections in context.",
+      "adequacy_evidence": "Current AI systems can apply statistical procedures well but often lack the nuanced calibration needed to distinguish subtle observational artifacts or assess borderline findings across diverse research contexts.",
+      "_timestamp": "2026-04-06T00:13:58"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining the 'significance' of astronomical data depends on implicit research goals, domain-specific statistical standards, instrument characteristics, and evolving scientific context, requiring interpretation beyond explicit instructions.",
+      "adequacy_evidence": "Current AI agents can perform statistical analyses and follow provided research goals, but they often struggle to infer the correct scientific framing, novelty thresholds, or subtle domain conventions without substantial human guidance.",
+      "_timestamp": "2026-04-06T00:13:59"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Research data analysis in astronomy involves multi-step workflows (data cleaning, calibration, modeling, statistical testing), but many steps are modular and can be validated independently rather than requiring tightly coupled sequential dependence.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across typical analysis pipelines with tooling, but performance can degrade over longer or more complex workflows, with risks of dropped assumptions or inconsistency between steps.",
+      "_timestamp": "2026-04-06T00:13:59"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Astronomical data analysis involves large, heterogeneous datasets (e.g., multi-wavelength observations, time series, simulations) and requires tracking many variables, intermediate outputs, and metadata within a single analytical workflow.",
+      "adequacy_evidence": "Current agents can offload much of this to external tools (e.g., code execution, dataframes), but still show weaknesses in reliably tracking evolving analytical state and correctly retrieving or summarizing intermediate results across complex pipelines.",
+      "_timestamp": "2026-04-06T00:14:00"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Analyzing astronomical research data often builds on prior observations, calibration choices, and evolving project context, but many analyses can still be conducted using well-documented datasets and metadata within a session.",
+      "adequacy_evidence": "Current agents can store and retrieve project context via external memory tools, but they still show gaps in reliably maintaining and surfacing nuanced cross-session scientific context over extended research timelines.",
+      "_timestamp": "2026-04-06T00:14:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Astronomical data analysis is typically conducted offline with flexible timelines (hours to days or longer), and does not require rapid or real-time responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform extended reasoning and computation without impacting task performance, as latency is not a binding constraint.",
+      "_timestamp": "2026-04-06T00:14:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Astronomers frequently analyze non-text data such as telescope images, spectra, and time-series plots, requiring interpretation of visual and numerical patterns alongside textual information.",
+      "adequacy_evidence": "Current AI agents can handle many standard visual and numerical data formats, but may struggle with subtle, high-noise astronomical imagery and complex cross-modal scientific interpretation.",
+      "_timestamp": "2026-04-06T00:14:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining significance in astronomical data involves complex statistical modeling, noise characterization, and instrument effects, where errors can be subtle and only detectable through expert review, replication, or cross-validation.",
+      "adequacy_evidence": "Current AI systems can perform analyses but frequently make subtle statistical or methodological errors that are hard to detect without deep domain expertise, requiring intensive human verification before results can be trusted.",
+      "_timestamp": "2026-04-06T00:14:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the US that prohibit or restrict AI from analyzing research data in astronomy. This task can be performed by automated systems without mandated human oversight or sign-off.",
+      "_timestamp": "2026-04-06T00:14:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in analyzing astronomical data can lead to incorrect scientific conclusions and wasted follow-up resources, but they are typically corrigible through replication and peer review rather than causing irreversible harm.",
+      "adequacy_evidence": "Even after standard checks, AI systems can still introduce subtle statistical or methodological errors that are not always caught immediately, leaving some meaningful residual risk in research conclusions.",
+      "_timestamp": "2026-04-06T00:14:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The analyzed results are consumed by other scientists, reviewers, and collaborators who rely on their validity, but the identity of the analyst is secondary to methodological rigor and reproducibility.",
+      "adequacy_evidence": "The scientific community already accepts computational and AI-assisted analysis as long as results are transparent and verifiable, so stakeholder resistance to AI in this role is minimal.",
+      "_timestamp": "2026-04-06T00:14:02"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

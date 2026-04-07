@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2131.00",
+  "task_id": 9019,
+  "task_statement": "Replicate the characteristics of materials and their components, using computers.",
+  "occupation_title": "Materials Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "The task explicitly involves using computers to model or simulate material characteristics, which can be done entirely with software and digital data without physical presence or equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a wide range of materials (metals, polymers, composites, nanomaterials) under diverse conditions, requiring coverage of many physical regimes, scales, and edge cases.",
+      "adequacy_evidence": "There is substantial public and synthetic data from simulations and literature, but high-fidelity experimental datasets and proprietary industrial cases are unevenly accessible, leaving some gaps.",
+      "_timestamp": "2026-04-06T03:08:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Modeling material properties requires choosing appropriate simulation methods, parameterizations, and approximations, which often depend on experience with specific material systems and failure modes.",
+      "adequacy_evidence": "Current agents can apply documented modeling techniques and run simulations, but they show gaps in nuanced method selection and parameter tuning for complex or non-standard materials cases.",
+      "_timestamp": "2026-04-06T03:08:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Replicating material characteristics involves implicit choices about which properties (e.g., mechanical, thermal, microstructural) and modeling approaches are relevant, often depending on application context and engineering goals not fully specified in the task statement.",
+      "adequacy_evidence": "Current agents can follow explicit modeling instructions but often miss context-dependent priorities (e.g., which properties matter most or appropriate simplifications), requiring human guidance and iterative refinement.",
+      "_timestamp": "2026-04-06T03:08:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Replicating material characteristics computationally involves multi-step workflows (model selection, parameterization, simulation runs, validation, and iterative refinement) where errors early in the pipeline can propagate and affect final results.",
+      "adequacy_evidence": "AI agents can execute multi-step modeling workflows with tools, but they show some degradation over long, interdependent sequences, including parameter drift or missed constraints, requiring oversight to maintain consistency.",
+      "_timestamp": "2026-04-06T03:08:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Replicating material characteristics involves managing large sets of parameters (composition, microstructure, boundary conditions), simulation outputs, and iterative adjustments within a single workflow, where missing details can significantly affect results.",
+      "adequacy_evidence": "Agents can offload much of this complexity to external tools (simulation software, structured memory), but still show moderate weaknesses in consistently tracking evolving parameter states and integrating results across steps.",
+      "_timestamp": "2026-04-06T03:08:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting and generating visualizations such as microstructure images, simulation outputs, and graphical models, though much of the core work is numerical and text-based.",
+      "adequacy_evidence": "Current agents can handle basic visual and simulation data but are less reliable with fine-grained materials imagery, complex scientific visualizations, and tight integration of multimodal scientific data.",
+      "_timestamp": "2026-04-06T03:08:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from performing computational material simulations. Licensure requirements apply to final engineering approval or sign-off, not to the use of computational tools (including AI) for modeling or analysis.",
+      "_timestamp": "2026-04-06T03:08:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily technical and computational, with outputs typically consumed internally or validated through objective performance metrics rather than interpersonal interaction.",
+      "adequacy_evidence": "Since stakeholders do not rely on the performer\u2019s identity and already accept computational tools in materials modeling, AI use in this role faces little to no resistance.",
+      "_timestamp": "2026-04-06T03:08:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Material replication tasks often reuse prior simulation setups, calibrated parameters, and experimental datasets across projects, but many individual modeling runs can be executed independently.",
+      "adequacy_evidence": "Current agent systems can persist and retrieve models, datasets, and project context via external storage and tooling, so cross-session memory needs are generally well supported.",
+      "_timestamp": "2026-04-06T03:08:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Materials simulation and replication tasks (e.g., computational modeling, finite element analysis, molecular dynamics) are typically performed offline, where minutes to hours of computation are acceptable and expected.",
+      "adequacy_evidence": "Because there is no tight latency constraint, AI systems can use extended reasoning and tool-based workflows without degrading quality, fitting comfortably within the task\u2019s time tolerance.",
+      "_timestamp": "2026-04-06T03:08:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Validating replicated material characteristics requires comparing simulation outputs to physical laws, boundary conditions, and often experimental data; errors can be subtle (e.g., wrong assumptions, parameterization) and may only surface under specific conditions.",
+      "adequacy_evidence": "AI systems can generate and run simulations but frequently make setup or modeling errors that are not obvious without expert review and cross-validation, so substantial, expert-driven checking remains necessary.",
+      "_timestamp": "2026-04-06T03:08:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Material property simulations inform design decisions in high-stakes domains (e.g., aerospace, biomedical, structural engineering), where residual errors can lead to component failure, safety risks, or costly redesigns.",
+      "adequacy_evidence": "Even with validation workflows, AI-generated or AI-assisted modeling may introduce subtle physical inaccuracies or inappropriate assumptions that are not always caught, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T03:08:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

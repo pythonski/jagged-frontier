@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-1011.00",
+  "task_id": 8463,
+  "task_statement": "Requisition materials, supplies, equipment parts, or repair services.",
+  "occupation_title": "First-Line Supervisors of Production and Operating Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Requisitioning materials or services is typically done through digital procurement systems, emails, or phone requests, but supervisors may sometimes verify needs in person on the production floor or use physical paperwork within the facility."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many requisition decisions follow inventory thresholds and documented procedures, supervisors often rely on experience to judge supplier reliability, anticipate delays, and choose acceptable substitutions under production constraints.",
+      "adequacy_evidence": "Current AI agents can follow rules and use historical data but have gaps in context-sensitive judgment about supplier performance, urgency tradeoffs, and informal shop-floor knowledge that influence non-routine requisitions.",
+      "_timestamp": "2026-04-05T20:53:02"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Requisitioning requires interpreting production needs, timing, budgets, and acceptable substitutes, which are partly context-dependent and not always fully specified in advance.",
+      "adequacy_evidence": "Agents can use inventory data, schedules, and past orders to infer needs, but often miss nuanced constraints (e.g., preferred vendors, informal priorities), requiring human adjustment.",
+      "_timestamp": "2026-04-05T20:53:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step workflow (assessing needs, checking inventory, preparing requisitions, obtaining approvals, and coordinating with vendors) where consistency across steps matters but sequences are not highly complex or deeply interdependent.",
+      "adequacy_evidence": "AI agents can generally manage these structured procurement workflows with tools and checklists, but may show some degradation over longer sequences through missed constraints or coordination gaps.",
+      "_timestamp": "2026-04-05T20:53:03"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Requisitioning spans different materials, vendors, pricing structures, and organizational policies, but follows broadly similar procurement workflows across settings.",
+      "adequacy_evidence": "Extensive procurement data (ERP logs, purchase orders, catalogs) and documented workflows exist, and missing variations can be readily synthesized or simulated for training.",
+      "_timestamp": "2026-04-05T20:53:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Requisitioning materials or services is typically a planned administrative task where minutes to hours of latency are acceptable, except in rare urgent cases.",
+      "adequacy_evidence": "Current AI agents can gather requirements, check inventories, and draft or place orders well within acceptable timeframes without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T20:53:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Requisitioning materials and services is primarily handled through text-based systems such as purchase orders, inventory databases, and supplier communications, with minimal reliance on visual or other sensory inputs.",
+      "adequacy_evidence": "Current AI agents can fully manage text-based procurement workflows, including interpreting specifications and generating orders, without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-05T20:53:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering and tracking multiple pieces of information such as inventory levels, specifications, supplier options, pricing, and timelines, but these are typically structured and bounded within a single requisition episode.",
+      "adequacy_evidence": "Well-scaffolded agents with retrieval tools and structured data access can reliably manage and organize this level of information without significant loss or drift.",
+      "_timestamp": "2026-04-05T20:53:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Requisitioning relies on prior purchasing patterns, inventory levels, supplier performance, and ongoing production needs, but does not require deeply complex longitudinal case histories.",
+      "adequacy_evidence": "Current systems (e.g., ERP, inventory databases) already store and retrieve this information effectively, and LLM agents can integrate with these systems to access persistent context with minimal gaps.",
+      "_timestamp": "2026-04-05T20:53:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Requisitions can be checked against bills of materials, inventory levels, and standardized part specifications, but doing so requires attention to detail and some domain knowledge to catch mismatches or incorrect quantities.",
+      "adequacy_evidence": "AI agents may select wrong part numbers, vendors, or quantities, so human review against inventory systems and specs is still needed, though errors are usually detectable with routine checks.",
+      "_timestamp": "2026-04-05T20:53:05"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in requisitioning (wrong quantities, incorrect parts, or vendors) can cause production delays or added costs, but are usually detectable and correctable through inventory checks, approvals, and reorder processes.",
+      "adequacy_evidence": "With standard controls like approval workflows, inventory systems, and vendor validation, AI-generated requisitions can be effectively checked, leaving minimal residual risk at acceptable levels.",
+      "_timestamp": "2026-04-05T20:53:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with suppliers or internal procurement systems, where orders must be accepted and fulfilled, but the performer\u2019s personal identity or authority is only moderately relevant.",
+      "adequacy_evidence": "Automated procurement systems and AI-driven ordering tools are already widely accepted, and suppliers typically respond to standardized purchase orders regardless of whether they originate from a human or AI system.",
+      "_timestamp": "2026-04-05T20:53:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from requisitioning materials or services. While organizations may require authorized human approval or signatures for purchasing, these are internal controls rather than legal bans on AI involvement.",
+      "_timestamp": "2026-04-05T20:53:06"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

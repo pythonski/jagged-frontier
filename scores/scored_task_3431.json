@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1132.00",
+  "task_id": 3431,
+  "task_statement": "Modify existing software to correct errors, allow it to adapt to new hardware, or to improve its performance.",
+  "occupation_title": "Software Developers, Applications",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 99,
+    "reasoning": "Modifying software to fix bugs, adapt to hardware, or improve performance is done through coding, debugging, and testing using development tools on a computer. These activities can be performed entirely remotely without physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Debugging, hardware adaptation, and performance tuning often require experience-based heuristics (e.g., identifying non-obvious bottlenecks or system interactions) that go beyond explicit rules, but much of the work is still guided by documented practices and tools.",
+      "adequacy_evidence": "Current agents handle many standard debugging and optimization patterns but still struggle with nuanced, system-specific performance issues and edge-case failures that rely on deeper experiential judgment.",
+      "_timestamp": "2026-04-06T03:11:26"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Software modification spans a highly heterogeneous space: different languages, architectures, hardware targets, legacy systems, and diverse bug types and performance issues, many of which are context-specific and long-tailed.",
+      "adequacy_evidence": "Large corpora of code, version histories, bug reports, and PR discussions provide rich process-level data, but important segments (e.g., proprietary systems, specialized hardware adaptations, rare edge-case bugs) remain underrepresented or inaccessible.",
+      "_timestamp": "2026-04-06T03:11:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Modifying existing software depends heavily on accumulated project context such as prior design decisions, bug history, architecture, and evolving requirements across many sessions.",
+      "adequacy_evidence": "Current agents can leverage repositories, issue trackers, and retrieval systems to approximate persistent memory, but they still show gaps in reliably surfacing and integrating long-term project context across extended workstreams.",
+      "_timestamp": "2026-04-06T03:11:28"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Modifying software is primarily a text-based activity involving code, documentation, and logs; non-text inputs like images or audio are not central to the task.",
+      "adequacy_evidence": "Since the task is fundamentally text-in/text-out, current AI agents already handle the required modalities without limitation.",
+      "_timestamp": "2026-04-06T03:11:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Bug fixes, hardware adaptations, and performance improvements often rely on implicit expectations (e.g., acceptable tradeoffs, hidden dependencies, system constraints) that are not fully specified in tickets or code comments.",
+      "adequacy_evidence": "Current agents can infer intent from code, tests, and documentation, but they frequently miss subtle requirements or edge cases, requiring human clarification and iteration to fully align with true objectives.",
+      "_timestamp": "2026-04-06T03:11:29"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Modifying software typically involves multi-step workflows\u2014understanding existing code, tracing bugs, implementing fixes, and validating through testing\u2014where earlier decisions affect later outcomes.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step coding tasks with tooling, but they still exhibit some drift, missed dependencies, or regression errors over longer sequences.",
+      "_timestamp": "2026-04-06T03:11:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Software modification tasks (debugging, adapting to new hardware, performance tuning) are typically asynchronous and allow minutes to hours for analysis and iteration rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to perform extended reasoning, testing, and iteration without meaningful degradation from latency constraints, as real-time responsiveness is not required.",
+      "_timestamp": "2026-04-06T03:11:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Modifying existing software requires tracking large codebases, dependencies, prior logic, and evolving state across multiple files where missing a detail can introduce bugs or regressions.",
+      "adequacy_evidence": "Agents with retrieval, code search, and summarization tools handle substantial context, but still lose or miscompress details in large or complex repositories, leading to occasional inconsistencies.",
+      "_timestamp": "2026-04-06T03:11:30"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Residual bugs after standard testing can cause crashes, security issues, or degraded performance, but most application contexts tolerate occasional defects that can be patched post-release.",
+      "adequacy_evidence": "Even with testing and review, AI-generated code changes still exhibit non-trivial rates of subtle logic or integration errors, leaving a moderate level of residual risk that teams would need to manage.",
+      "_timestamp": "2026-04-06T03:11:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying software modifications requires thorough testing (unit, integration, regression, performance) and code review; many defects (e.g., edge cases, race conditions, performance regressions) are subtle and may not surface immediately.",
+      "adequacy_evidence": "Current AI often introduces non-obvious bugs or incomplete fixes, requiring extensive human review and testing cycles; errors are frequent enough and sometimes latent that rigorous verification is still necessary.",
+      "_timestamp": "2026-04-06T03:11:32"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations in the US that prohibit AI from modifying software. While certain regulated industries (e.g., medical, aviation) may require human oversight or certification processes, these do not constitute a general legal restriction on AI performing the task.",
+      "_timestamp": "2026-04-06T03:11:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The work is typically reviewed and integrated by teammates or managers, so others must accept and rely on the developer\u2019s code, though personal identity is not central to effectiveness.",
+      "adequacy_evidence": "Many organizations increasingly accept AI-assisted coding, but some teams and stakeholders remain cautious about trusting fully autonomous AI-generated modifications, especially for critical systems.",
+      "_timestamp": "2026-04-06T03:11:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

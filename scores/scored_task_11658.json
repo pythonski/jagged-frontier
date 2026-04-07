@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-2022.00",
+  "task_id": 11658,
+  "task_statement": "Request support from technical service centers when on-site procedures fail to solve installation or maintenance problems.",
+  "occupation_title": "Telecommunications Equipment Installers and Repairers, Except Line Installers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Requesting support from a technical service center is typically done via phone, email, messaging, or a digital ticketing system, all of which can be performed using a computer and internet connection without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different equipment types, vendors, failure modes, and organizational support protocols, creating moderate variation but within a structured troubleshooting and escalation domain.",
+      "adequacy_evidence": "Training data such as support tickets, call transcripts, and troubleshooting guides exist, but much of the detailed escalation reasoning and internal service-center interactions are proprietary and only partially accessible.",
+      "_timestamp": "2026-04-05T21:27:17"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Technicians must use experience to judge when local troubleshooting is exhausted and what contextual details (symptoms, prior steps, environment) are most relevant to include in a support request.",
+      "adequacy_evidence": "Current AI agents can reliably apply escalation criteria and synthesize detailed, context-rich support requests from logs and inputs, capturing most of the practical judgment involved.",
+      "_timestamp": "2026-04-05T21:27:19"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires summarizing a technical problem, selecting relevant details, and framing the request appropriately for support staff, which involves some context-dependent judgment but follows common conventions.",
+      "adequacy_evidence": "Current AI agents can reliably infer what information is needed (e.g., error symptoms, steps taken, system details) and generate effective support requests with minimal ambiguity or iteration.",
+      "_timestamp": "2026-04-05T21:27:19"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires summarizing troubleshooting steps taken, equipment configurations, and observed issues to communicate effectively with a service center, involving moderate information integration.",
+      "adequacy_evidence": "Current agents can reliably track, summarize, and structure this level of within-episode technical context without significant loss or drift.",
+      "_timestamp": "2026-04-05T21:27:19"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step interaction: recognizing failure, gathering relevant diagnostic details, contacting support, and following iterative guidance, but sequences are typically bounded and not deeply interdependent over long horizons.",
+      "adequacy_evidence": "AI agents can generally manage structured troubleshooting exchanges, though performance may degrade somewhat over extended back-and-forth interactions with risk of losing context or missing details.",
+      "_timestamp": "2026-04-05T21:27:20"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While each support request is largely tied to a specific incident, effective escalation can benefit from prior case history, recurring issues, and past troubleshooting outcomes for the same equipment or site.",
+      "adequacy_evidence": "Current AI systems integrated with ticketing/CRM tools can reliably store and retrieve prior cases and equipment histories, meeting the modest cross-session memory needs of this task.",
+      "_timestamp": "2026-04-05T21:27:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Technicians often need to convey issues using photos, videos, signal readings, or diagrams alongside verbal/text descriptions to accurately communicate complex equipment problems.",
+      "adequacy_evidence": "Current AI agents can process and generate multimodal inputs like images and logs reasonably well, but may struggle with nuanced interpretation of specialized equipment visuals or cross-modal troubleshooting context.",
+      "_timestamp": "2026-04-05T21:27:22"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Requesting support from technical service centers typically allows for minutes or longer response times (e.g., phone calls, tickets), with no strict real-time constraint on formulating the request.",
+      "adequacy_evidence": "AI agents can easily generate or assist with support requests well within acceptable timeframes, with no need to truncate reasoning to meet latency demands.",
+      "_timestamp": "2026-04-05T21:27:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in requesting support (e.g., incomplete or inaccurate problem descriptions) can delay resolution or lead to inefficient troubleshooting, but are typically recoverable through follow-up clarification.",
+      "adequacy_evidence": "AI systems can reliably structure and communicate technical issues to support centers, and any residual errors after normal review are unlikely to create unacceptable risk.",
+      "_timestamp": "2026-04-05T21:27:23"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying a support request requires checking that the problem description, prior troubleshooting steps, and system details are accurate and complete, which needs some technical knowledge but is usually straightforward to review.",
+      "adequacy_evidence": "AI can draft plausible requests but may omit key diagnostics or mischaracterize issues, so a technician would need to review and correct details before submission, though errors are typically easy to catch.",
+      "_timestamp": "2026-04-05T21:27:23"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations preventing AI systems from requesting support from technical service centers. This is a routine communication task without licensing or mandated human decision-maker requirements.",
+      "_timestamp": "2026-04-05T21:27:23"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with technical service center staff who must receive and act on the request, but success depends mainly on clear information transfer rather than personal authority or identity.",
+      "adequacy_evidence": "Technical support workflows already commonly accept automated tickets and AI-assisted requests, so stakeholders are generally indifferent to whether the requester is an AI agent.",
+      "_timestamp": "2026-04-05T21:27:23"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

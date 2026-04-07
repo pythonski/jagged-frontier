@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1229.06",
+  "task_id": 17267,
+  "task_statement": "Refer athletes for specialized consultation, physical therapy, or diagnostic testing.",
+  "occupation_title": "Sports Medicine Physicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Referring athletes typically involves entering referrals, orders, or communications through electronic health records, email, or phone, which can be done remotely. However, it often occurs as part of in-person clinical care and coordination within a physical medical setting."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions often rely on clinical judgment about injury severity, recovery trajectory, athlete goals, and when conservative management is insufficient\u2014factors that go beyond strict protocols.",
+      "adequacy_evidence": "AI can follow guideline-based referral criteria and synthesize cases, but may lack nuanced calibration for borderline or context-sensitive decisions (e.g., return-to-play timing, subtle functional deficits).",
+      "_timestamp": "2026-04-06T05:49:57"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Referral decisions span varied injury types, sports contexts, patient demographics, and care pathways, but are still structured around well-documented clinical categories and guidelines.",
+      "adequacy_evidence": "Extensive medical literature, clinical guidelines, and case data provide strong coverage of referral criteria and workflows; remaining gaps (e.g., local provider networks) are not core to the clinical decision process itself.",
+      "_timestamp": "2026-04-06T05:49:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions depend on context such as injury severity, athlete goals, prior treatment response, and resource constraints, requiring interpretation beyond explicit rules but within broadly defined clinical guidelines.",
+      "adequacy_evidence": "Current AI can follow referral guidelines and infer common patterns, but often misses nuanced patient-specific factors and contextual priorities, requiring clinician oversight to finalize appropriate referrals.",
+      "_timestamp": "2026-04-06T05:49:58"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence: assessing the athlete\u2019s condition, determining need for referral, selecting appropriate specialists or services, and initiating the referral, with some interdependence across steps.",
+      "adequacy_evidence": "Current AI agents can reliably manage these relatively brief, structured workflows without significant degradation, especially when supported by checklists or clinical protocols.",
+      "_timestamp": "2026-04-06T05:49:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions often rely on interpreting physical exam findings, imaging (e.g., MRI, X-rays), and occasionally movement assessments, so non-text clinical data can inform the choice of specialist or test.",
+      "adequacy_evidence": "Current agents can use structured reports and some imaging inputs, but their reliability drops with nuanced physical exam interpretation or complex imaging, making performance uneven in multimodal cases.",
+      "_timestamp": "2026-04-06T05:49:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Referral decisions require integrating patient history, exam findings, injury specifics, prior treatments, and sport demands, but the information volume is moderate and typically structured within a single clinical encounter.",
+      "adequacy_evidence": "Well-scaffolded agents can reliably track and organize this level of structured clinical information within an episode, with minimal risk of losing critical context when supported by retrieval and note-taking tools.",
+      "_timestamp": "2026-04-06T05:49:58"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining appropriate referrals requires clinical judgment, review of patient history, symptoms, and sometimes imaging or test results; errors are not always obvious without medical expertise and chart review.",
+      "adequacy_evidence": "AI can generate plausible referral suggestions, but it may miss nuances (e.g., red flags, contraindications), so clinician oversight and verification remain necessary and non-trivial.",
+      "_timestamp": "2026-04-06T05:49:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions depend on the athlete\u2019s prior injuries, treatment history, and response to past interventions, which accumulate across visits but are not deeply longitudinal in all cases.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured patient histories via EHR integrations, but may inconsistently surface the most relevant prior context or synthesize it reliably across fragmented records.",
+      "_timestamp": "2026-04-06T05:50:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Referral decisions are typically made during or after clinical evaluation, with minutes to hours available to consider patient history and options; immediate real-time response is rarely required.",
+      "adequacy_evidence": "Current AI systems can generate appropriate referral recommendations well within this time window without needing to truncate reasoning, so speed constraints do not degrade quality.",
+      "_timestamp": "2026-04-06T05:50:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Referrals require patient trust and compliance as well as coordination with other healthcare providers, making the physician\u2019s authority and judgment central to acceptance and follow-through.",
+      "adequacy_evidence": "Patients and providers may be cautious about AI-generated referrals, preferring human clinical judgment for care decisions, though some acceptance could emerge if AI is supervised by a physician.",
+      "_timestamp": "2026-04-06T05:50:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Medical referrals and orders for diagnostic testing or physical therapy generally must be made by a licensed physician or authorized healthcare provider under state medical practice laws. AI systems cannot independently exercise medical judgment or issue legally valid referrals without physician oversight or sign-off.",
+      "_timestamp": "2026-04-06T05:50:00"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incorrect or delayed referrals can worsen injuries or delay diagnosis, but most errors are recoverable through follow-up care and rarely cause immediate irreversible harm.",
+      "adequacy_evidence": "Even with review, AI may miss nuanced clinical cues or context leading to suboptimal referral decisions, leaving a non-trivial but generally manageable level of residual risk.",
+      "_timestamp": "2026-04-06T05:50:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

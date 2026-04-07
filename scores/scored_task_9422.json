@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9094.00",
+  "task_id": 9422,
+  "task_statement": "Answer inquiries concerning the progress of medical cases, within the limits of confidentiality laws.",
+  "occupation_title": "Medical Transcriptionists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Responding to inquiries about case progress typically involves checking electronic medical records and replying via email, messaging systems, or phone, all of which can be done remotely with a computer and internet access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of medical conditions, case progress scenarios, and patient inquiry styles, but follows relatively standardized communication patterns and privacy constraints.",
+      "adequacy_evidence": "While medical communication data and confidentiality guidelines are well-documented, real-world inquiry-response interactions are often private, requiring de-identification or synthesis to approximate full coverage.",
+      "_timestamp": "2026-04-06T01:39:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Responding to inquiries may involve checking case status, interpreting notes, and ensuring confidentiality, requiring a few coordinated steps but not long, tightly coupled sequences.",
+      "adequacy_evidence": "Current AI agents can reliably handle short multi-step lookups and responses without noticeable degradation over such limited interaction lengths.",
+      "_timestamp": "2026-04-06T01:39:27"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Inquiries vary in intent and permissible detail, requiring interpretation of what information is being sought and what can legally be disclosed under confidentiality rules in context.",
+      "adequacy_evidence": "Current agents can generally infer the inquiry\u2019s intent but often struggle with nuanced judgments about permissible disclosure and context, requiring human oversight to ensure compliance.",
+      "_timestamp": "2026-04-06T01:39:27"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves applying confidentiality rules (e.g., HIPAA) and interpreting case status, which can require some situational judgment about what information is appropriate to disclose and how to phrase it, though much is governed by explicit protocols.",
+      "adequacy_evidence": "Current AI agents can follow codified privacy rules and standard response patterns, but may lack consistent calibration in edge cases involving ambiguous requester identity, nuanced consent, or borderline disclosures.",
+      "_timestamp": "2026-04-06T01:39:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Answering case progress inquiries requires pulling and synthesizing relevant details from patient records, notes, and recent updates, but typically within a bounded and structured record scope.",
+      "adequacy_evidence": "Current agents with retrieval can handle structured medical records reasonably well, but may occasionally omit or misprioritize details when compressing multiple notes or updates into a concise response.",
+      "_timestamp": "2026-04-06T01:39:28"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves retrieving and communicating case status information via text or spoken language; it does not rely on visual, spatial, or other non-text modalities.",
+      "adequacy_evidence": "Current AI systems, with speech-to-text and text generation capabilities, can handle the linguistic aspects of inquiries without needing advanced multimodal perception.",
+      "_timestamp": "2026-04-06T01:39:29"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inquiries about case progress are typically expected to be answered promptly (e.g., during a call or within minutes), but do not require split-second real-time responses.",
+      "adequacy_evidence": "Current AI systems can retrieve relevant case information and apply confidentiality rules quickly, with high-quality responses achievable well within typical response time expectations.",
+      "_timestamp": "2026-04-06T01:39:29"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Answering case progress inquiries requires accessing existing patient records and prior documentation across sessions, but the information is typically stored in structured medical record systems rather than built up informally by the agent.",
+      "adequacy_evidence": "Current AI systems can reliably retrieve and use cross-session data via integration with electronic health records or databases, so persistent memory needs are well supported by existing infrastructure.",
+      "_timestamp": "2026-04-06T01:39:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying responses requires cross-checking patient records, timelines, and confidentiality constraints; errors like mixing cases or sharing restricted details may not be obvious without access to source data and domain knowledge.",
+      "adequacy_evidence": "Current AI systems can misinterpret records or overlook privacy nuances, so outputs would require careful human verification against EHRs and compliance rules, creating a substantial checking burden.",
+      "_timestamp": "2026-04-06T01:39:31"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Providing incorrect case progress information or breaching confidentiality can harm patient trust, violate HIPAA, and lead to legal or clinical consequences, so even rare residual errors can be serious.",
+      "adequacy_evidence": "With structured data access and human or automated review, many errors can be caught, but AI still poses moderate residual risk of subtle misinformation or inappropriate disclosure that is not fully eliminated.",
+      "_timestamp": "2026-04-06T01:39:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves responding to patients, families, or clinicians who rely on the information, and trust and confidentiality considerations make the responder\u2019s role somewhat salient.",
+      "adequacy_evidence": "Many stakeholders would accept AI for routine status inquiries if privacy is assured, but some would distrust or prefer a human due to sensitivity of medical information.",
+      "_timestamp": "2026-04-06T01:39:31"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "HIPAA and related privacy laws allow use of automated systems but impose strict requirements on handling protected health information, including access controls, authorization, and business associate agreements. These create partial constraints and compliance obligations for AI use, but do not explicitly prohibit AI from performing the task.",
+      "_timestamp": "2026-04-06T01:39:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

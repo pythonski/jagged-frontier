@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3051.06",
+  "task_id": 15508,
+  "task_statement": "Plan or coordinate hydroelectric production operations to meet customer requirements.",
+  "occupation_title": "Hydroelectric Production Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Planning and coordinating hydroelectric production typically involves digital tools, data analysis, scheduling systems, and communication with grid operators or customers. However, managers often need on-site coordination with plant staff and awareness of physical equipment conditions, which can require in-person presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Coordinating hydroelectric production requires experienced judgment about water inflows, reservoir dynamics, environmental constraints, and grid demand tradeoffs, often relying on operator intuition built from prior cases and local system behavior.",
+      "adequacy_evidence": "Current agents can model many factors with data and optimization tools, but still lack reliable calibration for unusual hydrological conditions, conflicting constraints, and nuanced tradeoffs that experienced managers handle through tacit knowledge.",
+      "_timestamp": "2026-04-06T03:15:39"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydroelectric operations vary widely across river basins, dam designs, seasonal hydrology, regulatory constraints, and grid demand patterns, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "While substantial operational data and physics-based simulation environments exist, much real-world decision data (e.g., operator judgment under rare conditions, proprietary SCADA logs) is not broadly accessible, leaving some important edge cases only partially covered.",
+      "_timestamp": "2026-04-06T03:15:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Planning and coordinating hydroelectric production involves long, tightly coupled sequences including demand forecasting, water flow management, equipment scheduling, and regulatory compliance, where early decisions constrain later ones.",
+      "adequacy_evidence": "Frontier AI agents can manage multi-step planning workflows but still show some degradation over extended, dynamic sequences, such as losing track of constraints or needing re-planning when conditions change.",
+      "_timestamp": "2026-04-06T03:15:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Coordinating hydroelectric production requires tracking large, heterogeneous, and evolving data such as reservoir levels, inflow forecasts, turbine status, grid demand, regulatory constraints, and maintenance schedules, where missing details can materially impact outcomes.",
+      "adequacy_evidence": "Well-tooled agents can manage structured data and perform retrieval across sources, but they still show limitations in maintaining fully consistent, up-to-date state representations and integrating rapidly changing inputs without occasional omissions or drift.",
+      "_timestamp": "2026-04-06T03:15:41"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydroelectric production planning depends on persistent state such as reservoir levels, inflow histories, maintenance schedules, regulatory constraints, and long-term contractual obligations that evolve over time.",
+      "adequacy_evidence": "Current AI agents can integrate with databases and SCADA systems to retain and retrieve such information, but maintaining coherent, continuously updated cross-system context and prioritizing relevant history remains imperfect.",
+      "_timestamp": "2026-04-06T03:15:41"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interpreting operational data such as reservoir levels, weather forecasts, grid demand curves, and equipment status, often presented in charts, dashboards, or spatial layouts, though these can be translated into structured text or numerical inputs.",
+      "adequacy_evidence": "Current AI agents can ingest and reason over structured data, time series, and even visual dashboards via tools, with little degradation; multimodal demands here are moderate and well within existing capabilities.",
+      "_timestamp": "2026-04-06T03:15:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Hydroelectric production planning typically involves day-ahead, hour-ahead, and intra-day scheduling, with some need for timely adjustments but not strict real-time decision-making in most cases.",
+      "adequacy_evidence": "Well-tooled AI systems can perform optimization and scenario analysis within seconds to minutes, fitting comfortably within operational time windows without materially degrading decision quality.",
+      "_timestamp": "2026-04-06T03:15:42"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordination with grid operators, regulators, and possibly large customers, who rely on the output plans and may interact with the planner, though personal identity is not central.",
+      "adequacy_evidence": "Stakeholders in energy operations are increasingly comfortable with automated optimization systems, but full delegation to an AI agent without human oversight may face some resistance due to trust, accountability, and regulatory expectations.",
+      "_timestamp": "2026-04-06T03:15:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydroelectric production planning directly affects grid reliability, dam safety, and water management; residual errors can lead to power outages, equipment damage, or downstream flooding with serious consequences.",
+      "adequacy_evidence": "Even with monitoring and review, AI-generated plans may mis-handle rare conditions or complex system dynamics, leaving non-trivial residual risk that operators would likely find concerning but not wholly unmanageable with oversight.",
+      "_timestamp": "2026-04-06T03:15:45"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Hydroelectric operations are governed by FERC and NERC reliability standards that require qualified human operators and responsible licensees, but there is no explicit prohibition on AI assistance. However, accountability and control must legally reside with certified personnel, creating partial restriction on fully autonomous AI performance.",
+      "_timestamp": "2026-04-06T03:15:45"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While core goals like meeting electricity demand and regulatory constraints are explicit, important tradeoffs (e.g., water resource management, environmental impacts, grid stability, and stakeholder priorities) are context-dependent and require interpretation.",
+      "adequacy_evidence": "Current AI agents can model demand, constraints, and optimization objectives, but often miss implicit priorities or shifting stakeholder considerations, requiring human guidance to refine plans.",
+      "_timestamp": "2026-04-06T03:16:51"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Planning hydroelectric operations involves complex interdependencies (water inflow forecasts, grid demand, environmental constraints) where errors may not be immediately visible and often require simulation, expert review, or delayed real-world feedback to detect.",
+      "adequacy_evidence": "Current AI systems can generate plausible plans but are prone to subtle errors in physical modeling, constraints, and optimization, requiring intensive expert validation and scenario testing before safe deployment.",
+      "_timestamp": "2026-04-06T03:16:52"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

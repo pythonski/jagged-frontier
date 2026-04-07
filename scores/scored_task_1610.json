@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "21-1014.00",
+  "task_id": 1610,
+  "task_statement": "Monitor clients' use of medications.",
+  "occupation_title": "Mental Health Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Monitoring medication use typically involves discussing adherence, side effects, and reviewing self-reports or records, which can be done via telehealth or digital systems. However, some settings (e.g., clinics or residential programs) involve in-person sessions or direct observation of medication routines."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse clients, medications, adherence behaviors, and side-effect profiles, but these patterns are reasonably well-characterized within clinical practice and guidelines.",
+      "adequacy_evidence": "While substantial clinical data and case examples exist, much of it is private (e.g., therapy notes, adherence nuances), and process-level monitoring interactions are only partially captured, though they can be approximated via synthesis and training.",
+      "_timestamp": "2026-04-06T04:27:54"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective monitoring involves interpreting subtle behavioral cues, assessing adherence reliability, recognizing side effects, and exercising judgment about client self-report accuracy and risk\u2014skills built through clinical experience.",
+      "adequacy_evidence": "AI can follow structured protocols and flag inconsistencies, but lacks robust calibration in interpreting nuanced human behavior, deception, and context-dependent mental health presentations across diverse cases.",
+      "_timestamp": "2026-04-06T04:27:55"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring medication use involves interpreting client self-reports, behavioral cues, side effects, and adherence patterns, which are partly implicit and context-dependent rather than fully specified.",
+      "adequacy_evidence": "Current agents can follow structured protocols and detect inconsistencies in reported data, but often miss nuanced signals like partial adherence, intentional noncompliance, or psychosocial factors without human-guided interpretation.",
+      "_timestamp": "2026-04-06T04:27:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring medication use requires tracking adherence, dosage changes, side effects, and patterns over extended periods across multiple counseling sessions.",
+      "adequacy_evidence": "Current AI systems can store and retrieve longitudinal client data via external tools (e.g., EHR integration), but often struggle with consistent updating, context prioritization, and reliable recall across complex, evolving histories.",
+      "_timestamp": "2026-04-06T04:27:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring medication use involves ongoing check-ins, tracking adherence, side effects, and adjustments over time, requiring consistency across repeated but loosely coupled interactions.",
+      "adequacy_evidence": "AI agents can manage structured tracking and reminders, but may show moderate degradation over extended monitoring due to memory persistence limits and risk of losing context across interactions.",
+      "_timestamp": "2026-04-06T04:27:56"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring medication use involves verbal reports but also benefits from observing nonverbal cues, physical condition, or pill containers, making some multimodal perception relevant though not central.",
+      "adequacy_evidence": "Current agents can handle text-based self-reports well and have basic vision capabilities, but are less reliable in interpreting subtle physical or behavioral cues related to medication adherence.",
+      "_timestamp": "2026-04-06T04:27:57"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple pieces of structured information within a session (medication names, dosages, adherence patterns, side effects), requiring some active organization but not extreme volume or complexity.",
+      "adequacy_evidence": "Current AI agents can reliably manage and reference this level of structured, within-episode information using standard context handling and tool support, with minimal loss or distortion.",
+      "_timestamp": "2026-04-06T04:27:57"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring medication use typically occurs during scheduled sessions or periodic check-ins, where responses within seconds to minutes are sufficient rather than real-time immediacy.",
+      "adequacy_evidence": "Current AI systems can gather, summarize, and flag medication adherence or side-effect concerns well within these time bounds without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T04:27:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether clients are using medications correctly relies on self-reports, subtle behavioral/side-effect cues, and clinical judgment; errors (e.g., nonadherence, misuse, interactions) may not be immediately observable and require expertise and follow-up to detect.",
+      "adequacy_evidence": "AI systems would depend heavily on incomplete or unreliable client inputs and may miss nuanced clinical signals or inconsistencies, requiring substantial human review and cross-checking (e.g., with providers or records) to ensure accuracy.",
+      "_timestamp": "2026-04-06T04:27:59"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Monitoring medication use in mental health counseling depends heavily on trust, rapport, and client openness, where the counselor\u2019s perceived empathy and legitimacy directly affect disclosure and adherence.",
+      "adequacy_evidence": "Many clients would be uncomfortable with or distrustful of an AI in this sensitive monitoring role, especially given privacy and therapeutic relationship concerns, which would likely reduce honesty and engagement.",
+      "_timestamp": "2026-04-06T04:28:00"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in monitoring medication use (e.g., missing nonadherence, side effects, or misuse) can lead to relapse, hospitalization, or safety risks, so even rare residual mistakes can have serious consequences.",
+      "adequacy_evidence": "Even with review, AI may miss subtle behavioral cues or inconsistencies in self-report, leaving some residual risk that is meaningful but typically mitigated by clinician oversight.",
+      "_timestamp": "2026-04-06T04:28:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Mental health counseling and aspects of medication monitoring are tied to licensed practice requirements, which generally require a human clinician to oversee care. There is no explicit law banning AI assistance, but autonomous AI performing this task without licensed supervision would conflict with existing licensure and scope-of-practice regulations.",
+      "_timestamp": "2026-04-06T04:28:03"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

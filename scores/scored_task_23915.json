@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1031.00",
+  "task_id": 23915,
+  "task_statement": "Record and evaluate patient and family health and food history, including symptoms, environmental toxic exposure, allergies, medication factors, and preventive health-care measures.",
+  "occupation_title": "Dietitians and Nutritionists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Recording and evaluating health and dietary histories can be done through telehealth interviews and electronic records, but in practice it often occurs during in\u2011person clinical consultations in hospitals or clinics."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Patient and family health and food histories vary widely across demographics, cultures, diseases, environmental exposures, and medication contexts, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "While medical literature, case studies, and synthetic patient generation can cover many common scenarios, real-world clinical histories are often locked in private health records, leaving gaps in rare conditions, nuanced family dynamics, and complex exposure patterns.",
+      "_timestamp": "2026-04-06T01:32:59"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step information gathering (history taking across several domains) followed by synthesis and evaluation, but the sequence is not highly interdependent or extremely long.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across structured intake and evaluation steps, though some degradation (e.g., missed details or constraint drift) can occur in longer or more complex cases.",
+      "_timestamp": "2026-04-06T01:33:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task follows structured clinical guidelines (e.g., standard history-taking domains) but requires interpreting patient responses, probing for relevant details, and prioritizing context-specific factors like cultural diet or environmental exposure.",
+      "adequacy_evidence": "Current agents can follow structured intake protocols but often miss subtle cues, fail to adapt questioning dynamically, or inadequately infer which details are clinically salient without human guidance.",
+      "_timestamp": "2026-04-06T01:33:00"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating patient and family health and dietary history involves interpreting incomplete or self-reported information, probing for relevant details, and weighing interacting factors like lifestyle, culture, and comorbidities, which require experience-based judgment beyond checklists.",
+      "adequacy_evidence": "Current AI agents can structure intake and identify common risk patterns, but they lack consistent calibration in nuanced interviewing, contextual interpretation, and prioritizing ambiguous or conflicting signals across diverse patient contexts.",
+      "_timestamp": "2026-04-06T01:33:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple categories of patient-specific information (medical history, diet, exposures, medications) within a single encounter, requiring organized tracking and synthesis but typically within a bounded scope per patient.",
+      "adequacy_evidence": "Current agents can manage structured intake and summarization with tools, but may lose nuance or misprioritize details when synthesizing heterogeneous health factors, especially without careful scaffolding.",
+      "_timestamp": "2026-04-06T01:33:01"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Collecting and evaluating patient and family health and dietary history occurs during scheduled consultations where minutes are acceptable for thorough questioning and documentation.",
+      "adequacy_evidence": "AI systems can operate comfortably within these timeframes without needing to truncate reasoning, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T01:33:01"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Dietitians and nutritionists must maintain detailed longitudinal patient records (health history, dietary patterns, allergies, exposures, and evolving conditions) across multiple visits to assess trends and adjust recommendations.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured patient data via EHR integrations, but often struggle with consistent longitudinal synthesis, updating nuanced context, and reliably surfacing the most relevant historical details across sessions.",
+      "_timestamp": "2026-04-06T01:33:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves collecting and documenting verbal or written information from patients and families; it does not inherently require visual, audio, or other non-text modalities for competent performance.",
+      "adequacy_evidence": "Current AI systems can reliably process and generate text (and transcribed speech) for history-taking and documentation, with no meaningful multimodal gap affecting performance.",
+      "_timestamp": "2026-04-06T01:33:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Patient and family health and dietary histories contain omissions, recall bias, and nuanced clinical relevance, so detecting errors or gaps often requires expert probing and cross-checking rather than simple validation.",
+      "adequacy_evidence": "AI can structure and summarize histories but still misses nuances or misinterprets inputs, requiring clinician review and follow-up questioning, though errors are usually catchable during the interview process.",
+      "_timestamp": "2026-04-06T01:33:02"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires direct interaction with patients and families to elicit sensitive health, dietary, and environmental information, where trust, empathy, and perceived professional legitimacy matter.",
+      "adequacy_evidence": "While some patients accept digital intake tools, many would be hesitant to fully trust or disclose nuanced personal health details to an AI agent, though partial acceptance is growing in structured settings.",
+      "_timestamp": "2026-04-06T01:33:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "State licensure laws require that assessment and evaluation of patient health and nutrition history be performed or supervised by a licensed dietitian or qualified healthcare professional. While AI can be used as a tool, it cannot independently perform this task without human oversight, creating partial regulatory constraint.",
+      "_timestamp": "2026-04-06T01:33:03"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in recording or evaluating health history (e.g., missing allergies, medication interactions, or toxic exposures) can lead to inappropriate dietary recommendations with potentially serious health consequences.",
+      "adequacy_evidence": "Even with chart review and verification, AI may still omit subtle but clinically relevant details or misinterpret patient-reported information, leaving some non-trivial residual risk, though not at clearly unacceptable levels.",
+      "_timestamp": "2026-04-06T01:33:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

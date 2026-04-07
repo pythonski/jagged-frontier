@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2041.00",
+  "task_id": 1252,
+  "task_statement": "Evaluate customer records and recommend payment plans based on earnings, savings data, payment history, and purchase activity.",
+  "occupation_title": "Credit Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Evaluating financial records and recommending payment plans is typically done using digital credit reports, databases, and financial software, all accessible via computer and internet. Physical presence or specialized equipment is generally unnecessary."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many aspects rely on explicit financial ratios and policy guidelines, analysts still apply experience-based judgment to weigh irregular income patterns, behavioral signals in payment history, and nuanced risk indicators.",
+      "adequacy_evidence": "Current agents can apply structured rules and learned patterns but often lack calibrated judgment in borderline or context-sensitive cases, such as interpreting atypical financial behavior or aligning recommendations with institutional risk tolerance.",
+      "_timestamp": "2026-04-06T04:31:36"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While financial data inputs are explicit, determining an appropriate payment plan involves context-dependent judgment about risk tolerance, customer hardship, and institutional policy that are not fully specified in the task description.",
+      "adequacy_evidence": "Current agents can apply rules and infer reasonable plans from data, but they often miss nuanced organizational preferences or implicit risk tradeoffs, requiring human review and adjustment.",
+      "_timestamp": "2026-04-06T04:31:37"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Customer financial situations are highly heterogeneous (income types, credit histories, behavioral patterns, edge cases like thin files or irregular earnings), requiring broad coverage across diverse profiles.",
+      "adequacy_evidence": "While underwriting guidelines, sample credit datasets, and synthetic generation provide substantial coverage, real-world proprietary credit data and rare edge cases remain partially inaccessible, leaving moderate gaps.",
+      "_timestamp": "2026-04-06T04:31:37"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step evaluation\u2014reviewing financial data, synthesizing patterns, and mapping them to appropriate payment plans\u2014but these steps are relatively bounded and not highly interdependent over long sequences.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably maintain coherence across this level of structured, mid-length reasoning without significant drift or compounding errors.",
+      "_timestamp": "2026-04-06T04:31:37"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves integrating multiple structured data sources (earnings, savings, payment history, purchases) and comparing them to derive a recommendation, requiring moderate information tracking and synthesis within an episode.",
+      "adequacy_evidence": "Modern agents with tool use can reliably handle and aggregate structured financial data, maintain context over these inputs, and perform consistent evaluations without significant information loss.",
+      "_timestamp": "2026-04-06T04:31:38"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from longitudinal customer data (payment history, prior plans), but this information is typically stored in structured records and accessed per case rather than requiring the analyst to personally retain cross-session memory.",
+      "adequacy_evidence": "Current AI systems with database integrations can reliably store and retrieve persistent customer records across sessions, so maintaining and accessing longitudinal context is well within existing capabilities.",
+      "_timestamp": "2026-04-06T04:31:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves structured financial and behavioral data (earnings, savings, payment history), which are typically presented in text or tabular numeric formats rather than requiring visual or audio interpretation.",
+      "adequacy_evidence": "Since the task is effectively text- and data-based, current AI systems can handle the modality requirements without limitation.",
+      "_timestamp": "2026-04-06T04:31:39"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Evaluating customer financial records and recommending payment plans is typically an offline analytical task where minutes to hours of processing time is acceptable.",
+      "adequacy_evidence": "Current AI systems can perform detailed financial analysis and reasoning well within these relaxed time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T04:31:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task affects customers who must accept or respond to recommended payment plans, and internal stakeholders rely on the analyst\u2019s judgment, but direct interpersonal persuasion or identity is not always central.",
+      "adequacy_evidence": "Many customers and institutions are increasingly comfortable with algorithmic credit decisions, though some may distrust or resist AI-driven recommendations, especially in sensitive financial hardship contexts.",
+      "_timestamp": "2026-04-06T04:31:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incorrect payment plan recommendations can lead to financial losses, customer dissatisfaction, or increased default risk, but impacts are typically reversible or mitigable through later adjustments.",
+      "adequacy_evidence": "Even with review processes, AI may misinterpret nuanced financial situations or edge cases, leaving some meaningful residual risk that could affect credit outcomes or customer fairness.",
+      "_timestamp": "2026-04-06T04:31:40"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification requires financial expertise to assess income, savings, and payment history against credit policies; errors in judgment (e.g., affordability or risk tolerance) are not always obvious but can be checked with careful review.",
+      "adequacy_evidence": "Current AI can structure analyses but may misinterpret financial data or apply inappropriate heuristics, so human review and recalculation are needed to ensure sound recommendations.",
+      "_timestamp": "2026-04-06T04:31:41"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There is no explicit US law prohibiting AI from evaluating credit data or recommending payment plans; lenders already use automated underwriting systems. Regulations like ECOA and FCRA impose fairness, transparency, and adverse action requirements, but do not mandate a human decision-maker.",
+      "_timestamp": "2026-04-06T04:31:41"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

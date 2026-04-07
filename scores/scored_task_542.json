@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2071.00",
+  "task_id": 542,
+  "task_statement": "Assign the patient to diagnosis-related groups (DRGs), using appropriate computer software.",
+  "occupation_title": "Medical Records and Health Information Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Assigning patients to DRGs is done by reviewing electronic health records and using specialized coding software, which can be accessed remotely on a computer without physical presence or equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "DRG assignment is largely governed by explicit coding guidelines and grouper logic, but requires some experiential judgment in interpreting ambiguous clinical documentation and selecting principal diagnoses or complications.",
+      "adequacy_evidence": "Current AI systems can apply coding rules and grouper software reliably, but show gaps in nuanced interpretation of clinical context and edge cases where coder judgment or physician query decisions are needed.",
+      "_timestamp": "2026-04-05T20:52:15"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Assigning DRGs involves a multi-step process: reviewing clinical documentation, extracting diagnoses and procedures, coding them, and applying grouping logic in software, where earlier steps influence later ones.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably follow these structured, moderately long workflows with minimal degradation, as each step is standardized and supported by software tools that constrain the sequence.",
+      "_timestamp": "2026-04-05T20:52:15"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "DRG assignment spans a wide, long-tailed distribution of clinical presentations, comorbidities, procedures, and documentation styles across patient populations and care settings.",
+      "adequacy_evidence": "There is substantial coverage via coding manuals, guidelines, and de-identified claims/EHR datasets, but real-world edge cases and nuanced documentation patterns remain partially inaccessible due to privacy and sparsity.",
+      "_timestamp": "2026-04-05T20:52:15"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "DRG assignment follows explicit CMS grouping rules, but requires interpreting clinical documentation (e.g., principal diagnosis, complications/comorbidities) where intent and coding nuances can be context-dependent.",
+      "adequacy_evidence": "Current AI systems can apply coding rules but often misinterpret ambiguous or incomplete clinical notes, requiring human review to resolve edge cases and ensure correct grouping.",
+      "_timestamp": "2026-04-05T20:52:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "DRG assignment relies primarily on structured clinical codes and textual data from electronic health records rather than images, audio, or other modalities.",
+      "adequacy_evidence": "Since the task is fundamentally text- and data-driven, current AI systems handle the required modalities without limitation.",
+      "_timestamp": "2026-04-05T20:52:16"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Assigning DRGs requires integrating multiple elements from a patient record (diagnoses, procedures, demographics, complications) but these are typically structured and bounded within a single case.",
+      "adequacy_evidence": "Frontier agents with retrieval and structured data handling can reliably track and integrate these fields within an episode, with little evidence of systematic context loss.",
+      "_timestamp": "2026-04-05T20:52:16"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "DRG assignment is typically performed as part of medical coding workflows where minutes per case are acceptable and work is often batched rather than real-time.",
+      "adequacy_evidence": "Current AI systems can assign DRGs quickly within these loose time constraints without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-05T20:52:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "DRG assignment is typically performed per patient encounter using current clinical documentation, diagnoses, and procedures, with all necessary information available within the case record or EHR.",
+      "adequacy_evidence": "Because each instance is self-contained and relevant data is retrieved from existing records, current AI systems do not need persistent cross-session memory to perform this task effectively.",
+      "_timestamp": "2026-04-05T20:52:17"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "DRG assignment depends on nuanced interpretation of clinical documentation and coding rules; errors can be subtle (e.g., sequencing, comorbidities) and often require expert review or audit to detect.",
+      "adequacy_evidence": "Current AI coding systems still make non-obvious mistakes in code selection and sequencing, so outputs require thorough expert validation, with errors frequent enough that minimal checking would be unsafe.",
+      "_timestamp": "2026-04-05T20:52:18"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task affects billing and reimbursement stakeholders (e.g., insurers, hospital administration), but they primarily rely on the correctness of the DRG assignment rather than the identity of the individual performing it.",
+      "adequacy_evidence": "DRG assignment is already heavily mediated by software, and stakeholders generally accept automated or AI-assisted coding as long as it meets accuracy and compliance standards.",
+      "_timestamp": "2026-04-05T20:52:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "DRG assignment affects reimbursement, compliance, and audit exposure; errors can lead to financial penalties or recoupments but are typically detectable and correctable through audits and appeals.",
+      "adequacy_evidence": "With existing coding software, rule-based validation, and human review, AI-assisted assignments can be checked effectively, leaving residual risk at a tolerable level for routine operations.",
+      "_timestamp": "2026-04-05T20:52:19"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from assigning DRGs; coding is governed by standards and audit requirements, but not restricted to human-only performance. AI-assisted and automated coding tools are already permitted in practice.",
+      "_timestamp": "2026-04-05T20:52:19"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

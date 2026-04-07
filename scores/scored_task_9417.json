@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9094.00",
+  "task_id": 9417,
+  "task_statement": "Translate medical jargon and abbreviations into their expanded forms to ensure the accuracy of patient and health care facility records.",
+  "occupation_title": "Medical Transcriptionists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Expanding medical abbreviations and jargon occurs while editing or reviewing dictated reports within transcription software or word-processing tools, which can be done entirely on a computer without physical presence."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves processing entire clinical documents where consistent expansion of abbreviations across multiple entries matters, but each expansion is largely local and not tightly interdependent.",
+      "adequacy_evidence": "Current AI systems can reliably maintain consistency in terminology expansion across document-length sequences with minimal degradation, especially with structured prompts or tools.",
+      "_timestamp": "2026-04-06T05:00:59"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many medical abbreviations are context-dependent and ambiguous (e.g., \"MS\" or \"PT\"), requiring some experience-based judgment to select the correct expansion based on surrounding clinical context.",
+      "adequacy_evidence": "Current AI systems handle common and context-rich cases well but still show noticeable errors in ambiguous or sparse-context instances, indicating incomplete calibration for non-routine cases.",
+      "_timestamp": "2026-04-06T05:01:00"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Medical abbreviations and jargon vary across specialties, institutions, and clinicians, creating moderate diversity with context-dependent meanings.",
+      "adequacy_evidence": "Extensive medical corpora, abbreviation dictionaries, clinical notes datasets, and synthetic generation pipelines provide broad, process-level coverage of these variations.",
+      "_timestamp": "2026-04-06T05:01:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many medical abbreviations are context-dependent (e.g., 'MS' could mean multiple sclerosis or morphine sulfate), requiring interpretation based on surrounding clinical information rather than a purely literal mapping.",
+      "adequacy_evidence": "Current agents can usually expand abbreviations correctly with sufficient context, but they still make nontrivial errors when context is sparse or ambiguous, often requiring human review to ensure accuracy.",
+      "_timestamp": "2026-04-06T05:01:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is fundamentally text-to-text, involving interpreting and expanding written medical abbreviations and jargon within records.",
+      "adequacy_evidence": "Since the task does not require non-text modalities, current AI systems fully meet the modality requirements.",
+      "_timestamp": "2026-04-06T05:01:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking abbreviations and their context within a document to choose correct expansions, but the information volume is typically \u0645\u062d\u062f\u0648\u062f to a single report or record and does not involve highly complex state management.",
+      "adequacy_evidence": "Current LLM-based agents can reliably maintain and use within-document context, correctly expanding abbreviations with minimal loss or drift in short-to-moderate medical texts.",
+      "_timestamp": "2026-04-06T05:01:01"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Expanding medical abbreviations is largely self-contained within each document, relying on general medical knowledge or reference materials rather than accumulated cross-session context.",
+      "adequacy_evidence": "Since the task does not depend on persistent longitudinal state, current AI systems' memory capabilities are sufficient and no cross-session retention gap is relevant.",
+      "_timestamp": "2026-04-06T05:01:01"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Expanding medical jargon in transcription workflows is typically done asynchronously as part of record preparation, where minutes of processing time are acceptable.",
+      "adequacy_evidence": "Current AI systems can accurately expand abbreviations within these timeframes without needing to sacrifice reasoning depth, so speed constraints do not degrade quality.",
+      "_timestamp": "2026-04-06T05:01:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from translating medical jargon in records; such tasks can be automated as long as HIPAA and data privacy requirements are met. No licensing rule mandates a human to perform this specific function.",
+      "_timestamp": "2026-04-06T05:01:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many medical abbreviations are standardized and can be checked against references, but context-dependent ambiguities (e.g., overlapping abbreviations) require domain knowledge to verify correctness.",
+      "adequacy_evidence": "Current AI can usually expand common abbreviations correctly but still makes context errors, so human review with medical knowledge is needed to reliably catch and correct mistakes.",
+      "_timestamp": "2026-04-06T05:01:02"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The output is used by healthcare staff and records systems, so others rely on its correctness, but they typically do not interact with or evaluate the performer directly.",
+      "adequacy_evidence": "Healthcare stakeholders generally care about accuracy and compliance rather than who or what performed the expansion, and AI-assisted transcription is already widely accepted in practice.",
+      "_timestamp": "2026-04-06T05:01:03"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect expansion of medical abbreviations can change clinical meaning (e.g., medication, dosage, or diagnosis), creating patient safety risks and legal issues, so even rare residual errors are high-consequence.",
+      "adequacy_evidence": "With standard QC (human review and context checks), most AI errors can be caught, but ambiguity in abbreviations and context-dependent meanings means some residual risk remains non-trivial.",
+      "_timestamp": "2026-04-06T05:01:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

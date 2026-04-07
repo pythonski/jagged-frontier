@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2031.00",
+  "task_id": 3397,
+  "task_statement": "Match appropriations for specific programs with appropriations for broader programs, including items for emergency funds.",
+  "occupation_title": "Budget Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Matching appropriations across programs is a financial analysis task typically performed using digital budget documents, spreadsheets, and financial management systems, all of which can be accessed remotely on a computer."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple agencies, program structures, and special cases like emergency funds, but follows standardized government budgeting and classification practices.",
+      "adequacy_evidence": "Extensive public records (e.g., federal and state budgets, appropriations bills, GAO reports) provide detailed, process-level examples, making representative training data readily available.",
+      "_timestamp": "2026-04-06T02:11:17"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves comparing and aligning multiple budget line items across categories, requiring consistent tracking of relationships over a moderate sequence of steps, but not long, tightly interdependent chains.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably maintain consistency across such structured matching tasks, with minimal degradation over the required sequence length.",
+      "_timestamp": "2026-04-06T02:11:19"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interpreting budget categories and aligning specific program appropriations with broader classifications, which can require some contextual judgment (e.g., handling emergency funds or ambiguous categorizations) but is largely guided by established rules and documentation.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably apply classification rules, reference documentation, and reconcile mappings, handling most contextual nuances with minimal ambiguity remaining.",
+      "_timestamp": "2026-04-06T02:11:19"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task follows documented budget classifications and appropriation rules, analysts must apply judgment in ambiguous cases (e.g., overlapping program scopes or emergency fund allocations).",
+      "adequacy_evidence": "AI agents can follow explicit mappings and guidelines well, but may lack consistent calibration in edge cases where program intent or contextual interpretation affects correct matching.",
+      "_timestamp": "2026-04-06T02:11:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves analyzing and matching budgetary figures and program categories, typically represented in text or tabular numeric formats; no inherent reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Since the task is fundamentally text and number based, current AI systems can fully handle the modality requirements without limitation.",
+      "_timestamp": "2026-04-06T02:11:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves cross-referencing multiple budget line items, categories, and funding sources (including emergency funds), requiring tracking and aligning structured but moderately sized financial data within a single workflow.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, retrieval, and structured parsing) can reliably manage and cross-reference this level of information without significant loss or drift.",
+      "_timestamp": "2026-04-06T02:11:20"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily document-driven and instance-specific, matching line items within current budget materials rather than relying on accumulated cross-session context.",
+      "adequacy_evidence": "Since little to no persistent state is required, existing agent memory systems are sufficient for the task\u2019s needs.",
+      "_timestamp": "2026-04-06T02:11:21"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Matching appropriations across program categories is a deliberative, document-based task typically performed over minutes to hours, not requiring real-time responsiveness.",
+      "adequacy_evidence": "AI agents can take sufficient time to parse documents and perform structured comparisons without degrading quality, as there is no tight latency constraint forcing rushed reasoning.",
+      "_timestamp": "2026-04-06T02:11:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is an internal analytical task aligning budget appropriations, typically consumed within an organization without requiring stakeholder interaction or concern for who performed it.",
+      "adequacy_evidence": "Since there are no meaningful stakeholder-facing elements, acceptance of AI versus human performers is largely irrelevant and would not affect task effectiveness.",
+      "_timestamp": "2026-04-06T02:11:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reconciling structured budget categories and funding lines, where errors can be detected through cross-referencing official documents and totals, but doing so requires domain familiarity and careful review.",
+      "adequacy_evidence": "Current AI can perform structured matching but may misinterpret program hierarchies or special cases like emergency funds, so outputs require consistent human verification to ensure correctness.",
+      "_timestamp": "2026-04-06T02:11:22"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from performing internal budget analysis tasks like matching appropriations. While final approvals or official submissions may require authorized human officials, the analytical work itself is not legally restricted from AI use.",
+      "_timestamp": "2026-04-06T02:11:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Errors in matching appropriations can lead to misallocation of public funds, audit findings, and legal or compliance violations, so even rare residual mistakes can have serious downstream consequences.",
+      "adequacy_evidence": "The task is highly structured and typically involves reconciliation checks against authoritative records, so AI outputs can be thoroughly validated, leaving little residual risk after normal quality control.",
+      "_timestamp": "2026-04-06T02:11:23"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

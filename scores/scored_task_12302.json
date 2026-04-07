@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-8012.00",
+  "task_id": 12302,
+  "task_statement": "Coordinate with engineers, planners, field personnel, or other utility workers to provide information such as clearances, switching orders, or distribution process changes.",
+  "occupation_title": "Power Distributors and Dispatchers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Coordinating and communicating switching orders, clearances, and process updates is typically done from a control center using computers, SCADA systems, phones, or messaging tools, without requiring physical presence in the field."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Coordination spans highly variable grid conditions (normal ops, outages, emergencies), differing regional infrastructures, and context-specific switching and clearance procedures, creating a broad and long-tailed distribution of scenarios.",
+      "adequacy_evidence": "While general procedures, manuals, and some incident reports are available, much high-fidelity coordination data (real-time dispatch logs, edge-case decisions) is proprietary and sparse, though partially recoverable via simulation and synthetic training.",
+      "_timestamp": "2026-04-06T01:14:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Coordinating clearances and switching orders in live power systems requires experiential judgment about grid conditions, crew safety, and evolving field realities that are not fully captured in formal procedures.",
+      "adequacy_evidence": "While agents can follow documented protocols and simulate scenarios, they lack the lived operational calibration and situational nuance needed for many non-routine or safety-critical coordination decisions.",
+      "_timestamp": "2026-04-06T01:14:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Coordinating clearances, switching orders, and process changes involves multi-step communication across stakeholders where consistency matters, but sequences are typically bounded within discrete operational events.",
+      "adequacy_evidence": "LLM-based agents can manage moderate multi-step coordination with tools, but may exhibit drift or miss updates across extended back-and-forth interactions, especially with multiple parties and evolving constraints.",
+      "_timestamp": "2026-04-06T01:14:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the information types (clearances, switching orders, process changes) are well-defined, effective coordination depends on situational context like grid conditions, safety priorities, and implicit operational norms that are not always fully specified.",
+      "adequacy_evidence": "Current agents can interpret structured requests and standard procedures, but they often struggle with implicit situational cues and evolving operational context, requiring human clarification to ensure alignment.",
+      "_timestamp": "2026-04-06T01:14:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple simultaneous operational details (e.g., grid status, switching orders, safety clearances, personnel coordination) that are dynamic and interdependent, where missing a detail can cause safety or reliability issues.",
+      "adequacy_evidence": "Agents can manage structured data with tools, but still struggle with reliably maintaining and updating complex, evolving operational state across multiple threads, risking omissions or inconsistencies.",
+      "_timestamp": "2026-04-06T01:14:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Coordination often relies on ongoing system state, recent switching actions, and prior communications, but this information is typically stored in operational logs and control systems rather than requiring deep longitudinal memory.",
+      "adequacy_evidence": "Current AI agents can integrate with databases, logs, and dispatch systems to retrieve relevant cross-session context, so persistent memory needs are largely met through external system access rather than intrinsic memory.",
+      "_timestamp": "2026-04-06T01:14:06"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily verbal/textual communication of operational information (e.g., clearances, switching orders) via phone, radio, or digital messaging, without inherent reliance on visual or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents can handle text and speech-based coordination effectively, and no significant non-text perceptual or generative capabilities are required for typical task execution.",
+      "_timestamp": "2026-04-06T01:14:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Power distribution coordination often occurs in real-time or near-real-time grid operations, where delays of more than seconds can impact safety, reliability, or outage response.",
+      "adequacy_evidence": "LLM-based agents can generate and relay standard instructions quickly, but tight time constraints can limit deeper reasoning or cross-checking in complex or abnormal scenarios, causing some quality degradation.",
+      "_timestamp": "2026-04-06T01:14:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying correctness of clearances, switching orders, and distribution changes requires domain expertise and cross-checking against system states, procedures, and safety rules; errors are not always immediately obvious but can be caught through established review processes.",
+      "adequacy_evidence": "AI-generated coordination details would still need expert validation against real-time grid conditions and protocols, as current systems can mis-specify technical details or context, creating a non-trivial but manageable verification burden.",
+      "_timestamp": "2026-04-06T01:14:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in communicating clearances, switching orders, or distribution changes can cause outages, equipment damage, or serious safety incidents including electrocution, so even rare residual mistakes have severe consequences.",
+      "adequacy_evidence": "Even with standard verification protocols (e.g., read-backs, confirmations), AI systems still exhibit occasional misinterpretation or generation errors that could slip through and create unacceptable residual risk in this high-stakes, real-time operational context.",
+      "_timestamp": "2026-04-06T01:14:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves active coordination with engineers and field crews where authority, trust, and clear accountability are important for safe grid operations and compliance with procedures.",
+      "adequacy_evidence": "While some digital dispatch and automation tools are already accepted, fully replacing a human coordinator with an AI agent would face moderate resistance due to safety concerns, liability, and the need for trusted human oversight.",
+      "_timestamp": "2026-04-06T01:14:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "NERC reliability standards and utility operating rules require certified human system operators to be responsible for real-time grid coordination and switching communications, but they do not explicitly forbid AI assistance. This creates partial restriction, as AI cannot autonomously fulfill the role without a licensed human accountable.",
+      "_timestamp": "2026-04-06T01:14:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

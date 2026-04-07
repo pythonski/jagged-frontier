@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3021.02",
+  "task_id": 4647,
+  "task_statement": "Review documents such as purchase orders, sales tickets, charge slips, or hospital records to compute fees or charges due.",
+  "occupation_title": "Billing and Posting Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Many billing and rate calculations are done by reviewing electronic records in billing systems or databases, which can be handled remotely. However, some workplaces still rely on physical purchase orders, charge slips, or paper hospital records that require in-person handling."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely governed by explicit billing rules, fee schedules, and documentation standards, but clerks sometimes rely on experience to resolve discrepancies, interpret ambiguous entries, or apply appropriate codes in edge cases.",
+      "adequacy_evidence": "Current AI agents can follow billing rules and handle many standard cases, but they still show gaps in nuanced judgment for irregular or ambiguous records that experienced clerks resolve through learned calibration.",
+      "_timestamp": "2026-04-06T00:27:19"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many billing rules are codified, documents often contain inconsistencies, missing fields, or context-dependent interpretations (e.g., insurance rules, discounts, or special cases) requiring some judgment.",
+      "adequacy_evidence": "Current agents can follow explicit billing rules and extract structured data well, but they still struggle with resolving ambiguous or conflicting information and nuanced policy interpretations without human clarification.",
+      "_timestamp": "2026-04-06T00:27:20"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple document types (purchase orders, medical records, sales slips) with some variation in formats and rules, but remains largely structured and rule-governed within billing domains.",
+      "adequacy_evidence": "There is abundant accessible data (invoices, billing examples, coding guidelines, synthetic EHRs) and clear procedural documentation, enabling representative training coverage across major subcases.",
+      "_timestamp": "2026-04-06T00:27:20"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps\u2014reviewing documents, extracting relevant fields, and applying rules to compute charges\u2014but these steps are typically short and structured per case rather than long, tightly interdependent sequences.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably handle document parsing and multi-step calculations with tools, showing little degradation over the modest sequence lengths required for individual billing cases.",
+      "_timestamp": "2026-04-06T00:27:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves extracting and reconciling relevant fields (e.g., item codes, quantities, prices, dates) across one or more structured or semi-structured documents, requiring moderate information tracking within a single episode.",
+      "adequacy_evidence": "Current agents with document parsing, retrieval, and structured extraction tools can reliably manage and organize this level of information without significant loss or drift.",
+      "_timestamp": "2026-04-06T00:27:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves reading structured documents that may be scanned, handwritten, or formatted as forms (e.g., charge slips, hospital records), requiring some visual parsing beyond plain text.",
+      "adequacy_evidence": "Current agents with OCR and document understanding handle clean, typed forms well but remain inconsistent with handwritten entries, poor scan quality, or complex layouts.",
+      "_timestamp": "2026-04-06T00:27:21"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each document (purchase order, sales ticket, hospital record) typically contains or links to all necessary information to compute charges, with prior history stored in external billing systems rather than worker memory.",
+      "adequacy_evidence": "Current AI systems can rely on databases and retrieval tools for any needed historical data, so there is no meaningful gap in cross-session memory for this task.",
+      "_timestamp": "2026-04-06T00:27:21"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing billing documents and computing charges is typically a back-office task with batch processing; minutes per item are acceptable rather than real-time response.",
+      "adequacy_evidence": "Current AI systems can process and reason over such documents well within acceptable time frames, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T00:27:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Outputs can be checked against source documents, fee schedules, and arithmetic consistency, but doing so requires careful comparison and some domain knowledge of billing rules and codes.",
+      "adequacy_evidence": "AI can process structured billing logic but still makes occasional extraction or coding errors, so routine human verification or automated cross-checks remain necessary.",
+      "_timestamp": "2026-04-06T00:27:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in billing or fee computation can cause financial discrepancies, customer dissatisfaction, or compliance issues, but are typically detectable and correctable without severe or irreversible harm.",
+      "adequacy_evidence": "With standard validation checks (e.g., reconciliation, audits, rule-based systems), AI-generated outputs can be reliably verified, leaving minimal residual risk at acceptable levels.",
+      "_timestamp": "2026-04-06T00:27:23"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal document review and calculation; outputs are processed within billing systems without direct stakeholder interaction or reliance on performer identity.",
+      "adequacy_evidence": "Since stakeholders do not directly engage with the performer, acceptance of AI is largely irrelevant and already typical in automated billing processes.",
+      "_timestamp": "2026-04-06T00:27:23"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from reviewing billing documents and computing charges; such tasks can be automated as long as privacy (e.g., HIPAA) and data security requirements are met. These rules constrain handling of data, not who or what performs the task.",
+      "_timestamp": "2026-04-06T00:27:23"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1244.00",
+  "task_id": 1317,
+  "task_statement": "Perform data backups and disaster recovery operations.",
+  "occupation_title": "Network and Computer Systems Administrators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Data backups and many disaster recovery procedures are executed and monitored through software tools and remote system access, making them largely computer-based. However, some scenarios require physical actions such as replacing failed hardware, handling backup media, or working directly in a data center."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Backup and disaster recovery spans different infrastructures (on-prem, cloud, hybrid), tools, and failure scenarios, but follows well-documented, repeatable procedures and standard patterns.",
+      "adequacy_evidence": "Extensive documentation, runbooks, vendor guides, and the ability to simulate failures in test environments provide rich, process-level training data across relevant scenarios.",
+      "_timestamp": "2026-04-06T00:09:59"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Backup and disaster recovery tasks are guided by explicit policies (e.g., RPO/RTO, retention rules), but require interpretation of system criticality, business priorities, and evolving infrastructure context.",
+      "adequacy_evidence": "Current agents can follow documented policies and infer common best practices, but often miss organization-specific priorities or implicit constraints without iterative human clarification.",
+      "_timestamp": "2026-04-06T00:10:00"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many backup and disaster recovery procedures are documented (e.g., runbooks, RPO/RTO targets), real-world performance often requires experience-based judgment in prioritizing systems, diagnosing partial failures, and adapting to environment-specific quirks.",
+      "adequacy_evidence": "Current agents can follow documented procedures and handle standard recovery scenarios, but they struggle with non-routine incidents requiring nuanced prioritization, interpretation of ambiguous failure states, or adaptation to undocumented infrastructure idiosyncrasies.",
+      "_timestamp": "2026-04-06T00:10:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking system inventories, backup schedules, storage locations, and recovery procedures/logs within a session, requiring coordination across multiple information sources but not extreme scale.",
+      "adequacy_evidence": "Current agents with tool integration (monitoring systems, logs, configuration databases) can reliably retrieve and manage this level of operational context without significant loss or drift.",
+      "_timestamp": "2026-04-06T00:10:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Backup and disaster recovery involve multi-step workflows (configuring jobs, monitoring, validating backups, and executing restores) where consistency matters, but many steps are standardized or automatable.",
+      "adequacy_evidence": "AI agents can follow structured runbooks and maintain coherence across these sequences, though some degradation can occur in longer recovery scenarios with branching decisions or unexpected failures.",
+      "_timestamp": "2026-04-06T00:10:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data backup and disaster recovery operations are primarily performed through command-line tools, scripts, logs, and configuration files, all of which are text-based; visual interfaces are optional rather than essential.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based system administration workflows, including scripting, log analysis, and configuration management, without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T00:10:02"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Backups are typically scheduled and tolerant of minutes-to-hours latency, but disaster recovery during outages requires reasonably prompt action (seconds to minutes) to restore services.",
+      "adequacy_evidence": "AI agents can generate and execute recovery procedures or scripts within these time windows without needing deep, time-prohibitive reasoning, so speed constraints rarely degrade quality.",
+      "_timestamp": "2026-04-06T00:10:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Backup and disaster recovery work relies on persistent knowledge such as backup schedules, retention policies, system configurations, and historical logs, but these are typically stored in external systems rather than human memory.",
+      "adequacy_evidence": "Current AI agents can reliably access and utilize persistent state through integrations with backup software, logs, and configuration management systems, so cross-session retention is effectively handled by existing infrastructure.",
+      "_timestamp": "2026-04-06T00:10:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Backup and disaster recovery correctness is often only proven via test restores or real incidents; misconfigurations, incomplete backups, or silent corruption can remain undetected for long periods without deliberate validation drills.",
+      "adequacy_evidence": "AI-generated backup policies or scripts can appear correct but still omit edge cases (e.g., permissions, incremental chains, offsite replication), requiring rigorous, ongoing human-led testing and verification to ensure recoverability.",
+      "_timestamp": "2026-04-06T00:10:03"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Failures in backup or disaster recovery can lead to irreversible data loss, prolonged downtime, and major organizational impact, so even rare residual errors are highly consequential.",
+      "adequacy_evidence": "With standard safeguards like checksum verification and test restores, many errors can be caught, but AI-driven execution may still miss edge cases or mis-handle complex recovery scenarios, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T00:10:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data backup and disaster recovery operations are largely internal, technical processes with outputs consumed by systems or internal teams, not requiring stakeholder engagement with the performer\u2019s identity.",
+      "adequacy_evidence": "Organizations already rely heavily on automated backup and recovery tools, and stakeholders are indifferent to whether a human or AI manages these processes as long as reliability is maintained.",
+      "_timestamp": "2026-04-06T00:10:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from performing data backup or disaster recovery operations. While sector-specific rules (e.g., HIPAA, financial regulations) impose requirements on data handling and accountability, they do not restrict the use of AI tools to carry out these tasks.",
+      "_timestamp": "2026-04-06T00:10:03"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

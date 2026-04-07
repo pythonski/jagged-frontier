@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4061.00",
+  "task_id": 9733,
+  "task_statement": "Interview benefits recipients at specified intervals to certify their eligibility for continuing benefits.",
+  "occupation_title": "Eligibility Interviewers, Government Programs",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Eligibility recertification interviews are frequently conducted by phone or video and documented in digital case management systems, allowing them to be done remotely. However, some agencies still require or conduct in-person interviews at government offices, so not all instances are fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Eligibility interviews span diverse claimant circumstances (income sources, household composition, disabilities, compliance histories), but are structured by standardized program rules and interview protocols.",
+      "adequacy_evidence": "While policy manuals and some training materials exist, real interview transcripts and nuanced edge cases are often private or sparsely documented, leaving partial but not complete coverage that could be supplemented with synthetic data.",
+      "_timestamp": "2026-04-06T00:45:27"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task follows formal eligibility criteria and structured interview protocols, but requires some interpretation of responses, probing for inconsistencies, and contextual judgment about completeness and credibility.",
+      "adequacy_evidence": "Current agents can follow scripted interviews and infer basic intent, but often miss subtle cues, fail to adapt questioning effectively, or require human oversight to handle ambiguous or evasive responses.",
+      "_timestamp": "2026-04-06T00:45:27"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While eligibility criteria are largely rule-based, interviewers must apply judgment in probing inconsistencies, interpreting ambiguous responses, and assessing credibility or completeness of information in context.",
+      "adequacy_evidence": "AI agents can follow structured interview protocols and flag discrepancies, but they show limitations in nuanced judgment about respondent reliability and context-sensitive interpretation across less routine cases.",
+      "_timestamp": "2026-04-06T00:45:28"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves conducting structured, multi-step interviews with interdependent questions (e.g., verifying identity, income, household status), where consistency across the interaction matters but sequences are typically bounded and procedural.",
+      "adequacy_evidence": "AI agents can generally sustain coherent multi-turn interviews with scripted flows, but may show moderate degradation such as missed follow-ups or constraint drift over longer or more complex interactions.",
+      "_timestamp": "2026-04-06T00:45:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking applicant responses, verifying documents, and applying program rules within a single interview, but the information is structured and typically bounded by standardized forms and checklists.",
+      "adequacy_evidence": "Current agents can manage structured interview flows and form-based data capture, but may occasionally lose nuance or mis-handle inconsistencies across responses without careful scaffolding.",
+      "_timestamp": "2026-04-06T00:45:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interviews are interactive and expect reasonably prompt responses, but they occur in structured sessions where short pauses for clarification or lookup are acceptable.",
+      "adequacy_evidence": "Current AI agents can generate accurate, policy-aligned questions and responses within seconds, so meeting latency needs does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T00:45:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Eligibility interviews are primarily structured question-and-answer exchanges that can be conducted via text forms or scripted dialogue without relying on visual or other non-text inputs.",
+      "adequacy_evidence": "LLM-based agents with speech-to-text and text interfaces can handle the conversational aspects effectively, and no critical multimodal perception or generation is required.",
+      "_timestamp": "2026-04-06T00:45:29"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Eligibility interviews recur over time and depend on prior case history (income changes, household composition, prior determinations, compliance notes), requiring persistent longitudinal records across multiple sessions.",
+      "adequacy_evidence": "Current agent systems can integrate with case management databases to store and retrieve histories, but they still show gaps in reliably updating, reconciling, and contextually surfacing the right past details across cases and policy changes.",
+      "_timestamp": "2026-04-06T00:45:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors can lead to wrongful denial or continuation of government benefits, creating financial harm or improper payments, but decisions are typically reversible through appeals and audits.",
+      "adequacy_evidence": "Even with oversight, AI may misinterpret nuanced responses or fail to probe inconsistencies, leaving a non-trivial residual risk of eligibility errors that remains problematic in practice.",
+      "_timestamp": "2026-04-06T00:45:30"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires direct interaction with benefits recipients, where perceived authority, fairness, and empathy of the interviewer influence cooperation and disclosure of sensitive information.",
+      "adequacy_evidence": "Many recipients would be wary of an AI conducting eligibility interviews\u2014especially in high-stakes government contexts\u2014potentially reducing trust and candor, though some would still engage if the system is transparent and well-designed.",
+      "_timestamp": "2026-04-06T00:45:31"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit law broadly prohibiting AI from conducting eligibility interviews, and some automation is already used in benefits administration. However, due process requirements, identity verification rules, and agency policies often assume or require human caseworker involvement in eligibility determinations, creating partial regulatory constraints and ambiguity for fully autonomous AI execution.",
+      "_timestamp": "2026-04-06T00:45:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Eligibility determinations depend on accurately interpreting applicant statements, detecting inconsistencies, and cross-checking with external records; misstatements or omissions can be subtle and may only surface through deeper investigation or later audits.",
+      "adequacy_evidence": "AI-conducted interviews would require extensive human review and independent verification of responses and documentation, as current systems can miss nuance, fail to probe effectively, or misinterpret answers, making unverified outputs unreliable.",
+      "_timestamp": "2026-04-06T00:45:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2099.01",
+  "task_id": 17721,
+  "task_statement": "Conduct quality analyses of data inputs and resulting analyses or predictions.",
+  "occupation_title": "Bioinformatics Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Quality analysis of data inputs and computational outputs in bioinformatics is performed using software tools to inspect datasets, models, and predictions, which can be done entirely on a computer with internet access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Bioinformatics QA spans diverse data types (e.g., genomics, transcriptomics), sequencing platforms, pipelines, and lab-specific artifacts, creating a highly heterogeneous and long-tailed distribution of possible issues.",
+      "adequacy_evidence": "There is substantial public data (benchmarks, pipelines, QC reports) and synthetic generation is feasible, but coverage of rare experimental artifacts and proprietary lab workflows remains incomplete.",
+      "_timestamp": "2026-04-05T23:00:01"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Quality analysis in bioinformatics relies partly on established QC metrics and documented procedures, but also requires experience-based judgment to interpret anomalies like batch effects, sequencing artifacts, or biologically implausible results.",
+      "adequacy_evidence": "Current agents can apply standard QC pipelines and flag statistical irregularities, but often lack the nuanced calibration needed to interpret context-specific artifacts or distinguish technical noise from meaningful biological variation.",
+      "_timestamp": "2026-04-05T23:00:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step quality control workflows (e.g., validating inputs, running analyses, reviewing outputs, and iterating), where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or tightly interdependent.",
+      "adequacy_evidence": "AI agents can generally manage structured QC pipelines with tooling, but may show moderate degradation over iterative steps (e.g., missed inconsistencies or drift in validation criteria) as sequences lengthen.",
+      "_timestamp": "2026-04-05T23:00:03"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Quality analysis in bioinformatics depends on context such as data type (e.g., RNA-seq vs. whole genome), experimental design, and downstream use, with implicit thresholds and domain conventions rather than fully explicit criteria.",
+      "adequacy_evidence": "Agents can apply standard QC pipelines and heuristics, but often miss context-specific expectations or fail to adjust criteria appropriately without human guidance, requiring iterative refinement.",
+      "_timestamp": "2026-04-05T23:00:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Quality analysis of bioinformatics data and model outputs is typically conducted in batch workflows where minutes to hours are acceptable, with no need for real-time responsiveness.",
+      "adequacy_evidence": "Current AI systems can perform thorough analysis within these relaxed timeframes without needing to truncate reasoning, so speed constraints do not degrade quality.",
+      "_timestamp": "2026-04-05T23:00:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Quality analysis in bioinformatics often depends on prior runs, dataset histories, established QC thresholds, and recurring pipeline issues, requiring some continuity across projects but not deep longitudinal state over years.",
+      "adequacy_evidence": "Current agents can persist and retrieve prior results via databases and tooling, but often struggle with consistent provenance tracking, schema alignment, and reliably surfacing the most relevant past context.",
+      "_timestamp": "2026-04-05T23:00:03"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking multiple large datasets, QC metrics, pipeline parameters, and intermediate results, where missing or misinterpreting details can invalidate conclusions.",
+      "adequacy_evidence": "Agents can offload much of this to code and external tools, but still show occasional failures in maintaining alignment across intermediate states or correctly summarizing complex QC outputs.",
+      "_timestamp": "2026-04-05T23:00:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Quality analysis often involves inspecting plots (e.g., PCA, heatmaps, sequencing quality scores) and occasionally genome browser views, so visual modalities are helpful but not strictly essential since underlying data are numeric/textual.",
+      "adequacy_evidence": "Current agents can interpret common scientific plots and generate visual diagnostics, but may miss subtle artifacts or domain-specific visual cues in complex bioinformatics outputs.",
+      "_timestamp": "2026-04-05T23:00:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Bioinformatics quality analysis relies on established QC metrics (e.g., read quality scores, alignment rates, statistical diagnostics), but interpreting anomalies and subtle biases requires domain expertise and careful review.",
+      "adequacy_evidence": "AI can apply standard QC checks, but it still makes interpretation errors and can miss edge-case issues, so expert validation and non-trivial review effort remain necessary.",
+      "_timestamp": "2026-04-05T23:00:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from conducting data quality analyses in bioinformatics. While clinical laboratory contexts (e.g., under CLIA) require human oversight and responsibility, they do not bar AI from performing these analytical tasks as a tool.",
+      "_timestamp": "2026-04-05T23:00:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Quality analyses in bioinformatics underpin downstream scientific conclusions or clinical interpretations; even rare residual errors can propagate into incorrect findings, misdiagnoses, or flawed research directions.",
+      "adequacy_evidence": "While AI can support many validation checks, subtle data quality issues or context-specific anomalies may still evade detection, leaving some non-negligible residual risk even after standard quality control.",
+      "_timestamp": "2026-04-05T23:00:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task supports researchers, clinicians, or lab teams who rely on data quality assessments, so outputs are used by stakeholders, but interaction is typically indirect and technical rather than identity-sensitive.",
+      "adequacy_evidence": "Automated and AI-driven quality control is already common in bioinformatics workflows, and stakeholders generally accept machine-generated validation as long as it meets accuracy standards.",
+      "_timestamp": "2026-04-05T23:00:06"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

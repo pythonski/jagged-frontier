@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3099.01",
+  "task_id": 17642,
+  "task_statement": "Purchase or sell energy or energy derivatives for customers.",
+  "occupation_title": "Energy Brokers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Buying or selling energy or energy derivatives is typically executed through electronic trading platforms, market data systems, email, or phone, all of which can be accessed via a computer with internet. The task does not inherently require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Executing energy trades for clients requires inferring unstated preferences like risk tolerance, hedging strategy, timing sensitivity, and evolving market views, which are often only partially specified and shift with conditions.",
+      "adequacy_evidence": "Current agents can extract explicit constraints and propose strategies, but they still struggle to reliably infer nuanced client intent and adapt to shifting, tacit objectives without iterative human guidance.",
+      "_timestamp": "2026-04-06T05:04:16"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous situations including different energy commodities, derivative structures, market conditions, regulatory regimes, and client-specific constraints, creating a long-tailed and context-sensitive distribution.",
+      "adequacy_evidence": "While there is abundant public financial data and some trading examples, detailed process-level data on proprietary trading strategies, client negotiations, and real deal execution is often private, though partially approximable via simulation and synthetic environments.",
+      "_timestamp": "2026-04-06T05:04:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Executing trades for customers involves multi-step workflows\u2014understanding client needs, monitoring markets, pricing, negotiating, executing, and confirming trades\u2014but these steps are moderately bounded rather than deeply long-horizon.",
+      "adequacy_evidence": "LLM-based agents can manage such multi-step transactional workflows with tooling, though some degradation can occur in extended negotiations or when tracking evolving constraints across steps.",
+      "_timestamp": "2026-04-06T05:04:16"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective energy brokering relies heavily on market intuition, timing, negotiation skill, and nuanced understanding of client risk tolerance and evolving market conditions that go beyond codified rules.",
+      "adequacy_evidence": "While AI agents can model pricing and execute trades with data-driven strategies, they still lack robust calibration in nuanced client interactions, negotiation dynamics, and context-sensitive judgment in volatile or atypical market conditions.",
+      "_timestamp": "2026-04-06T05:04:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Energy brokers rely on persistent knowledge of client portfolios, risk tolerances, contract histories, and evolving market positions across many transactions over time.",
+      "adequacy_evidence": "Current agents can integrate with databases/CRMs to store and retrieve such information, but often struggle with reliably maintaining, updating, and contextually using nuanced client histories across sessions.",
+      "_timestamp": "2026-04-06T05:04:16"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking client orders, current market prices, contract specifications, and risk constraints within a trading episode, but these inputs are structured and typically handled via trading systems rather than overwhelming raw context.",
+      "adequacy_evidence": "Current agents can integrate structured data feeds and maintain state with tooling, but may still lose or misprioritize fast-changing details (e.g., price updates or order nuances) during multi-step decision processes.",
+      "_timestamp": "2026-04-06T05:04:17"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Energy brokers operate in fast-moving markets where prices change rapidly, requiring near-real-time decisions and execution to secure favorable trades.",
+      "adequacy_evidence": "LLM-based agents can process data and act quickly with proper tooling, but achieving optimal decisions under tight latency may limit deeper analysis, causing some quality degradation in volatile or complex situations.",
+      "_timestamp": "2026-04-06T05:04:19"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in pricing, contract terms, timing, or market positioning can be subtle and may only become apparent through downstream financial outcomes or detailed expert review of trades and market conditions.",
+      "adequacy_evidence": "Current AI systems can generate plausible but flawed trade decisions or misinterpret market signals, and these errors are difficult to detect without expert scrutiny and real-time market validation, making verification burdens high.",
+      "_timestamp": "2026-04-06T05:04:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Energy trading relies primarily on numerical market data, text-based news, and electronic order systems; charts and visuals are helpful but not essential since underlying data is structured and text-representable.",
+      "adequacy_evidence": "Current AI agents handle structured data, text feeds, and trading interfaces effectively, with no meaningful dependence on advanced multimodal perception or generation.",
+      "_timestamp": "2026-04-06T05:04:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Energy trading involves large financial positions where even small errors in pricing, timing, or contract terms can lead to significant monetary losses or regulatory exposure, making residual error tolerance very low.",
+      "adequacy_evidence": "While many aspects can be checked (e.g., pricing, contract specs), AI may still introduce subtle judgment or timing errors in fast-moving markets, leaving some residual risk that remains concerning even after standard oversight.",
+      "_timestamp": "2026-04-06T05:04:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Energy and derivatives trading for customers is regulated by bodies like the CFTC and FERC and often requires registered entities and licensed associated persons who bear legal responsibility. While automated/algorithmic trading is permitted, regulations still require human-supervised, licensed intermediaries, creating partial constraints on fully autonomous AI operation.",
+      "_timestamp": "2026-04-06T05:04:20"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Energy brokers act on behalf of clients in high-stakes financial transactions, where trust, reputation, and perceived expertise strongly influence client willingness to delegate trading authority.",
+      "adequacy_evidence": "While algorithmic and automated trading are common, many clients still prefer human brokers for relationship management and trust, leading to partial but not universal acceptance of AI in this role.",
+      "_timestamp": "2026-04-06T05:04:20"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

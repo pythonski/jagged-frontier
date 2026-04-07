@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2036.00",
+  "task_id": 22834,
+  "task_statement": "Calculate the delivery of radiation treatment, such as the amount or extent of radiation per session, based on the prescribed course of radiation therapy.",
+  "occupation_title": "Medical Dosimetrists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Radiation dose calculations are performed using specialized treatment planning software and patient imaging data on computers. The task involves computational analysis and planning, which can be completed entirely digitally without physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The radiation oncologist\u2019s prescription provides key parameters, but translating it into a deliverable plan requires interpreting clinical intent, patient-specific anatomy, and trade-offs (e.g., sparing organs at risk), which are partly implicit.",
+      "adequacy_evidence": "Current AI systems can follow structured prescriptions and optimization rules, but often struggle to fully infer nuanced clinical priorities and context-dependent trade-offs without iterative human guidance.",
+      "_timestamp": "2026-04-06T01:52:26"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiation dose calculation spans highly variable cases (tumor sites, anatomies, modalities, comorbidities, and physician prescriptions), creating a long-tailed, context-sensitive distribution of planning scenarios.",
+      "adequacy_evidence": "While large amounts of clinical planning data and protocols exist, much is proprietary or siloed in medical systems, and detailed step-by-step expert planning rationales are only partially captured, though some coverage can be approximated via simulation and synthetic cases.",
+      "_timestamp": "2026-04-06T01:52:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step calculation process (interpreting prescription, applying dose constraints, computing per-session delivery, and consistency checks), but the sequence is relatively bounded and structured rather than long or highly interdependent.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across these structured calculation steps with tool support, though minor risks of dropped constraints or inconsistency across steps still produce moderate degradation.",
+      "_timestamp": "2026-04-06T01:52:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While dose calculation follows established physics models and clinical protocols, selecting appropriate dose distributions and adjustments involves experience with trade-offs (e.g., tumor coverage vs. organ-at-risk sparing) and case-specific judgment.",
+      "adequacy_evidence": "Current AI systems can reproduce standard planning decisions and optimization patterns, but may lack reliable calibration in atypical anatomies or nuanced trade-offs that experienced dosimetrists handle through tacit clinical judgment.",
+      "_timestamp": "2026-04-06T01:52:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiation dose calculation requires integrating heterogeneous data (patient anatomy, imaging, prescribed dose, organ constraints, beam parameters) where missing or mismanaging a detail can materially affect treatment safety and efficacy.",
+      "adequacy_evidence": "Well-scaffolded agents can track and manipulate structured inputs using tools, but may still lose or misprioritize critical parameters in complex plans, especially when compressing detailed clinical constraints.",
+      "_timestamp": "2026-04-06T01:52:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dose calculations for each session depend on the prescribed treatment plan and cumulative dose delivered across prior sessions, but this information is typically stored in structured clinical systems rather than requiring implicit memory.",
+      "adequacy_evidence": "Current AI systems can reliably retrieve and use persistent structured patient and treatment data from external systems, so cross-session memory needs are well supported with existing tooling.",
+      "_timestamp": "2026-04-06T01:52:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Radiation dose calculations for treatment planning are typically performed over minutes to hours within planning workflows, not under real-time or near-instant response constraints.",
+      "adequacy_evidence": "Frontier AI systems can perform complex dose calculations and iterative planning well within these timeframes without needing to truncate reasoning, so speed does not degrade output quality.",
+      "_timestamp": "2026-04-06T01:52:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Radiation dose calculation depends heavily on interpreting 3D medical imaging (CT/MRI), anatomical contours, and dose distributions, requiring precise spatial and visual reasoning beyond text alone.",
+      "adequacy_evidence": "While AI tools can process medical images, current LLM-based agents lack robust, clinically reliable integration with radiotherapy planning systems and struggle with the fine-grained spatial accuracy required.",
+      "_timestamp": "2026-04-06T01:52:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Radiation dose calculations require complex physics modeling and patient-specific parameters; errors may not be immediately observable and typically require independent dose calculations, QA measurements, and expert review to detect.",
+      "adequacy_evidence": "Current AI systems can make subtle calculation or modeling errors that are not easily apparent, necessitating rigorous expert verification and redundant checks before clinical use.",
+      "_timestamp": "2026-04-06T01:52:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Radiation treatment planning and dose calculation are regulated clinical activities requiring oversight and sign-off by licensed professionals (e.g., medical physicists or radiation oncologists). While AI tools are not explicitly prohibited, they must operate under FDA-cleared software frameworks and human supervision, creating partial regulatory constraints rather than a full ban.",
+      "_timestamp": "2026-04-06T01:52:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiation dose calculation errors can cause severe patient harm, including tissue damage or ineffective cancer treatment; even rare residual errors have high, irreversible consequences.",
+      "adequacy_evidence": "While existing QA processes (physics checks, plan reviews) catch many issues, AI systems may still introduce subtle or edge-case errors that are hard to fully eliminate, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T01:52:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The calculated radiation dose is used by radiation oncologists and care teams, and directly affects patient treatment, so stakeholders rely on the output and the professional responsible for it.",
+      "adequacy_evidence": "Clinicians would likely accept AI assistance but still require human oversight and sign-off due to safety, liability, and trust concerns, making full AI autonomy less acceptable.",
+      "_timestamp": "2026-04-06T01:52:30"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

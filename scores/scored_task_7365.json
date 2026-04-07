@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2082.00",
+  "task_id": 7365,
+  "task_statement": "Calculate form preparation fees according to return complexity and processing time required.",
+  "occupation_title": "Tax Preparers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Determining preparation fees based on return complexity and time can be done entirely using billing software, spreadsheets, or other digital tools without any need for physical presence or specialized equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different tax return complexities (simple vs. multi-form, business, deductions) and firm-specific pricing schemes, but the range is structured and follows common industry patterns.",
+      "adequacy_evidence": "Representative data on tax preparation pricing models, time estimates, and complexity tiers is widely available in training corpora and can be readily supplemented with synthetic scenarios, leaving little coverage gap.",
+      "_timestamp": "2026-04-05T21:31:29"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is a straightforward calculation based on given factors like return complexity and processing time, involving minimal sequential dependency.",
+      "adequacy_evidence": "AI systems can reliably handle short, well-defined computations without degradation, as the sequence length and interdependence are minimal.",
+      "_timestamp": "2026-04-05T21:31:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Fee calculation depends on somewhat subjective assessments of return complexity and time, which are often guided by firm policies but still require interpretation of case specifics.",
+      "adequacy_evidence": "Agents can apply explicit pricing rules when provided, but may misclassify complexity or overlook contextual factors without clear guidance, requiring human adjustment.",
+      "_timestamp": "2026-04-05T21:31:29"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While fee calculation can follow explicit pricing schedules or time-based formulas, preparers often apply some experience-based judgment in estimating complexity and appropriate charges for borderline or atypical cases.",
+      "adequacy_evidence": "Current AI agents can reliably apply pricing rules and approximate complexity using structured inputs, with minimal shortfall in the limited tacit calibration required for most cases.",
+      "_timestamp": "2026-04-05T21:31:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking a limited set of inputs (return complexity factors, time spent, and fee schedules) and applying them consistently, but the information volume is modest and structured.",
+      "adequacy_evidence": "Current agents can reliably track and compute over these bounded inputs within a single episode without losing context or mismanaging intermediate values.",
+      "_timestamp": "2026-04-05T21:31:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Fee calculation is an administrative task typically performed without strict time pressure; minutes or longer are acceptable within normal tax preparation workflows.",
+      "adequacy_evidence": "Current AI systems can compute fee schedules and apply rules quickly, with ample time for full reasoning, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T21:31:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining fees based on return complexity and processing time is a text- and number-based task involving rules, classifications, and calculations, without inherent need for images, audio, or other modalities.",
+      "adequacy_evidence": "Since the task is fundamentally text/numeric, current AI systems can handle it fully without any multimodal limitations.",
+      "_timestamp": "2026-04-05T21:31:31"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from calculating tax preparation fees; this is an internal business function. Regulatory requirements (e.g., PTIN, signing authority) apply to filing returns, not to fee computation.",
+      "_timestamp": "2026-04-05T21:31:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The calculated fees are presented to clients, who rely on and may question the basis of the charges, so stakeholder interaction exists though identity is not central.",
+      "adequacy_evidence": "Clients are already accustomed to automated pricing tools and standardized fee calculations, so AI performing this task would generally be accepted without resistance.",
+      "_timestamp": "2026-04-05T21:31:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in calculating preparation fees can affect revenue or client satisfaction, but they are typically reversible (e.g., refunds or adjustments) and do not create severe downstream harm.",
+      "adequacy_evidence": "Given straightforward rules and easy post-hoc checks (e.g., comparing against fee schedules or time logs), AI-generated outputs can be verified and corrected with minimal residual risk.",
+      "_timestamp": "2026-04-05T21:31:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Fee calculations are based on defined schedules (complexity tiers, time logs), so errors can be checked against documented criteria, but require some domain knowledge and review of inputs to verify correctness.",
+      "adequacy_evidence": "AI can generally apply fee rules but may misclassify return complexity or misinterpret billing policies, so human review of inputs and applied criteria remains necessary.",
+      "_timestamp": "2026-04-05T21:31:33"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Fee calculation is based on the current return\u2019s complexity and processing time, typically using a predefined pricing schedule, making each instance largely self-contained.",
+      "adequacy_evidence": "AI systems can readily apply stored pricing rules or inputs within a single session; no persistent cross-session memory is needed for accurate performance.",
+      "_timestamp": "2026-04-05T21:31:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

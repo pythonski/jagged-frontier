@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1217.00",
+  "task_id": 17116,
+  "task_statement": "Advise other physicians on the treatment of neurological problems.",
+  "occupation_title": "Neurologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Advising other physicians is commonly done via electronic health records, phone, email, or teleconsults, which can be performed remotely. However, many consultations also occur face-to-face in hospitals or clinics during rounds or case discussions."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Advising physicians on neurological treatment requires nuanced clinical judgment, including interpreting ambiguous symptoms, weighing comorbidities, and applying experience with rare or atypical presentations beyond formal guidelines.",
+      "adequacy_evidence": "Current AI can synthesize guidelines and case data but lacks fully reliable clinical calibration in complex or ambiguous neurological cases, particularly where subtle experiential judgment or risk tradeoffs are critical.",
+      "_timestamp": "2026-04-05T22:37:28"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Advising physicians on neurological treatment requires interpreting incomplete clinical information, patient-specific nuances, comorbidities, and implicit goals (e.g., risk tolerance, quality of life), with success criteria often evolving during consultation.",
+      "adequacy_evidence": "Current agents can infer general clinical intent and propose reasonable options, but they often miss subtle contextual factors and stakeholder priorities, requiring physician oversight and iterative clarification.",
+      "_timestamp": "2026-04-05T22:37:29"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising physicians typically involves reviewing case details, integrating medical knowledge, and providing reasoned recommendations, often across a multi-step but bounded consultation rather than long, tightly coupled sequences.",
+      "adequacy_evidence": "Frontier AI can sustain coherent reasoning over moderate-length consultations, but may show some drift or inconsistency when tracking complex, evolving clinical details across extended exchanges.",
+      "_timestamp": "2026-04-05T22:37:29"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Neurological consultation spans a highly heterogeneous, long-tailed distribution of disorders, comorbidities, patient contexts, and evolving evidence, requiring broad coverage of diverse clinical scenarios and reasoning processes.",
+      "adequacy_evidence": "Extensive medical literature, guidelines, case reports, and some expert discussions exist, but real-world consultative reasoning (especially rare cases and nuanced peer-to-peer deliberation) is only partially captured and often inaccessible.",
+      "_timestamp": "2026-04-05T22:37:29"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Advising on neurological treatment requires integrating extensive within-case data (patient history, exam findings, imaging, labs, medications, comorbidities, and evolving clinical status), where missing a detail can materially affect recommendations.",
+      "adequacy_evidence": "Frontier agents can handle large structured inputs with retrieval and summarization, but still show context loss, imperfect compression of long clinical records, and difficulty reliably integrating heterogeneous data like imaging and nuanced histories.",
+      "_timestamp": "2026-04-05T22:37:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising on neurological treatment often involves interpreting neuroimaging (MRI/CT), EEG traces, or observed exam findings, though these are frequently summarized in text by the consulting physician.",
+      "adequacy_evidence": "Current agents can handle some medical imaging and signal interpretation but remain inconsistent on nuanced or high-stakes neurological findings, especially without structured summaries.",
+      "_timestamp": "2026-04-05T22:37:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advisory work often benefits from prior case histories, institutional practices, and ongoing collaboration patterns, but many consultations can still be handled as largely self-contained cases with provided context.",
+      "adequacy_evidence": "Current agents can persist and retrieve structured records via integrations, but they show gaps in reliably surfacing nuanced longitudinal context and evolving expert preferences across cases.",
+      "_timestamp": "2026-04-05T22:37:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Physician-to-physician consultations often occur on short timelines (minutes) especially in acute settings, but not all cases require instantaneous, real-time responses.",
+      "adequacy_evidence": "Frontier AI systems can generate high-quality medical reasoning within seconds to a minute, so meeting typical consultation latency does not significantly degrade output quality.",
+      "_timestamp": "2026-04-05T22:37:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Advising on neurological treatment involves complex, patient-specific reasoning with subtle diagnostic distinctions and outcomes that may only become evident over time, making errors difficult to detect without deep expertise and longitudinal follow-up.",
+      "adequacy_evidence": "Current AI systems can produce plausible but occasionally incorrect or incomplete clinical reasoning, requiring intensive expert review to verify safety and appropriateness, as mistakes are not easily or quickly detectable.",
+      "_timestamp": "2026-04-05T22:37:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clinical advice on neurological treatment can directly influence patient care decisions where errors may lead to severe harm, mismanagement of complex conditions, or irreversible outcomes.",
+      "adequacy_evidence": "Even with physician oversight, AI can introduce subtle reasoning errors or inappropriate generalizations that are not always easily detectable, leaving a meaningful but not uniformly catastrophic residual risk.",
+      "_timestamp": "2026-04-05T22:37:32"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Providing medical advice, including physician-to-physician consultation, is considered the practice of medicine and requires a licensed physician under state law. AI systems cannot hold medical licenses, so they cannot legally perform this task autonomously; a human physician must be the responsible decision-maker.",
+      "_timestamp": "2026-04-05T22:37:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task is peer-to-peer medical consultation where the advisor\u2019s expertise, credentials, and professional judgment are central to whether other physicians trust and act on the advice.",
+      "adequacy_evidence": "Physicians use decision-support tools, but full acceptance of an AI as an independent clinical advisor is limited; many would discount or scrutinize advice more heavily if they knew it came from AI.",
+      "_timestamp": "2026-04-05T22:37:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

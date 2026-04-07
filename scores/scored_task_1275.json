@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1251.00",
+  "task_id": 1275,
+  "task_statement": "Investigate whether networks, workstations, the central processing unit of the system, or peripheral equipment are responding to a program's instructions.",
+  "occupation_title": "Computer Programmers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Programmers typically investigate system and network responses using logs, debuggers, and remote monitoring tools, which can be done entirely on a computer. However, diagnosing issues with physical peripherals or hardware may occasionally require on-site inspection or hands-on checks."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task has a clear objective\u2014determine whether system components are responding\u2014but requires some contextual interpretation (e.g., what counts as 'responding' depends on system norms, logs, and expected behavior).",
+      "adequacy_evidence": "Current AI agents can reliably infer diagnostic goals, use logs/metrics, and iteratively test components, handling the modest ambiguity with standard debugging workflows.",
+      "_timestamp": "2026-04-06T04:19:43"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing whether system components are responding involves a multi-step troubleshooting process (e.g., running diagnostics, isolating hardware/software causes, checking logs), where each step builds on prior findings.",
+      "adequacy_evidence": "AI agents can generally follow such structured diagnostic sequences with tools, but may exhibit some error accumulation or miss intermediate signals over longer troubleshooting chains.",
+      "_timestamp": "2026-04-06T04:19:43"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans diverse but well-characterized scenarios such as different hardware configurations, operating systems, network conditions, and failure modes, requiring coverage of multiple but structured subdomains.",
+      "adequacy_evidence": "Extensive logs, telemetry data, debugging traces, and reproducible simulation environments exist, and these can be used to generate rich training signals including step-by-step diagnostics, making coverage broadly attainable.",
+      "_timestamp": "2026-04-06T04:19:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves examining system responses across components (networks, CPUs, peripherals), requiring integration of logs, performance metrics, and program behavior within a single debugging session, but typically at manageable scales with tooling support.",
+      "adequacy_evidence": "Current agents can use log analysis tools and retrieval to manage this information, but may still lose track of evolving state or miss subtle cross-component correlations in longer or noisier sessions.",
+      "_timestamp": "2026-04-06T04:19:43"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Diagnosing whether hardware components are responding to a program\u2019s instructions is typically based on current system state, logs, and real-time testing rather than accumulated cross-session context.",
+      "adequacy_evidence": "Since the task is largely self-contained per instance, existing agent memory systems are sufficient and no persistent cross-session state is required.",
+      "_timestamp": "2026-04-06T04:19:45"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing whether components are responding correctly often involves interpreting logs, timing behavior, and subtle system signals using experience-based pattern recognition beyond explicit procedures.",
+      "adequacy_evidence": "AI agents can follow documented debugging workflows and analyze logs effectively, but they still lack robust calibration for nuanced, context-specific anomalies (e.g., intermittent hardware or network issues) that experienced programmers handle intuitively.",
+      "_timestamp": "2026-04-06T04:19:45"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is an internal technical diagnostic task typically performed within a system or development environment, with no need for direct stakeholder interaction or acceptance of the performer.",
+      "adequacy_evidence": "Since there are no meaningful external stakeholders involved, acceptance of an AI agent is not a factor and would not affect task performance.",
+      "_timestamp": "2026-04-06T04:19:45"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from monitoring or diagnosing system responsiveness in computing environments. This task is generally unregulated and can be automated freely, subject only to organizational policies rather than legal constraints.",
+      "_timestamp": "2026-04-06T04:19:45"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification typically involves inspecting logs, running diagnostics, or observing system behavior, which requires technical expertise but provides reasonably direct feedback when something is wrong.",
+      "adequacy_evidence": "AI can assist with log analysis and diagnostics, but still makes interpretation errors or misses edge cases, so human validation and follow-up testing are routinely needed.",
+      "_timestamp": "2026-04-06T04:19:46"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Misjudging whether hardware or networks are responding can lead to delays or misdirected debugging, but issues are typically detectable and correctable without irreversible harm.",
+      "adequacy_evidence": "With standard monitoring tools, logs, and diagnostic checks, AI-driven assessments can be validated, and remaining errors are unlikely to pose significant residual risk.",
+      "_timestamp": "2026-04-06T04:19:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task may involve interpreting system metrics, monitoring dashboards, or hardware indicators (e.g., LEDs, performance graphs), but much of the diagnostic information is accessible via textual logs and command-line outputs.",
+      "adequacy_evidence": "Current AI agents can effectively process both textual diagnostics and common visual inputs like graphs or screenshots, so multimodal demands in this task are generally well within their capabilities.",
+      "_timestamp": "2026-04-06T04:19:46"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Diagnosing whether systems are responding typically occurs during debugging or monitoring sessions where responses are expected within seconds to minutes, but not strict real-time deadlines.",
+      "adequacy_evidence": "Well-tooled AI agents can analyze logs, telemetry, and system states quickly within this time window without needing to truncate reasoning, so speed constraints rarely degrade output quality.",
+      "_timestamp": "2026-04-06T04:19:46"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

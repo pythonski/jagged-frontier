@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5011.01",
+  "task_id": 17686,
+  "task_statement": "Calculate weight, volume, or cost of goods to be moved.",
+  "occupation_title": "Freight Forwarders",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Freight forwarders typically calculate weight, volume, or shipping costs using shipment documents, packing lists, and logistics software or spreadsheets, all of which can be handled digitally. Physical measurement is usually performed by warehouse or shipping staff, not the forwarder performing the calculation."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans variations in cargo types, carrier rules (e.g., dimensional weight formulas), and pricing schemes, but these follow well-documented, structured rules rather than a highly long-tailed distribution.",
+      "adequacy_evidence": "Extensive documentation, rate tables, and worked examples exist for freight calculations, and synthetic generation of diverse scenarios is straightforward, providing strong coverage of relevant cases.",
+      "_timestamp": "2026-04-05T22:54:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves straightforward calculations (e.g., summing weights, computing volume, or applying cost formulas) that are typically short, discrete steps without extended interdependent sequences.",
+      "adequacy_evidence": "Current AI systems can reliably execute short calculation chains and maintain consistency across such limited sequences without noticeable degradation.",
+      "_timestamp": "2026-04-05T22:54:15"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While core calculations rely on explicit formulas (dimensions, weight, rate tables), experienced freight forwarders apply some judgment for estimating packaging effects, dimensional weight adjustments, and selecting appropriate cost categories in ambiguous cases.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably apply formulas, rate tables, and rules, and can approximate typical adjustments using available data, with minimal shortfall in most real-world scenarios.",
+      "_timestamp": "2026-04-05T22:54:15"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While the core calculations are well-defined, inputs often depend on context such as packaging assumptions, dimensional weight rules, carrier pricing schemes, and unit conventions that may not be fully specified.",
+      "adequacy_evidence": "Given typical freight documentation and rate tables, current AI agents can reliably infer missing context or request clarification, and perform these calculations with minimal ambiguity-related failure.",
+      "_timestamp": "2026-04-05T22:54:15"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each calculation is typically based on shipment-specific inputs (dimensions, weight, rates) provided for that instance, without needing prior case history.",
+      "adequacy_evidence": "Current AI systems can easily handle any minimal persistence (e.g., saved rate tables or client data), and the task does not depend on cross-session memory.",
+      "_timestamp": "2026-04-05T22:54:15"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating shipment details such as item dimensions, weights, quantities, and rate tables, requiring some tracking and combination of multiple inputs within a single calculation episode.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, code execution) reliably manage and compute over structured shipment data without significant context loss or retrieval issues.",
+      "_timestamp": "2026-04-05T22:54:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on structured data such as dimensions, weights, rates, and shipment details typically provided in text or numeric form (e.g., invoices, manifests). It does not inherently require image, audio, or spatial perception.",
+      "adequacy_evidence": "AI systems can reliably process and compute from textual and numeric inputs, and no significant multimodal capability is needed for accurate performance.",
+      "_timestamp": "2026-04-05T22:54:16"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "These calculations are based on explicit formulas and documented shipment data (dimensions, rates, weights), and can be easily cross-checked with standard tools or recalculated independently.",
+      "adequacy_evidence": "AI-generated outputs can be quickly verified using calculators, spreadsheets, or existing logistics systems, and errors are typically obvious and inexpensive to detect and correct.",
+      "_timestamp": "2026-04-05T22:54:17"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from calculating weight, volume, or cost of goods. While freight forwarding is regulated, these computational tasks do not require licensed human judgment or signatures.",
+      "_timestamp": "2026-04-05T22:54:17"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is a technical calculation task typically performed internally; outputs are numeric and do not depend on stakeholder interaction or performer identity.",
+      "adequacy_evidence": "Stakeholders care about accuracy of the calculation, not who or what performed it, and AI-generated results are already widely accepted in such contexts.",
+      "_timestamp": "2026-04-05T22:54:17"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Freight forwarding operations typically expect quick turnaround (seconds to a few minutes) when calculating weights, volumes, or costs to support quotes and logistics decisions, but not true real-time constraints.",
+      "adequacy_evidence": "Frontier AI systems can perform these calculations accurately within milliseconds to seconds, even with moderate complexity, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T22:54:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in weight, volume, or cost calculations can lead to mispricing, capacity misallocation, or shipment delays, creating financial and operational impacts, but these are typically correctable and not catastrophic.",
+      "adequacy_evidence": "With standard checks (e.g., cross-referencing documents, automated calculators), AI-generated calculations can be reliably verified, leaving minimal residual risk at acceptable levels.",
+      "_timestamp": "2026-04-05T22:54:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

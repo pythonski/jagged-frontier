@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1229.02",
+  "task_id": 17099,
+  "task_statement": "Write patient discharge summaries and send them to primary care physicians.",
+  "occupation_title": "Hospitalists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Discharge summaries are typically written in electronic health record systems and transmitted electronically to primary care physicians. The task of composing and sending the summary can be performed entirely on a computer with remote EHR access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Discharge summaries require selecting clinically salient details, tailoring tone and content to the receiving physician, and exercising judgment about what to emphasize or omit, which involves moderate experience-based calibration.",
+      "adequacy_evidence": "Current agents can generate structured summaries from records but still show gaps in clinical prioritization, nuance, and context-sensitive phrasing, especially in complex or atypical cases.",
+      "_timestamp": "2026-04-06T03:54:49"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Discharge summaries span a range of diagnoses, comorbidities, and care pathways, but follow relatively standardized clinical structures and conventions across cases.",
+      "adequacy_evidence": "Large corpora of clinical notes, templates, and de-identified EHR data (plus synthetic generation) provide ample coverage of both content and composition processes for discharge summaries.",
+      "_timestamp": "2026-04-06T03:54:50"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Discharge summaries follow structured conventions but require context-sensitive inclusion of clinically relevant details, prioritization, and tailoring to the receiving physician\u2019s needs.",
+      "adequacy_evidence": "Current agents can generate structured summaries from records but often miss nuanced relevance, appropriate emphasis, or implicit clinical communication norms without human review.",
+      "_timestamp": "2026-04-06T03:54:51"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering patient information, synthesizing it into a coherent summary, and transmitting it, requiring several interdependent steps but not a long or highly complex sequence.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain coherence and consistency across these moderate-length workflows without significant degradation or error compounding.",
+      "_timestamp": "2026-04-06T03:54:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Writing discharge summaries primarily involves synthesizing textual information from electronic health records, notes, and reports; any underlying imaging or signals are typically already interpreted into text.",
+      "adequacy_evidence": "Current AI systems handle text-based summarization and document generation well, and do not require direct multimodal perception for this task in typical workflows.",
+      "_timestamp": "2026-04-06T03:54:52"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Discharge summaries require synthesizing multiple in-episode data sources (notes, labs, imaging, medications, hospital course) into a coherent narrative, but the scope is bounded to a single admission record.",
+      "adequacy_evidence": "Current agents can retrieve and summarize structured and unstructured EHR data, but they may omit or misprioritize details during compression, especially across heterogeneous records.",
+      "_timestamp": "2026-04-06T03:54:52"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Discharge summaries are typically prepared over minutes to hours around the time of patient discharge; there is no requirement for real-time or near-instant output.",
+      "adequacy_evidence": "Current AI systems can generate high-quality summaries within seconds to minutes, well within the available time window, without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T03:54:52"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Discharge summaries require accurate synthesis of diagnoses, hospital course, medications, and follow-up plans; errors (e.g., wrong meds or omitted findings) can be subtle and require clinician-level chart review to detect.",
+      "adequacy_evidence": "Current AI frequently introduces omissions, inconsistencies, or hallucinated details in clinical summaries, necessitating thorough physician verification and correction before use.",
+      "_timestamp": "2026-04-06T03:54:53"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Discharge summaries guide ongoing care; omissions or inaccuracies (e.g., medications, follow-up instructions, diagnoses) can lead to serious patient harm or readmission, so very low residual error is required.",
+      "adequacy_evidence": "Even with review, AI-generated summaries can contain subtle omissions or hallucinated details that are hard to detect quickly, leaving a non-trivial residual risk despite feasible clinician checking.",
+      "_timestamp": "2026-04-06T03:54:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Discharge summaries are primarily based on the current hospitalization record and existing EHR data, with little need to retain information across separate cases beyond what is already stored in institutional systems.",
+      "adequacy_evidence": "Current AI systems can rely on structured EHR inputs and templates without needing persistent cross-session memory, so there is no meaningful shortfall in this dimension.",
+      "_timestamp": "2026-04-06T03:54:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Primary care physicians rely on discharge summaries for continuity of care, and the document typically carries the authority and accountability of the hospitalist, though interaction is indirect and document-focused.",
+      "adequacy_evidence": "PCPs would likely accept AI-assisted drafting if reviewed and signed by a physician, but fully AI-authored summaries without clinician attribution would face trust and professional acceptance barriers.",
+      "_timestamp": "2026-04-06T03:54:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "US regulations (e.g., CMS Conditions of Participation and medical record authentication rules) require that discharge summaries be reviewed and signed by a licensed clinician, so AI cannot autonomously complete and finalize them. However, there is no explicit prohibition on AI drafting or assisting with these documents under clinician supervision.",
+      "_timestamp": "2026-04-06T03:54:55"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

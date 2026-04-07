@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1141.02",
+  "task_id": 17319,
+  "task_statement": "Write prescriptions for psychotropic medications as allowed by state regulations and collaborative practice agreements.",
+  "occupation_title": "Advanced Practice Psychiatric Nurses",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Prescriptions are typically generated and transmitted electronically through e\u2011prescribing systems and can be done remotely during telehealth care. However, some instances still involve paper prescriptions or in\u2011person clinical workflows tied to physical settings."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Psychotropic prescribing spans highly heterogeneous patient populations, comorbidities, medications, and state-specific regulatory constraints, with many edge cases (e.g., polypharmacy, rare disorders, special populations like pediatrics or pregnancy).",
+      "adequacy_evidence": "There is extensive coverage in medical literature, guidelines, and some clinical datasets, but real-world prescribing nuances and longitudinal EHR data are often private and incomplete, leaving gaps that are only partially addressable via synthesis or fine-tuning.",
+      "_timestamp": "2026-04-05T20:49:52"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Psychotropic prescribing requires nuanced, experience-based judgment about diagnosis validity, comorbidities, side-effect tradeoffs, patient adherence, and evolving response patterns that are not fully reducible to explicit protocols.",
+      "adequacy_evidence": "Current agents can apply guidelines but lack reliable clinical calibration for complex, real-world psychiatric cases (e.g., polypharmacy, atypical presentations, risk management), leading to systematic gaps in judgment.",
+      "_timestamp": "2026-04-05T20:49:52"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Writing psychotropic prescriptions involves a multi-step process (reviewing patient history, diagnosis, medication selection, dosing, interaction checks, and documentation), where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or deeply interdependent over time.",
+      "adequacy_evidence": "Frontier AI agents can generally manage these structured multi-step workflows with tool support, but may show some degradation in maintaining all constraints (e.g., interactions, contraindications, evolving patient context) across steps.",
+      "_timestamp": "2026-04-05T20:49:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Selecting and writing psychotropic prescriptions depends on nuanced, context-specific interpretation of patient symptoms, history, comorbidities, side-effect tolerances, and evolving treatment goals, many of which are implicit and negotiated rather than fully specified.",
+      "adequacy_evidence": "Current AI agents struggle to reliably infer and balance these latent clinical factors and stakeholder preferences, often missing subtle but critical contextual cues needed to determine appropriate medication choices without substantial human guidance.",
+      "_timestamp": "2026-04-05T20:49:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Safe psychotropic prescribing requires integrating extensive within-episode data: current and past medications, comorbidities, allergies, lab values, drug interactions, dosing histories, and regulatory constraints, where missing a detail can cause harm.",
+      "adequacy_evidence": "Well-integrated agents can track and retrieve structured clinical data, but still show gaps in reliably maintaining all relevant context (e.g., subtle interaction risks or evolving dose histories), leading to occasional omissions or misprioritization.",
+      "_timestamp": "2026-04-05T20:49:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Psychotropic prescribing depends heavily on longitudinal patient data such as prior medication trials, response patterns, side effects, comorbidities, and evolving symptoms across many visits over extended periods.",
+      "adequacy_evidence": "Agents can integrate with EHRs and retrieve stored histories, but they still show weaknesses in reliably updating, summarizing, and correctly prioritizing nuanced longitudinal clinical context across sessions.",
+      "_timestamp": "2026-04-05T20:49:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Writing prescriptions for psychotropic medications is primarily a text-based task involving clinical documentation, medication selection, and adherence to regulatory language; non-text modalities are not central to the act of prescribing itself.",
+      "adequacy_evidence": "Since the task is fundamentally text-in/text-out, current AI systems can adequately handle the modality requirements without meaningful limitations.",
+      "_timestamp": "2026-04-05T20:49:54"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Correct prescribing requires integrating nuanced patient history, comorbidities, drug interactions, and evolving symptoms; many errors (e.g., contraindications, dosing issues) are not immediately obvious and require expert review to detect.",
+      "adequacy_evidence": "Current AI systems still make non-trivial clinical reasoning and context integration errors, so prescriptions would require thorough expert verification, with mistakes that are both subtle and consequential.",
+      "_timestamp": "2026-04-05T20:49:55"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Prescribing occurs during clinical encounters where decisions are expected within seconds to a few minutes, but not under extreme real-time pressure.",
+      "adequacy_evidence": "Frontier AI systems can generate prescribing recommendations with sufficient depth and accuracy well within this time window, so speed does not meaningfully constrain quality.",
+      "_timestamp": "2026-04-05T20:49:55"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Patients, pharmacists, and supervising physicians must trust and accept the prescriber's clinical authority and judgment, especially for psychotropic medications with significant risks and monitoring needs.",
+      "adequacy_evidence": "Patients and healthcare stakeholders are unlikely to accept an AI as the prescriber of psychiatric medications due to trust, liability, and legitimacy concerns, and current norms require a licensed human clinician in this role.",
+      "_timestamp": "2026-04-05T20:49:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "US law requires prescriptions to be issued and signed by a licensed practitioner (e.g., an APRN with prescriptive authority and often DEA registration). AI systems cannot hold medical licenses or legal prescribing authority, so autonomous AI prescribing is explicitly prohibited.",
+      "_timestamp": "2026-04-05T20:49:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Psychotropic prescribing errors can cause severe harm (e.g., suicidality, serotonin syndrome, cardiac effects) and even rare residual mistakes can have major, irreversible consequences.",
+      "adequacy_evidence": "Even with clinical review and decision-support checks, current AI systems can miss nuanced contraindications, patient history subtleties, or evolving risk factors, leaving unacceptable residual risk in high-stakes prescribing decisions.",
+      "_timestamp": "2026-04-05T20:49:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

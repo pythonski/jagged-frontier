@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-2021.00",
+  "task_id": 13243,
+  "task_statement": "Listen to customer requests, referring to alphabetical or geographical directories to answer questions and provide telephone information.",
+  "occupation_title": "Telephone Operators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Listening to customer requests and consulting directories to provide telephone information can be done entirely through call-center software and digital directories on a computer with internet access. No physical presence or specialized non-computer equipment is inherently required."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer queries vary by name spellings, locations, accents, and request types, but remain within a bounded domain of directory assistance and information retrieval.",
+      "adequacy_evidence": "Large-scale call transcripts, directory databases, and synthetic dialogue generation provide ample, representative training data including step-by-step lookup and clarification processes.",
+      "_timestamp": "2026-04-06T05:09:39"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves following explicit procedures: interpreting a request and retrieving information from structured alphabetical or geographical directories, with minimal reliance on experience-based judgment.",
+      "adequacy_evidence": "Current AI agents can reliably interpret routine queries and perform directory lookups or database searches without needing tacit calibration, matching or exceeding human performance in such rule-based contexts.",
+      "_timestamp": "2026-04-06T05:09:40"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Interactions are typically brief and transactional: receive a request, look up information in a directory, and provide an answer with minimal multi-step dependency.",
+      "adequacy_evidence": "Current AI agents can reliably handle short, lookup-based exchanges without degradation, as sequence length and interdependence are minimal.",
+      "_timestamp": "2026-04-06T05:09:40"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer requests can be vague, incomplete, or ambiguously phrased (e.g., partial names or unclear locations), requiring some interpretation and clarification to identify the correct listing.",
+      "adequacy_evidence": "Current AI agents with dialogue capabilities and directory access can reliably infer intent, ask clarifying questions, and resolve most ambiguities in straightforward information requests.",
+      "_timestamp": "2026-04-06T05:09:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The operator must hold the caller\u2019s request (names, spellings, locations) while consulting directories and mapping results back to the query, but the information volume is modest and short-lived.",
+      "adequacy_evidence": "Current agents can reliably maintain and retrieve such limited within-episode context using tool-assisted lookup and structured prompts, with little risk of losing critical details.",
+      "_timestamp": "2026-04-06T05:09:40"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each customer inquiry is handled independently using directories; there is no need to retain prior caller information or evolving context across sessions.",
+      "adequacy_evidence": "Since the task is fully self-contained per interaction, current AI systems do not require cross-session memory to perform it effectively.",
+      "_timestamp": "2026-04-06T05:09:42"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires interpreting spoken customer requests (audio input) and delivering spoken responses, making audio processing integral though not deeply complex multimodal reasoning.",
+      "adequacy_evidence": "Current AI systems with speech recognition and synthesis handle routine telephone interactions reliably, with only minor issues in noisy or highly accented conditions.",
+      "_timestamp": "2026-04-06T05:09:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Providing incorrect phone numbers or directory information can inconvenience customers or cause minor disruptions, but consequences are typically reversible and not severe.",
+      "adequacy_evidence": "With access to structured directories and validation checks, AI systems can achieve high accuracy, and any remaining errors are unlikely to pose significant residual risk.",
+      "_timestamp": "2026-04-06T05:09:42"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from providing directory assistance or answering customer inquiries via telephone. Automated systems (e.g., IVR, virtual assistants) are already widely permitted and used in this domain.",
+      "_timestamp": "2026-04-06T05:09:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Telephone operators are expected to respond to live callers within seconds, maintaining conversational flow while retrieving directory information.",
+      "adequacy_evidence": "LLM-based agents with retrieval tools can access and return directory information almost instantly, with minimal reasoning needed, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T05:09:43"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Callers directly interact with the operator and rely on their responses, but the role does not depend heavily on personal authority or deep trust beyond basic service competence.",
+      "adequacy_evidence": "Users already widely accept automated phone systems and AI-based directory assistance, indicating minimal resistance to AI performing this role.",
+      "_timestamp": "2026-04-06T05:09:43"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Answers are simple factual lookups (names, numbers, locations) that can be immediately cross-checked against directories or by dialing, making errors obvious and easy to correct.",
+      "adequacy_evidence": "AI outputs can be directly validated against authoritative databases or by quick test calls, so any mistakes are easy to catch with minimal effort.",
+      "_timestamp": "2026-04-06T05:09:44"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

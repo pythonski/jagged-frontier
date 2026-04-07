@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.02",
+  "task_id": 3294,
+  "task_statement": "Schedule or monitor air or surface pickup, delivery, or distribution of products or materials.",
+  "occupation_title": "Transportation, Storage, and Distribution Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Scheduling and monitoring pickups or deliveries are commonly performed through logistics software, tracking systems, email, and phone from a computer. However, some situations require on-site oversight of shipping or distribution operations, making a portion of instances non-remote."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling and monitoring logistics involves balancing implicit priorities such as cost, timeliness, service levels, and handling disruptions, which are often context-dependent and not fully specified upfront.",
+      "adequacy_evidence": "Current AI agents can optimize based on explicit constraints and historical patterns but often miss shifting priorities or nuanced stakeholder preferences, requiring human adjustment to align with true objectives.",
+      "_timestamp": "2026-04-05T22:02:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of scheduling and monitoring relies on explicit constraints (routes, capacities, deadlines), effective performance often requires experiential judgment about carrier reliability, likely delays, and prioritization under disruptions.",
+      "adequacy_evidence": "Current AI agents can handle structured scheduling and optimization but lack robust real-world calibration for non-routine disruptions and nuanced tradeoffs, leading to gaps in context-sensitive decision-making.",
+      "_timestamp": "2026-04-05T22:02:46"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous scenarios (different transport modes, geographies, regulatory environments, demand patterns, disruptions), requiring coverage of many context-dependent edge cases and operational conditions.",
+      "adequacy_evidence": "There is substantial data from logistics operations, routing problems, and simulations, but much high-quality, process-level data (e.g., real-time decision tradeoffs, proprietary workflows) is private or sparse, leaving some gaps that can only be partially filled with synthetic or RL environments.",
+      "_timestamp": "2026-04-05T22:02:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling and monitoring logistics involves multi-step coordination (planning routes, tracking shipments, updating schedules) where steps are interdependent but often modular and revisable rather than tightly coupled end-to-end.",
+      "adequacy_evidence": "AI agents can manage multi-step workflows with tools and tracking systems, but over longer or dynamic sequences they may exhibit some goal drift or miss updates, requiring oversight to maintain consistency.",
+      "_timestamp": "2026-04-05T22:02:47"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task regularly depends on tracking ongoing shipments, schedules, and operational history across days or weeks, but this information is typically structured and stored in logistics systems rather than requiring rich implicit memory.",
+      "adequacy_evidence": "Current AI agents can reliably integrate with transportation management systems and databases to retrieve and update persistent state, so cross-session memory needs are well-supported by existing infrastructure.",
+      "_timestamp": "2026-04-05T22:02:48"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking shipments, routes, schedules, and constraints across multiple sources within a single operational window, requiring integration and updating of moderately complex state.",
+      "adequacy_evidence": "Modern LLM agents with tool integration (e.g., databases, scheduling systems) can reliably store, retrieve, and update this information without significant loss or drift within an episode.",
+      "_timestamp": "2026-04-05T22:02:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling and monitoring often involves interpreting maps, routing dashboards, and possibly sensor or tracking visuals, but much of the core coordination relies on structured text and numerical data.",
+      "adequacy_evidence": "Current AI agents with tool integrations can effectively handle maps, tracking data, and logistics dashboards, making multimodal demands manageable in most real-world cases.",
+      "_timestamp": "2026-04-05T22:02:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Logistics scheduling and monitoring often require timely updates and responses (seconds to minutes) to handle delays, rerouting, or coordination, but not strict real-time constraints at sub-second levels.",
+      "adequacy_evidence": "Current AI agents with optimization tools and real-time data integrations can generate and adjust schedules within these time windows without significant degradation in solution quality.",
+      "_timestamp": "2026-04-05T22:02:49"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in scheduling or monitoring shipments can cause delays, increased costs, or missed deliveries, but most issues are recoverable through rerouting or rescheduling without catastrophic consequences.",
+      "adequacy_evidence": "Even with checks, AI systems can still produce coordination or timing errors in dynamic logistics environments, leaving some residual risk that can disrupt operations but is generally manageable.",
+      "_timestamp": "2026-04-05T22:02:49"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from scheduling or monitoring transportation and logistics operations. While regulated sectors (e.g., hazardous materials, aviation) impose compliance requirements, they do not mandate that a human exclusively perform scheduling tasks.",
+      "_timestamp": "2026-04-05T22:02:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires coordination with carriers, drivers, and internal teams who rely on schedules and updates, so stakeholders engage with the output, though personal identity is not central.",
+      "adequacy_evidence": "Logistics stakeholders already commonly interact with automated dispatching and scheduling systems, and generally accept AI-mediated coordination as long as it is reliable.",
+      "_timestamp": "2026-04-05T22:02:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Schedules and routing plans can be checked against constraints (delivery windows, capacity, routes) using logistics systems, but some errors (e.g., inefficient routing or subtle timing conflicts) may only surface during execution.",
+      "adequacy_evidence": "Current AI can generate plausible schedules but still makes coordination or constraint-handling errors often enough that human review and system-based validation are needed to ensure reliability.",
+      "_timestamp": "2026-04-05T22:02:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

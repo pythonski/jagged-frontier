@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "33-1021.00",
+  "task_id": 22920,
+  "task_statement": "Schedule employee work assignments and set work priorities.",
+  "occupation_title": "First-Line Supervisors of Firefighting and Prevention Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Scheduling shifts and setting priorities can largely be done using scheduling software, email, or other computer-based systems. However, in fire departments it is often coordinated on-site with crews during briefings or using physical station boards, so not all instances are fully digital."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Scheduling and prioritizing firefighting personnel depends heavily on experiential judgment about crew readiness, fatigue, interpersonal dynamics, incident risk, and local conditions\u2014factors not fully captured by formal rules.",
+      "adequacy_evidence": "Current AI can optimize schedules using explicit constraints and historical patterns, but lacks reliable calibration for nuanced human factors, evolving risk contexts, and situational tradeoffs that experienced supervisors routinely handle.",
+      "_timestamp": "2026-04-05T23:08:49"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling firefighter assignments and priorities involves coordinating multiple personnel, shifts, constraints, and changing conditions, requiring a moderately extended and interdependent sequence of decisions.",
+      "adequacy_evidence": "AI agents can handle multi-step scheduling with tools, but may show some degradation over longer sequences through constraint omission or inconsistency, especially under dynamic updates or complex interdependencies.",
+      "_timestamp": "2026-04-05T23:08:49"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Scheduling firefighting personnel spans highly variable contexts (routine coverage, wildfires, multi-agency incidents, hazardous materials, staffing shortages), with many interacting constraints and rare edge cases.",
+      "adequacy_evidence": "While SOPs, incident command system materials, and some historical logs exist, much detailed scheduling data is local, sparse, or sensitive; however, many scenarios can be approximated via simulation and structured guidelines.",
+      "_timestamp": "2026-04-05T23:08:49"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Work assignment and prioritization in firefighting depend on rapidly changing incident conditions, crew capabilities, safety tradeoffs, and implicit norms (e.g., risk tolerance, local protocols), making objectives and constraints highly context-dependent and partly tacit.",
+      "adequacy_evidence": "Current agents can optimize schedules when constraints are explicit, but they struggle to infer shifting priorities, implicit safety judgments, and evolving incident goals without substantial human guidance.",
+      "_timestamp": "2026-04-05T23:08:50"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Scheduling firefighting personnel requires tracking many concurrent variables within a shift (crew availability, certifications, incident status, safety constraints, fatigue limits, and changing priorities), where missing a detail can create safety or coverage gaps.",
+      "adequacy_evidence": "LLM-based agents with tools can track structured scheduling data, but they can still lose or misprioritize rapidly changing constraints and edge-case details in complex, real-time coordination scenarios.",
+      "_timestamp": "2026-04-05T23:08:50"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling assignments and setting priorities primarily relies on structured and textual information such as staffing rosters, availability, qualifications, and incident reports; any spatial or visual inputs (e.g., maps) are supportive but not essential.",
+      "adequacy_evidence": "Current AI agents can handle text-based scheduling and prioritization tasks effectively, and the minimal multimodal elements (if present) do not pose a significant challenge.",
+      "_timestamp": "2026-04-05T23:08:52"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Scheduling firefighting personnel requires maintaining ongoing records of certifications, shift histories, fatigue, leave balances, and evolving staffing needs across many days and incidents.",
+      "adequacy_evidence": "Current AI agents can integrate with persistent databases and workforce management systems, reliably storing and retrieving cross-session personnel and scheduling data.",
+      "_timestamp": "2026-04-05T23:08:52"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Work assignment scheduling is often done in advance or with some lead time, though occasional real-time adjustments during incidents impose moderate time pressure.",
+      "adequacy_evidence": "Frontier AI systems can generate and update schedules or priorities quickly within seconds, so meeting these latency needs does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T23:08:52"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Firefighters must accept and follow schedules and priorities set by their supervisor, where perceived authority, trust, and situational judgment are central to compliance and team cohesion.",
+      "adequacy_evidence": "Firefighting personnel are unlikely to accept an AI system as the legitimate authority for assigning duties and priorities in high-risk, hierarchical environments, and resistance would undermine effectiveness.",
+      "_timestamp": "2026-04-05T23:08:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Schedules can be checked against staffing requirements, certifications, shift rules, and incident readiness, but doing so correctly requires domain knowledge of firefighting operations, fatigue limits, and coverage needs.",
+      "adequacy_evidence": "AI can generate plausible schedules, but will still make non-obvious errors around qualifications, edge-case constraints, or operational readiness, requiring a knowledgeable supervisor to review and adjust outputs.",
+      "_timestamp": "2026-04-05T23:08:53"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assigning firefighting personnel and priorities directly affects emergency response effectiveness, where mistakes can lead to loss of life, injury, or major property damage; tolerance for residual error is extremely low.",
+      "adequacy_evidence": "Even with standard supervisory checks, AI-generated schedules may miss dynamic, context-specific risks (e.g., evolving fire conditions, crew readiness), leaving unacceptable residual risk in high-stakes, time-critical situations.",
+      "_timestamp": "2026-04-05T23:08:53"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Fire departments operate under formal command structures (e.g., Incident Command System) and civil service rules that require a designated human officer to be responsible for assignments and priorities. While AI can assist, these frameworks imply a licensed or appointed human must retain decision authority, creating partial restriction rather than an explicit ban.",
+      "_timestamp": "2026-04-05T23:08:54"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-4011.00",
+  "task_id": 20620,
+  "task_statement": "Verify customer credit ratings.",
+  "occupation_title": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Verifying customer credit ratings is typically done by checking digital credit reports, internal CRM/ERP systems, or online credit bureau databases and communicating electronically with finance departments. The task can be completed entirely using a computer and internet access without physical presence."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying customer credit ratings typically involves discrete steps such as retrieving a credit report and checking key indicators, with minimal interdependence or long sequences.",
+      "adequacy_evidence": "AI agents can reliably execute short, well-defined retrieval and verification steps without meaningful degradation over such limited sequences.",
+      "_timestamp": "2026-04-06T05:12:37"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different credit bureaus, customer types (individual vs. business), and edge cases like thin or inconsistent credit histories, but follows relatively standardized data formats and procedures.",
+      "adequacy_evidence": "While procedures and sample reports are well-documented, real-world credit data is largely proprietary and privacy-restricted, leaving some important variations underrepresented though partially recoverable via synthetic or structured data.",
+      "_timestamp": "2026-04-06T05:12:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Verifying credit ratings involves interpreting credit reports, applying company criteria, and handling occasional ambiguous or borderline cases, which benefits from experience-based judgment beyond strict rules.",
+      "adequacy_evidence": "Current AI agents can reliably retrieve, parse, and apply credit evaluation criteria, and handle most edge cases using structured data and heuristics, leaving little unmet tacit knowledge gap.",
+      "_timestamp": "2026-04-06T05:12:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves applying company-specific credit policies and interpreting credit reports, which can include some context-dependent judgment (e.g., borderline scores or exceptions), but overall objectives are fairly well-defined.",
+      "adequacy_evidence": "Current AI systems can reliably retrieve, interpret, and apply credit criteria and policies, and can handle minor ambiguity through rule application or clarification without significant difficulty.",
+      "_timestamp": "2026-04-06T05:12:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying customer credit ratings primarily involves reviewing textual and numerical data such as credit reports, scores, and financial records, which are typically available in structured or text-based formats.",
+      "adequacy_evidence": "Current AI systems can reliably process and interpret text and numerical financial data, including extracting information from standard digital documents, so there is no meaningful multimodal shortfall.",
+      "_timestamp": "2026-04-06T05:12:38"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying customer credit ratings is typically a self-contained lookup using current credit bureau data or financial records, without needing prior interaction history.",
+      "adequacy_evidence": "Since the task does not rely on cross-session memory, current AI systems with or without persistence fully meet the requirement.",
+      "_timestamp": "2026-04-06T05:12:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Verifying credit ratings involves pulling and checking information from credit reports or databases, sometimes comparing multiple fields (scores, histories, flags), but the total information volume is modest and structured.",
+      "adequacy_evidence": "Current agents can reliably retrieve, track, and summarize structured credit data within a session, with minimal risk of losing or mismanaging relevant details.",
+      "_timestamp": "2026-04-06T05:12:39"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Verifying customer credit ratings is typically expected within seconds to a few minutes during sales workflows, but does not require instantaneous real-time judgment.",
+      "adequacy_evidence": "Current AI systems integrated with credit databases or APIs can retrieve and assess credit information well within the time constraints without sacrificing quality.",
+      "_timestamp": "2026-04-06T05:12:40"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "U.S. laws like the Fair Credit Reporting Act regulate how credit information is obtained and used, but they do not prohibit automated or AI systems from verifying customer credit ratings. There is no requirement that a human must perform this task, only that compliance obligations are met.",
+      "_timestamp": "2026-04-06T05:12:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking credit reports, matching identities, and confirming scores against authoritative sources; while structured, it requires attention to detail and correct interpretation of financial records.",
+      "adequacy_evidence": "AI systems can retrieve and summarize credit data but may mis-handle identity matching, outdated records, or edge cases, so human review is typically needed to ensure accuracy.",
+      "_timestamp": "2026-04-06T05:12:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying customer credit ratings is typically an internal or system-mediated process using credit bureaus or databases, with little to no direct stakeholder interaction dependent on the performer's identity.",
+      "adequacy_evidence": "Since stakeholders are not directly engaging with the performer, there is minimal concern about whether the task is performed by an AI, and such checks are already widely automated and accepted.",
+      "_timestamp": "2026-04-06T05:12:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in verifying credit ratings can lead to financial losses or missed sales, but firms typically have safeguards (credit policies, limits) that make occasional mistakes survivable.",
+      "adequacy_evidence": "With access to structured credit databases and validation rules, AI systems can reliably cross-check ratings, and any remaining errors after standard checks are unlikely to exceed acceptable risk levels.",
+      "_timestamp": "2026-04-06T05:12:41"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

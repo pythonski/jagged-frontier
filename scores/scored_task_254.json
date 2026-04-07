@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "21-1021.00",
+  "task_id": 254,
+  "task_statement": "Determine clients' eligibility for financial assistance.",
+  "occupation_title": "Child, Family, and School Social Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Determining eligibility typically involves reviewing applications, financial records, and program criteria in case management or benefits systems, which can be done digitally. However, social workers often gather or verify information through in\u2011person client meetings or physical documents in some cases."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Eligibility determinations span highly heterogeneous cases involving varying household compositions, income types, legal statuses, jurisdiction-specific program rules, and nuanced documentation, creating a long-tailed and context-sensitive distribution.",
+      "adequacy_evidence": "While policy rules and some case examples are well-documented, real-world edge cases and detailed decision rationales are often embedded in private case files, though partial coverage can be approximated via policy corpora and synthetic case generation.",
+      "_timestamp": "2026-04-05T21:00:37"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple interdependent steps such as collecting client information, verifying documentation, and applying eligibility rules, but the sequences are typically bounded and procedurally structured.",
+      "adequacy_evidence": "AI agents can generally manage these structured multi-step workflows, though they may show some degradation in maintaining consistency across steps, especially when handling edge cases or complex rule interactions.",
+      "_timestamp": "2026-04-05T21:00:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Eligibility is guided by formal program rules (income thresholds, household composition, documentation), but real cases often involve incomplete information, nuanced family circumstances, and interpretation of policy exceptions or discretionary criteria.",
+      "adequacy_evidence": "Agents can apply explicit rules and request missing data, but they often struggle with interpreting edge cases, resolving conflicting information, and incorporating nuanced social context without human guidance.",
+      "_timestamp": "2026-04-05T21:00:39"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Eligibility determination is partly rule-based (income thresholds, program criteria) but often requires judgment in interpreting ambiguous documentation, household dynamics, or exceptional circumstances.",
+      "adequacy_evidence": "Current agents can apply explicit rules reliably but show weaker calibration in edge cases involving incomplete, conflicting, or context-sensitive client information.",
+      "_timestamp": "2026-04-05T21:00:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Eligibility determinations require integrating multiple pieces of client-specific information (income, household composition, documentation, program criteria) and tracking them consistently within a case, but the volume is typically structured and bounded.",
+      "adequacy_evidence": "Current agents can organize and retrieve structured eligibility data with tools, but may inconsistently track edge-case details or evolving criteria, leading to occasional omissions or misalignment in complex cases.",
+      "_timestamp": "2026-04-05T21:00:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Eligibility determination often involves reviewing documents like pay stubs, IDs, or housing records that may be scanned images, and occasionally interpreting verbal information from client interviews.",
+      "adequacy_evidence": "Current agents can process standard documents and basic speech reliably, but struggle with low-quality scans, nuanced visual cues, or integrating multimodal inputs in complex real-world cases.",
+      "_timestamp": "2026-04-05T21:00:39"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining eligibility for financial assistance typically allows minutes to hours for review of documentation and criteria; it is not a real-time or rapid-response task.",
+      "adequacy_evidence": "Current AI systems can evaluate eligibility rules and client data well within these timeframes, so latency does not meaningfully constrain performance.",
+      "_timestamp": "2026-04-05T21:00:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Eligibility determinations often rely on prior case records (e.g., income history, prior benefits, household changes), but each decision is typically anchored in current documented information rather than requiring deep longitudinal reasoning.",
+      "adequacy_evidence": "Existing systems (case management databases, document retrieval) already support reliable cross-session storage and retrieval, and AI agents can integrate with these tools effectively with minimal loss of needed context.",
+      "_timestamp": "2026-04-05T21:00:39"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Eligibility determinations rely on applying policy rules to client-specific financial and household data, which can be checked against documentation and guidelines but requires domain knowledge and careful review.",
+      "adequacy_evidence": "Current AI can structure and pre-screen cases, but it often misapplies nuanced program rules or overlooks edge conditions, so consistent human verification is still needed though not prohibitively difficult.",
+      "_timestamp": "2026-04-05T21:00:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Eligibility determinations affect access to critical financial support, so errors can harm clients or misallocate funds, but decisions are typically reviewable and correctable through supervision or appeals.",
+      "adequacy_evidence": "Even with standard checks, AI may misinterpret nuanced eligibility rules or client circumstances, leaving some residual risk that would still require human oversight to keep at acceptable levels.",
+      "_timestamp": "2026-04-05T21:00:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining eligibility involves direct interaction with vulnerable clients and often requires trust, perceived fairness, and professional judgment from a recognized social worker.",
+      "adequacy_evidence": "Clients and partner agencies are likely to distrust or reject eligibility decisions made by an AI, especially in sensitive welfare contexts where empathy, advocacy, and human accountability are expected.",
+      "_timestamp": "2026-04-05T21:00:41"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Public benefits eligibility determinations are governed by program rules that typically require authorized human caseworkers or agencies to make or sign off on decisions, and due process obligations constrain fully autonomous determinations. However, there is no blanket prohibition on AI assistance, creating partial but not absolute restriction.",
+      "_timestamp": "2026-04-05T21:00:42"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

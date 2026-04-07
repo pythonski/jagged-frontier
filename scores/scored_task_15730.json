@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1199.06",
+  "task_id": 15730,
+  "task_statement": "Calculate purchase subtotals, taxes, and shipping costs for submission to customers.",
+  "occupation_title": "Online Merchants",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Calculating order subtotals, taxes, and shipping costs is performed using e-commerce platforms, spreadsheets, or accounting software and does not require physical presence or equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans some variation (different tax jurisdictions, shipping rules, discounts, edge cases like exemptions), but the structure is largely standardized and rule-based rather than highly heterogeneous.",
+      "adequacy_evidence": "There is abundant accessible data (e-commerce platforms, tax tables, pricing rules) and clear procedural examples, and synthetic generation can easily cover edge cases, so coverage is effectively complete.",
+      "_timestamp": "2026-04-05T22:25:14"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating subtotals, taxes, and shipping costs follows explicit rules, formulas, and predefined rate tables with little need for experiential judgment.",
+      "adequacy_evidence": "Current AI agents reliably execute rule-based calculations and apply tax/shipping logic when provided with the relevant parameters and data.",
+      "_timestamp": "2026-04-05T22:25:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves a small, bounded set of inputs (item prices, quantities, tax rates, shipping rules) that easily fit within working memory without complex state tracking.",
+      "adequacy_evidence": "Current AI agents reliably handle arithmetic and small structured inputs, with no meaningful issues in retaining or manipulating the required information within a single episode.",
+      "_timestamp": "2026-04-05T22:25:16"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task has explicit objectives: compute subtotals, apply defined tax rates, and add shipping costs based on clear rules or tables provided by the business or jurisdiction.",
+      "adequacy_evidence": "Current AI systems can reliably follow specified pricing, tax, and shipping rules when given the relevant inputs and policies, with little need for interpreting ambiguous intent.",
+      "_timestamp": "2026-04-05T22:25:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each calculation is typically self-contained, based on current order details (items, prices, destination, shipping method) and predefined rules rather than accumulated cross-session context.",
+      "adequacy_evidence": "Modern AI systems can reliably access external databases or rule sets for taxes and shipping without needing persistent memory across sessions, so no meaningful gap exists.",
+      "_timestamp": "2026-04-05T22:25:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves straightforward, short computations (subtotal, tax, shipping) that are typically independent or minimally chained steps.",
+      "adequacy_evidence": "AI systems reliably handle short arithmetic and rule-based calculations without degradation across such minimal sequences.",
+      "_timestamp": "2026-04-05T22:25:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is fundamentally numerical and text-based, involving structured order data (prices, quantities, tax rates, shipping rules) with no reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Since the task is text and data-driven, current AI systems fully handle the modality requirements without any perceptual or cross-modal limitations.",
+      "_timestamp": "2026-04-05T22:25:16"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers expect near-instant totals during checkout or invoice generation, typically within seconds, but the computation itself is simple arithmetic.",
+      "adequacy_evidence": "Frontier agents can compute subtotals, taxes, and shipping instantly with high accuracy, so meeting speed constraints does not degrade performance.",
+      "_timestamp": "2026-04-05T22:25:17"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from calculating subtotals, taxes, or shipping costs in e-commerce. Such computations are routinely automated in software systems, provided they comply with applicable tax and pricing rules.",
+      "_timestamp": "2026-04-05T22:25:18"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Subtotal, tax, and shipping calculations follow explicit formulas and can be trivially recomputed or cross-checked with automated systems, making errors immediately detectable.",
+      "adequacy_evidence": "Modern AI systems perform arithmetic and rule-based calculations reliably, and any rare errors are easily caught through simple automated validation or reconciliation checks.",
+      "_timestamp": "2026-04-05T22:25:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in totals, taxes, or shipping charges can lead to customer dissatisfaction, refunds, or minor compliance issues, but are typically reversible and not catastrophic.",
+      "adequacy_evidence": "With automated calculations, validation rules, and reconciliation checks, AI systems can reduce residual error to very low levels, and remaining mistakes are usually detectable and correctable.",
+      "_timestamp": "2026-04-05T22:25:19"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers rely on the calculated totals for payment, so there is an external stakeholder consuming the output, but the identity of the performer is not central to trust.",
+      "adequacy_evidence": "Customers already accept automated systems (e.g., shopping carts, checkout systems) for these calculations, so AI performance in this role faces no meaningful resistance.",
+      "_timestamp": "2026-04-05T22:25:20"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-9092.00",
+  "task_id": 17505,
+  "task_statement": "Determine or coordinate treatment plans by requesting laboratory services, reviewing genetics or counseling literature, and considering histories or diagnostic data.",
+  "occupation_title": "Genetic Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Determining or coordinating treatment plans mainly involves reviewing digital medical records, literature, and ordering laboratory services through electronic systems. However, it is often done within clinical settings alongside in-person patient care or team coordination, so some instances require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous genetic conditions, patient histories, rare variants, and evolving diagnostic data, creating a long-tailed and context-sensitive distribution of cases.",
+      "adequacy_evidence": "While substantial coverage exists in medical literature, case reports, and guidelines, many rare conditions and nuanced real-world decision processes are underrepresented or embedded in private clinical data, making coverage incomplete but partially addressable.",
+      "_timestamp": "2026-04-06T11:11:17"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Integrating genetic test results, family histories, and evolving literature into treatment plans requires nuanced clinical judgment, including interpreting uncertain variants and tailoring recommendations to patient context and risk tolerance.",
+      "adequacy_evidence": "Current agents can synthesize guidelines and data but lack fully reliable calibration in ambiguous or edge cases (e.g., variants of uncertain significance, psychosocial considerations), leading to gaps in nuanced clinical discernment.",
+      "_timestamp": "2026-04-06T11:11:17"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining treatment plans in genetic counseling requires integrating ambiguous clinical data, patient/family history, evolving literature, and patient preferences, with success criteria often implicit and context-dependent.",
+      "adequacy_evidence": "Current agents can synthesize data and suggest plans, but frequently miss nuanced clinical priorities, patient values, or subtle contextual cues, requiring human interpretation and iterative refinement.",
+      "_timestamp": "2026-04-06T11:11:19"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple interdependent steps\u2014ordering and interpreting labs, reviewing literature, and integrating patient history into a treatment plan\u2014but these sequences are moderately bounded rather than long or highly recursive.",
+      "adequacy_evidence": "Current AI agents can manage multi-step clinical reasoning workflows with tools, but may show some drift or inconsistency when maintaining alignment across evidence sources and patient-specific factors over several steps.",
+      "_timestamp": "2026-04-06T11:11:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining or coordinating genetic counseling treatment plans involves reviewing data, literature, and histories where turnaround times of minutes to hours (or longer) are acceptable rather than immediate responses.",
+      "adequacy_evidence": "Frontier AI systems can perform extended reasoning and document review within these relaxed timeframes without meaningful degradation in output quality.",
+      "_timestamp": "2026-04-06T11:11:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting lab results, diagnostic data, and pedigrees, which may include structured visuals or numeric data alongside text, but is not primarily dependent on rich sensory modalities.",
+      "adequacy_evidence": "Current AI systems can handle structured reports and simple visual inputs (e.g., pedigrees), but may be less reliable with complex or heterogeneous diagnostic data formats and nuanced cross-modal interpretation.",
+      "_timestamp": "2026-04-06T11:11:21"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Genetic counselors rely on patient histories, prior test results, and evolving diagnostic information across visits, but much of this is formally stored in medical records rather than requiring deeply evolving informal memory.",
+      "adequacy_evidence": "Current AI systems can integrate with structured records and retrieval systems, but they still show gaps in reliably maintaining, updating, and contextually prioritizing longitudinal patient information across sessions.",
+      "_timestamp": "2026-04-06T11:11:21"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating heterogeneous information\u2014patient histories, family pedigrees, lab/genetic test results, and evolving literature\u2014where missing or misweighting details can materially affect treatment recommendations.",
+      "adequacy_evidence": "Frontier agents can ingest and summarize large multimodal medical context, but still show gaps in reliably tracking nuanced relationships (e.g., pedigree inheritance patterns) and maintaining precise, lossless representations across complex inputs.",
+      "_timestamp": "2026-04-06T11:11:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing correctness of genetic treatment plans requires specialized expertise, cross-checking complex lab/genomic data, and errors may only surface after downstream clinical outcomes, making them hard to detect preemptively.",
+      "adequacy_evidence": "Current AI systems can misinterpret genetic variants, literature, or patient context, and their outputs require thorough expert review and validation, creating a high and unavoidable verification burden.",
+      "_timestamp": "2026-04-06T11:11:23"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Treatment planning in genetic counseling directly affects medical decisions, reproductive choices, and patient psychological outcomes; even rare errors can lead to serious harm or irreversible consequences.",
+      "adequacy_evidence": "Even with clinical review, AI systems can miss subtle genotype-phenotype relationships or misinterpret evolving literature, leaving non-negligible residual risk in high-stakes decisions.",
+      "_timestamp": "2026-04-06T11:11:23"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Determining or coordinating treatment plans and ordering laboratory services constitute the practice of healthcare, which in the U.S. requires a licensed professional (e.g., genetic counselor or physician) to make and be responsible for these decisions. AI systems cannot legally perform these tasks autonomously without licensed human oversight and sign-off.",
+      "_timestamp": "2026-04-06T11:11:24"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "This task directly affects patient care plans and requires engagement with patients and clinical teams, where trust, empathy, and professional legitimacy are central to acceptance.",
+      "adequacy_evidence": "Patients and clinicians are likely to resist AI-led genetic counseling and treatment planning due to concerns about empathy, accountability, and medical liability, making acceptance a major barrier.",
+      "_timestamp": "2026-04-06T11:11:25"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3026.00",
+  "task_id": 3663,
+  "task_statement": "Aid in planning work assignments in accordance with worker performance, machine capacity, production schedules, or anticipated delays.",
+  "occupation_title": "Industrial Engineering Technologists and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Planning work assignments typically involves analyzing production data, schedules, and capacity using planning software or spreadsheets, which can be done remotely. However, in many manufacturing settings it also involves coordination with on-site staff and awareness of real-time shop-floor conditions, sometimes requiring physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different production environments, machine types, and workforce constraints, creating moderate variability in scheduling and assignment scenarios across industries.",
+      "adequacy_evidence": "While general scheduling principles and some datasets are available, much real-world signal (e.g., firm-specific performance data, disruptions) is proprietary, though partially recoverable via simulation and synthetic generation.",
+      "_timestamp": "2026-04-05T21:36:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While formal scheduling and capacity-planning methods exist, effective assignment often relies on experiential judgment about worker reliability, informal machine constraints, and anticipating disruptions not fully captured in explicit rules.",
+      "adequacy_evidence": "Current agents can apply optimization models and learned patterns well, but they still lack consistent calibration for nuanced, context-specific tradeoffs and informal shop-floor knowledge in non-routine situations.",
+      "_timestamp": "2026-04-05T21:36:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Planning assignments requires balancing multiple constraints (worker performance, machine capacity, schedules, delays) with implicit priorities like efficiency vs. fairness or urgency, which are often context-dependent rather than fully specified.",
+      "adequacy_evidence": "Current agents can optimize over explicit constraints but often miss tacit shop-floor priorities or evolving operational nuances, requiring human guidance to refine plans.",
+      "_timestamp": "2026-04-05T21:36:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple constraints (worker performance, machine capacity, schedules, delays) into a coherent plan, requiring a sequence of interdependent steps but not extremely long or deeply cascading workflows.",
+      "adequacy_evidence": "Frontier agents can maintain coherence across moderate planning sequences using structured tools and iteration, but may show some constraint drift or suboptimal adjustments as complexity and sequence length increase.",
+      "_timestamp": "2026-04-05T21:36:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating multiple structured data sources (worker performance metrics, machine capacity, schedules, delays) within a planning episode, but these are typically well-organized and bounded in scope.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, databases) can reliably track, retrieve, and update this level of structured information without significant context loss.",
+      "_timestamp": "2026-04-05T21:36:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Work assignment planning is typically done on a shift, daily, or longer planning horizon where minutes to hours of computation are acceptable.",
+      "adequacy_evidence": "Current AI systems can generate high-quality plans well within these timeframes, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T21:36:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily relies on structured data (performance metrics, schedules, capacities) that can be represented in text or tabular form; visual or sensory inputs are not essential to core decision-making.",
+      "adequacy_evidence": "Current AI agents handle text and structured numerical data well, and any occasional charts or dashboards can be processed without significant multimodal limitations.",
+      "_timestamp": "2026-04-05T21:36:07"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Effective assignment planning depends on accumulated data such as historical worker performance, past production schedules, and machine utilization trends, but this information is typically stored in structured systems rather than requiring implicit memory.",
+      "adequacy_evidence": "Current AI agents can reliably access and use persistent enterprise data (e.g., ERP/MES systems, databases) via tooling, so maintaining and retrieving cross-session context is not a significant limitation.",
+      "_timestamp": "2026-04-05T21:36:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from assisting with or performing production planning and work assignment tasks. These activities are generally internal operational decisions without mandated human-only control or licensure requirements.",
+      "_timestamp": "2026-04-05T21:36:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating work assignments that affect workers and supervisors, who must engage with and trust the resulting plans, though the planner's personal identity is not central.",
+      "adequacy_evidence": "Stakeholders may show some resistance to AI-generated assignments due to trust or fairness concerns, but similar planning tools are already used, so acceptance is mixed rather than prohibitive.",
+      "_timestamp": "2026-04-05T21:36:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking consistency with constraints (worker skills, machine capacity, schedules) and may require simulation or expert review; some inefficiencies or conflicts only surface over time.",
+      "adequacy_evidence": "AI can generate plausible assignment plans but often misapplies constraints or overlooks edge cases, so human validation and iterative correction are typically needed.",
+      "_timestamp": "2026-04-05T21:36:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in work assignment planning typically lead to inefficiencies, delays, or increased costs, but are usually reversible and can be corrected in subsequent scheduling cycles.",
+      "adequacy_evidence": "With standard review processes (e.g., supervisor checks, schedule validation, KPI monitoring), most AI-generated planning errors would be caught or adjusted, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T21:36:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

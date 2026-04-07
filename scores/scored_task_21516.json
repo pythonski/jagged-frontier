@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2011.00",
+  "task_id": 21516,
+  "task_statement": "Review accounts for discrepancies and reconcile differences.",
+  "occupation_title": "Accountants and Auditors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Reviewing accounts and reconciling discrepancies is typically done using accounting software, spreadsheets, and digital financial records, which can be handled remotely. However, some cases may involve examining physical documents or records at a client site."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Accounting standards and reconciliation procedures provide structure, but identifying what counts as a meaningful discrepancy and how to resolve it often depends on context, materiality thresholds, and organizational practices.",
+      "adequacy_evidence": "Current agents can follow reconciliation rules and flag inconsistencies, but they often struggle to infer context-specific materiality or intent behind transactions without human guidance, leading to iterative clarification.",
+      "_timestamp": "2026-04-06T05:43:10"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many reconciliations follow explicit accounting rules and procedures, accountants must apply experience-based judgment to interpret discrepancies, assess materiality, and distinguish errors from acceptable variations or potential fraud signals.",
+      "adequacy_evidence": "Current AI agents handle rule-based matching and standard discrepancies well but show gaps in nuanced, context-sensitive judgment, especially in ambiguous or non-routine cases requiring professional discernment.",
+      "_timestamp": "2026-04-06T05:43:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reconciling accounts involves multi-step comparison of records, identifying discrepancies, tracing causes, and adjusting entries, where consistency across steps matters but sequences are typically bounded and modular.",
+      "adequacy_evidence": "LLM-based agents can follow reconciliation workflows with tools, but may exhibit minor drift or missed inconsistencies over multi-step financial comparisons, especially across larger or more complex account sets.",
+      "_timestamp": "2026-04-06T05:43:10"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reconciliation spans diverse but structured cases (e.g., bank recs, intercompany balances, error correction, fraud flags) across industries, creating moderate variability with recurring patterns.",
+      "adequacy_evidence": "There is abundant training data (textbooks, worked examples, synthetic ledgers), but real-world messy, proprietary financial records and rare edge cases are less accessible, leaving some gaps.",
+      "_timestamp": "2026-04-06T05:43:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reconciling accounts requires tracking and cross-referencing large volumes of transactional data, ledgers, and supporting documents, where missing small discrepancies can materially affect results.",
+      "adequacy_evidence": "Current agents can use tools to process large datasets, but they can still lose context or mis-handle edge-case discrepancies when compressing or tracking evolving reconciliation states.",
+      "_timestamp": "2026-04-06T05:43:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Account reconciliation is typically performed on timescales of minutes to hours (or longer), with no need for real-time or near-instant responses.",
+      "adequacy_evidence": "AI agents can use extended reasoning, iterative checks, and tool-assisted workflows within these generous time windows without any meaningful quality degradation from speed constraints.",
+      "_timestamp": "2026-04-06T05:43:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reconciliation often benefits from prior-period balances, historical discrepancies, and client-specific accounting practices, but many instances can be completed using current-period records and documentation.",
+      "adequacy_evidence": "Current agents can reliably store and retrieve structured financial records and prior reconciliations via databases and integrations, so cross-session context is generally accessible when needed.",
+      "_timestamp": "2026-04-06T05:43:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reconciling accounts primarily involves structured numeric and textual data (ledgers, spreadsheets, transaction records), with little inherent need for image, audio, or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents can fully handle the text- and number-based inputs typical of this task, and any occasional document parsing (e.g., PDFs) is already well-supported.",
+      "_timestamp": "2026-04-06T05:43:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reconciliation relies on structured financial records where discrepancies can often be traced via systematic checks (e.g., trial balances, transaction matching), but doing so still requires accounting knowledge and careful review.",
+      "adequacy_evidence": "AI can assist with matching and flagging inconsistencies, but it still makes non-trivial errors in edge cases (e.g., ambiguous entries, timing differences), so human review and correction remain necessary.",
+      "_timestamp": "2026-04-06T05:43:12"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reconciliation outputs are used by managers, auditors, and clients who rely on their accuracy, but the performer's identity is usually secondary to correctness and auditability.",
+      "adequacy_evidence": "AI-assisted reconciliation is already common, though some stakeholders (e.g., auditors or clients) may still prefer human oversight and could be cautious about fully autonomous AI handling discrepancies.",
+      "_timestamp": "2026-04-06T05:43:13"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from reviewing accounts or reconciling discrepancies. While licensed accountants (e.g., CPAs) may be required to sign off on certain financial statements or audits, the underlying reconciliation work can be performed using automated systems under their supervision.",
+      "_timestamp": "2026-04-06T05:43:13"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reconciliation errors can propagate into financial statements, regulatory filings, or audits, where even small undetected discrepancies may signal fraud or cause material misstatement.",
+      "adequacy_evidence": "AI can handle routine matching and flag inconsistencies, but edge cases, unusual transactions, or context-specific judgments can still leave non-trivial residual risk even after standard checks.",
+      "_timestamp": "2026-04-06T05:43:13"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

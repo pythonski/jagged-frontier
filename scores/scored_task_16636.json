@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3029.02",
+  "task_id": 16636,
+  "task_statement": "Review electrical engineering plans to ensure adherence to design specifications and compliance with applicable electrical codes and standards.",
+  "occupation_title": "Engineering Technologists and Technicians, Except Drafters, All Other",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Reviewing electrical engineering plans and checking them against design specifications and electrical codes is typically done using digital drawings, documents, and code references on a computer, without requiring physical presence or specialized equipment."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing engineering plans involves multiple sequential checks (e.g., verifying specifications, cross-referencing codes, ensuring consistency across components), but these steps are relatively modular rather than tightly interdependent.",
+      "adequacy_evidence": "AI agents can handle multi-step review workflows reasonably well, but may show some degradation over longer documents (e.g., missing constraints or inconsistencies across sections) without careful scaffolding and tracking.",
+      "_timestamp": "2026-04-05T22:55:37"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Electrical plan review spans many building types, system complexities, and jurisdiction-specific codes (e.g., NEC variations, local amendments), creating a heterogeneous, long-tailed distribution of cases.",
+      "adequacy_evidence": "While codes, standards, and some annotated examples are publicly available and synthetic plans can be generated, large corpora of real-world plan reviews with expert reasoning are often proprietary or sparse, leaving partial but not complete coverage.",
+      "_timestamp": "2026-04-05T22:55:37"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Electrical codes and design specifications are largely explicit, but applying them requires interpreting context-specific details, resolving ambiguities in plans, and judging intent in edge cases or conflicting standards.",
+      "adequacy_evidence": "Current agents can parse codes and compare against plans, but they often miss nuanced contextual interpretations, local code variations, and implicit design intent, requiring human review to resolve ambiguities.",
+      "_timestamp": "2026-04-05T22:55:37"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing plans against codes and specifications involves some experience-based judgment, such as interpreting ambiguous drawings, resolving conflicts between standards, and recognizing practical compliance issues not explicitly stated in rules.",
+      "adequacy_evidence": "Current AI agents can apply codified standards and detect many inconsistencies, but they show gaps in nuanced interpretation and context-sensitive judgment in non-routine or borderline compliance cases.",
+      "_timestamp": "2026-04-05T22:55:38"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing electrical engineering plans requires tracking large, heterogeneous information sources (drawings, specifications, and multiple codebooks) and cross-referencing details where missing a constraint can lead to noncompliance.",
+      "adequacy_evidence": "Current agents can use retrieval and chunking to handle large documents, but they still risk missing cross-references or losing context across complex plan sections, leading to moderate reliability gaps.",
+      "_timestamp": "2026-04-05T22:55:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing electrical engineering plans requires interpreting schematics, wiring diagrams, symbols, spatial layouts, and possibly annotated drawings, which are inherently visual and not reducible to text alone.",
+      "adequacy_evidence": "Current agents can parse and reason over many structured diagrams and plans, but still struggle with dense, low-quality, or highly specialized schematics and nuanced spatial relationships, leading to reliability gaps in complex cases.",
+      "_timestamp": "2026-04-05T22:55:39"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing electrical engineering plans is a deliberative task typically performed over minutes to hours, with no requirement for immediate or real-time responses.",
+      "adequacy_evidence": "AI systems can take sufficient time to perform detailed analysis without pressure for rapid turnaround, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T22:55:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many plan reviews are largely self-contained, reviewers often benefit from prior project revisions, client-specific standards, and historical compliance decisions across sessions.",
+      "adequacy_evidence": "Current AI systems with retrieval and persistent storage can reliably track project documents, prior versions, and preferences across sessions, making cross-instance memory needs largely manageable.",
+      "_timestamp": "2026-04-05T22:55:40"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying compliance of electrical plans requires detailed domain expertise, cross-checking calculations, interpreting codes, and spotting subtle design inconsistencies that are not immediately obvious.",
+      "adequacy_evidence": "Current AI systems can miss nuanced code requirements or engineering constraints, and their errors are often non-obvious, requiring thorough expert review to reliably detect and correct.",
+      "_timestamp": "2026-04-05T22:55:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The review is relied upon by engineers, project managers, and regulators, and often ties into professional accountability (e.g., licensed sign-off), so the reviewer\u2019s identity and credibility matter to some extent.",
+      "adequacy_evidence": "While AI-assisted review may be tolerated as a support tool, stakeholders typically expect a qualified human to validate compliance, and full acceptance of an AI reviewer alone remains limited.",
+      "_timestamp": "2026-04-05T22:55:40"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Electrical plan review for code compliance often requires oversight or sign-off by a licensed Professional Engineer in many jurisdictions, especially for safety-critical systems. While AI can assist, regulations generally require a qualified human to take responsibility, creating partial but not absolute restrictions.",
+      "_timestamp": "2026-04-05T22:55:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in reviewing electrical engineering plans can lead to safety hazards, code violations, fires, or system failures, so even rare residual mistakes can have severe consequences.",
+      "adequacy_evidence": "Even after standard quality checks, AI can miss nuanced code interpretations or context-specific compliance issues, leaving a non-trivial residual risk that remains concerning but not universally prohibitive with human oversight.",
+      "_timestamp": "2026-04-05T22:55:42"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

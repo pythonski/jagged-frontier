@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1253.00",
+  "task_id": 14661,
+  "task_statement": "Perform initial debugging procedures by reviewing configuration files, logs, or code pieces to determine breakdown source.",
+  "occupation_title": "Software Quality Assurance Analysts and Testers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 99,
+    "reasoning": "Initial debugging by reviewing configuration files, logs, or code involves examining digital artifacts using software tools, which can be done entirely on a computer with internet access. Physical presence or specialized non-computer equipment is typically not required."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Initial debugging often relies on recognizing patterns in logs, config interactions, and code smells, which benefits from experience but is partially codifiable via known debugging heuristics and practices.",
+      "adequacy_evidence": "Current agents can handle many common debugging patterns and log analyses, but still show gaps in nuanced, system-specific judgment and prioritization in less routine or highly context-dependent cases.",
+      "_timestamp": "2026-04-06T01:28:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Initial debugging involves iteratively inspecting logs, configuration files, and code, forming and testing hypotheses across several dependent steps, but typically within a bounded investigative scope.",
+      "adequacy_evidence": "AI agents can generally sustain reasoning over these moderate sequences, but may exhibit some drift or miss connections across multiple artifacts, especially as the chain of inference grows.",
+      "_timestamp": "2026-04-06T01:28:02"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the goal is to identify the source of a breakdown, logs and code rarely state the expected behavior explicitly, requiring inference about intended system function and context-specific norms.",
+      "adequacy_evidence": "Current agents can often infer likely issues from logs and code, but they still miss implicit system context or misinterpret intended behavior, requiring human clarification or iteration.",
+      "_timestamp": "2026-04-06T01:28:02"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Debugging spans highly heterogeneous environments (different languages, frameworks, log formats, system architectures, and failure modes), requiring coverage of a long-tailed distribution of issues.",
+      "adequacy_evidence": "There is abundant public code, logs, bug reports, and Q&A data plus strong synthetic generation pipelines, but proprietary systems, rare edge-case failures, and real-world log diversity remain partially underrepresented.",
+      "_timestamp": "2026-04-06T01:28:02"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Debugging requires integrating information from multiple sources (logs, config files, code snippets) and tracking relationships between them, but the scope is usually bounded within a single issue.",
+      "adequacy_evidence": "Agents can ingest and search across these artifacts with tools, but may lose track of subtle dependencies or misprioritize relevant signals when context grows or is poorly structured.",
+      "_timestamp": "2026-04-06T01:28:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily based on interpreting text artifacts such as configuration files, logs, and source code, with no inherent need for visual, audio, or other non-text modalities.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI systems handle the modality requirements fully without any multimodal limitations.",
+      "_timestamp": "2026-04-06T01:28:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Initial debugging by reviewing logs, configuration files, or code is typically an investigative task where minutes to hours of analysis are acceptable rather than immediate response.",
+      "adequacy_evidence": "Current AI agents can perform log and code analysis with sufficient depth within these relaxed time constraints, so speed does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T01:28:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Initial debugging is typically performed using the current logs, configuration files, and code context; each instance is largely self-contained without needing prior session history.",
+      "adequacy_evidence": "Current AI agents can handle any minimal cross-session context (e.g., referencing past similar issues) when needed, and the task does not depend on persistent longitudinal memory.",
+      "_timestamp": "2026-04-06T01:28:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from performing software debugging tasks such as reviewing logs, configuration files, or code. This activity is not licensed or legally restricted to human professionals.",
+      "_timestamp": "2026-04-06T01:28:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Misidentifying a breakdown source can delay fixes and propagate confusion, but errors are usually recoverable through further debugging and do not directly cause irreversible harm.",
+      "adequacy_evidence": "AI can analyze logs and configs effectively, but still exhibits occasional misdiagnosis or shallow reasoning about root causes, leaving some residual risk even after standard verification.",
+      "_timestamp": "2026-04-06T01:28:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is typically performed internally by QA analysts, with outputs (identified issues or root causes) consumed impersonally within a technical team rather than requiring stakeholder interaction tied to performer identity.",
+      "adequacy_evidence": "Debugging via automated tools and AI-assisted log/code analysis is already widely accepted in software workflows, and stakeholders generally do not care whether a human or AI performed the initial diagnosis.",
+      "_timestamp": "2026-04-06T01:28:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining the root cause from logs, configs, or code requires technical expertise and often cross-checking hypotheses, but errors can usually be uncovered through systematic inspection or reproduction.",
+      "adequacy_evidence": "AI-generated diagnoses are often plausible but not reliably correct, so practitioners must validate them by re-examining logs or testing fixes, creating a moderate but manageable verification burden.",
+      "_timestamp": "2026-04-06T01:28:05"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

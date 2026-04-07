@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1199.04",
+  "task_id": 18122,
+  "task_statement": "Create, edit, or analyze geospatial data, using Global Positioning Systems (GPS) or digitizing techniques.",
+  "occupation_title": "Geospatial Information Scientists and Technologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Editing, digitizing, and analyzing geospatial data are typically done in GIS software on a computer, which can be performed remotely. However, creating data using GPS often requires field data collection with physical GPS devices, introducing a non-remote component."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Geospatial tasks often have partially specified goals (e.g., projection choice, data cleaning thresholds, feature selection) that depend on project context and intended use, requiring some interpretation beyond explicit instructions.",
+      "adequacy_evidence": "Current agents can infer many defaults and follow standards but still frequently miss context-specific intent (e.g., appropriate spatial resolution or domain conventions), requiring human iteration to refine outputs.",
+      "_timestamp": "2026-04-06T01:13:34"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse geospatial contexts (e.g., urban planning, environmental monitoring, surveying) with varying data sources and formats, but many workflows share common GIS principles and tools.",
+      "adequacy_evidence": "Extensive public geospatial datasets, tutorials, and software documentation exist, but some important subpopulations (e.g., proprietary datasets, specialized field collection practices) are less accessible and only partially recoverable through synthesis.",
+      "_timestamp": "2026-04-06T01:13:34"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many geospatial workflows (e.g., digitizing, coordinate transforms) follow documented procedures, practitioners rely on experience to handle projection choices, data inconsistencies, and context-specific spatial interpretations.",
+      "adequacy_evidence": "Current agents can execute standard GIS operations but show gaps in nuanced judgment for messy, real-world datasets and context-sensitive decisions, indicating a moderate shortfall in tacit calibration.",
+      "_timestamp": "2026-04-06T01:13:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Geospatial data work involves multi-step workflows (e.g., data acquisition, projection, cleaning, digitizing, and analysis) where outputs from earlier steps feed into later ones, but many steps are modular and can be validated independently.",
+      "adequacy_evidence": "AI agents can execute GIS-style pipelines with reasonable consistency using tools, but longer workflows can introduce some error accumulation or missed constraints, especially across heterogeneous steps and formats.",
+      "_timestamp": "2026-04-06T01:13:34"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Geospatial data tasks require managing multiple large layers (e.g., vector, raster, metadata, projections) and tracking relationships, transformations, and attributes within a single workflow, where missing details can lead to significant errors.",
+      "adequacy_evidence": "Current agents can offload much of this to GIS tools and databases, but still show weaknesses in reliably tracking complex layer interactions, coordinate systems, and intermediate transformations across steps.",
+      "_timestamp": "2026-04-06T01:13:35"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Geospatial data creation, editing, and analysis are typically batch or project-based tasks where minutes to hours of processing time are acceptable rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can perform geospatial analysis and data manipulation within acceptable timeframes, and extended reasoning does not conflict with typical latency expectations.",
+      "_timestamp": "2026-04-06T01:13:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Geospatial work often spans multiple sessions with ongoing projects, requiring retention of datasets, coordinate systems, metadata, and prior edits or analytical decisions.",
+      "adequacy_evidence": "Current agents can store and retrieve project data via external systems, but integration is imperfect and context (e.g., prior transformations or assumptions) is not always reliably preserved or surfaced across sessions.",
+      "_timestamp": "2026-04-06T01:13:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task inherently involves spatial data (maps, satellite imagery, coordinate systems, GIS layers) and often requires visual interpretation and manipulation that cannot be reduced to text alone.",
+      "adequacy_evidence": "Current agents can interface with GIS tools and handle structured geospatial data, but they remain less reliable on complex spatial reasoning, high-precision editing, and nuanced interpretation of visual geospatial inputs.",
+      "_timestamp": "2026-04-06T01:13:36"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Geospatial data errors can affect mapping accuracy, planning decisions, and downstream analyses, but many errors are detectable and typically not catastrophic if occasional minor inaccuracies persist.",
+      "adequacy_evidence": "Even after standard validation (e.g., topology checks, cross-referencing datasets), AI systems can still introduce subtle spatial misalignments or metadata errors that may evade detection, leaving some residual risk.",
+      "_timestamp": "2026-04-06T01:13:37"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "While general geospatial data creation and analysis are not restricted, certain outputs (e.g., official land surveys or boundary determinations) legally require a licensed surveyor\u2019s approval, creating partial regulatory constraints on fully autonomous AI performance.",
+      "_timestamp": "2026-04-06T01:13:37"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces geospatial datasets used by clients or internal teams, so stakeholders rely on the output, but the performer\u2019s identity is generally not central to acceptance.",
+      "adequacy_evidence": "Geospatial data processing is already highly automated and tool-driven; stakeholders typically care about accuracy and standards compliance, not whether an AI or human produced it.",
+      "_timestamp": "2026-04-06T01:13:37"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Geospatial outputs can be checked with GIS validation tools (topology checks, projection consistency, overlays), but doing so correctly requires domain expertise and time, and some spatial errors are not immediately obvious.",
+      "adequacy_evidence": "Current AI can produce plausible geospatial data and analyses but often makes mistakes with coordinate systems, topology, or data alignment, so routine expert verification and correction are still needed.",
+      "_timestamp": "2026-04-06T01:13:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

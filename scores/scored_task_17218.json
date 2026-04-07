@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1229.05",
+  "task_id": 17218,
+  "task_statement": "Design or use surveillance tools, such as screening, lab reports, and vital records, to identify health risks.",
+  "occupation_title": "Preventive Medicine Physicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Designing and analyzing surveillance systems and reviewing lab reports or vital records are typically done on computers using digital health data. However, some instances involve coordinating or conducting in-person screenings or handling data generated through physical clinical processes."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Public health surveillance spans highly heterogeneous populations, diseases, data sources (labs, vital records, screening tools), and rare or emerging conditions, requiring broad and long-tailed coverage.",
+      "adequacy_evidence": "While large medical datasets, public health records, and synthetic data can cover many scenarios, key distributions (e.g., real-time surveillance data, rare outbreaks, and linked longitudinal records) are often restricted or sparse, leaving partial gaps.",
+      "_timestamp": "2026-04-06T05:52:14"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing surveillance systems for health risks requires choosing relevant indicators, thresholds, populations, and data sources based on evolving epidemiological context and public health goals, many of which are implicit and stakeholder-dependent.",
+      "adequacy_evidence": "Current AI agents can synthesize guidelines and propose surveillance designs, but often miss nuanced contextual factors (e.g., local population risks, policy priorities) and require human iteration to fully align with real-world objectives.",
+      "_timestamp": "2026-04-06T05:52:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (integrating screening data, lab reports, and vital records, then analyzing and refining surveillance approaches), where consistency across steps matters but sequences are not extremely long or tightly coupled.",
+      "adequacy_evidence": "Current AI agents can manage these multi-step analytic pipelines with tooling, but may show some drift or error accumulation across steps, especially in complex data integration or iterative refinement.",
+      "_timestamp": "2026-04-06T05:52:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating multiple data sources (e.g., screening results, lab reports, vital records) and synthesizing them into a coherent risk assessment, involving moderate information volume and structured retrieval.",
+      "adequacy_evidence": "Current AI agents with tool use and retrieval systems can reliably ingest, organize, and summarize such structured health data within a single episode without significant loss or mismanagement of context.",
+      "_timestamp": "2026-04-06T05:52:14"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Identifying health risks from surveillance data requires nuanced epidemiological judgment (e.g., distinguishing signal from noise, accounting for confounders, population context, and data quality issues) that goes beyond explicit rules and relies on experience.",
+      "adequacy_evidence": "Well-scaffolded AI can apply statistical methods and known heuristics, but often lacks robust calibration for context-sensitive interpretation (e.g., atypical patterns, biased datasets, or shifting population baselines), leading to moderate gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T05:52:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task primarily involves structured and textual data such as lab reports, screening results, and vital records, though some screening tools may include imaging or other non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle structured health data well but are less reliable when integrating heterogeneous modalities like imaging with clinical records in complex, real-world surveillance contexts.",
+      "_timestamp": "2026-04-06T05:52:15"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Public health surveillance depends on longitudinal tracking of populations, integrating historical lab reports, vital records, and prior screening data to detect trends and emerging risks over time.",
+      "adequacy_evidence": "Current AI systems can interface with databases and persist structured records, but often struggle with reliably maintaining and synthesizing evolving multi-source context across deployments without robust external data engineering.",
+      "_timestamp": "2026-04-06T05:52:15"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Public health surveillance and analysis of screening, lab, and vital records typically occur over hours to days, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform data aggregation and risk identification well within these timeframes without needing to sacrifice reasoning depth for speed.",
+      "_timestamp": "2026-04-06T05:52:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Evaluating surveillance tools and outputs (e.g., screening systems, lab data aggregation, vital records analysis) requires deep epidemiological expertise; errors like biased sampling, misclassification, or flawed statistical assumptions can be subtle and may only surface over time or through downstream health outcomes.",
+      "adequacy_evidence": "Current AI systems can generate plausible analyses and tool designs but frequently miss context-specific biases, data quality issues, and public health nuances, requiring intensive expert review and validation to ensure reliability before use.",
+      "_timestamp": "2026-04-06T05:52:17"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "This task informs public health decisions and clinical risk identification, requiring trust from clinicians, institutions, and sometimes the public in the authority and credibility of the entity producing the surveillance insights.",
+      "adequacy_evidence": "While AI-assisted surveillance tools are increasingly used, full acceptance of AI as the primary agent is mixed; stakeholders often still expect physician oversight and may distrust fully autonomous AI-driven risk identification.",
+      "_timestamp": "2026-04-06T05:52:17"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Missed or incorrect identification of population health risks can lead to delayed outbreak response, widespread harm, or misallocation of public health resources, making even rare residual errors potentially severe.",
+      "adequacy_evidence": "Even with review and validation pipelines, AI systems can still miss subtle epidemiological patterns or propagate data biases, leaving a non-trivial residual risk that remains concerning in high-stakes public health contexts.",
+      "_timestamp": "2026-04-06T05:52:17"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no blanket prohibition on AI use, but healthcare regulations (e.g., FDA oversight of clinical decision support/software as a medical device and state licensure rules) require that medical decision-making and responsibility remain with licensed physicians, creating partial constraints on fully autonomous AI performance.",
+      "_timestamp": "2026-04-06T05:53:26"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

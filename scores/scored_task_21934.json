@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3011.00",
+  "task_id": 21934,
+  "task_statement": "Locate and identify symbols on topographical surveys to denote geological and geophysical formations or oil field installations.",
+  "occupation_title": "Architectural and Civil Drafters",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Architectural and civil drafters typically review topographical surveys in digital CAD, GIS, or scanned formats and identify symbols on-screen. However, some instances may involve reviewing printed survey maps or field documents, introducing a minor physical component."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Symbol identification on topographical surveys spans multiple standardized symbol sets (e.g., USGS, industry-specific legends) with some variation across regions and firms, but remains moderately structured rather than highly long-tailed.",
+      "adequacy_evidence": "Extensive public maps, GIS datasets, drafting standards, and symbol libraries provide ample coverage, and synthetic data generation can readily fill gaps, making representative training data broadly accessible.",
+      "_timestamp": "2026-04-06T04:37:49"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Topographical and geological symbols are largely standardized and documented in legends and drafting conventions, but some experience helps in interpreting degraded drawings, overlapping symbols, or context-specific usage.",
+      "adequacy_evidence": "Current AI systems with vision and document parsing can identify most standard symbols, but performance degrades on noisy scans, ambiguous markings, or context-dependent distinctions requiring human-like calibration.",
+      "_timestamp": "2026-04-06T04:37:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Identifying symbols on topographical surveys is typically governed by standardized legend conventions and project-specific drawings, making each instance largely self-contained without reliance on prior cases.",
+      "adequacy_evidence": "Since the task does not require persistent cross-session context, current AI systems' memory limitations do not meaningfully impact performance.",
+      "_timestamp": "2026-04-06T04:37:50"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting a survey map, cross-referencing symbols with legends, and maintaining spatial context, but the information is bounded and typically fits within a single document.",
+      "adequacy_evidence": "Current agents can process maps and legends but may inconsistently track spatial relationships or misassociate symbols, especially when visual layouts are dense or complex.",
+      "_timestamp": "2026-04-06T04:37:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally involves interpreting visual topographical surveys and recognizing specialized graphical symbols representing geological or oil field features, which cannot be reduced to text-only inputs.",
+      "adequacy_evidence": "Current AI systems can process maps and recognize common symbols, but performance is less reliable on dense, domain-specific survey drawings with subtle symbol distinctions and varied drafting conventions.",
+      "_timestamp": "2026-04-06T04:37:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is typically performed in a drafting or review workflow where minutes or longer are acceptable; it does not require real-time responsiveness.",
+      "adequacy_evidence": "Current AI systems can analyze survey drawings and identify symbols within acceptable timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T04:37:51"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves scanning a survey, identifying multiple symbols, and consistently mapping them to meanings, requiring some sustained attention across a sequence of recognitions but not a long, tightly interdependent chain.",
+      "adequacy_evidence": "Modern multimodal AI systems can maintain consistent performance across batches of symbol identification without meaningful degradation, as the task can be parallelized and does not rely on long sequential dependencies.",
+      "_timestamp": "2026-04-06T04:37:51"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Topographical surveys use largely standardized symbology and legends, but real-world variation, incomplete labeling, or context-specific conventions require some interpretation beyond literal instructions.",
+      "adequacy_evidence": "Current multimodal agents can often match symbols using legends or prior patterns but still struggle with inconsistent drafting styles or missing context, requiring human clarification in nontrivial cases.",
+      "_timestamp": "2026-04-06T04:37:52"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking symbol types and placements against standardized legends and survey data, which requires domain familiarity but is generally straightforward for a trained drafter.",
+      "adequacy_evidence": "Current AI can misidentify or misplace symbols in complex or noisy survey drawings, so human review is still needed, though errors are usually catchable with careful inspection.",
+      "_timestamp": "2026-04-06T04:37:53"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Misidentifying or misplacing survey symbols can lead to downstream design or planning errors, but these are typically caught in review cycles and are not usually catastrophic on their own.",
+      "adequacy_evidence": "With standard quality control (e.g., human review of annotated surveys), current AI vision and pattern recognition errors can be effectively detected, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T04:37:53"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is a technical drafting task whose outputs are consumed as standardized symbols within plans, with no direct stakeholder interaction or dependence on the drafter\u2019s identity.",
+      "adequacy_evidence": "Stakeholders care about correctness of symbols, not who or what produced them, and AI-generated drafting elements are already broadly acceptable if accurate.",
+      "_timestamp": "2026-04-06T04:37:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws prohibiting AI from locating or identifying symbols on topographical surveys. While licensed professionals may need to review or approve final documents, the act of symbol identification itself is not regulated or restricted from automation.",
+      "_timestamp": "2026-04-06T04:37:55"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

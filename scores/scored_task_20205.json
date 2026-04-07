@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2021.00",
+  "task_id": 20205,
+  "task_statement": "Analyze historical climate information, such as precipitation or temperature records, to help predict future weather or climate trends.",
+  "occupation_title": "Atmospheric and Space Scientists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Analyzing historical climate records is typically done using digital datasets, statistical tools, and modeling software on computers, and does not require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "The task spans highly heterogeneous data across geographies, timescales, atmospheric variables, and modeling approaches, including rare/extreme events and diverse climate regimes.",
+      "adequacy_evidence": "Extensive public datasets (e.g., NOAA, NASA, CMIP), scientific literature, and modeling workflows provide rich, process-level training signal covering nearly all relevant subpopulations.",
+      "_timestamp": "2026-04-06T04:05:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many analytical methods (e.g., statistical modeling, time-series analysis, climate models) are well-documented, experts still rely on experience to interpret anomalies, assess data quality, and choose appropriate modeling assumptions under nonstationarity.",
+      "adequacy_evidence": "Current AI systems can apply standard techniques and replicate documented workflows, but they show gaps in nuanced judgment around edge cases, regime shifts, and physically grounded interpretation of results.",
+      "_timestamp": "2026-04-06T04:05:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (data collection, cleaning, exploratory analysis, model selection, validation, and interpretation) where consistency matters, but many steps are modular and can be independently checked.",
+      "adequacy_evidence": "Current AI agents can generally sustain performance across such analytical pipelines with tools and iteration, though some degradation (e.g., missed constraints or weak integration across steps) can occur in longer, more complex analyses.",
+      "_timestamp": "2026-04-06T04:05:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves implicit choices about variables, spatial/temporal scales, modeling approaches, and acceptable uncertainty, which depend on research or policy context rather than being fully specified upfront.",
+      "adequacy_evidence": "Current AI agents can infer standard analytical goals and iterate with feedback, but they often miss nuanced domain-specific priorities or stakeholder intent without human guidance.",
+      "_timestamp": "2026-04-06T04:05:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Analyzing climate records involves large, multi-dimensional time series (e.g., temperature, precipitation, spatial grids) that must be filtered, aggregated, and compared within a single analytical workflow, requiring substantial information handling and compression.",
+      "adequacy_evidence": "Agents can offload much of this burden to external tools (e.g., code execution, databases), but still show moderate weaknesses in maintaining coherent intermediate representations and ensuring no relevant variables or transformations are omitted.",
+      "_timestamp": "2026-04-06T04:05:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing historical climate data for trend prediction is typically conducted in batch or research settings where minutes to hours (or longer) are acceptable, not requiring real-time responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform extended reasoning, data analysis, and modeling without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T04:05:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Historical climate datasets are stored in external databases and can be reloaded for each analysis; the task does not rely on retaining prior session context within the agent itself.",
+      "adequacy_evidence": "Current AI systems can access persistent storage and datasets via tools, so there is no meaningful shortfall in cross-session memory for this task.",
+      "_timestamp": "2026-04-06T04:05:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves interpreting numerical time series, geospatial maps, and visualizations (e.g., climate maps or graphs), but much of the core analysis can be conducted via structured data and text-based representations.",
+      "adequacy_evidence": "Current AI agents with tool use can effectively process structured datasets, generate and interpret standard visualizations, and handle moderate geospatial inputs, with no major capability gaps for typical use cases.",
+      "_timestamp": "2026-04-06T04:05:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The analysis is used by scientists, policymakers, or agencies who rely on the output, but the identity of the analyst is secondary to the quality and rigor of the results.",
+      "adequacy_evidence": "AI-driven climate modeling and data analysis are already widely accepted in scientific and operational contexts, with stakeholders primarily valuing accuracy and validation over whether a human or AI produced the analysis.",
+      "_timestamp": "2026-04-06T04:05:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from analyzing climate or weather data or generating forecasts; such analytical work is not restricted to licensed humans. While institutional practices may require human oversight, these are not enforceable legal prohibitions.",
+      "_timestamp": "2026-04-06T04:05:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in climate trend analysis can affect research conclusions, policy guidance, and long-term planning, but they are typically subject to peer review and iterative validation, making occasional residual errors survivable.",
+      "adequacy_evidence": "Even after standard validation (e.g., statistical checks, comparison with established models), AI outputs may still contain subtle modeling or inference errors that are not immediately obvious, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T04:05:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing climate trend analyses involves complex statistical modeling, data preprocessing choices, and domain-specific assumptions; errors can be subtle and may only become evident over long time horizons or through expert review.",
+      "adequacy_evidence": "Current AI systems can produce plausible analyses but often make methodological or data-handling mistakes that require expert scrutiny, and these errors are not easily detectable without substantial validation effort.",
+      "_timestamp": "2026-04-06T04:05:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

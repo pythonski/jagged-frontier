@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1031.01",
+  "task_id": 5281,
+  "task_statement": "Contact or interview claimants, doctors, medical specialists, or employers to get additional information.",
+  "occupation_title": "Claims Adjusters, Examiners, and Investigators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Interviews or information requests can usually be conducted via phone, email, or video conferencing, allowing remote work. However, some cases involve in-person interviews or meetings with claimants, employers, or medical providers that require physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interviews require adapting questions based on context, reading between the lines, and identifying missing or inconsistent information across stakeholders, but the overall objective (gather relevant claim details) is fairly well-defined.",
+      "adequacy_evidence": "Current agents can follow structured interview protocols and infer some gaps, but they often miss subtle cues, fail to probe effectively, or require human guidance to refine questioning in ambiguous or adversarial interactions.",
+      "_timestamp": "2026-04-06T11:13:16"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective interviews require some experience-based judgment in probing inconsistencies, assessing credibility, and adapting questioning style to different respondents beyond fixed scripts.",
+      "adequacy_evidence": "Current AI can follow structured interview protocols and generate relevant questions, but lacks robust calibration in reading subtle cues, handling evasiveness, and exercising nuanced interpersonal judgment in less routine cases.",
+      "_timestamp": "2026-04-06T11:13:16"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans many heterogeneous scenarios (different claim types, medical conditions, employer contexts, and interpersonal dynamics), requiring coverage of diverse interview styles, legal/medical nuances, and edge cases.",
+      "adequacy_evidence": "While call transcripts, training materials, and synthetic dialogue generation provide partial coverage, much real-world data is private (e.g., medical and insurance records), leaving gaps in authentic, high-stakes interaction patterns and expert reasoning traces.",
+      "_timestamp": "2026-04-06T11:13:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step interactions such as initiating contact, asking follow-up questions, and adapting based on responses, requiring some continuity across an interaction but not long, tightly interdependent sequences.",
+      "adequacy_evidence": "LLM-based agents can generally handle structured interviews and short conversational threads, but may exhibit some drift or inconsistency in longer or more complex exchanges with multiple stakeholders.",
+      "_timestamp": "2026-04-06T11:13:17"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking and synthesizing information from multiple conversations (claimants, medical providers, employers), requiring some active note-taking and context management but not extremely large or complex datasets within a single episode.",
+      "adequacy_evidence": "Current agents can capture and summarize multi-party conversations, but they may lose nuance, misattribute details, or drift in compressed representations over longer or more complex interactions.",
+      "_timestamp": "2026-04-06T11:13:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Handling claims typically involves multiple interactions over time, requiring reference to prior communications, case details, and evolving information within each claim file.",
+      "adequacy_evidence": "Current AI systems integrated with case management or CRM tools can reliably store and retrieve cross-session case histories, making this level of longitudinal context manageable.",
+      "_timestamp": "2026-04-06T11:13:18"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves phone or in-person interviews requiring audio perception and conversational nuance, though it can sometimes be conducted via text (e.g., email).",
+      "adequacy_evidence": "Current agents can handle speech recognition and synthesis adequately in routine interactions, but may struggle with nuanced conversational cues, accents, or emotionally complex exchanges.",
+      "_timestamp": "2026-04-06T11:13:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interviews and information-gathering conversations require timely, back-and-forth responses within seconds to maintain flow, but do not demand split-second reactions or ultra-low latency.",
+      "adequacy_evidence": "Current agents can respond within conversational timeframes, but maintaining high-quality, context-sensitive questioning in real time can suffer somewhat due to limited deliberation time.",
+      "_timestamp": "2026-04-06T11:13:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in interviewing or information gathering can lead to incomplete or biased claim records, affecting claim decisions, but such issues are often detectable and correctable through follow-up or review.",
+      "adequacy_evidence": "Even with monitoring or transcript review, AI may miss nuances, fail to probe appropriately, or mis-handle sensitive interactions, leaving a moderate level of residual risk in the completeness and reliability of gathered information.",
+      "_timestamp": "2026-04-06T11:13:20"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Accuracy can be checked via call recordings, transcripts, and corroborating documents, but ensuring completeness and correct interpretation of statements often requires careful review and follow-up.",
+      "adequacy_evidence": "AI can conduct and summarize interviews but may miss nuances or misinterpret responses, so human review of transcripts and cross-checking with records is still needed at a meaningful level.",
+      "_timestamp": "2026-04-06T11:13:20"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires direct interaction with claimants, medical professionals, and employers, where trust, legitimacy, and interpersonal handling affect willingness to share accurate and complete information.",
+      "adequacy_evidence": "While some stakeholders accept automated intake or scripted outreach, many would be less cooperative or alter responses if they know the interviewer is an AI, especially in sensitive or liability-related contexts.",
+      "_timestamp": "2026-04-06T11:13:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Insurance claims handling is often subject to state licensure requirements, meaning certain communications and representations may need to be conducted or supervised by a licensed adjuster. Additionally, laws like HIPAA constrain handling of medical information. These create partial restrictions and ambiguity for fully autonomous AI, but do not explicitly prohibit AI-assisted contact or interviewing.",
+      "_timestamp": "2026-04-06T11:13:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

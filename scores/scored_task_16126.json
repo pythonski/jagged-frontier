@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1243.01",
+  "task_id": 16126,
+  "task_statement": "Develop and implement data extraction procedures from other systems, such as administration, billing, or claims.",
+  "occupation_title": "Data Warehousing Specialists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Developing and implementing data extraction procedures (ETL) involves writing code, configuring database connections, and managing software systems, all of which can be performed entirely on a computer with network access."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Data extraction procedures depend on partially implicit business rules (e.g., which fields matter, handling exceptions, data quality constraints) that must be clarified with stakeholders and source system quirks.",
+      "adequacy_evidence": "Agents can infer common ETL patterns and propose reasonable mappings, but often miss organization-specific nuances or edge cases, requiring iterative human clarification.",
+      "_timestamp": "2026-04-05T22:41:35"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous source systems (different databases, APIs, legacy platforms, schemas, and data quality conditions), with many edge cases and organization-specific variations.",
+      "adequacy_evidence": "There is abundant public code, documentation, and ETL examples covering many common patterns, but proprietary systems and rare integration scenarios are underrepresented and must often be approximated via synthesis or adaptation.",
+      "_timestamp": "2026-04-05T22:41:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing extraction procedures requires experience with messy source systems, implicit business rules, and schema interpretation that go beyond fully explicit documentation, but much of the work is still guided by established patterns and standards.",
+      "adequacy_evidence": "Current agents can replicate many standard ETL patterns and infer mappings, but they often lack reliable calibration for undocumented edge cases, legacy quirks, and subtle business logic embedded in real-world systems.",
+      "_timestamp": "2026-04-05T22:41:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing and implementing data extraction procedures involves multi-step pipelines (source analysis, mapping, transformation logic, scheduling, error handling, and testing) where early decisions affect downstream correctness and integration.",
+      "adequacy_evidence": "LLM-based agents can execute multi-step workflows with tooling, but over longer pipelines they show some drift (e.g., inconsistent schema handling or missed edge cases), requiring oversight to maintain coherence.",
+      "_timestamp": "2026-04-05T22:41:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing extraction procedures requires tracking multiple source system schemas, mappings, transformation rules, and dependencies within a single workflow, but these are typically structured and documentable rather than overwhelmingly large.",
+      "adequacy_evidence": "Agents can manage structured mappings and documentation with tools, but may lose track of nuanced field relationships or transformation logic across longer workflows without careful orchestration or external memory aids.",
+      "_timestamp": "2026-04-05T22:41:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing and maintaining extraction procedures requires retaining knowledge of source system schemas, prior mappings, data quirks, and evolving pipeline configurations across projects and updates.",
+      "adequacy_evidence": "Agents can store and retrieve documentation, schemas, and prior code via external memory and repositories, but often struggle to consistently surface the right historical context or track incremental changes without careful setup.",
+      "_timestamp": "2026-04-05T22:41:37"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves structured data, schemas, APIs, and code-based ETL processes, which are fundamentally text and table-based rather than reliant on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents handle text-based data extraction, transformation logic, and system integration workflows effectively without needing multimodal capabilities.",
+      "_timestamp": "2026-04-05T22:41:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing and implementing data extraction procedures (ETL pipelines, integrations) is typically an offline engineering task where minutes to hours of latency are acceptable.",
+      "adequacy_evidence": "Frontier agents can take sufficient time for planning, coding, and validation without impacting usability, so no quality-speed tradeoff is imposed.",
+      "_timestamp": "2026-04-05T22:41:37"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from developing or implementing data extraction procedures. While data privacy and security regulations (e.g., HIPAA, GDPR) govern how data is handled, they do not restrict the use of AI tools to perform these tasks.",
+      "_timestamp": "2026-04-05T22:41:38"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordination with internal stakeholders (e.g., IT teams, data owners, business units) who rely on the outputs, but the performer\u2019s identity is not central to their acceptance.",
+      "adequacy_evidence": "Stakeholders in data engineering contexts are generally indifferent to whether procedures are developed by humans or AI, as long as outputs are reliable and meet technical requirements.",
+      "_timestamp": "2026-04-05T22:41:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves data reconciliation, schema validation, and business-rule checks; while many automated tests exist (row counts, checksums), subtle mapping or transformation errors often require expert review and may not surface immediately.",
+      "adequacy_evidence": "Current AI can generate plausible ETL logic but frequently introduces mapping or edge-case errors, requiring systematic validation and human oversight to ensure correctness.",
+      "_timestamp": "2026-04-05T22:41:39"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in data extraction for billing, claims, or administrative systems can propagate into financial records, compliance reporting, and operational decisions, where even rare mistakes can have significant downstream consequences.",
+      "adequacy_evidence": "With standard validation checks (schema validation, reconciliation, test datasets), many AI errors can be caught, but subtle mapping or edge-case logic issues may still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T22:41:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-3091.00",
+  "task_id": 9336,
+  "task_statement": "Check original texts or confer with authors to ensure that translations retain the content, meaning, and feeling of the original material.",
+  "occupation_title": "Interpreters and Translators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Reviewing source texts and discussing meaning with authors is typically done using digital documents, email, messaging, or video calls. However, some cases may involve consulting physical texts or meeting authors in person, so not all instances are fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans many languages, domains (legal, literary, technical), and stylistic registers, including subtle preservation of tone and authorial intent, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "Large parallel corpora and translation examples exist for many major languages and styles, but coverage is thinner for low-resource languages, niche domains, and nuanced author-intent verification workflows, which are only partially recoverable via synthesis.",
+      "_timestamp": "2026-04-06T02:47:54"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Ensuring a translation preserves not just literal meaning but tone, intent, and cultural nuance requires experienced judgment about pragmatics, register, and authorial voice that goes beyond explicit rules.",
+      "adequacy_evidence": "Frontier agents handle many semantic and stylistic mappings well, but still show inconsistent calibration on subtle tone, idioms, and culturally embedded meaning, especially in ambiguous or high-stakes texts, indicating a moderate gap.",
+      "_timestamp": "2026-04-06T02:47:55"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing translations against source texts and potentially iterating with authors, requiring consistency across multiple comparison and revision steps but not deeply interdependent long chains.",
+      "adequacy_evidence": "AI systems can maintain reasonable consistency over document-length comparisons, but may exhibit drift or miss subtle alignment issues across extended passages or multi-turn clarification exchanges.",
+      "_timestamp": "2026-04-06T02:47:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Ensuring a translation preserves not just content but meaning and 'feeling' requires interpreting tone, cultural nuance, author intent, and audience expectations, which are often implicit and negotiated with stakeholders.",
+      "adequacy_evidence": "Current AI can approximate tone and meaning and even propose alternatives, but it frequently misses subtle connotations or authorial intent, requiring iterative human feedback to fully resolve these ambiguities.",
+      "_timestamp": "2026-04-06T02:47:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves comparing written texts for semantic fidelity, tone, and meaning, which are fundamentally text-based activities.",
+      "adequacy_evidence": "Current AI systems handle text comparison and semantic analysis well, and no significant non-text modality gaps affect performance here.",
+      "_timestamp": "2026-04-06T02:47:57"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires comparing source and translated texts, tracking meaning, tone, and nuances across passages, and sometimes incorporating author feedback, which involves managing multiple aligned information streams within a session.",
+      "adequacy_evidence": "Current agents can handle parallel text comparison and moderate context lengths, but may lose subtle nuances or consistency over longer documents, and compressed representations can drift from the original meaning.",
+      "_timestamp": "2026-04-06T02:47:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This verification task is typically performed offline with no strict time pressure; minutes to hours are acceptable for careful comparison or consultation.",
+      "adequacy_evidence": "Current AI systems can perform detailed comparison and analysis well within these loose time constraints, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T02:47:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ensuring fidelity often benefits from remembering prior translation choices, author preferences, and project-specific style decisions across sessions, but many instances can be handled independently with the source text and author input at hand.",
+      "adequacy_evidence": "Current agents can use external memory stores and retrieval to track preferences and past decisions, but maintaining and consistently applying this context across sessions is still error-prone and requires careful system design.",
+      "_timestamp": "2026-04-06T02:47:58"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether a translation preserves meaning, nuance, tone, and cultural context requires bilingual expertise and careful comparison; many errors are subtle and not detectable without deep linguistic and contextual knowledge.",
+      "adequacy_evidence": "Current AI translations are often fluent but still prone to nuanced meaning drift, tone mismatches, and cultural errors, requiring expert human review to reliably detect and correct issues.",
+      "_timestamp": "2026-04-06T02:47:59"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interacting with authors or clients who may clarify intent and evaluate whether meaning and tone are preserved, so stakeholder engagement matters to some degree.",
+      "adequacy_evidence": "While many clients already accept AI-assisted translation workflows, some authors and high-stakes clients may distrust AI's ability to preserve nuance or may prefer human collaboration, leading to moderate resistance.",
+      "_timestamp": "2026-04-06T02:48:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no general prohibition on AI performing translation quality checks, but certain contexts (e.g., certified translations for legal or immigration purposes) require a human translator\u2019s attestation or signature, creating partial regulatory constraints on fully autonomous AI use.",
+      "_timestamp": "2026-04-06T02:48:00"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Even after review, subtle mistranslations of meaning, tone, or nuance can significantly alter intent, especially in legal, medical, or diplomatic contexts, making residual errors potentially high-impact.",
+      "adequacy_evidence": "With human comparison and author consultation, many AI errors can be caught, but current systems still exhibit subtle semantic and tonal inaccuracies that can slip through, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T02:48:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

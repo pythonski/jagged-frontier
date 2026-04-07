@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2036.00",
+  "task_id": 22844,
+  "task_statement": "Identify and outline bodily structures, using imaging procedures, such as x-ray, magnetic resonance imaging, computed tomography, or positron emission tomography.",
+  "occupation_title": "Medical Dosimetrists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Identifying and outlining anatomical structures is typically done on a computer using medical imaging and treatment planning software, often from previously acquired scans. However, the task is tied to imaging procedures performed in clinical settings with specialized equipment, so some instances involve on-site interaction with imaging workflows."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple imaging modalities (X-ray, MRI, CT, PET), diverse anatomies, patient populations, and pathological variations, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "Large annotated medical imaging datasets and segmentation benchmarks exist, and synthetic data is feasible, but coverage is limited for rare conditions, certain modalities, and high-quality expert delineations due to privacy and annotation cost constraints.",
+      "_timestamp": "2026-04-05T21:22:56"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Contouring anatomical structures from medical imaging requires substantial experience-based judgment to interpret ambiguous boundaries, artifacts, and patient-specific anatomical variation beyond what formal guidelines fully specify.",
+      "adequacy_evidence": "Current AI systems perform well on standard segmentation tasks but still show inconsistent calibration in atypical cases (e.g., distorted anatomy, low-contrast regions), requiring expert oversight for reliable clinical use.",
+      "_timestamp": "2026-04-05T21:22:56"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating information across multiple imaging slices, modalities, and anatomical landmarks within a single study, but the scope is bounded to one patient episode and follows structured workflows.",
+      "adequacy_evidence": "Current AI systems can process and track multi-image inputs with tooling, but may inconsistently maintain context across numerous slices or subtle anatomical distinctions, leading to occasional information loss or misalignment.",
+      "_timestamp": "2026-04-05T21:22:57"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step workflow (reviewing imaging data, navigating slices, identifying anatomical structures, and outlining them), where consistency across steps matters but sequences are not extremely long or deeply interdependent.",
+      "adequacy_evidence": "Current AI systems with imaging tools and structured workflows can reliably maintain performance across these moderate-length sequences without significant degradation or compounding errors.",
+      "_timestamp": "2026-04-05T21:22:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Identifying and outlining structures on medical images is typically performed on a per-case basis using the imaging data provided, with minimal need for cross-session or longitudinal context.",
+      "adequacy_evidence": "Since the task is largely self-contained per imaging study, current AI systems do not require persistent cross-session memory to perform adequately.",
+      "_timestamp": "2026-04-05T21:22:58"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While imaging modalities provide concrete data, identifying and outlining clinically relevant structures (e.g., target volumes vs. organs at risk) depends on physician intent, treatment protocols, and patient-specific context, requiring interpretive judgment.",
+      "adequacy_evidence": "Current AI systems can perform anatomical segmentation but often miss nuanced clinical intent or context-specific delineation choices, requiring iterative human correction to align with treatment goals.",
+      "_timestamp": "2026-04-05T21:22:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Identifying and outlining anatomical structures from imaging is typically performed with time allowances of minutes or longer, not under strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can process and analyze medical images within acceptable timeframes without needing to sacrifice reasoning depth, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T21:22:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally involves interpreting complex medical imaging modalities (e.g., CT, MRI, PET) and spatially outlining anatomical structures, which cannot be performed using text alone.",
+      "adequacy_evidence": "Current AI systems can analyze medical images and assist with segmentation, but they remain unreliable for precise, clinically robust delineation across varied and complex cases without expert oversight.",
+      "_timestamp": "2026-04-05T21:22:58"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Accurately outlining anatomical structures on medical imaging requires expert review; errors can be subtle (e.g., boundary misplacement, missed structures) and often only detectable with specialized training and careful cross-referencing.",
+      "adequacy_evidence": "Current AI segmentation tools still produce clinically significant errors and inconsistencies, requiring thorough expert validation and correction on most cases, making verification effort substantial.",
+      "_timestamp": "2026-04-05T21:22:59"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The outlined imaging results are used by physicians and care teams, so others rely on the output, but the performer\u2019s identity is not central to acceptance.",
+      "adequacy_evidence": "AI-assisted imaging analysis is already widely accepted in clinical workflows, and stakeholders typically prioritize accuracy over whether a human or AI produced the delineation.",
+      "_timestamp": "2026-04-05T21:23:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Medical imaging interpretation and treatment planning tasks must be performed or supervised by licensed professionals (e.g., radiation oncologists, medical physicists), and outputs typically require human sign-off. AI tools are permitted as assistive devices (often FDA-regulated), but cannot independently fulfill the role without human oversight, creating partial regulatory restriction.",
+      "_timestamp": "2026-04-05T21:23:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate delineation of anatomical structures is critical for radiation planning; small residual errors can lead to mistargeted doses, causing serious harm or reduced treatment efficacy.",
+      "adequacy_evidence": "AI contouring tools are strong but still exhibit occasional subtle boundary errors or failures in atypical anatomy that may escape routine review, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-05T21:23:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2011.02",
+  "task_id": 1244,
+  "task_statement": "Produce up-to-the-minute information, using internal computer systems, to allow management to base decisions on actual, not historical, data.",
+  "occupation_title": "Accountants and Auditors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "The task involves generating real-time information from internal computer systems for management decision-making, which is performed entirely through digital data access, analysis, and reporting tools."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires selecting and defining relevant real-time metrics, data sources, and formats based on shifting management needs, which are often implicit and context-dependent rather than fully specified.",
+      "adequacy_evidence": "Current agents can propose reasonable metrics and reports but often misalign with stakeholder intent or business context without iterative clarification, especially around what counts as decision-relevant data.",
+      "_timestamp": "2026-04-06T03:49:33"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task involves structured data retrieval and reporting, accountants must exercise judgment in selecting relevant metrics, handling anomalies, and ensuring data reflects real operational conditions rather than artifacts of system timing or errors.",
+      "adequacy_evidence": "Current AI agents can execute data extraction and basic validation well, but they still struggle with context-sensitive judgment around data anomalies, system quirks, and nuanced financial interpretation in non-routine situations.",
+      "_timestamp": "2026-04-06T03:49:33"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied internal data environments (ERP systems, dashboards, reporting pipelines) across firms, but follows broadly similar patterns of extracting and updating financial/operational data for decision-making.",
+      "adequacy_evidence": "While general workflows and many system interfaces are well-documented or simulable, much real-world coverage depends on proprietary, organization-specific systems and data streams that are not fully accessible for training.",
+      "_timestamp": "2026-04-06T03:49:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (querying systems, extracting and reconciling data, updating outputs) where consistency across steps matters, but sequences are typically structured and not \u0905\u0924\u094d\u092f long or deeply interdependent.",
+      "adequacy_evidence": "Current AI agents can manage such structured multi-step data workflows with tools, though some degradation (e.g., missed constraints or minor inconsistencies) can occur over longer sequences.",
+      "_timestamp": "2026-04-06T03:49:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires near-current data for decision-making, implying responses should be delivered within seconds to a few minutes, but not strict real-time millisecond constraints.",
+      "adequacy_evidence": "Modern LLM agents with database access and retrieval tooling can quickly query internal systems and synthesize outputs within this time window without significant loss in reasoning quality.",
+      "_timestamp": "2026-04-06T03:49:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves pulling and synthesizing current data from multiple internal systems, requiring tracking of queries, filters, and intermediate results but not extreme information volume in a single episode.",
+      "adequacy_evidence": "Well-scaffolded agents with database access and tool use can reliably retrieve, aggregate, and maintain relevant context within an episode, with minimal loss of critical information.",
+      "_timestamp": "2026-04-06T03:49:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task relies on accumulated organizational data (e.g., financial records, transaction histories) across time, but this context is maintained in external systems rather than the worker\u2019s own memory.",
+      "adequacy_evidence": "Current AI agents can reliably access and query persistent enterprise databases and data systems, so cross-session retention is handled by infrastructure rather than the agent itself.",
+      "_timestamp": "2026-04-06T03:49:35"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves retrieving and processing structured financial and operational data from internal systems, which is fundamentally text and numeric rather than reliant on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents can fully handle text and structured data workflows, including generating summaries or dashboards, without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T03:49:35"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Outputs can be cross-checked against source systems, reconciliations, and known balances, but doing so requires accounting expertise and time; some errors (e.g., timing, classification) are not immediately obvious.",
+      "adequacy_evidence": "AI agents can pull and aggregate data but may misinterpret schemas or business rules, so human review and reconciliation remain necessary though not prohibitively difficult.",
+      "_timestamp": "2026-04-06T03:49:37"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from generating up-to-the-minute internal financial or operational information. While licensed accountants are required for certain attestations or signed reports, this task is informational and can legally be performed by automated systems.",
+      "_timestamp": "2026-04-06T03:49:37"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The output is used by internal management to make decisions, so stakeholders rely on it, but effectiveness depends mainly on accuracy and timeliness rather than the producer\u2019s personal authority.",
+      "adequacy_evidence": "Managers already rely heavily on automated reporting systems and dashboards; AI-generated real-time data outputs would generally be accepted if reliable, with minimal concern about the agent\u2019s identity.",
+      "_timestamp": "2026-04-06T03:49:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Management decisions based on current financial or operational data can be meaningfully affected by errors, but organizations typically have controls and can absorb occasional inaccuracies without catastrophic consequences.",
+      "adequacy_evidence": "When grounded in internal systems with automated checks and reconciliation, AI-generated outputs can be validated effectively, leaving little residual risk after normal quality control.",
+      "_timestamp": "2026-04-06T03:49:38"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2034.00",
+  "task_id": 22819,
+  "task_statement": "Record, process, and maintain patient data or treatment records and prepare reports.",
+  "occupation_title": "Radiologic Technologists and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Recording, processing, and maintaining patient records and preparing reports are typically done using electronic health record and imaging information systems on computers. However, in practice radiologic technologists often perform this work on-site alongside imaging procedures and may handle physical documents or coordinate directly with patients or staff."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recording and maintaining patient data and preparing reports in radiology is largely governed by standardized documentation protocols, coding systems, and explicit procedures with minimal reliance on experiential judgment.",
+      "adequacy_evidence": "Current AI systems can reliably follow structured data entry, formatting, and reporting rules, and can replicate the limited contextual judgment required in routine documentation tasks.",
+      "_timestamp": "2026-04-05T23:28:16"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different imaging modalities, facility protocols, and patient cases, but is largely structured around standardized medical records, coding systems, and reporting formats.",
+      "adequacy_evidence": "There is abundant documentation, schemas, and de-identified datasets for training, but real-world patient data diversity is partly inaccessible due to privacy constraints, leaving some edge cases underrepresented.",
+      "_timestamp": "2026-04-05T23:28:16"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While much of patient data recording and reporting follows standardized formats (EHR systems, coding rules, compliance requirements), technologists must interpret clinical context and ensure relevant details are captured appropriately.",
+      "adequacy_evidence": "Current AI systems handle structured data entry, formatting, and report generation well when given schemas and context, and can usually infer missing details with minimal iteration in such standardized environments.",
+      "_timestamp": "2026-04-05T23:28:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step workflows (data entry, verification, updating records, and report generation) where consistency across steps matters but sequences are relatively structured and bounded.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably manage these structured, moderate-length workflows with minimal degradation, especially with database integration and validation checks.",
+      "_timestamp": "2026-04-05T23:28:17"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple structured data elements (patient demographics, imaging parameters, procedure notes, and report fields) within a single workflow, requiring some integration and organization but not extreme volume or complexity.",
+      "adequacy_evidence": "Well-scaffolded AI agents with EHR integrations and form-based workflows can reliably manage, retrieve, and organize this level of structured information without significant context loss or compression errors.",
+      "_timestamp": "2026-04-05T23:28:18"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recording and maintaining patient data and preparing reports are typically done within standard clinical workflows where minutes of latency are acceptable, rather than requiring real-time responses.",
+      "adequacy_evidence": "Current AI systems can generate, structure, and process documentation well within these timeframes without needing to truncate reasoning, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-05T23:28:19"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintaining patient data and treatment records inherently requires longitudinal tracking of patient histories, imaging results, and updates across multiple visits and time periods.",
+      "adequacy_evidence": "Current AI systems can interface with databases and EHR systems to store and retrieve persistent records, but integration inconsistencies and context retrieval reliability still cause moderate gaps in seamless longitudinal use.",
+      "_timestamp": "2026-04-05T23:28:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves text and structured data (patient records, reports), but may occasionally reference imaging outputs or modality-specific data generated during radiologic procedures.",
+      "adequacy_evidence": "Current AI systems handle text-based documentation and structured data processing well, and can adequately incorporate referenced imaging information when needed without major limitations.",
+      "_timestamp": "2026-04-05T23:28:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in patient records (e.g., incorrect treatment details, identifiers, or imaging notes) can impact clinical decisions and continuity of care, but many issues are recoverable if detected later and are rarely immediately catastrophic.",
+      "adequacy_evidence": "Even after standard checks, AI systems may introduce subtle documentation errors or inconsistencies that are not always caught, leaving a non-trivial residual risk that could affect downstream care or billing accuracy.",
+      "_timestamp": "2026-04-05T23:28:19"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces records and reports used by clinicians, administrators, and regulators, so stakeholders rely on the output, but the identity of the recorder is not central to trust as long as accuracy and compliance are maintained.",
+      "adequacy_evidence": "Healthcare systems already use automated and AI-assisted record processing tools, and stakeholders generally accept them if they meet accuracy, privacy, and compliance standards.",
+      "_timestamp": "2026-04-05T23:28:19"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying patient records and reports requires cross-checking against source data (imaging results, physician notes, orders) and domain knowledge to catch miscoding or omissions, but many fields are structured and partially auditable.",
+      "adequacy_evidence": "AI can accurately transcribe and structure much of this data, but still makes occasional context or mapping errors, so routine human review and reconciliation with source records remains necessary.",
+      "_timestamp": "2026-04-05T23:28:19"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from recording, processing, or maintaining patient data or preparing reports. Regulations like HIPAA govern privacy and security but permit the use of automated systems as long as compliance is maintained.",
+      "_timestamp": "2026-04-05T23:28:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

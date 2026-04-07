@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2041.00",
+  "task_id": 3552,
+  "task_statement": "Develop safety procedures to be employed by workers operating equipment or working in close proximity to ongoing chemical reactions.",
+  "occupation_title": "Chemical Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Developing safety procedures typically involves analyzing process data, regulations, and documentation and writing procedures on a computer. However, engineers often need site visits, equipment inspections, or consultations with on-site staff to accurately account for real operating conditions."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing safety procedures involves multiple interdependent steps (hazard identification, risk assessment, control selection, and documentation), but these are typically modular and structured rather than tightly coupled over long sequences.",
+      "adequacy_evidence": "LLM-based agents can generally sustain coherence across these structured multi-step workflows, though some degradation (e.g., missed constraints or inconsistencies) can appear as the procedure grows in length and complexity.",
+      "_timestamp": "2026-04-06T02:44:02"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing safety procedures for chemical operations requires experiential judgment about failure modes, human factors, process deviations, and site-specific hazards that go beyond formal standards and documented rules.",
+      "adequacy_evidence": "Current AI can apply codified frameworks (e.g., HAZOP, OSHA standards) but lacks real-world calibration for nuanced, context-specific risks and rare failure interactions, leading to gaps in non-routine scenarios.",
+      "_timestamp": "2026-04-06T02:44:02"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Safety procedure development spans highly heterogeneous chemical processes, substances, equipment types, operating conditions, and hazard scenarios, often with site-specific and edge-case considerations.",
+      "adequacy_evidence": "There is extensive accessible data (standards, HAZOP reports, incident databases, textbooks, SDS) providing process-level reasoning, but some plant-specific configurations and rare failure modes remain proprietary or sparsely documented.",
+      "_timestamp": "2026-04-06T02:44:02"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Developing safety procedures is a deliberative, design-oriented task with timelines of hours to weeks; there is no need for rapid or real-time response.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform extended reasoning and produce high-quality outputs without being constrained by latency requirements.",
+      "_timestamp": "2026-04-06T02:44:02"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing safety procedures requires integrating large volumes of heterogeneous information\u2014process conditions, chemical properties, equipment specs, reaction hazards, and regulatory constraints\u2014where missing a single detail can create unsafe guidance.",
+      "adequacy_evidence": "Agents can use retrieval and structured workflows to manage much of this complexity, but they still show drift or omission when tracking many interdependent constraints across long contexts.",
+      "_timestamp": "2026-04-06T02:44:03"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the goal (ensure worker safety) is clear, the specific procedures depend on context like chemical properties, process conditions, equipment design, and regulatory standards, requiring interpretation of implicit constraints and tradeoffs.",
+      "adequacy_evidence": "AI agents can draw on regulations, hazard databases, and prior cases to propose procedures, but often miss site-specific nuances or tacit risk tolerances, requiring human review and iterative refinement.",
+      "_timestamp": "2026-04-06T02:44:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Developing safety procedures benefits from accumulated knowledge such as prior incident reports, equipment histories, and evolving process conditions, but each procedure can largely be developed from current documentation and standards.",
+      "adequacy_evidence": "Current AI systems with retrieval and database integration can effectively store and access historical safety data, incident logs, and regulatory updates across sessions, meeting the task\u2019s moderate cross-session memory needs.",
+      "_timestamp": "2026-04-06T02:44:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing safety procedures often involves interpreting process flow diagrams, equipment layouts, and hazard signage, though the final deliverable is primarily textual guidance.",
+      "adequacy_evidence": "Current agents can interpret and generate basic diagrams and integrate multimodal inputs, but reliability drops for complex engineering schematics and nuanced spatial safety considerations.",
+      "_timestamp": "2026-04-06T02:44:03"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in safety procedures for chemical operations can lead to catastrophic outcomes such as explosions, toxic releases, or fatalities, so even rare residual mistakes are intolerable.",
+      "adequacy_evidence": "Even with review, AI-generated procedures may miss rare edge-case hazards or context-specific risks, leaving residual failure modes that are too severe and unpredictable for this high-stakes domain.",
+      "_timestamp": "2026-04-06T02:44:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Safety procedures for chemical operations must account for complex reaction hazards, rare failure modes, and regulatory standards; errors can be subtle and may only surface under specific conditions, requiring expert review and sometimes simulation or testing to detect.",
+      "adequacy_evidence": "Current AI can generate plausible safety procedures but often misses edge cases, site-specific constraints, or nuanced hazard interactions, so thorough expert validation and cross-checking are still necessary before use.",
+      "_timestamp": "2026-04-06T02:44:04"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Safety procedures must be trusted and followed by workers, management, and regulators, making perceived authority and legitimacy central to their effectiveness.",
+      "adequacy_evidence": "While AI-generated procedures could be technically strong, stakeholders typically expect human expert validation and may be hesitant to rely solely on AI for safety-critical guidance.",
+      "_timestamp": "2026-04-06T02:44:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI generating safety procedures, but OSHA and related safety regulations require that qualified professionals are responsible for developing and approving such procedures. This creates a partial constraint, as a human professional must ultimately oversee and validate the work.",
+      "_timestamp": "2026-04-06T02:44:05"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

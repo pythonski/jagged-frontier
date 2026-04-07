@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2099.06",
+  "task_id": 1938,
+  "task_statement": "Operate digital picture archiving communications systems.",
+  "occupation_title": "Health Technologists and Technicians, All Other",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Operating PACS involves managing, retrieving, routing, and organizing medical images through specialized software systems, which is primarily done on a computer. However, in many real-world settings it is performed within healthcare facilities and may involve on-site coordination with imaging equipment and network infrastructure."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Operating PACS involves largely standardized procedures (image storage, retrieval, routing), but also requires context-sensitive decisions such as prioritizing urgent studies, handling exceptions, and aligning with clinical workflows.",
+      "adequacy_evidence": "Current AI agents can follow explicit protocols and infer common workflow patterns, but they often struggle with nuanced clinical prioritization and exception handling without human guidance.",
+      "_timestamp": "2026-04-06T03:26:26"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Operating PACS systems involves moderately varied workflows across vendors, hospital IT environments, imaging modalities, and edge cases like system failures or integration issues.",
+      "adequacy_evidence": "While documentation, training materials, and simulated environments are widely available, real-world edge cases and proprietary system configurations are often underrepresented or inaccessible, creating some coverage gaps.",
+      "_timestamp": "2026-04-06T03:26:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Operating PACS involves multi-step workflows such as ingesting images, assigning metadata, routing to appropriate systems, and retrieving studies, where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or deeply interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute structured, tool-driven workflows of this length without significant degradation, as steps are standardized and system-mediated rather than requiring long free-form reasoning chains.",
+      "_timestamp": "2026-04-06T03:26:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Operating PACS involves mostly standardized procedures (image routing, retrieval, system monitoring), but real-world use includes troubleshooting integration issues, prioritizing workflows, and handling edge-case errors that benefit from experience-based judgment.",
+      "adequacy_evidence": "AI agents can follow documented procedures and assist with common troubleshooting, but they still struggle with site-specific quirks, undocumented system interactions, and nuanced prioritization in non-routine situations.",
+      "_timestamp": "2026-04-06T03:26:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Operating PACS involves tracking patient studies, imaging metadata, worklists, and system states across a session, requiring moderate coordination of multiple information sources.",
+      "adequacy_evidence": "Current AI agents can reliably manage such structured, tool-mediated information via databases and interfaces without significant loss or drift in within-episode context.",
+      "_timestamp": "2026-04-06T03:26:27"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Operating PACS involves accessing prior imaging studies, patient histories, and system configurations across sessions, but this context is largely stored and managed by the system rather than the operator\u2019s memory.",
+      "adequacy_evidence": "Current AI agents can integrate with databases and retrieval systems to reliably access and use persistent records like imaging archives and patient metadata, meeting cross-session memory needs.",
+      "_timestamp": "2026-04-06T03:26:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Operating PACS involves retrieving, routing, and managing medical images where users expect responsiveness within seconds to a few minutes, but not strict real-time decision-making.",
+      "adequacy_evidence": "Current AI systems can perform data retrieval, indexing, and workflow coordination within these time bounds without requiring deep extended reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T03:26:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from operating PACS systems. Requirements like HIPAA govern data privacy and security but do not mandate that only humans perform system operation, allowing AI use under compliant oversight.",
+      "_timestamp": "2026-04-06T03:26:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Operating PACS systems is primarily an internal technical function with outputs consumed via systems rather than direct interpersonal interaction, so performer identity is largely irrelevant.",
+      "adequacy_evidence": "Clinicians and staff rely on system functionality rather than who operates it, and automation of imaging systems is already widely accepted in healthcare settings.",
+      "_timestamp": "2026-04-06T03:26:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Operating PACS involves managing image routing, labeling, and retrieval where mistakes (e.g., wrong patient association or incomplete studies) are not always immediately obvious and require domain knowledge and system checks to detect.",
+      "adequacy_evidence": "AI systems can assist with PACS operations but still produce occasional metadata or workflow errors, requiring routine human verification and oversight to ensure accuracy before clinical use.",
+      "_timestamp": "2026-04-06T03:26:30"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Operating PACS involves managing medical imaging data where errors (e.g., misfiled studies, incorrect patient linkage, or data loss) can directly impact diagnosis and treatment, making even rare residual errors potentially serious.",
+      "adequacy_evidence": "While automated checks (e.g., patient ID validation, audit logs) reduce many risks, AI systems may still introduce occasional mismatches or workflow errors that are not fully caught, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T03:26:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Operating PACS involves handling and organizing medical imaging data (e.g., X-rays, MRIs) within specialized software, requiring interaction with visual content though not necessarily deep clinical interpretation.",
+      "adequacy_evidence": "Current AI agents with appropriate integrations can reliably manage, route, and display medical images within PACS-like systems, as the task relies more on structured data handling than complex visual reasoning.",
+      "_timestamp": "2026-04-06T03:26:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

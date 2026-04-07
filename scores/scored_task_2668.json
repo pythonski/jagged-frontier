@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4151.00",
+  "task_id": 2668,
+  "task_statement": "Obtain customers' names, addresses, and billing information, product numbers, and specifications of items to be purchased, and enter this information on order forms.",
+  "occupation_title": "Order Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Order clerks typically collect customer and product information via phone, email, or online systems and enter it into digital order-processing software, which can be done remotely. However, some instances involve handling mailed or paper order forms or working at in-person service counters."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderate variability in customer inputs (different products, formats, and communication styles) but remains within a structured and repetitive information-collection domain.",
+      "adequacy_evidence": "There is abundant accessible data (forms, transaction records, customer service transcripts) and clear procedural examples, enabling feasible training pipelines to cover the distribution well.",
+      "_timestamp": "2026-04-05T23:20:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task has explicit objectives: collect specified fields (names, addresses, billing info, product numbers/specs) and enter them on order forms, with clear success criteria tied to completeness and accuracy.",
+      "adequacy_evidence": "Current AI agents can reliably interpret and execute structured data collection and entry tasks with minimal ambiguity, given clear field definitions and standard formats.",
+      "_timestamp": "2026-04-05T23:20:12"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is highly procedural, relying on standardized fields and explicit instructions for collecting and recording customer and order information.",
+      "adequacy_evidence": "Current AI systems can reliably follow structured data collection and entry procedures, including handling minor variations, without needing experience-based judgment.",
+      "_timestamp": "2026-04-05T23:20:12"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of short, largely independent steps (collecting and entering discrete fields) with minimal interdependence or long-horizon sequencing.",
+      "adequacy_evidence": "AI agents can reliably handle short form-filling and data entry workflows without noticeable degradation over such limited sequences.",
+      "_timestamp": "2026-04-05T23:20:13"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves capturing a small, structured set of customer and product details that easily fit within a single interaction without complex state tracking.",
+      "adequacy_evidence": "Current AI agents reliably handle short-form structured data collection and entry without losing or mismanaging within-episode information.",
+      "_timestamp": "2026-04-05T23:20:13"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each order is typically processed as a self-contained transaction using information provided at the time; prior customer history is not necessary to complete the task.",
+      "adequacy_evidence": "Since the task does not rely on cross-session memory, current AI systems' ability to store or retrieve persistent context is sufficient and not a limiting factor.",
+      "_timestamp": "2026-04-05T23:20:13"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task can involve non-text inputs such as spoken customer information over phone calls or handwritten/printed order forms requiring OCR, though the core activity is structured text entry.",
+      "adequacy_evidence": "Current agents handle standard speech recognition and document OCR well, but still show errors with accents, noisy audio, or messy handwriting and complex form layouts.",
+      "_timestamp": "2026-04-05T23:20:14"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Order clerks typically collect and enter information during live or near-live interactions, so responses are expected within seconds to a minute-scale workflow.",
+      "adequacy_evidence": "LLM-based agents can capture, structure, and input customer and product information accurately in real time without needing extended reasoning, so speed constraints do not degrade quality.",
+      "_timestamp": "2026-04-05T23:20:15"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from collecting customer information and entering orders. While data privacy and security regulations (e.g., GLBA, HIPAA in specific contexts) impose handling requirements, they do not restrict AI from performing the task itself.",
+      "_timestamp": "2026-04-05T23:20:15"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires direct interaction with customers to collect personal and billing information, so stakeholders are involved and must engage with the performer.",
+      "adequacy_evidence": "Customers already routinely provide this information through automated systems (online forms, chatbots), indicating broad acceptance of AI in this role.",
+      "_timestamp": "2026-04-05T23:20:16"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in customer details or product specifications can lead to shipping mistakes, billing issues, or delays, but these are typically detectable and correctable without severe or irreversible harm.",
+      "adequacy_evidence": "With standard validation checks (e.g., format validation, confirmation prompts, cross-referencing databases), AI systems can reduce residual errors to a low, manageable level comparable to or better than human clerks.",
+      "_timestamp": "2026-04-05T23:20:16"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "The task involves structured data entry (names, addresses, product numbers) where errors are typically easy to detect \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea validation rules, formatting checks, and direct confirmation with source documents or customers.",
+      "adequacy_evidence": "AI systems can perform this task with reasonable accuracy, but still produce occasional extraction or transcription errors, requiring routine validation checks and human review to ensure correctness.",
+      "_timestamp": "2026-04-05T23:20:16"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9121.01",
+  "task_id": 15592,
+  "task_statement": "Track enrollment status of subjects and document dropout information such as dropout causes and subject contact efforts.",
+  "occupation_title": "Clinical Research Coordinators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Enrollment tracking and documenting dropout causes are typically done in clinical trial management systems, spreadsheets, or electronic records. However, obtaining the underlying information may involve phone calls, in\u2011person interactions with subjects or site staff, or reviewing physical records."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different clinical trials, protocols, and patient scenarios with varied dropout reasons and contact patterns, but follows relatively standardized documentation practices and workflows.",
+      "adequacy_evidence": "While SOPs, trial records, and synthetic cases can cover common patterns, real-world patient-level dropout nuances and contact histories are often in private clinical databases, leaving some gaps in fully representative training data.",
+      "_timestamp": "2026-04-06T00:39:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is guided by study protocols, case report forms, and regulatory documentation standards, but requires some judgment in categorizing dropout causes and determining how to record contact efforts appropriately.",
+      "adequacy_evidence": "Current agents can follow structured data schemas and infer standard categories, but may misinterpret nuanced or context-specific dropout reasons or documentation expectations without human clarification.",
+      "_timestamp": "2026-04-06T00:39:32"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing tracking of multiple subjects over time, requiring consistent updates and documentation across repeated interactions, but each update is only moderately interdependent rather than tightly coupled.",
+      "adequacy_evidence": "AI agents can generally maintain structured tracking with databases or tools, but over extended sequences they may show some drift (e.g., missed updates or inconsistencies) without careful system design and monitoring.",
+      "_timestamp": "2026-04-06T00:39:32"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "The task requires maintaining longitudinal records for each subject (enrollment status, dropout causes, contact attempts) across the full duration of a clinical study, often spanning months or years.",
+      "adequacy_evidence": "Current AI systems integrated with standard databases or clinical trial management systems can reliably store, retrieve, and update persistent subject records across sessions with minimal loss of information.",
+      "_timestamp": "2026-04-06T00:39:33"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While much of enrollment tracking and dropout documentation follows protocols, coordinators often apply judgment in categorizing ambiguous dropout reasons and determining adequate contact effort documentation.",
+      "adequacy_evidence": "Current AI agents can reliably apply standardized categories, follow documentation rules, and handle edge cases with prompting and retrieval, with little systematic shortfall in this level of judgment.",
+      "_timestamp": "2026-04-06T00:39:33"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Tracking enrollment status and documenting dropout details are administrative tasks typically performed over minutes to hours, with no requirement for immediate or real-time response.",
+      "adequacy_evidence": "Current AI systems can easily perform data entry, summarization, and record tracking within these relaxed timeframes without any degradation in quality due to latency constraints.",
+      "_timestamp": "2026-04-06T00:39:34"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple subjects\u2019 statuses and associated details (dropout causes, contact attempts), requiring management of structured but moderately sized, evolving information within an episode.",
+      "adequacy_evidence": "Current AI agents with database/tool integration can reliably store, retrieve, and update structured records without significant context loss or compression errors.",
+      "_timestamp": "2026-04-06T00:39:34"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves recording and updating structured or narrative text data (enrollment status, dropout reasons, contact logs) in databases or documents, with minimal reliance on non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based data entry, extraction, and summarization well, and any incidental audio (e.g., calls) can be reliably transcribed into text for processing.",
+      "_timestamp": "2026-04-06T00:39:34"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves cross-checking enrollment status and dropout details against source documents (e.g., patient records, contact logs), which requires attention and coordination but is generally straightforward and auditable.",
+      "adequacy_evidence": "AI systems can extract and track these fields but may misinterpret notes or omit updates, so routine human review of records is still needed to ensure accuracy.",
+      "_timestamp": "2026-04-06T00:39:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interaction with research subjects for contact attempts and documentation, but much of the work is administrative record-keeping where performer identity is not central.",
+      "adequacy_evidence": "Stakeholders are unlikely to object to AI handling tracking and documentation, and even for contact logging, AI involvement would generally be acceptable if transparently integrated.",
+      "_timestamp": "2026-04-06T00:39:35"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from tracking enrollment or documenting dropout information in clinical research. Regulations (e.g., FDA GCP, HIPAA, 21 CFR Part 11) require data integrity, auditability, and human oversight, but permit use of electronic and automated systems as tools.",
+      "_timestamp": "2026-04-06T00:39:36"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in tracking enrollment or documenting dropout details can affect data integrity, regulatory compliance, and study analysis, but are typically detectable and correctable through audits and monitoring.",
+      "adequacy_evidence": "With structured data systems, audit trails, and routine monitoring, AI-generated entries can be effectively checked, leaving residual risk at an acceptable level for this administrative tracking task.",
+      "_timestamp": "2026-04-06T00:39:38"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

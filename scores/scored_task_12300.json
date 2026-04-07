@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-8012.00",
+  "task_id": 12300,
+  "task_statement": "Prepare switching orders that will isolate work areas without causing power outages, referring to drawings of power systems.",
+  "occupation_title": "Power Distributors and Dispatchers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Preparing switching orders involves analyzing system diagrams and documenting procedures, typically using digital grid management systems and electronic drawings, which can be done entirely on a computer. Physical presence in the field is not required for the preparation step."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Switching orders vary widely across grid topologies, equipment configurations, protection schemes, and real-time system conditions, including rare contingency scenarios, making the instance distribution highly heterogeneous and context-sensitive.",
+      "adequacy_evidence": "Most detailed switching procedures, outage cases, and real-time operational data are proprietary to utilities and not publicly available, and rare but critical edge cases lack sufficient recorded examples or structured training signals.",
+      "_timestamp": "2026-04-06T01:04:18"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Preparing switching orders requires experienced judgment about system stability, load balancing, contingency risks, and safety practices that go beyond written procedures and rely on operator intuition built from real grid operations.",
+      "adequacy_evidence": "AI can apply rules and run power-flow simulations, but still lacks the nuanced, experience-based calibration for rare configurations, informal safety heuristics, and edge-case risk anticipation that human dispatchers develop.",
+      "_timestamp": "2026-04-06T01:04:19"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Creating switching orders requires a tightly ordered sequence of interdependent actions (opening/closing breakers, rerouting loads) where each step depends on prior system state and errors can cascade into outages or safety risks.",
+      "adequacy_evidence": "LLM-based agents can plan multi-step procedures with tooling, but performance can degrade over long, constraint-heavy sequences, with risks of missed dependencies or state-tracking errors without careful scaffolding.",
+      "_timestamp": "2026-04-06T01:04:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Preparing switching orders requires tracking multiple interconnected components, circuit states, safety constraints, and dependencies from detailed power system drawings, where missing a single element can cause outages or hazards.",
+      "adequacy_evidence": "Current agents can parse diagrams and manage multi-step state with tooling, but may lose or misrepresent critical relationships or constraints in complex, interdependent grid configurations.",
+      "_timestamp": "2026-04-06T01:04:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires interpreting power system drawings and schematics, which involve spatial and visual relationships not fully captured in plain text.",
+      "adequacy_evidence": "Current agents can interpret many diagrams with vision tools, but complex, dense electrical schematics and spatial dependencies can still lead to errors or incomplete understanding.",
+      "_timestamp": "2026-04-06T01:04:21"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The objective (isolate work areas without causing outages) is explicit, but key constraints depend on context such as current grid conditions, protection schemes, and utility-specific safety rules that are partly implicit in drawings and operating practices.",
+      "adequacy_evidence": "Well-tooled agents can interpret diagrams and apply rules, but they often miss tacit operational nuances and evolving system states, requiring human validation and iteration to ensure correct intent.",
+      "_timestamp": "2026-04-06T01:04:21"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing switching orders mainly relies on current system drawings, real-time grid status, and planned work, but can benefit from awareness of prior switching actions, equipment history, and recent operational context.",
+      "adequacy_evidence": "Current agents can persist and retrieve structured operational history via integrations, but may inconsistently surface or contextualize relevant past actions across sessions without careful system design.",
+      "_timestamp": "2026-04-06T01:04:21"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Switching orders must often be prepared promptly to support ongoing grid operations, but typically allow seconds to several minutes for careful planning rather than true real-time reaction.",
+      "adequacy_evidence": "Current AI agents can generate and check structured switching sequences within this time window without needing to truncate reasoning, so speed constraints do not significantly degrade output quality.",
+      "_timestamp": "2026-04-06T01:04:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Switching orders must be cross-checked against detailed system diagrams and operational constraints; errors (e.g., unintended outages, unsafe configurations) may not be obvious without expert review or simulation and can have delayed consequences.",
+      "adequacy_evidence": "Current AI systems can generate plausible but incorrect switching sequences, and verifying them requires expert-level scrutiny and often additional analysis tools, making the checking burden substantial and unavoidable.",
+      "_timestamp": "2026-04-06T01:04:23"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "NERC reliability standards and utility operating rules require certified human system operators to plan, approve, and take responsibility for switching orders, but they do not explicitly prohibit AI-assisted preparation. This creates a partial restriction where AI can support but not replace the licensed human decision-maker.",
+      "_timestamp": "2026-04-06T01:04:23"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Switching orders are used by operators and field crews who must trust and follow them, so there is some stakeholder reliance, though the task is primarily technical and internally consumed.",
+      "adequacy_evidence": "Utilities and operators may be cautious about relying on AI-generated switching orders due to safety risks and accountability concerns, even if outputs are high quality, leading to moderate resistance.",
+      "_timestamp": "2026-04-06T01:04:23"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in switching orders can cause unintended outages, equipment damage, or safety hazards for crews, so even rare residual mistakes have severe consequences.",
+      "adequacy_evidence": "Even with standard checks (peer review, system validation), AI-generated plans could contain subtle topology or sequencing errors that are hard to fully eliminate, leaving unacceptable residual risk.",
+      "_timestamp": "2026-04-06T01:04:24"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

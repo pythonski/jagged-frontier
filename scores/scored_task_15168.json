@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-6051.08",
+  "task_id": 15168,
+  "task_statement": "Determine cargo transportation capabilities by reading documents that set forth cargo loading and securing procedures, capacities, and stability factors.",
+  "occupation_title": "Transportation Inspectors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "The task mainly involves reading and interpreting cargo loading and stability documents, which can often be accessed and analyzed digitally. However, in practice it is frequently performed on-site during cargo operations and may involve physical manuals or coordination with physical inspections."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires synthesizing technical documents (procedures, capacities, stability factors) and inferring overall transportation capabilities, which involves some interpretation beyond literal reading but remains largely structured and explicit.",
+      "adequacy_evidence": "Current AI agents handle technical document synthesis and constraint integration well, reliably inferring capabilities from provided specifications with minimal ambiguity-related failure.",
+      "_timestamp": "2026-04-06T11:12:49"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on interpreting explicit technical documentation (procedures, capacity limits, stability factors), which are formalized and rule-based rather than experience-dependent.",
+      "adequacy_evidence": "Current AI agents can reliably parse and apply structured technical documents and specifications, with little need for tacit judgment beyond what is explicitly stated.",
+      "_timestamp": "2026-04-06T11:12:49"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different vehicle types, cargo categories, and regulatory documents, creating moderate diversity, but it is largely governed by standardized procedures and technical documentation.",
+      "adequacy_evidence": "Extensive manuals, safety regulations (e.g., IMO, DOT), and training materials provide rich, process-level examples, making representative coverage readily attainable for AI systems.",
+      "_timestamp": "2026-04-06T11:12:49"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each determination is based on reading the specific set of cargo loading and stability documents for that instance; prior cases or accumulated context are not required.",
+      "adequacy_evidence": "Since the task is self-contained per instance, current agents do not need cross-session memory to perform it effectively.",
+      "_timestamp": "2026-04-06T11:12:51"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reading multiple technical documents and synthesizing constraints (loading, securing, capacity, stability) into a coherent determination, requiring several interdependent reasoning steps but not long action chains.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain coherence across document parsing and multi-step synthesis tasks of this length, with minimal degradation in consistency or constraint tracking.",
+      "_timestamp": "2026-04-06T11:12:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires synthesizing multiple technical documents (loading procedures, capacity tables, stability constraints) and cross-referencing details, but the information is relatively structured and finite within a session.",
+      "adequacy_evidence": "Current agents can ingest and retrieve from large documents, but may miss or misweight specific constraints or relationships when compressing technical details across sources.",
+      "_timestamp": "2026-04-06T11:12:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and interpreting written documents describing procedures, capacities, and stability factors, which are typically conveyed in text and structured tables.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI systems can handle the modality requirements without limitation.",
+      "_timestamp": "2026-04-06T11:12:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task involves reviewing technical documents on cargo procedures and capacities, which is typically done in a deliberative, non-real-time setting where minutes or longer are acceptable.",
+      "adequacy_evidence": "Frontier AI systems can process and analyze such documents well within acceptable timeframes without needing to truncate reasoning, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T11:12:52"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in determining cargo capacities or stability limits can lead to overloading, vessel/vehicle instability, accidents, or regulatory violations, so even rare mistakes can have serious safety and financial consequences.",
+      "adequacy_evidence": "AI can reliably extract and interpret structured technical documents, and normal checks (e.g., cross-referencing limits, human oversight) catch many issues, but occasional misinterpretation or missed constraints could still leave non-trivial residual risk.",
+      "_timestamp": "2026-04-06T11:12:52"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification requires domain expertise to cross-check interpretations of technical documents, calculations of capacity and stability, and consistency with regulations; errors are not always obvious without careful review.",
+      "adequacy_evidence": "Current AI can extract and reason over such documents but is prone to misinterpretation or subtle calculation errors, so outputs require knowledgeable human review to ensure correctness.",
+      "_timestamp": "2026-04-06T11:12:53"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is an internal analytical activity (reading technical documents to determine capabilities) with no direct stakeholder interaction or dependence on performer identity.",
+      "adequacy_evidence": "Because there are no relevant external stakeholders for this task, acceptance of an AI agent is not a factor.",
+      "_timestamp": "2026-04-06T11:12:53"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Transportation inspection determinations typically must be performed or signed off by certified human inspectors under federal or state regulations (e.g., DOT/FRA/FAA contexts), but there is no explicit prohibition on AI assisting with document analysis. This creates partial restriction: AI cannot independently fulfill the legally recognized role.",
+      "_timestamp": "2026-04-06T11:12:55"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

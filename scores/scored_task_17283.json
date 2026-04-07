@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1229.03",
+  "task_id": 17283,
+  "task_statement": "Document or review patients' histories.",
+  "occupation_title": "Urologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Patient histories are typically documented and reviewed in electronic health record systems, which can be accessed and updated remotely. However, histories are often gathered or clarified during in-person clinical encounters, so not all instances are fully remote."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Patient histories in urology span diverse demographics, comorbidities, rare conditions, and nuanced symptom narratives, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "Large corpora of clinical notes, EHR datasets, and medical training materials exist, but access is restricted and rare or complex cases are underrepresented; synthetic and curated data can partially fill gaps.",
+      "_timestamp": "2026-04-06T01:42:29"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Documenting or reviewing patient histories involves multi-step processes such as gathering information, organizing timelines, reconciling inconsistencies, and summarizing clinically relevant details, but these sequences are typically bounded within a single encounter or record review.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across these moderate-length workflows, but may show some degradation in tracking details or maintaining consistency when histories are long, fragmented, or require iterative updates.",
+      "_timestamp": "2026-04-06T01:42:30"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While medical history-taking follows structured conventions, clinicians must decide which details are relevant based on context, symptoms, and subtle patient cues, making some success criteria implicit.",
+      "adequacy_evidence": "Current agents can follow structured intake protocols but often miss nuanced relevance, sensitive disclosures, or context-dependent prioritization without human guidance.",
+      "_timestamp": "2026-04-06T01:42:30"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Eliciting and interpreting a urologic history requires some experiential judgment about which details are clinically salient, how to probe sensitive topics, and how to contextualize symptoms across comorbidities.",
+      "adequacy_evidence": "Current agents can follow structured history-taking templates and flag common patterns, but they often lack nuanced calibration for atypical presentations, sensitive disclosures, or subtle clinical relevance in non-routine cases.",
+      "_timestamp": "2026-04-06T01:42:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing or documenting urologic patient histories involves synthesizing large, heterogeneous data (past diagnoses, surgeries, medications, labs, imaging, symptoms, timelines) where missing details can affect clinical decisions.",
+      "adequacy_evidence": "Current agents with retrieval and long-context tools can handle substantial records but still exhibit occasional loss of detail, imperfect prioritization, or compression errors in complex longitudinal histories.",
+      "_timestamp": "2026-04-06T01:42:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing and documenting patient histories in urology depends on longitudinal records spanning multiple visits, procedures, test results, and evolving conditions over extended timeframes.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured medical records, but often struggle with integrating fragmented histories, temporal nuances, and surfacing the most clinically relevant context consistently across episodes.",
+      "_timestamp": "2026-04-06T01:42:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Documenting or reviewing patient histories is primarily based on verbal reports and existing textual medical records, making it fundamentally text-in, text-out.",
+      "adequacy_evidence": "Current AI systems handle text processing, summarization, and structured documentation of patient histories effectively with minimal reliance on non-text modalities.",
+      "_timestamp": "2026-04-06T01:42:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Eliciting and documenting patient histories requires direct patient interaction where trust, privacy, and perceived clinician legitimacy influence disclosure and accuracy.",
+      "adequacy_evidence": "While some patients accept digital intake tools, many would be hesitant to rely solely on an AI for sensitive urological histories, affecting openness and engagement.",
+      "_timestamp": "2026-04-06T01:42:33"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reviewing and documenting patient histories typically occurs during or shortly after clinical encounters, where responses are expected within seconds to a few minutes but do not require instant real-time reactions.",
+      "adequacy_evidence": "Current AI systems can process and summarize patient histories quickly within this time frame without needing to truncate reasoning, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T01:42:33"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "AI can assist with documenting or summarizing patient histories (e.g., medical scribes), but regulations and billing rules require a licensed clinician to review, authenticate, and take responsibility for the record. This creates a partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-06T01:42:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate patient histories are foundational to diagnosis and treatment decisions; even small residual errors (e.g., missing symptoms, medications, or prior conditions) can lead to inappropriate care or missed diagnoses with significant consequences.",
+      "adequacy_evidence": "With clinician review, many AI-generated errors can be caught, but subtle omissions or misinterpretations may still slip through, leaving a non-negligible residual risk in a clinically sensitive context.",
+      "_timestamp": "2026-04-06T01:42:34"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Patient histories involve nuanced, longitudinal medical details where omissions, misinterpretations, or subtle inaccuracies (e.g., symptom timing, prior treatments) can be clinically significant and are not always immediately obvious without careful expert review and cross-checking against records and patient input.",
+      "adequacy_evidence": "Current AI systems can summarize and extract histories but frequently miss, distort, or hallucinate details, and these errors are often subtle enough that clinicians must thoroughly re-verify against source data, making the checking burden high and unavoidable.",
+      "_timestamp": "2026-04-06T01:42:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

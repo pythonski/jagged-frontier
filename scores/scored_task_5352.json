@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2072.00",
+  "task_id": 5352,
+  "task_statement": "Prepare engineering sketches or specifications for construction, relocation, or installation of equipment, facilities, products, or systems.",
+  "occupation_title": "Electronics Engineers, Except Computer",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Preparing engineering sketches or specifications is typically done using CAD software and digital documentation tools on a computer. However, some instances require site visits or physical inspection of equipment or facilities to gather accurate information before producing the drawings or specifications."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Engineering sketches/specifications span diverse equipment types, industries, regulatory contexts, and site-specific constraints, creating a highly heterogeneous and long-tailed distribution of cases.",
+      "adequacy_evidence": "While there is substantial public and synthetic data (CAD files, standards, textbooks), much high-fidelity, process-rich data (detailed design deliberations, proprietary project specs) is private or sparse, leaving some important subdomains undercovered but partially recoverable.",
+      "_timestamp": "2026-04-06T01:01:42"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many specifications and sketches follow established standards, datasheets, and engineering principles, experienced engineers apply judgment on tolerances, component selection, layout tradeoffs, and safety margins based on prior cases and practical constraints.",
+      "adequacy_evidence": "Current AI agents can reproduce standard designs and apply documented rules, but they show gaps in nuanced tradeoff calibration and context-sensitive decisions (e.g., manufacturability or edge-case reliability), which rely on accumulated engineering experience.",
+      "_timestamp": "2026-04-06T01:01:43"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing engineering sketches or specifications involves multi-step workflows (requirements interpretation, calculations, drafting, revisions), but these steps are modular and partially decomposable rather than tightly interdependent over very long horizons.",
+      "adequacy_evidence": "LLM-based agents can handle multi-step drafting and revision workflows, but may show some drift in maintaining consistent constraints and design coherence across longer specification documents or iterative edits.",
+      "_timestamp": "2026-04-06T01:01:44"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing engineering sketches/specifications requires interpreting project requirements, constraints, and standards that are partly implicit (e.g., client needs, site conditions, regulatory codes), but core objectives are usually documented in briefs and technical inputs.",
+      "adequacy_evidence": "Current AI agents can draft plausible specifications from provided inputs and standards, but they often miss implicit constraints or stakeholder preferences, requiring iterative human clarification and correction.",
+      "_timestamp": "2026-04-06T01:01:44"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Preparing engineering sketches and specifications inherently involves creating and interpreting spatial layouts, diagrams, and technical drawings that convey geometry, dimensions, and physical relationships beyond text.",
+      "adequacy_evidence": "Current agents can generate basic diagrams and assist with CAD-like outputs, but they struggle with precise, standards-compliant engineering drawings and fine-grained spatial reasoning required for real-world deployment.",
+      "_timestamp": "2026-04-06T01:01:45"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Preparing engineering sketches/specifications requires integrating numerous constraints (dimensions, tolerances, materials, standards, component interactions) and maintaining consistency across interconnected details within a single workflow.",
+      "adequacy_evidence": "Agents can use large contexts and tools to track specifications, but still exhibit drift or missed constraints when managing complex, interdependent technical details across long prompts or multi-step drafting processes.",
+      "_timestamp": "2026-04-06T01:01:45"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Engineering sketches and specifications often build on prior project documents, design iterations, and client or site-specific requirements, but much of this context is explicitly recorded in files and drawings rather than relying on implicit memory.",
+      "adequacy_evidence": "Current agents can persist and retrieve project files and prior specifications via external storage and retrieval systems, but they can inconsistently surface the most relevant historical context or maintain coherent continuity across complex, evolving projects.",
+      "_timestamp": "2026-04-06T01:01:45"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing engineering sketches and specifications is a deliberative design task typically performed over hours or days, with no requirement for immediate or real-time responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform extended reasoning, use tools, and iterate on designs without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T01:01:46"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Engineering sketches and specifications embed tolerances, standards compliance, and system interactions where errors can be subtle and only revealed through detailed review, simulation, or downstream testing.",
+      "adequacy_evidence": "AI-generated designs and specs still require thorough expert validation (calculations, code/standards checks, simulation) because mistakes are non-obvious and occur often enough that unverified use would be risky.",
+      "_timestamp": "2026-04-06T01:01:47"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Engineering drawings and specifications for many projects must be reviewed and sealed by a licensed Professional Engineer under state laws, requiring a human licensee to take responsibility. AI can assist in preparation, but cannot independently fulfill the legally recognized role, creating a partial restriction.",
+      "_timestamp": "2026-04-06T01:01:48"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in engineering sketches or specifications can propagate into fabrication or installation, leading to safety hazards, system failures, or costly rework, so very low residual error tolerance is required.",
+      "adequacy_evidence": "Even with standard checks like peer review and simulation, AI-generated designs can contain subtle but critical mistakes or omissions, leaving some non-negligible residual risk compared to human-only workflows.",
+      "_timestamp": "2026-04-06T01:01:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The sketches/specifications are used by clients, contractors, and regulators who rely on them, and professional credibility (often tied to a licensed engineer) matters for acceptance.",
+      "adequacy_evidence": "AI-generated drafts may be acceptable as support, but stakeholders typically require human engineer validation or sign-off, so acceptance of a fully AI agent is limited but not impossible with oversight.",
+      "_timestamp": "2026-04-06T01:01:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

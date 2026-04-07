@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3021.00",
+  "task_id": 23243,
+  "task_statement": "Resolve discrepancies in accounting records.",
+  "occupation_title": "Billing and Posting Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Resolving discrepancies typically involves reviewing accounting records in billing or accounting software and communicating electronically with colleagues or clients. However, some cases require checking physical invoices or paper records stored on-site."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Discrepancies vary across billing systems, transaction types, and error sources, but follow recurring, well-documented patterns (e.g., mismatched entries, missing payments, coding errors).",
+      "adequacy_evidence": "Accounting workflows, reconciliation procedures, and error cases are extensively documented in training materials, software logs, and examples, and can be further augmented with synthetic data, providing strong coverage of relevant scenarios.",
+      "_timestamp": "2026-04-05T22:54:28"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Discrepancy resolution follows accounting rules and reconciliation procedures, but often requires interpreting transaction context, identifying likely error sources, and applying organization-specific policies.",
+      "adequacy_evidence": "Agents can follow reconciliation logic and flag inconsistencies, but they often struggle with inferring root causes or applying implicit organizational practices without human guidance.",
+      "_timestamp": "2026-04-05T22:54:29"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Resolving discrepancies typically follows established reconciliation procedures, but clerks often rely on experience to interpret inconsistent entries, trace errors across systems, and judge likely causes when documentation is incomplete.",
+      "adequacy_evidence": "AI agents can handle standard reconciliation patterns and rule-based matching, but they show gaps in nuanced judgment for messy, context-dependent discrepancies (e.g., ambiguous transaction histories or subtle posting errors).",
+      "_timestamp": "2026-04-05T22:54:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Resolving discrepancies involves multi-step workflows such as tracing transactions across systems, comparing records, identifying root causes, and applying corrections, where consistency across steps matters but sequences are typically bounded.",
+      "adequacy_evidence": "LLM-based agents can manage these structured reconciliation steps with tools, but may show some degradation over longer or more complex cases, such as losing track of intermediate findings or misapplying earlier assumptions.",
+      "_timestamp": "2026-04-05T22:54:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Resolving discrepancies often requires referencing prior transactions, audit trails, and historical account activity across multiple sessions, but this information is typically structured and stored in accounting systems.",
+      "adequacy_evidence": "Current AI agents can reliably retrieve and use persistent structured data from databases and logs, so cross-session memory needs are well-supported by existing tooling.",
+      "_timestamp": "2026-04-05T22:54:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Resolving discrepancies in accounting records primarily involves reviewing numerical and textual data in ledgers, invoices, and transaction logs, which are fundamentally text-based and structured data tasks.",
+      "adequacy_evidence": "Current AI systems can reliably process and reconcile structured and semi-structured text data (including OCR for documents when needed), so there is no meaningful multimodal shortfall for this task.",
+      "_timestamp": "2026-04-05T22:54:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Resolving discrepancies requires comparing multiple records (invoices, ledgers, transaction logs) and tracking mismatches, but the information volume is typically structured and bounded within a case.",
+      "adequacy_evidence": "Agents can use tools to sort, filter, and cross-reference records, but may still lose track of intermediate reconciliation states or subtle mismatches when handling multiple linked entries.",
+      "_timestamp": "2026-04-05T22:54:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Resolving accounting discrepancies typically involves reconciliation and investigation steps that can take minutes to hours; there is rarely a need for immediate, real-time responses.",
+      "adequacy_evidence": "Current AI agents can perform multi-step reconciliation, matching, and anomaly analysis well within these relaxed time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T22:54:31"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from resolving discrepancies in accounting records; such tasks can be automated, though organizations may impose internal controls or require human oversight for compliance and audit purposes.",
+      "_timestamp": "2026-04-05T22:54:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Resolving discrepancies often involves interacting with internal colleagues or occasionally vendors/customers to clarify records, but success does not hinge on personal authority or identity.",
+      "adequacy_evidence": "Organizations already accept automation in accounting workflows, and stakeholders typically care about accuracy and resolution rather than whether a human or AI performs the task.",
+      "_timestamp": "2026-04-05T22:54:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Discrepancy resolution relies on reconciling ledgers, invoices, and transaction trails where errors can be non-obvious and require accounting knowledge, but structured records and audit trails provide systematic ways to check work.",
+      "adequacy_evidence": "AI can assist in identifying and proposing fixes, but it still makes classification or reconciliation errors often enough that human review of supporting records and adjustments remains necessary.",
+      "_timestamp": "2026-04-05T22:54:33"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Unresolved or incorrectly resolved discrepancies can lead to misstated financial records and downstream reporting issues, but most errors are eventually detectable and correctable through audits or reconciliation processes.",
+      "adequacy_evidence": "Even after standard checks, AI systems may introduce subtle misclassifications or incorrect reconciliations that are not immediately obvious, leaving some meaningful residual risk that requires human oversight.",
+      "_timestamp": "2026-04-05T22:54:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

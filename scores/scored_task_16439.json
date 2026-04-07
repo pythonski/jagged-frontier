@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2141.02",
+  "task_id": 16439,
+  "task_statement": "Design control systems or algorithms for purposes such as automotive energy management, emissions management, or increased operational safety or performance.",
+  "occupation_title": "Automotive Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Designing control systems or algorithms is typically done using computer-based tools (e.g., simulation, modeling, and coding environments). However, some instances require in-person integration or testing with physical vehicles or hardware-in-the-loop systems."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Designing automotive control systems requires nuanced tradeoffs, tuning under uncertainty, and safety-critical judgment developed through real-world testing and iterative calibration beyond explicit rules.",
+      "adequacy_evidence": "Current agents can apply control theory and simulate designs but lack robust experiential calibration for edge cases, plant-model mismatch, and safety validation, leading to consistent gaps in high-stakes, real-world deployments.",
+      "_timestamp": "2026-04-05T21:56:04"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Control system design spans diverse vehicle platforms, operating conditions, regulatory regimes, and rare edge cases (e.g., fault scenarios, extreme environments), creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "While there is substantial public and synthetic data (simulations, academic literature, benchmarks), much high-fidelity real-world data and expert design iteration processes are proprietary or sparse, leaving some important subpopulations only partially covered.",
+      "_timestamp": "2026-04-05T21:56:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing automotive control systems involves implicit tradeoffs among safety, performance, cost, regulatory compliance, and user experience, with many criteria emerging through stakeholder interaction and iteration rather than being fully specified upfront.",
+      "adequacy_evidence": "Current agents can interpret formal specifications and optimize within given constraints, but they often miss implicit priorities and struggle to independently surface or reconcile latent stakeholder requirements without significant human guidance.",
+      "_timestamp": "2026-04-05T21:56:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing automotive control systems involves long, tightly coupled sequences including requirements definition, modeling, simulation, controller design, tuning, validation, and iterative refinement where early errors propagate downstream.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step engineering workflows with tools, but over extended iterative cycles they show some degradation such as constraint drift or inconsistent assumptions, requiring human oversight to maintain coherence.",
+      "_timestamp": "2026-04-05T21:56:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing automotive control systems requires tracking large sets of parameters, models, constraints, sensor inputs, and performance tradeoffs simultaneously; missing a dependency or constraint can lead to unsafe or nonfunctional designs.",
+      "adequacy_evidence": "Current agents can manage substantial context with tools and structured workflows, but they still show drift or omission when handling highly interdependent technical details across long design iterations.",
+      "_timestamp": "2026-04-05T21:56:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Control system design typically builds on prior iterations, test results, calibration data, and evolving project requirements, but individual design tasks can often be scoped and revisited with documented artifacts.",
+      "adequacy_evidence": "Current agents can leverage external memory tools (documents, repositories, logs) to retrieve prior context, but they still show gaps in reliably maintaining and integrating complex evolving project state across sessions.",
+      "_timestamp": "2026-04-05T21:56:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing automotive control systems and algorithms is an offline engineering activity with iterative development cycles; minutes to hours (or longer) are typically acceptable for analysis, simulation, and refinement.",
+      "adequacy_evidence": "Frontier AI agents can take advantage of extended reasoning, simulation, and tool use within these relaxed time constraints without meaningful degradation in output quality due to latency limits.",
+      "_timestamp": "2026-04-05T21:56:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interpreting and generating representations like signal plots, system diagrams, and sensor data, but much of the core work (algorithms, models, code) is text- and math-based.",
+      "adequacy_evidence": "Current AI systems can effectively handle relevant multimodal elements such as plots, diagrams, and structured sensor data, with minimal limitations for typical control system design workflows.",
+      "_timestamp": "2026-04-05T21:56:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Control system errors can be subtle, only emerging under specific operating conditions or edge cases, and typically require extensive simulation, hardware-in-the-loop testing, and expert review to detect.",
+      "adequacy_evidence": "Current AI-generated control designs are prone to hidden flaws and require rigorous, resource-intensive validation (simulation, testing, expert auditing), making verification burdens high and unavoidable.",
+      "_timestamp": "2026-04-05T21:56:07"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Control algorithms for energy, emissions, and especially safety-critical functions in vehicles can have severe consequences (e.g., accidents, regulatory violations) if residual errors persist after testing, so tolerance for error is extremely low.",
+      "adequacy_evidence": "Even with simulation, validation, and review, current AI-generated control logic can exhibit hard-to-predict edge-case failures and lacks the reliability assurance required for safety-critical automotive deployment.",
+      "_timestamp": "2026-04-05T21:56:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from designing automotive control systems or algorithms. Existing standards (e.g., ISO 26262, NHTSA guidance) impose process, safety, and accountability requirements but do not restrict the use of AI as a design tool.",
+      "_timestamp": "2026-04-05T21:56:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves collaboration with engineering teams and acceptance by regulators or safety certifiers, where the credibility of the designer can matter but is not the sole determinant of adoption.",
+      "adequacy_evidence": "Stakeholders may be cautious about AI-designed control systems in safety-critical automotive contexts, requiring human oversight and sign-off, but would not fully reject AI-assisted contributions.",
+      "_timestamp": "2026-04-05T21:56:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

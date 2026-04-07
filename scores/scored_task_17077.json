@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1213.00",
+  "task_id": 17077,
+  "task_statement": "Refer patients to other specialists, as needed.",
+  "occupation_title": "Dermatologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Referring patients is typically done through electronic health records, digital referral systems, or phone/email communication with other providers. However, it often occurs within in-person clinical encounters and may sometimes involve paper forms or direct coordination with staff."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining when and to whom to refer depends on nuanced clinical judgment, patient history, comorbidities, risk tolerance, and evolving diagnostic uncertainty rather than explicit rules.",
+      "adequacy_evidence": "AI can suggest referrals based on guidelines and patterns but often misses subtle contextual factors (e.g., atypical presentations, patient preferences), requiring clinician oversight to resolve ambiguity.",
+      "_timestamp": "2026-04-05T21:31:12"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions in dermatology often follow clinical guidelines (e.g., suspected malignancy, systemic disease, or treatment resistance) but still require case-by-case judgment about severity, atypical presentations, and patient context.",
+      "adequacy_evidence": "Current agents can apply guidelines and recognize many referral triggers, but they lack the nuanced clinical calibration for borderline or ambiguous cases, especially when symptoms are subtle or context-dependent.",
+      "_timestamp": "2026-04-05T21:31:12"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions span diverse conditions (e.g., suspected malignancy, systemic disease links, cosmetic vs medical issues) and patient contexts, but are guided by broadly documented clinical pathways and specialty boundaries.",
+      "adequacy_evidence": "Medical guidelines, textbooks, and some case data provide substantial coverage of referral criteria, but real-world patterns (e.g., comorbidities, insurance constraints, local specialist availability) are often embedded in private EHR data and underrepresented in public training sources.",
+      "_timestamp": "2026-04-05T21:31:12"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Referring a patient typically involves a short, loosely coupled sequence: recognizing the need for referral, selecting an appropriate specialist, and initiating the referral.",
+      "adequacy_evidence": "AI systems can handle such short, low-dependency sequences without meaningful degradation, as the task does not require extended multi-step coherence.",
+      "_timestamp": "2026-04-05T21:31:12"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions often depend on accumulated patient history (prior treatments, comorbidities, past specialist involvement), but many referrals can be made using the current episode plus accessible medical records.",
+      "adequacy_evidence": "Current AI systems can store and retrieve patient data via EHR integrations, but cross-system fragmentation and imperfect context retrieval mean relevant longitudinal details may be missed in a nontrivial share of cases.",
+      "_timestamp": "2026-04-05T21:31:13"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions require synthesizing patient history, current symptoms, prior treatments, and possibly insurance or network constraints, but the information volume is moderate and typically structured within a single encounter.",
+      "adequacy_evidence": "AI agents can generally manage and summarize these inputs from records, but may miss nuanced clinical details or fail to prioritize subtle cues, leading to occasional context loss or imperfect compression.",
+      "_timestamp": "2026-04-05T21:31:14"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Referring patients to specialists typically occurs during or after a consultation, with minutes or longer acceptable for decision-making; it is not a time-critical, real-time task.",
+      "adequacy_evidence": "AI systems can generate appropriate referral suggestions well within this time window without needing to truncate reasoning, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T21:31:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect or missed referrals can delay diagnosis of serious conditions (e.g., melanoma metastasis, systemic disease), leading to significant morbidity or mortality even if such errors are infrequent.",
+      "adequacy_evidence": "AI can often suggest appropriate referrals using guidelines and records, but may still miss subtle clinical cues or context, leaving non-trivial residual risk even after clinician review.",
+      "_timestamp": "2026-04-05T21:31:14"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Medical referrals constitute the practice of medicine and typically require a licensed physician\u2019s clinical judgment and authorization; AI systems cannot independently issue referrals under current U.S. licensing laws. Regulations require a human clinician to make and sign off on such decisions.",
+      "_timestamp": "2026-04-05T21:31:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions often rely on visual clinical findings (e.g., skin lesion characteristics) and possibly imaging, though the referral itself is communicated in text.",
+      "adequacy_evidence": "Current AI can interpret many dermatological images but remains inconsistent on subtle or atypical presentations, leading to moderate gaps in multimodal reliability.",
+      "_timestamp": "2026-04-05T21:31:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing whether a referral is appropriate requires clinical expertise and review of patient history, but decisions can typically be checked against symptoms, guidelines, and differential diagnoses.",
+      "adequacy_evidence": "AI-generated referral suggestions would need routine clinician review due to potential misinterpretation of nuanced cases, but errors are generally identifiable with standard chart review and medical knowledge.",
+      "_timestamp": "2026-04-05T21:31:15"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Referring patients to specialists relies heavily on the dermatologist\u2019s clinical authority and patient trust, as patients must accept the recommendation and follow through, and receiving specialists rely on the referrer\u2019s professional judgment.",
+      "adequacy_evidence": "Patients and other clinicians are unlikely to accept referrals generated autonomously by an AI without physician endorsement, as legitimacy, accountability, and trust in medical judgment are central and not easily transferred to an AI agent.",
+      "_timestamp": "2026-04-05T21:31:15"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

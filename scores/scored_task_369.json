@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1123.00",
+  "task_id": 369,
+  "task_statement": "Review physician's referral and patient's medical records to help determine diagnosis and physical therapy treatment required.",
+  "occupation_title": "Physical Therapists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Physician referrals and patient records are typically reviewed through electronic health record systems on a computer, but some settings still involve paper records or on-site chart access, so not all instances are fully digital."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting referrals and medical records to guide diagnosis and therapy planning requires nuanced clinical judgment, including recognizing subtle patterns, comorbidities, and contraindications that are typically developed through hands-on experience.",
+      "adequacy_evidence": "Current AI can synthesize records and suggest guideline-based options, but lacks fully reliable clinical calibration for complex or ambiguous cases, especially where subtle contextual cues or risk judgments are involved.",
+      "_timestamp": "2026-04-06T05:37:24"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Cases span diverse conditions (orthopedic, neurologic, cardiopulmonary), comorbidities, ages, and heterogeneous medical records, creating a long-tailed, context-sensitive distribution.",
+      "adequacy_evidence": "While guidelines, case reports, and some de-identified datasets exist and can be augmented synthetically, real-world EHR diversity and detailed clinician reasoning traces are partially inaccessible due to privacy and sparsity, leaving gaps for rarer or complex cases.",
+      "_timestamp": "2026-04-06T05:37:25"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Medical records and referrals rarely state diagnosis and treatment plans explicitly; clinicians must interpret incomplete, context-dependent information, reconcile inconsistencies, and infer patient-specific goals and constraints.",
+      "adequacy_evidence": "Current agents can extract and summarize clinical data but often miss nuanced clinical context, comorbid interactions, and implicit physician intent, requiring human oversight to resolve ambiguities.",
+      "_timestamp": "2026-04-06T05:37:25"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is primarily text-based (referrals, notes, records) but may include interpretation of imaging reports, charts, or occasional visual data, making some multimodal capability useful but not central.",
+      "adequacy_evidence": "Current agents handle text and structured medical data well and can process some medical images, but performance is less reliable on nuanced or specialized visual clinical information.",
+      "_timestamp": "2026-04-06T05:37:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple documents, integrating medical history, and forming a diagnosis and treatment plan, requiring several interdependent reasoning steps but not extremely long workflows.",
+      "adequacy_evidence": "AI agents can generally manage multi-step document synthesis and reasoning, but may lose consistency or overlook details across longer records, leading to moderate degradation.",
+      "_timestamp": "2026-04-06T05:37:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing heterogeneous clinical documents (referrals, history, imaging reports, medications, prior treatments), where missing or misweighting specific details can affect diagnosis and treatment planning.",
+      "adequacy_evidence": "Well-scaffolded agents with retrieval can manage large records, but they still show occasional omissions or faulty compression of clinically relevant details, especially across lengthy or complex charts.",
+      "_timestamp": "2026-04-06T05:37:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing referrals and medical records is typically done asynchronously, with minutes to hours available for careful analysis rather than real-time response.",
+      "adequacy_evidence": "Current AI systems can use extended reasoning within these timeframes without meaningful degradation, so speed constraints do not limit output quality.",
+      "_timestamp": "2026-04-06T05:37:27"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task relies on patient history and prior medical information, but these are typically contained within the provided records rather than requiring the therapist to recall information across separate sessions independently.",
+      "adequacy_evidence": "Current AI systems can store, retrieve, and integrate longitudinal patient records when provided, so cross-session memory needs are largely met by existing data management and retrieval tools.",
+      "_timestamp": "2026-04-06T05:37:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State practice acts require that diagnosis and treatment planning in physical therapy be performed by a licensed physical therapist, with legal responsibility and signature resting with the human clinician. An AI system cannot independently perform this task or be the recognized decision-maker under current US regulations.",
+      "_timestamp": "2026-04-06T05:37:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining diagnosis and treatment from medical records involves nuanced clinical reasoning; errors can be subtle, context-dependent, and may not be immediately apparent without expert review or patient outcomes.",
+      "adequacy_evidence": "Current AI systems can misinterpret clinical context or miss contraindications, and their errors are not reliably obvious, requiring thorough expert verification to ensure safety and correctness.",
+      "_timestamp": "2026-04-06T05:37:30"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in interpreting medical records or determining a physical therapy plan can lead to inappropriate treatment, delayed recovery, or patient harm, so even small residual mistakes can have significant consequences.",
+      "adequacy_evidence": "Even after review, AI can miss subtle clinical cues or context in records, but human oversight and cross-checking can catch many issues, leaving a moderate but not prohibitive residual risk.",
+      "_timestamp": "2026-04-06T05:37:30"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task informs clinical decisions that affect patients and involves coordination with referring physicians, so stakeholders rely on the output and may care about the decision-maker\u2019s credibility.",
+      "adequacy_evidence": "Clinicians and patients are generally open to AI as decision support but may resist full reliance on AI for diagnosis/treatment planning without human oversight, indicating moderate acceptance.",
+      "_timestamp": "2026-04-06T05:37:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

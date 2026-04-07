@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1244.00",
+  "task_id": 15205,
+  "task_statement": "Diagnose, troubleshoot, and resolve hardware, software, or other network and system problems, and replace defective components when necessary.",
+  "occupation_title": "Network and Computer Systems Administrators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Most diagnosing and troubleshooting of network, software, and many system issues can be performed remotely using monitoring tools, logs, and remote administration. However, replacing defective hardware components requires physical access to equipment."
+  },
+  "scores": {
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Troubleshooting systems requires tracking logs, configurations, dependencies, prior steps, and evolving system state across multiple tools and components, where missing a detail can lead to incorrect diagnosis or repeated failure.",
+      "adequacy_evidence": "Current agents can aggregate and summarize multi-source context with tools, but still exhibit context loss, imperfect state tracking, and occasional drift when managing complex, evolving diagnostic sessions.",
+      "_timestamp": "2026-04-05T23:26:43"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Troubleshooting spans a highly heterogeneous, long-tailed distribution of hardware, software stacks, network topologies, vendor-specific behaviors, and idiosyncratic failure modes that vary widely across organizations.",
+      "adequacy_evidence": "There is extensive public signal (logs, tickets, forums, runbooks, vendor docs) showing step-by-step diagnostics, but many real-world edge cases depend on private infrastructure, proprietary systems, or rare interactions that are underrepresented and only partially recoverable via synthesis.",
+      "_timestamp": "2026-04-05T23:26:43"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective troubleshooting requires multi-step diagnostic workflows (hypothesis generation, testing, isolation, remediation, and verification) where each step depends on prior findings and errors can cascade.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step debugging with tools, but they exhibit some drift and error accumulation over longer, stateful troubleshooting sequences, especially when conditions evolve or require sustained context tracking.",
+      "_timestamp": "2026-04-05T23:26:44"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Problem reports are often incomplete or symptom-based, requiring inference about root causes, system context, and acceptable tradeoffs (e.g., downtime vs. quick fixes), but overall goals like restoring functionality are clear.",
+      "adequacy_evidence": "Current agents can infer likely issues from logs and descriptions, but often miss contextual priorities or implicit constraints (e.g., business impact, legacy quirks), requiring human clarification or iteration.",
+      "_timestamp": "2026-04-05T23:26:44"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Troubleshooting system and network issues often involves pattern recognition across logs, symptoms, and environment-specific quirks, requiring experience-based judgment beyond documented procedures in non-routine cases.",
+      "adequacy_evidence": "Current AI agents can follow runbooks and analyze logs effectively but still struggle with context-specific diagnosis and prioritization in complex, novel system interactions where experiential calibration is key.",
+      "_timestamp": "2026-04-05T23:26:45"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Troubleshooting often benefits from prior incident history, configuration changes, and known recurring issues, but many problems can still be handled as largely self-contained cases with fresh diagnostics.",
+      "adequacy_evidence": "Current agents can integrate with ticketing systems, logs, and knowledge bases to retrieve past context, but they can inconsistently maintain and surface relevant historical details across systems and sessions.",
+      "_timestamp": "2026-04-05T23:26:46"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Troubleshooting system and network issues often occurs under time pressure, especially during outages, where responses are expected within seconds to minutes rather than hours.",
+      "adequacy_evidence": "Well-scaffolded AI agents can generate diagnostic hypotheses and troubleshooting steps quickly enough to meet these time constraints without significant degradation in reasoning quality.",
+      "_timestamp": "2026-04-05T23:26:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Most troubleshooting relies on text-based logs, command outputs, and configuration files, but some cases require interpreting hardware indicators (LEDs), physical setups, or network diagrams.",
+      "adequacy_evidence": "Current agents handle screenshots, logs, and diagrams well, but are less reliable when interpreting physical hardware conditions or guiding real-world component replacement.",
+      "_timestamp": "2026-04-05T23:26:47"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many issues can be verified through system tests, logs, and monitoring tools, but some misconfigurations or partial fixes may not surface immediately and require expert validation over time.",
+      "adequacy_evidence": "AI can propose plausible diagnoses and fixes, but still makes non-trivial errors and requires human oversight and testing to confirm correctness, creating a moderate verification burden.",
+      "_timestamp": "2026-04-05T23:26:47"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in diagnosing or resolving system and network issues can cause outages, data loss, security vulnerabilities, or cascading failures, so even rare residual mistakes can have major consequences.",
+      "adequacy_evidence": "Even with monitoring, logs, and testing, AI-driven troubleshooting can miss edge cases or misapply fixes in complex environments, leaving a non-trivial residual risk, though not consistently catastrophic.",
+      "_timestamp": "2026-04-05T23:26:47"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from diagnosing, troubleshooting, or resolving IT system issues. While certain sectors may require certified personnel for oversight or compliance, these rules do not ban AI use as a tool in performing the task.",
+      "_timestamp": "2026-04-05T23:26:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interacting with end users, coworkers, or organizational stakeholders who rely on the administrator to resolve issues, but success depends more on technical resolution than on personal authority or empathy.",
+      "adequacy_evidence": "AI-driven IT support is increasingly accepted, but stakeholders may hesitate to trust AI for complex troubleshooting or physical interventions, especially when system-critical or unclear issues arise.",
+      "_timestamp": "2026-04-05T23:26:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

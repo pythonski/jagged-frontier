@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-8091.00",
+  "task_id": 10503,
+  "task_statement": "Notify maintenance, stationary engineering, or other auxiliary personnel to correct equipment malfunctions or to adjust power, steam, water, or air supplies.",
+  "occupation_title": "Chemical Plant and System Operators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Notifying maintenance or auxiliary personnel is often done through control systems, phones, radios, or digital messaging from a control room, which could be computer-based. However, operators may also communicate in person on the plant floor, so a significant minority of instances involve physical presence."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is typically a discrete action: identifying an issue and notifying the appropriate personnel, without requiring long multi-step sequences or sustained interdependent actions.",
+      "adequacy_evidence": "AI agents can reliably handle short, single-step or minimally sequential communication tasks without degradation, especially when supported by structured inputs and communication tools.",
+      "_timestamp": "2026-04-06T01:12:44"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different equipment types, failure modes, and communication protocols across plants, but follows relatively standardized reporting and escalation patterns.",
+      "adequacy_evidence": "Training data is widely available via SOPs, maintenance logs, incident reports, and simulated plant environments, providing clear examples of how to communicate issues and trigger responses.",
+      "_timestamp": "2026-04-06T01:12:44"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While standard operating procedures define when and how to notify support personnel, operators must interpret context such as severity, urgency, and which team is appropriate, introducing moderate implicit judgment.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably map sensor data and predefined thresholds to notification actions and select appropriate recipients, with minimal difficulty resolving remaining ambiguity.",
+      "_timestamp": "2026-04-06T01:12:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While standard operating procedures define when and whom to notify, operators still use experience to judge urgency, prioritize issues, and interpret borderline conditions before escalating.",
+      "adequacy_evidence": "LLM-based agents can reliably follow codified thresholds, logs, and escalation rules, and can approximate prioritization using available data, with minimal reliance on irreducible tacit judgment.",
+      "_timestamp": "2026-04-06T01:12:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires keeping track of current equipment status, the nature of the malfunction or adjustment needed, and the appropriate personnel to contact, but the information scope is limited and structured.",
+      "adequacy_evidence": "Current AI agents can reliably manage and relay this level of contextual information within a single episode without significant loss or misrepresentation.",
+      "_timestamp": "2026-04-06T01:12:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily communication\u2014sending notifications based on known issues\u2014without requiring interpretation or generation of non-text modalities.",
+      "adequacy_evidence": "Current AI agents can easily handle text-based notification and coordination tasks, with no meaningful multimodal demands to create a gap.",
+      "_timestamp": "2026-04-06T01:12:46"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Equipment malfunctions in a chemical plant require prompt notification\u2014typically within seconds to a few minutes\u2014to avoid escalation, but not millisecond-level response.",
+      "adequacy_evidence": "LLM-based agents can generate and transmit clear alerts or notifications almost instantly, with no need for extended reasoning that would conflict with latency requirements.",
+      "_timestamp": "2026-04-06T01:12:47"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Notifying auxiliary personnel about equipment issues is typically triggered by current system conditions or alarms and does not require retaining cross-session history to perform the task effectively.",
+      "adequacy_evidence": "Since the task is largely event-driven and self-contained, existing AI systems can handle any minimal logging or recall needs without significant limitations.",
+      "_timestamp": "2026-04-06T01:12:47"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect or missed notifications can delay corrective action in a chemical plant, potentially escalating operational or safety issues, but such errors are often mitigated by redundant monitoring systems and team oversight.",
+      "adequacy_evidence": "AI systems can reliably generate and route notifications with structured inputs and monitoring, and any residual errors after standard checks (e.g., confirmation systems, human oversight) are unlikely to pose unacceptable risk.",
+      "_timestamp": "2026-04-06T01:12:47"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying correctness requires checking plant conditions, logs, and appropriate personnel routing, which needs domain knowledge but is typically straightforward for operators to confirm before acting.",
+      "adequacy_evidence": "AI can draft notifications but may misidentify issues or recipients, so human review is still needed, though errors are usually easy to catch with standard operational checks.",
+      "_timestamp": "2026-04-06T01:12:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves communicating with internal personnel (maintenance or engineering staff) who must receive and act on the notification, so there is some reliance on interaction with stakeholders.",
+      "adequacy_evidence": "In industrial settings, automated alerting and control systems already routinely notify personnel, and workers generally accept machine-generated instructions if they are accurate and timely.",
+      "_timestamp": "2026-04-06T01:12:48"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from notifying personnel about equipment issues or utility adjustments. Industrial regulations require safe operation and qualified oversight, but do not restrict automated alerting or communication functions.",
+      "_timestamp": "2026-04-06T01:12:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

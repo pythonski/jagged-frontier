@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2131.00",
+  "task_id": 9001,
+  "task_statement": "Analyze product failure data and laboratory test results to determine causes of problems and develop solutions.",
+  "occupation_title": "Materials Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Analyzing failure data and laboratory results and developing solutions is typically done using digital datasets, reports, and modeling tools on a computer. However, materials engineers sometimes need to physically inspect failed components or interact with lab equipment or samples, which requires in-person work."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Product failure analysis spans diverse materials, manufacturing processes, environments, and failure modes, with many context-specific edge cases and long-tailed phenomena.",
+      "adequacy_evidence": "While substantial materials science literature, failure case studies, and simulation data exist, much real-world failure data is proprietary or sparsely documented, leaving some important subpopulations only partially covered.",
+      "_timestamp": "2026-04-05T23:19:34"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Failure analysis in materials engineering relies heavily on experience with fracture modes, processing histories, and subtle patterns in test data that are not fully captured by explicit rules or documentation.",
+      "adequacy_evidence": "Current agents can apply known frameworks and compare patterns in data, but often lack the nuanced, experience-based calibration needed to reliably interpret ambiguous or novel failure signatures across varied real-world contexts.",
+      "_timestamp": "2026-04-05T23:19:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis\u2014integrating failure data, lab results, hypothesis generation, and solution development\u2014but these steps are typically modular rather than tightly interdependent across long chains.",
+      "adequacy_evidence": "AI agents can generally handle multi-step analytical workflows, but performance can degrade with longer reasoning chains, leading to occasional inconsistencies or missed constraints across steps.",
+      "_timestamp": "2026-04-05T23:19:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Root cause analysis of material failures requires interpreting heterogeneous data, selecting relevant mechanisms, and aligning with implicit engineering standards and use-contexts that are not fully specified in the task description.",
+      "adequacy_evidence": "Current agents can analyze datasets and suggest plausible causes, but they often miss context-specific constraints or prioritize incorrect mechanisms without iterative human guidance.",
+      "_timestamp": "2026-04-05T23:19:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Failure analysis often benefits from prior case histories, known failure modes, and accumulated lab data trends, but individual analyses can usually be conducted with the data provided for that case.",
+      "adequacy_evidence": "Current agents can use external databases and retrieval systems to store and access past cases, but they may inconsistently surface the most relevant historical context or integrate it effectively across instances.",
+      "_timestamp": "2026-04-05T23:19:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large, heterogeneous datasets (e.g., failure logs, lab measurements, material properties, test conditions) and maintaining alignment across variables where missing details can lead to incorrect causal conclusions.",
+      "adequacy_evidence": "Agents can use retrieval and external tools to manage large datasets, but still exhibit context loss, imperfect compression, and occasional misalignment across sources in complex, multi-step analyses.",
+      "_timestamp": "2026-04-05T23:19:35"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing failure data and lab results in materials engineering typically occurs over hours to days, with no need for real-time or rapid responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform deep analysis without meaningful degradation from latency constraints, as speed is not a limiting factor.",
+      "_timestamp": "2026-04-05T23:19:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Materials engineers often rely on microstructure images (e.g., microscopy, fracture surfaces), spectrographs, and other lab outputs alongside numeric data, making visual and cross-modal interpretation an important component.",
+      "adequacy_evidence": "Current agents can handle basic charts and some imagery but are less reliable on fine-grained materials characterization (e.g., subtle microstructural defects), limiting performance on complex cases.",
+      "_timestamp": "2026-04-05T23:19:36"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining root causes from failure data and lab results involves complex, domain-specific interpretation where errors can be subtle and only revealed through further testing or long-term performance, making verification difficult and resource-intensive.",
+      "adequacy_evidence": "Current AI systems can misinterpret material behaviors or experimental nuances, and their conclusions require extensive expert validation and possibly additional experiments to confirm correctness.",
+      "_timestamp": "2026-04-05T23:19:36"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task\u2019s outputs are used by colleagues, management, or clients who rely on the analysis to make engineering and business decisions, so stakeholder trust in the source matters to some extent.",
+      "adequacy_evidence": "AI-generated analyses would often be accepted if validated by human engineers, but some stakeholders\u2014especially in safety-critical or liability-sensitive contexts\u2014would be cautious about relying solely on AI.",
+      "_timestamp": "2026-04-05T23:19:37"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing analysis of failure data, but in many regulated sectors (e.g., aerospace, medical devices), a licensed or responsible human engineer must review, approve, or sign off on conclusions. This creates partial restriction rather than a full ban.",
+      "_timestamp": "2026-04-05T23:19:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect failure analysis can lead to unsafe products, structural failures, recalls, or costly design flaws, so even rare residual errors can have serious safety and financial consequences.",
+      "adequacy_evidence": "With standard validation (peer review, additional testing), many AI errors could be caught, but subtle misinterpretations of material behavior or causal mechanisms may still slip through, leaving some nontrivial residual risk.",
+      "_timestamp": "2026-04-05T23:19:38"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

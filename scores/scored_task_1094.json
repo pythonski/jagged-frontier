@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9051.00",
+  "task_id": 1094,
+  "task_statement": "Record the number, type, and cost of items sold to determine which items may be unpopular or less profitable.",
+  "occupation_title": "Food Service Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Sales data are typically recorded and analyzed using POS systems, spreadsheets, or accounting software that can be accessed remotely, but some establishments still require on-site access to registers, receipts, or manual counts to gather the data."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While recording counts and costs is explicit, determining what qualifies as 'unpopular' or 'less profitable' depends on contextual thresholds, business goals, and comparison baselines.",
+      "adequacy_evidence": "Current AI agents can infer reasonable metrics (e.g., low sales volume, low margin) and adjust thresholds with minimal guidance, reliably resolving this level of ambiguity.",
+      "_timestamp": "2026-04-06T04:20:08"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different menus, pricing structures, and sales patterns across establishments, but remains largely structured and repetitive (transaction logs, item categories, costs).",
+      "adequacy_evidence": "Extensive POS data, accounting records, and synthetic transaction simulations provide rich, representative coverage of both inputs and analytic procedures for this task.",
+      "_timestamp": "2026-04-06T04:20:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps\u2014collecting sales data, categorizing items, and aggregating costs\u2014but these are relatively short, loosely coupled processes rather than long interdependent sequences.",
+      "adequacy_evidence": "AI systems handle structured data recording and aggregation reliably across such short workflows, with little to no degradation in consistency over the required sequence length.",
+      "_timestamp": "2026-04-06T04:20:09"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While recording sales data is rule-based, interpreting which items are 'unpopular' or 'less profitable' can involve mild contextual judgment (e.g., seasonality, promotions, menu role).",
+      "adequacy_evidence": "Current AI agents can reliably apply thresholds, analyze trends, and incorporate contextual factors like time periods or pricing, matching or exceeding typical human calibration for this task.",
+      "_timestamp": "2026-04-06T04:20:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves structured numerical and categorical sales data (counts, item types, costs), typically handled through POS systems or spreadsheets, which are text/numeric in nature.",
+      "adequacy_evidence": "Current AI systems can fully process, record, and analyze structured sales data without reliance on non-text modalities, so there is no meaningful capability gap.",
+      "_timestamp": "2026-04-06T04:20:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves recording and summarizing straightforward transactional data (item counts, types, and costs) that is typically structured and limited in scope within a single episode.",
+      "adequacy_evidence": "Current AI systems can reliably track, store, and aggregate such structured data within an episode without losing context or mismanaging information.",
+      "_timestamp": "2026-04-06T04:20:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires accumulating sales data across multiple transactions and time periods to identify trends in item popularity and profitability.",
+      "adequacy_evidence": "Current AI systems integrated with standard databases or POS systems can reliably store, retrieve, and analyze longitudinal sales data with minimal loss or degradation.",
+      "_timestamp": "2026-04-06T04:20:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from recording or analyzing sales data in food service operations. This task is administrative/analytical and can be freely automated under current regulations.",
+      "_timestamp": "2026-04-06T04:20:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Sales counts, item types, and costs are structured data that can be cross-checked against POS systems, receipts, and inventory records, making discrepancies straightforward to detect.",
+      "adequacy_evidence": "AI-generated summaries or analyses can be easily validated by reconciling with underlying transaction data, and errors are typically obvious through simple consistency checks.",
+      "_timestamp": "2026-04-06T04:20:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is an internal analytical and record-keeping task; outputs are used impersonally by management without requiring stakeholder interaction or trust in the performer\u2019s identity.",
+      "adequacy_evidence": "Since there are no meaningful external stakeholders for this task, acceptance of an AI agent is not a concern and would not affect task effectiveness.",
+      "_timestamp": "2026-04-06T04:20:11"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recording and analyzing sales data to identify unprofitable items is typically done periodically (e.g., daily or weekly), not under tight real-time constraints.",
+      "adequacy_evidence": "AI systems can easily process transactional data and generate insights well within available time windows without sacrificing quality.",
+      "_timestamp": "2026-04-06T04:20:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in recording or summarizing sales data can lead to suboptimal inventory or menu decisions, but impacts are typically financial and reversible rather than catastrophic.",
+      "adequacy_evidence": "With standard checks like POS system reconciliation and periodic audits, AI-generated records and summaries would leave little residual risk beyond tolerable business-level inaccuracies.",
+      "_timestamp": "2026-04-06T04:20:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-2011.00",
+  "task_id": 20433,
+  "task_statement": "Place orders, such as for equipment, supplies, or catering for meetings.",
+  "occupation_title": "Switchboard Operators, Including Answering Service",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Placing orders for supplies, equipment, or catering is usually done via phone, email, or online ordering systems, which can be handled entirely on a computer. However, some workplaces may require coordinating with on-site inventory checks or placing orders through in-person vendor interactions."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans some variation in vendors, item types, quantities, and organizational policies, but follows standardized procurement and ordering patterns with limited long-tail complexity.",
+      "adequacy_evidence": "Extensive real-world examples (purchase orders, procurement workflows, catering requests) exist in training data and can be readily simulated, including step-by-step processes, leaving little coverage gap for current agents.",
+      "_timestamp": "2026-04-06T05:11:53"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Placing orders for equipment, supplies, or catering is typically governed by explicit procedures, vendor lists, budgets, and predefined preferences, with little need for experience-based intuition.",
+      "adequacy_evidence": "Current AI agents can reliably follow ordering protocols, compare options, and execute purchases using structured criteria, with minimal reliance on tacit judgment.",
+      "_timestamp": "2026-04-06T05:11:54"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Placing orders often involves implicit constraints like budget limits, preferred vendors, timing, and quantity expectations that may not be fully specified and require some contextual interpretation.",
+      "adequacy_evidence": "Current agents can usually infer missing details or request clarification, but they still miss unstated preferences or organizational norms often enough to require human oversight and iteration.",
+      "_timestamp": "2026-04-06T05:11:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Placing orders involves a short multi-step sequence (gathering details, selecting vendor, submitting order, confirming), but the steps are loosely coupled and limited in length.",
+      "adequacy_evidence": "Current AI agents with tool use can reliably handle short transactional workflows without noticeable degradation or loss of coherence across steps.",
+      "_timestamp": "2026-04-06T05:11:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple details (items, quantities, vendor options, delivery instructions) within a single ordering episode, requiring some active information management but not at large scale.",
+      "adequacy_evidence": "Current AI agents with tool use and structured forms can reliably manage and persist these details within an episode, with minimal loss or confusion.",
+      "_timestamp": "2026-04-06T05:11:55"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Placing orders for supplies or catering typically allows minutes to hours for completion and confirmation, with no strict real-time pressure.",
+      "adequacy_evidence": "Current AI agents can easily operate within these relaxed time constraints without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T05:11:55"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Placing orders for supplies or catering is primarily handled through text or structured digital systems (forms, emails, procurement platforms) or spoken communication, without reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI agents can fully manage text- and speech-based ordering workflows, including form completion and vendor communication, with no meaningful multimodal gaps.",
+      "_timestamp": "2026-04-06T05:11:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering tasks can benefit from remembering vendor lists, past orders, and recurring preferences, but each order can typically be completed with current request details if needed.",
+      "adequacy_evidence": "Current AI systems integrated with standard databases/CRMs can reliably store and retrieve vendor histories and preferences across sessions, with little inherent limitation.",
+      "_timestamp": "2026-04-06T05:11:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering errors (e.g., wrong quantities, dates, or items) can disrupt operations or meetings but are typically correctable and rarely cause severe or irreversible harm.",
+      "adequacy_evidence": "With standard confirmation steps (order summaries, vendor verification), AI-generated orders can be checked effectively, leaving minimal residual risk at acceptable levels.",
+      "_timestamp": "2026-04-06T05:11:56"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Order details (items, quantities, delivery times, vendors) are explicit and can be readily verified via confirmations, invoices, or direct checks with suppliers, making errors easy to detect before reliance.",
+      "adequacy_evidence": "AI agents can make occasional mistakes in specifications or vendor selection, so human review of order details is still needed, but this checking is straightforward and low-cost.",
+      "_timestamp": "2026-04-06T05:11:57"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements that prohibit AI systems from placing routine orders for supplies or catering. This task is generally administrative and can be automated within existing commercial and organizational policies.",
+      "_timestamp": "2026-04-06T05:11:57"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with vendors or internal staff to place and confirm orders, so stakeholders do engage with the performer, though personal identity or empathy is not central.",
+      "adequacy_evidence": "Vendors routinely accept orders via automated systems, email, or scripted interactions, and AI-mediated ordering would generally be acceptable as long as details and payment are correct.",
+      "_timestamp": "2026-04-06T05:12:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

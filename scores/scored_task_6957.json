@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2053.00",
+  "task_id": 6957,
+  "task_statement": "Contact patients' relatives to arrange family conferences.",
+  "occupation_title": "Psychiatric Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Contacting relatives is most commonly done via phone calls, email, or messaging systems, which can be handled remotely using a computer and internet. However, some instances may occur in person if relatives are already present at the facility."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Arranging family conferences involves implicit factors like urgency of care, family dynamics, preferred communication styles, and appropriate timing, which are not fully specified and require contextual judgment.",
+      "adequacy_evidence": "Current AI agents can handle basic outreach and scheduling but often miss nuances around sensitivity, prioritization, and stakeholder preferences, requiring human oversight to ensure appropriate coordination.",
+      "_timestamp": "2026-04-05T21:53:52"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple coordinated steps (identifying contacts, initiating communication, negotiating schedules, confirming arrangements), but these are relatively short and loosely coupled interactions.",
+      "adequacy_evidence": "Frontier AI agents can reliably manage short multi-step communication workflows with minimal degradation, especially when supported by scheduling tools and structured prompts.",
+      "_timestamp": "2026-04-05T21:53:52"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves some interpersonal sensitivity\u2014judging tone, timing, and how to handle distressed or resistant family members\u2014but much of it can follow established communication protocols and scripts.",
+      "adequacy_evidence": "AI agents can handle routine outreach and scheduling, but may miscalibrate tone or fail in nuanced, emotionally sensitive interactions common in psychiatric contexts.",
+      "_timestamp": "2026-04-05T21:53:52"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking patient identity, multiple relatives' contact details, and coordinating availability, requiring some integration of information but not large or complex state.",
+      "adequacy_evidence": "Current AI agents with scheduling and CRM-style tools can reliably manage and retrieve this level of structured information within a single episode without significant loss or confusion.",
+      "_timestamp": "2026-04-05T21:53:53"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied but bounded scenarios (different family dynamics, cultural contexts, and clinical situations), requiring adaptable but not highly long-tailed interaction patterns.",
+      "adequacy_evidence": "While general communication and healthcare coordination data are abundant, real-world psychiatric family interaction data are often private and sparsely available, leaving some nuanced cases underrepresented but partially addressable via simulation.",
+      "_timestamp": "2026-04-05T21:53:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on retaining patient and family contact details, prior outreach attempts, and scheduling preferences across interactions, but does not require deep longitudinal case history.",
+      "adequacy_evidence": "Current agents can store and retrieve structured contact and scheduling data via external systems, but may inconsistently maintain or surface up-to-date context across sessions without robust integration.",
+      "_timestamp": "2026-04-05T21:53:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves phone conversations where tone, pacing, and basic auditory cues matter, though it can also be completed via text (email/SMS) without rich multimodal input.",
+      "adequacy_evidence": "Current AI voice agents can conduct scheduling calls, but may struggle with nuanced emotional tone and sensitive communication typical in psychiatric contexts.",
+      "_timestamp": "2026-04-05T21:53:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task directly involves interacting with patients' relatives, where trust, empathy, and perceived legitimacy of the communicator are central to securing participation in family conferences.",
+      "adequacy_evidence": "Relatives are likely to expect a human healthcare representative for sensitive psychiatric matters, and many would resist or disengage if the outreach were handled by an AI agent, undermining effectiveness.",
+      "_timestamp": "2026-04-05T21:53:55"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors (e.g., incorrect scheduling details or miscommunication) can inconvenience families and disrupt care coordination, but are typically correctable and not directly harmful to patient safety.",
+      "adequacy_evidence": "With standard checks (e.g., confirming contact details, scripted communication, logging), AI systems can reliably manage outreach with minimal residual risk that is acceptable for this task.",
+      "_timestamp": "2026-04-05T21:53:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking that the correct relatives were contacted, information was accurately conveyed, and arrangements were properly scheduled, which requires some follow-up and record review but is not deeply complex.",
+      "adequacy_evidence": "AI systems can log communications and schedules, but risks like miscommunication, contacting the wrong party, or mishandling sensitive information mean routine human review and confirmation would still be needed.",
+      "_timestamp": "2026-04-05T21:53:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "HIPAA and related state privacy laws restrict disclosure of patient information and require proper authorization and identity verification when contacting relatives, creating compliance constraints. However, there is no explicit prohibition on AI systems performing outreach if these requirements are met, so restrictions are partial rather than absolute.",
+      "_timestamp": "2026-04-05T21:53:55"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves real-time or near-real-time communication (e.g., phone calls), requiring prompt responses within seconds to maintain natural conversation flow, but not deep rapid reasoning.",
+      "adequacy_evidence": "Current AI agents can sustain fluid, real-time conversational responses for scheduling and coordination without needing extended reasoning, so speed constraints do not significantly degrade performance.",
+      "_timestamp": "2026-04-05T21:53:55"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

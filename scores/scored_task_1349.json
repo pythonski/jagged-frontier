@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2071.00",
+  "task_id": 1349,
+  "task_statement": "Operate computer-assisted engineering or design software or equipment to perform engineering tasks.",
+  "occupation_title": "Electrical Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most instances involve using CAD, simulation, or other engineering software that can be run entirely on a computer. However, some cases involve operating specialized design or analysis systems connected to on-site engineering equipment or secure workstations."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Engineering software operation is guided by project specifications, standards, and design requirements, but these often leave room for interpretation (e.g., tradeoffs, implicit constraints, stakeholder preferences).",
+      "adequacy_evidence": "Current agents can follow explicit instructions and infer some intent, but they frequently miss nuanced design priorities or implicit constraints without iterative human clarification.",
+      "_timestamp": "2026-04-05T22:38:16"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple software tools (e.g., SPICE, MATLAB, PCB CAD) and application domains, creating moderate diversity in workflows and problem types.",
+      "adequacy_evidence": "Extensive documentation, tutorials, open-source projects, and simulatable environments provide rich, process-level training data across these tools, enabling strong coverage of most task variations.",
+      "_timestamp": "2026-04-05T22:38:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Using engineering or EDA software involves multi-step workflows (modeling, simulation, iteration, validation) where outputs from earlier steps inform later ones, but many substeps can be modularly checked and revised.",
+      "adequacy_evidence": "LLM-based agents can handle multi-step tool use but show some drift and error accumulation over longer design sessions, especially when maintaining consistency across iterative refinements.",
+      "_timestamp": "2026-04-05T22:38:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Engineering design work often spans multiple sessions with evolving project files, design constraints, and prior decisions that must be revisited, but much of this state is externalized in files and tools rather than relying on memory alone.",
+      "adequacy_evidence": "Current agents can store and retrieve project artifacts and notes across sessions, but integration is inconsistent and agents may fail to reliably recall or prioritize relevant past context without careful system design.",
+      "_timestamp": "2026-04-05T22:38:17"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Using engineering/design software (e.g., CAD, SPICE, PCB tools) often involves interpreting simulation outputs, selecting modeling assumptions, and tuning parameters based on experience rather than explicit rules.",
+      "adequacy_evidence": "Current agents can follow documented workflows and suggest configurations, but they still struggle with nuanced judgment in edge cases like model validity, convergence issues, and context-specific tradeoffs.",
+      "_timestamp": "2026-04-05T22:38:17"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Using engineering design software involves tracking multiple parameters, constraints, schematics, and simulation outputs, but much of this state is externalized within the software interface rather than held mentally.",
+      "adequacy_evidence": "Agents can use tools and external memory to manage design state, but they still show lapses in reliably tracking evolving parameters and interpreting intermediate outputs across multi-step workflows.",
+      "_timestamp": "2026-04-05T22:38:18"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Electrical engineering design work in CAD/EDA environments relies heavily on interpreting and generating schematics, PCB layouts, simulation plots, and spatial/visual representations that cannot be reduced to text alone.",
+      "adequacy_evidence": "Current agents can process and generate diagrams and interface with design tools, but they remain less reliable on precise geometric constraints, dense schematics, and fine-grained visual reasoning required in complex engineering designs.",
+      "_timestamp": "2026-04-05T22:38:18"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in engineering designs or simulations (e.g., circuit behavior, load tolerances, safety margins) can be subtle and may only surface under specific conditions, requiring expert review, testing, or prototyping to detect.",
+      "adequacy_evidence": "Current AI systems frequently produce plausible but flawed engineering outputs, and given the difficulty of detecting such errors, substantial expert validation and iterative checking are still required.",
+      "_timestamp": "2026-04-05T22:38:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Using engineering or CAD software is interactive and benefits from responsiveness within seconds to a few minutes, but most tasks (modeling, simulation setup, analysis) tolerate non-instant latency.",
+      "adequacy_evidence": "Current LLM-based agents with tooling can generate commands, scripts, or design steps well within these time bounds, and extended reasoning is rarely constrained by latency in this workflow.",
+      "_timestamp": "2026-04-05T22:38:19"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Operating engineering or design software is typically an internal technical activity; outputs are evaluated on technical correctness rather than who produced them.",
+      "adequacy_evidence": "There are no meaningful stakeholders requiring acceptance of an AI in this specific task, and AI-assisted design tools are already widely accepted in engineering workflows.",
+      "_timestamp": "2026-04-05T22:38:19"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from operating engineering or design software; such tools are already widely used. Licensing requirements apply to human engineers for final approval and accountability, not to the use of software tools themselves.",
+      "_timestamp": "2026-04-05T22:38:20"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Electrical engineering design outputs (e.g., circuits, control systems, power systems) can have safety-critical and costly consequences if errors persist, even after standard simulation and review processes.",
+      "adequacy_evidence": "While simulations, rule checks, and human review can catch many AI-generated errors, current AI systems still exhibit non-trivial rates of subtle or context-specific mistakes, leaving some residual risk that is not fully negligible.",
+      "_timestamp": "2026-04-05T22:38:20"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

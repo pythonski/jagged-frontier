@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4181.00",
+  "task_id": 9754,
+  "task_statement": "Determine whether space is available on travel dates requested by customers, assigning requested spaces when available.",
+  "occupation_title": "Reservation and Transportation Ticket Agents and Travel Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Checking availability and assigning seats or spaces is performed through computerized reservation or booking systems, which can be accessed remotely with standard software and internet access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task operates over well-structured reservation systems with standardized availability queries and booking rules, yielding a narrow and highly regular distribution of cases.",
+      "adequacy_evidence": "Extensive real-world booking logs, system documentation, and simulatable environments provide complete coverage of relevant scenarios, making representative training data readily available.",
+      "_timestamp": "2026-04-06T03:00:56"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves querying reservation systems and applying explicit availability and booking rules, with little reliance on experiential judgment or tacit calibration.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured reservation logic and system outputs, with no meaningful gap in tacit knowledge for standard booking and availability determination.",
+      "_timestamp": "2026-04-06T03:00:56"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves some context-dependent details (e.g., interpreting customer preferences, fare classes, and constraints like availability rules), but objectives are largely explicit: check inventory and assign space if available.",
+      "adequacy_evidence": "Current AI agents with access to reservation systems and structured data can reliably infer intent and handle minor ambiguities through prompts or clarification, with minimal failure in specification resolution.",
+      "_timestamp": "2026-04-06T03:00:56"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking customer dates, inventory availability, and possibly multiple booking constraints within a single interaction, requiring some state management across system queries.",
+      "adequacy_evidence": "Current AI agents with tool integration can reliably track and update booking state within a session, with minimal risk of losing or mismanaging relevant information.",
+      "_timestamp": "2026-04-06T03:00:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each booking inquiry is typically self-contained, relying on current availability data in reservation systems rather than accumulated cross-session context about the customer or prior interactions.",
+      "adequacy_evidence": "Modern AI agents can interface with reservation databases that already maintain persistent state, so no additional cross-session memory capability is required beyond standard system integration.",
+      "_timestamp": "2026-04-06T03:00:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is a short transactional workflow: checking availability for given dates and assigning space if available, with minimal interdependent steps.",
+      "adequacy_evidence": "AI agents with database access can reliably execute these brief sequences without noticeable degradation, as the interaction length and dependency chain are minimal.",
+      "_timestamp": "2026-04-06T03:00:57"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers expect near-immediate responses during booking interactions, typically within seconds to maintain service flow.",
+      "adequacy_evidence": "The task is a straightforward availability lookup and assignment in structured systems, which current AI agents can perform instantly without sacrificing accuracy.",
+      "_timestamp": "2026-04-06T03:00:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves querying reservation systems and updating availability records, which are structured, text- and data-based operations; visual interfaces like seat maps are optional and not essential.",
+      "adequacy_evidence": "Current AI agents can fully handle structured data queries and allocations without needing multimodal capabilities, so there is no meaningful shortfall.",
+      "_timestamp": "2026-04-06T03:00:57"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from checking availability or assigning reservations in travel booking systems; such tasks are already widely automated in online booking platforms.",
+      "_timestamp": "2026-04-06T03:00:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers rely on the agent to check availability and confirm bookings, but the interaction is largely transactional and does not depend heavily on personal authority or empathy.",
+      "adequacy_evidence": "Customers already widely accept automated booking systems and AI-driven reservation tools, indicating minimal resistance to AI performing this function.",
+      "_timestamp": "2026-04-06T03:00:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Availability and assignment are governed by structured reservation systems with built-in constraints (e.g., inventory counts, no double-booking), making errors immediately detectable through system checks.",
+      "adequacy_evidence": "AI agents integrated with reservation systems can rely on the same validation mechanisms, so any mistakes (e.g., conflicting bookings) are automatically flagged with minimal need for manual verification.",
+      "_timestamp": "2026-04-06T03:00:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors like double-booking or incorrect date assignments cause customer inconvenience, rebooking costs, and service disruptions, but are typically reversible and not safety-critical.",
+      "adequacy_evidence": "Modern reservation systems enforce availability constraints and provide immediate validation, so after normal checks, AI-driven errors would be caught or easily corrected, leaving acceptable residual risk.",
+      "_timestamp": "2026-04-06T03:00:59"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

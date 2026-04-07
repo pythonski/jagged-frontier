@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1041.08",
+  "task_id": 15942,
+  "task_statement": "Calculate duty and tariff payments owed on shipments.",
+  "occupation_title": "Customs Brokers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Calculating duties and tariffs involves applying tariff schedules and regulations to shipment data, typically using customs software, databases, or spreadsheets. The work is information-based and can be performed entirely on a computer without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Duty calculation relies largely on codified tariff schedules and valuation rules, but correct application often requires case-based judgment in classification, origin determination, and interpreting ambiguous product descriptions.",
+      "adequacy_evidence": "Agents can follow explicit tariff rules and reference databases well, but still struggle with nuanced classification and edge-case interpretations that experienced brokers handle through accumulated practice.",
+      "_timestamp": "2026-04-06T04:29:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While tariff schedules and formulas are codified, determining the correct classification, valuation basis, origin rules, and applicable exemptions often requires contextual interpretation and judgment beyond explicit inputs.",
+      "adequacy_evidence": "Current AI agents can follow tariff rules and reference databases but still struggle with nuanced classification and context-dependent exceptions, often requiring human correction in ambiguous cases.",
+      "_timestamp": "2026-04-06T04:29:38"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple interdependent steps such as classifying goods, determining valuation, applying tariff schedules, and incorporating trade agreements, but these steps are relatively bounded and structured.",
+      "adequacy_evidence": "Frontier AI agents with tool use can reliably execute these structured multi-step calculations with minimal degradation, as the sequence length is moderate and well-supported by procedural logic.",
+      "_timestamp": "2026-04-06T04:29:38"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of products, tariff schedules, trade agreements, and jurisdiction-specific rules, but operates within structured legal frameworks (e.g., HS codes, published duty rates) that bound the variation.",
+      "adequacy_evidence": "Extensive public documentation (tariff schedules, customs rulings, trade agreements) and worked examples exist, enabling training pipelines to cover the relevant distribution with representative procedural detail.",
+      "_timestamp": "2026-04-06T04:29:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Calculating duties requires integrating multiple data elements (HS codes, valuation, country of origin, applicable trade agreements, exemptions) from shipment documents and tariff schedules, but the total information volume is structured and bounded within a single case.",
+      "adequacy_evidence": "Current AI agents with tool use and retrieval can reliably track and integrate these structured inputs within a session, with minimal risk of losing or distorting relevant information.",
+      "_timestamp": "2026-04-06T04:29:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many calculations are shipment-specific, brokers often rely on prior classification rulings, client histories, and standing tariff treatments that persist across transactions.",
+      "adequacy_evidence": "Current AI systems with standard database integrations can reliably store and retrieve prior classifications, client preferences, and rulings, meeting these modest cross-session memory needs.",
+      "_timestamp": "2026-04-06T04:29:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating duties and tariffs relies on structured text and numeric data such as invoices, classification codes, and tariff schedules, with little inherent need for image, audio, or spatial reasoning.",
+      "adequacy_evidence": "Current AI systems can handle any minor multimodal aspects (e.g., OCR of documents) reliably, and the core task is fully supported through text-based processing.",
+      "_timestamp": "2026-04-06T04:29:40"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating duties and tariffs is typically done with reference materials and systems where turnaround times of minutes are acceptable; it is not a real-time task requiring instant responses.",
+      "adequacy_evidence": "AI agents can perform tariff classification lookups and duty calculations quickly within the available time window, with no meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-06T04:29:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The calculation feeds into filings and financial obligations relied on by importers and customs authorities, but the identity of who performs the calculation is not central as long as results are accurate and compliant.",
+      "adequacy_evidence": "Automated tariff and duty calculation tools are already widely used in customs brokerage workflows, and stakeholders generally accept machine-generated outputs if they meet regulatory standards.",
+      "_timestamp": "2026-04-06T04:29:41"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. customs regulations require licensed customs brokers to be responsible for entry filings and compliance decisions, but they do not explicitly prohibit the use of software or AI to calculate duties. However, the licensed broker must exercise oversight and cannot delegate legal responsibility to an autonomous system, creating partial restriction.",
+      "_timestamp": "2026-04-06T04:29:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining duties requires correct HS classification, valuation, country of origin, and applicable trade rules; mistakes can be subtle and often require expert review of documentation and regulations to detect.",
+      "adequacy_evidence": "Current AI frequently struggles with nuanced classification and regulatory exceptions, and its errors are not easily spotted without detailed expert checking, making substantial verification effort necessary.",
+      "_timestamp": "2026-04-06T04:29:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect duty or tariff calculations can lead to fines, shipment delays, audits, or legal penalties; even small residual errors can have significant compliance and financial consequences.",
+      "adequacy_evidence": "While rates and calculations can be cross-checked against tariff schedules and automated systems, AI may still misclassify goods or miss edge-case rules, leaving some non-trivial residual risk after standard verification.",
+      "_timestamp": "2026-04-06T04:29:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

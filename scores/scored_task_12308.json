@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-8012.00",
+  "task_id": 12308,
+  "task_statement": "Calculate load estimates or equipment requirements to determine required control settings.",
+  "occupation_title": "Power Distributors and Dispatchers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Calculating load estimates and determining control settings is typically done using computer-based models, SCADA data, and planning software, which can be accessed remotely. The task is analytical and does not require physical interaction with equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While load estimation relies on established engineering formulas and system models, operators often apply experience-based judgment to account for anomalies like unusual demand patterns, weather impacts, or equipment quirks not fully captured in formal rules.",
+      "adequacy_evidence": "Current AI systems can replicate standard calculations and incorporate historical data, but may lack nuanced calibration for atypical grid conditions or rare contingencies that experienced dispatchers handle through tacit knowledge.",
+      "_timestamp": "2026-04-06T04:39:03"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Load estimation and equipment sizing vary across grid topologies, regional demand patterns, weather conditions, outage scenarios, and regulatory constraints, creating a broad and context-sensitive distribution of cases.",
+      "adequacy_evidence": "While textbooks, simulation tools (e.g., power flow models), and some historical grid data provide strong coverage, much high-fidelity operational data (e.g., real-time SCADA, rare contingency cases) is proprietary or sparse, leaving some gaps that can only be partially filled with synthetic data.",
+      "_timestamp": "2026-04-06T04:39:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task relies on established engineering models, system constraints, and operating procedures, but requires some contextual judgment about conditions like demand variability, contingencies, and safety margins.",
+      "adequacy_evidence": "Given sufficient system data and constraints, current AI agents can reliably infer objectives and apply appropriate calculations with minimal ambiguity-related failure.",
+      "_timestamp": "2026-04-06T04:39:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a structured sequence of calculations (e.g., assessing demand, applying formulas, checking constraints) where intermediate steps inform final control settings, but the sequence is relatively bounded and methodical.",
+      "adequacy_evidence": "Well-scaffolded AI systems with tool use can reliably carry out multi-step engineering calculations without significant degradation over this sequence length, maintaining consistency across steps.",
+      "_timestamp": "2026-04-06T04:39:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Load estimation and equipment requirement calculations are primarily based on current system conditions, real-time telemetry, and established models rather than accumulated cross-session context.",
+      "adequacy_evidence": "Modern AI systems can easily access any needed historical data from external systems when required, and the task does not depend on maintaining persistent longitudinal memory.",
+      "_timestamp": "2026-04-06T04:39:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating multiple inputs (e.g., load data, equipment ratings, system constraints) and performing calculations, but the information volume is structured and typically manageable within a single analytical workflow.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, code execution) can reliably track, retrieve, and manipulate this level of structured information without significant loss or drift.",
+      "_timestamp": "2026-04-06T04:39:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves numerical data, system parameters, and formulas derived from telemetry and engineering specifications, which can be represented textually or in structured data form.",
+      "adequacy_evidence": "Current AI agents handle structured numerical and textual inputs well, and no significant non-text perception or generation is required for competent performance.",
+      "_timestamp": "2026-04-06T04:39:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "NERC reliability standards require certified human system operators/dispatchers to make and be accountable for real-time operational decisions, which implicitly restricts fully autonomous AI control, but do not prohibit AI tools assisting with calculations like load estimates.",
+      "_timestamp": "2026-04-06T04:39:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Power grid dispatch requires near-real-time calculations to maintain system stability, often under seconds-to-minute constraints during dynamic load changes or contingencies.",
+      "adequacy_evidence": "Well-tooled AI agents can perform load calculations and equipment sizing rapidly using deterministic methods and existing models, with no need for slow extended reasoning.",
+      "_timestamp": "2026-04-06T04:39:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal technical calculation used within grid operations, with outputs consumed impersonally by control systems or colleagues rather than requiring stakeholder engagement with the performer.",
+      "adequacy_evidence": "Utilities already rely heavily on automated and algorithmic systems for load estimation and control settings, and stakeholders are generally indifferent to whether a human or AI performs the calculation.",
+      "_timestamp": "2026-04-06T04:39:07"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Incorrect load estimates or control settings in power distribution can destabilize the grid, causing outages, equipment damage, or cascading failures with major safety and economic impacts, so even rare residual errors are intolerable.",
+      "adequacy_evidence": "Even with standard checks, current AI systems can produce subtle miscalculations or misjudgments under complex, dynamic grid conditions, leaving residual risks that are too severe and unpredictable for such high-stakes operations.",
+      "_timestamp": "2026-04-06T04:39:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Load estimation and control setting calculations in power systems involve complex, interdependent variables where errors may not be immediately visible and often require simulation, cross-checking against system models, or expert review to detect.",
+      "adequacy_evidence": "Current AI systems can produce plausible calculations but are prone to subtle modeling or assumption errors, and verifying outputs requires detailed engineering validation, making the checking burden substantial and unavoidable.",
+      "_timestamp": "2026-04-06T04:39:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

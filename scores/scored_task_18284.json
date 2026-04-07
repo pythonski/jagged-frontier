@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4012.01",
+  "task_id": 18284,
+  "task_statement": "Divide agricultural fields into georeferenced zones, based on soil characteristics and production potentials.",
+  "occupation_title": "Precision Agriculture Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Creating georeferenced management zones is typically done using GIS or precision agriculture software that analyzes soil, yield, and remote sensing data on a computer; the zoning itself does not require physical presence in the field."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Field zoning varies widely across soil types, climates, crop systems, sensor modalities, and management goals, creating a highly heterogeneous and context-sensitive distribution of cases.",
+      "adequacy_evidence": "There is substantial data from remote sensing, yield maps, and agronomic studies, but much high-resolution, farm-specific data and decision rationale is proprietary or sparse, leaving some gaps that can only be partially filled via synthesis or generalization.",
+      "_timestamp": "2026-04-05T23:09:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple large geospatial layers (soil properties, yield data, topography, sensor inputs) and maintaining consistent alignment across them while segmenting zones, making within-episode information volume and structure substantial.",
+      "adequacy_evidence": "Agents can offload much of this to GIS tools and structured data pipelines, but they can still lose track of layer relationships or mis-handle intermediate representations when coordinating complex spatial transformations.",
+      "_timestamp": "2026-04-05T23:09:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step workflow (integrating soil data, geospatial mapping, clustering, and validation), where outputs from earlier steps inform later ones but sequences are not \u0905\u0924\u094d\u092f long or tightly coupled.",
+      "adequacy_evidence": "AI agents can generally sustain coherence across such GIS-style pipelines with tooling, but may show some drift or error propagation across steps, especially in data preprocessing and zoning decisions.",
+      "_timestamp": "2026-04-05T23:09:02"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the general goal is clear, key choices (e.g., which soil variables to prioritize, how to weight yield potential, and appropriate zoning granularity) depend on farm-specific goals and agronomic judgment.",
+      "adequacy_evidence": "Current agents can propose reasonable zoning given data, but often require human input to align with local practices, economic priorities, and implicit agronomic preferences.",
+      "_timestamp": "2026-04-05T23:09:02"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While zoning can be guided by explicit GIS and statistical methods (e.g., clustering yield, soil, and elevation data), practitioners routinely apply experience-based judgment to select variables, interpret noisy data, and adjust zones to local agronomic realities.",
+      "adequacy_evidence": "Current AI agents can execute standard zoning workflows and data-driven segmentation, but often lack the nuanced calibration to local conditions and edge cases (e.g., atypical soil behavior or management history), leading to moderate gaps in non-routine scenarios.",
+      "_timestamp": "2026-04-05T23:09:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Zoning decisions often incorporate historical yield maps, prior soil tests, and past management zones, but each analysis can also be performed using current-season geospatial and soil data alone.",
+      "adequacy_evidence": "Modern AI systems can reliably integrate with geospatial databases and farm management systems to store and retrieve historical field data across seasons, so cross-session memory is not a major limitation.",
+      "_timestamp": "2026-04-05T23:09:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Field zoning based on soil and yield data is typically an offline geospatial analysis task where minutes to hours of processing time is acceptable.",
+      "adequacy_evidence": "Current AI systems can perform geospatial clustering and analysis well within acceptable timeframes, so latency does not meaningfully constrain output quality.",
+      "_timestamp": "2026-04-05T23:09:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies on geospatial data, soil maps, yield maps, and possibly satellite or sensor imagery, requiring spatial reasoning and integration of non-text data to delineate zones.",
+      "adequacy_evidence": "Current agents can process GIS layers and remote sensing data with tools, but often struggle with fine-grained spatial interpretation, heterogeneous data fusion, and agronomic nuance in complex field conditions.",
+      "_timestamp": "2026-04-05T23:09:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in zoning can reduce yield efficiency or misallocate inputs, causing economic loss, but impacts are typically reversible in future seasons and not catastrophic.",
+      "adequacy_evidence": "With standard validation (e.g., agronomist review, yield maps, soil sampling cross-checks), AI-generated zones can be corrected, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T23:09:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Farmers and agronomists rely on the zoning outputs for decision-making, so stakeholders must engage with and trust the recommendations, though the task is technical rather than relational.",
+      "adequacy_evidence": "Precision agriculture already widely incorporates algorithmic and AI-driven tools, and stakeholders generally accept these systems if they demonstrate accuracy and agronomic value.",
+      "_timestamp": "2026-04-05T23:09:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit or restrict AI systems from generating georeferenced agricultural zoning based on soil and yield data. This task is routinely performed by software tools and decision-support systems without mandated human licensure.",
+      "_timestamp": "2026-04-05T23:09:06"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Validating zone delineations requires integrating GIS outputs with soil sampling, yield data, and agronomic expertise; many errors are spatially subtle and may only become evident over time or through field validation.",
+      "adequacy_evidence": "AI systems can generate reasonable zonation maps from available data, but they still require expert review and ground-truthing, as misinterpretation of heterogeneous field conditions or data gaps is not reliably self-evident.",
+      "_timestamp": "2026-04-05T23:09:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

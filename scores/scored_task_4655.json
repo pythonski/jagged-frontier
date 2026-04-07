@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3021.02",
+  "task_id": 4655,
+  "task_statement": "Track accumulated hours and dollar amounts charged to each client job to calculate client fees for professional services, such as legal or accounting services.",
+  "occupation_title": "Billing and Posting Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Tracking hours and calculating client fees is typically done using billing, accounting, or spreadsheet software, which can be accessed remotely. While source data might occasionally originate from paper records, the task itself is fundamentally digital and can be performed entirely on a computer."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans some variation in billing models (hourly rates, fixed fees, discounts, client-specific rules) and software systems, but remains largely structured and repetitive across organizations.",
+      "adequacy_evidence": "There is abundant accessible data (timesheets, invoices, accounting workflows) and clear procedural documentation, and synthetic generation of edge cases is straightforward, so coverage is effectively complete for current AI systems.",
+      "_timestamp": "2026-04-06T03:44:47"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves applying explicit rules\u2014recording hours, multiplying by predefined billing rates, and summing totals\u2014based on structured inputs like timesheets and fee schedules.",
+      "adequacy_evidence": "Current AI systems can reliably perform these rule-based calculations and handle standard exceptions using programmed logic or learned patterns, with little need for tacit judgment.",
+      "_timestamp": "2026-04-06T03:44:47"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step aggregation (collecting time entries, applying rates, summing totals) where consistency across steps matters, but sequences are relatively short and modular rather than deeply interdependent.",
+      "adequacy_evidence": "LLM-based agents with spreadsheet or database tools can reliably maintain state and perform these calculations across steps with minimal degradation, as workflows are structured and easily externalized.",
+      "_timestamp": "2026-04-06T03:44:47"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on explicit inputs (recorded hours, billing rates, client/job codes) and well-defined billing rules or fee schedules, leaving little need for interpreting implicit objectives.",
+      "adequacy_evidence": "Current AI agents can reliably apply structured rules and calculations to tracked data in billing systems with minimal ambiguity or need for iterative clarification.",
+      "_timestamp": "2026-04-06T03:44:47"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating and reconciling multiple time and billing entries per client job, requiring tracking and updating structured numeric data within an episode, but the information is typically well-organized and bounded.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, databases) reliably manage structured records, perform aggregations, and maintain consistency without significant context loss in this scope.",
+      "_timestamp": "2026-04-06T03:44:48"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "The task inherently depends on maintaining cumulative records of hours and charges across many sessions over time for each client job.",
+      "adequacy_evidence": "Current AI systems can reliably use databases and accounting software integrations to store, update, and retrieve persistent records across sessions with minimal failure.",
+      "_timestamp": "2026-04-06T03:44:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves handling structured numeric and textual data such as time entries, billing rates, and client records, which are typically managed in text-based or tabular systems.",
+      "adequacy_evidence": "Current AI systems can fully process and manage text and numerical data for billing tasks without needing multimodal capabilities, so there is no shortfall.",
+      "_timestamp": "2026-04-06T03:44:49"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Tracking hours and calculating client fees is typically done in batch processes or routine workflows where minutes or longer delays are acceptable.",
+      "adequacy_evidence": "Current AI systems can easily perform these calculations and record-keeping tasks well within acceptable timeframes without any need to trade off reasoning quality for speed.",
+      "_timestamp": "2026-04-06T03:44:49"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from performing clerical billing tasks like tracking hours and calculating fees. While professional services firms are regulated, these rules do not bar automation of administrative billing functions.",
+      "_timestamp": "2026-04-06T03:44:49"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in tracking hours or charges can lead to incorrect client billing, disputes, and financial misstatements, but these are typically detectable and correctable without severe or irreversible harm.",
+      "adequacy_evidence": "With standard checks like reconciliations, audit trails, and supervisor review, AI-generated outputs can be validated effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T03:44:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal bookkeeping; outputs are used within the organization to generate invoices, with no direct interaction requiring stakeholder engagement with the performer.",
+      "adequacy_evidence": "Because stakeholders do not directly engage with the clerk and care mainly about accurate billing outcomes, they are largely indifferent to whether the work is done by AI or a human.",
+      "_timestamp": "2026-04-06T03:44:50"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves structured numerical data (hours, rates, totals) with clear audit trails, and errors can typically be detected through reconciliation, cross-checking source records, and recalculations, though this requires some attention to detail.",
+      "adequacy_evidence": "Current AI systems can perform these calculations accurately in most cases, but still require routine verification to catch occasional mistakes in data handling, rate application, or edge cases, making some checking effort necessary.",
+      "_timestamp": "2026-04-06T03:44:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

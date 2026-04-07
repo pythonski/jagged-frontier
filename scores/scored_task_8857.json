@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3031.01",
+  "task_id": 8857,
+  "task_statement": "Supervise employees performing financial reporting, accounting, billing, collections, payroll, and budgeting duties.",
+  "occupation_title": "Treasurers and Controllers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Supervision of finance staff is largely done through digital systems, reports, messaging, and video meetings, but many organizations still involve in-person management, meetings, or handling physical documents in office settings."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Supervising financial staff involves implicit priorities like risk tolerance, compliance interpretation, deadline tradeoffs, and interpersonal management that are not fully codified and vary by organization.",
+      "adequacy_evidence": "Current AI agents can infer general supervisory goals and financial standards but often miss organization-specific norms, stakeholder expectations, and nuanced human management signals without iterative human guidance.",
+      "_timestamp": "2026-04-06T01:40:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Supervising financial operations involves interpreting accounting standards in ambiguous cases, prioritizing risks, handling exceptions, and managing staff performance\u2014activities that rely on experience-based judgment and organizational context beyond explicit rules.",
+      "adequacy_evidence": "Current AI can apply rules and flag anomalies but lacks robust calibration for nuanced managerial judgment, interpersonal supervision, and context-specific tradeoffs, leading to gaps in non-routine supervisory decisions.",
+      "_timestamp": "2026-04-06T01:40:26"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Supervising finance functions spans diverse organizational contexts, regulatory regimes, team compositions, performance issues, and edge cases like errors or misconduct, creating a broad and heterogeneous distribution of situations.",
+      "adequacy_evidence": "While management practices, accounting workflows, and supervisory scenarios are documented in training data, many real-world instances (e.g., internal conflicts, firm-specific processes, sensitive financial issues) are private and underrepresented, though partially approximable via synthesis.",
+      "_timestamp": "2026-04-06T01:40:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Supervising financial reporting, payroll, budgeting, and related functions involves long, interdependent workflows across reporting cycles where consistency, coordination, and error propagation matter over time.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step workflows with tooling, but over extended supervisory horizons they show moderate degradation via context loss, coordination gaps, and drift across interconnected processes.",
+      "_timestamp": "2026-04-06T01:40:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Supervising accounting and finance staff primarily involves reviewing reports, spreadsheets, policies, and communications, all of which are text and numeric data; visual elements like charts are secondary and not essential.",
+      "adequacy_evidence": "Current AI systems can already process and generate structured financial text and basic visuals (e.g., charts) adequately, and the task does not rely on complex multimodal perception.",
+      "_timestamp": "2026-04-06T01:40:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Supervising multiple financial functions requires tracking large volumes of heterogeneous information (reports, ledgers, payroll data, employee outputs, deadlines) and integrating them to detect inconsistencies or issues within a single workflow.",
+      "adequacy_evidence": "LLM agents with tools can aggregate and retrieve large financial datasets, but still show gaps in reliably maintaining precise state across many interdependent details, with risks of omission or summary distortion.",
+      "_timestamp": "2026-04-06T01:40:28"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Supervising financial operations staff requires maintaining longitudinal knowledge of employee performance, prior errors, process changes, audit histories, and evolving organizational policies across reporting cycles.",
+      "adequacy_evidence": "Current agents can persist structured data and logs, but they struggle to reliably synthesize evolving human performance context and nuanced historical patterns across sessions without significant custom system design.",
+      "_timestamp": "2026-04-06T01:40:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Supervisory oversight of financial reporting and related functions typically operates on daily, weekly, or monthly cycles, where minutes-to-hours latency is acceptable for reviewing work and giving direction.",
+      "adequacy_evidence": "Current AI systems can generate analyses, summaries, and supervisory guidance well within these timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T01:40:29"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Financial reporting and accounting errors can often be detected through reconciliations, audits, and controls, but doing so requires domain expertise and systematic review rather than being immediately obvious.",
+      "adequacy_evidence": "AI can assist with monitoring and flagging anomalies, but its supervisory judgments and prioritization would still require regular expert review, as subtle compliance or judgment errors are not always reliably caught automatically.",
+      "_timestamp": "2026-04-06T01:40:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task centers on supervising employees, where authority, trust, and interpersonal legitimacy are critical for directing work, resolving issues, and maintaining team performance.",
+      "adequacy_evidence": "Employees are likely to resist or distrust an AI supervisor, especially for performance management, feedback, and conflict resolution, making acceptance a significant barrier to effective execution.",
+      "_timestamp": "2026-04-06T01:40:30"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Supervising core financial functions carries high consequence risk: residual errors can lead to regulatory violations, financial misstatements, legal liability, and significant organizational harm even after standard controls.",
+      "adequacy_evidence": "Even with audits and controls, AI may miss subtle judgment calls or emerging risks in supervision, leaving non-trivial residual risk, though not uniformly catastrophic if layered oversight remains.",
+      "_timestamp": "2026-04-06T01:40:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Financial regulations (e.g., Sarbanes-Oxley) require designated human officers to be accountable for supervision, internal controls, and sign-offs, which limits fully autonomous AI substitution. However, there is no explicit prohibition on AI assisting or performing supervisory functions under human oversight.",
+      "_timestamp": "2026-04-06T01:40:30"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

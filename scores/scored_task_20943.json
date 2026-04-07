@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.04",
+  "task_id": 20943,
+  "task_statement": "Manage activities related to strategic or tactical purchasing, material requirements planning, controlling inventory, warehousing, or receiving.",
+  "occupation_title": "Supply Chain Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Strategic purchasing, material requirements planning, and inventory control are largely managed through ERP systems, spreadsheets, and digital communication. However, managing warehousing or receiving operations often requires some on-site oversight or coordination with physical logistics activities."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse industries, demand patterns, supplier networks, regulatory contexts, and disruption scenarios, making the instance distribution highly heterogeneous and context-sensitive.",
+      "adequacy_evidence": "While there is substantial coverage in public case studies, ERP data schemas, and simulated planning environments, much real-world signal (firm-specific demand data, supplier performance, internal decision rationales) is private and only partially reproducible via synthetic or RL methods.",
+      "_timestamp": "2026-04-06T01:26:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves balancing cost, service levels, risk, supplier relationships, and organizational priorities that are often implicit, shifting, and stakeholder-dependent rather than fully specified.",
+      "adequacy_evidence": "Current agents can infer objectives from data and KPIs but often miss nuanced tradeoffs, informal priorities, and evolving constraints, requiring human guidance to align with true intent.",
+      "_timestamp": "2026-04-06T01:26:12"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Managing purchasing, inventory, and material requirements planning involves long, interdependent workflows across forecasting, ordering, logistics coordination, and inventory control, where earlier decisions directly affect downstream outcomes.",
+      "adequacy_evidence": "Well-scaffolded agents can execute multi-step supply chain workflows, but over extended sequences they show some goal drift, constraint loss, and error compounding, especially when plans must adapt dynamically over time.",
+      "_timestamp": "2026-04-06T01:26:13"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Managing purchasing, MRP, inventory, and warehousing requires tracking large, heterogeneous, and rapidly updating datasets (orders, stock levels, lead times, supplier constraints) where missing details can cause significant operational errors.",
+      "adequacy_evidence": "Agents can use databases and tools to handle large datasets, but they still show weaknesses in maintaining consistent state across complex, evolving workflows and may mis-handle edge cases or context compression.",
+      "_timestamp": "2026-04-06T01:26:13"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Supply chain management depends on persistent tracking of inventory levels, supplier performance, demand forecasts, and procurement history over extended periods, requiring rich cross-session state.",
+      "adequacy_evidence": "Current AI agents can integrate with ERP systems and databases to access historical data, but maintaining and correctly leveraging evolving context across complex, multi-system environments is still error-prone and inconsistent.",
+      "_timestamp": "2026-04-06T01:26:13"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective supply chain management relies heavily on experience-based judgment about supplier reliability, demand variability, lead-time risk, and trade-offs between cost, service levels, and resilience that are not fully captured in formal rules.",
+      "adequacy_evidence": "Current AI agents can model forecasts, optimize inventory, and apply heuristics, but they lack robust real-world calibration for nuanced exceptions like supplier behavior shifts, disruption handling, and context-specific trade-offs.",
+      "_timestamp": "2026-04-06T01:26:13"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task may involve interpreting dashboards, warehouse layouts, or shipment visuals, but most decisions rely on structured data, reports, and planning systems rather than rich multimodal inputs.",
+      "adequacy_evidence": "Current AI agents can effectively process relevant visuals like charts, inventory images, and basic spatial data, and these modalities are not complex enough to pose a significant limitation.",
+      "_timestamp": "2026-04-06T01:26:14"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Strategic purchasing, inventory control, and materials planning are typically conducted on hourly to multi-day cycles (e.g., MRP runs, supplier coordination), not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI agents can perform analysis, optimization, and reporting well within these time windows, so extended reasoning does not conflict with latency expectations.",
+      "_timestamp": "2026-04-06T01:26:14"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit AI from performing supply chain management activities such as purchasing, inventory control, or warehousing. While regulated industries may impose compliance requirements, these do not ban AI use outright.",
+      "_timestamp": "2026-04-06T01:26:15"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordination with suppliers, logistics partners, and internal teams who rely on plans and decisions, but effectiveness is not heavily tied to personal authority or human identity.",
+      "adequacy_evidence": "While stakeholders may accept AI-generated plans or recommendations, full delegation to an AI agent could face some resistance in negotiations or coordination, especially where trust and accountability matter.",
+      "_timestamp": "2026-04-06T01:26:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Mistakes in purchasing plans, inventory policies, or MRP settings often manifest with delays (stockouts, excess inventory, cost overruns) and require domain expertise, cross-system checks, and time-series analysis to detect and diagnose.",
+      "adequacy_evidence": "Current AI systems can generate plausible but flawed plans or parameter settings, and these errors are not easily caught without detailed review and simulation, making substantial human verification effort necessary.",
+      "_timestamp": "2026-04-06T01:26:15"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in purchasing, inventory, or materials planning can lead to stockouts, excess inventory, or cost inefficiencies, which have meaningful business impact but are typically recoverable over time.",
+      "adequacy_evidence": "Even with standard checks, AI may still miss nuanced demand signals, supplier risks, or coordination issues, leaving a non-trivial level of residual risk that can disrupt operations.",
+      "_timestamp": "2026-04-06T01:26:15"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

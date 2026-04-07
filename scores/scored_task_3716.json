@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2042.00",
+  "task_id": 3716,
+  "task_statement": "Develop applied software for the analysis and interpretation of geological data.",
+  "occupation_title": "Geoscientists, Except Hydrologists and Geographers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Developing applied software involves coding, testing, and maintaining programs on computers using digital datasets and development tools, all of which can be done remotely without physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Geological data analysis spans highly heterogeneous data types (e.g., seismic, well logs, geochemical assays, remote sensing) across varied geological settings, creating a long-tailed distribution of domain-specific cases.",
+      "adequacy_evidence": "There is substantial public data (e.g., USGS, SEG datasets), academic literature, and open-source geoscience software, but key industrial datasets (e.g., proprietary seismic and drilling data) are restricted, leaving some important subpopulations underrepresented though partially recoverable via synthesis and proxies.",
+      "_timestamp": "2026-04-06T02:56:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task typically involves unclear and evolving scientific goals, heterogeneous data sources, and stakeholder-specific interpretations, requiring substantial inference about what analyses, models, and outputs are actually needed.",
+      "adequacy_evidence": "Current agents can propose and iteratively refine software based on feedback, but often miss domain-specific intent and implicit scientific requirements without significant human guidance.",
+      "_timestamp": "2026-04-06T02:56:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing applied geological analysis software involves long, interdependent sequences: requirements gathering, data pipeline design, algorithm implementation, validation against domain constraints, and iterative debugging, where early errors can propagate into later stages.",
+      "adequacy_evidence": "Well-scaffolded AI agents can handle multi-step coding workflows with tooling and iteration, but still show some degradation over long sequences, such as losing track of constraints or introducing inconsistencies across modules.",
+      "_timestamp": "2026-04-06T02:56:09"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing software for geological data interpretation requires domain-specific judgment about modeling assumptions, signal vs. noise, and appropriate analytical techniques, which are often learned through experience with real-world datasets and edge cases.",
+      "adequacy_evidence": "Current agents can reproduce many standard analytical patterns and workflows, but they lack consistent calibration for nuanced geological interpretation choices and may mis-handle atypical or ambiguous data contexts.",
+      "_timestamp": "2026-04-06T02:56:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing geological data analysis software requires tracking large, heterogeneous datasets, domain-specific transformations, evolving code structures, and multiple intermediate representations where missing details can cause significant errors.",
+      "adequacy_evidence": "Agents can offload much of this via tools (files, vector stores, code execution), but still show context loss and imperfect state tracking across complex multi-file or multi-step workflows.",
+      "_timestamp": "2026-04-06T02:56:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Applied geoscience software development typically builds on evolving codebases, datasets, and project-specific modeling assumptions that must be referenced across sessions.",
+      "adequacy_evidence": "Current agents can use repositories, documentation, and external memory stores to retain context, but they still inconsistently recall prior decisions and project nuances without careful scaffolding.",
+      "_timestamp": "2026-04-06T02:56:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Developing applied software for geological data analysis is typically an offline, iterative process where minutes to hours (or longer) are acceptable for design, coding, and testing cycles.",
+      "adequacy_evidence": "Current AI agents can take sufficient time for extended reasoning, code generation, and debugging without meaningful quality degradation under these loose latency constraints.",
+      "_timestamp": "2026-04-06T02:56:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in scientific analysis software (e.g., misapplied models, numerical instability, incorrect geological assumptions) can be subtle and require domain expertise, validation datasets, and extensive testing to detect, often with delayed feedback.",
+      "adequacy_evidence": "AI-generated code frequently contains logical and domain-specific mistakes that are not obvious without thorough testing and expert review, making verification burdens high and unverified use risky.",
+      "_timestamp": "2026-04-06T02:56:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Geological data analysis routinely involves interpreting seismic images, spatial maps, 3D subsurface models, and other non-textual data formats, making multimodal processing central to the task.",
+      "adequacy_evidence": "Current agents can process images and structured arrays and assist with visualization code, but they are less reliable on complex geospatial reasoning and high-fidelity interpretation of 3D or domain-specific geological visual data.",
+      "_timestamp": "2026-04-06T02:56:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations in the U.S. prohibiting AI from developing software for geological data analysis. While licensed geoscientists may be required to sign off on certain professional outputs, the act of creating analytical software itself is not restricted.",
+      "_timestamp": "2026-04-06T02:56:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in software interpreting geological data can lead to costly misallocation of drilling resources, missed resource deposits, or flawed hazard assessments, so even rare residual mistakes can have significant economic or safety consequences.",
+      "adequacy_evidence": "While standard validation (testing, benchmarking against known datasets, expert review) can catch many issues, AI-generated code may still introduce subtle logic or modeling errors that are hard to fully eliminate, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T02:56:12"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces software used by scientists, engineers, or clients who rely on its outputs, so stakeholders interact with and depend on the deliverable, though not strongly on the developer\u2019s personal identity.",
+      "adequacy_evidence": "AI-assisted or AI-developed software is already widely accepted in technical domains; stakeholders primarily care about performance, reliability, and validation rather than whether an AI contributed to development.",
+      "_timestamp": "2026-04-06T02:56:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3031.00",
+  "task_id": 2503,
+  "task_statement": "Reconcile records of bank transactions.",
+  "occupation_title": "Bookkeeping, Accounting, and Auditing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Bank reconciliation is typically performed using accounting software and electronic bank statements, making it fully doable on a computer in most cases. However, some organizations still rely on paper statements or physical receipts that require manual handling."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reconciliation involves varied but well-structured cases (e.g., timing differences, duplicates, missing entries, bank fees) across different account types and systems, creating moderate diversity but within a bounded domain.",
+      "adequacy_evidence": "There is abundant accessible data (financial records, accounting training materials, synthetic transaction logs) with clear process demonstrations, enabling comprehensive coverage of relevant scenarios.",
+      "_timestamp": "2026-04-06T03:15:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reconciling bank transactions is largely governed by explicit accounting rules and matching procedures, but resolving discrepancies (e.g., timing differences, ambiguous entries) can require some experience-based judgment.",
+      "adequacy_evidence": "Current AI agents, given structured data and rules, can reliably perform matching and flag exceptions, and can handle most discrepancy resolution patterns using learned heuristics and procedural logic.",
+      "_timestamp": "2026-04-06T03:15:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reconciliation often depends on prior periods\u2019 records, outstanding discrepancies, and consistent handling of recurring items, but each reconciliation cycle is largely anchored in the current dataset with limited historical depth.",
+      "adequacy_evidence": "Current AI agents can reliably integrate with accounting systems and databases that persist transaction histories and prior reconciliation states, making cross-session retrieval straightforward and well-supported.",
+      "_timestamp": "2026-04-06T03:15:48"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reconciling bank transactions involves a multi-step workflow (matching entries, identifying discrepancies, making adjustments), but the steps are relatively modular and do not form long, tightly coupled dependency chains.",
+      "adequacy_evidence": "Modern AI agents with tool use can reliably execute these structured, moderately long workflows without significant degradation, as each step can be validated and corrected incrementally.",
+      "_timestamp": "2026-04-06T03:15:48"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reconciliation follows established accounting rules (matching transactions, identifying timing differences, resolving discrepancies), but requires some judgment for unclear entries, categorization, and exception handling.",
+      "adequacy_evidence": "Current AI agents can reliably perform rule-based matching and flag inconsistencies, but often struggle to fully resolve ambiguous discrepancies or infer correct adjustments without human guidance.",
+      "_timestamp": "2026-04-06T03:15:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Bank transaction reconciliation is typically performed in batch workflows (e.g., daily or periodic close), where minutes or longer processing times are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform reconciliation with ample time for multi-step reasoning and checks, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T03:15:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reconciling transactions requires tracking entries across bank statements, ledgers, and discrepancies within a single session, but the volume is structured and typically manageable with standard tools.",
+      "adequacy_evidence": "Well-scaffolded agents using spreadsheets or databases can reliably store, retrieve, and cross-reference all relevant entries without losing context or mismanaging state.",
+      "_timestamp": "2026-04-06T03:15:50"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reconciling bank transactions is primarily a text- and number-based task involving ledgers, statements, and spreadsheets, with minimal reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI systems handle structured and semi-structured financial text and numeric data well, and any occasional document parsing (e.g., PDFs) is already reliably supported.",
+      "_timestamp": "2026-04-06T03:15:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reconciling bank transactions is primarily an internal accounting task; outputs are reviewed for accuracy rather than relying on interpersonal trust or performer identity.",
+      "adequacy_evidence": "Organizations already accept automated and software-driven reconciliation processes, indicating little to no resistance to AI performing this function.",
+      "_timestamp": "2026-04-06T03:15:51"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reconciliation has structured checks (e.g., matching totals, identifying unmatched items), but resolving discrepancies like timing differences, mispostings, or duplicates requires some domain judgment and review.",
+      "adequacy_evidence": "AI can perform matching and flag inconsistencies effectively, but still produces enough misclassifications or unresolved exceptions that human review of flagged items and edge cases remains necessary.",
+      "_timestamp": "2026-04-06T03:15:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from reconciling bank transaction records. While firms must maintain internal controls and may require human oversight or sign-off for accountability, these rules do not restrict the use of AI tools for performing the reconciliation itself.",
+      "_timestamp": "2026-04-06T03:15:52"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reconciliation errors can lead to misstated balances or missed discrepancies, but downstream controls (reviews, audits, subsequent reconciliations) typically catch and correct issues, making occasional residual errors survivable.",
+      "adequacy_evidence": "With rule-based checks, matching algorithms, and human spot review, AI-driven reconciliation leaves low residual risk; remaining errors are usually detectable and correctable within standard control processes.",
+      "_timestamp": "2026-04-06T03:15:52"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

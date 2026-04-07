@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1141.02",
+  "task_id": 17320,
+  "task_statement": "Refer patients requiring more specialized or complex treatment to psychiatrists, primary care physicians, or other medical specialists.",
+  "occupation_title": "Advanced Practice Psychiatric Nurses",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Referrals are typically made through electronic health records, emails, or phone communications with other providers, which can be done remotely. However, some instances involve in-person coordination, paper referrals, or discussions during face-to-face clinical visits."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining when to refer involves nuanced clinical judgment about symptom severity, comorbidities, risk (e.g., suicidality), treatment response, and scope-of-practice boundaries that are not fully captured by explicit rules.",
+      "adequacy_evidence": "Current agents can apply guidelines and flag obvious referral triggers, but often lack the calibrated judgment for borderline, context-sensitive cases involving complex psychosocial or medical interactions.",
+      "_timestamp": "2026-04-06T03:58:57"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Referral decisions span highly heterogeneous patient presentations, including diverse psychiatric conditions, comorbid medical issues, risk levels, and contextual factors like access to care and social support.",
+      "adequacy_evidence": "There is substantial coverage via clinical guidelines, case studies, and de-identified records, but real-world referral reasoning\u2014especially nuanced, context-rich cases and local resource constraints\u2014is often embedded in private clinical data and not fully captured in training pipelines.",
+      "_timestamp": "2026-04-06T03:58:57"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence: evaluating patient needs, selecting an appropriate specialist, and initiating referral with relevant information, requiring some consistency but not long or tightly coupled chains.",
+      "adequacy_evidence": "Current AI agents can reliably handle short multi-step workflows like triage and referral coordination without significant degradation across steps.",
+      "_timestamp": "2026-04-06T03:58:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining when and where to refer depends on nuanced clinical judgment, patient history, comorbidities, risk levels, patient preferences, and system constraints, which are often implicit and context-dependent rather than rule-based.",
+      "adequacy_evidence": "Current AI agents struggle to reliably infer these latent clinical and contextual factors, especially across diverse real-world cases, and cannot independently resolve the ambiguity without substantial human oversight.",
+      "_timestamp": "2026-04-06T03:58:57"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions require synthesizing patient history, current symptoms, treatment response, comorbidities, and risk factors within a single encounter, but the information volume is typically bounded and structured within clinical workflows.",
+      "adequacy_evidence": "Current agents can track and summarize structured clinical information, but may miss subtle contextual cues or fail to reliably prioritize critical details when multiple interacting factors are present.",
+      "_timestamp": "2026-04-06T03:58:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Referral decisions are typically made during or shortly after clinical evaluation, allowing minutes rather than requiring immediate real-time response.",
+      "adequacy_evidence": "Current AI systems can generate appropriate referral recommendations well within this time window without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T03:58:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Referral decisions often depend on accumulated patient history, prior treatments, and evolving clinical context, but do not require deep longitudinal tracking beyond standard medical records.",
+      "adequacy_evidence": "Current AI systems integrated with electronic health records can reliably store and retrieve cross-session patient information, so persistent memory is not a major bottleneck.",
+      "_timestamp": "2026-04-06T03:58:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Referral decisions may incorporate observed patient behavior, affect, or clinical presentation beyond text, but are largely driven by documented symptoms, history, and clinical criteria that can be captured textually.",
+      "adequacy_evidence": "Current AI agents can handle referral reasoning effectively when provided structured or narrative clinical information; limited reliance on rich perceptual input means multimodal gaps are not a major constraint.",
+      "_timestamp": "2026-04-06T03:58:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Incorrect referral decisions can delay diagnosis or treatment of serious psychiatric or medical conditions, leading to significant harm; even rare errors can have major consequences.",
+      "adequacy_evidence": "Even with review, AI may miss nuanced clinical cues or comorbidities influencing referral necessity, leaving residual risk that is too unpredictable and consequential for safe reliance.",
+      "_timestamp": "2026-04-06T03:59:00"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether a referral is appropriate requires clinical judgment, review of patient history, and understanding of nuanced symptom presentations; errors may not be immediately apparent and can surface only after delayed outcomes.",
+      "adequacy_evidence": "Current AI systems can suggest referrals but still make subtle clinical reasoning errors, so expert review is necessary in most cases, making verification effort substantial and unavoidable.",
+      "_timestamp": "2026-04-06T03:59:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Patient referrals are legally part of licensed clinical practice; orders and referrals typically must be made and documented by a licensed provider (e.g., NP, physician) for liability, billing, and insurance purposes. Current regulations do not permit autonomous AI systems to independently issue such referrals.",
+      "_timestamp": "2026-04-06T03:59:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task requires patient trust and cooperation as well as acceptance by receiving clinicians; perceived clinical authority and judgment are central to successful referral decisions.",
+      "adequacy_evidence": "Patients and medical professionals are unlikely to accept an AI autonomously making referral decisions due to concerns about clinical judgment, liability, and legitimacy, which would significantly undermine effectiveness.",
+      "_timestamp": "2026-04-06T03:59:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "33-3021.03",
+  "task_id": 8728,
+  "task_statement": "Examine records to locate links in chains of evidence or information.",
+  "occupation_title": "Detectives and Criminal Investigators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Investigators often analyze digital databases, reports, phone records, or financial records on computers to identify links in evidence. However, some cases require reviewing physical files or evidence documents that are not digitized."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous records (financial, digital, forensic, witness statements) across diverse case contexts, requiring coverage of many edge-case patterns and evolving criminal behaviors.",
+      "adequacy_evidence": "While there are public case reports, legal documents, and synthetic data generation methods, much of the richest investigative data (detailed evidence chains, internal reasoning) is proprietary or restricted, leaving partial but not complete coverage.",
+      "_timestamp": "2026-04-05T22:12:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Identifying meaningful links in evidence chains requires inferring investigative goals, relevance, and legal significance that are often unstated and evolve as new information emerges.",
+      "adequacy_evidence": "Current agents can surface patterns and connections in records, but they frequently miss context-dependent relevance and require human guidance to refine hypotheses and interpret significance.",
+      "_timestamp": "2026-04-05T22:12:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Investigators must sift through large volumes of heterogeneous records (reports, communications, financial data) and track relationships across many entities, where missing a single link can break an evidentiary chain.",
+      "adequacy_evidence": "LLM-based agents with retrieval tools can manage large document sets, but they still show weaknesses in maintaining consistent representations of complex relational links and can miss or mis-associate details across long contexts.",
+      "_timestamp": "2026-04-05T22:12:08"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Linking evidence across records requires investigative intuition about relevance, credibility, and hidden relationships that is built through experience with real cases and cannot be fully reduced to explicit rules.",
+      "adequacy_evidence": "AI agents can surface patterns and connections in data, but they lack the nuanced calibration to reliably judge significance, deception, or investigative context in many non-routine cases.",
+      "_timestamp": "2026-04-05T22:12:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Linking chains of evidence requires integrating information gathered across multiple sessions, sources, and time points within an evolving investigation, often spanning long durations.",
+      "adequacy_evidence": "Current agents can store and retrieve case data using external memory systems, but they still show gaps in reliably surfacing the most relevant past information and maintaining coherent long-term investigative context.",
+      "_timestamp": "2026-04-05T22:12:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Linking chains of evidence requires multi-step reasoning across multiple records, where earlier findings inform subsequent connections, but the sequences are typically modular and can be broken into sub-analyses.",
+      "adequacy_evidence": "AI agents can handle multi-step document analysis but show some degradation over longer reasoning chains, including missed links or context drift when dependencies span many records.",
+      "_timestamp": "2026-04-05T22:12:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Detectives often analyze mixed records such as written reports, photographs, surveillance video, audio recordings, and forensic imagery to identify links in evidence chains.",
+      "adequacy_evidence": "Current AI can process individual modalities reasonably well but struggles with nuanced cross-modal synthesis (e.g., integrating visual, temporal, and contextual cues across sources) in complex investigative scenarios.",
+      "_timestamp": "2026-04-05T22:12:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Linking chains of evidence in investigative records is typically an analytical task conducted over extended periods (hours to days), without strict real-time response requirements.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform deep analysis without meaningful degradation from latency constraints, as speed is not a binding factor for this task.",
+      "_timestamp": "2026-04-05T22:12:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Identifying correct links in evidentiary chains requires cross-referencing multiple records, contextual judgment, and awareness of investigative nuances; mistakes (missed or false links) are often subtle and not immediately observable.",
+      "adequacy_evidence": "Current AI systems can propose plausible but incorrect or incomplete linkages, and verifying these requires substantial human expertise and time, as errors are neither obvious nor reliably self-flagged.",
+      "_timestamp": "2026-04-05T22:12:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrectly identifying or missing links in chains of evidence can lead to wrongful suspicion, missed perpetrators, or compromised cases, so even rare residual errors can have serious legal and societal consequences.",
+      "adequacy_evidence": "Even with review, AI-generated linkages may include subtle hallucinations or unjustified inferences that are hard to detect, leaving a meaningful but not overwhelming level of residual risk.",
+      "_timestamp": "2026-04-05T22:12:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal analytical work, but its outputs feed into decisions by investigators, prosecutors, and courts where source credibility can matter to some extent.",
+      "adequacy_evidence": "As a back-end analytical aid, AI would generally be accepted by stakeholders if results are validated by human investigators, with little resistance to its use in this supporting role.",
+      "_timestamp": "2026-04-05T22:12:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from analyzing records to identify links in evidence chains; such analytical tasks can be performed with software tools under human oversight. While law enforcement actions are regulated, the use of AI for investigative support is not explicitly restricted.",
+      "_timestamp": "2026-04-05T22:12:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

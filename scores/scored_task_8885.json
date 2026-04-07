@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3031.02",
+  "task_id": 8885,
+  "task_statement": "Review collection reports to determine the status of collections and the amounts of outstanding balances.",
+  "occupation_title": "Financial Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Collection reports are typically generated and reviewed in digital financial systems or spreadsheets, allowing remote analysis. However, in some organizations reports may still be printed or reviewed in physical files during in-office workflows."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While the core objective (identify collection status and outstanding balances) is explicit, interpretation can depend on organizational conventions, aging categories, and contextual cues in reports.",
+      "adequacy_evidence": "Current AI agents can reliably extract balances and infer status from structured or semi-structured financial reports, handling typical ambiguities with minimal need for iteration.",
+      "_timestamp": "2026-04-06T05:11:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing multiple collection reports, extracting relevant details, and synthesizing them into a determination of status and balances, requiring some multi-step consistency but not long, tightly coupled chains.",
+      "adequacy_evidence": "Frontier AI agents can reliably process and summarize multiple documents with consistent quality over such moderate-length sequences, with little observable degradation.",
+      "_timestamp": "2026-04-06T05:11:16"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interpreting collection reports, reconciling discrepancies, and judging account status (e.g., disputed vs. delinquent), which benefits from some experience-based calibration but is largely guided by standardized financial rules and reporting conventions.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably apply accounting rules, detect inconsistencies, and follow documented procedures, with minimal gaps in tacit judgment for typical cases.",
+      "_timestamp": "2026-04-06T05:11:16"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Collection reports vary across firms, industries, and accounting systems, with differences in formatting, aging categories, and reporting conventions, but follow broadly standardized accounts receivable structures.",
+      "adequacy_evidence": "There is abundant accessible data in accounting documents, training materials, and synthetic report generation, providing clear process-level signals for interpreting balances and statuses across formats.",
+      "_timestamp": "2026-04-06T05:11:16"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves scanning multiple collection reports, tracking account statuses, and aggregating outstanding balances, requiring moderate handling of structured financial data within a single episode.",
+      "adequacy_evidence": "Current AI agents with tools (e.g., spreadsheet parsing, retrieval, and summarization) can reliably manage and track this level of structured information without significant loss or drift.",
+      "_timestamp": "2026-04-06T05:11:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reviewing collection reports benefits from some awareness of prior periods (e.g., trends in outstanding balances or prior collection actions), but most necessary information is typically contained within the reports themselves.",
+      "adequacy_evidence": "Current AI systems with standard database integration and retrieval can reliably store and access historical financial records across sessions, meeting these modest longitudinal needs.",
+      "_timestamp": "2026-04-06T05:11:18"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing collection reports and assessing outstanding balances is typically a back-office analytical task with flexible deadlines; minutes to hours of latency are acceptable.",
+      "adequacy_evidence": "Current AI systems can process and analyze such reports well within the available time window without needing to sacrifice reasoning depth or accuracy.",
+      "_timestamp": "2026-04-06T05:11:18"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal analytical review of collection reports, with outputs typically consumed within the organization and not requiring interaction with external stakeholders.",
+      "adequacy_evidence": "Because the task is internal and impersonal, stakeholders are largely indifferent to whether a human or AI performs it, and AI use is unlikely to face acceptance barriers.",
+      "_timestamp": "2026-04-06T05:11:18"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from reviewing collection reports or determining outstanding balances. While financial data handling is subject to privacy and security regulations (e.g., GLBA), these govern data protection rather than restricting AI use for analysis.",
+      "_timestamp": "2026-04-06T05:11:18"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing financial collection reports, which are primarily text and numerical data in tables or structured documents; no essential reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI systems can reliably process and extract information from text and structured financial documents (e.g., PDFs, spreadsheets), so there is no meaningful multimodal gap.",
+      "_timestamp": "2026-04-06T05:11:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in assessing collection status or balances can affect financial decisions and reporting, but impacts are typically correctable and rarely catastrophic if caught later.",
+      "adequacy_evidence": "Well-scaffolded AI can reliably extract and summarize structured financial report data, and remaining errors after standard checks are unlikely to pose significant residual risk.",
+      "_timestamp": "2026-04-06T05:11:18"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining collection status and outstanding balances involves interpreting financial reports and reconciling figures, which requires domain knowledge but can be checked against source data and accounting records.",
+      "adequacy_evidence": "AI outputs can be cross-verified by recalculating totals and comparing against underlying reports, but agents may misinterpret report structure or context, so consistent human review is still needed.",
+      "_timestamp": "2026-04-06T05:11:19"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2081.00",
+  "task_id": 18551,
+  "task_statement": "Order and purchase frames and lenses.",
+  "occupation_title": "Opticians, Dispensing",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Ordering and purchasing frames and lenses is typically done through supplier websites, inventory management systems, email, or phone, all of which can be handled remotely using a computer and internet access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate frames and lenses involves some experience-based judgment about fit, patient preferences, facial features, and interpreting prescriptions beyond strict rules.",
+      "adequacy_evidence": "AI agents can follow ordering protocols and recommend options, but may lack reliable calibration for nuanced aesthetic fit and individualized tradeoffs in non-routine cases.",
+      "_timestamp": "2026-04-05T22:36:31"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different prescriptions, frame styles, suppliers, insurance constraints, and patient preferences, creating moderate variability but within well-understood commercial and clinical patterns.",
+      "adequacy_evidence": "Extensive data exists in optical catalogs, procurement workflows, EHR-linked ordering systems, and training materials, providing ample process-level examples that can be replicated or synthesized for training.",
+      "_timestamp": "2026-04-05T22:36:31"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short multi-step workflow (interpreting order details, selecting products, placing orders, confirming purchase), but steps are loosely coupled and not deeply interdependent.",
+      "adequacy_evidence": "Modern agentic systems with tool use can reliably execute short transactional workflows without noticeable degradation, maintaining consistency across these limited steps.",
+      "_timestamp": "2026-04-05T22:36:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Beyond the prescription, selecting frames and lenses involves implicit factors like patient preferences, fit, lifestyle needs, insurance constraints, and product compatibility, which are not fully specified upfront.",
+      "adequacy_evidence": "Current agents can handle structured inputs (prescriptions, inventory rules) but often miss nuanced preferences or context (style, comfort, subtle constraints), requiring human clarification or iteration.",
+      "_timestamp": "2026-04-05T22:36:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Selecting frames involves visual assessment of styles, shapes, and colors, and lens options may involve diagrams or measurements, so some image-based understanding is relevant.",
+      "adequacy_evidence": "Current agents can reliably interpret product images, catalogs, and structured specifications, making them adequate for typical ordering and purchasing tasks.",
+      "_timestamp": "2026-04-05T22:36:34"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires handling multiple pieces of information such as prescriptions, frame specifications, lens options, supplier catalogs, and insurance details, but the overall volume and structure are manageable within a single transaction.",
+      "adequacy_evidence": "Current AI agents with tool integration can reliably track and organize these structured inputs (e.g., prescriptions, SKUs, options) without significant loss or drift during a single ordering session.",
+      "_timestamp": "2026-04-05T22:36:34"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering and purchasing frames and lenses is typically a self-contained transaction based on a current prescription and immediate order details, with minimal need for longitudinal context.",
+      "adequacy_evidence": "Existing systems and agents can easily retrieve any needed prior records (e.g., prescriptions or past orders), so cross-session memory needs are already well supported.",
+      "_timestamp": "2026-04-05T22:36:34"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Orders can be checked against prescriptions, measurements, and product specifications, but this requires domain knowledge and careful review; some errors (e.g., incorrect lens options) may only be noticed after delivery.",
+      "adequacy_evidence": "AI systems can generate plausible orders but may mis-specify parameters or overlook constraints, so human verification of prescriptions, frame compatibility, and lens details remains necessary.",
+      "_timestamp": "2026-04-05T22:36:35"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering and purchasing frames and lenses is typically a back-office or consultative task with no strict real-time constraints; delays of minutes or longer are acceptable.",
+      "adequacy_evidence": "AI systems can easily operate within these relaxed time constraints, allowing full reasoning and tool use without any meaningful degradation in output quality.",
+      "_timestamp": "2026-04-05T22:36:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with suppliers or vendors to place orders, where another party must fulfill the request, but the performer's personal identity or rapport is not central.",
+      "adequacy_evidence": "Vendors are generally indifferent to whether orders are placed by a human or an automated system, as long as specifications and payment are correct, and such procurement automation is already common.",
+      "_timestamp": "2026-04-05T22:36:35"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors (e.g., incorrect prescription parameters or lens type) lead to customer discomfort, remakes, and cost, but are typically reversible and not medically severe.",
+      "adequacy_evidence": "Order details can be cross-checked against prescriptions and product catalogs, and mismatches are usually detectable before fulfillment, making residual AI error risk acceptable after normal checks.",
+      "_timestamp": "2026-04-05T22:36:35"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from ordering or purchasing frames and lenses. While some states require licensed opticians for dispensing eyewear to patients, inventory procurement itself is not restricted to licensed humans.",
+      "_timestamp": "2026-04-05T22:36:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

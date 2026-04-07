@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1031.02",
+  "task_id": 1170,
+  "task_statement": "Examine titles to property to determine validity and act as company agent in transactions with property owners.",
+  "occupation_title": "Claims Adjusters, Examiners, and Investigators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Title examination is commonly performed using online land records, databases, and digital documents. However, acting as an agent in property transactions can involve in-person meetings, physical document handling, or notarized signings in some cases."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Title examination relies on established legal standards and documented records, but interpreting defects, encumbrances, and transaction implications often requires context-sensitive judgment and reading between the lines of incomplete or inconsistent records.",
+      "adequacy_evidence": "Current agents can follow formal rules and analyze structured records, but they often struggle with nuanced legal interpretations, jurisdiction-specific practices, and implicit transaction goals, requiring human oversight to resolve ambiguity.",
+      "_timestamp": "2026-04-06T02:04:40"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Property title examination spans highly heterogeneous cases across jurisdictions, including varied recording systems, liens, encumbrances, defects, and transaction contexts, creating a long-tailed distribution.",
+      "adequacy_evidence": "There is substantial accessible data (public land records, title manuals, case law, training materials) and synthetic case generation is feasible, but some edge cases and local practices rely on proprietary title files and experiential data that are less accessible.",
+      "_timestamp": "2026-04-06T02:04:40"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step processes such as reviewing chains of title, verifying legal documents, and coordinating transaction steps, where consistency across stages matters but sequences are not \u0905\u0924\u094d\u092f long or deeply interdependent.",
+      "adequacy_evidence": "AI agents can generally manage structured multi-step workflows with tools, but may show drift or miss dependencies across documents and steps, leading to moderate degradation over longer sequences.",
+      "_timestamp": "2026-04-06T02:04:41"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Title examination relies on established legal rules and documented procedures, but also requires experience-based judgment to interpret irregularities, assess risk, and apply local practices or precedents.",
+      "adequacy_evidence": "AI agents can apply codified title rules and flag issues, but they show gaps in nuanced judgment for ambiguous defects, edge cases, and context-sensitive risk assessments that experienced professionals handle.",
+      "_timestamp": "2026-04-06T02:04:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Title examination and transaction handling typically occur over hours to days, with no need for immediate real-time responses; careful review is prioritized over speed.",
+      "adequacy_evidence": "Current AI systems can perform document analysis and reasoning well within these relaxed timeframes without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T02:04:42"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Title examination involves tracking long chains of ownership, liens, encumbrances, legal descriptions, and transactional details across multiple documents where small omissions can invalidate conclusions.",
+      "adequacy_evidence": "Current agents can ingest and retrieve from large document sets with tooling, but still show occasional failures in maintaining precise cross-document consistency or missing subtle but critical details.",
+      "_timestamp": "2026-04-06T02:04:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying property title validity requires careful examination of legal records, liens, encumbrances, and chain-of-title documents; errors can be subtle and may only surface after significant legal or financial consequences, requiring expert review.",
+      "adequacy_evidence": "Current AI systems can misinterpret legal nuances, miss edge-case encumbrances, or hallucinate record details, so outputs require thorough human verification by trained professionals, making the checking burden high and unavoidable.",
+      "_timestamp": "2026-04-06T02:04:43"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Individual title examinations and transactions often span multiple sessions and require retaining case-specific documents, prior findings, and communications, but are largely bounded to each case rather than long-term accumulation across many cases.",
+      "adequacy_evidence": "Current AI systems with standard database integrations can persist and retrieve case files, but they still show reliability issues in consistently surfacing the right prior details and maintaining coherent state across extended, multi-session workflows.",
+      "_timestamp": "2026-04-06T02:04:43"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Title examination is primarily document-based but often involves interpreting scanned deeds, plats, surveys, and maps that include spatial and visual elements alongside text.",
+      "adequacy_evidence": "Current agents can handle standard document parsing and basic image interpretation, but performance is less reliable on complex plats, degraded scans, or nuanced spatial/legal relationships.",
+      "_timestamp": "2026-04-06T02:04:43"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task requires direct interaction with property owners and participation in legally significant transactions where perceived authority, trustworthiness, and legitimacy of the agent are central.",
+      "adequacy_evidence": "Property owners and counterparties are unlikely to accept an AI as a transaction agent due to trust, legal accountability, and licensing expectations, and effectiveness would be undermined without a human intermediary.",
+      "_timestamp": "2026-04-06T02:04:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in examining property titles or acting in transactions can lead to significant legal liability, invalid ownership claims, or financial loss, so even rare residual mistakes can have severe, irreversible consequences.",
+      "adequacy_evidence": "Even after standard checks, AI systems can miss subtle encumbrances, jurisdiction-specific legal nuances, or inconsistencies in records, leaving a non-trivial level of residual risk that remains problematic for high-stakes property transactions.",
+      "_timestamp": "2026-04-06T02:04:44"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Real estate title examination and acting as an agent in property transactions are regulated activities in many U.S. states, typically requiring licensed title agents, attorneys, or insurance professionals. These roles legally require a human licensee or registered entity to take responsibility, preventing fully autonomous AI performance.",
+      "_timestamp": "2026-04-06T02:04:44"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

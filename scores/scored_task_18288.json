@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4012.01",
+  "task_id": 18288,
+  "task_statement": "Recommend best crop varieties or seeding rates for specific field areas, based on analysis of geospatial data.",
+  "occupation_title": "Precision Agriculture Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Analyzing geospatial data and generating recommendations on crop varieties or seeding rates is typically done using GIS and computer-based tools. However, in some cases technicians may incorporate field observations or coordinate with on-site staff, introducing a physical component."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous conditions (soil types, microclimates, crop genetics, management practices, and geospatial variability), creating a long-tailed distribution of field-specific scenarios.",
+      "adequacy_evidence": "While agronomic trials, extension data, and geospatial datasets exist, much high-resolution, field-level decision data and expert reasoning are proprietary or sparse, though partially recoverable via synthesis and modeling.",
+      "_timestamp": "2026-04-06T05:23:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step pipeline (data ingestion, cleaning, spatial analysis, segmentation, and agronomic recommendation), where outputs from earlier steps inform later decisions, but sequences are not \u0985\u09a4\u09cd\u09af long or deeply interdependent.",
+      "adequacy_evidence": "Current AI agents can generally sustain coherence across such structured analytical pipelines with tools, though some degradation (e.g., missed constraints or slight inconsistencies across steps) can occur in longer or more complex workflows.",
+      "_timestamp": "2026-04-06T05:23:15"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the task has a clear general goal (optimize crop variety and seeding rates using geospatial data), key criteria like yield vs. cost tradeoffs, risk tolerance, soil nuances, and farmer preferences are often implicit and context-dependent.",
+      "adequacy_evidence": "Current AI agents can integrate agronomic data and infer reasonable recommendations, but they often miss implicit priorities (e.g., risk aversion, local practices) and require human iteration to fully align with stakeholder intent.",
+      "_timestamp": "2026-04-06T05:23:15"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple large geospatial layers (soil maps, yield history, moisture, topography) and translating them into field-specific recommendations, requiring substantial within-episode data retrieval, alignment, and summarization.",
+      "adequacy_evidence": "Current agents can offload storage and querying to geospatial tools, but still show moderate issues with maintaining consistent representations across layers and avoiding loss or distortion when summarizing complex spatial data.",
+      "_timestamp": "2026-04-06T05:23:15"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While agronomic guidelines and geospatial analytics provide strong explicit structure, effective recommendations still rely on experience with local soil behavior, microclimates, and crop performance nuances not fully captured in rules.",
+      "adequacy_evidence": "Current AI can integrate agronomic models and geospatial data well, but often lacks fine-grained, experience-based calibration for local conditions, leading to gaps in non-standard or highly context-specific cases.",
+      "_timestamp": "2026-04-06T05:23:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on interpreting geospatial inputs such as satellite imagery, soil maps, yield maps, and spatial variability data, requiring cross-modal reasoning beyond text alone.",
+      "adequacy_evidence": "Current agents can integrate GIS tools and analyze structured geospatial datasets, but they remain less reliable on fine-grained spatial interpretation and agronomic nuance from complex imagery.",
+      "_timestamp": "2026-04-06T05:23:16"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "These recommendations are typically part of pre-planting planning or periodic field analysis, where minutes to hours of processing time are acceptable and real-time response is not required.",
+      "adequacy_evidence": "Frontier AI systems can perform geospatial analysis and generate recommendations well within acceptable timeframes without needing to truncate reasoning, so speed constraints do not degrade quality.",
+      "_timestamp": "2026-04-06T05:23:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit AI systems from analyzing geospatial data to recommend crop varieties or seeding rates; such advisory functions are not legally restricted to licensed humans in most jurisdictions.",
+      "_timestamp": "2026-04-06T05:23:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommendations often benefit from prior seasons' yield maps, soil history, crop rotations, and farmer preferences, but can still be made from current geospatial datasets if those histories are embedded.",
+      "adequacy_evidence": "Agents can store and retrieve historical farm data via databases and integrations, but inconsistent data pipelines and imperfect retrieval across systems can lead to gaps in using accumulated context.",
+      "_timestamp": "2026-04-06T05:23:17"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Farmers or farm managers must rely on and act on the technician\u2019s recommendations, and trust in the source can influence adoption, though decisions are also data-driven.",
+      "adequacy_evidence": "AI-driven agronomic recommendation tools are increasingly used, but some farmers still prefer human advisors for trust and accountability, leading to partial but not complete acceptance.",
+      "_timestamp": "2026-04-06T05:23:17"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing the correctness of crop variety and seeding prescriptions requires agronomic expertise, integration of soil, weather, and yield data, and outcomes often only become clear after a growing season, making errors hard to detect upfront.",
+      "adequacy_evidence": "Current AI systems can generate plausible recommendations but still make subtle, context-specific mistakes that require expert review and cross-checking against field data and local knowledge, creating a high verification burden.",
+      "_timestamp": "2026-04-06T05:23:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect recommendations can reduce yields or increase input costs for a growing season, but impacts are typically economic and reversible in future cycles rather than catastrophic.",
+      "adequacy_evidence": "With agronomist review and validation against local conditions and historical data, remaining AI errors are likely to be caught or have tolerable impact, making residual risk acceptable.",
+      "_timestamp": "2026-04-06T05:23:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

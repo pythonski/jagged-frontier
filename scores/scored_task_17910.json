@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-1042.01",
+  "task_id": 17910,
+  "task_statement": "Review customer requests for service to determine service needs and deploy appropriate resources to provide service.",
+  "occupation_title": "Recycling Coordinators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Reviewing service requests and assigning crews or resources is typically done through phone, email, or service management/dispatch software, which can be handled entirely on a computer. Physical presence is not inherently required to assess requests or schedule resources."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customer service requests are often incomplete or imprecise, requiring interpretation of needs, local recycling rules, and operational constraints to determine appropriate service and resource allocation.",
+      "adequacy_evidence": "Current agents can extract intent from structured or moderately clear requests but often miss contextual nuances (e.g., local regulations, special cases), requiring human oversight or iteration to ensure correct service decisions.",
+      "_timestamp": "2026-04-05T21:02:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step process\u2014interpreting customer requests, assessing service needs, and coordinating appropriate resources\u2014where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or tightly coupled.",
+      "adequacy_evidence": "AI agents can generally manage these workflow steps with tools and planning, but may show some degradation over longer or more complex cases (e.g., misinterpreting requirements or losing constraints across steps).",
+      "_timestamp": "2026-04-05T21:02:28"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many requests can be handled via standard procedures (e.g., material type, pickup schedules), coordinators often rely on experience to interpret ambiguous requests, anticipate contamination issues, and match resources to local operational constraints.",
+      "adequacy_evidence": "Current agents can apply documented rules and past cases effectively, but may lack nuanced calibration for atypical requests, informal local practices, or subtle prioritization decisions that experienced coordinators handle.",
+      "_timestamp": "2026-04-05T21:02:28"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customer service requests vary across materials, locations, service types, urgency, and local regulations, creating moderate diversity in cases coordinators must handle.",
+      "adequacy_evidence": "There are substantial data sources (service logs, SOPs, dispatch records), but some edge cases and locality-specific practices are thin or proprietary, requiring targeted synthesis or adaptation.",
+      "_timestamp": "2026-04-05T21:02:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves integrating details from customer requests (e.g., service type, location, timing) with available resources and constraints, requiring moderate tracking and synthesis of multiple pieces of information within a single episode.",
+      "adequacy_evidence": "Current AI agents with structured inputs, retrieval tools, and workflow scaffolding can reliably manage and reference these moderate information loads without significant loss or drift.",
+      "_timestamp": "2026-04-05T21:02:29"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Effective routing often benefits from prior customer history (e.g., recurring service needs, site constraints, past issues), but many requests can still be handled with current request information and standard protocols.",
+      "adequacy_evidence": "Current AI systems integrated with CRM and scheduling databases can reliably store and retrieve customer histories and preferences across sessions, with minimal technical limitation.",
+      "_timestamp": "2026-04-05T21:02:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer service triage typically expects responses within seconds to a few minutes, but does not require split-second real-time decision-making.",
+      "adequacy_evidence": "Frontier agents can process requests and recommend resource deployment well within these time bounds without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T21:02:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Customer service requests are typically conveyed via text, phone transcripts, or structured forms describing pickup needs, volumes, and schedules; multimodal inputs like images are not central to the task.",
+      "adequacy_evidence": "LLM-based agents can already process and interpret text-based service requests and map them to resources reliably, with no meaningful multimodal gap for typical cases.",
+      "_timestamp": "2026-04-05T21:02:31"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI from reviewing service requests and dispatching resources in recycling coordination. This task is operational and administrative, and can legally be automated.",
+      "_timestamp": "2026-04-05T21:02:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing whether the correct service and resources were assigned requires some domain knowledge and may only become apparent after service delivery, but many errors can be caught by reviewing request details and matching rules.",
+      "adequacy_evidence": "Current AI can parse and classify requests but still makes misinterpretation or edge-case errors, so human review or spot-checking is needed to ensure correct resource deployment.",
+      "_timestamp": "2026-04-05T21:02:31"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in interpreting service requests or dispatching resources can cause missed pickups, inefficiencies, or customer dissatisfaction, but consequences are typically operational and reversible rather than severe.",
+      "adequacy_evidence": "With standard checks (e.g., reviewing requests, confirming schedules), most AI errors would be caught or have limited impact, leaving residual risk at an acceptable level for this task.",
+      "_timestamp": "2026-04-05T21:02:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with customer service requests and coordinating responses, so stakeholders rely on the output, but success depends more on accuracy and timeliness than on personal authority or empathy.",
+      "adequacy_evidence": "Customers and internal teams generally accept automated or AI-assisted routing and dispatch systems in service coordination, with little resistance as long as service quality is maintained.",
+      "_timestamp": "2026-04-05T21:02:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

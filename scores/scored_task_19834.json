@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5071.00",
+  "task_id": 19834,
+  "task_statement": "Compare shipping routes or methods to determine which have the least environmental impact.",
+  "occupation_title": "Shipping, Receiving, and Inventory Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Comparing shipping routes or transportation methods for environmental impact is typically done using logistics software, carrier data, maps, and emissions calculators on a computer, without requiring physical presence or handling of goods."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves applying emissions factors, distance, and mode comparisons, but may require some experience-based judgment when data is incomplete or tradeoffs (e.g., speed vs. emissions) are context-specific.",
+      "adequacy_evidence": "Current AI agents can reliably apply emissions models, integrate logistics data, and perform comparative analysis, with minimal need for tacit calibration beyond available rules and datasets.",
+      "_timestamp": "2026-04-06T03:21:13"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different routes, transport modes, distances, fuel types, and regulatory contexts, but follows structured, well-understood logistics and emissions comparison patterns rather than a highly long-tailed distribution.",
+      "adequacy_evidence": "Extensive public and commercial datasets, emissions models, and optimization examples exist, and synthetic generation of route scenarios with known environmental metrics is straightforward, providing strong coverage.",
+      "_timestamp": "2026-04-06T03:21:13"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating and comparing multiple data points (e.g., distances, transport modes, fuel types, emissions factors), requiring moderate information tracking and synthesis within a single analysis episode.",
+      "adequacy_evidence": "Frontier agents with tool use can reliably manage and organize these datasets (e.g., via tables or calculations) without significant loss of context or retrieval errors.",
+      "_timestamp": "2026-04-06T03:21:14"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Route or method comparisons can be performed using current shipment parameters, emissions data, and optimization criteria without needing prior case history or accumulated context.",
+      "adequacy_evidence": "Since the task is largely self-contained per instance, existing AI systems do not require persistent cross-session memory to perform it effectively.",
+      "_timestamp": "2026-04-06T03:21:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps\u2014gathering route data, assessing environmental metrics (e.g., emissions, distance, mode), and comparing options\u2014but these steps are moderately sized and not deeply interdependent over long sequences.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably handle multi-step comparisons and maintain consistency across this level of sequence without significant degradation, especially with tool support for calculations and data retrieval.",
+      "_timestamp": "2026-04-06T03:21:15"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires selecting environmental metrics (e.g., emissions, fuel use, distance, mode-specific impacts) and interpreting tradeoffs, which are often implicit or organization-specific rather than fully specified.",
+      "adequacy_evidence": "Current agents can propose reasonable metrics and comparisons but often miss organization-specific priorities or system boundaries, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T03:21:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Comparing environmental impact of shipping routes primarily relies on textual and numerical data such as distances, fuel consumption, emissions factors, and logistics records, which can be fully represented in text or tables.",
+      "adequacy_evidence": "Current AI systems can process and compare structured logistics and environmental data without needing multimodal inputs, so there is no meaningful capability gap.",
+      "_timestamp": "2026-04-06T03:21:15"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Comparing shipping routes for environmental impact is typically a planning or analytical task with no strict real-time requirement; minutes to hours of analysis are acceptable.",
+      "adequacy_evidence": "Current AI agents can perform multi-step comparisons within these relaxed timeframes without needing to truncate reasoning, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-06T03:21:15"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from analyzing or comparing shipping routes for environmental impact. This task does not require a licensed human decision-maker or legally mandated human oversight.",
+      "_timestamp": "2026-04-06T03:21:16"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying environmental impact comparisons requires checking emissions factors, distances, load assumptions, and methodology, which takes domain knowledge and reference data but is feasible with standard tools and calculators.",
+      "adequacy_evidence": "AI can produce plausible but assumption-sensitive analyses and may misestimate factors or omit constraints, so outputs need cross-checking against reliable datasets and methods, though errors are usually detectable with moderate effort.",
+      "_timestamp": "2026-04-06T03:21:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors mainly lead to suboptimal environmental choices or cost inefficiencies rather than immediate safety or irreversible harm, so some residual risk is tolerable.",
+      "adequacy_evidence": "AI outputs can be cross-checked against emissions data, route metrics, and standard benchmarks, and any remaining errors after such checks are unlikely to pose serious consequences.",
+      "_timestamp": "2026-04-06T03:21:18"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily an internal analytical comparison used for operational decision-making, with outputs typically consumed within the organization rather than requiring stakeholder interaction tied to performer identity.",
+      "adequacy_evidence": "Because there are no meaningful external stakeholders whose acceptance depends on who or what performs the task, AI-generated analyses would be accepted as long as they meet internal quality standards.",
+      "_timestamp": "2026-04-06T03:21:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

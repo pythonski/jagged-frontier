@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1031.01",
+  "task_id": 5279,
+  "task_statement": "Examine claims investigated by insurance adjusters, further investigating questionable claims to determine whether to authorize payments.",
+  "occupation_title": "Claims Adjusters, Examiners, and Investigators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Insurance claims examiners typically review adjuster reports, digital claim files, photos, and documentation and communicate via phone or email to investigate questionable claims. While most work is computer-based, occasional interactions with physical documents or coordination with field investigations can occur."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating questionable insurance claims relies heavily on experience-based judgment about credibility, fraud patterns, and contextual inconsistencies that are not fully captured by explicit rules or documentation.",
+      "adequacy_evidence": "Current AI can apply documented heuristics and detect some anomalies, but lacks the nuanced calibration and situational intuition developed through real-world case exposure, especially in ambiguous or adversarial cases.",
+      "_timestamp": "2026-04-06T00:52:13"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Insurance claims examination spans highly heterogeneous cases (auto, property, liability, fraud scenarios) with long-tailed edge cases and evolving tactics, requiring broad coverage of contexts and investigative processes.",
+      "adequacy_evidence": "Much high-quality data (detailed claim files, investigator notes, fraud patterns) is proprietary and privacy-restricted, and public corpora lack step-by-step investigative reasoning, leaving major gaps that are hard to fully synthesize.",
+      "_timestamp": "2026-04-06T00:52:13"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining whether to authorize payments requires interpreting ambiguous policy language, assessing credibility, and weighing context-specific fraud indicators, much of which is implicit and judgment-based.",
+      "adequacy_evidence": "Current agents can follow policy rules and flag inconsistencies, but often miss nuanced contextual cues and intent behind claims, requiring human oversight to resolve ambiguous cases.",
+      "_timestamp": "2026-04-06T00:52:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Examining and investigating claims requires synthesizing large volumes of heterogeneous information (policies, reports, interviews, medical or repair records) where missing details can affect payment decisions.",
+      "adequacy_evidence": "Current agents can ingest and retrieve across many documents with tools, but may still lose nuance, misprioritize details, or compress complex case facts imperfectly over extended workflows.",
+      "_timestamp": "2026-04-06T00:52:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step review and follow-up investigation (reviewing adjuster findings, identifying inconsistencies, gathering additional evidence, and making a determination), where consistency across steps matters but sequences are typically bounded per claim.",
+      "adequacy_evidence": "AI agents can generally manage multi-step investigative workflows but show some degradation over longer or branching investigations, with risks of missed inconsistencies or drifting criteria across steps.",
+      "_timestamp": "2026-04-06T00:52:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Claims examination often involves reviewing photos of damage, scanned documents, and occasionally audio/video evidence, though much of the core reasoning is based on textual reports and structured data.",
+      "adequacy_evidence": "Current agents can interpret straightforward images and documents, but struggle with nuanced visual cues (e.g., subtle fraud indicators or context-specific damage assessment) and cross-modal synthesis in complex cases.",
+      "_timestamp": "2026-04-06T00:52:15"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Examining and investigating insurance claims typically occurs over hours to days, with no requirement for immediate or real-time responses.",
+      "adequacy_evidence": "AI systems can take sufficient time for extended reasoning and document review without impacting task performance, so latency does not degrade output quality.",
+      "_timestamp": "2026-04-06T00:52:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether a claim is legitimate or fraudulent often involves nuanced judgment across medical reports, repair estimates, interviews, and inconsistencies that are not trivially checkable; errors can remain hidden without deep investigation.",
+      "adequacy_evidence": "Current AI systems can miss subtle fraud signals or misinterpret complex evidence, and their conclusions require extensive human review because mistakes are not easily detectable through simple validation checks.",
+      "_timestamp": "2026-04-06T00:52:16"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incorrect authorization or denial can lead to financial losses, fraud exposure, and legal disputes, but decisions are often revisitable through audits, appeals, or litigation, making occasional residual errors survivable.",
+      "adequacy_evidence": "Even with standard review processes, AI may miss subtle fraud patterns or misinterpret complex case details, leaving a non-trivial residual risk that is manageable but still concerning for insurers.",
+      "_timestamp": "2026-04-06T00:52:16"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task directly affects claimants and insurers, and decisions about authorizing payments rely on perceived legitimacy, fairness, and trust in the examiner\u2019s judgment.",
+      "adequacy_evidence": "Stakeholders may be uneasy with AI making or heavily influencing claim decisions, especially in disputed cases, but partial acceptance is plausible if humans retain oversight and final authority.",
+      "_timestamp": "2026-04-06T00:52:17"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Many states require insurance adjusters to be licensed individuals, and claim determinations are often legally tied to a licensed human\u2019s authority. While AI can assist, regulations generally imply that final authorization must be made by a licensed person, creating partial but not absolute restriction.",
+      "_timestamp": "2026-04-06T00:52:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many claims can be evaluated independently, examiners often rely on prior claim histories, patterns of suspicious behavior, and evolving insurer policies across cases.",
+      "adequacy_evidence": "Current AI systems with standard database integrations and retrieval tools can reliably store and access claimant histories and prior case information across sessions.",
+      "_timestamp": "2026-04-06T00:52:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

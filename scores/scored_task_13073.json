@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-2041.04",
+  "task_id": 13073,
+  "task_statement": "Transpose music from one voice or instrument to another to accommodate particular musicians.",
+  "occupation_title": "Music Directors and Composers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Transposing music is an analytical notation task that can be completed entirely using music notation software or other standard computer tools, with no need for physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Basic transposition follows explicit interval rules, but adapting for specific musicians involves experiential judgment about instrument ranges, idiomatic passages, and performer skill or comfort.",
+      "adequacy_evidence": "Current agents can apply transposition rules and general instrument constraints, but show uneven calibration for nuanced, performer-specific adjustments and idiomatic writing in less standard cases.",
+      "_timestamp": "2026-04-06T05:46:28"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different instruments, vocal ranges, clefs, keys, and stylistic contexts, but remains governed by well-defined music theory rules and standard transposition practices.",
+      "adequacy_evidence": "Extensive sheet music corpora, theory texts, and worked examples (including algorithmic transposition rules) provide strong coverage, and synthetic data generation can easily fill remaining gaps.",
+      "_timestamp": "2026-04-06T05:46:28"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Transposing requires applying consistent pitch shifts across an entire score, adjusting key signatures, accidentals, and instrument ranges in a coordinated sequence, but the process is systematic and not deeply long-horizon.",
+      "adequacy_evidence": "LLM-based agents with music-theory tooling can reliably apply consistent transposition rules across full pieces without noticeable drift or compounding errors.",
+      "_timestamp": "2026-04-06T05:46:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Transposition requires understanding implicit factors like the target instrument\u2019s range, timbre, technical ease, and the performer\u2019s skill, which are not always fully specified in the task description.",
+      "adequacy_evidence": "Current AI can transpose accurately when constraints are explicit, but often misses idiomatic nuances or performer-specific considerations, requiring human refinement to fully satisfy intent.",
+      "_timestamp": "2026-04-06T05:46:29"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Transposing a piece is typically a self-contained task based on the score and target instrument, without needing persistent memory of prior sessions.",
+      "adequacy_evidence": "Current AI systems can handle any minimal preference recall (e.g., instrument ranges or stylistic norms) within a session or via simple storage, with no meaningful cross-session memory gap.",
+      "_timestamp": "2026-04-06T05:46:29"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Transposition requires tracking key signatures, intervals, accidentals, and instrument ranges across a score, which involves moderate within-episode state but is structured and bounded.",
+      "adequacy_evidence": "Current AI systems can reliably manage and transform symbolic musical information within a single piece, with minimal loss of context or state during transposition tasks.",
+      "_timestamp": "2026-04-06T05:46:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Transposition can be performed from symbolic notation (score text) but often benefits from auditory or performance context to ensure playability and idiomatic writing for the target instrument.",
+      "adequacy_evidence": "Current agents handle symbolic score transposition reliably, but are less consistent when audio input or nuanced instrument-specific interpretation is required.",
+      "_timestamp": "2026-04-06T05:46:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Transposing music is typically done in advance of performance or during preparation, where minutes or longer are acceptable and real-time response is rarely required.",
+      "adequacy_evidence": "Current AI systems can perform accurate transpositions quickly (often in seconds) without needing extended reasoning, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-06T05:46:31"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from transposing music. While copyright law governs use of underlying compositions, it does not restrict AI tools from performing transposition itself.",
+      "_timestamp": "2026-04-06T05:46:31"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect transposition can cause performance issues (e.g., unplayable ranges or wrong harmonies), but such errors are typically noticeable during rehearsal or score review and are rarely catastrophic.",
+      "adequacy_evidence": "AI-generated transpositions can be checked via playback, score inspection, or musician rehearsal, making remaining errors easy to catch and leaving little residual risk after normal quality control.",
+      "_timestamp": "2026-04-06T05:46:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task serves musicians who rely on the transposed score, so there are stakeholders interacting with the output, but the performer\u2019s identity is not central to its usefulness.",
+      "adequacy_evidence": "Musicians typically prioritize accuracy and readability of the transposition, and AI-assisted tools for notation and transposition are already widely accepted with little concern for authorship.",
+      "_timestamp": "2026-04-06T05:46:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Basic pitch transposition errors are straightforward for a trained musician to spot, but verifying correct enharmonics, instrument ranges, and idiomatic writing requires domain expertise and some review time.",
+      "adequacy_evidence": "AI can reliably shift pitches with tooling, but still produces non-idiomatic or range-inappropriate results often enough that a knowledgeable musician must check and adjust outputs.",
+      "_timestamp": "2026-04-06T05:46:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

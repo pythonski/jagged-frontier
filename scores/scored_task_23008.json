@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "33-2021.00",
+  "task_id": 23008,
+  "task_statement": "Review blueprints and plans for new or remodeled buildings to ensure the structures meet fire safety codes.",
+  "occupation_title": "Fire Inspectors and Investigators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Reviewing architectural blueprints and plans is typically done using digital CAD files or PDFs on a computer, but in some jurisdictions inspectors still review physical plan sets or participate in in\u2011person plan review meetings."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse building types (residential, commercial, industrial), varying local fire codes, and numerous edge cases in architectural design and system layouts, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "Fire codes and many example plans are publicly available, but detailed expert review processes and nuanced edge-case interpretations are less systematically documented, leaving some gaps that are only partially addressable via synthesis and fine-tuning.",
+      "_timestamp": "2026-04-05T21:27:53"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Fire code review relies largely on explicit codes and standards, but interpreting ambiguous plans, applying equivalencies, and recognizing subtle compliance issues requires experience-based judgment.",
+      "adequacy_evidence": "Agents can apply codified rules well, but still show gaps in handling edge cases, local amendments, and nuanced plan interpretations that experienced inspectors resolve through tacit knowledge.",
+      "_timestamp": "2026-04-05T21:27:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Fire safety codes are largely explicit, but applying them to varied blueprints requires interpreting context, local amendments, and implicit design intent (e.g., occupancy use, egress assumptions).",
+      "adequacy_evidence": "Current agents can parse codes and plans but often miss context-specific interpretations and local nuances, requiring human review to ensure correct intent alignment.",
+      "_timestamp": "2026-04-05T21:27:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple aspects of building plans (egress, alarms, sprinklers, materials) in a structured but largely checklist-driven sequence where consistency across steps matters but errors do not strongly cascade.",
+      "adequacy_evidence": "LLM-based agents can sustain performance across such multi-step document reviews with tooling, though some degradation can occur over long or complex plans (e.g., missed constraints or cross-references).",
+      "_timestamp": "2026-04-05T21:27:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing architectural blueprints involves tracking large, multi-sheet plan sets, cross-referencing fire codes, and maintaining consistency across spatial layouts and technical specifications where missing a detail can lead to compliance failure.",
+      "adequacy_evidence": "Current agents can chunk documents and use retrieval tools, but still struggle with reliably maintaining and integrating detailed spatial and cross-document context, leading to occasional omissions or inconsistencies.",
+      "_timestamp": "2026-04-05T21:27:55"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing building plans for fire code compliance is an analytical, offline task with no need for immediate responses; minutes to hours are typically acceptable.",
+      "adequacy_evidence": "AI agents can take sufficient time to perform detailed reasoning and cross-checks without any practical latency pressure, so speed does not degrade quality.",
+      "_timestamp": "2026-04-05T21:27:55"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing blueprints requires interpreting detailed visual-spatial information such as layouts, symbols, dimensions, and relationships between building elements that cannot be captured through text alone.",
+      "adequacy_evidence": "Current AI systems can process and interpret structured drawings to a degree, but they remain unreliable on complex, dense, or non-standard architectural plans and nuanced spatial-code compliance judgments.",
+      "_timestamp": "2026-04-05T21:27:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many blueprint reviews are self-contained, inspectors often reference prior plan versions, past corrections, and jurisdiction-specific interpretations across multiple review cycles for the same project.",
+      "adequacy_evidence": "Current agents can store and retrieve project histories with standard tooling, but may inconsistently track evolving revisions or surface the most relevant prior context without careful system design.",
+      "_timestamp": "2026-04-05T21:27:56"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying fire code compliance in building plans requires expert review of complex, interdependent design elements and regulations; errors can be subtle and not immediately visible without detailed analysis.",
+      "adequacy_evidence": "Current AI systems can miss nuanced code requirements or misinterpret plans, so outputs would require thorough expert checking to catch potentially serious but non-obvious mistakes.",
+      "_timestamp": "2026-04-05T21:27:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Fire safety plan review and approval is typically required by law to be performed or signed off by certified fire inspectors, fire marshals, or other licensed officials designated as the authority having jurisdiction. These regulations mandate a human credentialed decision-maker, so AI cannot legally perform the task autonomously.",
+      "_timestamp": "2026-04-05T21:27:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Missed fire code violations can lead to catastrophic outcomes such as loss of life, major property damage, and legal liability, so even rare residual errors are unacceptable.",
+      "adequacy_evidence": "While many code checks are rule-based and verifiable, AI may still miss nuanced interactions or jurisdiction-specific requirements, leaving some residual risk even after standard human or procedural review.",
+      "_timestamp": "2026-04-05T21:27:57"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task directly affects architects, builders, and permitting authorities who rely on the inspector\u2019s judgment and require recognized authority to approve or reject plans.",
+      "adequacy_evidence": "Stakeholders and regulations typically require a certified human fire inspector\u2019s sign-off, and an AI agent alone would not be accepted as a legitimate authority for code compliance decisions.",
+      "_timestamp": "2026-04-05T21:27:59"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

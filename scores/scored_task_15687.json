@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9199.04",
+  "task_id": 15687,
+  "task_statement": "Monitor forecasts and quotas to identify changes or to determine their effect on supply chain activities.",
+  "occupation_title": "Managers, All Other",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Monitoring forecasts and quotas and assessing their impact on supply chain activities is typically done through digital systems such as ERP platforms, spreadsheets, dashboards, and analytics tools, all of which can be accessed remotely on a computer."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Identifying meaningful changes and their impact requires context-specific judgment about thresholds, business priorities, and which forecast or quota deviations matter operationally.",
+      "adequacy_evidence": "Agents can track changes and model impacts with defined rules and data, but often miss organization-specific significance or require iteration to align with implicit decision criteria.",
+      "_timestamp": "2026-04-06T04:14:58"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting how forecast or quota changes affect supply chain activities often requires contextual business judgment (e.g., demand volatility, supplier reliability, organizational priorities) that goes beyond explicit rules.",
+      "adequacy_evidence": "AI agents can analyze forecasts and simulate impacts, but they still lack consistent calibration in nuanced, context-specific tradeoffs and organizational realities, leading to moderate gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T04:14:59"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different industries, demand patterns, and supply chain configurations, but relies on broadly similar analytical processes (forecast comparison, variance analysis, impact assessment).",
+      "adequacy_evidence": "While general forecasting and supply chain analysis methods are well-documented, much real-world data (firm-specific forecasts, quotas, and responses) is proprietary, making full coverage uneven but partially recoverable via synthetic or proxy data.",
+      "_timestamp": "2026-04-06T04:14:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task relies on comparing current forecasts and quotas to prior periods and tracking evolving supply chain conditions, requiring some accumulation of historical context across sessions.",
+      "adequacy_evidence": "Current AI systems can reliably integrate with databases, dashboards, and persistent storage to retrieve and use historical forecasts and quotas, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T04:15:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking multiple data streams (forecasts, quotas, supply chain metrics) and comparing changes over time, requiring moderate information aggregation and contextual updating within a single episode.",
+      "adequacy_evidence": "Current agents can integrate and analyze such data using tools, but may lose track of nuanced relationships or temporal changes without careful structuring, leading to occasional context drift or missed details.",
+      "_timestamp": "2026-04-06T04:15:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing comparison of forecasts and quotas over time and interpreting their implications, requiring consistent tracking across multiple updates but not tightly coupled long action chains.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably monitor streams of data, apply rules, and flag changes without significant degradation over sequence length, especially with automation and state tracking tools.",
+      "_timestamp": "2026-04-06T04:15:01"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring forecasts and quotas is typically done on periodic cadences (e.g., hourly, daily) where minutes-to-hours latency is acceptable rather than requiring instant responses.",
+      "adequacy_evidence": "Current AI agents can analyze forecasts and quota changes well within these relaxed time windows without needing to truncate reasoning, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-06T04:15:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal analytical monitoring of forecasts and quotas, with outputs typically consumed within systems or by teams without emphasis on who performed the analysis.",
+      "adequacy_evidence": "There is little to no stakeholder concern about whether a human or AI performs this monitoring, and such analytical tasks are already widely accepted as automated.",
+      "_timestamp": "2026-04-06T04:15:02"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves analyzing forecasts, quotas, and supply chain data that are typically presented in structured text or numerical/tabular formats; any visualizations (e.g., charts) are supplementary and can be translated into text or data.",
+      "adequacy_evidence": "Current AI systems handle structured data, spreadsheets, and even basic chart interpretation effectively, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-06T04:15:02"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations in the US that prohibit AI from monitoring forecasts and quotas or analyzing their effects on supply chain activities. This task is broadly managerial/analytical and can be performed by software systems without requiring licensed human sign-off.",
+      "_timestamp": "2026-04-06T04:15:02"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in interpreting forecast or quota changes can lead to inventory imbalances or inefficiencies, but these impacts are typically reversible and detected through ongoing operations and performance monitoring.",
+      "adequacy_evidence": "With structured data inputs and standard analytics checks, AI systems can reliably flag changes and trends, and any residual errors after review are unlikely to pose unacceptable risk.",
+      "_timestamp": "2026-04-06T04:15:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing the impact of forecast and quota changes on supply chain activities requires domain knowledge and cross-checking multiple data sources; errors may not be immediately obvious without analysis.",
+      "adequacy_evidence": "Current AI can process and flag changes but may misinterpret context or causal impacts, so outputs require human review and validation to ensure correctness.",
+      "_timestamp": "2026-04-06T04:15:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

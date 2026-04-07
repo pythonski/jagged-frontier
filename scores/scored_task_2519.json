@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3051.00",
+  "task_id": 2519,
+  "task_statement": "Verify attendance, hours worked, and pay adjustments, and post information onto designated records.",
+  "occupation_title": "Payroll and Timekeeping Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Most payroll and timekeeping verification is done using digital timekeeping and payroll systems, allowing the task to be completed entirely on a computer. However, some workplaces still rely on physical timesheets or paper records that require in-person handling or verification."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Most steps follow explicit payroll rules and documented procedures, but resolving discrepancies (e.g., unusual time entries, exceptions, or policy interpretations) can require some experience-based judgment.",
+      "adequacy_evidence": "Current agents can handle standard cases well but may struggle with nuanced, organization-specific exceptions or ambiguous discrepancies that rely on informal practices or contextual judgment.",
+      "_timestamp": "2026-04-06T03:14:17"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves moderate variation across employers, including different pay rules, overtime policies, leave types, and adjustment scenarios, but remains largely structured and rule-governed.",
+      "adequacy_evidence": "Extensive documentation, payroll system logs, and synthetic data generation can cover most scenarios, and the procedural nature of the task makes representative training data readily obtainable.",
+      "_timestamp": "2026-04-06T03:14:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reconciling multiple structured inputs (timesheets, attendance logs, pay adjustment records) and ensuring consistency before posting, requiring moderate tracking and comparison within an episode.",
+      "adequacy_evidence": "Current agents with tool use and structured data handling can reliably manage and cross-check these inputs without losing context, as the information is well-bounded and tabular.",
+      "_timestamp": "2026-04-06T03:14:18"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step processing (verify attendance, check hours, apply adjustments, and post records) with some dependency between steps, but sequences are typically short and repeated per employee/pay period rather than long, tightly coupled workflows.",
+      "adequacy_evidence": "Current AI agents can reliably handle short, structured multi-step workflows with consistency, especially when supported by tools and validation checks, showing little degradation over sequences of this length.",
+      "_timestamp": "2026-04-06T03:14:18"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task follows established payroll rules and records, but includes some context-dependent elements such as interpreting pay adjustments, exceptions, or discrepancies against company policies.",
+      "adequacy_evidence": "Current AI agents can reliably apply explicit payroll rules and reconcile records when provided policies and data access, with minimal difficulty resolving typical ambiguities.",
+      "_timestamp": "2026-04-06T03:14:19"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Payroll tasks regularly reference accumulated records such as prior pay periods, employee histories, and outstanding adjustments, but these are structured and stored in external systems rather than requiring rich evolving internal memory.",
+      "adequacy_evidence": "Current AI agents can reliably interface with databases and payroll systems to retrieve and update persistent records, so cross-session memory needs are well supported by existing infrastructure.",
+      "_timestamp": "2026-04-06T03:14:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Payroll verification and posting are typically batch or periodic processes where minutes to hours of latency are acceptable, not real-time decisions.",
+      "adequacy_evidence": "Current AI systems can perform these checks well within the available time window, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T03:14:20"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing and entering structured or semi-structured textual and numerical data (timesheets, payroll records), with minimal reliance on images, audio, or other non-text inputs.",
+      "adequacy_evidence": "Since the task is fundamentally text- and number-based, current AI agents can fully handle the modality requirements without meaningful gaps.",
+      "_timestamp": "2026-04-06T03:14:21"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves cross-checking time records, pay rules, and adjustments against source documents and policies; discrepancies are usually detectable through reconciliation and audit trails but require attention and domain familiarity.",
+      "adequacy_evidence": "AI systems can process and flag inconsistencies, but they still make errors in interpreting edge cases or applying pay rules, so human review and reconciliation remain necessary at a moderate level.",
+      "_timestamp": "2026-04-06T03:14:21"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in attendance or pay records can cause financial discrepancies, employee dissatisfaction, and compliance issues, but they are typically detectable and correctable in subsequent payroll cycles.",
+      "adequacy_evidence": "With standard reconciliation checks, audit trails, and rule-based validations, AI systems can reduce residual errors to a tolerable level comparable to human clerks.",
+      "_timestamp": "2026-04-06T03:14:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily an internal administrative function involving record verification and data entry, with outputs consumed within payroll systems rather than requiring direct stakeholder interaction.",
+      "adequacy_evidence": "Organizations already accept automated payroll and timekeeping systems, and stakeholders are generally indifferent to whether a human or AI performs these back-office functions.",
+      "_timestamp": "2026-04-06T03:14:22"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements prohibiting AI from verifying time records or posting payroll information; such functions are already widely automated in payroll software. Compliance obligations (e.g., FLSA recordkeeping) apply to the employer, not to the use of AI tools.",
+      "_timestamp": "2026-04-06T03:14:23"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

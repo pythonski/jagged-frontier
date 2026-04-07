@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-9092.00",
+  "task_id": 17500,
+  "task_statement": "Analyze genetic information to identify patients or families at risk for specific disorders or syndromes.",
+  "occupation_title": "Genetic Counselors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Analyzing genetic test results, genomic data, and family histories is an information-processing task typically performed using digital records and software, and it does not require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous genetic variants, rare diseases, family pedigrees, and population-specific risk factors, creating a long-tailed and context-sensitive distribution of cases.",
+      "adequacy_evidence": "Large genomic databases, clinical case reports, and guidelines exist, but many rare variants, nuanced family histories, and private clinical datasets remain underrepresented, though partially addressable via synthesis and aggregation.",
+      "_timestamp": "2026-04-06T00:55:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Risk assessment depends on contextual factors like family history, variant interpretation standards, and clinical context, requiring some inference beyond explicit rules but guided by established frameworks (e.g., ACMG guidelines).",
+      "adequacy_evidence": "Current agents can apply structured guidelines and infer likely objectives, but often miss nuanced clinical context or evolving interpretation standards, requiring human oversight and iteration.",
+      "_timestamp": "2026-04-06T00:55:05"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting genetic variants and family histories involves nuanced judgment about penetrance, variant significance (e.g., VUS), and context-specific risk that extends beyond formal guidelines like ACMG criteria.",
+      "adequacy_evidence": "Current agents can apply rules and databases effectively but still lack consistent calibration in ambiguous or borderline cases, especially where clinical context and subtle experiential judgment matter.",
+      "_timestamp": "2026-04-06T00:55:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step reasoning (e.g., gathering family history, interpreting genetic variants, applying risk models, and synthesizing conclusions), where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092fr long or deeply iterative.",
+      "adequacy_evidence": "Frontier AI agents can generally sustain coherence across these moderate-length analytical pipelines, but may show some degradation through missed constraints or subtle reasoning errors when chaining multiple interpretation steps.",
+      "_timestamp": "2026-04-06T00:55:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing genetic data for risk assessment is typically performed over minutes to hours or longer, with no expectation of immediate real-time response.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform detailed analysis without meaningful quality degradation, as there is no tight latency constraint.",
+      "_timestamp": "2026-04-06T00:55:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large, heterogeneous data within a single episode, including family pedigrees, genomic variants, medical histories, and risk models, where missing a detail can materially affect risk assessment.",
+      "adequacy_evidence": "Current agents can handle large context with retrieval tools, but still show weaknesses in consistently tracking complex pedigrees and nuanced variant interpretations, with occasional loss or misweighting of relevant details.",
+      "_timestamp": "2026-04-06T00:55:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely text- and data-driven (genetic test reports, family histories) but often incorporates pedigree charts and occasionally other visual representations of inheritance patterns.",
+      "adequacy_evidence": "Current agents can interpret basic charts and structured genetic data, but may struggle with complex pedigree diagrams or nuanced cross-modal reasoning in atypical cases.",
+      "_timestamp": "2026-04-06T00:55:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting genetic variants and risk requires expert judgment; errors can be subtle (e.g., variant classification, penetrance) and may not surface until long-term clinical outcomes, making verification difficult and expertise-intensive.",
+      "adequacy_evidence": "Current AI systems can misinterpret variants, rely on incomplete databases, or miss context (family history, rare mutations), so outputs require thorough expert review and cross-checking with curated resources and guidelines.",
+      "_timestamp": "2026-04-06T00:55:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Genetic risk assessment often draws on accumulated family histories, prior test results, and evolving patient records across visits, but much of this information is formally documented and retrievable rather than requiring implicit longitudinal memory.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured patient histories via databases or EHR integrations, but they still show gaps in reliably maintaining, updating, and contextually surfacing longitudinal genetic and family data across sessions.",
+      "_timestamp": "2026-04-06T00:55:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misclassification of genetic risk can lead to inappropriate medical decisions, missed early interventions, or significant psychological and reproductive consequences, so even rare residual errors can have serious impact.",
+      "adequacy_evidence": "With database cross-checking, established variant interpretation guidelines, and human expert review, many AI errors can be caught, but subtle misinterpretations or unsupported inferences may still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T00:55:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Interpreting genetic information to assess patient risk is considered part of medical practice and/or licensed genetic counseling in many U.S. states, requiring a qualified human professional. These laws effectively prohibit fully autonomous AI performance without licensed human oversight or sign-off.",
+      "_timestamp": "2026-04-06T00:55:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task directly affects patients and families making high-stakes health decisions, where trust in the counselor\u2019s expertise, empathy, and communication is central to acceptance and use of the information.",
+      "adequacy_evidence": "Patients are likely to resist or distrust an AI performing this role due to its sensitive, emotional, and ethical nature; lack of human empathy and perceived accountability would substantially undermine effectiveness without human mediation.",
+      "_timestamp": "2026-04-06T00:55:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2072.00",
+  "task_id": 3409,
+  "task_statement": "Analyze applicants' financial status, credit, and property evaluations to determine feasibility of granting loans.",
+  "occupation_title": "Loan Officers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Evaluating applicants\u2019 financial records, credit reports, and property appraisal documents is typically done using digital financial data, databases, and electronic reports. The analysis can be performed entirely on a computer without requiring physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Applicant profiles vary widely across income types, credit histories, property classes, and macroeconomic contexts, with many edge cases (e.g., self-employed borrowers, atypical collateral, fluctuating markets).",
+      "adequacy_evidence": "While large volumes of underwriting data and guidelines exist, much of the richest decision data is proprietary and lacks transparent reasoning traces; however, partial coverage can be reconstructed via public data, synthetic cases, and documented lending criteria.",
+      "_timestamp": "2026-04-06T04:07:30"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan evaluation relies partly on standardized underwriting rules and credit models, but officers must apply judgment for borderline cases, compensating factors, and nuanced financial situations (e.g., irregular income or atypical collateral).",
+      "adequacy_evidence": "Current AI systems can replicate most rule-based underwriting and pattern recognition but show weaker calibration in non-routine cases requiring contextual financial judgment and risk tradeoffs.",
+      "_timestamp": "2026-04-06T04:07:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves analyzing structured financial records, credit reports, and written property evaluations, which are largely text and numerical data.",
+      "adequacy_evidence": "Current AI systems handle text and numerical analysis well, and the task does not meaningfully rely on image, audio, or other non-text modalities.",
+      "_timestamp": "2026-04-06T04:07:31"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan feasibility is guided by formal underwriting criteria (credit scores, debt-to-income, collateral) but also involves context-dependent judgment about compensating factors and risk tolerance that are not fully explicit.",
+      "adequacy_evidence": "Current AI can apply documented rules and infer some patterns, but it often struggles to appropriately weigh nuanced borrower contexts or lender-specific risk preferences without human iteration.",
+      "_timestamp": "2026-04-06T04:07:31"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple interdependent steps\u2014reviewing credit reports, financial statements, and property valuations, then synthesizing them into a lending decision\u2014but sequences are moderate in length and structured.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute these structured, multi-step financial analyses with minimal degradation, especially when supported by tools and checklists that maintain consistency across steps.",
+      "_timestamp": "2026-04-06T04:07:31"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing multiple structured and semi-structured inputs (credit reports, income statements, property appraisals), requiring comparison and aggregation but typically within bounded, standardized document sets.",
+      "adequacy_evidence": "Current agents can ingest and summarize these documents, but may lose or misweight key details (e.g., nuanced credit factors or exceptions) when compressing information across sources.",
+      "_timestamp": "2026-04-06T04:07:32"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Loan analysis is largely case-based per application but can involve prior interactions, repeat applicants, or ongoing application updates requiring some cross-session context.",
+      "adequacy_evidence": "Current AI systems integrated with standard databases/CRMs can reliably store and retrieve applicant histories and prior case data, meeting these moderate memory needs.",
+      "_timestamp": "2026-04-06T04:07:32"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Loan feasibility analysis is typically performed over minutes to hours as part of an underwriting process, not requiring immediate or real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform detailed financial analysis well within these relaxed time constraints, so extended reasoning does not conflict with latency expectations.",
+      "_timestamp": "2026-04-06T04:07:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. lending laws (e.g., ECOA, FCRA) and regulatory guidance permit automated underwriting but impose constraints such as explainability, adverse action notices, and fair lending compliance. These do not prohibit AI use but create partial restrictions and accountability requirements that complicate fully autonomous deployment.",
+      "_timestamp": "2026-04-06T04:07:34"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The analysis feeds decisions that directly affect applicants and institutions, and stakeholders rely on the evaluator\u2019s judgment, though interaction is often indirect and standardized.",
+      "adequacy_evidence": "Automated underwriting systems are already used, but some applicants and institutions still prefer or require human oversight for trust, fairness, and accountability, leading to partial resistance.",
+      "_timestamp": "2026-04-06T04:07:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect loan feasibility decisions can lead to substantial financial losses, regulatory violations, or unfair lending outcomes, and even rare errors can have serious consequences for both lender and applicant.",
+      "adequacy_evidence": "Even with standard checks (e.g., underwriting rules, audits), AI systems can still misinterpret nuanced financial contexts or edge cases, leaving some non-trivial residual risk, though not categorically prohibitive.",
+      "_timestamp": "2026-04-06T04:07:35"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification relies on structured financial data (credit scores, income ratios, appraisals) and established underwriting guidelines, but still requires domain expertise to catch inconsistencies, misinterpretations, or nuanced risk factors.",
+      "adequacy_evidence": "Current AI can process and summarize financial inputs but still makes occasional reasoning or data-integration errors, so human review is needed to validate calculations and judgments, though this checking is feasible with moderate effort.",
+      "_timestamp": "2026-04-06T04:07:36"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

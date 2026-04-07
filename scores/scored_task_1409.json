@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2112.00",
+  "task_id": 1409,
+  "task_statement": "Schedule deliveries based on production forecasts, material substitutions, storage and handling facilities, and maintenance requirements.",
+  "occupation_title": "Industrial Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Scheduling deliveries is typically done using digital tools such as ERP, logistics, or planning software based on forecasts and operational data. However, accurate scheduling can sometimes require on-site knowledge of storage, handling constraints, or coordination with physical operations."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varying production systems, materials, facility constraints, and maintenance regimes across industries, but follows recurring structured patterns (e.g., logistics optimization, scheduling under constraints).",
+      "adequacy_evidence": "There is substantial coverage via operations research literature, ERP/logistics datasets, and simulation environments, but firm-specific constraints and real-world exception handling are often proprietary and only partially reproducible through synthetic data.",
+      "_timestamp": "2026-04-06T04:55:57"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step planning that integrates forecasts, substitutions, facility constraints, and maintenance schedules, where each decision affects downstream delivery timing and feasibility.",
+      "adequacy_evidence": "AI agents can handle structured planning with tools, but over long, interdependent scheduling sequences they can lose constraints or introduce inconsistencies, requiring oversight.",
+      "_timestamp": "2026-04-06T04:55:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Scheduling deliveries requires integrating multiple dynamic inputs (forecasts, substitutions, facility constraints, maintenance windows) and tracking their interactions within a single planning episode, where missing a constraint can cause infeasible or inefficient schedules.",
+      "adequacy_evidence": "Agents can use tools and structured representations to manage this information, but they still show weaknesses in reliably maintaining and updating complex, interdependent state without omissions or drift.",
+      "_timestamp": "2026-04-06T04:55:58"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of delivery scheduling can be formalized via optimization models and rules, practitioners rely on experience to balance trade-offs (e.g., handling constraints, substitution impacts, and maintenance disruptions) and to anticipate operational quirks not fully captured in explicit procedures.",
+      "adequacy_evidence": "Current AI agents can apply optimization and rules effectively but often lack calibrated judgment for plant-specific nuances and non-routine disruptions, leading to moderate gaps in context-sensitive decision-making.",
+      "_timestamp": "2026-04-06T04:55:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling deliveries depends on evolving production forecasts, maintenance plans, and facility constraints that persist across planning cycles, but these are typically stored in structured systems rather than requiring rich implicit memory.",
+      "adequacy_evidence": "Current AI agents can reliably access and update persistent state via databases, ERP systems, and planning tools, so cross-session memory needs are well-supported with standard integrations.",
+      "_timestamp": "2026-04-06T04:55:59"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While inputs like forecasts, storage limits, and maintenance windows are explicit, key objectives (e.g., prioritizing cost vs. timeliness vs. risk buffering) and tradeoffs are often implicit and context-dependent.",
+      "adequacy_evidence": "Current agents can model constraints and optimize schedules but often miss nuanced priorities or evolving operational preferences, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T04:55:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Verifying delivery schedules requires checking consistency with forecasts, constraints, and interdependencies (e.g., storage limits, maintenance windows), and errors may only surface through downstream disruptions or simulation, making detection nontrivial.",
+      "adequacy_evidence": "Current AI can generate plausible schedules but may miss edge constraints or dynamic interactions, so human review, scenario testing, or optimization validation is still needed, though many issues can be caught with structured checks and tools.",
+      "_timestamp": "2026-04-06T04:55:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Delivery scheduling in industrial engineering is typically performed as a planning or optimization task with time horizons of hours to days, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can generate and refine schedules within acceptable planning timeframes, with no meaningful degradation due to latency constraints.",
+      "_timestamp": "2026-04-06T04:55:59"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily uses structured numerical and textual data (forecasts, schedules, constraints) typically managed in ERP or planning systems, with little reliance on images, audio, or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents handle text and structured data processing well, and no significant multimodal capabilities are required for competent performance in this task.",
+      "_timestamp": "2026-04-06T04:56:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit or mandate human-only control over delivery scheduling or production logistics planning; such tasks can be automated or supported by software systems, including AI.",
+      "_timestamp": "2026-04-06T04:56:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires coordination with internal teams (production, maintenance, logistics) and possibly external suppliers, so stakeholders rely on and interact with the scheduling output, though the performer's identity is not central.",
+      "adequacy_evidence": "Organizations already accept algorithmic and AI-based scheduling tools in logistics and operations, and stakeholders typically care about efficiency and accuracy rather than whether a human or AI produced the schedule.",
+      "_timestamp": "2026-04-06T04:56:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in delivery scheduling can cause production delays, increased costs, or inventory imbalances, but these impacts are typically correctable and rarely catastrophic.",
+      "adequacy_evidence": "With standard checks like constraint validation, simulation, and human review, most scheduling errors are detectable before execution, and current AI systems can achieve acceptable residual risk levels.",
+      "_timestamp": "2026-04-06T04:56:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

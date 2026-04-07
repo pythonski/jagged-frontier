@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.01",
+  "task_id": 16261,
+  "task_statement": "Analyze archival data, such as birth, death, and disease records.",
+  "occupation_title": "Biostatisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Biostatisticians typically analyze archival birth, death, or disease records using digital datasets and statistical software on computers. While the original records may have been physical, the analysis work itself is almost always performed on digitized data."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse populations, time periods, and coding systems (e.g., ICD revisions), but follows relatively standardized data structures and statistical analysis patterns.",
+      "adequacy_evidence": "Large public health datasets, epidemiological studies, and synthetic data pipelines provide substantial coverage, though some real-world edge cases (e.g., rare diseases, incomplete records, or proprietary datasets) remain underrepresented.",
+      "_timestamp": "2026-04-06T02:29:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Analyzing archival vital and disease records involves multi-step workflows (data cleaning, linkage, statistical modeling, validation), but these steps are typically modular and can be checked independently rather than tightly interdependent over long chains.",
+      "adequacy_evidence": "AI agents can generally sustain performance across these moderate-length analytical pipelines, though some degradation appears in longer workflows (e.g., missed constraints or small inconsistencies across steps) without careful orchestration and validation.",
+      "_timestamp": "2026-04-06T02:29:05"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Analyzing archival health records requires judgment about data quality, missingness, confounding, and appropriate statistical modeling choices that are not fully specified by rules.",
+      "adequacy_evidence": "Current agents can apply standard statistical techniques and known heuristics, but show gaps in nuanced judgment around bias, causal inference, and context-specific interpretation in non-routine cases.",
+      "_timestamp": "2026-04-06T02:29:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Analyzing archival health data requires interpreting research goals, selecting relevant variables, handling data quality issues, and defining cohorts or models, which are often only partially specified and context-dependent.",
+      "adequacy_evidence": "Current agents can follow explicit analytical instructions but often struggle to infer nuanced study design choices or implicit scientific objectives without iterative human guidance.",
+      "_timestamp": "2026-04-06T02:29:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Birth, death, and disease records are typically structured or textual/tabular data, and the core analysis is statistical and text/numeric-based rather than requiring rich perceptual modalities.",
+      "adequacy_evidence": "Current AI systems handle text and structured data analysis well, and any minor multimodal elements (e.g., scanned documents) can be reliably processed with OCR and standard tools.",
+      "_timestamp": "2026-04-06T02:29:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing archival vital or disease records is typically a batch, research-oriented task with timelines of hours to days, not real-time decision-making.",
+      "adequacy_evidence": "Frontier AI systems can use extended reasoning, code execution, and iterative workflows within these relaxed timeframes without any meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-06T02:29:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Analyzing archival vital and disease records involves handling sizable datasets with multiple variables, filtering steps, and intermediate summaries, requiring structured retrieval and tracking within an analysis session.",
+      "adequacy_evidence": "Current agents offload most within-episode memory demands to external tools (e.g., dataframes, databases, code execution), reliably managing large datasets without needing to internally retain all details.",
+      "_timestamp": "2026-04-06T02:29:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Projects often span multiple sessions and may benefit from retaining context about datasets, assumptions, or prior analyses, but the core data and state are typically stored externally (e.g., databases, scripts).",
+      "adequacy_evidence": "Current AI systems can reliably use external storage, versioned code, and data pipelines to persist and retrieve cross-session context, so longitudinal memory needs are well supported.",
+      "_timestamp": "2026-04-06T02:29:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in analyzing archival health data (e.g., mis-specified models, bias, confounding, data quality issues) are often subtle and require deep statistical and domain expertise to detect, with no immediate feedback loops.",
+      "adequacy_evidence": "Current AI systems frequently make non-obvious statistical and data handling errors, and verifying correctness requires expert review of assumptions, code, and outputs, making the checking burden substantial and unavoidable.",
+      "_timestamp": "2026-04-06T02:29:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI analyzing archival health or vital records, but laws like HIPAA and state privacy regulations impose strict controls on data access, handling, and de-identification. These create partial constraints on how AI systems can be used, even if they do not ban the task itself.",
+      "_timestamp": "2026-04-06T02:29:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in analyzing archival health records can distort scientific findings or policy decisions, but they are typically subject to peer review, replication, and revision, making occasional residual errors survivable rather than catastrophic.",
+      "adequacy_evidence": "Even after standard checks, AI systems can still introduce subtle statistical or data-handling errors that are not always caught, leaving some meaningful residual risk, though not at a clearly unacceptable level.",
+      "_timestamp": "2026-04-06T02:29:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing archival health records is a backend analytical task whose outputs are typically consumed in reports or models without direct interaction with stakeholders or reliance on the analyst\u2019s identity.",
+      "adequacy_evidence": "Stakeholders generally care about accuracy and rigor of results rather than whether a human or AI performed the analysis, and AI-assisted analysis is already widely accepted in data science contexts.",
+      "_timestamp": "2026-04-06T02:29:08"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

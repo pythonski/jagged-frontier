@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2071.00",
+  "task_id": 534,
+  "task_statement": "Enter data, such as demographic characteristics, history and extent of disease, diagnostic procedures, or treatment into computer.",
+  "occupation_title": "Medical Records and Health Information Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "The task itself is computer-based data entry into electronic health records, which can often be done remotely. However, in many real settings workers may need on-site access to medical records systems or source information from physical charts or in-person clinical workflows."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of patient data types (demographics, diagnoses, procedures, treatments) and varying EHR formats, but follows relatively standardized data entry patterns and coding systems.",
+      "adequacy_evidence": "While medical data is sensitive and often inaccessible in raw form, de-identified datasets, coding standards (e.g., ICD, CPT), and synthetic data generation provide substantial coverage, though some edge cases and real-world variability remain underrepresented.",
+      "_timestamp": "2026-04-06T02:01:02"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task follows standardized data entry rules and coding guidelines, workers often rely on experience to interpret ambiguous clinical notes, resolve inconsistencies, and correctly map nuanced medical information into structured fields.",
+      "adequacy_evidence": "Current AI systems can handle routine extraction and mapping well but still struggle with ambiguous, context-dependent clinical interpretations and subtle judgment calls that experienced technicians make in non-routine cases.",
+      "_timestamp": "2026-04-06T02:01:03"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely governed by standardized forms, coding systems, and documentation rules, but requires some interpretation of clinical notes and context to determine what and how to enter data.",
+      "adequacy_evidence": "Current AI can often infer structure and map information correctly, but still struggles with ambiguous or inconsistently documented records, requiring human clarification in non-routine cases.",
+      "_timestamp": "2026-04-06T02:01:03"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple fields (demographics, medical history, procedures, treatments) often sourced from structured and semi-structured documents, requiring moderate tracking and organization within a single episode.",
+      "adequacy_evidence": "Current AI systems with retrieval and structured extraction tools can reliably manage and map this level of information within context windows, with minimal loss or drift during a single data entry episode.",
+      "_timestamp": "2026-04-06T02:01:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves entering multiple related data fields within a patient record, requiring consistent attention across a sequence of entries, but each field is largely independent and does not form a tightly coupled workflow.",
+      "adequacy_evidence": "LLM-based agents with structured input pipelines can reliably handle multi-field data entry without noticeable degradation across steps, especially when supported by validation rules and form-based interfaces.",
+      "_timestamp": "2026-04-06T02:01:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Entering medical record data is typically a routine administrative task without strict real-time constraints; minutes per record are generally acceptable.",
+      "adequacy_evidence": "AI systems can perform structured data entry accurately within these loose time bounds without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T02:01:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each data entry instance is driven by the current patient record or source documents; required history is explicitly provided rather than relying on technician memory across sessions.",
+      "adequacy_evidence": "AI systems can store and retrieve records in external databases, and the task does not depend on the agent maintaining its own longitudinal memory beyond what is already encoded in the data systems.",
+      "_timestamp": "2026-04-06T02:01:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves transcribing and entering structured textual and numerical information from medical records into computer systems, which is fundamentally text-based.",
+      "adequacy_evidence": "Current AI systems handle text extraction, OCR, and structured data entry reliably for typical medical documentation, so non-text modality limitations are not a bottleneck.",
+      "_timestamp": "2026-04-06T02:01:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing rules prohibiting AI from performing medical data entry; systems can be used as long as they comply with HIPAA and related privacy/security requirements. These regulations govern handling of data, not who or what performs the entry.",
+      "_timestamp": "2026-04-06T02:01:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Data entry is typically based on structured source documents with validation rules and cross-checks, but some errors (e.g., miscoding or misinterpretation of clinical details) require domain knowledge and review to detect.",
+      "adequacy_evidence": "AI systems can extract and enter structured medical data reasonably well, but still make non-trivial errors in interpretation or coding, requiring routine human verification to ensure accuracy.",
+      "_timestamp": "2026-04-06T02:01:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is an internal data entry task within health information systems; outputs are consumed impersonally and do not depend on interaction with or trust in a specific performer.",
+      "adequacy_evidence": "Healthcare systems already use automated data entry, templates, and EHR integrations; stakeholders are generally indifferent to whether a human or AI performs this function as long as accuracy is maintained.",
+      "_timestamp": "2026-04-06T02:01:07"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in medical data entry can affect billing, reporting, and occasionally clinical decisions, but many fields are cross-checked downstream and most mistakes are correctable rather than catastrophic.",
+      "adequacy_evidence": "With structured forms, validation rules, and routine human or automated checks, current AI systems can reduce residual error risk to a level comparable to or acceptable relative to human performance.",
+      "_timestamp": "2026-04-06T02:01:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

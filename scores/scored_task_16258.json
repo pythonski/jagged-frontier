@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.01",
+  "task_id": 16258,
+  "task_statement": "Design research studies in collaboration with physicians, life scientists, or other professionals.",
+  "occupation_title": "Biostatisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Designing research studies and collaborating with other professionals primarily involves statistical planning, document preparation, and discussions that can be conducted via email, shared documents, and video conferencing without requiring physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing research studies with domain experts involves eliciting partially implicit goals, balancing scientific, clinical, ethical, and feasibility constraints, and iteratively refining designs as stakeholder priorities evolve.",
+      "adequacy_evidence": "Current AI agents can propose reasonable study designs and ask clarifying questions, but they often miss nuanced clinical priorities, unspoken constraints, and evolving stakeholder intent, requiring substantial human guidance to converge.",
+      "_timestamp": "2026-04-06T05:00:13"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing research studies requires nuanced judgment about study design tradeoffs (e.g., bias vs. feasibility, endpoint selection, confounding control) and alignment with clinical realities, which relies heavily on experience beyond formal rules.",
+      "adequacy_evidence": "Current AI agents can apply statistical principles and propose reasonable designs, but often lack calibrated judgment in complex, context-sensitive tradeoffs and interdisciplinary negotiation, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T05:00:13"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Study design spans many domains (therapeutic areas, endpoints, trial phases, regulatory contexts, data modalities), with context-specific constraints and edge cases, yielding a highly heterogeneous distribution.",
+      "adequacy_evidence": "Extensive public corpora exist (protocols, trial registries, guidelines, textbooks) that expose design processes, but some contexts (proprietary datasets, sponsor constraints, nuanced collaboration dynamics) are thin and partially inaccessible.",
+      "_timestamp": "2026-04-06T05:00:13"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing studies involves long, interdependent sequences (hypothesis framing, endpoint selection, design choice, power analysis, protocol drafting, iterative stakeholder revision) where early decisions constrain later steps and errors propagate.",
+      "adequacy_evidence": "Well-scaffolded agents can handle multi-step workflows, but over extended, iterative design cycles they show some goal drift and constraint loss, especially when incorporating evolving stakeholder input.",
+      "_timestamp": "2026-04-06T05:00:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing research studies requires tracking multiple elements\u2014research questions, study populations, variables, constraints, prior literature, and stakeholder inputs\u2014within a single collaborative episode, but the volume is structured and not extreme.",
+      "adequacy_evidence": "Current agents can handle moderate context via retrieval and summarization, but they may lose or distort details across iterations (e.g., evolving design constraints or stakeholder preferences), requiring oversight.",
+      "_timestamp": "2026-04-06T05:00:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing research studies in biostatistics is primarily a text- and math-driven activity involving protocols, statistical plans, and written collaboration; visual elements like charts are secondary and not essential to core task execution.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI agents already handle the required modalities adequately without reliance on advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T05:00:16"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing research studies is a deliberative process typically conducted over meetings, drafts, and iterative discussions where minutes to hours (or longer) are acceptable.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to reason and refine outputs without meaningful degradation, as tight real-time response is not required for high-quality performance.",
+      "_timestamp": "2026-04-06T05:00:16"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Flaws in study design (e.g., bias, confounding, inappropriate endpoints, power miscalculations) are often subtle and may only become apparent after data collection or analysis, requiring deep statistical and domain expertise to detect.",
+      "adequacy_evidence": "Current AI systems frequently produce plausible but flawed study designs, and verifying their correctness requires extensive expert review, as errors are not easily caught through simple checks and can have downstream consequences.",
+      "_timestamp": "2026-04-06T05:00:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing research studies is iterative and collaborative, requiring recall of prior project discussions, design decisions, and stakeholder preferences across multiple sessions, but each study can often be reloaded from documents if needed.",
+      "adequacy_evidence": "Current agents can store and retrieve project context via external memory tools, but they often inconsistently surface relevant past decisions or preferences without careful setup, leading to moderate gaps.",
+      "_timestamp": "2026-04-06T05:00:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI contributing to study design, but regulated research (e.g., clinical studies) requires qualified human investigators and IRB oversight to design and approve protocols, effectively preventing fully autonomous AI performance.",
+      "_timestamp": "2026-04-06T05:00:17"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Flaws in study design (e.g., incorrect endpoints, biased sampling, underpowered analyses) can invalidate trials, misguide clinical decisions, or expose patients to ineffective or harmful interventions, so even rare residual errors carry high stakes.",
+      "adequacy_evidence": "Even with expert review, AI-generated designs may contain subtle statistical or domain-specific flaws that are hard to fully eliminate, leaving some nontrivial residual risk, though not uniformly prohibitive under careful oversight.",
+      "_timestamp": "2026-04-06T05:00:17"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task is inherently collaborative with physicians and scientists, where trust, professional credibility, and interactive engagement are central to effective study design.",
+      "adequacy_evidence": "While AI-assisted design tools are increasingly accepted, many professionals would hesitate to rely on or fully collaborate with an autonomous AI as an equal partner, preferring human oversight and accountability.",
+      "_timestamp": "2026-04-06T05:00:17"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

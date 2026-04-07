@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.00",
+  "task_id": 21356,
+  "task_statement": "Advise sales and billing departments of transportation charges for customers' accounts.",
+  "occupation_title": "Transportation, Storage, and Distribution Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Advising internal departments about transportation charges is typically done through email, messaging, ERP/logistics software, or digital reports, all of which can be completed remotely with a computer and internet access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different pricing schemes (tariffs, contracts, fuel surcharges, modes, routes) but is structured and rule-governed within logistics domains rather than highly open-ended.",
+      "adequacy_evidence": "While general pricing logic and examples are available in public and synthetic data, much real-world variation (e.g., negotiated contracts, company-specific rate tables) is proprietary, leaving some gaps that can be partially approximated.",
+      "_timestamp": "2026-04-06T01:28:45"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering shipment details, applying pricing rules or tariffs, and communicating results, requiring some multi-step consistency but not long, tightly interdependent sequences.",
+      "adequacy_evidence": "Frontier AI agents can reliably handle short to moderate multi-step workflows (data retrieval, calculation, and notification) without significant degradation in coherence.",
+      "_timestamp": "2026-04-06T01:28:46"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many transportation charges are governed by explicit rate tables, contracts, and billing rules, advising departments often requires interpreting customer-specific agreements, exceptions, and contextual factors like negotiated discounts or special handling.",
+      "adequacy_evidence": "Current AI agents can apply documented pricing rules and retrieve contract terms, but they may miss nuanced interpretations or implicit business practices, requiring human clarification in non-standard cases.",
+      "_timestamp": "2026-04-06T01:28:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of transportation charge advising follows explicit tariffs, contracts, and rate tables, practitioners often apply experience to interpret exceptions, special customer agreements, and context-specific adjustments (e.g., accessorials, market conditions).",
+      "adequacy_evidence": "Current AI agents can handle structured pricing logic and documented rules well, but show gaps in nuanced judgment for non-standard cases or implicit business norms, leading to moderate calibration limitations.",
+      "_timestamp": "2026-04-06T01:28:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves integrating multiple data points such as rate tables, shipment details, contracts, and surcharges, requiring moderate information tracking and synthesis within a single episode.",
+      "adequacy_evidence": "Current AI systems with tool use (databases, spreadsheets, retrieval) can reliably manage and integrate these structured inputs without significant context loss or compression errors.",
+      "_timestamp": "2026-04-06T01:28:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves interpreting rate tables, contracts, and shipment data, then communicating charges in text or numerical form; it is fundamentally text- and data-driven.",
+      "adequacy_evidence": "Since the task is effectively text-in/text-out with structured data, current AI systems handle the modality requirements without issue.",
+      "_timestamp": "2026-04-06T01:28:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task can depend on customer-specific contracts, historical pricing agreements, and account details that persist across transactions, but these are typically stored in structured systems rather than requiring rich longitudinal reasoning.",
+      "adequacy_evidence": "Current AI agents can reliably retrieve and use persistent account data from databases/CRMs, so cross-session memory needs are well-supported by existing tooling.",
+      "_timestamp": "2026-04-06T01:28:47"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Advising internal departments on transportation charges is typically done via reports or internal communications where delays of minutes to hours are acceptable, not real-time decision loops.",
+      "adequacy_evidence": "Current AI agents can compute and communicate charge estimates or policies quickly, well within typical business response windows, without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T01:28:47"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from calculating or advising on transportation charges for internal business purposes. While billing practices may be regulated (e.g., tariffs, contracts), these rules do not mandate a human decision-maker for this advisory task.",
+      "_timestamp": "2026-04-06T01:28:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves advising internal stakeholders (sales and billing departments) who rely on the information, but it is routine and does not depend strongly on the performer's personal authority or identity.",
+      "adequacy_evidence": "Internal departments are typically indifferent to whether such advisory information is generated by an AI system as long as it is accurate, and similar automation is already common in pricing and billing workflows.",
+      "_timestamp": "2026-04-06T01:28:48"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect transportation charges can lead to billing errors, customer disputes, and revenue leakage, but these issues are typically detectable and correctable without severe or irreversible consequences.",
+      "adequacy_evidence": "Charge calculations and advisories can be cross-checked against rate tables, contracts, and system outputs, so after normal validation processes, AI residual errors are unlikely to pose unacceptable risk.",
+      "_timestamp": "2026-04-06T01:28:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Transportation charges are typically derived from rate tables, contracts, fuel surcharges, and shipment details, allowing verification against documented sources, though it requires domain knowledge and careful cross-checking.",
+      "adequacy_evidence": "AI can compute and explain charges but may misapply tariffs or miss contextual factors (e.g., special contracts or exceptions), so human review against source documents remains necessary.",
+      "_timestamp": "2026-04-06T01:28:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

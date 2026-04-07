@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3031.02",
+  "task_id": 7467,
+  "task_statement": "Lay out and match aerial photographs in sequences in which they were taken and identify any areas missing from photographs.",
+  "occupation_title": "Surveying and Mapping Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Most modern photogrammetry and mapping workflows use digital aerial imagery arranged and analyzed in GIS or photogrammetry software. However, some contexts may still involve handling printed aerial photographs or physical light-table work."
+  },
+  "scores": {
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each sequencing and matching task is typically tied to a specific aerial survey dataset that can be processed independently without relying on prior project history.",
+      "adequacy_evidence": "Current AI systems can easily reload project files and metadata when needed; no persistent cross-session memory beyond standard data storage is required.",
+      "_timestamp": "2026-04-05T23:06:40"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ordering and aligning multiple aerial photographs and checking continuity across them, requiring consistency across a sequence of interdependent steps but not extremely long or deeply chained workflows.",
+      "adequacy_evidence": "AI systems can generally maintain coherence across moderate-length image sequencing and alignment tasks, but performance can degrade with larger or more complex sets due to compounding alignment or coverage errors.",
+      "_timestamp": "2026-04-05T23:06:40"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task has clear goals (sequence images and find gaps), but requires contextual judgment in aligning overlapping features and determining correct ordering and coverage, which are not fully explicit.",
+      "adequacy_evidence": "Current multimodal agents can often infer sequencing and detect missing regions, but they still struggle with edge cases (ambiguous overlaps, poor image quality) and may require human guidance to resolve uncertainties.",
+      "_timestamp": "2026-04-05T23:06:40"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied terrains, imaging conditions, and flight patterns, but follows well-defined photogrammetric principles and overlap patterns rather than highly idiosyncratic cases.",
+      "adequacy_evidence": "Extensive aerial and satellite imagery datasets exist, and synthetic generation of flight sequences with known ordering and gaps is straightforward, providing ample process-level training signal.",
+      "_timestamp": "2026-04-05T23:06:40"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves recognizing overlap patterns, terrain continuity, and flight-line logic, which benefit from experience-based judgment in ambiguous or low-quality imagery, though much is guided by established photogrammetry procedures.",
+      "adequacy_evidence": "Current AI vision systems can align and sequence aerial imagery and detect gaps in many standard cases, but they can struggle with atypical terrain, inconsistent image quality, or subtle contextual cues that human technicians calibrate through experience.",
+      "_timestamp": "2026-04-05T23:06:40"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Sequencing and matching aerial photographs is an analytical, office-based task where minutes or longer per case are acceptable; there is no real-time operational pressure.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to process imagery and perform matching without degrading quality, as latency constraints are minimal.",
+      "_timestamp": "2026-04-05T23:06:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires simultaneously tracking many aerial images, their spatial relationships, sequence order, and coverage gaps, where missing or misplacing a single image affects overall completeness assessment.",
+      "adequacy_evidence": "Current agents can manage multiple images with tooling, but they often struggle with maintaining consistent spatial relationships and comprehensive coverage tracking across larger sets, leading to occasional omissions or misalignments.",
+      "_timestamp": "2026-04-05T23:06:40"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centers on interpreting and aligning aerial imagery, requiring visual-spatial reasoning to sequence photographs and detect geographic gaps; text alone is insufficient.",
+      "adequacy_evidence": "Current AI vision systems can analyze and compare aerial images reasonably well, but may struggle with precise spatial alignment, subtle coverage gaps, and complex terrain variations in professional surveying contexts.",
+      "_timestamp": "2026-04-05T23:06:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is a technical, back-office activity where outputs are used internally by mapping or surveying teams without direct stakeholder interaction tied to performer identity.",
+      "adequacy_evidence": "Stakeholders care about accuracy of the matched imagery, not who or what produced it, and automated image processing tools are already widely accepted in this domain.",
+      "_timestamp": "2026-04-05T23:06:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Mistakes in sequencing or missing-area identification can lead to incomplete or misaligned maps, but these errors are typically correctable and do not usually cause irreversible or high-stakes harm.",
+      "adequacy_evidence": "Current AI vision systems, combined with routine human or automated cross-checks (e.g., overlap validation, geospatial consistency checks), can reduce residual errors to an acceptable level for this task.",
+      "_timestamp": "2026-04-05T23:06:42"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from organizing and matching aerial photographs. While licensed surveyors may need to review or certify final survey products, this specific task is a preparatory technical activity with no direct regulatory restriction on AI use.",
+      "_timestamp": "2026-04-05T23:06:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking spatial continuity, overlap, and sequencing of aerial images, which requires domain knowledge and careful visual/geospatial inspection but is generally feasible with standard tools.",
+      "adequacy_evidence": "Current AI can assist with image matching and sequencing but still makes alignment and gap-detection errors that require human review, especially for subtle misregistrations or incomplete coverage.",
+      "_timestamp": "2026-04-05T23:06:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

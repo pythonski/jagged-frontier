@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3024.00",
+  "task_id": 22018,
+  "task_statement": "Select electromechanical equipment, materials, components, or systems to meet functional specifications.",
+  "occupation_title": "Electro-Mechanical and Mechatronics Technologists and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Selecting equipment or components is often done by reviewing specifications, datasheets, CAD models, and supplier catalogs on a computer, but technicians may also physically inspect, test, or verify components in a lab or workshop before final selection."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting electromechanical components involves interpreting specs alongside context-specific tradeoffs (e.g., reliability, manufacturability, environmental conditions) that often rely on experience beyond formal rules.",
+      "adequacy_evidence": "AI agents can map specifications to components using documented criteria, but they lack consistent real-world calibration for edge cases and nuanced tradeoffs encountered in non-standard or context-sensitive selections.",
+      "_timestamp": "2026-04-06T05:18:07"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a wide range of applications, industries, operating environments, and component types (motors, sensors, controllers, etc.), each with different constraints and edge cases, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "There is extensive accessible data (datasheets, catalogs, design manuals, application notes), but some real-world selection contexts\u2014especially involving proprietary systems, unusual environments, or tacit trade-offs\u2014are thinly documented and only partially recoverable via current training pipelines.",
+      "_timestamp": "2026-04-06T05:18:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Functional specifications are often partially explicit but require interpretation of constraints like cost, environmental conditions, compatibility, and safety margins that may not be fully spelled out.",
+      "adequacy_evidence": "Current agents can map specifications to components using databases and rules, but often miss implicit tradeoffs or context-specific constraints, requiring human refinement to reach an optimal selection.",
+      "_timestamp": "2026-04-06T05:18:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step process\u2014interpreting specifications, identifying candidate components, evaluating trade-offs, and ensuring compatibility\u2014but these steps are moderately bounded rather than long, tightly coupled sequences.",
+      "adequacy_evidence": "AI agents can generally sustain coherence across these moderate sequences with tool support, though some degradation can occur in maintaining all constraints and trade-offs consistently over multiple evaluation steps.",
+      "_timestamp": "2026-04-06T05:18:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple specifications, constraints, and component options (e.g., electrical ratings, mechanical tolerances, compatibility), but these are typically structured and bounded within engineering documentation.",
+      "adequacy_evidence": "Agents can manage spec comparison and retrieval with tools, but may occasionally drop or misprioritize constraints when juggling multiple parameters across documents or steps.",
+      "_timestamp": "2026-04-06T05:18:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Equipment selection can benefit from prior project knowledge, vendor performance history, or organizational standards, but many selections can be made from current specifications and reference materials alone.",
+      "adequacy_evidence": "Current AI systems with standard retrieval and persistence tools can store and recall prior project data, component libraries, and preferences effectively, meeting these moderate cross-session needs.",
+      "_timestamp": "2026-04-06T05:18:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Selecting electromechanical equipment to meet specifications is typically a design or planning activity with timelines of minutes to hours or longer, not requiring real-time responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to search specifications, compare options, and reason through tradeoffs without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T05:18:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selection often involves interpreting schematics, CAD drawings, wiring diagrams, and physical layout constraints alongside textual specifications.",
+      "adequacy_evidence": "Current agents can handle standard diagrams and datasheets but are less reliable with complex schematics, spatial constraints, or nuanced cross-modal engineering tradeoffs.",
+      "_timestamp": "2026-04-06T05:18:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying correct selection requires detailed engineering checks (load calculations, tolerances, standards compliance, interoperability), and errors may only surface during integration or operation, making them non-trivial to detect upfront.",
+      "adequacy_evidence": "Current AI can suggest plausible components but often makes subtle specification or compatibility errors, so expert review, simulation, and cross-checking against datasheets and standards are still necessary and effortful.",
+      "_timestamp": "2026-04-06T05:18:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect selection of electromechanical components can lead to system failure, safety hazards, regulatory noncompliance, or costly downtime, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "While engineering review, simulation, and standards-based checks can catch many issues, AI systems may still miss edge-case constraints or context-specific requirements, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T05:18:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from selecting electromechanical equipment or components. While licensed engineers may be required to approve final designs in certain contexts, this does not restrict AI from performing the selection task itself.",
+      "_timestamp": "2026-04-06T05:18:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The selections are reviewed and relied upon by engineers, managers, or clients, who may care about the credibility of the source but focus primarily on technical correctness rather than personal interaction.",
+      "adequacy_evidence": "AI-assisted design and component selection tools are increasingly accepted, but stakeholders often still expect human validation and may be cautious about fully delegating responsibility to an AI system.",
+      "_timestamp": "2026-04-06T05:18:13"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

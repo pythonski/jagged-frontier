@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2041.00",
+  "task_id": 1259,
+  "task_statement": "Analyze financial data, such as income growth, quality of management, and market share to determine expected profitability of loans.",
+  "occupation_title": "Credit Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Analyzing financial metrics such as income growth, management quality indicators, and market share is typically performed using digital financial statements, databases, and analytical software, all accessible remotely. Physical presence is not required for the analytical task itself."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Credit analysis spans diverse industries, firm sizes, macro conditions, and incorporates both quantitative financials and qualitative factors like management quality, creating a heterogeneous, context-sensitive distribution.",
+      "adequacy_evidence": "There is extensive public financial data and documented credit analysis practices, but key elements like proprietary loan performance data and nuanced internal assessments of management quality are only partially accessible or observable in training data.",
+      "_timestamp": "2026-04-06T04:49:59"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing management quality, sustainability of income growth, and competitive position requires nuanced, experience-based judgment that goes beyond formal financial ratios or rules.",
+      "adequacy_evidence": "Current AI can approximate these judgments using patterns in financial data and text, but often lacks the calibrated skepticism and context-sensitive weighting seen in experienced analysts, especially in ambiguous or borderline cases.",
+      "_timestamp": "2026-04-06T04:50:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing loan profitability requires interpreting multiple qualitative and quantitative signals (e.g., management quality, industry context) with criteria that vary by lender risk tolerance and market conditions.",
+      "adequacy_evidence": "Current agents can apply standard financial heuristics but often miss institution-specific risk preferences or subtle contextual cues, requiring human refinement to align with true decision criteria.",
+      "_timestamp": "2026-04-06T04:50:01"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves analyzing structured financial data and qualitative text (e.g., reports on management and market share), which are fundamentally text/numeric inputs.",
+      "adequacy_evidence": "Current AI systems handle text and structured financial data analysis well, with no meaningful reliance on non-text modalities for competent performance.",
+      "_timestamp": "2026-04-06T04:50:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple financial indicators (e.g., income trends, management quality, market position) from different sources, requiring active tracking and synthesis but typically within a bounded analytical scope.",
+      "adequacy_evidence": "Current agents can manage multi-document financial analysis with tools, but may lose nuance or misweight factors when compressing diverse qualitative and quantitative inputs into a coherent judgment.",
+      "_timestamp": "2026-04-06T04:50:01"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Credit analysis of financial data is typically performed over minutes to hours, with no requirement for real-time or near-instant responses.",
+      "adequacy_evidence": "Frontier AI systems can take sufficient time to perform multi-step financial reasoning and analysis without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T04:50:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple interdependent analytical steps (evaluating financial metrics, qualitative factors, and synthesizing them into a profitability judgment), but sequences are typically moderate in length rather than deeply extended or tightly coupled chains.",
+      "adequacy_evidence": "AI agents can generally sustain coherent multi-step financial analysis, though some degradation can occur in longer chains\u2014such as inconsistent weighting of factors or minor goal drift across steps.",
+      "_timestamp": "2026-04-06T04:50:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Credit analysis can benefit from prior borrower history, past assessments, and evolving market context, but many evaluations can be conducted using current financial data and stored records without deep longitudinal state.",
+      "adequacy_evidence": "Modern AI systems integrated with databases and retrieval tools can reliably access and use cross-session financial records and histories, with minimal limitations in maintaining or retrieving relevant context.",
+      "_timestamp": "2026-04-06T04:50:03"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing expected loan profitability requires evaluating nuanced financial indicators, assumptions about management quality, and forward-looking judgments that are not directly observable; errors can be subtle and require expert review and time to uncover.",
+      "adequacy_evidence": "Current AI systems can produce plausible but flawed financial analyses (e.g., misweighted factors, incorrect assumptions, or shallow reasoning), and these errors are difficult to detect without thorough expert verification, making substantial checking necessary.",
+      "_timestamp": "2026-04-06T04:50:03"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in assessing borrower profitability can lead to poor lending decisions and financial losses, but impacts are typically absorbed through portfolio diversification and oversight structures rather than being catastrophic from a single mistake.",
+      "adequacy_evidence": "Even after standard review processes, AI may still miss nuanced financial signals or qualitative management factors, leaving some non-trivial residual risk that institutions would find concerning but not prohibitive.",
+      "_timestamp": "2026-04-06T04:50:04"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The analysis informs lending decisions used by internal stakeholders (e.g., loan officers, risk committees) who rely on the output, though direct interaction with external clients is limited.",
+      "adequacy_evidence": "Financial institutions show some openness to AI-assisted analysis, but full acceptance is constrained by trust, auditability, and preference for human accountability in credit decisions.",
+      "_timestamp": "2026-04-06T04:50:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing financial analysis for credit decisions, but regulations (e.g., fair lending laws, model risk management guidance like SR 11-7) require explainability, validation, and human oversight, creating partial constraints rather than a ban.",
+      "_timestamp": "2026-04-06T04:50:05"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-9162.00",
+  "task_id": 11961,
+  "task_statement": "Analyze job orders, drawings, blueprints, specifications, printed circuit board pattern films, and design data to calculate dimensions, tool selection, machine speeds, and feed rates.",
+  "occupation_title": "Computer Numerically Controlled Tool Programmers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "CNC programmers typically analyze CAD files, digital drawings, and specifications using CAM/CAD software on a computer. However, some instances involve reviewing physical blueprints, printed circuit films, or shop-floor documentation that require on-site access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse inputs (blueprints, PCB films, specifications) across many industries, materials, and machine types, with significant variation in geometry, tolerances, and machining strategies.",
+      "adequacy_evidence": "There is substantial public and synthetic data (CAD/CAM examples, machining guides, G-code generation workflows), but real-world job orders and proprietary design data are often inaccessible, leaving some edge cases underrepresented.",
+      "_timestamp": "2026-04-06T00:22:10"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many parameters (feeds, speeds, tool selection) are guided by machinist handbooks and calculable formulas, real-world performance often requires experiential adjustments based on material variability, machine condition, and tooling behavior.",
+      "adequacy_evidence": "Current agents can apply standard formulas and reference data well, but lack consistent calibration for edge cases like tool wear, vibration, or machine-specific quirks that experienced programmers handle intuitively.",
+      "_timestamp": "2026-04-06T00:22:10"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Technical drawings and specifications encode most requirements explicitly, but practitioners must interpret tolerances, material properties, and shop-specific conventions to choose appropriate tooling and parameters.",
+      "adequacy_evidence": "Current agents can extract explicit parameters from structured specs and drawings, but they often miss implicit manufacturing constraints or context-specific tradeoffs, requiring human review and adjustment.",
+      "_timestamp": "2026-04-06T00:22:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple heterogeneous inputs (blueprints, PCB films, specs, design data) and tracking numerous interdependent parameters (dimensions, tooling, speeds, feeds), where missing a detail can lead to incorrect machining outputs.",
+      "adequacy_evidence": "Current agents can ingest and cross-reference multiple documents with tool support, but still show weaknesses in reliably maintaining all constraints simultaneously, especially with complex visual-technical materials and dense specifications.",
+      "_timestamp": "2026-04-06T00:22:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step reasoning\u2014interpreting drawings/specs, extracting dimensions, and deriving machining parameters\u2014where intermediate results inform later calculations, but sequences are typically bounded and structured rather than deeply long-horizon.",
+      "adequacy_evidence": "Well-scaffolded agents can follow these structured pipelines, but may show some degradation across steps (e.g., dropped constraints or minor inconsistencies) when handling complex or densely specified designs.",
+      "_timestamp": "2026-04-06T00:22:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on interpreting engineering drawings, blueprints, and PCB films, which are visual-spatial artifacts requiring precise geometric and cross-modal reasoning beyond text alone.",
+      "adequacy_evidence": "Current AI systems can process and extract information from technical drawings in simpler cases, but they remain unreliable on complex, fine-grained engineering diagrams and nuanced spatial relationships common in CNC programming.",
+      "_timestamp": "2026-04-06T00:22:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many analyses are based on the current job's drawings and specifications, programmers often benefit from prior knowledge such as tooling libraries, machine capabilities, and past parameter choices for similar materials or parts.",
+      "adequacy_evidence": "Current AI systems with standard database integration and retrieval can reliably store and access tooling data, prior jobs, and preferences, so cross-session memory needs are well within existing capabilities.",
+      "_timestamp": "2026-04-06T00:22:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This analysis task is typically performed offline during programming or planning, where minutes to hours are acceptable to ensure accuracy in calculations and setup decisions.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform detailed reasoning and tool selection without meaningful pressure to truncate processing, so speed constraints do not degrade quality.",
+      "_timestamp": "2026-04-06T00:22:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements prohibiting AI from analyzing technical drawings or calculating machining parameters for CNC programming. While firms may impose internal controls or quality standards, these are not legally mandated restrictions on AI use.",
+      "_timestamp": "2026-04-06T00:22:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Outputs (dimensions, feeds/speeds, tool choices) can be checked using CAM software, simulations, and engineering review, but this requires domain expertise and careful inspection rather than being trivially obvious.",
+      "adequacy_evidence": "Current AI can generate plausible but occasionally incorrect machining parameters or misinterpret drawings, so human review and simulation remain necessary but are standard and manageable verification steps.",
+      "_timestamp": "2026-04-06T00:22:13"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect dimensions, feeds, or speeds can lead to scrapped parts, damaged tooling, machine crashes, or safety incidents, so even rare residual errors can have significant cost and operational impact.",
+      "adequacy_evidence": "Simulation, test runs, and review can catch many AI errors, but subtle miscalculations or context-specific judgment gaps may still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T00:22:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task\u2019s outputs are used by machinists and engineers, but interaction is primarily technical and internal, with limited dependence on the performer\u2019s identity beyond competence.",
+      "adequacy_evidence": "Industry already relies heavily on CAM software and automated tooling calculations, so stakeholders are generally indifferent to whether results come from an AI system as long as they are accurate.",
+      "_timestamp": "2026-04-06T00:22:13"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

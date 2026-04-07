@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1299.05",
+  "task_id": 21775,
+  "task_statement": "Identify or implement solutions to information security problems.",
+  "occupation_title": "Information Security Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Most information security problems are diagnosed and resolved through software configuration, code changes, log analysis, and remote system management. However, some implementations may involve installing or modifying on\u2011site hardware such as security appliances or network infrastructure."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Information security problems span highly heterogeneous environments (cloud, on-prem, embedded systems), threat models, and organizational contexts, creating a long-tailed distribution of scenarios and solutions.",
+      "adequacy_evidence": "There is substantial public data (vulnerability databases, incident reports, CTF datasets, code repos), but many real-world configurations, attack patterns, and defensive practices are proprietary or sparsely documented, leaving partial coverage gaps.",
+      "_timestamp": "2026-04-06T01:24:16"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Security problems vary widely by system architecture, threat model, business priorities, and risk tolerance, with success criteria often implicit (e.g., acceptable risk levels, usability tradeoffs, compliance needs). Engineers must infer goals from incomplete signals and evolving contexts.",
+      "adequacy_evidence": "Current agents can propose plausible security solutions using context and best practices, but they often miss organization-specific constraints, threat nuances, or implicit priorities without iterative human guidance.",
+      "_timestamp": "2026-04-06T01:24:16"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective security problem-solving relies heavily on experience with real-world attack patterns, system tradeoffs, and context-specific risk judgment that are not fully captured in formal rules or documentation.",
+      "adequacy_evidence": "Current agents can replicate many known patterns and best practices but lack robust calibration for novel threats, nuanced organizational contexts, and adversarial dynamics, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T01:24:17"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Solving information security problems involves multi-stage workflows (threat analysis, solution design, implementation, testing, and iteration) where earlier decisions strongly constrain later steps and errors can cascade.",
+      "adequacy_evidence": "Well-scaffolded AI agents can manage multi-step security workflows but still show some degradation over long sequences, such as losing constraints, misaligning earlier design choices, or introducing inconsistencies during implementation.",
+      "_timestamp": "2026-04-06T01:24:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosing and resolving security issues requires integrating large volumes of heterogeneous data (logs, network traces, system configs, threat intel, code) within a single investigative episode, where missing a detail can lead to incorrect remediation.",
+      "adequacy_evidence": "Tool-augmented agents can retrieve and summarize large contexts, but still exhibit context loss, imperfect retrieval, and drift in long, complex investigations involving many artifacts.",
+      "_timestamp": "2026-04-06T01:24:18"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective information security solutions depend on accumulated knowledge such as prior incidents, system configurations, vulnerability history, and evolving threat intelligence across time.",
+      "adequacy_evidence": "Current agents can persist and retrieve structured security data via external memory systems, but often struggle with reliably maintaining, updating, and contextually integrating long-term security state across complex environments.",
+      "_timestamp": "2026-04-06T01:24:18"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Information security problem-solving primarily relies on textual artifacts such as logs, code, configurations, alerts, and documentation; visual elements like network diagrams are helpful but not essential to core task execution.",
+      "adequacy_evidence": "Current AI agents handle text-based security data, logs, and code analysis effectively, and any occasional visual inputs (e.g., diagrams) are not central enough to expose significant multimodal limitations.",
+      "_timestamp": "2026-04-06T01:24:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Some security tasks like incident response and threat mitigation require rapid action within seconds to minutes, while others (e.g., vulnerability analysis, system design) allow longer deliberation.",
+      "adequacy_evidence": "Current agents can often provide useful guidance within the time window, but in high-pressure, real-time scenarios, reduced reasoning time can lead to less thorough or suboptimal solutions.",
+      "_timestamp": "2026-04-06T01:24:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Failures in information security solutions can lead to breaches, data loss, legal liability, and systemic compromise, so even rare residual errors can have severe and irreversible consequences.",
+      "adequacy_evidence": "While code review, testing, and monitoring can catch many issues, AI-generated security solutions can still harbor subtle vulnerabilities or misconfigurations that evade standard checks, leaving some meaningful residual risk.",
+      "_timestamp": "2026-04-06T01:24:20"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Security solutions often fail in subtle, adversarial ways; validating correctness requires deep expertise, threat modeling, and extensive testing (e.g., penetration tests, audits), with many issues only surfacing under specific conditions.",
+      "adequacy_evidence": "Current AI outputs in security design and implementation still contain non-obvious flaws and misconfigurations, and require thorough human-led review and testing to detect, making verification both necessary and resource-intensive.",
+      "_timestamp": "2026-04-06T01:24:20"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating with internal teams, management, and sometimes clients to deploy security solutions, where stakeholders rely on and interact with the implementer, but the performer\u2019s identity is not central to effectiveness.",
+      "adequacy_evidence": "While AI-generated security recommendations may be technically sound, organizations often hesitate to trust AI fully in high-stakes security contexts, requiring human oversight to gain acceptance.",
+      "_timestamp": "2026-04-06T01:24:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations that prohibit AI systems from identifying or implementing information security solutions. While organizations may be required to have qualified personnel responsible for security (e.g., under frameworks like HIPAA or FedRAMP), these rules do not bar AI from performing or assisting with the task.",
+      "_timestamp": "2026-04-06T01:24:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1181.00",
+  "task_id": 18688,
+  "task_statement": "Refer patients to additional medical or educational services, if needed.",
+  "occupation_title": "Audiologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Referrals are commonly created and transmitted through electronic health records, emails, or digital scheduling systems. However, they are often initiated during in-person clinical visits and may involve face-to-face explanation or physical paperwork."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple coordinated steps\u2014assessing patient needs, identifying appropriate services, preparing referrals, and communicating with patients and providers\u2014but these steps are moderately interdependent rather than deeply sequential.",
+      "adequacy_evidence": "Frontier AI agents can generally manage such multi-step workflows, but may show some degradation over longer sequences (e.g., missed constraints or coordination details) without careful scaffolding.",
+      "_timestamp": "2026-04-06T04:15:42"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions vary across patient age, comorbidities, hearing profiles, social context, and local service availability, creating moderate but not extreme heterogeneity.",
+      "adequacy_evidence": "Clinical guidelines, case studies, and EHR data provide substantial coverage, but localized resource knowledge and nuanced real-world referral patterns are unevenly captured and often inaccessible.",
+      "_timestamp": "2026-04-06T04:15:42"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions depend on patient-specific clinical findings, comorbidities, social context, and professional judgment, with guidelines but no fully explicit rules covering all cases.",
+      "adequacy_evidence": "Agents can follow clinical protocols and suggest plausible referrals, but often miss nuanced contextual factors (e.g., patient preferences, subtle symptoms, care coordination realities) without human clarification.",
+      "_timestamp": "2026-04-06T04:15:43"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions rely on interpreting audiological findings in context (e.g., comorbid conditions, developmental factors, patient needs), which often requires experience-based judgment beyond fixed rules.",
+      "adequacy_evidence": "Current agents can apply guidelines and pattern-match typical cases but lack consistent calibration in nuanced or borderline situations, especially when integrating psychosocial or multidisciplinary considerations.",
+      "_timestamp": "2026-04-06T04:15:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating patient history, diagnostic results, comorbid conditions, and possibly insurance or social factors, but the information scope is typically bounded within a single clinical encounter.",
+      "adequacy_evidence": "Current agents can retrieve and summarize structured and unstructured patient data, but may miss nuanced clinical details or fail to consistently prioritize the most relevant factors when multiple context elements are present.",
+      "_timestamp": "2026-04-06T04:15:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Referring patients to additional services is typically done during or after consultations with no strict real-time pressure; clinicians can take minutes or longer to consider options and document referrals.",
+      "adequacy_evidence": "Current AI systems can generate appropriate referral suggestions well within acceptable timeframes, so latency does not meaningfully constrain quality.",
+      "_timestamp": "2026-04-06T04:15:44"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Referrals rely on patient trust in the clinician\u2019s professional judgment, credibility, and empathy, which strongly influence whether patients follow through.",
+      "adequacy_evidence": "Many patients would be hesitant to accept referral decisions from an AI alone, preferring human clinician endorsement, though AI-supported recommendations could be acceptable with oversight.",
+      "_timestamp": "2026-04-06T04:15:46"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining appropriate referrals depends on nuanced clinical judgment, patient history, comorbidities, and evolving symptoms; errors may not be immediately apparent and can surface only after delayed outcomes or specialist evaluation.",
+      "adequacy_evidence": "Current AI systems can suggest plausible referrals but frequently miss contextual subtleties or over/under-refer, requiring thorough expert review; these errors are not trivially detectable without domain expertise, making verification burdens high.",
+      "_timestamp": "2026-04-06T04:15:46"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect or missed referrals can delay diagnosis or treatment of serious conditions (e.g., underlying pathology or needed educational interventions), leading to significant downstream harm even if rare.",
+      "adequacy_evidence": "With clinician review of AI-generated referral suggestions, most errors are catchable, but subtle judgment or context misses could still slip through, leaving some residual risk.",
+      "_timestamp": "2026-04-06T04:15:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Patient referral decisions are considered part of clinical practice and must be made by a licensed healthcare provider; AI systems cannot independently perform or authorize referrals under current U.S. medical licensing and scope-of-practice laws.",
+      "_timestamp": "2026-04-06T04:15:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referral decisions often rely on accumulated patient history (prior audiograms, treatment responses, comorbid conditions), but many referrals can still be made based on current evaluation plus accessible records.",
+      "adequacy_evidence": "Current AI systems can store and retrieve longitudinal patient data from EHR-like systems, but inconsistencies in record integration, updating, and context prioritization can lead to missed or misweighted historical details.",
+      "_timestamp": "2026-04-06T04:15:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Referral decisions may draw on non-text inputs such as audiograms, speech perception results, or observed patient behaviors, but these are typically summarized into clinical interpretations that can be conveyed textually.",
+      "adequacy_evidence": "Current AI systems can interpret common clinical visuals like audiograms and integrate them with text-based records sufficiently for referral decisions, so multimodal gaps are not a major limiting factor.",
+      "_timestamp": "2026-04-06T04:15:47"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

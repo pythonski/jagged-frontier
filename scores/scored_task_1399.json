@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2112.00",
+  "task_id": 1399,
+  "task_statement": "Review production schedules, engineering specifications, orders, and related information to obtain knowledge of manufacturing methods, procedures, and activities.",
+  "occupation_title": "Industrial Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Production schedules, engineering specifications, and orders are typically stored and reviewed in digital systems (ERP, CAD files, spreadsheets, or PDFs). However, in some manufacturing environments these materials or related context may involve physical documents or on-site coordination, making a small share non-remote."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting production schedules and engineering specifications often requires experience to understand implicit constraints, practical shop-floor realities, and inconsistencies not fully captured in documentation.",
+      "adequacy_evidence": "AI can extract and synthesize explicit information well, but struggles with plant-specific nuances, informal practices, and subtle judgment calls that experienced engineers apply when reconciling documents.",
+      "_timestamp": "2026-04-05T23:35:37"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple documents (schedules, specs, orders) and synthesizing information, requiring consistent reasoning across several steps but not long, tightly interdependent action chains.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across multi-document review tasks, but performance can degrade with longer contexts due to missed details or constraint drift.",
+      "_timestamp": "2026-04-05T23:35:37"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Industrial engineers encounter highly heterogeneous documents across industries (e.g., aerospace, automotive, electronics), each with distinct formats, terminology, and implicit process knowledge, creating a broad and long-tailed distribution.",
+      "adequacy_evidence": "While many examples of schedules, specifications, and manufacturing documentation exist in public and synthetic datasets, much of the most representative, process-rich data is proprietary and not fully accessible, though partial coverage can be approximated via targeted data generation and domain adaptation.",
+      "_timestamp": "2026-04-05T23:35:37"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires synthesizing multiple technical documents and inferring how processes actually operate, including implicit relationships between schedules, specs, and workflows that are not always explicitly stated.",
+      "adequacy_evidence": "Current agents can extract and summarize explicit information well but often miss contextual nuances, implicit constraints, or real-world operational interpretations without iterative clarification.",
+      "_timestamp": "2026-04-05T23:35:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing production schedules and engineering documents is an analytical task typically performed over minutes to hours, with no strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to process and synthesize such materials without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T23:35:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing information from multiple heterogeneous documents (schedules, specs, orders), requiring active retrieval and summarization but not extreme scale or rapid state changes.",
+      "adequacy_evidence": "Current agents can ingest and cross-reference multiple documents using tools, but may miss or misprioritize details when compressing information across sources, especially in complex or lengthy inputs.",
+      "_timestamp": "2026-04-05T23:35:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI from reviewing production schedules, specifications, and related documents. This is an internal analytical task that can legally be supported or performed by AI systems.",
+      "_timestamp": "2026-04-05T23:35:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Engineering specifications and manufacturing information often include diagrams, CAD drawings, flowcharts, and tables alongside text, requiring some visual-spatial interpretation beyond pure text.",
+      "adequacy_evidence": "Current AI systems can interpret many structured visuals and simple diagrams but are less reliable with complex engineering drawings, dense schematics, or nuanced spatial relationships common in manufacturing contexts.",
+      "_timestamp": "2026-04-05T23:35:39"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in interpreting production schedules or engineering specifications can often be checked against source documents, but doing so requires domain expertise and careful cross-referencing to ensure consistency and correctness.",
+      "adequacy_evidence": "AI can summarize and extract information from these materials reasonably well, but it still makes non-trivial interpretation errors, requiring human review to verify alignment with technical details and context.",
+      "_timestamp": "2026-04-05T23:35:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Misinterpretation of schedules or specifications can lead to inefficient or flawed engineering decisions, but errors are typically caught in downstream analysis or iterative review and are rarely immediately catastrophic.",
+      "adequacy_evidence": "AI-generated summaries or interpretations can be checked against source documents and validated by engineers, making residual errors after normal quality control generally acceptable.",
+      "_timestamp": "2026-04-05T23:35:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal analytical activity focused on reviewing documents to build understanding, with no direct interaction requiring stakeholder acceptance of the performer.",
+      "adequacy_evidence": "Because there are no meaningful external stakeholders for this task, acceptance of an AI agent is not a constraint and would not affect task performance.",
+      "_timestamp": "2026-04-05T23:35:40"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While each review can be conducted using the current set of schedules, specifications, and orders, familiarity with prior projects and evolving production practices can improve understanding and efficiency.",
+      "adequacy_evidence": "Current AI systems with standard retrieval and storage integrations can reliably retain and access prior documents and project context across sessions, meeting these moderate memory needs.",
+      "_timestamp": "2026-04-05T23:35:40"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

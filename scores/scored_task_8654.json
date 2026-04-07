@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-3092.00",
+  "task_id": 8654,
+  "task_statement": "Provide transcripts of proceedings upon request of judges, lawyers, or the public.",
+  "occupation_title": "Court Reporters and Simultaneous Captioners",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Providing transcripts typically involves generating and sending digital files (e.g., PDFs) via email or electronic systems, but some requests require printing, certifying, or mailing physical copies."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different types of proceedings (criminal, civil, administrative) and formatting or delivery requirements, but the underlying structure of transcripts is relatively standardized and text-based.",
+      "adequacy_evidence": "Large corpora of court transcripts, captioning data, and document delivery workflows are widely available, providing strong coverage of both outputs and procedural handling for this task.",
+      "_timestamp": "2026-04-05T22:35:42"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing transcripts is largely a procedural task involving retrieval, formatting, and delivery of already-recorded proceedings, governed by explicit standards and rules.",
+      "adequacy_evidence": "Current AI systems can reliably follow formatting conventions and reproduce transcripts without needing experience-based judgment, given access to the source material.",
+      "_timestamp": "2026-04-05T22:35:43"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Fulfilling transcript requests involves retrieving, possibly formatting, and delivering lengthy documents, requiring consistency across extended text but with relatively low interdependence between steps.",
+      "adequacy_evidence": "AI systems can handle long document generation and formatting reasonably well, \u05d0\u05da may show some degradation over very long transcripts (e.g., omissions or formatting drift), especially without careful chunking and validation.",
+      "_timestamp": "2026-04-05T22:35:43"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing transcripts is largely a retrieval task tied to specific proceedings; each request is typically self-contained and does not depend on accumulated cross-session context beyond stored records.",
+      "adequacy_evidence": "Current AI systems integrated with standard document storage and retrieval can reliably persist and access transcripts across sessions, meeting the minimal cross-session memory needs.",
+      "_timestamp": "2026-04-05T22:35:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing transcripts upon request primarily involves retrieving and delivering already created records, with minimal need to manage or transform large volumes of information within a single episode.",
+      "adequacy_evidence": "Current AI systems with standard retrieval tools can reliably access, handle, and deliver requested transcript files without meaningful working memory limitations.",
+      "_timestamp": "2026-04-05T22:35:43"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely explicit: produce an accurate, verbatim transcript of proceedings according to established formatting and procedural standards, with minimal need for interpreting unstated goals.",
+      "adequacy_evidence": "Current AI systems can reliably infer straightforward requests for transcripts and apply standard formatting conventions, with little difficulty handling the limited ambiguity present.",
+      "_timestamp": "2026-04-05T22:35:44"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing transcripts upon request typically allows minutes to hours of turnaround; it is not inherently a real-time task once proceedings have concluded.",
+      "adequacy_evidence": "AI systems can generate or retrieve transcripts well within these loose time constraints without sacrificing quality, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T22:35:44"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task fundamentally requires converting spoken courtroom audio into text, so accurate audio perception (speech recognition across speakers, accents, and conditions) is integral.",
+      "adequacy_evidence": "Current AI speech recognition performs well in clean settings but remains error-prone in complex courtroom audio with overlapping speech, noise, and specialized terminology.",
+      "_timestamp": "2026-04-05T22:35:44"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "Verifying transcript accuracy requires comparing against the original audio, catching subtle errors in wording, speaker attribution, and punctuation that can affect legal meaning; this takes time and trained attention but is feasible.",
+      "adequacy_evidence": "Current AI transcription systems still produce non-trivial errors with overlapping speech, legal terminology, and attribution, so outputs require thorough human review against recordings to ensure reliability.",
+      "_timestamp": "2026-04-05T22:35:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Many jurisdictions require certified court reporters to prepare and authenticate official transcripts, which implies a licensed human must oversee or certify the work. While AI can assist in transcription, rules around certification and official record status create partial restrictions on fully autonomous AI performance.",
+      "_timestamp": "2026-04-05T22:35:46"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Official court transcripts serve as the authoritative legal record for appeals and evidentiary reference, so even small residual errors can materially affect legal outcomes and are often unacceptable.",
+      "adequacy_evidence": "With human review and audio cross-checking, AI-generated transcripts can be substantially corrected, but current systems still risk subtle attribution or wording errors that may slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T22:35:46"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Judges, lawyers, and the public rely on transcripts as official records, so they engage with and depend on the output, though the individual reporter\u2019s identity is not central beyond credibility and certification.",
+      "adequacy_evidence": "While automated transcription is increasingly used, many legal stakeholders still prefer or require certified human reporters due to accuracy and trust concerns, leading to moderate resistance to fully AI-generated transcripts.",
+      "_timestamp": "2026-04-05T22:35:47"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

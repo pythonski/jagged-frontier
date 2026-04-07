@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-1041.00",
+  "task_id": 15215,
+  "task_statement": "Monitor and report incidents of infectious diseases to local and state health agencies.",
+  "occupation_title": "Epidemiologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Monitoring infectious disease incidents and reporting them to health agencies is typically done through electronic surveillance systems, databases, and digital reporting platforms, which can be accessed and used entirely via computer and internet."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on established surveillance protocols and case definitions, but epidemiologists still apply experience to interpret ambiguous signals, assess reporting thresholds, and distinguish meaningful patterns from noise.",
+      "adequacy_evidence": "AI agents can follow formal reporting rules and flag anomalies, but they show gaps in contextual calibration for borderline or novel cases where experienced judgment is needed to decide reporting significance.",
+      "_timestamp": "2026-04-06T11:11:25"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different diseases, reporting systems, and jurisdictional rules, but is structured around standardized surveillance protocols and case definitions used across public health agencies.",
+      "adequacy_evidence": "While public health guidelines and reporting workflows are well documented, much real-world data (e.g., patient-level surveillance data, edge-case outbreaks) is restricted, making some parts of the distribution only partially accessible without targeted synthesis or partnerships.",
+      "_timestamp": "2026-04-06T11:11:25"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reporting is guided by established case definitions, legal requirements, and agency protocols, but involves contextual judgment (e.g., borderline cases, evolving outbreak criteria, jurisdiction-specific rules).",
+      "adequacy_evidence": "Agents can follow codified reporting rules and update from guidance, but may struggle with edge cases, evolving definitions, and implicit expectations without human clarification.",
+      "_timestamp": "2026-04-06T11:11:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step workflows\u2014collecting case data, validating it, analyzing trends, and submitting reports\u2014but these steps are relatively structured and modular rather than tightly interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute structured, multi-step data processing and reporting pipelines with minimal degradation over sequence length, especially when supported by tools and validation checks.",
+      "_timestamp": "2026-04-06T11:11:27"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring infectious diseases requires maintaining longitudinal records of cases, trends, prior reports, and evolving outbreak contexts across jurisdictions and time periods.",
+      "adequacy_evidence": "Current AI systems can integrate with databases and persistent storage, but reliably maintaining, updating, and retrieving complex, evolving public health records across many instances still shows integration and consistency gaps.",
+      "_timestamp": "2026-04-06T11:11:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating case reports, lab results, and jurisdictional criteria within a reporting episode, requiring integration of multiple data points but not extreme volume or complexity.",
+      "adequacy_evidence": "Current AI systems with tool integration (databases, structured forms, retrieval) can reliably track and organize these inputs within an episode without significant loss or distortion.",
+      "_timestamp": "2026-04-06T11:11:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves processing and reporting structured and textual data such as case reports, lab results, and surveillance records, with minimal reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI agents handle text-based data ingestion, aggregation, and reporting effectively, and the limited multimodal elements (e.g., simple charts) are well within existing capabilities.",
+      "_timestamp": "2026-04-06T11:11:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reporting infectious disease incidents typically requires timely action (often within hours and sometimes minutes for urgent threats), but not strict real-time response at the level of seconds.",
+      "adequacy_evidence": "AI systems can compile, format, and transmit reports well within these time windows without sacrificing reasoning quality, as the task is structured and not deeply time-constrained.",
+      "_timestamp": "2026-04-06T11:11:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking case definitions, lab confirmations, and data completeness against public health standards; this requires domain expertise and coordination but follows structured protocols that make many errors detectable.",
+      "adequacy_evidence": "AI can assist with data extraction and reporting but still makes classification and completeness errors often enough that routine expert review and cross-checking are needed.",
+      "_timestamp": "2026-04-06T11:11:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Missed or incorrect reporting of infectious disease incidents can delay public health responses, leading to outbreaks, morbidity, and mortality; even rare residual errors can have large population-level consequences.",
+      "adequacy_evidence": "Even with standard validation and oversight, AI systems may still miss subtle epidemiological signals or misclassify cases due to noisy or incomplete data, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T11:11:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Public health reporting laws require licensed healthcare providers, laboratories, or designated officials to report notifiable diseases, placing legal responsibility on human or institutional actors. While AI can assist, it is not recognized as an autonomous reporting entity, creating partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-06T11:11:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves submitting reports to public health agencies that rely on the information, but acceptance depends more on data accuracy and timeliness than on the individual reporter\u2019s identity.",
+      "adequacy_evidence": "Public health systems already use automated and electronic reporting pipelines (e.g., electronic lab reporting), so stakeholders generally accept non-human-generated reports if they meet standards.",
+      "_timestamp": "2026-04-06T11:11:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

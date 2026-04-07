@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4111.00",
+  "task_id": 2627,
+  "task_statement": "Ask questions in accordance with instructions to obtain various specified information, such as person's name, address, age, religious preference, or state of residency.",
+  "occupation_title": "Interviewers, Except Eligibility and Loan",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Interviewers often collect this information via telephone or computer-based surveys, which can be done fully remotely. However, the occupation also includes in-person interviews (e.g., field surveys or intercept interviews), so not all instances are fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans some variation in respondent demographics, languages, and contexts, but remains highly structured around standardized question sets and predictable interaction patterns.",
+      "adequacy_evidence": "Large volumes of call center transcripts, survey scripts, and role-play data exist, and synthetic generation can easily cover variations, providing ample process-level training signal.",
+      "_timestamp": "2026-04-06T04:30:48"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many questions are scripted, interviewers often need minor judgment to clarify responses, handle misunderstandings, or adjust phrasing based on respondent cues.",
+      "adequacy_evidence": "Current AI agents can reliably follow scripts, ask clarifying follow-ups, and adapt phrasing using learned conversational patterns, covering most of the limited tacit judgment required.",
+      "_timestamp": "2026-04-06T04:30:48"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is driven by explicit instructions specifying exactly what information to collect (e.g., name, address, age), leaving little need for interpretation of goals or success criteria.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured prompts and scripts to elicit specified information, with minimal ambiguity requiring resolution.",
+      "_timestamp": "2026-04-06T04:30:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves collecting a small, fixed set of straightforward data fields (e.g., name, address, age), all of which easily fit within minimal working memory during a single interaction.",
+      "adequacy_evidence": "Current AI agents reliably track and manage short lists of structured responses within a single episode without losing or misrepresenting information.",
+      "_timestamp": "2026-04-06T04:30:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each interview is typically self-contained, focused on collecting specified information from a single respondent without needing prior interaction history.",
+      "adequacy_evidence": "Since the task does not rely on cross-session memory, current AI systems' persistent memory limitations do not impact performance.",
+      "_timestamp": "2026-04-06T04:30:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of verbally or textually asking standardized questions and recording responses, with no inherent need for visual, audio, or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents can fully handle text- or speech-based questioning workflows, and no additional multimodal capabilities are required for competent performance.",
+      "_timestamp": "2026-04-06T04:30:51"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-turn interaction to gather multiple pieces of information, requiring some continuity and adherence to instructions, but each question is largely independent and does not form a tightly coupled sequence.",
+      "adequacy_evidence": "Modern LLM-based agents handle structured multi-turn questioning reliably, maintaining context and consistency across short to moderate dialogues with minimal degradation.",
+      "_timestamp": "2026-04-06T04:30:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is interactive and requires timely back-and-forth questioning during interviews, typically within seconds, but does not demand deep reasoning per response.",
+      "adequacy_evidence": "Current AI agents can generate appropriate questions and responses instantly, so meeting the modest latency requirement does not degrade performance.",
+      "_timestamp": "2026-04-06T04:30:52"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves asking predefined or guided questions; correctness can be checked easily against scripts or instructions, and any deviations are immediately observable.",
+      "adequacy_evidence": "Current AI systems can reliably generate and follow structured question protocols, and any mistakes in phrasing or sequence are straightforward to detect with minimal review.",
+      "_timestamp": "2026-04-06T04:30:53"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations that prohibit AI systems from asking individuals questions to collect information in general interviewing contexts. While privacy and anti-discrimination laws regulate how certain data (e.g., religion) can be collected and used, they do not specifically restrict AI from performing the act of asking such questions.",
+      "_timestamp": "2026-04-06T04:30:54"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in asking or recording basic respondent information can lead to data quality issues or minor administrative problems, but are typically correctable and rarely have severe or irreversible consequences.",
+      "adequacy_evidence": "With standard checks like form validation, review, or confirmation prompts, AI systems can keep residual error rates low enough that remaining mistakes are generally acceptable for this task.",
+      "_timestamp": "2026-04-06T04:30:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires direct interaction with respondents who must be willing to provide personal information, so stakeholder engagement matters, though deep trust or authority is not central.",
+      "adequacy_evidence": "Automated systems (e.g., surveys, IVR, chatbots) are already used for similar data collection, but some individuals may resist sharing sensitive information with an AI, leading to moderate acceptance limits.",
+      "_timestamp": "2026-04-06T04:30:55"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

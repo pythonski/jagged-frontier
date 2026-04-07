@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1031.01",
+  "task_id": 5283,
+  "task_statement": "Report overpayments, underpayments, and other irregularities.",
+  "occupation_title": "Claims Adjusters, Examiners, and Investigators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Reporting payment discrepancies is typically done through claims management systems, emails, or digital reports after reviewing electronic records, all of which can be completed on a computer without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many irregularities can be identified via explicit policy rules and thresholds, determining what constitutes a meaningful or suspicious deviation often relies on experience with claim patterns and contextual judgment.",
+      "adequacy_evidence": "Current AI systems can apply rules and detect anomalies effectively, but they lack consistent calibration in borderline or context-sensitive cases where experienced adjusters rely on nuanced judgment.",
+      "_timestamp": "2026-04-05T20:56:40"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Identifying and reporting payment irregularities requires a multi-step process (reviewing claims, comparing against policies, and documenting findings), but the sequence is relatively bounded and not highly interdependent over long horizons.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain coherence across these moderate-length analytical and reporting steps, with minimal degradation in consistency or accuracy over the sequence.",
+      "_timestamp": "2026-04-05T20:56:41"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While overpayments and underpayments can be defined by policy and arithmetic, identifying 'other irregularities' requires contextual judgment about claims norms, fraud indicators, and insurer-specific rules.",
+      "adequacy_evidence": "Current agents can apply explicit rules and detect numeric discrepancies, but often miss context-dependent irregularities or misinterpret nuanced policy intent without human guidance.",
+      "_timestamp": "2026-04-05T20:56:41"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple claim types, policy rules, and irregularity patterns (e.g., billing errors, fraud, edge-case reimbursements), but these fall within a structured and recurring domain rather than a fully open-ended distribution.",
+      "adequacy_evidence": "Large volumes of historical claims, audit logs, and investigative reports provide substantial coverage, but rare fraud patterns and proprietary insurer-specific practices are less accessible and thinly represented.",
+      "_timestamp": "2026-04-05T20:56:41"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing claim files, payment histories, and policy details, requiring integration of multiple documents and data points within a single case but typically not at extreme scale.",
+      "adequacy_evidence": "Current agents can retrieve and summarize relevant information across documents, but may miss or misweight specific transactional details or inconsistencies when contexts become moderately complex.",
+      "_timestamp": "2026-04-05T20:56:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Identifying and reporting payment irregularities is typically part of back-office claims review workflows where minutes to hours are acceptable; it is not a real-time task.",
+      "adequacy_evidence": "AI agents can perform document analysis and anomaly detection well within these timeframes without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-05T20:56:42"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many reports are based on individual claim files, adjusters often reference prior claim histories, patterns of payments, or past irregularities to contextualize findings across cases.",
+      "adequacy_evidence": "Current AI systems with database integration and retrieval can reliably store and access cross-case information, making longitudinal context readily available when needed.",
+      "_timestamp": "2026-04-05T20:56:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Misreporting payment irregularities can lead to financial discrepancies, compliance issues, or disputes, but errors are typically discoverable and correctable through audits or downstream reconciliation.",
+      "adequacy_evidence": "Even with quality control, AI may miss subtle irregularities or flag false positives, leaving some residual risk that could still require human judgment to resolve reliably.",
+      "_timestamp": "2026-04-05T20:56:43"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from identifying or reporting payment irregularities. While claims adjusters may need licensure for certain decisions, the act of reporting discrepancies itself is not restricted from AI assistance or automation.",
+      "_timestamp": "2026-04-05T20:56:43"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves reviewing claim files, policy terms, and payment calculations; discrepancies can be checked through audits and reconciliation but require domain expertise and time.",
+      "adequacy_evidence": "AI can flag irregularities but may misinterpret policy nuances or miss edge cases, so outputs require routine human review and validation to ensure accuracy.",
+      "_timestamp": "2026-04-05T20:56:44"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Identifying and reporting payment irregularities is primarily based on reviewing structured financial data, claim records, and written documentation, which are fundamentally text and numeric inputs.",
+      "adequacy_evidence": "Current AI systems can reliably process text and structured data, including OCR for scanned documents, with no meaningful multimodal limitations for this task.",
+      "_timestamp": "2026-04-05T20:56:44"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves communicating findings to supervisors, insurers, or regulators who rely on the report, though the performer's personal identity is not central to acceptance.",
+      "adequacy_evidence": "Stakeholders may accept AI-generated reports if validated, but some may prefer human accountability for financial irregularities, creating moderate resistance.",
+      "_timestamp": "2026-04-05T20:56:45"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

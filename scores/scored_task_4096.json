@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1124.00",
+  "task_id": 4096,
+  "task_statement": "Calculate actual treatment dosages delivered during each session.",
+  "occupation_title": "Radiation Therapists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "The calculation of delivered radiation dose is typically performed using computerized treatment planning or record\u2011and\u2011verify systems. However, it is closely tied to on-site treatment sessions and specialized radiation therapy equipment data, so it is usually done in the clinical setting rather than fully remotely."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different treatment modalities (e.g., IMRT, VMAT, brachytherapy), machine types, and patient-specific plans, creating moderate variability but within well-defined physical and procedural frameworks.",
+      "adequacy_evidence": "Radiation dosing is governed by standardized physics, machine logs, and treatment planning data, with abundant clinical documentation and high-fidelity simulators, making representative training data readily obtainable.",
+      "_timestamp": "2026-04-05T23:57:10"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dose calculation relies largely on established physics formulas, machine readouts, and treatment plans, but therapists apply some experiential judgment when interpreting discrepancies or equipment behavior.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably perform the required calculations and interpret structured treatment data, with minimal reliance on hard-to-capture experiential calibration.",
+      "_timestamp": "2026-04-05T23:57:11"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step process (reviewing session data, applying calibration factors, summing or adjusting dose values), where consistency across steps matters but the sequence is relatively bounded and procedural.",
+      "adequacy_evidence": "Well-scaffolded AI systems with calculation tools can reliably execute these short, structured sequences without meaningful degradation, maintaining accuracy across steps.",
+      "_timestamp": "2026-04-05T23:57:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task follows established treatment plans, machine readouts, and dosimetry protocols, but requires some context-sensitive interpretation (e.g., accounting for setup variations or equipment factors).",
+      "adequacy_evidence": "Given structured inputs and protocols, current AI systems can reliably infer objectives and compute delivered dosages with minimal ambiguity or need for iterative clarification.",
+      "_timestamp": "2026-04-05T23:57:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Calculating actual delivered dosage per session often references the patient's treatment plan and prior dose records, but each session\u2019s calculation is largely based on contemporaneous machine readings and prescribed parameters.",
+      "adequacy_evidence": "Current AI systems with standard data integration can reliably access and use stored patient plans and prior session data, so cross-session memory needs are well within existing capabilities.",
+      "_timestamp": "2026-04-05T23:57:12"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating multiple structured inputs (treatment plans, machine parameters, session logs, and delivered dose records) and ensuring correct unit handling, but the information volume is bounded and well-organized.",
+      "adequacy_evidence": "Current AI agents with tool use and structured data handling can reliably track, retrieve, and compute over these inputs within a session without significant context loss or memory failures.",
+      "_timestamp": "2026-04-05T23:57:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dosage calculations are typically performed during or shortly after treatment sessions, where turnaround in seconds to a few minutes is expected but not strictly real-time.",
+      "adequacy_evidence": "LLM-based agents with calculation tools can perform these computations accurately within the available time, with no need to truncate reasoning due to latency constraints.",
+      "_timestamp": "2026-04-05T23:57:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dose delivery can be cross-checked against treatment plans, machine logs, and independent dosimetry systems, but doing so requires domain expertise and careful review rather than trivial inspection.",
+      "adequacy_evidence": "AI-generated dosage calculations would still need routine verification against clinical systems and physics QA checks, as errors are not always obvious and current models are not consistently reliable at this precision level.",
+      "_timestamp": "2026-04-05T23:57:14"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task may involve interpreting machine readouts, treatment plans, or dose distributions that can include visual elements like graphs or imaging, but the core calculation relies on structured numerical and textual data.",
+      "adequacy_evidence": "Current AI systems can reliably process and compute from structured data and even interpret straightforward medical visuals, so multimodal demands here are well within existing capabilities.",
+      "_timestamp": "2026-04-05T23:57:15"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating delivered radiation dosage is an internal technical task whose output is used within the clinical workflow, with no direct stakeholder interaction or reliance on performer identity.",
+      "adequacy_evidence": "Because stakeholders do not directly engage with or evaluate who performed the calculation, there is little to no resistance to AI performing this function as long as accuracy is ensured.",
+      "_timestamp": "2026-04-05T23:57:15"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Radiation dose delivery is safety-critical; even small residual errors can cause serious patient harm (overexposure or undertreatment) with potentially irreversible consequences.",
+      "adequacy_evidence": "Dose calculations are highly structured, physics-based, and extensively instrumented with automated logging and cross-checks, allowing AI outputs to be verified to a level where residual risk is acceptably low.",
+      "_timestamp": "2026-04-05T23:57:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Radiation dose calculation and verification fall under strict medical and radiation safety regulations requiring licensed professionals (e.g., radiation therapists and medical physicists) to perform or formally approve these calculations. Current rules mandate human responsibility and sign-off, so fully autonomous AI performance is not permitted.",
+      "_timestamp": "2026-04-05T23:57:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

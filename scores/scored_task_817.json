@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9041.02",
+  "task_id": 817,
+  "task_statement": "Interview clients and take their calls to provide customer service and obtain information on claims.",
+  "occupation_title": "Insurance Claims and Policy Processing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most client interviews and claim information gathering occur via phone, email, or online systems and can be done remotely with a computer and internet. However, some situations may involve in-person client interviews or handling physical documents."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Client calls span different claim types, customer behaviors, and communication styles, but follow relatively standardized scripts and information-gathering patterns.",
+      "adequacy_evidence": "Large volumes of call center transcripts, training scripts, and role-play simulations exist, and synthetic data generation can cover edge cases, providing strong process-level coverage.",
+      "_timestamp": "2026-04-06T03:25:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While claim intake follows structured scripts and required fields, clerks must interpret incomplete or inconsistent client accounts, probe for missing details, and adapt questions to context and policy nuances.",
+      "adequacy_evidence": "LLM agents can follow scripts and ask clarifying questions, but often miss subtle cues, fail to adapt probing strategies optimally, and require human iteration to fully capture all relevant, policy-specific details.",
+      "_timestamp": "2026-04-06T03:25:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Client interviews and service calls involve multi-turn conversations where information must be gathered, clarified, and recorded consistently across the interaction, but sequences are not highly interdependent beyond the call.",
+      "adequacy_evidence": "Current AI agents can generally sustain coherent multi-turn dialogues, but may lose track of details, miss prior statements, or show mild drift over longer or more complex conversations.",
+      "_timestamp": "2026-04-06T03:25:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple pieces of client-provided information (policy details, incident facts, personal data) \u062e\u0644\u0627\u0644 a single interaction, with some need to organize and confirm details accurately.",
+      "adequacy_evidence": "Current agents can generally manage conversational context and structured data capture, but may occasionally lose or misprioritize details over longer or complex calls without careful scaffolding.",
+      "_timestamp": "2026-04-06T03:25:10"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves some experience-based judgment in probing for relevant details, handling upset clients, and recognizing inconsistencies, but much of it follows structured scripts and procedures.",
+      "adequacy_evidence": "Current agents handle routine interactions and scripted questioning well but still show gaps in nuanced conversational calibration, especially in emotionally charged or ambiguous cases.",
+      "_timestamp": "2026-04-06T03:25:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer service for insurance claims often relies on prior claim history, policy details, and past interactions, but this information is typically structured and stored in external systems rather than requiring deep longitudinal reasoning.",
+      "adequacy_evidence": "Current AI agents can reliably integrate with CRM and claims databases to retrieve and update cross-session information, so persistent memory needs are well-supported by existing infrastructure.",
+      "_timestamp": "2026-04-06T03:25:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on spoken communication (audio) during phone calls, including understanding speech, tone, and conversational flow, though it does not require rich visual or spatial inputs.",
+      "adequacy_evidence": "Current agents handle speech recognition and basic dialogue well, but can struggle with accents, emotional nuance, interruptions, and complex conversational dynamics common in real client interactions.",
+      "_timestamp": "2026-04-06T03:25:12"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires direct interaction with clients who must share sensitive claim information and rely on the agent's empathy, clarity, and perceived legitimacy during conversations.",
+      "adequacy_evidence": "AI customer service agents are increasingly accepted, especially for routine inquiries, but some clients still prefer human representatives for nuanced or emotionally sensitive insurance claims discussions.",
+      "_timestamp": "2026-04-06T03:25:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Handling live client calls requires near-real-time conversational responses with minimal delay while maintaining accuracy and professionalism.",
+      "adequacy_evidence": "Current AI agents can generally respond within seconds with acceptable quality for routine inquiries, but complex or ambiguous claim situations may suffer when reasoning must be compressed into tight latency constraints.",
+      "_timestamp": "2026-04-06T03:25:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in capturing or conveying claim information can lead to delays, customer dissatisfaction, or minor financial impacts, but are typically correctable and rarely catastrophic.",
+      "adequacy_evidence": "Even with call recording, scripts, and post-call review, AI systems still exhibit misinterpretation and conversational edge-case failures that leave a non-negligible but manageable residual risk.",
+      "_timestamp": "2026-04-06T03:25:13"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recorded calls, transcripts, and claim forms allow post-hoc review, but detecting subtle misunderstandings or missing details often requires time and domain knowledge and may only surface later in processing.",
+      "adequacy_evidence": "Current AI systems can misinterpret speech nuances or capture incorrect details, so routine human review of call summaries and extracted information is needed, though errors are generally catchable with standard QA processes.",
+      "_timestamp": "2026-04-06T03:25:13"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from handling customer service interactions or collecting claim information. While insurance activities like claim adjudication may require licensed professionals, basic client interviewing and call handling can be performed by automated systems with appropriate disclosures.",
+      "_timestamp": "2026-04-06T03:25:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

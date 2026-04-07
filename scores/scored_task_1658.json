@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "25-4021.00",
+  "task_id": 1658,
+  "task_statement": "Search standard reference materials, including online sources and the Internet, to answer patrons' reference questions.",
+  "occupation_title": "Librarians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Many reference questions are answered by searching online databases, digital catalogs, and the Internet from a computer. However, librarians sometimes consult physical reference books or materials within the library, requiring on-site access."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Patrons' reference questions are often underspecified, requiring a reference interview to uncover true information needs, context, and acceptable sources or depth.",
+      "adequacy_evidence": "Current agents can often infer intent and ask clarifying questions, but still frequently miss nuance or fail to iteratively refine understanding without human guidance.",
+      "_timestamp": "2026-04-05T21:25:23"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective reference work requires experience in interpreting patron queries, selecting authoritative sources, and refining search strategies based on context, which goes beyond explicit rules.",
+      "adequacy_evidence": "Current agents can emulate many search and synthesis strategies but still show gaps in nuanced query interpretation and source judgment in ambiguous or context-sensitive cases.",
+      "_timestamp": "2026-04-05T21:25:23"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Patron reference questions span a highly heterogeneous, long-tailed distribution across domains, formats, and difficulty levels, requiring broad topical and contextual coverage.",
+      "adequacy_evidence": "Web-scale corpora, search logs, QA datasets, and synthetic query-answer generation provide extensive coverage of both questions and search strategies, including step-by-step information retrieval processes.",
+      "_timestamp": "2026-04-05T21:25:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Answering reference questions typically involves multi-step workflows\u2014clarifying the patron\u2019s need, searching multiple sources, iterating queries, and synthesizing results\u2014but these sequences are moderate in length and loosely coupled.",
+      "adequacy_evidence": "AI agents can generally sustain performance across these search-and-synthesis steps, but may exhibit some drift in query refinement or lose track of constraints over longer interactions, leading to moderate degradation.",
+      "_timestamp": "2026-04-05T21:25:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Answering reference questions requires integrating information from multiple sources, tracking query nuances, and synthesizing findings, but the volume is typically manageable within a single session.",
+      "adequacy_evidence": "Current LLM-based agents with retrieval tools can reliably gather, store, and synthesize multi-source information within a session without significant loss or drift.",
+      "_timestamp": "2026-04-05T21:25:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI systems from searching reference materials or answering patrons\u2019 questions. Libraries may choose policies on AI use, but these are institutional, not legally mandated restrictions.",
+      "_timestamp": "2026-04-05T21:25:25"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reference questions are typically answered independently using available sources; prior patron interactions or longitudinal context are not required to complete most queries.",
+      "adequacy_evidence": "Since the task is largely stateless across sessions, current agents' limited persistent memory does not meaningfully constrain performance.",
+      "_timestamp": "2026-04-05T21:25:25"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reference questions are typically expected to be answered within seconds to a few minutes, but not under strict real-time constraints; brief searching and synthesis is acceptable.",
+      "adequacy_evidence": "Current AI agents can retrieve and synthesize information quickly within this time window without needing to truncate reasoning, maintaining adequate quality.",
+      "_timestamp": "2026-04-05T21:25:26"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Answering patrons' reference questions primarily involves searching and synthesizing textual information from books, databases, and online sources; non-text modalities are not central to the task.",
+      "adequacy_evidence": "Current AI agents handle text-based search and synthesis effectively, and the minimal multimodal needs (e.g., occasional images or maps) are already well supported.",
+      "_timestamp": "2026-04-05T21:25:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Patrons directly engage with the librarian\u2019s responses and may ask follow-up questions, so there is interpersonal interaction, though authority or identity is not usually central to task success.",
+      "adequacy_evidence": "Many patrons already accept AI-assisted search and reference tools, but some still prefer human librarians for trust, nuance, or privacy reasons, leading to moderate but not prohibitive resistance.",
+      "_timestamp": "2026-04-05T21:25:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Answers can usually be verified by checking cited sources or consulting authoritative references, but this requires time and some information literacy to confirm relevance and accuracy.",
+      "adequacy_evidence": "AI systems still produce occasional hallucinated or misinterpreted information, so users must routinely verify sources and claims, though errors are generally catchable with standard checking practices.",
+      "_timestamp": "2026-04-05T21:25:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect answers can misinform patrons and occasionally have meaningful consequences (e.g., health, legal, or academic decisions), but most reference interactions are low to moderate stakes and errors are usually correctable.",
+      "adequacy_evidence": "With standard verification practices (checking sources, cross-referencing), AI-generated answers can be validated effectively, leaving residual risk at an acceptable level for typical librarian reference tasks.",
+      "_timestamp": "2026-04-05T21:25:26"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

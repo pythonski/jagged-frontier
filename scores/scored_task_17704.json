@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5011.01",
+  "task_id": 17704,
+  "task_statement": "Provide shipment status notification to exporters, consignees, or insurers.",
+  "occupation_title": "Freight Forwarders",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Shipment status notifications are typically communicated via email, logistics management systems, or phone using tracking data, all of which can be accessed and transmitted remotely with a computer and internet connection."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Shipment status notifications vary across transport modes, delay scenarios, and stakeholder needs, but follow relatively standardized event types and messaging patterns.",
+      "adequacy_evidence": "Extensive logistics data, message templates, and tracking event streams are available, and synthetic generation can cover edge cases, providing strong coverage for training.",
+      "_timestamp": "2026-04-06T03:25:44"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing shipment status notifications typically involves retrieving current tracking data and communicating it, usually as a short, self-contained sequence without long interdependent steps.",
+      "adequacy_evidence": "AI agents can reliably handle short retrieval-and-notification workflows without degradation, as sequence length and interdependence are minimal.",
+      "_timestamp": "2026-04-06T03:25:46"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While the core objective (inform parties of shipment status) is clear, details like level of detail, tone, timing, and handling of delays depend on stakeholder expectations and context.",
+      "adequacy_evidence": "Current AI agents can reliably infer and adapt to these conventions using templates, prior communications, and structured shipment data, with minimal need for human clarification.",
+      "_timestamp": "2026-04-06T03:25:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires assembling shipment details (tracking status, parties involved, timing, possibly exceptions) from multiple sources, but the information volume is structured and limited per notification.",
+      "adequacy_evidence": "Current AI agents with tool integration can reliably retrieve, track, and summarize this level of structured shipment data within an episode without significant context loss.",
+      "_timestamp": "2026-04-06T03:25:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Shipment status notifications are typically generated and delivered via text-based channels (emails, EDI messages, portal updates) using structured tracking data, without reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents can easily process shipment data feeds and generate accurate text notifications; no meaningful multimodal capability is required or missing.",
+      "_timestamp": "2026-04-06T03:25:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing shipment status notifications largely follows standardized data (tracking updates, milestones) and established communication templates, with minimal need for experiential judgment.",
+      "adequacy_evidence": "Current AI agents can reliably interpret shipment data and generate appropriate notifications using explicit rules and templates, with little need for tacit calibration.",
+      "_timestamp": "2026-04-06T03:25:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Status notifications require tracking shipments over time and referencing prior updates or shipment records, but typically within a bounded shipment lifecycle rather than long-term evolving context.",
+      "adequacy_evidence": "Current AI agents integrated with logistics databases and tracking systems can reliably store and retrieve shipment histories and recipient preferences across sessions.",
+      "_timestamp": "2026-04-06T03:25:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Shipment status updates are typically expected within seconds to a few minutes, especially when triggered by tracking events, but do not require deep reasoning.",
+      "adequacy_evidence": "Current AI systems can retrieve, format, and send status notifications almost instantly using integrations, with no need for extended reasoning that would be constrained by latency.",
+      "_timestamp": "2026-04-06T03:25:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Shipment status can be directly verified against carrier tracking systems, EDI feeds, or logistics platforms, making discrepancies immediately visible and easy to correct.",
+      "adequacy_evidence": "With proper system integrations, AI-generated notifications can be automatically cross-checked against authoritative data sources, so verification is straightforward and low-effort.",
+      "_timestamp": "2026-04-06T03:25:48"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI systems from providing shipment status notifications. This function is already commonly automated via tracking systems and messaging platforms without requiring licensed human involvement.",
+      "_timestamp": "2026-04-06T03:25:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves external stakeholders (exporters, consignees, insurers) who rely on shipment updates, but the performer's identity is not central as long as information is accurate and timely.",
+      "adequacy_evidence": "Stakeholders already commonly accept automated tracking notifications and system-generated updates, so AI delivery in this role would face little to no resistance.",
+      "_timestamp": "2026-04-06T03:25:49"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect shipment status notifications can disrupt logistics planning and customer expectations, but errors are typically reversible and do not cause severe or irreversible harm.",
+      "adequacy_evidence": "With system-integrated data sources and standard checks against tracking systems, AI-generated notifications can achieve sufficiently low residual error rates for this low-to-moderate consequence task.",
+      "_timestamp": "2026-04-06T03:25:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

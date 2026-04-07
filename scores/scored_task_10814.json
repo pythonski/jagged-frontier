@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9013.03",
+  "task_id": 10814,
+  "task_statement": "Account for and disburse funds.",
+  "occupation_title": "Farmers, Ranchers, and Other Agricultural Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Accounting for funds and issuing payments can usually be done with accounting software and electronic transfers, but some instances involve handling cash, issuing or signing physical checks, or managing physical receipts."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Basic accounting and disbursement follow formal rules, but farm managers often rely on experience to time payments, manage cash flow volatility, and balance relationships with suppliers and creditors under uncertain conditions.",
+      "adequacy_evidence": "AI systems can execute bookkeeping and standard financial logic well, but may lack situational calibration for context-specific tradeoffs (e.g., delaying payments vs. maintaining supplier goodwill) in non-routine scenarios.",
+      "_timestamp": "2026-04-06T02:09:07"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderately diverse financial contexts (e.g., payroll, vendor payments, subsidies, seasonal cash flows) across different types of agricultural operations, but follows standardized accounting principles.",
+      "adequacy_evidence": "There is abundant accessible data (accounting records, financial workflows, software logs) and well-documented procedures, enabling training pipelines to cover the relevant distribution effectively.",
+      "_timestamp": "2026-04-06T02:09:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While basic accounting rules are explicit, farm financial management involves context-dependent judgments about timing of payments, cash flow priorities, seasonal variability, and informal stakeholder expectations.",
+      "adequacy_evidence": "Current AI can follow accounting rules and infer common financial goals, but often misses nuanced, context-specific priorities (e.g., timing around harvest cycles or local obligations) without human guidance.",
+      "_timestamp": "2026-04-06T02:09:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step financial workflows such as tracking transactions, reconciling accounts, and executing payments, where consistency across steps matters but processes are relatively standardized and modular.",
+      "adequacy_evidence": "AI agents can generally manage structured accounting sequences with tools, but may show some error accumulation or missed constraints over longer financial workflows requiring reconciliation and accuracy.",
+      "_timestamp": "2026-04-06T02:09:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Accounting for and disbursing funds is primarily a text- and number-based task involving financial records, ledgers, and transactions, with minimal reliance on non-text inputs or outputs.",
+      "adequacy_evidence": "Current AI systems can fully handle the text and numeric processing required; any occasional document scanning (e.g., receipts) is not central and is already well-supported.",
+      "_timestamp": "2026-04-06T02:09:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple financial inputs (revenues, expenses, payroll, invoices) and ensuring correct balances during disbursement, requiring moderate state management within an episode.",
+      "adequacy_evidence": "Current AI agents with bookkeeping tools and structured data handling can reliably track, retrieve, and reconcile such financial information within a session without significant loss or drift.",
+      "_timestamp": "2026-04-06T02:09:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Accounting for and disbursing funds requires maintaining continuous financial records, transaction histories, budgets, and obligations across seasons and fiscal periods.",
+      "adequacy_evidence": "Current AI systems can reliably interface with persistent databases and accounting software, so retaining and retrieving cross-session financial state is well-supported.",
+      "_timestamp": "2026-04-06T02:09:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Accounting for and disbursing funds (e.g., payroll, vendor payments, bookkeeping) is typically scheduled and allows minutes to hours or longer for completion without pressure for immediate response.",
+      "adequacy_evidence": "Current AI systems can perform calculations, record-keeping, and payment preparation well within these relaxed timeframes without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-06T02:09:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Financial records can be verified through reconciliation with bank statements, receipts, and ledgers, but doing so requires bookkeeping knowledge and careful review rather than being instantly obvious.",
+      "adequacy_evidence": "AI systems can generate and track financial entries, but they still make occasional classification or calculation errors, so routine reconciliation and human oversight are needed to ensure accuracy.",
+      "_timestamp": "2026-04-06T02:09:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interacting with employees, suppliers, banks, and possibly auditors who rely on accurate financial handling and may care about the authority behind transactions.",
+      "adequacy_evidence": "Stakeholders already accept automated accounting systems to a degree, but full delegation to an AI agent for fund control may face some trust and oversight concerns.",
+      "_timestamp": "2026-04-06T02:09:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in accounting for and disbursing funds can lead to financial loss, legal issues, or cash flow disruptions, so even infrequent mistakes can have significant consequences for the operation.",
+      "adequacy_evidence": "With standard controls like reconciliations and audits, many AI errors could be caught, but risks like subtle misclassification or timing errors may still slip through at a non-trivial rate.",
+      "_timestamp": "2026-04-06T02:09:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Financial disbursement typically requires an authorized human signatory or accountable party (e.g., for banking, fiduciary, and tax compliance), which creates partial restriction on fully autonomous AI execution. However, there is no explicit prohibition on using AI systems to assist or even execute steps under human oversight.",
+      "_timestamp": "2026-04-06T02:09:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

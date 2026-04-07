@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4061.00",
+  "task_id": 9735,
+  "task_statement": "Initiate procedures to grant, modify, deny, or terminate assistance, or refer applicants to other agencies for assistance.",
+  "occupation_title": "Eligibility Interviewers, Government Programs",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Initiating actions to grant, modify, deny, terminate, or refer cases is typically done through electronic case management systems and digital records. However, some instances still involve paper files, mailed notices, or in-person processing within government offices."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous applicant situations (income structures, household compositions, legal statuses, program-specific rules, and edge cases), requiring broad coverage of diverse, long-tailed scenarios.",
+      "adequacy_evidence": "While policies, guidelines, and some case examples are well-documented and can be supplemented with synthetic data, much real-world variation is embedded in sensitive, proprietary case records and tacit adjudication patterns that are only partially accessible.",
+      "_timestamp": "2026-04-06T01:03:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Eligibility decisions are guided by formal program rules, but require interpreting applicant circumstances, incomplete information, and edge cases, making some success criteria context-dependent.",
+      "adequacy_evidence": "Current agents can follow codified rules and infer straightforward cases, but often struggle with nuanced judgment, conflicting signals, or implicit policy interpretations without human clarification.",
+      "_timestamp": "2026-04-06T01:03:52"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many eligibility decisions follow explicit program rules and documentation, workers often rely on experience to interpret ambiguous applicant information, assess inconsistencies, and choose appropriate referrals or procedural actions.",
+      "adequacy_evidence": "Current AI can apply codified rules well but shows gaps in handling nuanced, context-sensitive cases (e.g., ambiguous documentation or borderline eligibility), where human case-based judgment remains important.",
+      "_timestamp": "2026-04-06T01:03:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows such as reviewing applicant information, applying eligibility rules, making a determination, and initiating the appropriate administrative action, requiring consistent performance across linked steps.",
+      "adequacy_evidence": "Frontier AI agents can generally manage these structured multi-step processes with tools and checklists, but may exhibit some error accumulation or missed constraints over longer or more complex cases.",
+      "_timestamp": "2026-04-06T01:03:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple pieces of applicant information (income, household composition, documentation, program criteria) and applying them consistently within a single case, but the volume is structured and bounded per episode.",
+      "adequacy_evidence": "Current agents can manage structured case data with tools, but may lose or misprioritize details when integrating multiple documents and rules, especially if information is fragmented across sources.",
+      "_timestamp": "2026-04-06T01:03:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Initiating eligibility procedures is typically a case-processing activity with no strict real-time requirement; decisions can take minutes to hours depending on documentation review.",
+      "adequacy_evidence": "Current AI agents can easily operate within these loose time constraints without needing to truncate reasoning, so speed does not degrade performance.",
+      "_timestamp": "2026-04-06T01:03:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing application forms and documentation, which are mostly text-based, though inputs may include scanned documents or occasional verbal interviews.",
+      "adequacy_evidence": "Current AI systems handle OCR, document parsing, and basic speech-to-text reliably enough that non-text inputs do not present a significant bottleneck for this task.",
+      "_timestamp": "2026-04-06T01:03:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Eligibility decisions depend on longitudinal case histories, prior determinations, reported changes, and ongoing benefit status across multiple interactions over time.",
+      "adequacy_evidence": "Modern systems can store and retrieve structured case records, but LLM agents still show moderate gaps in reliably integrating and surfacing all relevant historical context across complex, multi-source case files.",
+      "_timestamp": "2026-04-06T01:03:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves reviewing applicant data, documentation, and program rules; errors can be found through case audits but require domain knowledge and careful file review rather than being immediately obvious.",
+      "adequacy_evidence": "Current AI systems can misapply eligibility criteria or overlook nuances, so human review of decisions is still needed, but errors are generally catchable through standard case-checking processes.",
+      "_timestamp": "2026-04-06T01:03:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task directly involves applicants whose acceptance of decisions (grant, denial, referral) depends on perceived fairness, authority, and empathy of the decision-maker.",
+      "adequacy_evidence": "While automated eligibility systems already exist, many applicants distrust or resist AI-driven determinations, especially for high-stakes benefits, though this resistance is not absolute and can be mitigated with human oversight.",
+      "_timestamp": "2026-04-06T01:03:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in granting or denying public assistance can materially affect individuals\u2019 access to income, healthcare, or housing; even infrequent mistakes can cause serious hardship or legal noncompliance, though some are reversible via appeals.",
+      "adequacy_evidence": "With structured rules, documentation, and audit trails, many decisions can be checked, but AI systems still risk misinterpreting edge cases or policy nuances, leaving some nontrivial residual risk even after review.",
+      "_timestamp": "2026-04-06T01:03:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Public assistance eligibility decisions are governed by due process and accountability rules that typically require an authorized agency official to make or approve determinations, but there is no blanket prohibition on AI-supported processing. This creates partial restriction: AI can assist, but fully autonomous decision-making without human oversight is not clearly permitted.",
+      "_timestamp": "2026-04-06T01:03:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

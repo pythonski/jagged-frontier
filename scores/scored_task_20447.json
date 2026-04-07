@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "47-4011.00",
+  "task_id": 20447,
+  "task_statement": "Approve building plans that meet required specifications.",
+  "occupation_title": "Construction and Building Inspectors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Approving building plans typically involves reviewing drawings and specifications, which are often submitted and evaluated digitally (e.g., CAD files, PDFs) in permitting systems. However, some jurisdictions still require handling physical plan sets, stamps, or in-person coordination, so not all instances are fully digital."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing and approving building plans involves multiple interdependent checks (codes, safety, zoning, structural details) applied consistently across a plan set, but the workflow is modular rather than a long, tightly coupled sequence.",
+      "adequacy_evidence": "LLM-based agents can follow structured review checklists with reasonable consistency, but may exhibit some drift or missed constraints across longer multi-document reviews, especially without strong scaffolding and validation loops.",
+      "_timestamp": "2026-04-06T01:00:09"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Building plan approval spans diverse building types, jurisdictions, codes, site conditions, and edge-case compliance scenarios, creating a highly heterogeneous and long-tailed distribution of instances.",
+      "adequacy_evidence": "Core building codes and some plan examples are publicly available and can be synthesized, but many real-world plan sets, local amendments, and nuanced edge cases are proprietary or sparsely documented, leaving moderate gaps in coverage.",
+      "_timestamp": "2026-04-06T01:00:09"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Building plan approval relies on formal codes and regulations, but inspectors must interpret ambiguous cases, local amendments, and intent of codes in context of specific designs.",
+      "adequacy_evidence": "AI can parse and apply explicit code requirements well, but often struggles with nuanced interpretation, jurisdiction-specific exceptions, and resolving borderline compliance without human judgment.",
+      "_timestamp": "2026-04-06T01:00:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing and approving building plans is typically done over extended periods (hours to days), allowing careful analysis without strict real-time pressure.",
+      "adequacy_evidence": "AI systems can take sufficient time to perform detailed reasoning and checks within this loose time frame, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T01:00:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Approving building plans requires tracking and cross-referencing large, detailed architectural drawings, specifications, and code requirements within a single review episode, where missing a small detail can invalidate compliance.",
+      "adequacy_evidence": "Current agents can process large documents with retrieval tools, but they still show weaknesses in consistently maintaining and cross-referencing fine-grained details across complex, multi-document plan sets.",
+      "_timestamp": "2026-04-06T01:00:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Plan approval often involves tracking revisions, prior submissions, and project-specific interpretations of codes across multiple review cycles, but each project remains relatively self-contained.",
+      "adequacy_evidence": "Current agents can persist and retrieve project histories via external databases or tools, but they may inconsistently surface relevant prior decisions or context without careful system design.",
+      "_timestamp": "2026-04-06T01:00:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Approving building plans requires interpreting architectural drawings, schematics, spatial layouts, and sometimes cross-referencing visual elements with written codes, making rich visual-spatial reasoning central.",
+      "adequacy_evidence": "Current agents can parse and analyze structured diagrams and plans in simpler cases, but struggle with complex, large-scale blueprints, nuanced spatial relationships, and cross-referencing multiple visual documents reliably.",
+      "_timestamp": "2026-04-06T01:00:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Approving building plans requires recognized authority and legitimacy, as builders, developers, and the public must trust that approvals meet safety codes and legal standards.",
+      "adequacy_evidence": "Stakeholders and regulatory bodies are unlikely to accept AI as the approving authority due to accountability, liability, and legal requirements for certified human inspectors, creating strong resistance.",
+      "_timestamp": "2026-04-06T01:00:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Approving building plans directly affects structural safety, fire protection, and code compliance; even rare errors can lead to catastrophic failures, legal liability, or loss of life.",
+      "adequacy_evidence": "Current AI systems can miss nuanced code requirements or context-specific constraints, and even after standard review processes, their residual error modes are not predictable enough for such high-stakes approvals.",
+      "_timestamp": "2026-04-06T01:00:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Building plan approval is legally assigned to authorized building officials or licensed inspectors, and codes typically require a human official\u2019s review and signature; AI cannot autonomously serve as the legally recognized approver.",
+      "_timestamp": "2026-04-06T01:00:13"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying building plan compliance requires detailed code knowledge, cross-checking structural, safety, and zoning requirements, and identifying subtle design flaws that may not be immediately apparent or may only manifest during construction or use.",
+      "adequacy_evidence": "Current AI systems can miss nuanced code interpretations or complex interactions in plans, so outputs would require thorough expert review; errors are not always obvious and could have serious consequences if unchecked.",
+      "_timestamp": "2026-04-06T01:00:49"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Building codes and specifications are largely explicit, but inspectors must apply experience to interpret ambiguities, assess equivalence of alternative designs, and account for local practices or edge cases.",
+      "adequacy_evidence": "Current AI can systematically apply codified rules, but lacks robust calibration for nuanced judgments like acceptable deviations or context-specific interpretations, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T01:01:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

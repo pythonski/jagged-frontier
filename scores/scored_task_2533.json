@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3061.00",
+  "task_id": 2533,
+  "task_statement": "Respond to customer and supplier inquiries about order status, changes, or cancellations.",
+  "occupation_title": "Procurement Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Most inquiries about order status, changes, or cancellations are handled through email, messaging systems, procurement software, or phone calls, all of which can be done remotely. However, in some workplaces inquiries may occur in person with coworkers, customers, or suppliers."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inquiries vary across products, order systems, and scenarios (e.g., delays, partial shipments, cancellations), but follow common patterns in business communication and status resolution workflows.",
+      "adequacy_evidence": "Large volumes of customer service emails, chat logs, and CRM records provide rich, process-level examples, and missing edge cases can be readily synthesized or covered via targeted fine-tuning.",
+      "_timestamp": "2026-04-05T21:15:24"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Most inquiries follow explicit procedures and system lookups, but handling exceptions (e.g., unclear order discrepancies, sensitive cancellations, or supplier relationship nuances) benefits from experience-based judgment and tone calibration.",
+      "adequacy_evidence": "Current agents can handle routine queries and many edge cases via policies and context, but they still show gaps in nuanced judgment, especially in ambiguous or relationship-sensitive situations.",
+      "_timestamp": "2026-04-05T21:15:25"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Handling inquiries may involve short multi-step interactions (e.g., retrieving order data, clarifying details, and confirming updates), but sequences are typically brief and loosely coupled.",
+      "adequacy_evidence": "Frontier AI agents can reliably manage these short, structured exchanges without significant degradation, especially with tool integration for order lookup and updates.",
+      "_timestamp": "2026-04-05T21:15:25"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Handling inquiries requires pulling together order details (status, history, changes, cancellations) from one or more systems and maintaining that context through the response, but the information scope is typically bounded and structured.",
+      "adequacy_evidence": "Current LLM-based agents with tool integration can reliably retrieve and track relevant order data within a session, with minimal loss of context or compression errors in typical cases.",
+      "_timestamp": "2026-04-05T21:15:25"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Inquiries often include implicit needs such as urgency, dissatisfaction, or desired remedies, requiring interpretation of tone, company policy, and situational context beyond literal wording.",
+      "adequacy_evidence": "Current agents can usually infer intent and handle standard cases with CRM/tool access, but they still miss nuances in tone, edge-case policy application, or unstated customer expectations, requiring human correction.",
+      "_timestamp": "2026-04-05T21:15:25"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily handled via text-based channels (email, chat, ERP systems) using structured order data, with minimal reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents handle text-based customer service and database querying effectively, with no meaningful multimodal gaps impacting performance.",
+      "_timestamp": "2026-04-05T21:15:25"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Handling inquiries often requires accessing prior order records, past communications, and updates over the lifecycle of an order, but does not require deep or long-term accumulation beyond transactional histories.",
+      "adequacy_evidence": "Current AI systems integrated with order management or CRM databases can reliably retrieve and use cross-session order and communication history, with minimal gaps in persistence or recall.",
+      "_timestamp": "2026-04-05T21:15:26"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer and supplier inquiries are typically handled via email, phone, or chat with expectations of prompt responses (seconds to minutes), but not strict real-time constraints requiring instantaneous replies.",
+      "adequacy_evidence": "LLM-based agents with system integrations can retrieve order data and generate accurate responses well within these time bounds without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T21:15:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in communicating order status or changes can cause delays, confusion, or minor financial/logistical issues, but are typically reversible and rarely catastrophic.",
+      "adequacy_evidence": "With standard checks (e.g., system lookups, confirmation workflows), AI-generated responses can be verified against structured data, leaving minimal residual risk at acceptable levels.",
+      "_timestamp": "2026-04-05T21:15:27"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from responding to customer or supplier inquiries about order status, changes, or cancellations. While general data protection and consumer protection laws apply, they do not restrict AI from performing this task.",
+      "_timestamp": "2026-04-05T21:15:28"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves direct interaction with customers and suppliers who rely on responses about orders, so stakeholders must engage with the performer, though deep trust or personal authority is not central.",
+      "adequacy_evidence": "Many organizations already use AI chatbots for order inquiries, but some customers and suppliers still prefer human support for nuanced or urgent issues, indicating partial but not full acceptance.",
+      "_timestamp": "2026-04-05T21:15:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Order status, changes, and cancellations are recorded in structured procurement or ERP systems, so responses can be directly checked against authoritative records with minimal effort.",
+      "adequacy_evidence": "AI agents can misread system data or fabricate details if retrieval is imperfect, so routine spot-checking against source systems is still needed despite generally straightforward verification.",
+      "_timestamp": "2026-04-05T21:15:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

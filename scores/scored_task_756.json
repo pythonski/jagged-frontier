@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4171.00",
+  "task_id": 756,
+  "task_statement": "Calculate and quote rates for tours, stocks, insurance policies, or other products or services.",
+  "occupation_title": "Receptionists and Information Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Calculating and quoting rates for services or products typically involves using databases, pricing tables, or software and communicating the information by phone, email, or chat; no physical presence or specialized equipment is required."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple product domains (tours, financial products, insurance) with differing pricing rules and edge cases, but each domain is governed by structured, well-defined procedures and inputs.",
+      "adequacy_evidence": "Extensive documentation, pricing tables, APIs, and worked examples exist across domains, enabling training pipelines to capture representative processes for rate calculation and quoting.",
+      "_timestamp": "2026-04-05T20:51:33"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating and quoting rates typically follows explicit pricing schedules, formulas, or lookup systems with minimal need for experience-based judgment.",
+      "adequacy_evidence": "Current AI systems can reliably apply rules, retrieve pricing data, and compute quotes accurately when provided with the relevant inputs and guidelines.",
+      "_timestamp": "2026-04-05T20:51:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Quoting rates requires interpreting customer needs (e.g., dates, coverage levels, preferences) and mapping them to available offerings, which are not always fully specified upfront.",
+      "adequacy_evidence": "Agents can usually elicit needed details through prompts or forms, but they still sometimes miss nuanced preferences or constraints without iterative clarification.",
+      "_timestamp": "2026-04-05T20:51:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating and quoting rates typically involves short, discrete steps (gather inputs, apply pricing rules or formulas, present result) with minimal interdependence across extended sequences.",
+      "adequacy_evidence": "AI agents can reliably handle these brief, structured sequences without degradation, especially when supported by tools for calculation and retrieval of pricing rules.",
+      "_timestamp": "2026-04-05T20:51:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating and quoting rates is typically a self-contained transaction based on current product data and customer inputs, without needing persistent history across sessions.",
+      "adequacy_evidence": "Existing systems (e.g., CRM integrations) easily handle any minimal need for recalling prior customer details, and most instances do not depend on such memory at all.",
+      "_timestamp": "2026-04-05T20:51:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires gathering client details, consulting pricing schedules or databases, and applying relevant rules (e.g., discounts, dates, coverage options), but the total information volume is moderate and structured.",
+      "adequacy_evidence": "Current AI agents with tool access can reliably track inputs and retrieve pricing data within a single interaction, with minimal risk of losing or mismanaging context at this scale.",
+      "_timestamp": "2026-04-05T20:51:35"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves retrieving numerical and textual information (prices, rates, policy details) and communicating it verbally or in writing, without reliance on images, audio analysis, or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents handle text and numerical data retrieval, calculation, and quoting effectively, with no meaningful multimodal demands to create a capability gap.",
+      "_timestamp": "2026-04-05T20:51:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers typically expect quotes during a live interaction (seconds to under a minute), but the calculations are usually straightforward or tool-assisted rather than deeply deliberative.",
+      "adequacy_evidence": "Well-scaffolded AI agents can retrieve pricing data and compute or assemble quotes almost instantly, maintaining high quality within the required response time.",
+      "_timestamp": "2026-04-05T20:51:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect rate quotes can cause customer dissatisfaction, financial discrepancies, or minor contractual issues, but are typically correctable and rarely catastrophic in this role.",
+      "adequacy_evidence": "Rates are usually derived from structured data or systems that allow straightforward verification, so AI-generated outputs can be reliably checked, leaving minimal residual risk.",
+      "_timestamp": "2026-04-05T20:51:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Quoted rates are typically derived from standardized pricing rules, databases, or calculators, so errors can usually be caught by recomputing or cross-checking against authoritative systems, though some domain knowledge may be needed for complex products like insurance.",
+      "adequacy_evidence": "AI systems can generate plausible quotes but may misapply rules or use outdated assumptions, so routine verification against official pricing tools or schedules is still needed to ensure accuracy.",
+      "_timestamp": "2026-04-05T20:51:38"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves direct interaction with customers who rely on the quoted rates, and the performer's role as a service representative can influence trust and clarity.",
+      "adequacy_evidence": "Customers widely accept automated systems (e.g., online booking and insurance quote tools) for rate calculation and quoting, with little concern about whether a human or AI provides the information.",
+      "_timestamp": "2026-04-05T20:51:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Quoting insurance policies and certain financial products (e.g., stocks) typically requires involvement of licensed professionals (e.g., insurance agents, broker-dealers), which AI cannot independently hold. However, AI can assist under supervision, so the restriction is partial rather than a full prohibition.",
+      "_timestamp": "2026-04-05T20:51:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

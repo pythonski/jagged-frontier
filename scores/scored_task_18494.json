@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "23-2011.00",
+  "task_id": 18494,
+  "task_statement": "File pleadings with court clerk.",
+  "occupation_title": "Paralegals and Legal Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Many courts accept or require electronic filing through online e\u2011filing systems, allowing pleadings to be submitted remotely. However, some courts or situations still require physical filing with the clerk or delivery of paper documents."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Filing pleadings varies across jurisdictions, court systems (state vs federal), and e-filing platforms, but the procedures are structured and documented with limited variability.",
+      "adequacy_evidence": "Extensive public rules, court manuals, e-filing guides, and procedural examples provide clear, process-level data, and remaining variation can be covered through targeted synthesis or configuration.",
+      "_timestamp": "2026-04-05T23:16:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Filing pleadings requires adherence to explicit court rules and formats, but some details (e.g., local filing procedures, timing nuances, or clerk preferences) can be context-dependent.",
+      "adequacy_evidence": "Well-scaffolded agents can retrieve jurisdiction-specific rules and follow filing procedures reliably, with minimal difficulty resolving the limited ambiguity present.",
+      "_timestamp": "2026-04-05T23:16:33"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Filing pleadings is largely governed by explicit court rules and e-filing procedures, but experienced paralegals use tacit knowledge about local court quirks, formatting nuances, and common rejection pitfalls.",
+      "adequacy_evidence": "Well-scaffolded agents can follow documented procedures and check rules reliably, but may miss subtle, court-specific practices or edge-case filing issues that practitioners learn through experience.",
+      "_timestamp": "2026-04-05T23:16:33"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Filing pleadings requires tracking key details such as case numbers, party names, document versions, filing deadlines, and court-specific submission requirements, but the information volume is limited and structured.",
+      "adequacy_evidence": "Current AI agents can reliably manage and organize this level of structured, within-episode information using standard retrieval and tool integration without significant loss or drift.",
+      "_timestamp": "2026-04-05T23:16:35"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Filing pleadings involves preparing and submitting documents within court deadlines, which are typically hours to days, not requiring rapid real-time responses.",
+      "adequacy_evidence": "AI systems can operate well within these generous timeframes, allowing full reasoning and validation without any meaningful quality-speed tradeoff.",
+      "_timestamp": "2026-04-05T23:16:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Filing pleadings is a transactional task tied to a specific document submission; all necessary information (case number, parties, document) is provided at the time of filing rather than requiring accumulated cross-session context.",
+      "adequacy_evidence": "Current systems can reliably handle per-instance data inputs without needing persistent memory, so there is no meaningful gap in cross-session retention for this task.",
+      "_timestamp": "2026-04-05T23:16:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Filing pleadings is primarily a text-based process involving preparing and submitting legal documents through electronic filing systems; any visual elements (PDF formatting) are straightforward and not central to task success.",
+      "adequacy_evidence": "Current AI agents can reliably handle document formatting, PDF generation, and e-filing workflows using standard tools, with no meaningful multimodal limitations.",
+      "_timestamp": "2026-04-05T23:16:36"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Filing pleadings involves a short multi-step process (final document checks, formatting, e-filing system navigation, fee payment, and confirmation), where steps must be completed in order but are not deeply interdependent over long horizons.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute short procedural workflows with tool use (e.g., form completion and uploads) without noticeable degradation across the limited sequence length.",
+      "_timestamp": "2026-04-05T23:16:37"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Court filing systems require a registered human filer (typically an attorney or authorized staff) and filings must be signed or attributable to a licensed attorney, which an AI cannot independently satisfy. While AI can assist, it cannot be the recognized filing party, creating partial regulatory constraint.",
+      "_timestamp": "2026-04-05T23:16:39"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "E-filing systems and clerk review provide immediate feedback on many errors (formatting, missing fields), but some mistakes like incorrect case numbers or wrong documents require careful human checking to catch before filing.",
+      "adequacy_evidence": "AI can handle procedural steps but still makes occasional clerical or context errors, so human review is needed; however, many issues are surfaced quickly by court systems, keeping the verification burden moderate rather than severe.",
+      "_timestamp": "2026-04-05T23:16:39"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Filing pleadings incorrectly (wrong case, missed deadline, improper format) can lead to dismissal, sanctions, or loss of rights, so even rare residual errors have serious consequences.",
+      "adequacy_evidence": "With standard safeguards like human review, court e-filing validation systems, and docketing checks, AI-assisted filing would leave minimal residual risk that is generally acceptable.",
+      "_timestamp": "2026-04-05T23:16:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Court clerks must accept filings and rely on proper formatting, authorization, and procedural compliance; the filer's role matters but is primarily administrative rather than relational.",
+      "adequacy_evidence": "Electronic filing systems are already widely used and clerks are generally indifferent to whether submissions are AI-assisted, as long as they meet formal requirements and come from an authorized account.",
+      "_timestamp": "2026-04-05T23:16:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

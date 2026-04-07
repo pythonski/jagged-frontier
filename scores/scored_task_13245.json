@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-2021.00",
+  "task_id": 13245,
+  "task_statement": "Offer special assistance to persons such as those who are unable to dial or who are in emergency situations.",
+  "occupation_title": "Telephone Operators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Providing assistance to callers who cannot dial or are in emergencies is done through telephone or digital call-handling systems, requiring only communication and directory access via computer/telecom interfaces without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While procedures and scripts guide assistance (e.g., emergency routing, handling relay calls), operators must interpret ambiguous situations, assess urgency, and adapt communication style based on caller distress, which involves some experience-based judgment.",
+      "adequacy_evidence": "Current AI agents can follow protocols and handle many structured scenarios, but show gaps in nuanced judgment under stress, especially in interpreting incomplete or emotionally charged inputs and calibrating responses appropriately.",
+      "_timestamp": "2026-04-05T23:02:09"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a wide, long-tailed range of scenarios including medical emergencies, accessibility assistance for disabled users, language barriers, and varied caller emotional states, requiring coverage of diverse and unpredictable situations.",
+      "adequacy_evidence": "While customer service and some emergency interaction data are available and can be augmented with synthetic simulations, real emergency call transcripts and edge-case scenarios are often restricted or sparse, leaving partial but not complete coverage.",
+      "_timestamp": "2026-04-05T23:02:09"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task has a clear high-level goal (provide assistance), but callers\u2019 needs are often implicit, emotionally charged, or incomplete, requiring interpretation of context and urgency.",
+      "adequacy_evidence": "Current agents can often infer intent from distressed or incomplete input, but still miss nuance or urgency signals in edge cases, requiring human judgment to reliably resolve ambiguity.",
+      "_timestamp": "2026-04-05T23:02:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step interactions such as understanding the caller\u2019s situation, gathering necessary information, placing or routing calls, and potentially staying engaged through an emergency, requiring consistent performance across several steps.",
+      "adequacy_evidence": "AI agents can generally manage structured multi-step call flows, but may show some degradation in maintaining context or handling unexpected turns over the course of an extended or high-stress interaction.",
+      "_timestamp": "2026-04-05T23:02:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each assistance interaction is typically self-contained, focused on the caller's immediate situation without reliance on prior interactions or accumulated history.",
+      "adequacy_evidence": "Since the task does not depend on cross-session memory, current AI systems are not limited by persistent state capabilities in this context.",
+      "_timestamp": "2026-04-05T23:02:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking caller details (e.g., identity, location, nature of emergency or assistance needed) and updating this state during a single interaction, but the information volume is typically limited and structured.",
+      "adequacy_evidence": "Current AI agents can reliably maintain and update this level of within-episode context using structured prompts, tool use, and short-term memory without significant loss or drift.",
+      "_timestamp": "2026-04-05T23:02:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on real-time audio communication, including understanding spoken language, tone, distress signals, and possibly background sounds during emergency calls.",
+      "adequacy_evidence": "Current AI systems handle speech recognition and synthesis well in clear conditions but can struggle with noisy lines, emotional nuance, and complex emergency contexts.",
+      "_timestamp": "2026-04-05T23:02:11"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Emergency and special assistance calls require immediate, real-time interaction, often within seconds, where delays can impact safety or accessibility for vulnerable users.",
+      "adequacy_evidence": "LLM-based agents can respond quickly with structured guidance, but maintaining high-quality, context-sensitive assistance under strict real-time constraints can limit deeper reasoning and adaptation in complex or ambiguous emergencies.",
+      "_timestamp": "2026-04-05T23:02:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "This task includes assisting in emergency situations (e.g., inability to dial), where errors can delay critical response and lead to severe harm or death, making even rare residual mistakes unacceptable.",
+      "adequacy_evidence": "Even with supervision or checks, AI systems can exhibit unpredictable failures in high-stakes, time-sensitive interactions (e.g., misunderstanding distress, routing errors), leaving residual risk that is too consequential for this context.",
+      "_timestamp": "2026-04-05T23:02:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Performance is directly observable in real time (e.g., whether the correct number is dialed, instructions are followed, or emergency services are contacted), and errors typically surface immediately during the interaction.",
+      "adequacy_evidence": "Current AI systems can mishandle edge cases or misunderstand distressed callers, so live monitoring or post-call review is still needed, though mistakes are usually easy to detect from call logs or recordings.",
+      "_timestamp": "2026-04-05T23:02:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves direct interaction with vulnerable individuals in urgent or stressful situations, where empathy, reassurance, and perceived human support are central to effectiveness.",
+      "adequacy_evidence": "While some users may accept AI assistance if it is responsive and helpful, many would feel discomfort or reduced trust in emergencies, especially when emotional support or nuanced judgment is needed.",
+      "_timestamp": "2026-04-05T23:02:13"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "FCC regulations governing services like Telecommunications Relay Services (TRS) require the use of human communications assistants in certain contexts, limiting full automation. While not a blanket prohibition, these rules create partial restrictions on AI performing this assistance role autonomously.",
+      "_timestamp": "2026-04-05T23:02:13"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3051.00",
+  "task_id": 2516,
+  "task_statement": "Compute wages and deductions, and enter data into computers.",
+  "occupation_title": "Payroll and Timekeeping Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Computing wages and deductions and entering payroll data is typically done in payroll or accounting software and can be performed entirely on a computer with internet access. While input data might sometimes originate from physical timesheets, the task itself is fully digital."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step processing (gathering time data, applying pay rules, calculating deductions, and entering results), requiring consistent handling across steps but within structured, repetitive workflows.",
+      "adequacy_evidence": "Frontier AI agents with tooling (e.g., spreadsheets, scripts) can reliably execute these bounded, repeatable sequences without noticeable degradation over the required step length.",
+      "_timestamp": "2026-04-06T11:21:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Payroll computation relies on explicit rules, tax tables, and documented procedures, with limited need for experience-based judgment beyond handling straightforward exceptions.",
+      "adequacy_evidence": "Current AI systems can accurately apply codified payroll rules and handle typical edge cases when properly configured, leaving little gap in tacit knowledge.",
+      "_timestamp": "2026-04-06T11:21:07"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Payroll computation spans multiple jurisdictions, tax rules, benefit schemes, and employment arrangements, creating a moderately diverse but still structured set of cases.",
+      "adequacy_evidence": "Extensive documentation, regulatory tables, payroll software logs, and synthetic rule-based generation provide strong coverage of both typical and edge cases, including step-by-step calculation processes.",
+      "_timestamp": "2026-04-06T11:21:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Payroll calculations follow explicit rules (pay rates, hours, tax tables, benefits deductions), but some context-dependent interpretation is needed for edge cases like irregular hours, bonuses, or policy exceptions.",
+      "adequacy_evidence": "Current AI systems with proper integrations can reliably apply payroll rules and handle most contextual variations, with ambiguity typically resolvable through structured inputs or standard policy references.",
+      "_timestamp": "2026-04-06T11:21:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple structured data elements per employee (hours, rates, deductions, tax rules) and ensuring correct aggregation, but the information is standardized and typically fits within manageable tabular formats.",
+      "adequacy_evidence": "Current AI agents with spreadsheet/database tools reliably manage and track structured payroll data within an episode, with minimal risk of losing or misrepresenting context when properly scaffolded.",
+      "_timestamp": "2026-04-06T11:21:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Payroll calculations and data entry are typically performed in batch workflows with deadlines measured in hours or days, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can compute wages and deductions and enter data almost instantly, well within the available time window without sacrificing accuracy.",
+      "_timestamp": "2026-04-06T11:21:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing wages, deductions, and entering payroll data is primarily text- and number-based, typically handled through digital records and forms without reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI systems can fully handle text and numerical data processing tasks, including structured data entry and calculations, with no meaningful multimodal gaps.",
+      "_timestamp": "2026-04-06T11:21:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from computing wages, deductions, or entering payroll data; these functions can be automated subject to general compliance (e.g., tax and labor laws) but not restricted to humans.",
+      "_timestamp": "2026-04-06T11:21:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Payroll processing depends on persistent employee records across pay periods, including wages, tax withholdings, benefits, and historical adjustments, requiring consistent longitudinal state management.",
+      "adequacy_evidence": "Current AI systems integrated with databases and payroll software can reliably store, retrieve, and update cross-session records, with mature infrastructure for persistent state handling.",
+      "_timestamp": "2026-04-06T11:21:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal data processing; employees receive the results (paychecks) but do not engage directly with the performer during computation.",
+      "adequacy_evidence": "Stakeholders are largely indifferent to whether a human or AI computes payroll as long as accuracy is maintained, and AI-based payroll systems are already widely accepted.",
+      "_timestamp": "2026-04-06T11:21:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Payroll errors affect employee pay and tax withholdings, leading to financial inconvenience, compliance issues, or employee dissatisfaction, but are typically correctable through adjustments or reprocessing.",
+      "adequacy_evidence": "Calculations and entries can be cross-checked with rules, audits, and reconciliation systems, and current AI systems can achieve low residual error rates after such checks, making remaining risk acceptable.",
+      "_timestamp": "2026-04-06T11:21:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Payroll calculations follow explicit rules (tax tables, benefit formulas) and can be cross-checked via reconciliations, totals, and compliance reports, but verifying correctness still requires domain knowledge and careful review of edge cases.",
+      "adequacy_evidence": "AI systems can perform calculations accurately with tooling, but still require routine validation against rules, employee records, and compliance checks, as errors in inputs or edge conditions are not always automatically caught.",
+      "_timestamp": "2026-04-06T11:21:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

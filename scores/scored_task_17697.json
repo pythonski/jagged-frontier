@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5011.01",
+  "task_id": 17697,
+  "task_statement": "Recommend or arrange appropriate merchandise packing methods, according to climate, terrain, weight, nature of goods, or costs.",
+  "occupation_title": "Freight Forwarders",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Freight forwarders typically recommend or coordinate packing methods using shipment details, regulations, and communication with clients or packing vendors via email, software, or phone. However, some cases may involve in-person inspection of goods or coordination at warehouses, requiring physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Packing decisions vary widely across product types (perishables, hazardous goods, fragile items), climates, transport modes, and cost constraints, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "There is substantial documentation (logistics manuals, shipping standards, case examples), but some edge cases and firm-specific practices (e.g., unusual cargo or proprietary handling methods) are thin or not publicly accessible.",
+      "_timestamp": "2026-04-06T11:15:48"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "There are established guidelines for packing based on factors like fragility, weight, and climate, but experienced freight forwarders apply judgment to balance cost, risk, and route-specific conditions in non-standard cases.",
+      "adequacy_evidence": "AI can apply documented rules and known patterns effectively, but may lack nuanced calibration for edge cases involving complex tradeoffs (e.g., unusual cargo, mixed climates, or cost-risk optimization) that experienced practitioners handle.",
+      "_timestamp": "2026-04-06T11:15:49"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves balancing multiple context-dependent factors (climate, terrain, cost, fragility) and implicit tradeoffs like risk tolerance and client preferences, which are not always fully specified.",
+      "adequacy_evidence": "Current agents can apply general packing rules and infer reasonable tradeoffs, but often miss nuanced priorities (e.g., cost vs. damage risk) without iterative clarification from humans.",
+      "_timestamp": "2026-04-06T11:15:49"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves evaluating multiple factors (climate, terrain, weight, goods type, cost) and integrating them into a coherent packing recommendation, requiring a short multi-step reasoning process with some interdependence.",
+      "adequacy_evidence": "Current AI agents can handle these moderate-length reasoning chains, but may occasionally drop constraints or inconsistently prioritize factors across steps, leading to some degradation in complex cases.",
+      "_timestamp": "2026-04-06T11:15:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining appropriate packing methods is a planning task that typically allows minutes to hours for consideration, not requiring real-time responses.",
+      "adequacy_evidence": "Current AI agents can easily generate high-quality packing recommendations within the available time, with no need to truncate reasoning due to latency constraints.",
+      "_timestamp": "2026-04-06T11:15:50"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating several factors (climate, terrain, weight, goods characteristics, cost constraints) within a single decision, but the information scope is typically bounded and structured rather than large or rapidly changing.",
+      "adequacy_evidence": "Current AI agents can reliably track and synthesize these moderate, well-defined inputs within a single episode, with minimal risk of losing or mismanaging relevant context.",
+      "_timestamp": "2026-04-06T11:15:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many packing decisions can be made per shipment, freight forwarders often benefit from retaining client preferences, prior shipment outcomes, and recurring route or commodity considerations across engagements.",
+      "adequacy_evidence": "Current AI systems with standard database/CRM integrations can reliably store and retrieve client histories and past shipment data, and the task does not demand complex longitudinal reasoning beyond these capabilities.",
+      "_timestamp": "2026-04-06T11:15:51"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying packing recommendations requires domain knowledge of logistics, materials, and shipping conditions, and some errors (e.g., inadequate protection for climate or terrain) may only become evident after transit, though many can be checked against standards and best practices.",
+      "adequacy_evidence": "AI can generate plausible packing guidance but may miss context-specific constraints or edge cases, so human review against shipment details and industry guidelines is typically needed to catch errors.",
+      "_timestamp": "2026-04-06T11:15:52"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect packing recommendations can lead to damaged goods, spoilage, or added costs, but these outcomes are typically recoverable through insurance, re-shipment, or established logistics safeguards.",
+      "adequacy_evidence": "With standard checks (e.g., compliance with packing guidelines, material specifications), AI-generated recommendations can be validated effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T11:15:52"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves advising clients or coordinating with logistics partners on packing methods, so stakeholders rely on the output, but the performer\u2019s personal identity is not central to effectiveness.",
+      "adequacy_evidence": "Many clients would accept AI-generated packing recommendations if accurate, but some may hesitate due to liability, trust, or preference for human expertise in handling valuable or sensitive goods.",
+      "_timestamp": "2026-04-06T11:15:53"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Regulations (e.g., DOT hazardous materials rules, IATA dangerous goods regulations) require trained and certified personnel to determine and approve compliant packing methods for certain goods, which creates partial restriction. However, there is no explicit prohibition on AI assisting in these decisions under human oversight.",
+      "_timestamp": "2026-04-06T11:15:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the decision-making can be done from textual specifications (weight, material, destination conditions), real-world performance can benefit from visual inspection of goods (e.g., shape, fragility, packaging constraints) and sometimes diagrammatic packing plans.",
+      "adequacy_evidence": "Current agents can handle many cases using structured text inputs and basic images, but may struggle with nuanced visual assessment of irregular items or generating optimized spatial packing solutions from multimodal inputs.",
+      "_timestamp": "2026-04-06T11:15:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

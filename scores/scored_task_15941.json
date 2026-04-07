@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1041.08",
+  "task_id": 15941,
+  "task_statement": "Classify goods according to tariff coding system.",
+  "occupation_title": "Customs Brokers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Tariff classification is typically done by reviewing shipment documents, product descriptions, and tariff databases on a computer. However, some cases require physical inspection of goods or samples to determine the correct classification."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tariff classification relies on structured rules (HS codes, explanatory notes), but many cases require experience-based judgment in interpreting product composition, intended use, and precedent rulings.",
+      "adequacy_evidence": "Current agents can apply codified rules and reference rulings well, but struggle with nuanced, borderline classifications and lack the experiential calibration brokers use in ambiguous or novel cases.",
+      "_timestamp": "2026-04-05T22:27:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tariff classification follows structured HS rules and legal notes, but requires interpreting product composition, use, and precedent rulings where descriptions are incomplete or ambiguous.",
+      "adequacy_evidence": "AI agents can often infer correct codes using documentation and examples, but they still misinterpret edge cases or nuanced legal distinctions, requiring human review and iteration.",
+      "_timestamp": "2026-04-05T22:27:58"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Tariff classification spans a highly heterogeneous, long-tailed set of goods with nuanced distinctions based on materials, use, and composition, often requiring detailed product-specific interpretation.",
+      "adequacy_evidence": "There are substantial public sources (HS schedules, explanatory notes, customs rulings) that provide worked examples, but coverage of novel, proprietary, or highly specialized products is incomplete and uneven.",
+      "_timestamp": "2026-04-05T22:27:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tariff classification requires integrating product specifications, materials, intended use, and relevant tariff schedules, notes, and prior rulings, but the information scope is typically bounded per item.",
+      "adequacy_evidence": "Current agents can retrieve and organize these inputs with tools, but may lose nuance in long legal notes or misprioritize details, leading to occasional context compression errors.",
+      "_timestamp": "2026-04-05T22:27:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tariff classification is primarily based on textual product descriptions and legal notes, but often requires interpreting product images, samples, or physical characteristics to resolve ambiguous classifications.",
+      "adequacy_evidence": "Current AI systems can handle straightforward visual-text mappings but struggle with fine-grained distinctions (e.g., material composition or nuanced product forms) that affect correct tariff codes.",
+      "_timestamp": "2026-04-05T22:27:58"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Classifying goods involves a multi-step process (interpreting product details, applying tariff rules, consulting schedules), but sequences are relatively bounded and not deeply interdependent over long horizons.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain consistency across these short-to-moderate reasoning chains, with little degradation in performance over the required sequence length.",
+      "_timestamp": "2026-04-05T22:27:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Tariff classification is typically performed with time for research using tariff schedules, rulings, and product details; immediate real-time responses are not required.",
+      "adequacy_evidence": "AI agents can take seconds to minutes to reason through classification with tools and still meet practical timelines, so latency does not meaningfully constrain quality.",
+      "_timestamp": "2026-04-05T22:27:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many classifications can be made from product specifications alone, brokers often rely on prior rulings, client-specific classification histories, and consistency across filings, creating some cross-session dependence.",
+      "adequacy_evidence": "Current AI systems can store and retrieve prior classifications and rulings via databases or retrieval systems, which is sufficient to meet these moderate cross-session memory needs.",
+      "_timestamp": "2026-04-05T22:27:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Tariff classification under the Harmonized System often hinges on nuanced product attributes, legal notes, and precedent rulings, so errors can be subtle and require expert review of technical specifications and regulations to detect.",
+      "adequacy_evidence": "Current AI systems frequently misclassify edge cases or overlook controlling legal notes, and verifying correctness still demands detailed expert checking against rulings and documentation, making unverified use risky.",
+      "_timestamp": "2026-04-05T22:28:00"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect tariff classification can lead to fines, shipment delays, audits, and legal penalties, so even rare residual errors can have significant financial and regulatory consequences.",
+      "adequacy_evidence": "While AI can often classify straightforward goods accurately with references, edge cases and nuanced legal distinctions mean residual errors remain plausible even after review, posing some ongoing risk.",
+      "_timestamp": "2026-04-05T22:28:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. customs law requires that customs business, including tariff classification in entry filings, be conducted by or under the supervision of a licensed customs broker (19 CFR Part 111). This does not explicitly ban AI use, but it does require a licensed human to be responsible, creating a partial restriction on fully autonomous AI performance.",
+      "_timestamp": "2026-04-05T22:28:01"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The classification is relied upon by customs authorities and clients, and typically must be submitted or endorsed by a licensed customs broker, so the performer\u2019s role has some relevance.",
+      "adequacy_evidence": "While AI-assisted classification is acceptable as a tool, regulators and clients generally still expect a human licensed broker to take responsibility, creating moderate resistance to fully autonomous AI in this role.",
+      "_timestamp": "2026-04-05T22:28:01"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9094.00",
+  "task_id": 9414,
+  "task_statement": "Review and edit transcribed reports or dictated material for spelling, grammar, clarity, consistency, and proper medical terminology.",
+  "occupation_title": "Medical Transcriptionists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Reviewing and editing transcribed medical reports is performed using word processing or transcription software and digital audio files, all of which can be accessed and edited remotely on a computer without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple medical specialties, report types, and stylistic variations, but remains within a structured and well-defined domain of clinical documentation and editing conventions.",
+      "adequacy_evidence": "Large corpora of medical texts, clinical notes, transcription datasets, and style guidelines exist, and synthetic generation plus expert annotation can cover remaining variation, providing ample process-level signal.",
+      "_timestamp": "2026-04-06T05:25:49"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Editing medical transcripts requires maintaining consistent terminology, grammar, and clarity across a full document, but errors in one section rarely cascade into others.",
+      "adequacy_evidence": "Frontier AI systems can reliably process long documents with stable quality, maintaining consistency in terminology and style without significant degradation over typical transcript lengths.",
+      "_timestamp": "2026-04-06T05:25:50"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves some experience-based judgment in resolving ambiguous dictation, selecting correct medical terminology in context, and maintaining stylistic consistency, though much is governed by explicit rules and references.",
+      "adequacy_evidence": "Current AI systems handle most grammar, spelling, and terminology standardization well, but still show gaps in nuanced disambiguation of context-specific medical phrasing and subtle consistency judgments.",
+      "_timestamp": "2026-04-06T05:25:50"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task has largely explicit goals (correct grammar, spelling, terminology), but requires some contextual judgment to resolve ambiguous dictation, infer intended medical terms, and maintain consistency with clinical conventions.",
+      "adequacy_evidence": "Current AI can usually infer intended meaning and apply medical terminology correctly, but still makes occasional errors with ambiguous phrasing, specialty-specific nuances, or unclear dictation, requiring human review.",
+      "_timestamp": "2026-04-06T05:25:51"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many reports are self-contained, transcriptionists often benefit from recalling physician-specific preferences, formatting conventions, and recurring terminology across sessions.",
+      "adequacy_evidence": "Current AI systems with standard memory tools can reliably store and retrieve templates, style guides, and prior edits, meeting these modest cross-session needs.",
+      "_timestamp": "2026-04-06T05:25:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking terminology, consistency, and context across a report that may span multiple paragraphs or pages, requiring moderate within-document information management.",
+      "adequacy_evidence": "Frontier AI systems with long context windows and retrieval handle document-level editing reliably, with minimal loss of relevant context during a single pass.",
+      "_timestamp": "2026-04-06T05:25:52"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Editing transcribed medical reports is typically a batch process where turnaround times are measured in minutes to hours, not real-time interaction, allowing sufficient time for careful review.",
+      "adequacy_evidence": "Current AI systems can perform spelling, grammar, and terminology corrections well within these timeframes without needing to sacrifice reasoning depth, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T05:25:52"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is primarily text-based but may involve referencing original audio dictation to verify unclear passages, introducing some reliance on audio perception.",
+      "adequacy_evidence": "Current AI systems with integrated speech recognition handle medical dictation and text editing reliably in most cases, with minimal multimodal limitations for this task.",
+      "_timestamp": "2026-04-06T05:25:53"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in medical reports (e.g., incorrect terminology, dosages, or negations) can propagate into clinical decisions, billing, or legal records, so even rare residual mistakes can have significant consequences.",
+      "adequacy_evidence": "With human review and standard checks, most AI errors can be caught, but subtle clinical phrasing mistakes or context-sensitive terminology errors may still slip through at a non-negligible rate.",
+      "_timestamp": "2026-04-06T05:25:53"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from reviewing and editing medical transcription text. Compliance requirements like HIPAA govern data handling and privacy but allow AI use with proper safeguards (e.g., business associate agreements), rather than restricting the task itself.",
+      "_timestamp": "2026-04-06T05:25:54"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many errors (spelling, grammar, formatting) are straightforward to detect, but verifying correct medical terminology and clinical meaning requires domain knowledge and careful review against context or source dictation.",
+      "adequacy_evidence": "Current AI can produce generally clean text but still makes nontrivial mistakes in medical terminology, context, and consistency, requiring routine human review to catch subtle but important errors.",
+      "_timestamp": "2026-04-06T05:25:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The edited reports are used by physicians and healthcare staff, who rely on their accuracy, but the editor's personal identity or authority is not central as long as the output meets standards.",
+      "adequacy_evidence": "Healthcare settings already use automated transcription and editing tools, and stakeholders generally accept AI involvement provided accuracy and compliance are maintained.",
+      "_timestamp": "2026-04-06T05:25:54"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

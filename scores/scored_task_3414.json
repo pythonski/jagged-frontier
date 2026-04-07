@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2072.00",
+  "task_id": 3414,
+  "task_statement": "Compute payment schedules.",
+  "occupation_title": "Loan Officers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Computing loan payment schedules involves calculating amortization and payment amounts using financial software, spreadsheets, or calculators based on loan terms, which can be done entirely on a computer without physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing payment schedules follows well-defined financial formulas (e.g., amortization, interest accrual) and explicit contractual terms, with little need for experiential judgment once inputs are specified.",
+      "adequacy_evidence": "Current AI systems can reliably apply these rules and handle variations (e.g., different compounding periods or payment structures) without needing tacit calibration.",
+      "_timestamp": "2026-04-06T00:23:44"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Payment schedules vary across loan types (fixed, variable, amortizing, balloon) and terms, but are governed by well-defined financial formulas and structured rules rather than highly open-ended cases.",
+      "adequacy_evidence": "Extensive public financial data, textbooks, software implementations, and easily generated synthetic examples provide full coverage of the relevant distributions, including step-by-step calculations.",
+      "_timestamp": "2026-04-06T00:23:44"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Computing payment schedules requires tracking loan parameters (principal, interest rate, term, payment frequency, amortization rules) and intermediate calculations, but the information is structured and bounded.",
+      "adequacy_evidence": "Current agents handle structured financial inputs and multi-step calculations reliably within a single episode, with minimal risk of losing or mismanaging relevant context.",
+      "_timestamp": "2026-04-06T00:23:44"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Computing payment schedules involves a multi-step but structured sequence (e.g., applying formulas, iterating over periods to generate amortization tables) where each step builds on prior calculations.",
+      "adequacy_evidence": "LLM-based agents with tool use (e.g., code execution or spreadsheets) can reliably maintain consistency across these sequences, with minimal degradation over the required number of steps.",
+      "_timestamp": "2026-04-06T00:23:44"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing a payment schedule is typically a self-contained calculation based on current loan terms (principal, rate, term) provided at the time of the task, without needing prior session history.",
+      "adequacy_evidence": "Since the task does not depend on cross-session memory, current AI systems fully meet its requirements without needing persistent state.",
+      "_timestamp": "2026-04-06T00:23:45"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Payment schedules generally follow explicit formulas (amortization, interest rates, term), but some context-dependent factors like loan type, fees, or variable rates require interpretation of terms and assumptions.",
+      "adequacy_evidence": "Current AI agents can reliably infer standard conventions and request or incorporate missing parameters, handling most ambiguity with minimal iteration.",
+      "_timestamp": "2026-04-06T00:23:45"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing payment schedules relies on numerical inputs (loan amount, interest rate, term) and produces tabular/textual outputs; no inherent need for images, audio, or other modalities.",
+      "adequacy_evidence": "Since the task is fully text/numeric, current AI agents can handle it without any multimodal capabilities, leaving no modality-related shortfall.",
+      "_timestamp": "2026-04-06T00:23:45"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing loan payment schedules is typically a back-office or client-support task where seconds to minutes of latency are acceptable, and does not require real-time responsiveness.",
+      "adequacy_evidence": "Current AI systems and standard financial tools can generate accurate payment schedules almost instantly, with no meaningful quality degradation under typical time expectations.",
+      "_timestamp": "2026-04-06T00:23:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from computing loan payment schedules; this is a routine calculation already widely automated in software. Regulatory requirements focus on accuracy and disclosure, not on mandating a human performer for this specific task.",
+      "_timestamp": "2026-04-06T00:23:46"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in payment schedules can lead to incorrect billing, customer disputes, and compliance issues, but they are typically detectable and correctable without irreversible harm.",
+      "adequacy_evidence": "With standard validation checks (e.g., recalculation, reconciliation with loan terms), AI-generated schedules can be reliably verified, leaving minimal residual risk.",
+      "_timestamp": "2026-04-06T00:23:47"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Computing payment schedules is a technical, back-office calculation task whose outputs are typically consumed impersonally (e.g., in documents or systems) rather than requiring stakeholder engagement with the performer.",
+      "adequacy_evidence": "Stakeholders generally care about accuracy of the schedule, not who or what produced it; automated tools are already widely accepted for this function.",
+      "_timestamp": "2026-04-06T00:23:47"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Payment schedules are governed by explicit formulas (amortization, interest accrual) and can be easily recalculated or cross-checked with standard financial tools, making errors straightforward to detect.",
+      "adequacy_evidence": "Current AI may occasionally miscompute or format schedules incorrectly, but verification is trivial using spreadsheets or calculators, so checking imposes minimal burden.",
+      "_timestamp": "2026-04-06T00:23:47"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

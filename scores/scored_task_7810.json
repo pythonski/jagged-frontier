@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1218.00",
+  "task_id": 7810,
+  "task_statement": "Analyze records, reports, test results, or examination information to diagnose medical condition of patient.",
+  "occupation_title": "Obstetricians and Gynecologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Reviewing and analyzing medical records, lab results, and reports is typically done through electronic health record systems on a computer, which can be done remotely. However, the information often originates from in-person examinations or tests conducted with medical equipment, tying some instances to physical clinical settings."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "OB/GYN diagnosis spans highly heterogeneous cases across pregnancy stages, comorbidities, rare complications, imaging, labs, and patient histories, with significant long-tail variation.",
+      "adequacy_evidence": "While large volumes of medical literature, guidelines, and some clinical datasets exist, real-world patient records and rare edge cases are often private or underrepresented, though partially addressable via synthetic data and targeted fine-tuning.",
+      "_timestamp": "2026-04-05T23:50:08"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosing OB-GYN conditions from clinical data requires nuanced interpretation of heterogeneous signals (labs, imaging, patient history) and context-sensitive judgment shaped by experience, especially for atypical presentations and risk tradeoffs in pregnancy.",
+      "adequacy_evidence": "Frontier agents can synthesize medical data and match patterns well in standard cases, but they still lack reliable clinical calibration and experiential judgment for complex, ambiguous, or high-risk scenarios common in practice.",
+      "_timestamp": "2026-04-05T23:50:09"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Medical diagnosis in obstetrics and gynecology involves integrating incomplete, noisy, and context-dependent information, with evolving hypotheses shaped by patient history, risk factors, and subtle clinical cues.",
+      "adequacy_evidence": "Current AI agents can infer plausible diagnoses from structured and unstructured data but often miss nuanced contextual factors or shifting clinical priorities, requiring physician oversight and iterative refinement.",
+      "_timestamp": "2026-04-05T23:50:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing a patient requires integrating multiple sources (history, labs, imaging, exams) through a multi-step reasoning process, but it is typically bounded to a single clinical episode rather than very long, evolving action chains.",
+      "adequacy_evidence": "LLM-based agents can generally sustain multi-step clinical reasoning but show some degradation over longer chains, including missed constraints or premature conclusions when integrating many inputs.",
+      "_timestamp": "2026-04-05T23:50:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosing in obstetrics and gynecology relies heavily on longitudinal patient history (e.g., prior pregnancies, menstrual history, chronic conditions, prior test results) accumulated over many visits and sometimes years.",
+      "adequacy_evidence": "Current agents can integrate EHR data and retrieve past records, but often struggle with maintaining coherent, up-to-date longitudinal state and synthesizing evolving histories across fragmented sources, leading to moderate gaps.",
+      "_timestamp": "2026-04-05T23:50:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosing in obstetrics/gynecology requires integrating large volumes of heterogeneous data (patient history, labs, imaging, exam findings, fetal monitoring) where missing subtle details can materially affect diagnosis.",
+      "adequacy_evidence": "Frontier agents can ingest and summarize large records but still show weaknesses in reliably prioritizing and retaining all clinically salient details across long, complex inputs, leading to occasional omissions or drift.",
+      "_timestamp": "2026-04-05T23:50:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosis in obstetrics and gynecology often relies on interpreting non-text data such as ultrasound images, fetal heart rate tracings, and physical examination findings, which are central to clinical decision-making.",
+      "adequacy_evidence": "Current AI systems can handle some medical imaging and structured signals, but performance is uneven for complex, real-time, and context-integrated interpretations (e.g., ultrasound nuances), requiring human oversight.",
+      "_timestamp": "2026-04-05T23:50:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnostic errors in obstetrics and gynecology can lead to severe outcomes including maternal or fetal death, irreversible complications, or missed time-sensitive conditions, making even rare residual errors highly consequential.",
+      "adequacy_evidence": "Even with standard clinical checks, current AI systems exhibit non-negligible rates of diagnostic error and unpredictable failure modes, leaving residual risk that is not acceptable given the high-stakes nature of medical diagnosis.",
+      "_timestamp": "2026-04-05T23:50:11"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Diagnosis from records, reports, and test results in obstetrics and gynecology is typically expected within seconds to a few minutes in clinical workflows, though not strictly real-time except in acute cases.",
+      "adequacy_evidence": "Frontier AI systems can analyze structured and unstructured medical data rapidly within this time window without needing to truncate reasoning, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T23:50:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnostic errors can be subtle, involve complex interpretation of heterogeneous data (labs, imaging, history), and may not become apparent until patient outcomes unfold, requiring deep clinical expertise to detect.",
+      "adequacy_evidence": "Current AI systems still produce non-trivial diagnostic errors and omissions that require expert clinician review to catch, and these errors are often not easily identifiable without thorough, time-intensive verification.",
+      "_timestamp": "2026-04-05T23:50:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State medical practice acts require that diagnosis of medical conditions be performed by a licensed physician, and AI systems cannot legally practice medicine or issue diagnoses independently. AI may assist, but a licensed obstetrician-gynecologist must make and take responsibility for the diagnosis.",
+      "_timestamp": "2026-04-05T23:50:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnosing a patient's medical condition in obstetrics and gynecology relies heavily on patient trust in the clinician\u2019s expertise, judgment, and professional authority, and patients actively engage with and rely on the diagnostician.",
+      "adequacy_evidence": "Patients are unlikely to accept an AI system as the primary diagnostician for sensitive, high-stakes reproductive health issues, and resistance would significantly undermine trust, disclosure, and adherence unless AI involvement is minimized or mediated by a human clinician.",
+      "_timestamp": "2026-04-05T23:50:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

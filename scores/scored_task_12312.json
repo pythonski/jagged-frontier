@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-8012.00",
+  "task_id": 12312,
+  "task_statement": "Implement energy schedules, including real-time transmission reservations or schedules.",
+  "occupation_title": "Power Distributors and Dispatchers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Implementing energy schedules and real-time transmission reservations is performed through digital control, scheduling, and market/EMS software systems. The task involves monitoring and updating electronic schedules and does not require physical equipment handling or on-site activity."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Real-time transmission scheduling spans highly heterogeneous grid states, market rules (by ISO/RTO), contingency scenarios, and dynamic load/generation conditions, requiring coverage of many rare and context-specific cases.",
+      "adequacy_evidence": "Much of the relevant operational data (real-time dispatch decisions, contingency handling, operator reasoning) is proprietary to utilities/ISOs and not publicly available, and detailed process-level traces are sparse, limiting feasible training coverage.",
+      "_timestamp": "2026-04-05T21:43:39"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Implementing energy schedules follows formal market rules and system procedures, but operators must apply experience to handle contingencies like congestion, outages, or timing conflicts not fully specified in rules.",
+      "adequacy_evidence": "Current agents can follow documented scheduling protocols but lack robust real-time calibration for edge cases and system nuances, leading to gaps in handling non-routine grid conditions.",
+      "_timestamp": "2026-04-05T21:43:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Implementing energy schedules and real-time transmission reservations involves continuous monitoring, updating, and coordination across interdependent system states where errors propagate and require sustained consistency.",
+      "adequacy_evidence": "Current AI agents can manage multi-step workflows with tooling, but performance can degrade over extended, dynamic sequences with real-time updates, leading to occasional drift or missed constraints.",
+      "_timestamp": "2026-04-05T21:43:40"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many constraints are defined by grid reliability standards, market rules, and operational procedures, dispatchers must still interpret real-time system conditions, prioritize competing objectives, and coordinate with stakeholders under uncertainty.",
+      "adequacy_evidence": "Current AI agents can follow explicit scheduling rules and ingest real-time data, but they often struggle to fully infer implicit priorities and adapt to nuanced, rapidly evolving grid conditions without human guidance.",
+      "_timestamp": "2026-04-05T21:43:40"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Implementing energy schedules and transmission reservations primarily involves structured numerical data, system logs, and text-based control interfaces rather than essential visual or audio interpretation.",
+      "adequacy_evidence": "Current AI agents can handle structured data inputs, scheduling logic, and system interactions without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-05T21:43:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple dynamic data streams (load forecasts, generation availability, transmission constraints, market bids, and real-time grid conditions) where missing or mismanaging a single constraint can lead to invalid or unsafe schedules.",
+      "adequacy_evidence": "Current agents can integrate and retrieve structured data via tools, but they can struggle with maintaining a fully consistent, up-to-date representation of rapidly changing grid states and constraints over extended decision sequences.",
+      "_timestamp": "2026-04-05T21:43:41"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Implementing energy schedules depends on ongoing system state such as prior transmission reservations, standing schedules, and contractual commitments, which persist across shifts and days.",
+      "adequacy_evidence": "These states are already stored in structured operational systems (e.g., EMS/SCADA, market platforms), and current AI agents can reliably retrieve and use such persistent data via integrations without needing intrinsic long-term memory.",
+      "_timestamp": "2026-04-05T21:43:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Real-time transmission scheduling in power systems requires near-instant decisions to balance load, maintain grid stability, and respond to contingencies, often within seconds to minutes.",
+      "adequacy_evidence": "LLM-based agents can leverage fast optimization tools and predefined rules to act quickly, but tight latency can limit deeper reasoning or contingency analysis, leading to some degradation in complex or unexpected scenarios.",
+      "_timestamp": "2026-04-05T21:43:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Energy scheduling and transmission reservations are checked using power flow models, grid constraints, and automated EMS validation tools, but verifying correctness still requires domain expertise and careful review of system conditions.",
+      "adequacy_evidence": "AI-generated schedules would need consistent validation against grid models and operational rules; while existing tools help catch many errors, human oversight remains necessary due to nontrivial mistake rates.",
+      "_timestamp": "2026-04-05T21:43:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in real-time energy scheduling and transmission reservations can destabilize the grid, cause outages, or damage infrastructure, so even rare residual mistakes have severe, system-wide consequences.",
+      "adequacy_evidence": "Even with monitoring and automated checks, current AI systems can exhibit unpredictable failures or miss edge-case constraints, leaving residual risks that are too consequential for real-time grid operations.",
+      "_timestamp": "2026-04-05T21:43:43"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Implementing energy schedules requires coordination with grid operators, market participants, and reliability authorities who rely on accurate submissions, but interaction is procedural and system-mediated rather than identity-driven.",
+      "adequacy_evidence": "Stakeholders in power system operations \u10e3\u10d9\u10d5\u10d4 routinely accept automated scheduling and dispatch software, so an AI agent performing this role would face little to no resistance if it meets reliability and compliance standards.",
+      "_timestamp": "2026-04-05T21:43:43"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "NERC reliability standards require certified human system operators to oversee and be responsible for real-time transmission operations, which implicitly restricts fully autonomous AI control. However, AI can be used as a decision-support tool, so the restriction is partial rather than an outright prohibition.",
+      "_timestamp": "2026-04-05T21:43:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

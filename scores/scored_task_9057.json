@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-1031.01",
+  "task_id": 9057,
+  "task_statement": "Respond to complaints or questions on wetland jurisdiction, providing information or clarification.",
+  "occupation_title": "Conservation Scientists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Responding to questions or complaints about wetland jurisdiction is typically done via email, phone, or written correspondence using digital records and GIS data, but some cases require site visits, field verification, or in-person discussions to resolve jurisdictional questions."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Public inquiries and complaints about wetland jurisdiction often involve incomplete facts, implicit concerns, and context-specific regulatory nuances, requiring interpretation of intent and tailoring explanations to the situation.",
+      "adequacy_evidence": "Current AI agents can usually infer user intent and provide relevant regulatory information, but they may miss subtle contextual cues or stakeholder concerns, requiring human clarification in a nontrivial share of cases.",
+      "_timestamp": "2026-04-06T01:43:02"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting wetland jurisdiction often involves applying regulatory definitions (e.g., Waters of the U.S.) to ambiguous, site-specific conditions, requiring some experience-based judgment and familiarity with precedent beyond written rules.",
+      "adequacy_evidence": "Current agents can explain regulations and handle standard cases, but they struggle with nuanced boundary determinations, local interpretation practices, and defensible judgments in ambiguous or contested scenarios.",
+      "_timestamp": "2026-04-06T01:43:02"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied but structured cases involving different wetland types, geographic regions, and regulatory interpretations under frameworks like the Clean Water Act, creating moderate diversity in instances.",
+      "adequacy_evidence": "Extensive public regulations, guidance documents, case law, and example determinations provide rich, process-level training data, and synthetic scenarios can cover remaining variation, leaving little coverage gap.",
+      "_timestamp": "2026-04-06T01:43:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Handling complaints or jurisdiction questions often involves a few interdependent steps (interpreting the inquiry, referencing regulations, and tailoring the response), but sequences are typically short and not deeply chained.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably maintain coherence across these modest multi-step interactions without significant drift or compounding errors.",
+      "_timestamp": "2026-04-06T01:43:03"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many inquiries are one-off, some require referencing prior communications, ongoing cases, or stakeholder history to ensure consistent and accurate responses.",
+      "adequacy_evidence": "Current AI systems with standard CRM integrations and retrieval can reliably store and recall prior interactions, making cross-session memory needs largely manageable.",
+      "_timestamp": "2026-04-06T01:43:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Responses to jurisdiction questions or complaints are typically handled via email, reports, or scheduled calls where minutes to hours of latency are acceptable.",
+      "adequacy_evidence": "Current AI systems can deliver high-quality, well-reasoned explanations within this generous time window without meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-06T01:43:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Responding requires integrating regulatory definitions, site-specific details (e.g., maps, permits), and the content of the complaint, but the information volume is typically moderate and bounded within a single exchange.",
+      "adequacy_evidence": "Current agents with retrieval tools can reliably manage and reference relevant regulations and case details within an episode, with minimal risk of losing critical context.",
+      "_timestamp": "2026-04-06T01:43:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Responding to wetland jurisdiction inquiries can involve interpreting maps, site photos, or GIS data to clarify boundaries, though many cases are handled through textual policy explanation and documentation.",
+      "adequacy_evidence": "Current agents can process maps and images with tools, but may be unreliable on nuanced boundary determinations or integrating heterogeneous spatial data sources, leading to moderate gaps in complex cases.",
+      "_timestamp": "2026-04-06T01:43:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from providing informational responses about wetland jurisdiction. While official determinations may require authorized personnel, answering general questions or complaints with information is not legally restricted to humans.",
+      "_timestamp": "2026-04-06T01:43:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves responding to landowners, developers, or the public on regulatory jurisdiction, where perceived authority and credibility of the responder are central to acceptance of the information.",
+      "adequacy_evidence": "While AI could provide accurate information, stakeholders may distrust or challenge responses from an AI on regulatory matters, preferring confirmation from a human authority figure.",
+      "_timestamp": "2026-04-06T01:43:05"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Providing incorrect jurisdictional information can lead to regulatory noncompliance, permitting errors, or environmental harm, but issues are typically correctable and not immediately catastrophic.",
+      "adequacy_evidence": "Even with review, AI may miss nuanced or location-specific regulatory interpretations, leaving some residual risk that could still misguide stakeholders in edge cases.",
+      "_timestamp": "2026-04-06T01:43:06"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining and explaining wetland jurisdiction involves nuanced interpretation of regulatory definitions (e.g., Waters of the U.S.), site-specific factors, and evolving legal guidance, making errors subtle and often only detectable by trained experts with contextual knowledge.",
+      "adequacy_evidence": "Current AI systems frequently misinterpret regulatory nuances or lack access to site-specific data, and their errors (e.g., overgeneralizations or outdated legal interpretations) are difficult to detect without expert review, necessitating thorough and careful verification.",
+      "_timestamp": "2026-04-06T01:43:06"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

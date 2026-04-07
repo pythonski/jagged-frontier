@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-9021.00",
+  "task_id": 23558,
+  "task_statement": "Study blueprints, design specifications, or manufacturers' recommendations to ascertain the configuration of heating or cooling equipment components and to ensure the proper installation of components.",
+  "occupation_title": "Heating, Air Conditioning, and Refrigeration Mechanics and Installers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Reviewing blueprints, specifications, and manufacturer documentation is commonly done using digital files (CAD drawings, PDFs, online manuals). However, HVAC installers frequently review printed plans or manuals on-site during installation, so a substantial share occurs in physical settings."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Blueprints and manufacturer specifications are largely explicit but require interpretation of symbols, cross-referencing documents, and resolving minor inconsistencies or context-specific constraints during installation planning.",
+      "adequacy_evidence": "Current AI can interpret structured specifications and some visual schematics, but often misses contextual nuances or conflicts across documents, requiring human oversight to fully resolve intent.",
+      "_timestamp": "2026-04-06T00:00:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting multiple technical documents and cross-referencing specifications to determine correct component configuration, requiring several interdependent reasoning steps but not extremely long chains.",
+      "adequacy_evidence": "LLM-based agents can generally maintain coherence across moderate multi-step document analysis, but may lose constraints or misalign details when integrating multiple sources over extended reasoning sequences.",
+      "_timestamp": "2026-04-06T00:00:07"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting blueprints and manufacturer specs is partly rule-based, but installers rely on experience to resolve ambiguities, adapt to site conditions, and judge practical fit and sequencing beyond explicit instructions.",
+      "adequacy_evidence": "Agents can parse plans and specifications well, but lack embodied experience and practical calibration for handling real-world installation nuances, leading to gaps in non-routine or context-sensitive cases.",
+      "_timestamp": "2026-04-06T00:00:07"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of equipment types, manufacturers, and blueprint conventions, but these are structured and follow recurring engineering standards and documentation patterns.",
+      "adequacy_evidence": "Large volumes of manuals, specs, and example blueprints exist, but proprietary documents and real-world annotated installation cases are unevenly accessible, leaving some gaps that require targeted synthesis or fine-tuning.",
+      "_timestamp": "2026-04-06T00:00:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating information from blueprints, specifications, and manufacturer guidance, requiring tracking multiple parameters and constraints but within a bounded installation scope.",
+      "adequacy_evidence": "Current agents can handle structured documents but may lose fidelity when navigating large, detailed blueprints or cross-referencing multiple sources, leading to occasional missed or misaligned details.",
+      "_timestamp": "2026-04-06T00:00:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each installation task is largely self-contained, relying on the specific blueprints, specifications, and manufacturer guidance provided for that job rather than accumulated cross-project history.",
+      "adequacy_evidence": "Since the task does not depend on persistent cross-session state, current AI systems' memory limitations do not meaningfully impact performance.",
+      "_timestamp": "2026-04-06T00:00:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing blueprints and specifications is typically a deliberate task performed before or during installation, where minutes or longer are acceptable for careful interpretation.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to analyze documents without meaningful pressure, so extended reasoning does not conflict with task timing requirements.",
+      "_timestamp": "2026-04-06T00:00:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting blueprints and equipment layouts requires understanding spatial diagrams, symbols, and visual schematics that cannot be reduced to text alone.",
+      "adequacy_evidence": "Current agents can parse many diagrams and technical drawings, but performance is still inconsistent on complex, detailed HVAC schematics and spatial relationships.",
+      "_timestamp": "2026-04-06T00:00:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Misinterpreting blueprints or manufacturer specifications can lead to configuration errors that are not obvious until installation or system testing, requiring skilled inspection and domain expertise to detect.",
+      "adequacy_evidence": "Current AI systems can misread technical diagrams or nuanced specifications, and these errors are difficult to catch without expert review, making thorough human verification necessary.",
+      "_timestamp": "2026-04-06T00:00:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misinterpreting blueprints or specifications can lead to incorrect installation of HVAC systems, causing safety hazards (e.g., gas leaks, electrical faults), code violations, or major system failures, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "Even with review and checks, AI may still miss nuanced spatial or specification details in blueprints, leaving a non-trivial risk of subtle but consequential errors, though human oversight can mitigate many of these issues.",
+      "_timestamp": "2026-04-06T00:00:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is an internal technical activity (interpreting blueprints and specifications) with no direct interaction with clients or stakeholders during execution.",
+      "adequacy_evidence": "Because there are no stakeholders engaged in this step, acceptance of an AI agent is not relevant to task performance.",
+      "_timestamp": "2026-04-06T00:00:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from analyzing blueprints or manufacturer specifications. Licensing requirements in HVAC apply to performing installation or signing off on work, not to the act of studying or interpreting design documents.",
+      "_timestamp": "2026-04-06T00:00:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

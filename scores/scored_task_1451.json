@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3013.00",
+  "task_id": 1451,
+  "task_statement": "Position instructions and comments onto drawings.",
+  "occupation_title": "Mechanical Drafters",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Mechanical drafters typically add instructions and comments as annotations within CAD or other drafting software, which can be done entirely on a computer. While occasional paper markups exist, the task itself is normally performed digitally."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different drawing types, industry standards (e.g., ASME, ISO), and company-specific annotation conventions, but remains within a structured and moderately variable domain.",
+      "adequacy_evidence": "Large corpora of annotated technical drawings, CAD files, and drafting standards provide ample process-level signal, and synthetic generation of labeled drawings is straightforward, leaving little coverage gap.",
+      "_timestamp": "2026-04-05T22:29:41"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Positioning notes and comments follows established drafting standards (e.g., readability, spacing, avoiding clutter), but still requires some experiential judgment to balance clarity and layout in varied drawing contexts.",
+      "adequacy_evidence": "Current agents can apply explicit drafting rules and common patterns well, but may lack consistent calibration in edge cases involving dense or complex layouts where human drafters rely on subtle visual judgment.",
+      "_timestamp": "2026-04-05T22:29:41"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While drafting standards guide placement of notes and comments, drafters must interpret context such as readability, drawing complexity, and conventions specific to projects or firms.",
+      "adequacy_evidence": "AI agents can follow general drafting conventions but often miss context-specific preferences (e.g., optimal placement for clarity or stakeholder expectations), requiring human adjustment.",
+      "_timestamp": "2026-04-05T22:29:41"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Placing instructions and comments involves multiple annotation steps across a drawing, requiring some consistency in labeling conventions and positioning but with largely independent actions per element.",
+      "adequacy_evidence": "Current AI agents can reliably handle multi-step annotation workflows in CAD-like environments without significant degradation, as each step is relatively bounded and does not heavily depend on long sequential state.",
+      "_timestamp": "2026-04-05T22:29:43"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Positioning instructions on drawings often follows project-specific conventions, standards, or prior annotations, so some continuity across drawings in a project is useful but not deeply stateful.",
+      "adequacy_evidence": "Current AI systems with standard document storage and retrieval can reliably persist and reuse project conventions or prior annotations across sessions, meeting these modest memory needs.",
+      "_timestamp": "2026-04-05T22:29:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking multiple annotations, drawing elements, and formatting conventions simultaneously, but the information volume is structured and bounded within a single drawing context.",
+      "adequacy_evidence": "Current agents can manage annotation placement with tool support, but may lose or misapply contextual details (e.g., correct association or placement standards) when handling multiple elements in complex drawings.",
+      "_timestamp": "2026-04-05T22:29:43"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires interpreting and modifying technical drawings, involving precise spatial reasoning, visual layout, and integration of text annotations with geometric features; text-only input/output is insufficient.",
+      "adequacy_evidence": "Current agents with vision and CAD tooling can place annotations on simple drawings, but often struggle with precise positioning, adherence to drafting standards, and complex spatial relationships in detailed engineering plans.",
+      "_timestamp": "2026-04-05T22:29:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Annotating drawings is typically done within an interactive drafting workflow where responsiveness on the order of seconds to a few minutes is expected, but not strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can place and format annotations quickly within this time budget, and do not require long reasoning chains, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T22:29:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Misplaced or incorrect instructions on technical drawings can lead to manufacturing confusion or minor defects, but such errors are typically caught in drafting reviews and are rarely catastrophic on their own.",
+      "adequacy_evidence": "With standard quality checks (e.g., engineer or peer review of drawings), AI-generated annotation errors are likely to be identified and corrected, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T22:29:44"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in positioning notes or comments on technical drawings are typically visible through inspection in CAD, but require domain knowledge to ensure correct referencing, standards compliance, and clarity.",
+      "adequacy_evidence": "AI systems can place annotations but may misalign them, attach them to incorrect features, or violate drafting conventions, requiring consistent but not highly burdensome human review.",
+      "_timestamp": "2026-04-05T22:29:44"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from positioning instructions and comments on mechanical drawings. While final engineering documents may require review or approval by a licensed professional engineer, the drafting task itself is not legally restricted.",
+      "_timestamp": "2026-04-05T22:29:45"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task produces technical annotations on drawings that are consumed impersonally by engineers or manufacturers, with little to no dependence on who created them.",
+      "adequacy_evidence": "Stakeholders primarily care about accuracy and clarity of the annotations; AI-generated drafting notes are generally acceptable if they meet standards, with minimal concern about authorship.",
+      "_timestamp": "2026-04-05T22:29:45"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

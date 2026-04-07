@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1299.02",
+  "task_id": 21738,
+  "task_statement": "Transfer or rescale information from original photographs onto maps or other photographs.",
+  "occupation_title": "Geographic Information Systems Technologists and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "In modern GIS work this is typically done using digital imagery and GIS or photogrammetry software to rescale or georeference images onto maps. However, some instances may involve handling or digitizing physical photographs or working with specialized imaging setups, introducing a non-digital component."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied imagery types (aerial, satellite, ground photos), scales, and distortions, but follows well-established photogrammetry and georeferencing procedures across cases.",
+      "adequacy_evidence": "There is abundant public data (satellite imagery, GIS datasets) and detailed procedural documentation and tooling workflows, enabling training pipelines with strong coverage of representative transformations.",
+      "_timestamp": "2026-04-06T00:09:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires choosing appropriate scaling, alignment, and control points, often based on project-specific accuracy standards or implicit mapping conventions not fully specified in the instruction.",
+      "adequacy_evidence": "Current agents can perform georeferencing and rescaling with tools, but often need human guidance to resolve context-specific choices like reference points, acceptable distortion, or target coordinate systems.",
+      "_timestamp": "2026-04-06T00:09:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves selecting appropriate control points, handling distortions, and judging alignment quality, which benefits from experience but is largely guided by established georeferencing procedures and tool support.",
+      "adequacy_evidence": "Current AI systems with computer vision and GIS tooling can reliably perform feature matching, scaling, and alignment, reproducing the modest judgment required in most practical cases.",
+      "_timestamp": "2026-04-06T00:09:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Transferring or rescaling information from photographs to maps is typically a self-contained task where all necessary inputs (images, reference data, scale parameters) are provided within the current session.",
+      "adequacy_evidence": "Since the task does not depend on cross-session context, current AI systems' limited long-term memory does not meaningfully impact performance.",
+      "_timestamp": "2026-04-06T00:09:36"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple coordinated steps such as aligning images, adjusting scale, and transferring features, where consistency matters but sequences are not extremely long or tightly interdependent.",
+      "adequacy_evidence": "Modern AI systems with geospatial and image-processing tools can reliably maintain coherence across these moderate-length workflows without significant degradation or drift.",
+      "_timestamp": "2026-04-06T00:09:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking spatial correspondences (e.g., control points, scale factors, coordinate references) across images and maps, but the amount of information is structured and typically manageable within standard GIS workflows.",
+      "adequacy_evidence": "With tool support (GIS software, image processing libraries), agents can reliably store and manipulate spatial parameters, so within-episode information is not typically lost or mismanaged.",
+      "_timestamp": "2026-04-06T00:09:36"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Transferring or rescaling information between photographs and maps is typically an offline GIS workflow where accuracy matters more than immediacy, and tasks can take minutes or longer without issue.",
+      "adequacy_evidence": "Current AI systems can perform image registration, scaling, and georeferencing within acceptable time frames, and there is no meaningful degradation in quality due to latency constraints.",
+      "_timestamp": "2026-04-06T00:09:37"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task fundamentally involves interpreting visual content from photographs and aligning or rescaling it onto maps or other images, requiring spatial reasoning and image-based perception.",
+      "adequacy_evidence": "Current AI systems can perform image registration and geospatial alignment reasonably well, but they can struggle with precise scaling, distortion handling, and complex or low-quality imagery common in real-world GIS workflows.",
+      "_timestamp": "2026-04-06T00:09:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in transferring or rescaling spatial information can affect map accuracy and downstream analyses, but they are typically detectable and correctable and rarely cause irreversible harm.",
+      "adequacy_evidence": "With standard GIS quality checks (e.g., overlay validation, control points), AI-generated outputs can be reliably verified, leaving little unacceptable residual risk.",
+      "_timestamp": "2026-04-06T00:09:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the US that prohibit AI from performing geospatial data transfer or rescaling tasks. This work is technical and not restricted to licensed professionals, nor is there regulation mandating a human decision-maker for this specific activity.",
+      "_timestamp": "2026-04-06T00:09:38"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is a technical data-processing task typically performed within GIS workflows, with outputs consumed internally or as part of larger datasets rather than requiring direct stakeholder interaction.",
+      "adequacy_evidence": "There are no meaningful stakeholder acceptance concerns tied to performer identity; such transformations are already routinely automated in GIS software without resistance.",
+      "_timestamp": "2026-04-06T00:09:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Accuracy can be checked by overlaying outputs, inspecting control points, and reviewing residual error metrics, but this requires GIS expertise and careful visual/quantitative validation to catch subtle misalignments or distortions.",
+      "adequacy_evidence": "Current AI can assist with georeferencing and scaling but still makes non-obvious alignment and projection errors, so practitioners must routinely verify outputs using GIS tools and domain knowledge.",
+      "_timestamp": "2026-04-06T00:09:38"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

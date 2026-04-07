@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1217.00",
+  "task_id": 17114,
+  "task_statement": "Interpret the results of neuroimaging studies, such as Magnetic Resonance Imaging (MRI), Single Photon Emission Computed Tomography (SPECT), and Positron Emission Tomography (PET) scans.",
+  "occupation_title": "Neurologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Neuroimaging studies are reviewed as digital images (e.g., via PACS systems) and interpretation can be performed entirely on a computer, often remotely through teleradiology or electronic medical systems."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting neuroimaging requires nuanced pattern recognition, integration with clinical context, and experience-based differentiation between normal variants and subtle pathology, which are not fully captured by explicit rules.",
+      "adequacy_evidence": "Current AI systems can match or exceed performance on well-defined imaging tasks but still lack consistent clinical calibration and contextual judgment across atypical, ambiguous, or multimorbidity cases.",
+      "_timestamp": "2026-04-06T03:46:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting neuroimaging involves a multi-step process (reviewing images, integrating clinical context, identifying abnormalities, forming differential diagnoses), but the sequence is relatively bounded and not extremely long or interdependent.",
+      "adequacy_evidence": "AI systems can generally maintain coherence across these interpretive steps, but may show some degradation in consistency or miss subtle dependencies when reasoning across multiple findings and clinical context.",
+      "_timestamp": "2026-04-06T03:46:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting neuroimaging requires integrating subtle visual findings with patient history, clinical presentation, and differential diagnoses, where success criteria are highly context-dependent and not fully explicit.",
+      "adequacy_evidence": "Current agents can analyze images and suggest findings but often miss nuanced clinical context or fail to align interpretations with the true diagnostic intent without human guidance.",
+      "_timestamp": "2026-04-06T03:46:08"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Neuroimaging interpretation spans multiple modalities (MRI, PET, SPECT), diverse pathologies, patient demographics, and rare edge cases, with strong dependence on clinical context, making the distribution highly heterogeneous and long-tailed.",
+      "adequacy_evidence": "While sizable annotated imaging datasets and reports exist, much data is private, rare conditions are underrepresented, and process-level expert reasoning is sparsely captured, though partial coverage can be improved via curation and synthetic augmentation.",
+      "_timestamp": "2026-04-06T03:46:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task centers on interpreting complex medical imaging (MRI, SPECT, PET), requiring detailed visual and spatial analysis of brain structures and functional patterns that cannot be reduced to text alone.",
+      "adequacy_evidence": "Current AI systems can assist with medical image analysis but remain unreliable for expert-level neuroimaging interpretation, especially in subtle, rare, or clinically nuanced cases requiring fine-grained spatial reasoning.",
+      "_timestamp": "2026-04-06T03:46:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting neuroimaging often benefits from comparison with prior scans and patient history (e.g., tracking lesion progression), but many readings can still be performed on a single study with limited longitudinal context.",
+      "adequacy_evidence": "Current AI systems can store and retrieve prior imaging and reports when integrated with clinical systems, but maintaining and reliably surfacing the most relevant longitudinal context across cases is still inconsistent.",
+      "_timestamp": "2026-04-06T03:46:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting MRI, PET, and SPECT involves integrating large volumes of multi-slice, multi-sequence imaging data along with clinical context and often prior studies, where missing a small detail can change diagnosis.",
+      "adequacy_evidence": "Current agents can chunk and tool-assisted navigate images, but still struggle to reliably maintain and integrate fine-grained details across many slices and modalities within a single episode.",
+      "_timestamp": "2026-04-06T03:46:11"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Neuroimaging interpretation typically allows minutes for careful review, though acute settings (e.g., stroke evaluation) impose moderate time pressure for clinically actionable decisions.",
+      "adequacy_evidence": "Current AI systems can perform detailed image interpretation and reasoning within this time window without needing to truncate analysis, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T03:46:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in interpreting neuroimaging can lead to missed or incorrect diagnoses of conditions like stroke, tumors, or neurodegenerative disease, with potentially severe or irreversible patient harm even after standard review processes.",
+      "adequacy_evidence": "Even with radiology workflows and checks, current AI systems still exhibit non-trivial rates of subtle misinterpretation, context insensitivity, and inconsistent reliability, leaving residual risk that is too high for this high-stakes clinical task.",
+      "_timestamp": "2026-04-06T03:46:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Neuroimaging interpretation involves subtle pattern recognition, differential diagnosis, and clinical context; errors (e.g., small lesions, atypical presentations) are often only detectable by highly trained experts and may not be immediately obvious.",
+      "adequacy_evidence": "Current AI systems can miss or misinterpret clinically significant findings and produce plausible but incorrect reads, requiring expert overread and substantial effort to verify outputs, making unverified use unsafe.",
+      "_timestamp": "2026-04-06T03:46:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting neuroimaging is a clinically authoritative task where patients and referring physicians rely on the neurologist\u2019s expertise and professional judgment, making performer identity and legitimacy central.",
+      "adequacy_evidence": "While AI-assisted interpretation is increasingly accepted as a support tool, many stakeholders still prefer a human neurologist to validate and communicate findings, leading to moderate resistance to fully autonomous AI in this role.",
+      "_timestamp": "2026-04-06T03:46:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Interpreting neuroimaging constitutes medical diagnosis, which under state medical practice acts must be performed or supervised and signed off by a licensed physician. Current FDA-cleared AI tools are authorized only as assistive devices, not autonomous diagnosticians, creating an explicit requirement for a human clinician.",
+      "_timestamp": "2026-04-06T03:46:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

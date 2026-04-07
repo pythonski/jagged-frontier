@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3051.00",
+  "task_id": 40,
+  "task_statement": "Develop or implement production tracking or quality control systems, analyzing production, quality control, maintenance, or other operational reports to detect production problems.",
+  "occupation_title": "Industrial Production Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Designing production tracking or quality control systems and analyzing operational reports are largely computer-based activities using digital data and software. However, implementing systems and diagnosing production issues often requires some on-site coordination with manufacturing processes and equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous production environments, industries, machinery, and reporting formats, with long-tailed failure modes and context-specific quality metrics.",
+      "adequacy_evidence": "While general process engineering, QC methods, and sample reports are well-documented and can be synthetically generated, much real-world signal (proprietary production data, rare failure cases) is private and unevenly represented.",
+      "_timestamp": "2026-04-05T22:18:11"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Detecting production problems and designing tracking systems often requires experience-based judgment about normal vs abnormal variation, process quirks, and context-specific tradeoffs not fully captured in formal rules.",
+      "adequacy_evidence": "Current agents can analyze reports and flag anomalies, but often lack plant-specific calibration and practical intuition about root causes and operational nuances, leading to gaps in non-routine or context-sensitive cases.",
+      "_timestamp": "2026-04-05T22:18:12"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task depends on context-specific goals such as which production metrics matter, acceptable quality thresholds, and operational constraints, which are often implicit and vary by facility and stakeholder priorities.",
+      "adequacy_evidence": "Current agents can infer general objectives and analyze reports, but often miss plant-specific priorities or evolving constraints without iterative human guidance, requiring refinement to align with true operational goals.",
+      "_timestamp": "2026-04-05T22:18:13"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating and comparing multiple operational reports (production, maintenance, quality) within a single analysis episode, involving moderate volume and cross-referencing of information.",
+      "adequacy_evidence": "Current agents with retrieval and tool use can handle multi-document analysis, but may lose track of nuances or mis-prioritize details when synthesizing across heterogeneous reports.",
+      "_timestamp": "2026-04-05T22:18:13"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective production tracking and quality control rely on longitudinal analysis of historical production data, recurring defects, maintenance logs, and evolving system performance trends across many time periods.",
+      "adequacy_evidence": "Current agents can integrate with databases and logging systems to store and retrieve historical data, but they still show gaps in consistently maintaining, prioritizing, and contextually surfacing the most relevant cross-session insights without careful system design.",
+      "_timestamp": "2026-04-05T22:18:14"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing operational reports and developing production or quality systems typically occurs on timescales of minutes to hours or longer, without strict real-time response requirements.",
+      "adequacy_evidence": "Current AI systems can perform detailed analysis within these relaxed time constraints without needing to truncate reasoning, so speed does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T22:18:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in production tracking or quality control systems (e.g., flawed metrics, missed anomaly patterns, incorrect thresholds) can be subtle and may only surface through downstream production issues or detailed expert review of operational data.",
+      "adequacy_evidence": "Current AI systems can generate plausible analyses and system designs but often make subtle mistakes in assumptions, data interpretation, or edge cases, requiring thorough expert validation and ongoing monitoring to ensure reliability.",
+      "_timestamp": "2026-04-05T22:18:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing and implementing production tracking or quality control systems involves multi-stage workflows (data integration, analysis, system design, deployment, and iterative refinement) where earlier decisions affect downstream performance.",
+      "adequacy_evidence": "AI agents can handle multi-step analytical and implementation sequences, but over longer workflows they show some drift in maintaining constraints and coherence, especially during iterative system design and integration phases.",
+      "_timestamp": "2026-04-05T22:18:14"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves analyzing structured operational reports (text, tables, numerical data), which can be fully represented and processed in text-based formats without reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI systems handle text and structured data analysis effectively, and any occasional charts or visual summaries can be reliably interpreted with existing multimodal capabilities.",
+      "_timestamp": "2026-04-05T22:18:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no general prohibition on AI developing or implementing production or quality control systems, but in regulated industries (e.g., pharmaceuticals, food, aerospace), rules like FDA GMP and quality system regulations require accountable human oversight and sign-off, creating partial constraints on fully autonomous AI use.",
+      "_timestamp": "2026-04-05T22:18:16"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Missed or incorrect detection of production or quality issues can lead to defective products, equipment damage, safety incidents, or large-scale financial losses, so residual errors after checking must be very low.",
+      "adequacy_evidence": "Even with review and monitoring, AI-generated analyses or system designs may still miss subtle patterns or edge-case failures, leaving some non-trivial residual risk, though not uniformly unacceptable with oversight.",
+      "_timestamp": "2026-04-05T22:18:16"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves internal stakeholders such as engineers, operators, and executives who rely on the systems and analyses, so engagement exists but is primarily technical and outcome-focused rather than identity-dependent.",
+      "adequacy_evidence": "Organizations already accept automated analytics and monitoring systems in production environments, and stakeholders generally prioritize accuracy and reliability over whether the system was designed or implemented by AI.",
+      "_timestamp": "2026-04-05T22:18:16"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

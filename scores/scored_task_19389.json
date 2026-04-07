@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9097.00",
+  "task_id": 19389,
+  "task_statement": "Enter patient, specimen, insurance, or billing information into computer.",
+  "occupation_title": "Phlebotomists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "The core action is entering information into a computer, which is a digital task. However, in this occupation it is typically performed on-site alongside handling patients and physical specimens or paperwork, tying many instances to an in-person clinical workflow."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderately diverse inputs (different EHR systems, insurance formats, specimen types, and occasional edge cases), but remains largely structured and template-driven.",
+      "adequacy_evidence": "Representative data and processes are widely available via synthetic records, de-identified datasets, and documentation of billing/data entry workflows, providing sufficient coverage for training without major gaps.",
+      "_timestamp": "2026-04-05T22:57:57"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of entering discrete pieces of information (patient, specimen, insurance, billing) into fields, with each entry largely independent and not requiring tightly coupled multi-step sequencing.",
+      "adequacy_evidence": "AI systems can reliably handle short, form-based data entry workflows without degradation, as the sequences are brief and do not require sustained interdependent reasoning.",
+      "_timestamp": "2026-04-05T22:57:57"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Entering patient, specimen, insurance, or billing information is largely governed by explicit data fields, standardized forms, and clear procedural rules with minimal need for experiential judgment.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured data entry rules and handle minor variations or inconsistencies without needing tacit knowledge, given appropriate interfaces and validation checks.",
+      "_timestamp": "2026-04-05T22:57:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves structured data entry into predefined fields, but requires some interpretation of source documents, handling inconsistencies, and applying contextual rules (e.g., matching specimens to patients or insurance categories).",
+      "adequacy_evidence": "Current AI systems with form understanding, OCR, and validation rules can reliably infer intended entries and resolve minor ambiguities, with low need for iterative clarification.",
+      "_timestamp": "2026-04-05T22:57:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Data entry in clinical settings is expected to be completed promptly during patient flow, typically within seconds to a minute, but does not require true real-time reaction.",
+      "adequacy_evidence": "AI systems can process and input structured patient and billing information almost instantly with high accuracy, well within the task\u2019s time constraints.",
+      "_timestamp": "2026-04-05T22:57:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple fields (patient identifiers, specimen details, insurance and billing data) and ensuring consistency across them, requiring moderate within-episode information tracking.",
+      "adequacy_evidence": "Current AI agents with structured data entry tools can reliably manage and map this level of information without significant loss or confusion during a single episode.",
+      "_timestamp": "2026-04-05T22:57:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each data entry instance is largely self-contained, relying on information provided at the time or retrieved from existing electronic records rather than requiring the worker to remember prior cases.",
+      "adequacy_evidence": "Persistent storage is handled by external systems (EHRs, billing software), so AI agents do not need their own cross-session memory to perform the task effectively.",
+      "_timestamp": "2026-04-05T22:57:59"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily text-based data entry (names, IDs, billing codes) into computer systems; any source materials can be reduced to text without requiring rich multimodal reasoning.",
+      "adequacy_evidence": "Current AI systems with standard OCR and form-processing tools can reliably handle the minimal non-text inputs (e.g., printed labels or forms), so there is no meaningful capability gap.",
+      "_timestamp": "2026-04-05T22:57:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws requiring a licensed human to perform data entry of patient or billing information. Regulations like HIPAA impose privacy and security requirements but do not prohibit AI systems from carrying out this task if compliant.",
+      "_timestamp": "2026-04-05T22:58:00"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Errors in entering patient or specimen information can lead to misidentification, incorrect test results attribution, or billing issues, with potentially serious clinical and legal consequences even after standard checks.",
+      "adequacy_evidence": "With structured data entry systems, validation rules, and barcode-based workflows, AI systems can achieve very low residual error rates after normal quality control, making remaining risk acceptable.",
+      "_timestamp": "2026-04-05T22:58:00"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many fields can be cross-checked against source documents or system validations (e.g., required fields, format checks), but some errors like mis-typed identifiers or patient mismatches may not surface immediately and require manual review.",
+      "adequacy_evidence": "AI can extract and enter data with reasonable accuracy, but still makes occasional transcription or matching errors, so human verification against source records remains necessary.",
+      "_timestamp": "2026-04-05T22:58:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily internal data entry into systems, with no direct interaction requiring stakeholder acceptance of the performer\u2019s identity.",
+      "adequacy_evidence": "Since stakeholders do not engage with the performer for this task, there is no meaningful resistance to AI; such administrative automation is already widely accepted.",
+      "_timestamp": "2026-04-05T22:58:02"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

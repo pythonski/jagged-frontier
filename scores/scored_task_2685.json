@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4151.00",
+  "task_id": 2685,
+  "task_statement": "Recommend type of packing or labeling needed on order.",
+  "occupation_title": "Order Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Recommending packing or labeling typically involves reviewing order details, shipping requirements, and regulations in a computer system and communicating guidance to warehouse or shipping staff electronically, without needing to physically handle the items."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many packing and labeling decisions follow explicit shipping regulations and product specifications, clerks often apply experience-based judgment for edge cases like unusual item fragility, mixed orders, or customer-specific preferences.",
+      "adequacy_evidence": "Current AI agents can reliably apply codified shipping rules and infer appropriate packaging from product attributes and past cases, with minimal shortfall in the limited tacit judgment required.",
+      "_timestamp": "2026-04-06T04:33:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining appropriate packing or labeling is typically a short, self-contained decision based on item characteristics, shipping requirements, and standard guidelines rather than a long sequence of interdependent steps.",
+      "adequacy_evidence": "AI systems can handle brief rule-based or lookup-style decisions without degradation, as the task does not require extended multi-step coherence.",
+      "_timestamp": "2026-04-06T04:33:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Order clerks typically need to recommend packaging or labeling within seconds to keep order processing workflows moving, but the task does not require instantaneous real-time reaction.",
+      "adequacy_evidence": "Current AI systems can make these determinations quickly with minimal reasoning, so meeting typical latency expectations does not degrade output quality.",
+      "_timestamp": "2026-04-06T04:33:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires considering multiple pieces of information (product type, fragility, hazardous status, destination regulations, and customer instructions), but these are typically limited in scope and manageable within a single episode.",
+      "adequacy_evidence": "Current AI agents can reliably track and integrate this level of structured, bounded information within a session without significant loss or retrieval errors.",
+      "_timestamp": "2026-04-06T04:33:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recommending packing or labeling is typically based on the current order\u2019s item characteristics, shipping method, and regulatory requirements, which are provided within the single transaction.",
+      "adequacy_evidence": "Since the task is largely self-contained per order, existing systems can handle it without needing persistent cross-session memory.",
+      "_timestamp": "2026-04-06T04:33:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily based on textual order details, product descriptions, and shipping regulations; visual or other sensory input is not fundamentally required.",
+      "adequacy_evidence": "Current AI systems can reliably process text-based order information and recommend appropriate packing or labeling without needing multimodal capabilities.",
+      "_timestamp": "2026-04-06T04:33:10"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires interpreting product characteristics, shipping methods, and applicable regulations (e.g., hazardous materials, fragility), which are sometimes implicit rather than fully specified in the order.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably infer appropriate packing and labeling from structured order data, product databases, and regulatory rules, with minimal need for iterative clarification.",
+      "_timestamp": "2026-04-06T04:33:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The recommendation on packing or labeling is typically an internal operational decision used by warehouse or shipping staff, where the identity of the recommender is not important.",
+      "adequacy_evidence": "Staff are generally indifferent to whether recommendations come from a human or AI system as long as they are accurate and align with procedures, and such systems are already common.",
+      "_timestamp": "2026-04-06T04:33:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws requiring a human to recommend packing or labeling for orders; software systems are already widely used for this purpose. While specific regulations (e.g., DOT, OSHA, FDA) govern what labeling is required, they do not prohibit AI from making or supporting these recommendations.",
+      "_timestamp": "2026-04-06T04:33:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Correct packing and labeling can usually be verified against product specifications, shipping guidelines, and regulatory rules (e.g., hazardous materials), but doing so requires consulting references and some domain knowledge rather than immediate obvious feedback.",
+      "adequacy_evidence": "AI can generate plausible recommendations, but it may miss edge cases (e.g., special handling or regulatory nuances), so human review against guidelines is still needed with moderate effort.",
+      "_timestamp": "2026-04-06T04:33:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect packing or labeling can lead to damaged goods, shipping delays, or compliance issues, but these are typically reversible and handled through returns or corrections.",
+      "adequacy_evidence": "The task is rule-based and amenable to checklists and validation systems, so after normal quality control, AI residual errors are unlikely to pose significant unacceptable risk.",
+      "_timestamp": "2026-04-06T04:33:12"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of cases (e.g., fragile items, perishables, hazardous materials, international shipments) but follows well-defined categories and standardized rules.",
+      "adequacy_evidence": "Extensive documentation exists (shipping guidelines, regulatory standards, company SOPs), providing accessible, process-level examples sufficient to cover the relevant distribution.",
+      "_timestamp": "2026-04-06T04:34:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

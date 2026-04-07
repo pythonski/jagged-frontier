@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-2011.00",
+  "task_id": 10580,
+  "task_statement": "File instrument flight plans with air traffic control to ensure that flights are coordinated with other air traffic.",
+  "occupation_title": "Airline Pilots, Copilots, and Flight Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Filing instrument flight plans is typically done through digital airline dispatch or flight planning systems, which are computer-based. However, in many real operations pilots coordinate or confirm plans from the cockpit or airport environment using specialized avionics or radio/ATC channels, tying the task to physical flight operations."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Filing instrument flight plans involves some variability (routes, aircraft types, international procedures, airspace constraints) but follows highly standardized formats and rules (e.g., ICAO flight plan forms).",
+      "adequacy_evidence": "Extensive public documentation, training materials, and simulatable procedures provide rich, process-level examples, and synthetic generation of diverse flight plans is straightforward.",
+      "_timestamp": "2026-04-05T23:28:51"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Filing instrument flight plans is highly standardized, with explicit required fields, formats, and regulatory procedures defined by aviation authorities and ATC systems.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured schemas, populate required fields, and apply routing rules or constraints when provided, with little difficulty inferring intent.",
+      "_timestamp": "2026-04-05T23:28:51"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Filing IFR flight plans follows standardized procedures and formats, but includes some experiential judgment in selecting routes, alternates, and accommodating weather or ATC preferences.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably apply these procedures and incorporate contextual data (weather, routing constraints), with minimal reliance on irreducible human intuition.",
+      "_timestamp": "2026-04-05T23:28:51"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Filing an instrument flight plan involves multiple coordinated steps (gathering flight details, routing, weather considerations, formatting, and submission), but the sequence is relatively short and standardized.",
+      "adequacy_evidence": "Modern AI agents can reliably execute structured, multi-step workflows like form completion and submission without noticeable degradation over this sequence length.",
+      "_timestamp": "2026-04-05T23:28:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Filing an IFR flight plan requires assembling multiple structured inputs (route, altitude, alternates, weather, aircraft data, NOTAMs), but these are standardized and bounded in scope within a single episode.",
+      "adequacy_evidence": "Current agents handle structured data aggregation, form completion, and retrieval reliably within a session, with minimal risk of losing or mismanaging relevant information.",
+      "_timestamp": "2026-04-05T23:28:52"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Filing an instrument flight plan is a per-flight task using current flight details (route, altitude, weather, aircraft), with no need to reference prior filings or accumulated history.",
+      "adequacy_evidence": "Since the task is self-contained, existing agent memory systems are sufficient; no persistent cross-session context is required.",
+      "_timestamp": "2026-04-05T23:28:52"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Filing instrument flight plans is primarily a structured text/data entry and communication task, though pilots may reference weather charts or route maps when preparing the plan.",
+      "adequacy_evidence": "Current AI agents handle structured text workflows and can interpret supporting visual data like charts if needed, so multimodal demands do not pose a significant limitation.",
+      "_timestamp": "2026-04-05T23:28:52"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Filing instrument flight plans is typically done pre-flight or during planning phases where minutes of latency are acceptable and do not impact safety or coordination.",
+      "adequacy_evidence": "Current AI agents can generate and submit accurate flight plans well within the available time window, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T23:28:53"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Errors in filed instrument flight plans can affect traffic separation and routing, with potential safety implications, so even rare residual mistakes can have serious downstream consequences in aviation operations.",
+      "adequacy_evidence": "Flight plans are heavily structured and subject to multiple automated and human checks by dispatch systems and ATC, so an AI\u2019s residual errors after these checks would likely be detected and reduced to an acceptable risk level.",
+      "_timestamp": "2026-04-05T23:28:54"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Instrument flight plans are highly structured with standardized fields and are validated by flight planning software and ATC systems, which automatically flag inconsistencies or invalid entries.",
+      "adequacy_evidence": "AI-generated plans can be quickly checked using the same automated validation tools and ATC feedback loops, making errors easy to detect without significant manual effort.",
+      "_timestamp": "2026-04-05T23:28:54"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "FAA regulations require that a responsible, certificated party (e.g., pilot or dispatcher) ensures flight plans are properly filed, but there is no explicit prohibition on using automated or AI systems to perform the filing itself. Current systems already allow electronic and third-party filing tools, so no concrete rule bars AI from this task.",
+      "_timestamp": "2026-04-05T23:28:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordination with air traffic control, a stakeholder that must receive and use the filed flight plan, but the interaction is procedural and standardized rather than reliant on personal authority or identity.",
+      "adequacy_evidence": "Flight plans are already frequently filed via automated and dispatch systems, and ATC accepts machine-generated submissions as long as they meet required formats and accuracy standards.",
+      "_timestamp": "2026-04-06T11:26:40"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

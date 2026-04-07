@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-1022.01",
+  "task_id": 16298,
+  "task_statement": "Calculate the exact horizontal and vertical position of points on the Earth's surface.",
+  "occupation_title": "Geodetic Surveyors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "The calculation of horizontal and vertical positions is typically performed using geodetic or GIS software that processes GNSS, satellite, or LIDAR data on a computer. Data collection may occur in the field, but the calculation step itself is almost entirely computer-based and can be done remotely."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple methods (e.g., GNSS, triangulation, leveling) and environmental conditions, but relies on well-defined mathematical and physical principles rather than highly idiosyncratic cases.",
+      "adequacy_evidence": "Extensive technical literature, standards, datasets, and simulation tools exist that expose both procedures and reasoning steps, enabling comprehensive training coverage across relevant scenarios.",
+      "_timestamp": "2026-04-05T21:31:55"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task depends on context such as chosen geodetic datum, coordinate system, required precision, and environmental corrections, which are not explicit in the phrasing but are usually specified by project standards or documentation.",
+      "adequacy_evidence": "Current agents can infer standard conventions or request clarification, but they often miss subtle project-specific requirements (e.g., local datum shifts or precision tolerances) without human guidance, leading to iteration.",
+      "_timestamp": "2026-04-05T21:31:55"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step computations such as applying geodetic models, coordinate transformations, and error corrections, where intermediate results feed into subsequent steps but are typically well-structured and bounded.",
+      "adequacy_evidence": "Modern AI agents with tool use (e.g., numerical libraries, scripted workflows) can reliably execute these sequential calculations without significant degradation, as the steps are deterministic and modular.",
+      "_timestamp": "2026-04-05T21:31:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves integrating multiple inputs (e.g., measurements, reference frames, correction factors) and maintaining intermediate calculations, but the information volume is structured and bounded rather than overwhelming.",
+      "adequacy_evidence": "Current AI agents with tool use can reliably track variables, perform chained calculations, and manage intermediate state without significant loss of information in such structured workflows.",
+      "_timestamp": "2026-04-05T21:31:56"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While core geodetic position calculations rely on well-defined mathematical models and reference systems, practitioners apply experience in handling measurement errors, datum selection, and instrument calibration under varying field conditions.",
+      "adequacy_evidence": "Current AI systems with proper tooling can reliably execute geodetic computations and apply standard error corrections, with minimal gap in replicating the modest judgment involved.",
+      "_timestamp": "2026-04-05T21:31:57"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating point positions is typically a self-contained computation based on current measurements, reference systems, and provided data, without requiring retention of prior session context.",
+      "adequacy_evidence": "Current AI systems can fully handle any minimal cross-session needs via external storage or re-specified inputs, with no meaningful gaps in persistent memory for this task.",
+      "_timestamp": "2026-04-05T21:31:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on spatial and sensor-derived data (e.g., GPS signals, satellite measurements, or instrument readings), which are non-textual but can be converted into numerical inputs for calculation.",
+      "adequacy_evidence": "AI agents can process structured geospatial and numerical data well, but may be less reliable when integrating complex, raw sensor inputs or performing precise cross-modal spatial reasoning without specialized tooling.",
+      "_timestamp": "2026-04-05T21:31:57"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Geodetic position calculations are typically conducted with specialized software or post-processed data, where minutes to hours of computation are acceptable and real-time response is rarely critical.",
+      "adequacy_evidence": "Current AI systems can perform these calculations well within acceptable timeframes, and extended reasoning does not conflict with task latency requirements.",
+      "_timestamp": "2026-04-05T21:31:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Geodetic positioning underpins mapping, land boundaries, and infrastructure; even small residual errors can propagate into significant legal, engineering, or safety consequences, making tolerance for error extremely low.",
+      "adequacy_evidence": "With standard surveying quality controls (redundant measurements, cross-checks, known reference points), AI-assisted calculations can be reliably verified, leaving minimal residual risk after checking.",
+      "_timestamp": "2026-04-05T21:31:58"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Geodetic surveying outputs used for official purposes typically must be certified by a licensed professional surveyor, which constrains fully autonomous AI use. However, there is no explicit prohibition on AI performing the calculation itself under supervision, so restrictions are partial rather than absolute.",
+      "_timestamp": "2026-04-05T21:31:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Geodetic position calculations depend on precise measurements, reference frames, and error corrections; mistakes (e.g., datum misalignment or systematic bias) can be subtle and often require redundant measurements, control networks, and expert analysis to detect.",
+      "adequacy_evidence": "Current AI systems can assist with calculations but are prone to subtle modeling or data-handling errors, and verifying outputs still requires extensive domain expertise, cross-checking with field data, and adjustment procedures, making the verification burden high.",
+      "_timestamp": "2026-04-05T21:31:59"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is a technical computation whose outputs are consumed as objective data products; it does not require interaction with or acceptance by stakeholders based on performer identity.",
+      "adequacy_evidence": "Since stakeholders primarily care about accuracy and standards compliance, not who or what produced the calculation, AI-generated results would generally be accepted if validated.",
+      "_timestamp": "2026-04-05T21:31:59"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

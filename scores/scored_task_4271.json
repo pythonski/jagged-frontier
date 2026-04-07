@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-2011.00",
+  "task_id": 4271,
+  "task_statement": "Order any needed educational or treatment supplies.",
+  "occupation_title": "Occupational Therapy Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Ordering supplies is typically done through online procurement systems, email, or vendor websites, which can be performed remotely. However, it sometimes involves checking physical inventory, coordinating with on-site staff, or purchasing items in person."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different patient needs, therapy modalities, and procurement contexts (e.g., adaptive equipment, consumables, insurance constraints), but follows fairly standardized ordering workflows and product categories.",
+      "adequacy_evidence": "There is abundant accessible data on medical supply catalogs, ordering procedures, and clinical documentation, and workflows can be well captured through existing records and synthetic scenarios, providing strong coverage.",
+      "_timestamp": "2026-04-05T20:58:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering supplies involves a short sequence of steps (identify needs, select vendors, place orders, confirm delivery), where consistency matters but steps are not deeply interdependent or long-horizon.",
+      "adequacy_evidence": "Current AI agents can reliably manage these short procurement workflows with tools (inventory checks, ordering systems) without noticeable degradation over the sequence.",
+      "_timestamp": "2026-04-05T20:58:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining which educational or treatment supplies are needed depends on patient-specific therapy plans, therapist preferences, and current inventory, requiring some contextual judgment beyond a literal instruction.",
+      "adequacy_evidence": "AI agents can infer needs from structured plans or prior orders, but often miss subtle clinical preferences or situational nuances, requiring human clarification or iteration.",
+      "_timestamp": "2026-04-05T20:58:08"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate educational or treatment supplies requires some case-based judgment about patient needs, therapy goals, and practical constraints, though it is often guided by established protocols and standard item lists.",
+      "adequacy_evidence": "AI agents can generally follow guidelines and match supplies to documented needs, but may lack nuanced calibration for atypical patient contexts or subtle therapist preferences in non-routine cases.",
+      "_timestamp": "2026-04-05T20:58:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking patient needs, prescribed treatments, inventory levels, and ordering details, involving multiple pieces of information but within a manageable scope.",
+      "adequacy_evidence": "Current AI agents can reliably manage and retrieve this level of structured, within-episode information using standard tools without significant loss or drift.",
+      "_timestamp": "2026-04-05T20:58:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering supplies often depends on ongoing treatment plans, patient needs, and inventory history, which evolve over time and require some cross-session context.",
+      "adequacy_evidence": "Current AI systems with standard database integrations can reliably store and retrieve patient plans, prior orders, and inventory records, adequately supporting this level of longitudinal memory.",
+      "_timestamp": "2026-04-05T20:58:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering educational or treatment supplies is primarily a text-based task involving selecting items from catalogs, entering orders, and processing written specifications or codes.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based ordering workflows, including interpreting product descriptions and generating orders, without meaningful reliance on non-text modalities.",
+      "_timestamp": "2026-04-05T20:58:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering educational or treatment supplies is a routine administrative task with no need for immediate real-time response; delays of minutes to hours are typically acceptable.",
+      "adequacy_evidence": "AI agents can generate accurate supply orders or procurement steps well within the available time, with no meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T20:58:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering educational or treatment supplies is a low-stakes administrative task; errors typically result in delays, minor cost issues, or inconvenience rather than serious harm.",
+      "adequacy_evidence": "With standard checks like item verification, approvals, and inventory matching, residual errors from AI ordering would be easily caught or have minimal impact, making current AI reliability sufficient.",
+      "_timestamp": "2026-04-05T20:58:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with vendors or internal procurement systems, but the performer\u2019s personal identity or therapeutic role is not central to acceptance.",
+      "adequacy_evidence": "Stakeholders already accept automated or software-driven ordering systems, so an AI agent performing this function would face little to no resistance.",
+      "_timestamp": "2026-04-05T20:58:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from ordering educational or treatment supplies; this is an administrative/procurement function that can be delegated. While internal policies may require human authorization, these are not legal restrictions on AI use.",
+      "_timestamp": "2026-04-05T20:58:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Orders can be checked against treatment plans, standard supply lists, and inventory systems, making errors like wrong items or quantities straightforward to detect before purchase.",
+      "adequacy_evidence": "AI-generated orders may occasionally select incorrect or suboptimal items, so human review is still needed, but verification is quick and does not require extensive effort.",
+      "_timestamp": "2026-04-05T20:58:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

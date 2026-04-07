@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1069.10",
+  "task_id": 17240,
+  "task_statement": "Interpret images using computer-aided detection or diagnosis systems.",
+  "occupation_title": "Hospitalists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Interpreting medical or diagnostic images with computer\u2011aided detection/diagnosis systems is done entirely through digital imaging software on a computer. The images can be accessed and interpreted remotely (e.g., teleradiology) without any need for physical presence or non-computer equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting CAD outputs requires integrating image findings with clinical context, recognizing when to trust or override system suggestions, and applying experience-based judgment in ambiguous cases.",
+      "adequacy_evidence": "Current AI agents can replicate many pattern-recognition and guideline-based decisions but still show gaps in context-sensitive calibration and nuanced clinical judgment, especially in atypical or borderline cases.",
+      "_timestamp": "2026-04-06T02:49:28"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Covers diverse imaging modalities (X-ray, CT, MRI), patient populations, and a long tail of pathologies with context-dependent interpretation alongside CAD outputs.",
+      "adequacy_evidence": "Large medical imaging datasets and CAD training pipelines exist, but rare conditions, edge cases, and integrated human-AI interpretation workflows are unevenly represented and often restricted by data access.",
+      "_timestamp": "2026-04-06T02:49:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting CAD-supported images requires integrating current imaging findings with patient history, prior scans, and system outputs within a single episode, but the information scope is structured and not extremely large.",
+      "adequacy_evidence": "Current agents can manage multimodal inputs and structured context, but may lose or misprioritize details when combining image data with clinical context, leading to occasional retrieval or compression errors.",
+      "_timestamp": "2026-04-06T02:49:29"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Hospitalists typically need to interpret imaging results within seconds to a few minutes, especially in acute care contexts, but not at strict real-time speeds like emergency procedures.",
+      "adequacy_evidence": "Current AI systems can generate image interpretations rapidly within the required timeframe without needing to truncate reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T02:49:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Image interpretation in hospital medicine often benefits from prior imaging studies, patient history, and longitudinal clinical context, but each interpretation can still be performed with current-case data if needed.",
+      "adequacy_evidence": "Current AI systems can retrieve and reference prior records via EHR integrations, but they still show inconsistencies in reliably surfacing and synthesizing longitudinal patient context across sessions.",
+      "_timestamp": "2026-04-06T02:49:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing imaging outputs and CAD system suggestions and making an interpretation, which is a short, bounded sequence without extended interdependent steps.",
+      "adequacy_evidence": "AI systems can maintain consistent performance over such brief sequences, with no meaningful degradation across the limited steps involved.",
+      "_timestamp": "2026-04-06T02:49:30"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Image interpretation in a hospital setting depends on implicit clinical context (indication, patient history, differential diagnosis) and prioritizing relevant findings, not just literal image features.",
+      "adequacy_evidence": "Current agents can incorporate provided context but often miss unstated clinical priorities or over/under-weight findings without iterative human guidance.",
+      "_timestamp": "2026-04-06T02:49:30"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnostic interpretation of medical images directly affects patient diagnosis and treatment; even rare residual errors can lead to missed or incorrect diagnoses with serious or irreversible consequences.",
+      "adequacy_evidence": "With physician oversight and standard review processes, many AI errors can be caught, but current systems still exhibit non-negligible miss rates and unpredictable failure modes, leaving some residual risk that remains clinically concerning.",
+      "_timestamp": "2026-04-06T02:49:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Detecting errors in medical image interpretation (e.g., missed lesions, false positives) requires significant clinical expertise and careful review, and mistakes can be subtle or only revealed through later outcomes or additional testing.",
+      "adequacy_evidence": "Current AI/CAD systems still produce non-trivial rates of false positives/negatives that are not easily identifiable without expert scrutiny, so substantial clinician verification is required to ensure safety.",
+      "_timestamp": "2026-04-06T02:49:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally involves interpreting medical images (e.g., radiographs, CT scans) alongside computer-aided systems, requiring visual perception and cross-modal reasoning with clinical context.",
+      "adequacy_evidence": "Current AI systems perform strongly on many standardized imaging tasks but remain less reliable on complex, ambiguous, or context-dependent cases that hospitalists encounter in practice.",
+      "_timestamp": "2026-04-06T02:49:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpretations are used by other clinicians and affect patient care decisions, so stakeholders rely on the output and somewhat on the clinician\u2019s authority, though direct patient interaction is limited in this task.",
+      "adequacy_evidence": "AI-assisted image interpretation is increasingly accepted in clinical workflows, but many clinicians and patients still prefer human oversight, and full substitution by AI may face moderate trust and liability concerns.",
+      "_timestamp": "2026-04-06T02:49:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "U.S. medical practice laws and billing/regulatory requirements require a licensed physician to perform and sign off on diagnostic interpretations; AI tools (even FDA-cleared CAD systems) are authorized only as assistive devices, not autonomous diagnosticians. Thus, AI cannot legally perform this task independently without physician oversight and sign-off.",
+      "_timestamp": "2026-04-06T02:49:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

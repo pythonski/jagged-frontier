@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5031.00",
+  "task_id": 2708,
+  "task_statement": "Enter, update, and retrieve information from teletype networks and computerized data systems regarding such things as wanted persons, stolen property, vehicle registration, and stolen vehicles.",
+  "occupation_title": "Public Safety Telecommunicators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "The task consists of entering, updating, and retrieving records in electronic databases or teletype networks, which is entirely computer-based and does not inherently require physical presence or non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple record types (e.g., warrants, stolen property, vehicle records) and jurisdiction-specific codes, but operates within standardized schemas and procedures (e.g., NCIC formats).",
+      "adequacy_evidence": "Extensive documentation, training manuals, and structured schemas exist, and realistic synthetic data can be generated, providing strong coverage of the task\u2019s input-output patterns and workflows.",
+      "_timestamp": "2026-04-06T00:48:40"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves structured data entry and retrieval using standardized codes and protocols (e.g., NCIC), with some judgment needed for disambiguating records or interpreting partial inputs.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured procedures and handle routine disambiguation and data matching given clear schemas and rules, with minimal shortfall in tacit judgment.",
+      "_timestamp": "2026-04-06T00:48:41"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task follows standardized protocols and database schemas, but requires some context-sensitive decisions (e.g., selecting correct records, interpreting partial or inconsistent identifiers).",
+      "adequacy_evidence": "Current AI agents can reliably infer intent and map inputs to structured queries or updates in well-defined systems, handling most minor ambiguities without significant iteration.",
+      "_timestamp": "2026-04-06T00:48:41"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on centralized databases (e.g., law enforcement systems) for storing and retrieving records, so each query or update is largely self-contained and does not depend on the operator maintaining cross-session memory.",
+      "adequacy_evidence": "AI systems can interface with external databases that persist information reliably, so there is no meaningful gap in cross-session memory for this task.",
+      "_timestamp": "2026-04-06T00:48:42"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step interactions with databases (querying, verifying, updating records), but sequences are typically short, structured, and loosely coupled rather than long or highly interdependent.",
+      "adequacy_evidence": "Modern LLM agents with tool use can reliably execute short, structured sequences like database queries and updates without meaningful degradation over the required step length.",
+      "_timestamp": "2026-04-06T00:48:42"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves entering and retrieving structured alphanumeric data in computerized systems, which is fundamentally text-based with no reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents handle text-based data entry, querying, and retrieval reliably, with no meaningful multimodal demands in this task.",
+      "_timestamp": "2026-04-06T00:48:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple structured data fields (e.g., names, IDs, vehicle details) across systems within a single interaction, requiring accurate tracking and retrieval but not extreme volume or complexity.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably manage, store, and query structured information within an episode using tools and memory buffers, with minimal loss or confusion in typical cases.",
+      "_timestamp": "2026-04-06T00:48:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Public safety telecommunicators must access and update records within seconds during active calls, but the task itself is routine data entry/retrieval rather than deep reasoning.",
+      "adequacy_evidence": "Well-scaffolded AI systems can perform structured database queries and updates \u05db\u05de\u05e2\u05d8 instantaneously, with no need for extended reasoning that would conflict with latency constraints.",
+      "_timestamp": "2026-04-06T00:48:43"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many entries (names, license plates, IDs) can be cross-checked against source documents or system constraints, but some errors (e.g., transposed digits, wrong record selection) are not immediately obvious and require careful review.",
+      "adequacy_evidence": "AI systems can perform structured data entry and retrieval well, but still produce occasional transcription or matching errors, requiring routine human verification against authoritative sources.",
+      "_timestamp": "2026-04-06T00:48:44"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal data entry and retrieval within law enforcement systems, with outputs consumed impersonally by databases or downstream users who do not rely on the performer\u2019s identity.",
+      "adequacy_evidence": "Because stakeholders do not directly interact with or evaluate the performer, acceptance of an AI agent is largely irrelevant and unlikely to affect task effectiveness.",
+      "_timestamp": "2026-04-06T00:48:44"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Access to criminal justice information systems (e.g., NCIC/CJIS) is governed by strict rules requiring authorized, vetted human personnel and agency control, which limits fully autonomous AI operation. However, these policies do not explicitly ban AI as a supporting tool under human supervision, creating partial rather than absolute restriction.",
+      "_timestamp": "2026-04-06T00:48:45"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in law enforcement databases (e.g., misidentifying a wanted person or vehicle) can lead to wrongful stops, arrests, or failure to act on real threats, so even rare residual mistakes can have serious consequences.",
+      "adequacy_evidence": "While structured databases and validation checks reduce many risks, current AI systems can still introduce occasional mismatches or retrieval errors, leaving some non-trivial residual risk even after normal quality control.",
+      "_timestamp": "2026-04-06T00:48:45"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

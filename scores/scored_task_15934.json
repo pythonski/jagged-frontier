@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1041.08",
+  "task_id": 15934,
+  "task_statement": "Quote duty and tax rates on goods to be imported, based on federal tariffs and excise taxes.",
+  "occupation_title": "Customs Brokers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Quoting duty and tax rates involves consulting tariff schedules, databases, and regulations and calculating applicable charges, which can be done entirely using online resources and standard office software without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans many product categories, tariff classifications, and edge cases (e.g., exemptions, trade agreements), but operates within a structured and well-defined tariff schedule system.",
+      "adequacy_evidence": "Comprehensive public tariff schedules (e.g., HTS), customs rulings, and abundant worked examples provide strong coverage, and synthetic generation of classification scenarios is straightforward.",
+      "_timestamp": "2026-04-06T04:06:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step process (classifying goods, identifying the correct tariff code, and retrieving applicable duty and tax rates), where steps are interdependent but not deeply long or highly sequential.",
+      "adequacy_evidence": "Frontier AI agents with retrieval and tool use can reliably maintain consistency across these short-to-moderate sequences without significant degradation or compounding errors.",
+      "_timestamp": "2026-04-06T04:06:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While tariff schedules and tax rates are explicit, correct quoting depends on context like product classification (HTS codes), country of origin, trade agreements, and intended use, which often require interpretation beyond literal descriptions.",
+      "adequacy_evidence": "Current agents can usually infer relevant categories and apply tariff rules, but they still struggle with nuanced classification and edge cases, often requiring human clarification or iteration.",
+      "_timestamp": "2026-04-06T04:06:57"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining duty rates largely follows codified tariff schedules and classification rules, but selecting the correct classification and applying exceptions can require experience-based judgment in ambiguous cases.",
+      "adequacy_evidence": "Current AI agents can apply tariff rules and retrieve rates reliably, but they still show gaps in nuanced classification decisions and edge-case interpretations that experienced brokers handle through tacit knowledge.",
+      "_timestamp": "2026-04-06T04:06:57"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating several pieces of information (e.g., product classification, country of origin, valuation, applicable tariff schedules), but these are structured and limited in scope within a single quoting episode.",
+      "adequacy_evidence": "Current agents with retrieval tools and structured workflows can reliably track and integrate these inputs within a session, with minimal risk of losing or mismanaging relevant context.",
+      "_timestamp": "2026-04-06T04:06:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Quoting duty and tax rates relies on textual tariff schedules, classification codes, and written product descriptions; it is fundamentally a text-in, text-out task.",
+      "adequacy_evidence": "Since the task is primarily textual, current AI agents handle the modality requirements fully without reliance on non-text inputs or outputs.",
+      "_timestamp": "2026-04-06T04:06:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Quoting duty and tax rates is primarily a lookup and calculation task based on current tariff schedules and shipment details, with each instance largely self-contained.",
+      "adequacy_evidence": "Since the task does not rely on persistent cross-session context, existing AI systems do not face meaningful limitations in long-term memory for this function.",
+      "_timestamp": "2026-04-06T04:06:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Clients expect reasonably fast turnaround (seconds to a few minutes) when requesting duty and tax quotes, but the task does not require real-time, sub-second responses.",
+      "adequacy_evidence": "Well-tooled AI agents can query tariff databases and compute applicable rates quickly within the available time, with no meaningful degradation in accuracy due to latency constraints.",
+      "_timestamp": "2026-04-06T04:06:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying quoted duty and tax rates requires checking HTS classifications, origin rules, and current tariff schedules, which demands domain expertise and careful cross-referencing but is feasible with available databases.",
+      "adequacy_evidence": "AI systems can retrieve and calculate rates but are prone to misclassification or using outdated rules, so outputs typically require knowledgeable human review using tariff databases and regulations.",
+      "_timestamp": "2026-04-06T04:06:59"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Importers and clients rely on the broker\u2019s quoted duty and tax rates, so there is stakeholder interaction and reliance on the output, though the personal identity of the broker is not central.",
+      "adequacy_evidence": "Stakeholders already accept automated tariff databases and software tools for this function, so an AI agent providing accurate quotes would likely face little resistance.",
+      "_timestamp": "2026-04-06T04:07:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. customs regulations (19 CFR Part 111) require that customs business, including advising on duties and tariffs for others, be conducted by a licensed customs broker or under their responsible supervision. AI tools are not explicitly prohibited, but they cannot independently perform this task without involvement of a licensed human broker, creating a partial restriction.",
+      "_timestamp": "2026-04-06T04:07:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Incorrect duty or tax quotes can lead to regulatory noncompliance, financial penalties, shipment delays, or seizure, so even small residual errors can have significant consequences.",
+      "adequacy_evidence": "With access to up-to-date tariff databases and rule-based validation, AI outputs can be cross-checked effectively, leaving minimal residual risk after normal quality control.",
+      "_timestamp": "2026-04-06T04:07:02"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

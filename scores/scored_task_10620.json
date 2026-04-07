@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-2022.00",
+  "task_id": 10620,
+  "task_statement": "Procure, produce, and provide information on the safe operation of aircraft, such as flight planning publications, operations publications, charts and maps, and weather information.",
+  "occupation_title": "Airfield Operations Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Much of the work\u2014gathering weather data, preparing flight planning materials, and distributing charts or publications\u2014can be done using digital systems and online aviation databases. However, in practice it often involves on-site coordination and sometimes distributing or briefing information physically at the airfield."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves selecting and tailoring aviation information (charts, publications, weather) to specific operational contexts, requiring interpretation of flight conditions, user needs, and regulatory relevance beyond explicit instructions.",
+      "adequacy_evidence": "Current AI can often infer appropriate materials given structured inputs, but may miss context-specific nuances (e.g., unusual conditions, implicit pilot needs), requiring human oversight and iteration.",
+      "_timestamp": "2026-04-05T22:53:48"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple information types (charts, weather data, operational publications) across different airports and conditions, but these are highly standardized within aviation frameworks (e.g., FAA, ICAO).",
+      "adequacy_evidence": "Extensive public and structured data sources (aeronautical charts, METAR/TAF weather data, flight publications) provide rich, process-revealing coverage, and remaining gaps can be reasonably filled via synthesis or tooling.",
+      "_timestamp": "2026-04-05T22:53:49"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the information is governed by standardized aviation procedures and data sources, integrating weather, NOTAMs, and operational context often requires experience-based judgment about relevance and safety implications.",
+      "adequacy_evidence": "Current agents can synthesize structured aviation data and apply rules well, but they show gaps in nuanced judgment for context-specific or evolving conditions (e.g., interpreting marginal weather impacts on operations).",
+      "_timestamp": "2026-04-05T22:53:49"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves timely dissemination of flight and weather information, where updates are expected within seconds to minutes but not strict real-time control-loop speeds.",
+      "adequacy_evidence": "Current AI systems with tool integration can retrieve, synthesize, and present relevant operational and weather information well within required timeframes without significant degradation in quality.",
+      "_timestamp": "2026-04-05T22:53:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating multiple heterogeneous information sources (charts, weather data, NOTAMs, operational publications) within a session, but these are modular and can be externally retrieved rather than fully held in memory.",
+      "adequacy_evidence": "Current agents with tool use and retrieval can reliably access, organize, and reference large document sets and live data streams, minimizing memory strain and avoiding significant context loss.",
+      "_timestamp": "2026-04-05T22:53:49"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Providing flight publications, charts, and weather information relies on current, authoritative data sources rather than accumulated cross-session context or historical case tracking.",
+      "adequacy_evidence": "AI systems can access and retrieve up-to-date documents and data without needing persistent longitudinal memory, so existing memory capabilities are sufficient.",
+      "_timestamp": "2026-04-05T22:53:50"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on interpreting and producing aviation charts, maps, and weather visuals, which require spatial and graphical understanding not reducible to text alone.",
+      "adequacy_evidence": "Current agents can process and generate some visual and geospatial information, but they are still inconsistent with complex aviation charts and nuanced weather imagery interpretation.",
+      "_timestamp": "2026-04-05T22:53:50"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (gathering data, compiling publications, updating charts, integrating weather information), but many components are modular and can be executed semi-independently rather than as a tightly coupled long chain.",
+      "adequacy_evidence": "Current AI agents can handle multi-step information aggregation and document production with tooling, but may show some degradation over longer workflows (e.g., missed updates or inconsistencies across artifacts) without careful orchestration.",
+      "_timestamp": "2026-04-05T22:53:50"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in flight planning publications, charts, or weather briefings can be subtle (e.g., outdated NOTAMs, incorrect coordinates, or misinterpreted weather data) and require domain expertise and cross-checking against authoritative aviation sources to detect.",
+      "adequacy_evidence": "Current AI systems are prone to hallucinations, outdated information, and integration errors across data sources, meaning outputs would require rigorous, expert verification against official aviation databases and publications before use.",
+      "_timestamp": "2026-04-05T22:53:51"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Pilots and flight operators rely on the provided information for planning and safety, and its source must be trusted, though interaction is largely informational rather than interpersonal.",
+      "adequacy_evidence": "Stakeholders already accept automated and digital aviation information systems, but would require certification and proven reliability before fully trusting an AI agent, leading to moderate resistance.",
+      "_timestamp": "2026-04-05T22:53:52"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in flight publications, charts, or weather information can directly impact flight safety, potentially leading to accidents or loss of life, so even rare residual mistakes are unacceptable.",
+      "adequacy_evidence": "With standard aviation quality control (multiple human reviews, validation systems), many AI errors could be caught, but current models still exhibit occasional subtle inaccuracies or omissions that could slip through, leaving some residual risk.",
+      "_timestamp": "2026-04-05T22:53:53"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "FAA regulations require that certain aeronautical information (e.g., charts, NOTAMs, weather briefings) come from approved or certified sources, but they do not explicitly prohibit AI systems from assisting or delivering this information. The constraint is on source certification and accountability rather than a blanket ban on AI.",
+      "_timestamp": "2026-04-05T22:53:53"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

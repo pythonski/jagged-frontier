@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3011.00",
+  "task_id": 2472,
+  "task_statement": "Receive payments and post amounts paid to customer accounts.",
+  "occupation_title": "Bill and Account Collectors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Posting payments to customer accounts is typically done in computer systems and many payments are received electronically, but collectors may also receive physical checks, cash, or mailed payments that require in-person or physical handling."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves routine, well-structured financial operations (receiving payments and posting to accounts) with limited variability across standardized billing systems and payment methods.",
+      "adequacy_evidence": "There is abundant accessible data (accounting procedures, transaction logs, training materials) and clear process traces, making it straightforward to cover the full task distribution with existing training and simulation methods.",
+      "_timestamp": "2026-04-06T02:18:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Posting payments to customer accounts follows well-defined accounting procedures (matching amounts, updating ledgers, handling standard discrepancies) with minimal need for experiential judgment.",
+      "adequacy_evidence": "Current AI agents can reliably execute rule-based reconciliation and posting workflows, including routine exception handling, without requiring tacit calibration.",
+      "_timestamp": "2026-04-06T02:18:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of short, largely independent steps (receiving a payment, matching it to an account, and posting it), with minimal need for extended or tightly coupled sequences.",
+      "adequacy_evidence": "AI agents can reliably handle these brief, structured workflows without meaningful degradation, as sequence length is short and errors do not typically compound across steps.",
+      "_timestamp": "2026-04-06T02:18:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is largely governed by explicit rules (match payment to account, amount, and date), but occasional context-dependent cases arise such as partial payments, discrepancies, or unclear remittance information.",
+      "adequacy_evidence": "Current AI agents with access to billing systems and reconciliation rules can reliably infer intent and handle most ambiguities, escalating only rare edge cases.",
+      "_timestamp": "2026-04-06T02:18:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves processing structured numerical and textual information such as payment amounts, account identifiers, and transaction records, typically within digital systems.",
+      "adequacy_evidence": "Current AI agents can reliably handle text and numeric data entry, reconciliation, and posting tasks without requiring non-text modalities.",
+      "_timestamp": "2026-04-06T02:18:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Posting received payments to accounts is a routine administrative task typically performed in batch or within normal processing windows; slight delays of minutes or longer are acceptable.",
+      "adequacy_evidence": "AI systems can easily complete data entry and reconciliation steps within the available time without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T02:18:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking a small set of structured fields (payer identity, account number, payment amount, and possibly invoice references) and ensuring correct matching within a transaction, but the information volume is limited and well-defined.",
+      "adequacy_evidence": "Current AI agents with tool integration handle structured data retrieval, matching, and posting reliably within a single episode, with minimal risk of losing or mismanaging the required context.",
+      "_timestamp": "2026-04-06T02:18:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Posting payments requires maintaining accurate, persistent customer account ledgers over time, including balances, prior transactions, and payment histories across many sessions.",
+      "adequacy_evidence": "Current AI systems can rely on well-established database infrastructure and transaction systems to store and retrieve persistent account state reliably, so cross-session memory is not a bottleneck.",
+      "_timestamp": "2026-04-06T02:18:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Posting payments incorrectly can lead to account discrepancies, customer disputes, and reconciliation work, but errors are typically detectable and reversible through audits and corrections.",
+      "adequacy_evidence": "With standard controls like transaction validation, reconciliation systems, and audit trails, AI-generated postings can be effectively checked, leaving minimal residual risk at acceptable levels.",
+      "_timestamp": "2026-04-06T02:18:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI or automated systems from receiving payments and posting them to customer accounts; such functions are already widely automated in billing and payment processing systems. Compliance obligations (e.g., PCI-DSS, consumer protection laws) apply to how the task is performed, but do not mandate a human actor.",
+      "_timestamp": "2026-04-06T02:18:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in posting payments (wrong account, amount, or duplicate entries) can usually be detected through reconciliation processes, audit trails, and balance checks, but this requires routine accounting controls rather than being instantly obvious.",
+      "adequacy_evidence": "AI systems can automate posting with validation rules, but mismatches, misapplied payments, or edge cases still require periodic human reconciliation and oversight, creating a moderate ongoing verification burden.",
+      "_timestamp": "2026-04-06T02:18:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves customers or payers submitting payments and having them applied to their accounts, but the performer\u2019s identity is not central as long as transactions are processed correctly.",
+      "adequacy_evidence": "Customers already widely accept automated systems (online portals, IVR, payment processors) handling payments and account posting, so AI involvement would not meaningfully reduce acceptance.",
+      "_timestamp": "2026-04-06T02:18:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

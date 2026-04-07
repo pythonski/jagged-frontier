@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9081.00",
+  "task_id": 5163,
+  "task_statement": "Route proofs with marked corrections to authors, editors, typists, or typesetters for correction or reprinting.",
+  "occupation_title": "Proofreaders and Copy Markers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "In many modern publishing workflows proofs and corrections are routed electronically via email or document management systems, but in some print-production environments physical paper proofs are still circulated between staff for correction or reprinting."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves routing corrected proofs across a limited set of roles (authors, editors, typists, typesetters) based on recognizable workflow states, with some variation by organization and document type.",
+      "adequacy_evidence": "Editorial workflows, document routing patterns, and communication examples are well-represented in training data and can be easily simulated, providing sufficient coverage for this task.",
+      "_timestamp": "2026-04-05T21:25:36"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Routing depends on contextual rules about who handles specific types of corrections (authors vs. editors vs. typesetters), which are partly implicit in organizational workflows rather than fully specified in each instance.",
+      "adequacy_evidence": "Agents can follow documented routing rules, but may misinterpret edge cases or organization-specific conventions without iteration or clarification.",
+      "_timestamp": "2026-04-05T21:25:36"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of straightforward routing actions (identifying recipients and sending marked proofs) with minimal interdependent steps or extended sequences.",
+      "adequacy_evidence": "AI agents can reliably execute short, well-defined routing workflows without degradation, as the sequence length and dependency structure are minimal.",
+      "_timestamp": "2026-04-05T21:25:37"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Routing corrections typically follows established editorial workflows (e.g., author vs. typesetter fixes), but some cases require experience to interpret ambiguous markings or decide responsibility boundaries.",
+      "adequacy_evidence": "Given clear guidelines and access to annotated proofs, current AI agents can reliably classify and route most corrections; residual judgment calls are limited and not a major capability gap.",
+      "_timestamp": "2026-04-05T21:25:37"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking document versions, marked corrections, and appropriate recipients, involving moderate information handling across a few structured inputs.",
+      "adequacy_evidence": "Current AI agents can reliably manage and route documents with associated metadata within a single episode using standard tooling, with minimal risk of losing relevant context.",
+      "_timestamp": "2026-04-05T21:25:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Routing corrected proofs to appropriate parties is an administrative task with flexible timing; delays of minutes or longer are typically acceptable in publishing workflows.",
+      "adequacy_evidence": "AI systems can easily perform routing and communication tasks within the available time window, with no meaningful degradation in quality due to speed constraints.",
+      "_timestamp": "2026-04-05T21:25:37"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting visually marked corrections on proofs (e.g., handwritten or symbolic annotations on formatted pages), requiring some visual-text integration beyond plain text.",
+      "adequacy_evidence": "Current agents can process annotated documents and PDFs in many cases, but may struggle with varied handwriting, complex layout marks, or subtle visual cues used in professional proofreading.",
+      "_timestamp": "2026-04-05T21:25:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Routing corrected proofs is typically a self-contained task based on the current document, its markings, and known recipient roles, without needing historical context across prior instances.",
+      "adequacy_evidence": "Since the task does not rely on cross-session memory, current AI systems already meet its minimal persistence needs without notable gaps.",
+      "_timestamp": "2026-04-05T21:25:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements restricting AI from routing corrected proofs to relevant parties in publishing workflows. This is an administrative task with no regulated decision-making authority.",
+      "_timestamp": "2026-04-05T21:25:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Misrouting corrected proofs typically leads to minor workflow delays or inefficiencies rather than severe or irreversible consequences.",
+      "adequacy_evidence": "AI systems can reliably handle document routing and labeling tasks with minimal residual risk after standard checks, making remaining errors acceptable.",
+      "_timestamp": "2026-04-05T21:25:39"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying correct routing requires checking that marked corrections correspond to the appropriate recipients, which involves some attention and familiarity with workflows but is generally straightforward and observable.",
+      "adequacy_evidence": "AI may misinterpret correction marks or routing conventions, so outputs would need routine human checking, though errors are typically easy to detect and fix.",
+      "_timestamp": "2026-04-05T21:25:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordination with authors, editors, and production staff who must receive and act on routed proofs, so stakeholders are engaged, though the sender\u2019s identity is not central.",
+      "adequacy_evidence": "Routing and forwarding corrections is already commonly automated in publishing workflows, and stakeholders generally do not care whether a human or AI system performs this logistical step.",
+      "_timestamp": "2026-04-05T21:25:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

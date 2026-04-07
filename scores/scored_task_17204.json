@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1229.04",
+  "task_id": 17204,
+  "task_statement": "Prescribe physical therapy to relax the muscles and improve strength.",
+  "occupation_title": "Physical Medicine and Rehabilitation Physicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Prescribing physical therapy is typically done by entering orders or referrals in an electronic health record and can be completed during telehealth or remote consultations. However, it often follows in-person physical examinations or clinical encounters, so not all instances are fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Physical therapy prescriptions vary widely across diagnoses (neurological, musculoskeletal, post-surgical), patient ages, comorbidities, functional goals, and recovery trajectories, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "There is extensive coverage in clinical guidelines, rehab protocols, textbooks, and case studies, but granular longitudinal decision-making and individualized adaptations are less consistently documented, leaving some subpopulations thin but partially recoverable via synthesis.",
+      "_timestamp": "2026-04-05T23:05:05"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting and tailoring physical therapy regimens requires nuanced judgment about patient-specific factors (pain response, functional goals, comorbidities, injury stage) and dynamic adjustment based on observed progress, which is not fully reducible to fixed protocols.",
+      "adequacy_evidence": "Current agents can generate guideline-consistent exercise plans, but lack reliable calibration for nuanced progression, contraindications, and real-time patient response, leading to gaps in non-routine or complex cases.",
+      "_timestamp": "2026-04-05T23:05:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Prescribing physical therapy involves a multi-step process (assessment, goal setting, exercise selection, dosing, and progression planning) where consistency across steps matters, but the sequence is moderately bounded and structured.",
+      "adequacy_evidence": "LLM-based agents can generally maintain coherence across these planning steps, though some degradation can occur in maintaining constraints (e.g., contraindications or progression logic) over longer reasoning chains.",
+      "_timestamp": "2026-04-05T23:05:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Appropriate physical therapy prescriptions depend on implicit, patient-specific factors (diagnosis nuances, comorbidities, pain tolerance, functional goals, contraindications) that are not fully specified and must be inferred and refined through clinical interaction.",
+      "adequacy_evidence": "Current agents lack the ability to reliably elicit and integrate nuanced clinical context from real patients, leading to frequent gaps or misalignment in inferred goals and constraints without substantial human clinician oversight.",
+      "_timestamp": "2026-04-05T23:05:07"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The physician must integrate multiple within-episode inputs (patient history, physical exam findings, functional goals, comorbidities) to tailor a therapy plan, but the information volume is moderate and relatively structured.",
+      "adequacy_evidence": "Current agents can handle moderate clinical context but may lose or misweight details (e.g., specific contraindications or nuanced functional goals) when synthesizing across multiple inputs.",
+      "_timestamp": "2026-04-05T23:05:07"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Prescribing physical therapy relies on interpreting physical exam findings, patient movement, and sometimes imaging, which involve visual and spatial information beyond pure text.",
+      "adequacy_evidence": "Current AI can process some visual inputs like images or videos but remains inconsistent in nuanced assessment of human movement and integrating it into tailored therapy plans.",
+      "_timestamp": "2026-04-05T23:05:07"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective physical therapy prescriptions rely on longitudinal patient data such as prior injuries, treatment responses, functional progress, and evolving comorbidities across multiple visits.",
+      "adequacy_evidence": "Current agents can store and retrieve structured patient histories via EHR integrations, but often show gaps in reliably maintaining, updating, and contextually prioritizing longitudinal clinical nuances over extended care timelines.",
+      "_timestamp": "2026-04-05T23:05:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Prescribing physical therapy is typically done during or after a clinical evaluation with no strict real-time pressure; clinicians can take minutes to deliberate and document an appropriate plan.",
+      "adequacy_evidence": "AI systems can generate high-quality therapy prescriptions well within these loose time constraints, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T23:05:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether a physical therapy prescription is appropriate requires clinical expertise, review of patient history, contraindications, and functional goals, and errors may only become apparent after delayed patient response or harm.",
+      "adequacy_evidence": "Current AI can generate plausible therapy plans but may miss nuanced contraindications or tailoring needs, so expert review is necessary and non-trivial, with errors not always obvious before implementation.",
+      "_timestamp": "2026-04-05T23:05:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Prescribing treatment, including physical therapy, constitutes the practice of medicine, which legally requires a licensed physician in the U.S. Current laws do not permit autonomous AI systems to prescribe care; a licensed human clinician must make and sign off on such decisions.",
+      "_timestamp": "2026-04-05T23:05:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incorrect physical therapy prescriptions can lead to injury, delayed recovery, or exacerbation of conditions, but most errors are not immediately catastrophic and can often be corrected over time.",
+      "adequacy_evidence": "Even with standard review and monitoring, AI may miss patient-specific nuances (e.g., comorbidities, subtle contraindications), leaving a non-trivial level of residual risk that remains clinically concerning.",
+      "_timestamp": "2026-04-05T23:05:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Patients must trust and accept a physician\u2019s judgment and authority when receiving a rehabilitation prescription, and adherence depends heavily on perceived clinical legitimacy and empathy.",
+      "adequacy_evidence": "Many patients and clinical settings would resist AI-issued prescriptions without human physician endorsement, and lack of trust or legal recognition would significantly undermine effectiveness.",
+      "_timestamp": "2026-04-05T23:05:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

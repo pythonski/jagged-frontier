@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "23-1012.00",
+  "task_id": 19052,
+  "task_statement": "Review complaints, petitions, motions, or pleadings that have been filed to determine issues involved or basis for relief.",
+  "occupation_title": "Judicial Law Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most courts use electronic filing systems, allowing clerks to review complaints and motions entirely on a computer, but some jurisdictions or case files may still involve reviewing physical paper documents in chambers."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Filings span many case types, legal domains, jurisdictions, and procedural postures, with substantial variation in style, complexity, and issues raised, creating a highly heterogeneous distribution.",
+      "adequacy_evidence": "Large corpora of briefs, motions, and judicial opinions are publicly available, but detailed step-by-step expert reasoning about issue spotting is often implicit, making coverage partially but not fully complete.",
+      "_timestamp": "2026-04-06T05:48:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Legal filings have structured formats and explicit claims, but identifying the true issues or basis for relief often requires interpreting legal arguments, procedural posture, and implicit framing choices by parties.",
+      "adequacy_evidence": "Current agents can extract stated claims and summarize arguments well, but they often miss subtle legal nuances, misinterpret strategic framing, or require iteration to correctly identify the core issues.",
+      "_timestamp": "2026-04-06T05:48:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing legal filings often involves parsing lengthy, complex documents (complaints, motions, pleadings) and synthesizing multiple arguments, facts, and procedural details where missing a clause or citation can materially affect issue identification.",
+      "adequacy_evidence": "Frontier agents can process long documents and retrieve relevant sections, but still show occasional failures in maintaining full fidelity over dense legal text, especially with subtle distinctions or cross-references across filings.",
+      "_timestamp": "2026-04-06T05:48:01"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Identifying the true issues and legal basis in filings requires nuanced legal judgment, including interpreting framing strategies, procedural posture, and implicit arguments developed through experience with case law and litigation practice.",
+      "adequacy_evidence": "Frontier agents can extract explicit claims and common legal issues but still show gaps in subtle issue-spotting, prioritization, and context-sensitive interpretation in complex or strategically crafted pleadings.",
+      "_timestamp": "2026-04-06T05:48:01"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many filings can be reviewed as self-contained documents, effective analysis often depends on prior case history, earlier motions, and evolving legal issues across the same case.",
+      "adequacy_evidence": "Current agents can store and retrieve case documents across sessions, but they still show gaps in consistently maintaining and correctly prioritizing relevant longitudinal context over extended case timelines.",
+      "_timestamp": "2026-04-06T05:48:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reading and synthesizing potentially lengthy legal documents, identifying relevant facts, arguments, and legal issues in a coherent interpretive sequence, but it is typically bounded within a single review pass rather than a long multi-stage workflow.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across document review with retrieval and chunking, but may exhibit some degradation in tracking nuanced arguments or cross-references over longer or more complex filings.",
+      "_timestamp": "2026-04-06T05:48:02"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and analyzing written legal documents such as complaints and motions, which are overwhelmingly text-based; any attached exhibits are secondary to the core analysis.",
+      "adequacy_evidence": "Since the task is fundamentally text-in, text-out, current AI systems already handle the required modality effectively without meaningful gaps.",
+      "_timestamp": "2026-04-06T05:48:02"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing complaints and legal filings is typically a deliberative task with deadlines measured in hours to days, allowing ample time for careful reading and analysis.",
+      "adequacy_evidence": "Current AI systems can take extended time for deeper reasoning without penalty, and latency does not materially constrain output quality in this task.",
+      "_timestamp": "2026-04-06T05:48:02"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from reviewing legal filings; AI tools are already used for document review in legal contexts. While courts require human officials for formal decision-making, this specific review task is not legally restricted from AI assistance or execution.",
+      "_timestamp": "2026-04-06T05:48:04"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is primarily internal to the court, but judges rely on the clerk\u2019s analysis and litigants are indirectly affected, so performer identity and credibility have some importance.",
+      "adequacy_evidence": "Judges and the legal system would likely be cautious about relying on AI for legal issue identification in filings, with concerns about trust, accountability, and legitimacy leading to moderate resistance.",
+      "_timestamp": "2026-04-06T05:48:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misidentifying legal issues or the basis for relief can materially affect judicial reasoning and case outcomes, so even rare residual errors can have significant downstream legal consequences.",
+      "adequacy_evidence": "While judicial review provides a strong backstop, AI-generated analyses may still introduce subtle misinterpretations or omissions that are not always caught, leaving some meaningful residual risk.",
+      "_timestamp": "2026-04-06T05:48:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining the issues and basis for relief in legal filings requires nuanced legal interpretation; errors can be subtle (e.g., mischaracterizing claims or overlooking procedural posture) and typically require expert review of the full record to detect.",
+      "adequacy_evidence": "Current AI often produces plausible but incomplete or misframed issue summaries, and verifying correctness requires a trained legal reader to cross-check against the filings, making the checking burden substantial and unavoidable.",
+      "_timestamp": "2026-04-06T05:48:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

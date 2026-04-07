@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "23-2093.00",
+  "task_id": 9233,
+  "task_statement": "Copy or summarize recorded documents, such as mortgages, trust deeds, and contracts, that affect property titles.",
+  "occupation_title": "Title Examiners, Abstractors, and Searchers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Many property records are digitized and can be copied or summarized from online databases, but in some jurisdictions title examiners must access physical archives or records at county offices that are not fully digitized."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the task has a clear goal (copy or summarize recorded documents), deciding what details are legally salient for property title (e.g., encumbrances, liens, restrictions) requires some context-dependent judgment beyond literal transcription.",
+      "adequacy_evidence": "Current agents can summarize and extract structured details from legal documents, but they often miss or misprioritize legally relevant nuances without iterative human guidance, especially in complex or ambiguous cases.",
+      "_timestamp": "2026-04-06T02:09:51"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Property records vary across jurisdictions, time periods, and document formats (typed, scanned, handwritten), but they follow broadly standardized legal structures and terminology.",
+      "adequacy_evidence": "Large volumes of legal documents and public records exist for training, but some edge cases (e.g., degraded scans, handwritten deeds, highly localized formats) are less well represented and require targeted augmentation.",
+      "_timestamp": "2026-04-06T02:09:52"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task follows structured conventions (e.g., identifying parties, dates, encumbrances), determining what details materially affect title and how to summarize them appropriately often relies on experience with legal nuances and document variations.",
+      "adequacy_evidence": "Current agents can reliably extract and summarize standard elements but may miss or misinterpret less explicit implications (e.g., atypical clauses or jurisdiction-specific nuances), indicating partial but not complete coverage of this tacit judgment.",
+      "_timestamp": "2026-04-06T02:09:52"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reading and extracting or summarizing information from potentially lengthy legal documents, sometimes across multiple records, requiring consistent handling of details but with relatively loose coupling between steps.",
+      "adequacy_evidence": "Frontier AI systems with long-context support and document processing pipelines can reliably maintain coherence across such sequences, with minimal degradation in quality over typical document lengths.",
+      "_timestamp": "2026-04-06T02:09:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves processing and summarizing potentially lengthy legal documents (e.g., mortgages, contracts) and sometimes multiple related records, requiring tracking and condensing key details within a single workflow.",
+      "adequacy_evidence": "Current agents can handle long documents using chunking and retrieval, but they still sometimes miss or misprioritize details across sections, leading to moderate reliability issues in maintaining full context.",
+      "_timestamp": "2026-04-06T02:09:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each document (mortgage, deed, contract) can be copied or summarized independently; the task does not inherently require retaining information across sessions or building longitudinal context.",
+      "adequacy_evidence": "Since cross-session memory is not needed for competent performance, current AI systems fully meet this requirement without reliance on persistent state.",
+      "_timestamp": "2026-04-06T02:09:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Summarizing or copying recorded property documents is typically a back-office task with flexible turnaround times (minutes to hours), not requiring real-time responsiveness.",
+      "adequacy_evidence": "Current AI systems can produce high-quality summaries or transcriptions well within these time windows, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T02:09:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task centers on reading and summarizing legal documents whose core content is textual, even if stored as scanned images; no substantive non-text reasoning is required.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing can reliably extract and process text from recorded documents, making multimodal demands minimal and well-handled.",
+      "_timestamp": "2026-04-06T02:09:54"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from copying or summarizing recorded property documents. While some jurisdictions regulate who can issue title opinions or certifications, the clerical task of summarization itself is not restricted.",
+      "_timestamp": "2026-04-06T02:09:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in copying or summarizing legal instruments (e.g., omitting encumbrances, misreading clauses) can be subtle and require careful comparison to source documents and domain expertise to detect.",
+      "adequacy_evidence": "Current AI systems still make non-obvious extraction and summarization mistakes, so outputs must be thoroughly checked against originals, imposing a high verification burden.",
+      "_timestamp": "2026-04-06T02:09:55"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The summaries are used by lenders, attorneys, and title professionals who rely on their accuracy, but the identity of the preparer is secondary to correctness and completeness.",
+      "adequacy_evidence": "Stakeholders in title processing already accept automated document handling tools, and would generally accept AI-generated summaries if validated, with minimal concern about AI involvement.",
+      "_timestamp": "2026-04-06T02:09:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in copying or summarizing title-affecting documents (e.g., missing a lien or misrepresenting a covenant) can lead to significant legal and financial consequences, including invalid title opinions or liability.",
+      "adequacy_evidence": "While outputs can be checked against source documents, AI systems still risk subtle omissions or misinterpretations that may slip through standard review, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T02:09:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

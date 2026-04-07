@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3011.01",
+  "task_id": 157,
+  "task_statement": "Operate computer-aided drafting (CAD) equipment or conventional drafting station to produce designs, working drawings, charts, forms, and records.",
+  "occupation_title": "Architectural and Civil Drafters",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Most modern drafting is performed using CAD software on a computer and can be done remotely, but the task explicitly includes operating a conventional physical drafting station, which requires in-person manual tools."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Drafting spans different project types (residential, commercial, civil infrastructure), standards, and local codes, but follows structured conventions and repeatable workflows.",
+      "adequacy_evidence": "There is abundant public CAD data, standards documentation, and tutorials, but firm-specific practices, proprietary project files, and nuanced real-world constraints are less accessible and only partially recoverable via synthesis.",
+      "_timestamp": "2026-04-06T01:53:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Drafters typically work from partially specified inputs such as sketches, engineering notes, and regulatory standards, requiring interpretation of design intent, conventions, and context-specific constraints.",
+      "adequacy_evidence": "Current AI agents can translate structured inputs into drawings but often miss implicit standards, local codes, or stakeholder preferences, requiring iterative human clarification to reach acceptable outputs.",
+      "_timestamp": "2026-04-06T01:53:00"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Producing CAD drawings involves multi-step workflows (layering, dimensioning, revisions) where consistency across steps matters, but tasks are often modular and can be checked incrementally.",
+      "adequacy_evidence": "AI agents can generally sustain coherence across drafting steps with tool support, though longer or more complex projects can introduce drift or missed constraints requiring oversight.",
+      "_timestamp": "2026-04-06T01:53:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Drafting requires tracking multiple specifications (dimensions, standards, layers, annotations, reference drawings) within a session, but much of this information is structured and externally represented in CAD systems rather than held purely in memory.",
+      "adequacy_evidence": "Agents can offload state to CAD files and tools, but still show some drift or missed constraints when coordinating multiple drawing elements or referencing complex specifications.",
+      "_timestamp": "2026-04-06T01:53:01"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Producing CAD drawings and related artifacts is typically an hours-to-days workflow, with no strict requirement for immediate responses; iterative refinement is standard.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to generate or refine drafts without meaningful quality loss from latency constraints, as speed is not a binding factor in this task.",
+      "_timestamp": "2026-04-06T01:53:01"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Drafting relies largely on explicit standards (e.g., dimensioning rules, symbols, CAD procedures) but still requires some experience-based judgment for layout clarity, interpreting ambiguous design intent, and adapting conventions to specific projects.",
+      "adequacy_evidence": "Current AI agents can follow drafting standards and generate structured drawings, but they show gaps in nuanced judgment for atypical cases, such as resolving ambiguous inputs or optimizing readability and constructability in complex designs.",
+      "_timestamp": "2026-04-06T01:53:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Drafting work often spans multiple sessions with ongoing projects, revisions, and adherence to client or organizational standards, requiring some continuity of context across instances.",
+      "adequacy_evidence": "Existing tooling (file systems, CAD project files, version control, and document management systems) already preserves and surfaces cross-session context effectively, and AI agents can integrate with these without major gaps.",
+      "_timestamp": "2026-04-06T01:53:02"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task fundamentally involves creating and manipulating precise visual-spatial artifacts (technical drawings, plans, and schematics) using CAD tools, where geometry, scale, and layout are central and cannot be reduced to text alone.",
+      "adequacy_evidence": "Current AI agents can generate and modify CAD-like outputs via specialized tools, but they are still inconsistent in handling complex geometric constraints, fine-grained precision, and adherence to drafting standards across varied real-world cases.",
+      "_timestamp": "2026-04-06T01:53:02"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Drafting outputs can be checked using CAD tools (dimension checks, layer standards, clash detection) and visual inspection, but doing so correctly requires domain expertise and careful review to catch subtle inconsistencies or code violations.",
+      "adequacy_evidence": "AI-generated drawings would still need systematic human review for compliance with standards, dimensions, and constructability, as current systems can introduce non-obvious inconsistencies even if many basic errors are detectable with tools.",
+      "_timestamp": "2026-04-06T01:53:03"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from producing drafting outputs. While licensed professionals must review and approve certain final designs, the act of drafting itself is not restricted to humans or licensed individuals.",
+      "_timestamp": "2026-04-06T01:53:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The drawings are used by architects, engineers, and clients who rely on their accuracy and clarity, but interaction is primarily with the output rather than the drafter personally.",
+      "adequacy_evidence": "Stakeholders are generally indifferent to whether CAD drawings are produced by humans or AI as long as they meet technical standards; AI-assisted drafting is already widely accepted.",
+      "_timestamp": "2026-04-06T01:53:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Drafting outputs feed directly into construction and engineering processes, where even small residual errors can propagate into costly rework, code violations, or safety risks, making tolerance for remaining errors very low.",
+      "adequacy_evidence": "With standard reviews and automated checks, AI-generated drafts can be validated to a large extent, but subtle design inconsistencies or context-specific compliance issues can still slip through at rates that remain somewhat concerning.",
+      "_timestamp": "2026-04-06T01:53:05"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3031.00",
+  "task_id": 2514,
+  "task_statement": "Prepare purchase orders and expense reports.",
+  "occupation_title": "Bookkeeping, Accounting, and Auditing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Purchase orders and expense reports are typically created and submitted using accounting or expense-management software. However, some instances still involve collecting or verifying physical receipts, invoices, or signatures, requiring limited in-person handling."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Most steps follow standardized procedures and accounting rules, but some cases (e.g., ambiguous expense categorization or policy interpretation) benefit from experience-based judgment.",
+      "adequacy_evidence": "Current AI agents can reliably apply rules and handle typical edge cases using documented policies and examples, with little residual gap in tacit judgment for this task.",
+      "_timestamp": "2026-04-06T05:16:37"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Preparing purchase orders and expense reports involves some variation across organizations (different ERP systems, formats, policies, and edge cases like exceptions or approvals), but the underlying processes are standardized and well-bounded.",
+      "adequacy_evidence": "There is extensive accessible data (templates, accounting guidelines, ERP workflows, and synthetic examples) that captures both outputs and procedural steps, enabling strong coverage through training and simulation.",
+      "_timestamp": "2026-04-06T05:16:37"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While formats and required fields are largely standardized, correct preparation depends on context like organizational policies, expense categorization, and incomplete or ambiguous source information.",
+      "adequacy_evidence": "Current agents can follow templates and infer common conventions, but often miss organization-specific rules or subtle classification nuances, requiring human clarification or correction.",
+      "_timestamp": "2026-04-06T05:16:38"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps such as gathering transaction data, verifying details, coding expenses, and generating documents, but the sequence is moderately structured and not deeply interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute these routine, rule-based workflows end-to-end with minimal degradation, as steps are standardized and supported by tool integration and validation checks.",
+      "_timestamp": "2026-04-06T05:16:38"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple pieces of structured information (e.g., vendor details, line items, receipts, account codes) and ensuring consistency across documents, but the volume and complexity are moderate and typically bounded within standard forms.",
+      "adequacy_evidence": "Current AI agents with tool integration (e.g., spreadsheets, databases, OCR) reliably track and organize this level of structured, within-episode information without significant loss or drift.",
+      "_timestamp": "2026-04-06T05:16:38"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing purchase orders and expense reports is typically a back-office task with turnaround expectations in minutes to hours, not real-time interaction.",
+      "adequacy_evidence": "Current AI agents can generate and process these documents quickly within the available time budget without needing to sacrifice reasoning quality.",
+      "_timestamp": "2026-04-06T05:16:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is primarily text and numeric data entry, but often involves interpreting invoices or receipts that may be scanned images or PDFs, introducing some multimodal input requirements.",
+      "adequacy_evidence": "Current agents handle standard OCR and structured documents well, but performance degrades on low-quality scans, handwritten receipts, or complex layouts, leading to moderate reliability gaps.",
+      "_timestamp": "2026-04-06T05:16:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Preparing purchase orders and expense reports often draws on prior records such as vendor details, past transactions, budget allocations, and employee histories, but this information is typically structured and stored in accounting systems rather than requiring rich evolving context.",
+      "adequacy_evidence": "Current AI agents can reliably access and retrieve cross-session financial data from integrated systems (e.g., ERPs, databases), so maintaining and using this level of persistent context is well within existing capabilities.",
+      "_timestamp": "2026-04-06T05:16:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from preparing purchase orders or expense reports. While firms may impose internal controls or require human oversight (e.g., for SOX compliance), these do not constitute legal bans on AI performing the task.",
+      "_timestamp": "2026-04-06T05:16:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in purchase orders or expense reports can cause financial discrepancies or delays, but they are typically detectable and correctable through standard accounting controls and audits.",
+      "adequacy_evidence": "With existing validation rules, approval workflows, and reconciliation processes, AI-generated outputs can be effectively checked, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T05:16:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces documents used by internal approvers, finance teams, and vendors, so others rely on the output, but the preparer's identity is not central to acceptance.",
+      "adequacy_evidence": "Back-office financial document preparation is already widely automated, and stakeholders generally accept system-generated purchase orders and expense reports without concern for human authorship.",
+      "_timestamp": "2026-04-06T05:16:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Purchase orders and expense reports are structured and supported by receipts, totals, and accounting rules, so many errors can be caught via reconciliation and standard checks, though some misclassification or policy violations require review.",
+      "adequacy_evidence": "AI systems can generate largely correct documents but still make non-obvious mistakes (e.g., incorrect account coding or mismatched details), so routine human or automated verification remains necessary.",
+      "_timestamp": "2026-04-06T05:16:41"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

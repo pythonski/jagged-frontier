@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1244.00",
+  "task_id": 1320,
+  "task_statement": "Operate master consoles to monitor the performance of computer systems and networks and to coordinate computer network access and use.",
+  "occupation_title": "Network and Computer Systems Administrators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Monitoring systems and coordinating network access through master consoles is typically done via software dashboards that can be accessed remotely. However, some environments (e.g., secure or air\u2011gapped networks or on-site network operations centers) require administrators to operate consoles physically on-site."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a moderate variety of network environments, architectures, and failure modes, including routine monitoring and occasional rare incidents, but remains within a structured operational domain.",
+      "adequacy_evidence": "There is abundant data from logs, monitoring tools, and incident reports, but coverage of rare, organization-specific failures and real-time coordination nuances is uneven and often proprietary, leaving some gaps.",
+      "_timestamp": "2026-04-06T02:26:52"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many monitoring and access coordination tasks follow documented procedures and alerts, administrators must still interpret ambiguous signals, prioritize incidents, and apply experience-based judgment in non-routine situations.",
+      "adequacy_evidence": "Current AI agents can handle standard monitoring, alert triage, and runbook execution, but show gaps in nuanced prioritization and context-sensitive judgment during atypical or evolving system states.",
+      "_timestamp": "2026-04-06T02:26:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring and coordinating network use involves implicit priorities (e.g., SLA tradeoffs, security vs. availability, incident severity) and context-dependent thresholds that are not fully specified by rules alone.",
+      "adequacy_evidence": "Agents can apply playbooks and infer intent from metrics and policies, but they often miss shifting business priorities or nuanced escalation judgments, requiring human guidance to resolve ambiguity.",
+      "_timestamp": "2026-04-06T02:26:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves continuously tracking multiple live data streams (system metrics, alerts, logs, network traffic) and integrating them into a coherent, up-to-date operational picture where missing a signal can lead to failures or security issues.",
+      "adequacy_evidence": "Current agents can aggregate and summarize multi-source telemetry, but they still struggle with reliably maintaining and updating a consistent real-time state under high-volume, rapidly changing inputs, occasionally missing or misprioritizing signals.",
+      "_timestamp": "2026-04-06T02:26:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing monitoring and periodic intervention across multiple systems, requiring consistent attention over time but not tightly coupled step-by-step dependencies where early errors cascade irreversibly.",
+      "adequacy_evidence": "AI agents can manage multi-step monitoring and coordination workflows with tooling, but over extended sequences they may exhibit drift, missed signals, or degraded prioritization without robust oversight.",
+      "_timestamp": "2026-04-06T02:26:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves monitoring dashboards, visual system graphs, alerts, and interface elements on master consoles, which are not purely text-based but largely structured and screen-based data representations.",
+      "adequacy_evidence": "Current AI agents can access structured monitoring data via APIs and handle visual dashboards through integrations or vision models, with minimal degradation compared to human performance.",
+      "_timestamp": "2026-04-06T02:26:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "System and network performance is continuously observable via dashboards, logs, and automated alerts, making errors or misinterpretations quickly visible in real time.",
+      "adequacy_evidence": "AI may misread signals or miss nuanced anomalies, so human operators would still need to review outputs and cross-check monitoring data, though verification remains relatively straightforward.",
+      "_timestamp": "2026-04-06T02:26:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective monitoring and coordination depend on recalling prior incidents, system configurations, user access patterns, and ongoing issues across shifts, but much of this is also documented in logs and management systems.",
+      "adequacy_evidence": "Current agents can integrate with logging, ticketing, and configuration databases to retain history, but may inconsistently surface the most relevant past context or maintain nuanced evolving operational knowledge across sessions.",
+      "_timestamp": "2026-04-06T02:26:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI from monitoring computer systems or coordinating network access. While certain sectors may require human oversight for security or compliance, these do not constitute a direct legal ban on AI performing the task.",
+      "_timestamp": "2026-04-06T02:26:56"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring live system performance and coordinating network access requires near-real-time responsiveness to alerts, outages, and traffic anomalies, often within seconds to maintain system stability.",
+      "adequacy_evidence": "Agents can process telemetry and trigger actions quickly with tooling, but complex incidents may require deeper multi-step reasoning that is constrained under tight latency, leading to some degradation in handling non-routine cases.",
+      "_timestamp": "2026-04-06T02:26:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordinating access and communicating system status with internal users and IT staff, so stakeholders interact with the performer, but effectiveness depends more on technical accuracy than personal identity.",
+      "adequacy_evidence": "Organizations already rely heavily on automated monitoring and orchestration tools, and stakeholders generally accept AI-driven systems in this backend role with little concern about the agent\u2019s identity.",
+      "_timestamp": "2026-04-06T02:26:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Failures in monitoring or access coordination can lead to outages, security breaches, or cascading system disruptions, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "Even with dashboards, alerts, and automated checks, AI systems can still miss subtle anomalies or mis-handle edge-case coordination, leaving a non-negligible residual risk though not consistently catastrophic.",
+      "_timestamp": "2026-04-06T02:26:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

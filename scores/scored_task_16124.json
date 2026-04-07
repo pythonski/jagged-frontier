@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1243.01",
+  "task_id": 16124,
+  "task_statement": "Map data between source systems, data warehouses, and data marts.",
+  "occupation_title": "Data Warehousing Specialists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Mapping data between source systems, warehouses, and data marts is done using database, ETL, and data modeling tools on a computer. It involves analyzing schemas and defining transformations, which can be performed entirely with standard software and remote access."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Data mapping typically relies on schema definitions and documented transformation rules, but key aspects like business meaning, edge-case handling, and data quality expectations are often implicit or context-dependent.",
+      "adequacy_evidence": "Current agents can propose mappings from schemas and examples, but they often miss nuanced business logic or implicit constraints, requiring human clarification and iterative refinement.",
+      "_timestamp": "2026-04-06T00:48:07"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many mappings follow explicit schema and transformation rules, practitioners rely on experience to resolve ambiguous field semantics, handle inconsistent data quality, and choose appropriate transformations in edge cases.",
+      "adequacy_evidence": "Current agents can automate straightforward schema matching and transformations, but often lack reliable judgment in ambiguous or context-dependent mappings, especially where business meaning is implicit or inconsistently encoded.",
+      "_timestamp": "2026-04-06T00:48:07"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Data mapping spans varied schemas, formats, and business rules across systems and industries, but follows recurring ETL patterns (e.g., joins, transformations, normalization) that bound the diversity.",
+      "adequacy_evidence": "Extensive public documentation, code examples, ETL workflows, and the ability to generate synthetic schemas provide strong coverage of mapping processes, including step-by-step transformations, with no major inaccessible subpopulations.",
+      "_timestamp": "2026-04-06T00:48:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Mapping data across source systems and warehouses involves multi-step processes (schema analysis, field mapping, transformation logic, validation) where consistency across steps matters but sequences are typically modular and bounded.",
+      "adequacy_evidence": "AI agents can manage multi-step data mapping workflows with tooling, but may show moderate degradation over longer chains, such as losing constraints or introducing inconsistencies across transformations.",
+      "_timestamp": "2026-04-06T00:48:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Mapping data between systems primarily involves structured text artifacts such as schemas, field definitions, transformation logic, and SQL; any diagrams (e.g., ER diagrams) are optional and can be represented textually.",
+      "adequacy_evidence": "Current agents handle schema interpretation, transformation logic, and text-based mappings effectively, with no meaningful reliance on non-text modalities.",
+      "_timestamp": "2026-04-06T00:48:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Data mapping work often builds on prior schema mappings, transformation rules, and evolving business logic across projects, but much of this context is explicitly documented in schemas, ETL specs, or metadata repositories.",
+      "adequacy_evidence": "Current agents can persist and retrieve mapping documents and metadata via external storage and retrieval systems, but may inconsistently surface relevant prior mappings or maintain evolving context without careful system design.",
+      "_timestamp": "2026-04-06T00:48:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data mapping between source systems and warehouses is typically a design and configuration task performed in batch-oriented workflows where minutes to hours of latency are acceptable.",
+      "adequacy_evidence": "Because there is no meaningful time pressure, AI agents can use extended reasoning without degrading quality, and speed constraints do not limit performance.",
+      "_timestamp": "2026-04-06T00:48:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Mapping between source systems, warehouses, and marts requires tracking large, heterogeneous schemas, field-level transformations, data types, and business rules where small omissions can cause significant errors.",
+      "adequacy_evidence": "Current agents can use tools and retrieval to manage schemas and mappings, but they still struggle with reliably maintaining full context across large, complex mappings and may lose or misapply details.",
+      "_timestamp": "2026-04-06T00:48:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from performing data mapping tasks in data warehousing. While data privacy and security regulations (e.g., HIPAA, GDPR) may govern how data is handled, they do not restrict the use of AI to execute the mapping itself.",
+      "_timestamp": "2026-04-06T00:48:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incorrect data mappings can propagate errors into analytics, reporting, and downstream systems, causing business or financial impact, but issues are often eventually detectable and correctable rather than catastrophic.",
+      "adequacy_evidence": "Even with validation checks and testing, AI can introduce subtle semantic mismatches (e.g., field meaning or transformation logic) that are hard to catch, leaving some residual risk that remains non-trivial.",
+      "_timestamp": "2026-04-06T00:48:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Data mapping errors (e.g., incorrect joins, field mismatches, unit inconsistencies, or transformation logic flaws) can be subtle and may only surface downstream in analytics, requiring careful validation, profiling, and domain knowledge to detect.",
+      "adequacy_evidence": "Current AI systems frequently produce plausible but incorrect mappings or overlook edge cases, making thorough human validation, test queries, and data audits necessary before trusting outputs.",
+      "_timestamp": "2026-04-06T00:48:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Mapping data between systems is a technical, back-end task whose outputs are consumed impersonally by systems or internal pipelines, with little to no dependence on who performed the work.",
+      "adequacy_evidence": "Stakeholders (e.g., engineers, analysts) primarily care about correctness and reliability, and are generally indifferent to whether the mapping was done by a human or an AI agent.",
+      "_timestamp": "2026-04-06T00:48:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

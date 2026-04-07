@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3023.03",
+  "task_id": 20509,
+  "task_statement": "Evaluate engineering proposals, shop drawings, or design comments for sound electrical engineering practice or conformance with established safety or design criteria.",
+  "occupation_title": "Electrical and Electronic Engineering Technologists and Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Evaluating engineering proposals, shop drawings, and design comments typically involves reviewing digital documents and drawings using standard engineering or document software, which can be done entirely on a computer. Physical presence is not inherently required for this evaluation task."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the evaluation relies on established codes and documented criteria, technicians must apply experience-based judgment to interpret ambiguous designs, assess practical feasibility, and spot non-obvious issues.",
+      "adequacy_evidence": "Current AI can apply codes and flag common issues, but often lacks the nuanced calibration to reliably judge edge cases, trade-offs, or context-specific engineering intent without human-like field experience.",
+      "_timestamp": "2026-04-06T02:31:21"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse project types, electrical systems, codes (NEC, IEEE, local regulations), and drawing formats, with many context-specific edge cases across industries and jurisdictions.",
+      "adequacy_evidence": "While codes, standards, and some annotated examples are available, large portions of real-world shop drawings and proposal evaluations are proprietary and lack rich process-level annotations, though partial coverage can be synthesized or learned from existing materials.",
+      "_timestamp": "2026-04-06T02:31:22"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many criteria come from explicit electrical codes and design standards, evaluators must interpret how these apply in context (e.g., tradeoffs, intent of design comments, and project-specific constraints).",
+      "adequacy_evidence": "Current agents can reference codes and flag obvious issues but often miss nuanced intent, implicit engineering judgment, or context-specific acceptability, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T02:31:22"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating engineering proposals and drawings requires tracking large volumes of heterogeneous information (technical specifications, codes, annotations, cross-references) where missing a detail can lead to incorrect compliance judgments.",
+      "adequacy_evidence": "Current agents can ingest and summarize multiple documents with tooling, but they still show weaknesses in reliably maintaining and cross-referencing fine-grained details across large, complex inputs.",
+      "_timestamp": "2026-04-06T02:31:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluations often reference prior revisions, earlier comments, and project-specific standards, requiring some continuity across review cycles, but many individual reviews can still be performed with provided documentation.",
+      "adequacy_evidence": "Current agents can store and retrieve project documents and comment histories via external memory systems, but inconsistencies in recall, version tracking, and context prioritization can still cause missed references or redundant feedback.",
+      "_timestamp": "2026-04-06T02:31:23"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Evaluating engineering proposals and drawings is typically an offline review process where minutes to hours are acceptable, with no requirement for real-time or rapid interactive response.",
+      "adequacy_evidence": "Frontier AI systems can take sufficient time to perform detailed analysis without impacting task performance, so latency constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T02:31:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing complex documents against multiple standards and criteria in a multi-step process, but many checks are partially independent rather than tightly sequential.",
+      "adequacy_evidence": "AI agents can sustain reasonable consistency across document reviews with tooling, but may show some drift or missed constraints over longer, criteria-heavy evaluations.",
+      "_timestamp": "2026-04-06T02:31:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating shop drawings and engineering proposals requires interpreting circuit diagrams, schematics, layouts, and other visual-spatial representations that cannot be reduced to text without loss of critical information.",
+      "adequacy_evidence": "Current agents can interpret simple diagrams and annotated visuals but struggle with dense, domain-specific electrical schematics, fine-grained spatial relationships, and cross-referencing visual elements with standards at expert level.",
+      "_timestamp": "2026-04-06T02:31:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing engineering proposals and drawings requires expert review against codes, standards, and design principles; errors can be subtle (e.g., load miscalculations, code misinterpretations) and are not immediately observable without detailed analysis.",
+      "adequacy_evidence": "AI outputs in this domain still require thorough expert checking because models can miss nuanced compliance issues or misapply standards, and these mistakes are difficult to detect without full technical validation.",
+      "_timestamp": "2026-04-06T02:31:25"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task directly interfaces with engineers, contractors, and regulators who must trust and accept the evaluator\u2019s judgment on safety and code compliance, often tied to professional authority and licensure.",
+      "adequacy_evidence": "Stakeholders typically require a credentialed human (e.g., licensed engineer) to approve designs; an AI evaluator would not be accepted as a legitimate authority, and its output would need human endorsement to be actionable.",
+      "_timestamp": "2026-04-06T02:31:26"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Engineering evaluations that determine safety or code compliance typically must be performed or approved under the responsible charge of a licensed Professional Engineer (PE), who must sign/seal the work. AI can be used as a tool, but cannot legally replace the required human licensee, creating a partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-06T02:31:27"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in evaluating electrical designs or safety compliance can lead to equipment failure, fire hazards, regulatory violations, or injury, so even rare mistakes can have severe consequences.",
+      "adequacy_evidence": "Even with standard review processes, AI may miss subtle code requirements or context-specific engineering nuances, leaving a non-trivial residual risk, though human oversight can mitigate the most critical failures.",
+      "_timestamp": "2026-04-06T02:31:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

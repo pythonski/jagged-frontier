@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2199.05",
+  "task_id": 16467,
+  "task_statement": "Create mechanical design documents for parts, assemblies, or finished products.",
+  "occupation_title": "Mechatronics Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Mechanical design documents are typically created using CAD and documentation software on a computer, allowing the task to be completed entirely digitally. While engineers may sometimes reference physical prototypes or measurements, the document creation itself is performed on a computer."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Mechanical design documentation depends on partially implicit requirements such as manufacturability, tolerances, standards compliance, and stakeholder preferences that are not always fully specified upfront.",
+      "adequacy_evidence": "Current agents can infer many conventions and standards from context, but they often miss nuanced constraints or project-specific expectations, requiring iterative human clarification.",
+      "_timestamp": "2026-04-05T23:50:50"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Mechanical design documentation spans highly diverse products, industries, standards (e.g., ISO, ASME), and formats (CAD drawings, BOMs, tolerancing), with significant variation in constraints, materials, and integration contexts.",
+      "adequacy_evidence": "While public standards, textbooks, and some CAD repositories exist, much high-quality, process-level design documentation and rationale is proprietary, making coverage incomplete but partially recoverable via synthesis and structured engineering data.",
+      "_timestamp": "2026-04-05T23:50:51"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Creating mechanical design documents involves extended, tightly coupled workflows across CAD models, tolerancing, materials specs, BOMs, and revision tracking, where inconsistencies can propagate and invalidate downstream documentation.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step document generation with tooling, but often show drift in constraints, inconsistencies across linked artifacts, and error accumulation over long design sequences.",
+      "_timestamp": "2026-04-05T23:50:51"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Producing high-quality mechanical design documents requires experience with tolerancing, manufacturability, material selection, and implicit industry conventions that are not fully captured in formal rules or standards.",
+      "adequacy_evidence": "Current agents can apply documented standards (e.g., GD&T, CAD conventions) but often lack the nuanced judgment needed for edge cases, shop-specific practices, and context-sensitive tradeoffs, leading to moderate gaps.",
+      "_timestamp": "2026-04-05T23:50:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Creating mechanical design documents requires tracking numerous interdependent details (dimensions, tolerances, materials, standards, part relationships) across assemblies, where missing a single constraint can invalidate the design.",
+      "adequacy_evidence": "Agents can manage moderate context via tools and retrieval, but still struggle with reliably maintaining and updating large, tightly coupled design states over long workflows without losing or distorting key constraints.",
+      "_timestamp": "2026-04-05T23:50:52"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Mechanical design documents inherently rely on detailed visual and spatial artifacts such as CAD models, engineering drawings, tolerancing annotations, and assembly diagrams; text alone is insufficient to convey required geometry and relationships.",
+      "adequacy_evidence": "Current agents can generate and manipulate CAD and visual artifacts with tool integration, but struggle with precision, standards compliance (e.g., GD&T), and complex assemblies, leading to reliability gaps in high-detail cases.",
+      "_timestamp": "2026-04-05T23:50:52"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Mechanical design documentation often builds on prior project iterations, version histories, and evolving specifications, but individual documents can still be produced from current requirements and references if needed.",
+      "adequacy_evidence": "Current agents can use external storage and retrieval systems to persist and access prior designs, but they still show gaps in reliably maintaining and surfacing the most relevant historical context across complex, long-running projects.",
+      "_timestamp": "2026-04-05T23:50:53"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Mechanical design documentation is typically produced over hours to days, with iterative refinement cycles; immediate or real-time responses are not required.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to perform extended reasoning, run simulations, and iterate on drafts without meaningful degradation due to latency constraints.",
+      "_timestamp": "2026-04-05T23:50:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Mechanical design documents require precise specifications (dimensions, tolerances, materials, fits) where errors can be subtle and may only surface during fabrication or assembly, demanding expert review, simulation, and standards compliance checks.",
+      "adequacy_evidence": "Current AI can draft design documents but frequently makes specification, consistency, or standards errors that are non-obvious, requiring thorough expert validation and iterative correction before use.",
+      "_timestamp": "2026-04-05T23:50:53"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Mechanical design documents directly determine manufacturability, safety, and performance; even small residual errors can lead to product failure, safety hazards, or costly recalls.",
+      "adequacy_evidence": "While standard engineering reviews, simulations, and validation checks catch many issues, AI-generated designs can still embed subtle errors or incorrect assumptions that may evade detection, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T23:50:54"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Engineering design documents in many contexts (e.g., public infrastructure, safety-critical systems) must be reviewed and stamped by a licensed Professional Engineer, requiring human accountability. This does not prohibit AI use, but creates partial restrictions since AI cannot independently fulfill the legal sign-off requirement.",
+      "_timestamp": "2026-04-05T23:50:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Design documents are used by engineers, manufacturers, and clients who rely on their accuracy and may value the credibility and accountability of the creator, though interaction is mostly indirect.",
+      "adequacy_evidence": "AI-generated design documentation is increasingly acceptable as a drafting aid, but stakeholders typically require human review and sign-off, reflecting partial but not full acceptance of AI in this role.",
+      "_timestamp": "2026-04-05T23:50:54"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

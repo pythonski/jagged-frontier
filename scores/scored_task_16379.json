@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2112.01",
+  "task_id": 16379,
+  "task_statement": "Recommend workplace changes to improve health and safety, using knowledge of potentially harmful factors, such as heavy loads or repetitive motions.",
+  "occupation_title": "Human Factors Engineers and Ergonomists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Formulating recommendations is typically done through digital analysis of reports, ergonomic data, and documentation, and delivered via written reports or presentations. However, many cases involve on-site observation or measurement of workplace conditions to inform those recommendations."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Workplace safety recommendations must generalize across diverse industries, environments, body types, tasks, and risk factors (e.g., lifting, repetitive strain, workstation design), creating a broad and context-sensitive distribution.",
+      "adequacy_evidence": "There is substantial coverage in ergonomics literature, safety guidelines, and case studies, but detailed, context-rich workplace assessments and intervention outcomes are often proprietary or sparsely documented, leaving some gaps that require synthesis.",
+      "_timestamp": "2026-04-05T22:58:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective recommendations depend on implicit factors like specific workplace conditions, worker behaviors, organizational constraints, and trade-offs between safety, cost, and productivity, which are rarely fully specified upfront.",
+      "adequacy_evidence": "Current agents can infer common ergonomic risks and propose plausible interventions, but often miss nuanced, site-specific constraints or stakeholder priorities without iterative human clarification.",
+      "_timestamp": "2026-04-05T22:58:11"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step process\u2014analyzing workplace conditions, identifying risk factors, and formulating recommendations\u2014but these steps are not tightly interdependent over long sequences.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across these moderate-length analytical workflows, though some degradation can occur in maintaining consistency of constraints or integrating all factors over multiple steps.",
+      "_timestamp": "2026-04-05T22:58:12"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating multiple inputs (e.g., descriptions of tasks, physical risk factors, and environmental conditions) but these are typically bounded and can be summarized without overwhelming volume.",
+      "adequacy_evidence": "Current AI agents can reliably track and synthesize this level of within-episode information using standard context windows and retrieval, with minimal loss or drift.",
+      "_timestamp": "2026-04-05T22:58:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recommending workplace health and safety improvements is typically an analytical, consultative task with timelines of minutes to hours or longer, not requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can generate high-quality ergonomic and safety recommendations well within these relaxed time constraints, so latency does not degrade performance.",
+      "_timestamp": "2026-04-05T22:58:12"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ergonomic recommendations rely partly on established guidelines (e.g., lifting limits, workstation design principles) but require case-by-case judgment to balance worker variability, task context, and practical constraints.",
+      "adequacy_evidence": "Agents can apply general ergonomic principles and known standards, but often lack nuanced calibration for site-specific tradeoffs, worker behavior, and feasibility considerations, leading to moderate gaps in non-routine cases.",
+      "_timestamp": "2026-04-05T22:58:12"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating workplace hazards like posture, lifting techniques, and repetitive motion often relies on visual and spatial assessment of environments and human movement, though some information can be conveyed textually.",
+      "adequacy_evidence": "Current AI systems can analyze images and videos for basic ergonomic risks, but they are less reliable for nuanced, context-specific assessments of human movement and complex workplace setups.",
+      "_timestamp": "2026-04-05T22:58:13"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ergonomic recommendations often build on prior site assessments, injury reports, and implemented interventions, requiring some continuity of workplace context across engagements, but many evaluations can still be conducted as largely self-contained analyses.",
+      "adequacy_evidence": "Current agents can use external memory systems (databases, retrieval) to store and recall prior assessments, but they still show inconsistencies in maintaining and surfacing relevant historical context across sessions without careful system design.",
+      "_timestamp": "2026-04-05T22:58:13"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing ergonomic recommendations requires domain expertise, workplace observation, and sometimes measurement or longitudinal monitoring; errors (e.g., overlooked risk factors) are not always immediately obvious but can often be caught by a trained reviewer.",
+      "adequacy_evidence": "Current AI can generate plausible but generic or context-mismatched recommendations, so expert review and site-specific validation are needed to catch omissions or misapplied guidance.",
+      "_timestamp": "2026-04-05T22:58:14"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from generating workplace health and safety recommendations. While employers retain legal responsibility for compliance with OSHA standards, no rule mandates that such recommendations must be produced by a licensed human professional.",
+      "_timestamp": "2026-04-05T22:58:15"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires convincing managers, safety officers, and workers to adopt recommended changes, where perceived expertise and credibility strongly influence uptake.",
+      "adequacy_evidence": "While AI-generated recommendations may be technically sound, organizations and employees may be hesitant to trust or implement safety changes without human expert validation, though this resistance is not absolute.",
+      "_timestamp": "2026-04-05T22:58:15"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incorrect ergonomic recommendations can contribute to musculoskeletal injuries or unsafe conditions over time, but impacts are typically gradual and can be corrected through monitoring and iteration.",
+      "adequacy_evidence": "Even after review, AI may miss context-specific risk factors or propose suboptimal interventions, leaving some residual risk that is meaningful but generally manageable in practice.",
+      "_timestamp": "2026-04-05T22:58:15"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2043.00",
+  "task_id": 18617,
+  "task_statement": "Develop computer models for hydrologic predictions.",
+  "occupation_title": "Hydrologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Developing hydrologic prediction models is done using computer software, programming, and digital datasets, which can all be handled remotely without physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydrologic modeling spans highly heterogeneous conditions (different climates, basin geometries, land use, data availability, and extreme events), requiring coverage of a long-tailed and context-sensitive distribution.",
+      "adequacy_evidence": "There is substantial public data, published models, and simulation frameworks (e.g., SWAT, HEC-HMS) that expose modeling processes, but important subpopulations like rare extremes, data-sparse regions, and proprietary local datasets remain only partially covered.",
+      "_timestamp": "2026-04-05T21:52:33"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydrologic modeling requires expert judgment in selecting model structures, calibrating parameters to local basin conditions, handling sparse/noisy data, and interpreting physical plausibility\u2014skills typically developed through experience beyond formal rules.",
+      "adequacy_evidence": "Current AI agents can implement standard models and calibration workflows, but often lack reliable case-specific discernment for atypical basins, data limitations, and nuanced tradeoffs, leading to moderate gaps in non-routine scenarios.",
+      "_timestamp": "2026-04-05T21:52:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hydrologic model development depends on context-specific goals (e.g., flood forecasting vs. water supply), data availability, and implicit choices about spatial/temporal resolution, calibration targets, and uncertainty handling that are not fully specified upfront.",
+      "adequacy_evidence": "Current agents can follow general modeling goals but often miss nuanced stakeholder priorities (e.g., tradeoffs between physical realism and predictive accuracy), requiring iterative human guidance to refine objectives and assumptions.",
+      "_timestamp": "2026-04-05T21:52:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing hydrologic models involves long, interdependent workflows (data acquisition, preprocessing, model selection, calibration, validation, and iteration), where early errors propagate through later stages.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step coding and modeling pipelines with tooling, but still show moderate degradation over extended sequences, including drift in assumptions, inconsistent parameter handling, and weakened iteration discipline.",
+      "_timestamp": "2026-04-05T21:52:35"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Developing hydrologic prediction models is typically an offline, research-oriented process where runs, calibration, and validation can take hours to days, with no strict real-time response requirement.",
+      "adequacy_evidence": "Current AI systems can use extended reasoning and iterative workflows within these generous time windows, so latency does not meaningfully constrain output quality.",
+      "_timestamp": "2026-04-05T21:52:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing hydrologic models requires integrating large, heterogeneous datasets (e.g., precipitation, soil, topography), parameter sets, and evolving model states, where missing or mismanaging details can significantly affect predictions.",
+      "adequacy_evidence": "While agents can use tools and external memory to handle large datasets, they still show weaknesses in consistently tracking complex state, dependencies, and transformations across multi-step modeling workflows.",
+      "_timestamp": "2026-04-05T21:52:35"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hydrologic modeling often uses spatial datasets (GIS layers, maps, remote sensing imagery) and time-series sensor data, requiring some cross-modal interpretation beyond pure text.",
+      "adequacy_evidence": "Current agents can process structured geospatial and time-series data with tools, but remain less reliable on complex spatial reasoning or nuanced interpretation of imagery and heterogeneous environmental datasets.",
+      "_timestamp": "2026-04-05T21:52:35"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Hydrologic models involve complex physical processes, parameter calibration, and long-term predictions where errors may only appear under specific conditions or after validation against observed data, requiring expert review and extensive testing.",
+      "adequacy_evidence": "Current AI systems can generate plausible models but often make subtle conceptual or parameterization errors that are difficult to detect without deep domain expertise and empirical validation, making thorough checking essential.",
+      "_timestamp": "2026-04-05T21:52:36"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from developing hydrologic models. While licensed professionals may be required to review or sign off on work used in regulated contexts, the act of model development itself is not restricted.",
+      "_timestamp": "2026-04-05T21:52:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydrologic prediction models inform flood risk management, infrastructure design, and water resource planning, where residual errors can lead to significant economic damage, safety risks, or environmental harm.",
+      "adequacy_evidence": "Even after validation and calibration, AI-generated models may embed subtle mis-specifications or incorrect assumptions that are hard to detect, leaving non-trivial residual risk, though expert review can mitigate many major failures.",
+      "_timestamp": "2026-04-05T21:52:37"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hydrologic models are used by engineers, planners, and regulators who rely on the outputs for decisions, and the credibility of the model developer can matter for trust and adoption.",
+      "adequacy_evidence": "Stakeholders are already accustomed to computational modeling tools, but may still prefer human oversight and expertise, leading to some resistance to fully autonomous AI-developed models.",
+      "_timestamp": "2026-04-05T21:52:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hydrologic modeling projects often build on prior datasets, calibration runs, watershed characteristics, and iterative refinements, but most of this context is stored in external files and model artifacts rather than requiring continuous implicit memory.",
+      "adequacy_evidence": "Current agents can use databases, file systems, and retrieval tools to persist and reload project context, but they may inconsistently structure, retrieve, or prioritize relevant historical details across sessions without careful system design.",
+      "_timestamp": "2026-04-05T21:52:38"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

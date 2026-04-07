@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1232.00",
+  "task_id": 1283,
+  "task_statement": "Enter commands and observe system functioning to verify correct operations and detect errors.",
+  "occupation_title": "Computer User Support Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Entering commands and monitoring system responses is a computer-based activity that can usually be done via remote access or support tools. However, in some cases support specialists must perform the commands directly on a user's physical machine or local system that is not remotely accessible."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many verification steps follow documented procedures, detecting subtle anomalies or distinguishing normal vs. abnormal system behavior can require experience-based pattern recognition and contextual judgment.",
+      "adequacy_evidence": "Current AI agents with log analysis, monitoring tools, and pattern detection can reliably replicate this judgment in most cases, including identifying deviations and known error signatures.",
+      "_timestamp": "2026-04-05T23:28:21"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of operating systems, software environments, and command interfaces, but follows recurring patterns of command execution and system response inspection rather than highly unique cases.",
+      "adequacy_evidence": "There is abundant data from documentation, troubleshooting guides, logs, and simulated environments, but coverage of proprietary systems and real-world edge-case failures is uneven and often not publicly accessible.",
+      "_timestamp": "2026-04-05T23:28:22"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many test procedures and expected outputs are documented, identifying what constitutes 'correct operation' and which anomalies matter often requires contextual judgment about system behavior and user expectations.",
+      "adequacy_evidence": "Agents can follow explicit test scripts and infer expected behavior from documentation, but they still miss subtle context-dependent issues or misinterpret edge-case behavior without human clarification.",
+      "_timestamp": "2026-04-05T23:28:22"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking issued commands, system responses, and expected behavior within a session, often integrating multiple outputs (e.g., logs, error messages) to detect inconsistencies.",
+      "adequacy_evidence": "Agents can generally handle command-response tracking, but may lose fidelity or overlook details when logs or interactions become lengthy or require precise comparison across multiple steps.",
+      "_timestamp": "2026-04-05T23:28:22"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves running sequences of commands and interpreting system responses across multiple steps, where earlier actions influence later observations, but sequences are typically moderate in length and complexity.",
+      "adequacy_evidence": "AI agents can generally maintain coherence over such command-observation loops, but may show some degradation in tracking state or interpreting evolving system outputs over longer or more intricate sequences.",
+      "_timestamp": "2026-04-05T23:28:22"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying system operations by entering commands is typically a self-contained activity, relying on immediate system responses rather than accumulated cross-session context.",
+      "adequacy_evidence": "Current agents can persist logs or session data if needed, but the task rarely depends on such memory, so existing memory capabilities are sufficient.",
+      "_timestamp": "2026-04-05T23:28:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal technical activity (entering commands and observing system behavior) with no direct interaction with or reliance on external stakeholders.",
+      "adequacy_evidence": "Since there are no stakeholders involved, acceptance of AI versus a human performer is not relevant to task execution.",
+      "_timestamp": "2026-04-05T23:28:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is interactive and often performed during troubleshooting sessions where responses are expected within seconds to minutes, but not strict real-time constraints.",
+      "adequacy_evidence": "Current agents can issue commands and analyze system responses within this time window without needing to significantly truncate reasoning, so quality is not meaningfully degraded by speed requirements.",
+      "_timestamp": "2026-04-05T23:28:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves entering textual commands and interpreting system outputs such as logs, console messages, or textual status indicators; any visual elements (e.g., GUIs) are secondary and not essential.",
+      "adequacy_evidence": "AI agents handle text-based command execution and interpretation well, and existing vision capabilities are sufficient for occasional GUI or screenshot-based observation if needed.",
+      "_timestamp": "2026-04-05T23:28:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the US that prohibit AI from executing system commands or monitoring system behavior for errors in IT support contexts. This task is generally unregulated and can be performed by automated systems without legal restriction.",
+      "_timestamp": "2026-04-05T23:28:24"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Errors in verifying system operations by entering commands are typically detectable and reversible, with limited downstream impact in most user support contexts.",
+      "adequacy_evidence": "Given observable system responses and existing checks, AI can reliably detect issues with minimal residual risk after verification, making remaining errors acceptable.",
+      "_timestamp": "2026-04-05T23:28:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "System responses to commands are typically immediate and observable (e.g., logs, error messages, system behavior), making errors easy to detect in real time.",
+      "adequacy_evidence": "AI-generated commands and interpretations can be quickly validated through direct system feedback, so any mistakes are readily apparent and require minimal additional checking.",
+      "_timestamp": "2026-04-05T23:28:25"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

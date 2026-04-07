@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1217.00",
+  "task_id": 17121,
+  "task_statement": "Order or interpret results of laboratory analyses of patients' blood or cerebrospinal fluid.",
+  "occupation_title": "Neurologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Ordering and interpreting lab results is typically done through electronic health record systems and review of digital lab reports, which can be performed remotely. Physical presence is not required to place orders or interpret the data."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a small sequence: selecting appropriate tests, reviewing results, and integrating them with clinical context, but the steps are limited and not deeply interdependent over long horizons.",
+      "adequacy_evidence": "Frontier AI systems can reliably handle short multi-step reasoning and maintain coherence over this scale, with little observable degradation across such bounded sequences.",
+      "_timestamp": "2026-04-06T01:30:37"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting and interpreting lab tests in neurology depends heavily on clinical context, evolving differential diagnoses, and subtle patient-specific factors; the appropriate tests and their meaning are often implicit and shift as new information emerges.",
+      "adequacy_evidence": "Current agents can suggest relevant tests and interpret common patterns, but they often miss nuanced clinical context or evolving diagnostic priorities, requiring clinician oversight and iterative correction.",
+      "_timestamp": "2026-04-06T01:30:37"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting blood and cerebrospinal fluid labs in neurology spans a wide, long-tailed distribution of conditions (e.g., infections, autoimmune disorders, rare neurodegenerative diseases) with significant variation across patient contexts and edge cases.",
+      "adequacy_evidence": "There is substantial coverage in medical literature, guidelines, and case reports, but important subpopulations\u2014especially rare conditions and nuanced clinical contexts\u2014are underrepresented or locked in private clinical data, making coverage incomplete but partially addressable.",
+      "_timestamp": "2026-04-06T01:30:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting blood or CSF labs in neurology often requires context-sensitive judgment (e.g., integrating subtle abnormalities with clinical presentation and pretest probabilities), though many aspects are guided by established reference ranges and protocols.",
+      "adequacy_evidence": "Current AI systems can apply guidelines and pattern-match common interpretations but show gaps in nuanced clinical calibration and context integration in atypical or complex neurological cases.",
+      "_timestamp": "2026-04-06T01:30:38"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting lab results requires integrating multiple data points (lab values, reference ranges, patient history, medications, prior results), but the volume is typically bounded and structured rather than overwhelming.",
+      "adequacy_evidence": "Current agents can track and summarize moderate structured clinical data, but may miss subtle trends over time or lose context when multiple interacting factors must be jointly considered.",
+      "_timestamp": "2026-04-06T01:30:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Laboratory results for blood or cerebrospinal fluid are typically presented as structured numeric values and text reports; interpretation relies on reference ranges and clinical context rather than raw sensory data.",
+      "adequacy_evidence": "Current AI systems handle structured numeric and textual lab data well, with no meaningful multimodal perception or generation gap required for this task.",
+      "_timestamp": "2026-04-06T01:30:40"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting lab results often depends on prior test values, disease progression, and patient history, but this information is typically stored in structured medical records rather than requiring internal longitudinal memory.",
+      "adequacy_evidence": "Current AI agents can retrieve and use longitudinal patient data from EHR systems, but may inconsistently track, prioritize, or integrate evolving context across encounters without robust system integration and curation.",
+      "_timestamp": "2026-04-06T01:30:40"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Ordering and interpreting laboratory tests are considered the practice of medicine in the U.S., which legally requires a licensed physician or authorized clinician. AI systems cannot independently perform or sign off on these actions without physician oversight under current medical licensing and CLIA-related frameworks.",
+      "_timestamp": "2026-04-06T01:30:40"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Interpreting or ordering laboratory analyses in neurology is rarely time-critical at the level of seconds; clinicians typically have minutes to hours, even in many inpatient settings, to review and interpret results.",
+      "adequacy_evidence": "Current AI systems can operate well within these time windows, allowing sufficient reasoning depth without meaningful degradation due to latency constraints.",
+      "_timestamp": "2026-04-06T01:30:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting and ordering lab tests directly affects patient diagnosis and care, and both patients and other clinicians rely on the neurologist\u2019s professional judgment and authority.",
+      "adequacy_evidence": "While AI-assisted interpretation is increasingly accepted as support, many patients and clinicians would be hesitant to rely on a fully autonomous AI for diagnostic decisions, preserving a moderate acceptance barrier.",
+      "_timestamp": "2026-04-06T01:30:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misinterpretation of blood or cerebrospinal fluid results can lead to missed or incorrect diagnoses (e.g., infections, autoimmune disorders, hemorrhage), with potentially severe or irreversible patient harm even after standard review.",
+      "adequacy_evidence": "AI can assist with pattern recognition and flagging abnormalities, but subtle clinical context and rare presentations mean that even after review, residual AI-related errors could still pose meaningful risk.",
+      "_timestamp": "2026-04-06T01:30:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Laboratory results include reference ranges and standardized reporting, but correct interpretation (e.g., subtle CSF abnormalities or context-specific patterns) requires clinical expertise and cross-checking with patient context.",
+      "adequacy_evidence": "AI can parse and summarize lab data, but still makes clinically significant interpretation errors often enough that neurologist review and contextual verification remain necessary.",
+      "_timestamp": "2026-04-06T01:30:41"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

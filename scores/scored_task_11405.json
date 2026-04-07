@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9021.00",
+  "task_id": 11405,
+  "task_statement": "Locate and correct data entry errors, or report them to supervisors.",
+  "occupation_title": "Data Entry Keyers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Error checking and correction for data entry is typically done within digital systems and reported via email or messaging, but some instances require consulting or verifying against physical source documents."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Data entry error detection spans moderately diverse formats (numeric, textual, forms, codes) and domain-specific conventions, but patterns of common errors are relatively structured and repetitive.",
+      "adequacy_evidence": "Abundant real and synthetic datasets exist with labeled errors, correction examples, and validation rules across domains, providing strong coverage of typical and edge-case error patterns.",
+      "_timestamp": "2026-04-05T22:50:29"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Identifying and correcting data entry errors typically relies on explicit validation rules, formatting standards, and straightforward comparisons to source data rather than experience-based judgment.",
+      "adequacy_evidence": "Current AI systems can reliably apply validation rules, detect inconsistencies, and cross-check entries against references, leaving little unmet need for tacit knowledge.",
+      "_timestamp": "2026-04-05T22:50:31"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many errors are defined by explicit rules (formats, validation checks, source comparisons), some cases require contextual judgment (e.g., plausible values, inconsistent records) to determine correctness.",
+      "adequacy_evidence": "Current AI agents can apply rules, cross-check data, and flag anomalies effectively, and can handle most contextual ambiguities using learned patterns and iterative checks with minimal human input.",
+      "_timestamp": "2026-04-05T22:50:31"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves comparing data fields across records or against source documents, requiring tracking multiple values and discrepancies within a session but typically at a limited scale.",
+      "adequacy_evidence": "Current agents with tool use (e.g., spreadsheets, validation scripts) can reliably track and compare within-episode data without significant loss or drift.",
+      "_timestamp": "2026-04-05T22:50:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Locating and correcting data entry errors is typically performed on discrete records or batches, with each instance largely self-contained and not dependent on prior cases.",
+      "adequacy_evidence": "Since the task does not require cross-session memory, current AI systems' ability to persist information across sessions is sufficient and not a limiting factor.",
+      "_timestamp": "2026-04-05T22:50:31"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Error detection and correction in data entry is typically performed on discrete, independent records with minimal interdependence between steps.",
+      "adequacy_evidence": "AI agents can reliably apply consistent validation and correction rules across independent entries without degradation over sequence length.",
+      "_timestamp": "2026-04-05T22:50:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing and correcting structured text or numeric data entries, which are fundamentally text-based activities.",
+      "adequacy_evidence": "Current AI systems handle text processing and error detection well, and any minor multimodal needs (e.g., OCR from forms) are already reliably addressed by existing tools.",
+      "_timestamp": "2026-04-05T22:50:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely internal data quality control with outputs consumed impersonally; interaction is minimal and does not depend on the performer's identity.",
+      "adequacy_evidence": "Organizations already accept automated systems for error detection and correction in data entry, and there is little to no stakeholder resistance to AI performing this function.",
+      "_timestamp": "2026-04-05T22:50:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Data entry errors can cause downstream issues in records or processing, but most contexts tolerate occasional minor inaccuracies without severe or irreversible consequences.",
+      "adequacy_evidence": "With standard validation checks, duplication detection, and human-in-the-loop review, AI systems can reduce residual error risk to acceptable levels for typical data entry tasks.",
+      "_timestamp": "2026-04-05T22:50:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI from locating or correcting data entry errors in general data entry roles. While privacy or data protection rules may govern how data is handled, they do not specifically restrict AI from performing this task.",
+      "_timestamp": "2026-04-05T22:50:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Data entry workflows typically expect quick turnaround (seconds to a few minutes per record or batch), but not strict real-time constraints; some brief checking time is acceptable.",
+      "adequacy_evidence": "Frontier AI systems can rapidly scan and validate structured data with high accuracy well within these time limits, without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T22:50:34"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Data entry errors can often be checked against source documents or validation rules, but some mistakes (e.g., transpositions or context-specific inconsistencies) require careful review and are not always immediately obvious.",
+      "adequacy_evidence": "AI can flag likely errors using patterns and rules, but it still produces false positives/negatives, so human verification against original data remains necessary with moderate effort.",
+      "_timestamp": "2026-04-05T22:50:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

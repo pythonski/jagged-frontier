@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4012.01",
+  "task_id": 18293,
+  "task_statement": "Analyze remote sensing imagery to identify relationships between soil quality, crop canopy densities, light reflectance, and weather history.",
+  "occupation_title": "Precision Agriculture Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Analyzing remote sensing imagery and related datasets is performed using GIS or image analysis software on a computer, requiring only digital data and tools with no physical presence or field equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires selecting relevant variables, interpreting domain-specific relationships, and aligning analysis with agronomic goals (e.g., yield optimization vs. soil conservation), which are often implicit or context-dependent.",
+      "adequacy_evidence": "Current agents can process imagery and correlate variables but often miss context-specific priorities or nuanced agronomic interpretations without iterative human guidance.",
+      "_timestamp": "2026-04-05T23:11:54"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous conditions across crop types, geographies, sensor modalities, seasonal weather patterns, and soil characteristics, creating a long-tailed and context-sensitive distribution.",
+      "adequacy_evidence": "There are substantial remote sensing datasets and agronomic studies, but integrated, high-quality labeled data linking imagery to soil quality and longitudinal weather interactions is often sparse, proprietary, or indirect, leaving partial coverage gaps.",
+      "_timestamp": "2026-04-05T23:11:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step pipeline\u2014processing imagery, extracting features, integrating weather data, and analyzing relationships\u2014but these steps are modular and not tightly interdependent in a fragile sequence.",
+      "adequacy_evidence": "Well-scaffolded AI systems can maintain coherence across such analytical pipelines, though some degradation (e.g., minor inconsistencies or dropped constraints) can occur over longer multi-step workflows.",
+      "_timestamp": "2026-04-05T23:11:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large, heterogeneous datasets (multispectral imagery, soil metrics, canopy density measures, and temporal weather histories) within a single analytical episode, where missing relationships or misaligning layers can materially affect conclusions.",
+      "adequacy_evidence": "Well-scaffolded agents can offload much of this via tools (e.g., GIS pipelines, retrieval systems), but they still exhibit context drift and imperfect aggregation when coordinating multiple high-dimensional data sources and temporal dependencies.",
+      "_timestamp": "2026-04-05T23:11:55"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Analysis often benefits from historical weather patterns, prior imagery, and past field performance, but many instances can be conducted using already-compiled datasets without needing persistent evolving memory across sessions.",
+      "adequacy_evidence": "Current AI systems can reliably store, retrieve, and integrate cross-session agricultural datasets (e.g., time-series weather and imagery) using standard databases and retrieval pipelines, with minimal loss of needed context.",
+      "_timestamp": "2026-04-05T23:11:55"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally relies on interpreting remote sensing imagery and spectral reflectance data, requiring cross-modal reasoning between visual/spatial inputs and agronomic variables like soil quality and crop canopy density.",
+      "adequacy_evidence": "Current agents can process satellite imagery and compute indices with tools, but struggle with fine-grained geospatial interpretation, temporal integration with weather history, and nuanced agronomic inference in complex cases.",
+      "_timestamp": "2026-04-05T23:11:56"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This analytical task is typically performed offline using datasets where minutes to hours of processing time are acceptable, with no requirement for real-time or near-instant decisions.",
+      "adequacy_evidence": "Current AI systems can perform detailed multimodal analysis within acceptable timeframes for this task, so latency does not meaningfully constrain quality.",
+      "_timestamp": "2026-04-05T23:11:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The analysis informs farmers or agronomists who rely on the results, but interaction is indirect and the identity of the analyst is not central to task success.",
+      "adequacy_evidence": "Stakeholders in precision agriculture already widely accept algorithmic and remote sensing tools, so AI-generated analyses are unlikely to face meaningful resistance.",
+      "_timestamp": "2026-04-05T23:11:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in interpreting imagery relationships can lead to suboptimal agronomic decisions (e.g., misapplied inputs or missed soil issues), causing yield or cost impacts, but these are typically not catastrophic or irreversible in a single instance.",
+      "adequacy_evidence": "Current AI can perform reasonably well with remote sensing analysis but still exhibits occasional misinterpretations of complex environmental interactions; even after standard checks, some residual errors remain that could meaningfully affect decisions.",
+      "_timestamp": "2026-04-05T23:11:57"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit or restrict AI systems from analyzing remote sensing imagery for agricultural insights. While data sources may have access or privacy constraints, these do not limit AI performing the analytical task itself.",
+      "_timestamp": "2026-04-05T23:11:57"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Validating relationships inferred from remote sensing data requires domain expertise, cross-checking against ground truth samples, and understanding of agronomic and environmental interactions; errors can be subtle and not immediately observable.",
+      "adequacy_evidence": "Current AI can perform remote sensing analysis but still produces interpretive and correlation errors that require expert review and occasional field validation, creating a consistent but manageable verification burden.",
+      "_timestamp": "2026-04-05T23:11:58"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting relationships between reflectance patterns, soil conditions, and crop health involves some experience-based calibration (e.g., distinguishing stress signals from benign variation) beyond fixed rules, but much is grounded in established agronomic and remote sensing models.",
+      "adequacy_evidence": "Current AI systems can apply learned patterns and integrate multimodal data well, but still struggle with nuanced, context-specific agronomic judgment under atypical conditions (e.g., unusual weather interactions or local soil anomalies).",
+      "_timestamp": "2026-04-06T11:26:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

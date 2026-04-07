@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2041.00",
+  "task_id": 3559,
+  "task_statement": "Design measurement and control systems for chemical plants based on data collected in laboratory experiments and in pilot plant operations.",
+  "occupation_title": "Chemical Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Designing measurement and control systems is typically done using engineering software, simulations, and analysis of experimental data on a computer. However, some instances involve site visits, coordination with plant personnel, or verification with physical instrumentation and pilot facilities."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Chemical plant measurement and control design varies widely across processes (e.g., petrochemicals, pharmaceuticals, specialty chemicals), scales, reaction dynamics, and safety constraints, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "While textbooks, academic papers, and some case studies provide structured examples and simulations, much real-world plant data and detailed design rationale are proprietary, leaving gaps that can only be partially filled via synthetic data and modeling.",
+      "_timestamp": "2026-04-05T21:10:27"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing measurement and control systems requires experience-based judgment about sensor placement, noise, nonlinear dynamics, safety margins, and plant-specific disturbances that are not fully captured by formal rules or models.",
+      "adequacy_evidence": "Current agents can apply control theory and standard design patterns, but often lack the nuanced calibration and plant-specific intuition needed for robust performance in non-ideal, real-world operating conditions.",
+      "_timestamp": "2026-04-05T21:10:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting laboratory and pilot plant data (often numerical, graphical, and schematic) and producing control system designs such as P&IDs and process diagrams, requiring some visual-spatial reasoning beyond pure text.",
+      "adequacy_evidence": "Current agents can interpret charts and generate basic diagrams, but performance is less reliable on complex engineering schematics, spatial layouts, and tightly coupled cross-modal reasoning needed for full plant control system design.",
+      "_timestamp": "2026-04-05T21:10:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing measurement and control systems for chemical plants is an offline engineering task that typically unfolds over days to weeks, with no requirement for immediate or real-time responses.",
+      "adequacy_evidence": "Frontier AI systems can take ample time for extended reasoning, simulation, and iteration without impacting task performance, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-05T21:10:28"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing control systems typically involves iterative projects where prior lab results, pilot plant data, and earlier design decisions must be referenced across sessions, but this context is usually documented and project-bounded rather than deeply longitudinal.",
+      "adequacy_evidence": "Current agents can store and retrieve project documents and data via external memory tools, but they still show inconsistencies in reliably updating, prioritizing, and integrating evolving cross-session context over extended design cycles.",
+      "_timestamp": "2026-04-05T21:10:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing control systems requires integrating large volumes of heterogeneous data (lab results, pilot plant performance, process dynamics, instrumentation specs, safety constraints) and tracking interdependencies across many variables within a single design episode.",
+      "adequacy_evidence": "Agents with tooling can store and retrieve structured data, but they still show drift or omission when managing complex, interdependent constraints across long design workflows, leading to occasional loss or misprioritization of key details.",
+      "_timestamp": "2026-04-05T21:10:28"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing plant measurement and control systems requires interpreting implicit objectives like safety margins, operability, regulatory compliance, and cost tradeoffs that vary by facility and are not fully specified in lab or pilot data.",
+      "adequacy_evidence": "Current AI agents can generate plausible control strategies and infer some goals from context, but they often miss site-specific constraints and stakeholder priorities, requiring iterative human refinement.",
+      "_timestamp": "2026-04-05T21:10:28"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves long, interdependent sequences: interpreting experimental data, developing process models, selecting sensors/actuators, designing control strategies, and integrating them into a coherent system where early choices constrain later steps.",
+      "adequacy_evidence": "LLM-based agents can execute multi-step engineering workflows but show some degradation over long, tightly coupled design chains, with risks of dropped constraints or inconsistency across stages rather than complete failure.",
+      "_timestamp": "2026-04-05T21:10:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in measurement and control system design for chemical plants can lead to catastrophic failures such as explosions, toxic releases, or large-scale production losses, so even rare residual errors are intolerable.",
+      "adequacy_evidence": "Even with standard engineering review and validation, current AI systems can introduce subtle design or integration errors and lack fully reliable guarantees under edge-case process conditions, leaving residual risk at an unacceptable level.",
+      "_timestamp": "2026-04-05T21:10:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Control system designs for chemical plants involve dynamic process behavior, safety interlocks, and integration with physical equipment; errors may only surface under specific operating conditions or after deployment, requiring simulation, pilot testing, and expert review to detect.",
+      "adequacy_evidence": "Current AI can generate plausible control schemes but is prone to subtle mistakes in dynamics, constraints, and safety logic, meaning extensive expert validation, modeling, and testing are still required before reliance.",
+      "_timestamp": "2026-04-05T21:10:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Engineering design work for chemical plants often requires review and approval (sealing) by a licensed Professional Engineer, which an AI cannot fulfill. AI can assist in the design process, but regulations require a human licensee to take legal responsibility, creating partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-05T21:10:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task\u2019s outputs are used by plant operators, management, and safety/regulatory reviewers, who rely on the designer\u2019s credibility and expertise, though direct interpersonal engagement is limited.",
+      "adequacy_evidence": "Stakeholders in safety-critical industrial settings often require accountable human engineers (and licensed sign-off), so while AI-generated designs may be used, full acceptance of an autonomous AI in this role would face moderate resistance.",
+      "_timestamp": "2026-04-05T21:10:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

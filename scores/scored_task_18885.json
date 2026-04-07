@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1075.00",
+  "task_id": 18885,
+  "task_statement": "Monitor company or workforce adherence to labor agreements.",
+  "occupation_title": "Labor Relations Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Monitoring adherence often involves reviewing HR records, grievance logs, communications, and reports, which can be done digitally. However, it may also include occasional on-site discussions with employees or managers and observing workplace practices."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Labor agreements contain explicit clauses, but real-world adherence often depends on interpreting intent, past practice, and situational context (e.g., informal norms, edge cases, evolving workplace conditions).",
+      "adequacy_evidence": "Current agents can parse contracts and flag clear violations, but they struggle with nuanced interpretation of implicit expectations and require human guidance to resolve ambiguous or context-sensitive cases.",
+      "_timestamp": "2026-04-06T05:27:22"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring adherence spans diverse industries, contract structures, workplace practices, and edge cases (e.g., grievances, informal violations), making the instance distribution highly heterogeneous and context-sensitive.",
+      "adequacy_evidence": "While many collective bargaining agreements and arbitration cases are documented, key data like internal compliance records and day-to-day enforcement practices are often private, leaving partial but not complete coverage.",
+      "_timestamp": "2026-04-06T05:27:22"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring adherence requires interpreting ambiguous contract clauses, recognizing informal workplace practices, and judging whether behaviors constitute violations in context, which relies on experience-based discernment.",
+      "adequacy_evidence": "AI can parse agreements and flag potential deviations, but often lacks calibration around implicit norms, evolving practices, and nuanced edge cases that experienced specialists handle.",
+      "_timestamp": "2026-04-06T05:27:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring adherence requires tracking multiple labor agreements, policies, and ongoing workforce activities, integrating information from documents, reports, and incident logs within a single review episode.",
+      "adequacy_evidence": "Agents can aggregate and retrieve relevant documents with tooling, but may lose nuance or fail to consistently track all compliance details across sources, especially when information is fragmented or evolving.",
+      "_timestamp": "2026-04-06T05:27:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring adherence involves ongoing review of policies, agreements, incident reports, and corrective actions over time, but much of the work can be broken into repeatable, semi-independent checks rather than a single tightly coupled sequence.",
+      "adequacy_evidence": "AI agents can handle multi-step monitoring workflows with tooling (e.g., rule checking, alerting), but may show some degradation over longer sequences through missed updates, context drift, or inconsistent follow-through without careful orchestration.",
+      "_timestamp": "2026-04-06T05:27:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring adherence requires tracking ongoing compliance, past violations, grievance histories, contract interpretations, and evolving workforce conditions over extended periods.",
+      "adequacy_evidence": "Current agents can use external databases and retrieval systems to persist records, but they often struggle with reliably surfacing the most relevant historical context and maintaining coherent longitudinal state across complex, evolving cases.",
+      "_timestamp": "2026-04-06T05:27:23"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring adherence to labor agreements is typically periodic or audit-based work where minutes to hours (or longer) are acceptable for reviewing records and identifying issues.",
+      "adequacy_evidence": "Current AI systems can analyze documents and compliance data well within these relaxed timeframes, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T05:27:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely based on reviewing contracts, reports, and compliance records, but may also involve observing workplace conditions or interpreting verbal interactions during meetings or grievances.",
+      "adequacy_evidence": "Current agents handle text-based compliance monitoring well but are less reliable in interpreting nuanced audio, video, or in-person observational cues that may factor into assessing adherence.",
+      "_timestamp": "2026-04-06T05:27:24"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing adherence to labor agreements requires interpreting complex contract terms, workplace practices, and grievance patterns; violations can be subtle and require audits, interviews, and contextual judgment to detect.",
+      "adequacy_evidence": "Current AI systems can misinterpret contractual nuances and incomplete workplace data, so their assessments would require thorough human review and cross-checking to avoid missing or misclassifying compliance issues.",
+      "_timestamp": "2026-04-06T05:27:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Failures to detect or correctly interpret violations of labor agreements can trigger legal disputes, financial penalties, grievances, or labor actions, making even rare residual errors consequential.",
+      "adequacy_evidence": "Even after review, AI may miss nuanced contractual interpretations or context-specific violations, leaving some meaningful residual risk, though human oversight can mitigate the most severe failures.",
+      "_timestamp": "2026-04-06T05:27:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI systems from monitoring adherence to labor agreements. While labor relations work may involve human judgment and union interactions, no enforceable regulation mandates that only humans perform this monitoring task.",
+      "_timestamp": "2026-04-06T05:27:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interaction with management and union representatives who rely on monitoring outputs, and trust in the monitor's neutrality and legitimacy can influence acceptance.",
+      "adequacy_evidence": "Stakeholders, especially unions, may distrust AI in monitoring roles due to concerns about bias or surveillance, though resistance is not absolute and could be mitigated with transparency.",
+      "_timestamp": "2026-04-06T05:27:26"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4099.03",
+  "task_id": 16986,
+  "task_statement": "Verify integrity and accuracy of data contained in remote sensing image analysis systems.",
+  "occupation_title": "Remote Sensing Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 97,
+    "reasoning": "Verifying the integrity and accuracy of data in remote sensing image analysis systems is typically performed using software tools, databases, and digital imagery on a computer. Physical presence or equipment is generally not required for this data validation task."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Covers diverse sensors (multispectral, SAR, LiDAR), platforms, geographies, atmospheric conditions, and numerous error modes (calibration drift, georeferencing errors, artifacts), creating a long-tailed, context-sensitive distribution.",
+      "adequacy_evidence": "There are extensive public datasets, benchmarks, and the ability to synthesize corruptions and validation tasks, but some critical edge cases (proprietary sensor issues, rare anomalies, mission-specific pipelines) are thin or inaccessible.",
+      "_timestamp": "2026-04-06T03:19:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many validation procedures (e.g., consistency checks, calibration standards, metadata verification) are documented, technicians often rely on experience to recognize subtle artifacts, sensor noise patterns, or context-specific anomalies not fully captured by rules.",
+      "adequacy_evidence": "Current AI agents can implement formal validation checks and detect common anomalies, but they show gaps in nuanced, context-sensitive judgment for atypical or borderline cases that experienced technicians handle more reliably.",
+      "_timestamp": "2026-04-06T03:19:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step validation processes (e.g., checking metadata, calibration consistency, cross-referencing datasets), but these steps are typically modular rather than tightly interdependent across long chains.",
+      "adequacy_evidence": "AI agents can generally sustain performance across these moderate sequences using structured workflows and tools, though some degradation (e.g., missed checks or drift in criteria) can occur over extended validation pipelines.",
+      "_timestamp": "2026-04-06T03:19:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While there are established validation protocols (e.g., ground truth comparison, calibration checks), determining data integrity often depends on context such as sensor characteristics, environmental conditions, and intended use, requiring some interpretive judgment.",
+      "adequacy_evidence": "Current AI agents can follow explicit validation procedures and flag inconsistencies, but they often miss subtle, context-dependent issues (e.g., sensor drift patterns or domain-specific anomalies) without human guidance.",
+      "_timestamp": "2026-04-06T03:19:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying data integrity and accuracy in remote sensing systems is typically an offline quality assurance task where minutes to hours of analysis are acceptable.",
+      "adequacy_evidence": "Current AI agents can perform thorough checks within these relaxed timeframes without needing to truncate reasoning, so speed constraints do not degrade performance.",
+      "_timestamp": "2026-04-06T03:19:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves cross-checking large volumes of heterogeneous data (imagery, metadata, calibration parameters, processing logs) within a single verification episode, where missing or misaligning details can compromise accuracy assessments.",
+      "adequacy_evidence": "Current agents can offload and retrieve context via tools and structured workflows, but still show occasional weaknesses in maintaining consistent state across many interrelated data sources and transformations.",
+      "_timestamp": "2026-04-06T03:19:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Verifying remote sensing data integrity and accuracy often requires comparison against ground truth, calibration records, and domain-specific knowledge of sensors and geospatial artifacts; errors can be subtle and not immediately observable.",
+      "adequacy_evidence": "AI can assist with consistency checks and anomaly detection, but still requires expert review and external validation data; mistakes are not always obvious and verification remains a nontrivial effort.",
+      "_timestamp": "2026-04-06T03:19:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from verifying data integrity and accuracy in remote sensing systems. While certain domains (e.g., defense or classified data) may impose access or security controls, these do not specifically ban AI from performing the task.",
+      "_timestamp": "2026-04-06T03:19:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centers on interpreting and validating remote sensing imagery and derived geospatial data, requiring detailed visual-spatial analysis and cross-modal comparison with metadata or models; text-only input is insufficient.",
+      "adequacy_evidence": "Current AI systems can process and analyze images and geospatial data, but often struggle with fine-grained spatial accuracy, sensor-specific artifacts, and nuanced validation tasks across diverse remote sensing modalities.",
+      "_timestamp": "2026-04-06T03:19:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification often benefits from historical calibration records, prior validation results, and known sensor or algorithm issues, but many checks can be performed on a per-dataset basis using established standards.",
+      "adequacy_evidence": "Agents can store and retrieve prior records via databases, but integration, consistency, and context-sensitive retrieval across projects can still be unreliable in practice.",
+      "_timestamp": "2026-04-06T03:19:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily an internal technical quality assurance activity, with outputs consumed impersonally by systems or technical teams rather than requiring stakeholder interaction with the performer.",
+      "adequacy_evidence": "Since stakeholders do not rely on or engage with the performer directly, acceptance of an AI agent is largely irrelevant and would not affect task effectiveness.",
+      "_timestamp": "2026-04-06T03:19:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in remote sensing data verification can propagate into environmental monitoring, disaster response, or defense applications, where even rare inaccuracies can lead to significant real-world consequences.",
+      "adequacy_evidence": "AI systems can perform consistency checks, anomaly detection, and cross-referencing, but subtle geospatial or calibration errors may still slip through, leaving some residual risk even after standard quality control.",
+      "_timestamp": "2026-04-06T03:19:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "23-1022.00",
+  "task_id": 13003,
+  "task_statement": "Evaluate information from documents, such as claim applications, birth or death certificates, or physician or employer records.",
+  "occupation_title": "Arbitrators, Mediators, and Conciliators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Arbitrators and mediators typically review electronic case files, scanned certificates, and digital records, but in some cases they may examine physical documents provided during proceedings or meetings."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating such documents involves applying rules (e.g., completeness, consistency, legal standards) but also case-based judgment about credibility, relevance, and subtle inconsistencies that develop with experience.",
+      "adequacy_evidence": "Current AI can extract and cross-check information reliably, but often lacks nuanced calibration in weighing conflicting evidence or interpreting context-specific significance, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-05T20:36:12"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple document types (legal forms, medical records, employment records) with some variation in format, terminology, and jurisdiction, but these are largely standardized and well-bounded domains.",
+      "adequacy_evidence": "Extensive public and synthetic data sources exist (legal documents, insurance claims, medical forms), and training pipelines can readily generate representative examples with reasoning traces, leaving little coverage gap.",
+      "_timestamp": "2026-04-05T20:36:12"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating such documents requires interpreting relevance, credibility, and consistency within a legal or dispute-resolution context, where some criteria depend on case specifics and professional judgment rather than fully explicit rules.",
+      "adequacy_evidence": "Current agents can extract and summarize document content well, but often miss nuanced contextual cues (e.g., credibility, legal salience), requiring human iteration to align with true evaluative intent.",
+      "_timestamp": "2026-04-05T20:36:13"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple documents, extracting relevant facts, and synthesizing them into a coherent evaluation, requiring consistency across several interdependent steps but not extremely long sequences.",
+      "adequacy_evidence": "Current AI agents can generally maintain coherence across multi-document review workflows, but performance can degrade with larger document sets or complex cross-referencing, leading to occasional omissions or inconsistencies.",
+      "_timestamp": "2026-04-05T20:36:13"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing multiple heterogeneous documents (legal, medical, administrative records) where small details can materially affect judgments, requiring careful tracking and integration of information within a single episode.",
+      "adequacy_evidence": "Current agents with retrieval and long-context tools can process multiple documents, but still exhibit lapses in cross-document consistency tracking and may miss or misweight critical details under complex loads.",
+      "_timestamp": "2026-04-05T20:36:14"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing and evaluating documents in mediation or arbitration is typically deliberative work, where minutes to hours of analysis are acceptable and expected.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to process and analyze documents without meaningful quality loss, as there is no strict latency pressure.",
+      "_timestamp": "2026-04-05T20:36:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and interpreting textual information from documents such as applications and records; any visual elements (e.g., formatting, seals) are secondary and not central to the reasoning process.",
+      "adequacy_evidence": "Current AI systems handle text extraction (including OCR for scanned documents) and textual analysis reliably, so there is no meaningful shortfall in required modalities.",
+      "_timestamp": "2026-04-05T20:36:15"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Document evaluation often occurs within an ongoing case where prior submissions, earlier records, or evolving case context may matter, but many evaluations can be performed on a self-contained set of documents.",
+      "adequacy_evidence": "Current AI systems with standard retrieval and case-management integrations can reliably store and access prior documents and context across sessions, adequately meeting these modest longitudinal needs.",
+      "_timestamp": "2026-04-05T20:36:15"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misinterpretation of official documents (e.g., claims, vital records, medical or employment records) can materially affect dispute outcomes, legal rights, or financial entitlements, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "With human oversight and standard verification, many AI extraction or interpretation errors can be caught, but subtle contextual or legal misreadings may still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T20:36:16"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Evaluating legal and administrative documents requires careful reading, cross-checking details, and some domain knowledge, but errors can usually be identified through review of source materials and corroboration.",
+      "adequacy_evidence": "Current AI can misinterpret nuanced or conflicting document details, so human verification is still needed, though errors are generally detectable by reviewing the same documents.",
+      "_timestamp": "2026-04-05T20:36:16"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The evaluation of documents informs dispute resolution outcomes that parties rely on, and the evaluator\u2019s credibility and neutrality can matter, but the task itself is largely analytic rather than directly interpersonal.",
+      "adequacy_evidence": "While some stakeholders may accept AI-assisted document review, many would be cautious about an AI independently evaluating evidence in a legal dispute, preferring human judgment for legitimacy and trust.",
+      "_timestamp": "2026-04-05T20:36:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from evaluating information in documents as part of arbitration or mediation support work. While licensed or designated human neutrals are typically required to render final decisions, document review and evaluation itself is not legally restricted from AI assistance.",
+      "_timestamp": "2026-04-05T20:36:17"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2121.01",
+  "task_id": 7430,
+  "task_statement": "Maintain records of engineering department activities, including expense records and details of equipment maintenance and repairs.",
+  "occupation_title": "Marine Engineers and Naval Architects",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Maintaining departmental records is typically done using digital databases, spreadsheets, or accounting systems, but information may sometimes originate from physical maintenance logs, invoices, or on-site equipment checks that require in-person input before recording."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Record-keeping spans different vessel types, maintenance regimes, regulatory reporting formats, and expense categories, creating moderate variation in schemas and edge cases.",
+      "adequacy_evidence": "Abundant examples exist in maintenance logs, CMMS systems, accounting records, and regulatory documentation, and synthetic data can readily cover variations, providing strong process-level training signal.",
+      "_timestamp": "2026-04-05T21:12:52"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining records of expenses and maintenance activities is largely governed by standardized formats, accounting rules, and documentation procedures with minimal reliance on experiential judgment.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured record-keeping rules, categorize entries, and maintain logs without needing tacit calibration beyond explicit instructions.",
+      "_timestamp": "2026-04-05T21:12:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While record-keeping follows established formats and regulatory/logbook requirements, choices about level of detail, categorization, and relevance of activities often depend on engineering context and organizational norms.",
+      "adequacy_evidence": "AI agents can follow templates and infer many documentation conventions, but they may miss implicit expectations (e.g., what anomalies to highlight or how to structure logs for audits) without human guidance.",
+      "_timestamp": "2026-04-05T21:12:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining records involves ongoing, multi-step logging and updating over time, requiring consistency in formatting and completeness but with largely modular, repeatable entries.",
+      "adequacy_evidence": "AI systems with structured data tools and persistence can reliably maintain consistent records across such sequences without meaningful degradation, as tasks are routine and loosely coupled.",
+      "_timestamp": "2026-04-05T21:12:53"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining records of expenses and maintenance activities is primarily a text- and data-entry task involving structured logs, forms, and written documentation, with minimal reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI systems can fully handle text-based recordkeeping, including structured data extraction and organization, with no meaningful multimodal limitations for this task.",
+      "_timestamp": "2026-04-05T21:12:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "The task inherently requires maintaining detailed, cumulative records over long periods (expenses, maintenance histories, repair logs), forming a persistent operational history across many instances.",
+      "adequacy_evidence": "Current AI agents can reliably use external databases, enterprise systems, and retrieval tools to store and access structured longitudinal records, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-05T21:12:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining engineering department records (expenses, maintenance logs) is an administrative task with flexible timelines; minutes or longer delays are typically acceptable.",
+      "adequacy_evidence": "Frontier AI agents can generate, update, and organize such records quickly without needing extended reasoning, well within the available time budget.",
+      "_timestamp": "2026-04-05T21:12:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating and updating multiple structured records (expenses, maintenance logs, repair details), requiring coordination of several information sources within an episode but generally in standardized formats.",
+      "adequacy_evidence": "Current agents with database, spreadsheet, and retrieval tools can reliably track, update, and organize such structured information without significant context loss or compression errors.",
+      "_timestamp": "2026-04-05T21:12:54"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inaccurate records (expenses, maintenance logs) can cause budgeting errors, compliance issues, or maintenance oversights, but these are typically detectable and correctable before causing severe harm.",
+      "adequacy_evidence": "With standard verification (cross-checking logs, invoices, and maintenance schedules), AI-generated records can be reliably audited, leaving minimal residual risk in practice.",
+      "_timestamp": "2026-04-05T21:12:55"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Records can be cross-checked against source documents like invoices, maintenance logs, and equipment reports, but doing so requires careful reconciliation and domain familiarity to catch inconsistencies or omissions.",
+      "adequacy_evidence": "AI systems can structure and summarize records well, but they still make occasional classification or transcription errors, so routine human verification against source materials remains necessary.",
+      "_timestamp": "2026-04-05T21:12:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from maintaining engineering records; while certain logs or records may require human certification or sign-off, the act of recordkeeping itself can be performed by automated systems.",
+      "_timestamp": "2026-04-05T21:12:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily internal record-keeping with outputs consumed impersonally by systems, auditors, or colleagues, without reliance on the performer's identity.",
+      "adequacy_evidence": "Stakeholders generally do not care whether records are maintained by a human or AI as long as they are accurate and compliant, and AI use in such back-office functions is widely accepted.",
+      "_timestamp": "2026-04-05T21:12:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

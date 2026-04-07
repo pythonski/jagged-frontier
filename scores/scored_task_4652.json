@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3021.02",
+  "task_id": 4652,
+  "task_statement": "Contact customers to obtain or relay account information.",
+  "occupation_title": "Billing and Posting Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Contacting customers to obtain or relay account information is typically done via email, messaging systems, or phone from a computer-based customer service or billing system. However, some roles may involve in-person interactions with customers at service counters or offices."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer contact tasks involve moderate variation across customer types, account issues, communication channels, and occasional edge cases like disputes or language differences.",
+      "adequacy_evidence": "Large volumes of call center transcripts, customer service scripts, and synthetic dialogue generation provide strong coverage of interaction patterns and reasoning processes needed for competent performance.",
+      "_timestamp": "2026-04-05T23:07:50"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the interaction follows scripts and procedures, effective communication often requires some experiential judgment (e.g., handling confusion, mild conflict, or tailoring tone to customer responses).",
+      "adequacy_evidence": "Current agents can handle routine scripted exchanges well but show gaps in nuanced conversational calibration, especially in atypical or emotionally sensitive interactions.",
+      "_timestamp": "2026-04-05T23:07:50"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many interactions follow scripts (e.g., requesting missing billing details or providing balances), agents must adapt to customer context, tone, and partially implicit goals like de-escalation or clarifying vague responses.",
+      "adequacy_evidence": "Current LLM-based agents with dialogue management and CRM integration can reliably infer intent, follow scripts, and handle moderate conversational variation with minimal ambiguity-related failures.",
+      "_timestamp": "2026-04-05T23:07:51"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves short to moderately extended interactions (e.g., verifying identity, requesting or providing information, handling follow-up questions) where consistency across several steps matters but sequences are not deeply interdependent or long.",
+      "adequacy_evidence": "Current AI agents can manage multi-turn customer interactions reasonably well, but may show some degradation over longer exchanges (e.g., losing context or consistency), especially when conversations branch or require sustained tracking of details.",
+      "_timestamp": "2026-04-05T23:07:52"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves phone conversations (audio) in addition to text-based communication like email, making basic multimodal capability useful but not central.",
+      "adequacy_evidence": "Current AI systems with speech recognition and synthesis can reliably handle routine customer contact scenarios, with text channels fully covered and voice performance adequate for standard interactions.",
+      "_timestamp": "2026-04-05T23:07:52"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking a customer's account details, identity verification information, and conversational context during a single interaction, but the information volume is limited and structured.",
+      "adequacy_evidence": "Current AI agents can reliably manage short-to-moderate conversational context and retrieve structured account data within a session without significant loss or drift.",
+      "_timestamp": "2026-04-05T23:07:52"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Contacts often rely on prior account history, past communications, and ongoing case status, but this context is typically structured and stored in billing/CRM systems rather than requiring rich longitudinal memory.",
+      "adequacy_evidence": "Current AI agents can reliably integrate with databases and CRM systems to retrieve and update cross-session customer records, so persistent memory needs are well supported.",
+      "_timestamp": "2026-04-05T23:07:52"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer contact typically occurs via phone or chat where responses are expected within seconds to a few minutes, but not instantaneous at sub-second levels.",
+      "adequacy_evidence": "Frontier AI agents can generate accurate, context-aware responses well within these time constraints without needing to truncate reasoning in most cases.",
+      "_timestamp": "2026-04-05T23:07:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interactions can be logged, recorded, and cross-checked against account records, but verifying correctness may require reviewing conversation details and confirming data entry accuracy.",
+      "adequacy_evidence": "AI-generated communications or extracted information can be audited via transcripts and system records, but current systems still make enough mistakes in context handling or data capture that routine human review is needed.",
+      "_timestamp": "2026-04-05T23:07:53"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task directly involves customers who must engage with the caller to provide or receive account information, and responsiveness can depend on trust and clarity of communication.",
+      "adequacy_evidence": "Customers are already somewhat accustomed to automated calls and chatbots, but many still show resistance or reduced cooperation when they realize the interaction is AI-driven, especially for account-related matters.",
+      "_timestamp": "2026-04-05T23:07:54"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors such as miscommunicating account details or failing to properly verify identity can lead to billing issues or customer dissatisfaction, but are usually reversible and not catastrophic.",
+      "adequacy_evidence": "Even with scripts, logging, and verification steps, AI agents can still occasionally misunderstand customers or provide incorrect information, leaving some residual risk that remains operationally relevant.",
+      "_timestamp": "2026-04-05T23:07:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no blanket prohibition on AI contacting customers, but laws like the TCPA (restricting automated calls and prerecorded messages), FDCPA (for debt-related contacts), and privacy regulations (e.g., GLBA, HIPAA) impose constraints on how automated systems can interact and what information can be shared. These create partial restrictions rather than a full ban.",
+      "_timestamp": "2026-04-05T23:07:55"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

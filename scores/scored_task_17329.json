@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1141.02",
+  "task_id": 17329,
+  "task_statement": "Document patients' medical and psychological histories, physical assessment results, diagnoses, treatment plans, prescriptions, or outcomes.",
+  "occupation_title": "Advanced Practice Psychiatric Nurses",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "The task is the recording of clinical information (histories, assessments, diagnoses, plans, prescriptions) into medical records, which is typically done in electronic health record systems and can be completed entirely on a computer without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Psychiatric documentation spans highly diverse conditions, comorbidities, patient populations, and care settings, with substantial variability in presentation, language, and clinical nuance.",
+      "adequacy_evidence": "Large corpora of clinical notes, EHR data (often de-identified), and training materials exist, and synthetic generation is feasible, but privacy constraints and limited access to full-fidelity real-world distributions leave some subpopulations underrepresented.",
+      "_timestamp": "2026-04-06T02:22:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical documentation follows established standards (e.g., SOAP notes, DSM criteria), but requires interpreting patient narratives, selecting salient details, and tailoring entries to clinical context and legal requirements.",
+      "adequacy_evidence": "Current agents can structure and summarize clinical information but often miss nuanced relevance, implicit clinical priorities, or context-specific framing without iterative human guidance.",
+      "_timestamp": "2026-04-06T02:22:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Accurate clinical documentation requires judgment about which details are salient, how to frame psychological symptoms, and how to reflect risk, context, and diagnostic reasoning beyond rote transcription.",
+      "adequacy_evidence": "Current AI can generate structured clinical notes and summarize histories well, but it often lacks nuanced clinical calibration in ambiguous or high-stakes psychiatric contexts (e.g., subtle risk indicators or defensible phrasing).",
+      "_timestamp": "2026-04-06T02:22:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves compiling multi-part clinical documentation (history, assessments, diagnoses, plans) that must remain internally consistent across sections, but each component is somewhat modular rather than tightly interdependent over long action chains.",
+      "adequacy_evidence": "LLM-based agents can generally maintain coherence across clinical notes, but longer or more detailed records can show inconsistencies or omissions as sequence length increases, indicating moderate degradation.",
+      "_timestamp": "2026-04-06T02:22:36"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Clinical documentation of histories, assessments, and treatment plans is typically completed during or after patient encounters, with minutes to hours available rather than strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can produce high-quality structured documentation well within these timeframes, with no meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-06T02:22:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate documentation requires maintaining comprehensive longitudinal patient records across many encounters, including evolving histories, diagnoses, and treatment responses over time.",
+      "adequacy_evidence": "Current systems can store and retrieve structured patient records effectively, but LLM agents still show inconsistencies in reliably integrating and surfacing the most relevant historical context across sessions.",
+      "_timestamp": "2026-04-06T02:22:37"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large, heterogeneous patient data (history, mental status, diagnoses, medications, and outcomes) within a single documentation episode, where missing details can affect clinical accuracy.",
+      "adequacy_evidence": "Well-scaffolded agents can manage long clinical contexts with retrieval and structuring tools, but still show occasional omissions or compression errors when handling dense, multi-source medical information.",
+      "_timestamp": "2026-04-06T02:22:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Clinical documentation involves nuanced interpretation of patient histories, symptoms, and assessments where errors can be subtle (e.g., omissions, mischaracterizations) and often require domain expertise and cross-referencing to detect.",
+      "adequacy_evidence": "Current AI systems frequently introduce or misinterpret clinical details and lack reliable grounding in patient-specific context, making errors both common and difficult to catch without thorough expert review.",
+      "_timestamp": "2026-04-06T02:22:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the documentation itself is text-based, it depends on interpreting non-text inputs such as patient speech, affect, behavior, and physical assessment findings that must be translated into written records.",
+      "adequacy_evidence": "Current agents can process transcripts and some visual/audio inputs, but they are less reliable at capturing subtle behavioral cues, affect, and nuanced clinical observations needed for high-quality psychiatric documentation.",
+      "_timestamp": "2026-04-06T02:22:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clinical documentation directly informs diagnoses, treatment plans, and legal medical records; even small residual errors can lead to inappropriate care, medication mistakes, or liability issues.",
+      "adequacy_evidence": "While human review can catch many issues, AI systems still exhibit omission, misinterpretation, or hallucination risks in nuanced clinical narratives, leaving some non-trivial residual risk even after checking.",
+      "_timestamp": "2026-04-06T02:22:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves recording sensitive patient information that patients and clinical teams rely on, and patients may care about who is handling their psychiatric data, though the task itself is primarily documentation.",
+      "adequacy_evidence": "Many patients and clinicians would be cautious or uncomfortable with AI documenting psychiatric histories due to privacy and trust concerns, but acceptance is growing for AI-assisted scribing, making resistance moderate rather than prohibitive.",
+      "_timestamp": "2026-04-06T02:22:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Clinical documentation, diagnoses, and prescriptions must be attributed to and signed by licensed practitioners under healthcare regulations; AI cannot legally act as the responsible provider. However, AI can assist with drafting and data entry under supervision, so restrictions are partial rather than a full prohibition.",
+      "_timestamp": "2026-04-06T02:22:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1299.03",
+  "task_id": 16239,
+  "task_statement": "Identify and classify documents or other electronic content according to characteristics such as security level, function, and metadata.",
+  "occupation_title": "Document Management Specialists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "The task explicitly concerns identifying and classifying electronic documents or content using attributes like security level and metadata, which is performed within document management or information systems on a computer."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many classification schemes are rule-based (e.g., predefined security levels and metadata standards), edge cases often require experience-based judgment about document context, sensitivity, or organizational norms.",
+      "adequacy_evidence": "Frontier AI systems can reliably apply classification rules and emulate case-based judgment using large corpora and examples, handling most context-sensitive distinctions with minimal residual gap.",
+      "_timestamp": "2026-04-05T21:51:43"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Classification schemes (e.g., security levels, functional categories) are often organization-specific and involve implicit rules, edge cases, and contextual interpretation beyond explicit metadata.",
+      "adequacy_evidence": "Current agents can apply defined taxonomies with examples but often misinterpret nuanced or context-dependent criteria, requiring human clarification and iterative correction.",
+      "_timestamp": "2026-04-05T21:51:44"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied document types, organizational taxonomies, and security classification schemes, but follows recurring patterns (e.g., metadata fields, policy-driven labels) rather than a highly long-tailed space.",
+      "adequacy_evidence": "Large corpora of documents and classification examples exist, and synthetic or policy-based labeling can be generated, but truly representative data for proprietary security schemes and internal classification rules is often private and only partially accessible.",
+      "_timestamp": "2026-04-05T21:51:44"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple attributes (security level, function, metadata) across documents within a session, requiring some organization and retrieval but not extreme scale or complexity.",
+      "adequacy_evidence": "Current AI agents can reliably manage and structure this level of information using standard tooling (e.g., chunking, metadata schemas, retrieval), with minimal loss or drift within an episode.",
+      "_timestamp": "2026-04-05T21:51:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Consistent classification often depends on previously established taxonomies, labeling conventions, and organizational policies that evolve over time, requiring some cross-session continuity.",
+      "adequacy_evidence": "Current agents can use databases, retrieval systems, and persistent storage to maintain and apply classification schemes, but may inconsistently track evolving standards or prior decisions without careful system design.",
+      "_timestamp": "2026-04-05T21:51:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves analyzing textual content and structured metadata (e.g., tags, fields) to classify documents; any non-text inputs like scanned PDFs can be reduced to text via OCR.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing handle these limited multimodal aspects reliably, so non-text modalities do not present a meaningful bottleneck.",
+      "_timestamp": "2026-04-05T21:51:47"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Document classification tasks are typically applied independently to each document, with minimal need for long, interdependent sequences across items.",
+      "adequacy_evidence": "AI systems can consistently classify documents across batches without meaningful degradation, as each classification is a short, self-contained operation.",
+      "_timestamp": "2026-04-05T21:51:47"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Document classification is often done in batch workflows or with seconds-level response expectations, not strict real-time constraints, though some systems may require moderate throughput.",
+      "adequacy_evidence": "Frontier AI systems can classify documents accurately within seconds, and do not require long reasoning chains, so meeting typical latency needs does not degrade quality.",
+      "_timestamp": "2026-04-05T21:51:47"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misclassification of documents\u2014especially by security level\u2014can expose sensitive information or restrict critical access, leading to legal, compliance, or operational consequences even if errors are rare.",
+      "adequacy_evidence": "With human review or rule-based validation, many AI errors can be caught, but edge cases (e.g., subtle contextual sensitivity) mean some residual risk remains that is not fully eliminated.",
+      "_timestamp": "2026-04-05T21:51:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification typically involves checking document content against classification policies and metadata rules; this requires some domain knowledge and careful review, but errors are usually detectable through inspection or audit trails.",
+      "adequacy_evidence": "Current AI can classify documents reasonably well but still mislabels edge cases or nuanced security levels, so routine human review or sampling is needed to catch mistakes.",
+      "_timestamp": "2026-04-05T21:51:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Document classification is typically an internal, process-oriented task where outputs are consumed by systems or workflows rather than requiring direct stakeholder engagement with the performer.",
+      "adequacy_evidence": "Organizations already widely accept automated and AI-assisted classification tools; performer identity is largely irrelevant as long as outputs meet accuracy and compliance standards.",
+      "_timestamp": "2026-04-05T21:51:48"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from classifying documents by security level, function, or metadata. While data protection and security regulations (e.g., HIPAA, FISMA) impose handling requirements, they do not ban AI use for this task.",
+      "_timestamp": "2026-04-05T21:51:48"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

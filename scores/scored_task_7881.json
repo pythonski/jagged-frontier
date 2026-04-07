@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9011.00",
+  "task_id": 7881,
+  "task_statement": "Maintain treatment records.",
+  "occupation_title": "Massage Therapists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Treatment records are often maintained in electronic health record or scheduling systems that can be updated on a computer, but many massage therapy practices still use paper charts or forms that require physical handling."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining treatment records involves repeated, structured documentation steps across sessions, requiring consistency and continuity but not long tightly coupled action chains within a single episode.",
+      "adequacy_evidence": "AI systems with proper scaffolding (templates, EHR integration) can reliably sustain consistency across these moderate-length documentation sequences with minimal degradation.",
+      "_timestamp": "2026-04-06T05:29:17"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining treatment records follows structured formats (e.g., SOAP notes) but requires some judgment about what client responses, symptoms, and therapist observations are clinically relevant to document.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably capture and organize relevant details from structured inputs or transcripts, and the required judgment is largely codifiable and reproducible from examples.",
+      "_timestamp": "2026-04-06T05:29:17"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining treatment records follows generally explicit standards (e.g., documenting techniques used, client responses, and session details), but some judgment is needed about what details are clinically or legally relevant.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably follow documentation templates and infer appropriate content from inputs, with minimal difficulty resolving the modest contextual ambiguity involved.",
+      "_timestamp": "2026-04-06T05:29:17"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Treatment records vary across client conditions, session types, and documentation styles (e.g., SOAP notes), but follow broadly standardized structures within massage therapy practice.",
+      "adequacy_evidence": "There is abundant accessible documentation guidance, templates, and de-identified clinical note examples, and synthetic data can readily cover remaining variation, providing sufficient training signal.",
+      "_timestamp": "2026-04-06T05:29:17"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining treatment records involves tracking client details, session notes, techniques used, and responses within a single documentation episode, requiring moderate organization and recall of multiple data points.",
+      "adequacy_evidence": "Current AI systems can reliably manage and structure this level of information within a single session using standard note-taking, form-filling, and retrieval tools without significant loss or confusion.",
+      "_timestamp": "2026-04-06T05:29:18"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintaining treatment records requires tracking each client\u2019s history across many sessions, including prior conditions, treatments applied, and evolving responses over time.",
+      "adequacy_evidence": "Current AI systems integrated with standard databases or EHR-style tools can reliably store, update, and retrieve longitudinal client records across sessions with minimal technical limitation.",
+      "_timestamp": "2026-04-06T05:29:18"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining treatment records primarily involves documenting client information, session details, and treatment notes in text form; any diagrams or body charts are supplementary rather than essential.",
+      "adequacy_evidence": "Current AI systems can reliably generate and manage structured text records, and can handle optional simple diagrammatic inputs if needed, so there is no meaningful multimodal gap.",
+      "_timestamp": "2026-04-06T05:29:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining treatment records is typically done after sessions or in administrative time, with minutes or longer acceptable; there is no real-time decision pressure.",
+      "adequacy_evidence": "AI systems can generate and organize treatment notes quickly within this relaxed time window, so latency does not meaningfully constrain quality.",
+      "_timestamp": "2026-04-06T05:29:19"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Treatment records are used by clients, insurers, and regulators, so external stakeholders rely on the output, though the identity of the record-keeper is not central.",
+      "adequacy_evidence": "Stakeholders are generally indifferent to whether records are maintained by a human or AI as long as they are accurate and compliant, and digital record systems are already widely accepted.",
+      "_timestamp": "2026-04-06T05:29:19"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Treatment records guide future sessions and document client conditions, so errors can affect care quality or miss contraindications, but consequences are typically not severe or irreversible.",
+      "adequacy_evidence": "With standard review and structured templates, AI-generated records can be checked easily, leaving minimal residual risk in this relatively low-stakes documentation task.",
+      "_timestamp": "2026-04-06T05:29:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws prohibiting AI systems from maintaining treatment records for massage therapy. Regulations (e.g., HIPAA, state licensure rules) require confidentiality and practitioner responsibility, but they do not forbid the use of AI tools to assist with recordkeeping.",
+      "_timestamp": "2026-04-06T05:29:20"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Treatment records are structured and based on observable session details, making errors (e.g., wrong techniques, durations, or client notes) generally detectable through routine review, though it requires some care and domain familiarity.",
+      "adequacy_evidence": "AI can generate plausible but occasionally inaccurate or fabricated details, so practitioners would need to review outputs against actual session events, creating a moderate but manageable verification burden.",
+      "_timestamp": "2026-04-06T05:29:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

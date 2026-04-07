@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2081.00",
+  "task_id": 5302,
+  "task_statement": "Check tax forms to verify that names and taxpayer identification numbers are correct, that computations have been performed correctly, or that amounts match those on supporting documentation.",
+  "occupation_title": "Tax Examiners and Collectors, and Revenue Agents",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Tax examiners commonly review electronic tax filings and digital records using tax processing systems, but a substantial minority of cases still involve handling or verifying paper tax forms and physical supporting documents."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of rule-based verification (matching names, IDs, computations, and documents) that follows explicit procedures and standards with little need for experiential judgment.",
+      "adequacy_evidence": "Current AI systems with tool use can reliably perform deterministic checks, cross-reference documents, and validate computations without needing tacit calibration.",
+      "_timestamp": "2026-04-05T23:27:12"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple tax form types, filing scenarios, and edge cases (e.g., amended returns, mismatched documentation), but remains largely structured and rule-governed rather than highly open-ended.",
+      "adequacy_evidence": "Tax forms, instructions, validation rules, and worked examples are widely available, and synthetic data can cover variations; the processes for checking computations and matching fields are well-documented and learnable.",
+      "_timestamp": "2026-04-05T23:27:12"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task has explicit, rule-based criteria: matching names and TINs, verifying arithmetic, and checking consistency with supporting documents, all of which are well-defined in tax regulations and procedures.",
+      "adequacy_evidence": "Current AI agents can reliably follow explicit validation rules, cross-check fields, and compare documents, with little difficulty inferring intent or resolving ambiguity in this structured context.",
+      "_timestamp": "2026-04-05T23:27:12"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires comparing multiple fields across tax forms and supporting documents, tracking names, IDs, and numerical consistency, but the information volume is structured and bounded within a single case.",
+      "adequacy_evidence": "Frontier agents with tool use can reliably parse, store, and cross-check structured document data within a session, with minimal risk of losing or mismanaging relevant context.",
+      "_timestamp": "2026-04-05T23:27:13"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is performed on individual tax filings using the forms and supporting documents provided, with little to no need for information from prior cases or sessions.",
+      "adequacy_evidence": "Since the task is largely self-contained per instance, current AI systems do not require persistent cross-session memory to perform it effectively.",
+      "_timestamp": "2026-04-05T23:27:13"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and verifying textual and numerical information on tax forms and supporting documents; any images are simply containers for text rather than requiring visual reasoning.",
+      "adequacy_evidence": "Current AI systems with OCR and document parsing handle text extraction from forms reliably, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-05T23:27:13"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing tax forms for correctness is typically a back-office task with no real-time interaction; analysts can take minutes per case without issue.",
+      "adequacy_evidence": "Frontier AI systems can perform these checks well within the available time budget, so latency does not meaningfully constrain quality.",
+      "_timestamp": "2026-04-05T23:27:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors can lead to incorrect tax liabilities, delays, or compliance issues, but they are typically detectable and correctable through audits or subsequent reviews rather than causing irreversible harm.",
+      "adequacy_evidence": "With standard validation checks (e.g., rule-based verification, cross-document matching), AI systems can reduce residual errors to a level comparable to human performance, leaving little unacceptable risk after quality control.",
+      "_timestamp": "2026-04-05T23:27:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "The task involves straightforward cross-checks (names, TIN formats, arithmetic, and matching against documents) that are highly structured and often supported by automated validation rules, making errors relatively easy to detect.",
+      "adequacy_evidence": "Current AI can perform these checks but still makes occasional extraction or matching errors, so human or automated verification is still needed, though the process itself remains relatively simple.",
+      "_timestamp": "2026-04-05T23:27:15"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from checking tax forms for accuracy; such validation tasks are already partially automated within tax administration systems. While privacy and data handling rules apply, they do not restrict AI use for this function.",
+      "_timestamp": "2026-04-05T23:27:16"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily an internal verification process; outputs are used within the agency and do not require direct stakeholder interaction or acceptance of the performer\u2019s identity.",
+      "adequacy_evidence": "Since there are no direct stakeholders engaging with the performer, acceptance of an AI agent is not a meaningful constraint in this context.",
+      "_timestamp": "2026-04-05T23:27:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple checks (identity fields, computations, cross-document matching), but these are largely modular and only loosely interdependent rather than forming a long, tightly coupled sequence.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute structured, multi-step verification workflows without significant degradation, especially when steps are decomposed and tool-assisted.",
+      "_timestamp": "2026-04-06T11:26:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

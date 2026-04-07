@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3031.00",
+  "task_id": 22104,
+  "task_statement": "Check all layers of maps to ensure accuracy, identifying and marking errors and making corrections.",
+  "occupation_title": "Surveying and Mapping Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Checking map layers and correcting errors is typically done in GIS or digital mapping software on a computer, which can be performed remotely. However, some instances may involve reviewing or marking corrections on printed map sheets or physical plot outputs."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While accuracy checking relies on established cartographic standards and known data sources, identifying errors across map layers often involves context-dependent judgments about alignment, scale, projection, and feature consistency.",
+      "adequacy_evidence": "Current AI agents can apply explicit rules and detect many inconsistencies, but they often miss subtle, context-specific discrepancies or fail to infer intended representations without human clarification.",
+      "_timestamp": "2026-04-05T21:04:07"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different map types, coordinate systems, data sources, and geographic contexts, but follows fairly standardized GIS validation and correction procedures.",
+      "adequacy_evidence": "There is substantial geospatial data (e.g., OpenStreetMap, satellite imagery, GIS error-checking workflows), but detailed labeled examples of nuanced, real-world error detection and correction processes are somewhat limited and uneven across contexts.",
+      "_timestamp": "2026-04-05T21:04:07"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many map accuracy checks follow explicit geospatial rules (e.g., topology, alignment, projection consistency), technicians rely on experience to spot subtle inconsistencies, contextual anomalies, or implausible features not captured by formal rules.",
+      "adequacy_evidence": "AI systems with GIS tooling can handle rule-based validation and many pattern inconsistencies, but they still struggle with nuanced, context-dependent judgment calls (e.g., terrain plausibility or local feature interpretation) that experienced technicians handle more reliably.",
+      "_timestamp": "2026-04-05T21:04:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves iterating through multiple map layers and consistently applying accuracy checks and corrections, requiring sustained attention across a sequence of related but somewhat modular steps.",
+      "adequacy_evidence": "AI agents can handle sequential review workflows reasonably well, but over many layers may exhibit mild degradation such as missed inconsistencies or reduced attention to prior corrections.",
+      "_timestamp": "2026-04-05T21:04:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on visual and spatial analysis of map layers (e.g., geometry, alignment, topography), which cannot be reduced to text-only inputs or outputs.",
+      "adequacy_evidence": "Current AI systems can process geospatial and image data reasonably well with tools, but still struggle with fine-grained spatial discrepancies, complex layer interactions, and subtle cartographic errors.",
+      "_timestamp": "2026-04-05T21:04:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple map layers, features, and annotations, requiring comparison and tracking of discrepancies across sources, but can be structured and chunked using GIS tools.",
+      "adequacy_evidence": "Agents can use tools to inspect layers and track issues, but may lose context or inconsistently track multiple discrepancies across complex maps, leading to moderate reliability issues.",
+      "_timestamp": "2026-04-05T21:04:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many checks are performed per map or project, technicians often benefit from prior project data, version histories, and previously identified error patterns to ensure consistency across updates.",
+      "adequacy_evidence": "Current AI systems integrated with GIS tools and databases can reliably store, retrieve, and apply cross-session project data and version histories, meeting these moderate memory needs.",
+      "_timestamp": "2026-04-05T21:04:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Map layer validation and correction is typically a deliberate, offline quality-control process where minutes to hours per dataset are acceptable.",
+      "adequacy_evidence": "AI systems can take sufficient time to perform detailed checks and reasoning without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T21:04:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Map accuracy underpins surveying, construction, and navigation; even small residual errors in layers (e.g., boundaries, elevations, utilities) can propagate into costly or safety-relevant downstream mistakes, so tolerance for error is very low.",
+      "adequacy_evidence": "With automated and human-in-the-loop checks, AI can catch many inconsistencies, but subtle geospatial misalignments or context-specific errors may still slip through, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-05T21:04:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal quality-control activity on map data with no direct interaction with clients or stakeholders where performer identity matters.",
+      "adequacy_evidence": "Mapping workflows already incorporate automated validation tools, and stakeholders generally do not require or expect a human to perform this specific checking task.",
+      "_timestamp": "2026-04-05T21:04:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying map layer accuracy requires domain knowledge and use of GIS tools (e.g., topology checks, coordinate validation, cross-referencing with survey data), and some misalignments or projection errors are not immediately obvious.",
+      "adequacy_evidence": "AI can assist in detecting inconsistencies, but its outputs still require human review using GIS validation workflows, as subtle spatial or projection errors are not reliably caught automatically.",
+      "_timestamp": "2026-04-05T21:04:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Surveying outputs, especially those tied to legal boundaries or official records, often require oversight and sign-off by a licensed surveyor. While AI can assist in error checking and map correction, regulations typically require a human licensee to be responsible for the final product, creating partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-05T21:04:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

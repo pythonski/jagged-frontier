@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3031.02",
+  "task_id": 8882,
+  "task_statement": "Approve, reject, or coordinate the approval or rejection of lines of credit or commercial, real estate, or personal loans.",
+  "occupation_title": "Financial Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Loan approval decisions are typically made by reviewing digital applications, credit reports, and financial documents through banking systems. However, some cases involve in-person meetings, site visits for commercial or real estate lending, or handling physical documentation."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Loan approval involves interpreting soft information (management quality, borrower credibility, local market conditions) and making judgment calls on exceptions that are not fully captured by formal underwriting rules.",
+      "adequacy_evidence": "Current agents can replicate rule-based underwriting and analyze structured data well, but show weaker calibration on nuanced, context-heavy cases and soft signals that experienced financial managers use.",
+      "_timestamp": "2026-04-05T22:30:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan approval relies on formal underwriting criteria but also involves contextual judgment about risk tolerance, borrower intent, and exceptions that are not fully codified.",
+      "adequacy_evidence": "Current AI can apply explicit rules and analyze financial data but often misses institution-specific risk preferences or nuanced contextual factors, requiring human oversight to resolve ambiguity.",
+      "_timestamp": "2026-04-05T22:30:12"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Loan approval spans highly heterogeneous cases across borrower types, industries, geographies, macroeconomic conditions, and loan products, with many edge cases and context-specific factors influencing decisions.",
+      "adequacy_evidence": "While there is abundant public financial data, regulations, and some case studies, much high-quality underwriting data and decision rationales are proprietary within financial institutions, leaving gaps that are only partially addressable through synthesis or limited disclosures.",
+      "_timestamp": "2026-04-05T22:30:12"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Loan approval involves multi-step workflows (data collection, credit analysis, risk assessment, compliance checks, and coordination with stakeholders), but these steps are structured and modular rather than tightly interdependent over long horizons.",
+      "adequacy_evidence": "LLM-based agents can generally handle such structured multi-step processes with tooling, though some degradation appears in maintaining consistency across steps (e.g., constraint tracking or rationale alignment) in longer or more complex cases.",
+      "_timestamp": "2026-04-05T22:30:12"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Loan approval requires synthesizing large, heterogeneous information sets (financial statements, credit reports, collateral details, market conditions, and policy constraints) where missing a key detail can materially affect risk assessment.",
+      "adequacy_evidence": "Current agents can ingest and summarize large document sets with tooling, but still show occasional context loss or misweighting of details across long, multi-document workflows.",
+      "_timestamp": "2026-04-05T22:30:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Loan approval decisions typically occur over minutes to days, involving document review, risk assessment, and possibly committee input; real-time or sub-minute responses are not required.",
+      "adequacy_evidence": "Frontier AI systems can perform detailed analysis well within these generous time windows, so extended reasoning does not conflict with latency constraints.",
+      "_timestamp": "2026-04-05T22:30:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Loan approval decisions are primarily based on textual and numerical data such as financial statements, credit reports, and written applications; non-text modalities are not central to the task.",
+      "adequacy_evidence": "Since the task is fundamentally text- and data-driven, current AI systems can handle the required modalities without meaningful limitation.",
+      "_timestamp": "2026-04-05T22:30:15"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Loan approval decisions depend on complex financial data, risk models, regulatory compliance, and nuanced judgment; errors (e.g., misassessing creditworthiness or missing fraud signals) are often subtle and may only surface after significant time or loss, requiring expert review to detect.",
+      "adequacy_evidence": "Current AI systems can assist with analysis but still make non-obvious reasoning and data-integration errors, so outputs require thorough expert verification across documents and assumptions, making the checking burden substantial.",
+      "_timestamp": "2026-04-05T22:30:16"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Loan approval decisions directly affect applicants, regulators, and internal stakeholders, and depend heavily on perceived authority, accountability, and legitimacy of the decision-maker.",
+      "adequacy_evidence": "While automated underwriting is already used and somewhat accepted, many stakeholders\u2014especially for large or complex loans\u2014still expect human oversight, limiting full acceptance of an AI agent in this role.",
+      "_timestamp": "2026-04-05T22:30:16"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Loan approval decisions carry significant financial, legal, and reputational consequences, including credit losses and regulatory violations, so even rare residual errors can have major downstream impact.",
+      "adequacy_evidence": "Even with strong review processes, current AI systems can exhibit unpredictable judgment errors or bias in edge cases, leaving some non-negligible residual risk that institutions would find problematic without human oversight.",
+      "_timestamp": "2026-04-05T22:30:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Loan approval decisions regularly depend on prior client history (e.g., past loans, repayment behavior, relationship history), but this information is typically stored in structured financial systems rather than relying on human memory.",
+      "adequacy_evidence": "Current AI agents can reliably access and retrieve cross-session data from databases, CRMs, and credit systems, so maintaining longitudinal context is well-supported by existing infrastructure.",
+      "_timestamp": "2026-04-05T22:30:17"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "US regulations (e.g., ECOA, FCRA, fair lending laws, and model risk management guidance) govern how credit decisions are made but do not prohibit automated or AI-driven underwriting. AI systems are already used in loan approval processes, provided compliance, explainability, and nondiscrimination requirements are met.",
+      "_timestamp": "2026-04-05T22:30:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

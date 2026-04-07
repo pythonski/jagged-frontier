@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9081.00",
+  "task_id": 5158,
+  "task_statement": "Correct or record omissions, errors, or inconsistencies found.",
+  "occupation_title": "Proofreaders and Copy Markers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most proofreading and error correction is now done directly in digital documents using word processors or publishing software, but some instances still involve marking corrections on printed proofs or physical materials."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Proofreading spans varied document types (technical, legal, creative) and style conventions, but the underlying error types (grammar, spelling, consistency) are well-bounded and recurrent.",
+      "adequacy_evidence": "Large corpora with edits (e.g., tracked changes, revision histories, synthetic error-correction datasets) provide rich, process-level supervision, and agents can be further trained via synthetic error injection and correction tasks.",
+      "_timestamp": "2026-04-06T03:56:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Proofreading relies on explicit rules (grammar, spelling, style guides) but also requires context-sensitive judgments about meaning, tone, and consistency with author intent or house style.",
+      "adequacy_evidence": "Current AI handles explicit corrections well but still misses subtle contextual cues or intent, often requiring human review to resolve ambiguous or stylistic decisions.",
+      "_timestamp": "2026-04-06T03:56:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Most proofreading tasks rely on explicit rules (grammar, spelling, style guides), but some cases require judgment about tone, consistency, or author intent that develops with experience.",
+      "adequacy_evidence": "Current AI systems handle rule-based corrections well but show uneven calibration in nuanced stylistic or context-dependent decisions, leading to occasional overcorrections or missed subtleties.",
+      "_timestamp": "2026-04-06T03:56:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Proofreading involves scanning through entire documents and applying consistent corrections across many localized edits, but most corrections are not tightly interdependent or sequentially cascading.",
+      "adequacy_evidence": "AI systems can maintain reasonable consistency over typical document lengths, but performance degrades somewhat on longer texts with missed errors or inconsistency in applied corrections.",
+      "_timestamp": "2026-04-06T03:56:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Proofreading requires tracking multiple elements within a document (grammar, style consistency, prior corrections, and cross-references), but the information is typically bounded within a single text and manageable with structured attention.",
+      "adequacy_evidence": "Current agents handle long documents reasonably well but still lose or inconsistently apply context (e.g., style rules or earlier corrections) across passages, especially in longer or more detailed texts.",
+      "_timestamp": "2026-04-06T03:56:28"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Proofreading tasks center on detecting and correcting textual errors and inconsistencies, with input and output almost entirely in written text form.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI systems already handle the modality requirements without limitation.",
+      "_timestamp": "2026-04-06T03:56:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Proofreading and correcting errors is typically done with flexible deadlines (minutes to hours or longer), not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform high-quality proofreading within these relaxed time constraints without needing to truncate reasoning, so speed does not degrade performance.",
+      "_timestamp": "2026-04-06T03:56:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Detecting omissions, inconsistencies, and subtle language errors requires careful reading and some expertise, but issues are typically visible in the text and can be checked against style guides or source material.",
+      "adequacy_evidence": "Current AI proofreading tools catch many surface errors but still miss nuanced issues or introduce changes, so human review remains necessary though not prohibitively difficult.",
+      "_timestamp": "2026-04-06T03:56:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements prohibiting AI from performing proofreading tasks such as correcting or recording errors. While some regulated industries may require human review or sign-off, this does not bar AI from performing the task itself.",
+      "_timestamp": "2026-04-06T03:56:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is typically an internal quality-control function where corrections are applied to text without requiring direct stakeholder interaction or reliance on the proofreader\u2019s identity.",
+      "adequacy_evidence": "Stakeholders are generally indifferent to whether corrections are made by humans or AI, and AI proofreading tools are already widely accepted in this context.",
+      "_timestamp": "2026-04-06T03:56:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Residual errors in proofreading tasks (e.g., minor typos or inconsistencies) are typically low-stakes and rarely cause severe or irreversible consequences, making the task relatively forgiving.",
+      "adequacy_evidence": "With standard human or automated review processes in place, current AI systems can reduce errors to an acceptable level, and remaining mistakes are generally minor and tolerable.",
+      "_timestamp": "2026-04-06T03:56:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many proofreading tasks are document-specific, consistent correction often depends on retained knowledge of client style guides, prior corrections, or recurring error patterns across documents.",
+      "adequacy_evidence": "Current agents can store and retrieve style guides or prior edits using external memory tools, but they still inconsistently maintain and apply this context across sessions without careful system design.",
+      "_timestamp": "2026-04-06T03:56:30"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

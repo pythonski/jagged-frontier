@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.00",
+  "task_id": 8957,
+  "task_statement": "Prepare data for processing by organizing information, checking for inaccuracies, and adjusting and weighting the raw data.",
+  "occupation_title": "Statisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Preparing data by organizing, checking for errors, and adjusting or weighting datasets is typically performed using statistical software or spreadsheets on a computer. While raw data may originate from physical sources, the preparation work itself is almost always done digitally."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Data preparation in statistics spans highly heterogeneous datasets (different domains, formats, missingness patterns, sampling schemes, and weighting requirements), with many domain-specific edge cases.",
+      "adequacy_evidence": "There is extensive public and synthetic data plus documented workflows for cleaning and preprocessing, but coverage of proprietary datasets, rare data pathologies, and domain-specific weighting practices remains incomplete.",
+      "_timestamp": "2026-04-06T03:59:24"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Data cleaning and weighting often involve judgment about outliers, missingness, and appropriate transformations that depend on contextual understanding and prior experience, though many guidelines are codified.",
+      "adequacy_evidence": "Current AI can apply standard preprocessing heuristics but lacks reliable calibration in edge cases (e.g., subtle bias, domain-specific weighting choices), leading to moderate gaps in non-routine situations.",
+      "_timestamp": "2026-04-06T03:59:24"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Data preparation choices (e.g., handling missing values, outlier treatment, weighting schemes) depend on the study design, downstream analysis, and domain context, which are often only partially specified in the task description.",
+      "adequacy_evidence": "Current agents can propose reasonable defaults and infer common objectives, but they often misalign with implicit analytical goals or domain-specific conventions, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T03:59:25"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data preparation by statisticians is typically batch-oriented and can take minutes to hours; there is rarely a need for immediate or real-time turnaround.",
+      "adequacy_evidence": "AI agents can perform data cleaning and preprocessing within acceptable timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T03:59:25"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data preparation for statisticians primarily involves structured numeric and textual data (tables, datasets, metadata), with minimal reliance on images, audio, or other non-text modalities.",
+      "adequacy_evidence": "Since the task is fundamentally text/tabular-data based, current AI agents already handle these modalities well and no significant multimodal gap is relevant.",
+      "_timestamp": "2026-04-06T03:59:25"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Data preparation involves multi-step workflows (cleaning, validation, transformation, weighting) where earlier decisions affect later steps, but sequences are typically modular and decomposable rather than tightly interdependent over long horizons.",
+      "adequacy_evidence": "Well-scaffolded AI agents with code execution and validation loops can reliably maintain consistency across these pipelines, with minimal degradation over the moderate sequence lengths involved.",
+      "_timestamp": "2026-04-06T03:59:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Data preparation often benefits from remembering prior cleaning rules, schema decisions, and weighting conventions within a project or across similar datasets, but many instances can still be executed with the information provided in the current dataset and documentation.",
+      "adequacy_evidence": "Current agents can persist project context via external tools (files, databases, pipelines), but they do not reliably retain or recall such context across sessions without explicit setup, leading to moderate gaps.",
+      "_timestamp": "2026-04-06T03:59:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in data preparation can affect downstream statistical results, but standard validation, audits, and redundancy typically make occasional residual mistakes survivable rather than catastrophic.",
+      "adequacy_evidence": "With automated checks (e.g., validation rules, summaries, anomaly detection) and human review, AI-generated data prep outputs can be reliably verified, leaving minimal residual risk.",
+      "_timestamp": "2026-04-06T03:59:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Data preparation involves tracking multiple variables, transformations, and data quality checks, but most information is structured and managed within data-processing tools rather than held in active memory.",
+      "adequacy_evidence": "LLM agents using tools like pandas or SQL can externalize and reliably manage large datasets, maintaining state through code and intermediate outputs with minimal loss of information.",
+      "_timestamp": "2026-04-06T03:59:27"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Data preparation errors (e.g., mis-specified weights, improper handling of missing values) often require statistical expertise and careful inspection to detect, though many validation checks can be partially automated.",
+      "adequacy_evidence": "Current AI systems can perform data cleaning and transformation but still make non-obvious mistakes (e.g., incorrect assumptions about distributions or coding schemes), requiring a knowledgeable human to review outputs with moderate effort.",
+      "_timestamp": "2026-04-06T03:59:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations that prohibit AI from preparing and cleaning data; this task can be performed by automated systems. While sector-specific data privacy or handling rules may apply, they regulate how data is managed, not whether AI can perform the task.",
+      "_timestamp": "2026-04-06T03:59:28"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data preparation is typically an internal, technical preprocessing step with outputs consumed impersonally by downstream analyses or systems, not requiring stakeholder interaction or trust in the preparer\u2019s identity.",
+      "adequacy_evidence": "Since there are effectively no external stakeholders whose acceptance depends on performer identity, AI use in this role faces little to no resistance and is already common in practice.",
+      "_timestamp": "2026-04-06T03:59:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

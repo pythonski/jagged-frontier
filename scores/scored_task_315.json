@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1031.00",
+  "task_id": 315,
+  "task_statement": "Consult with physicians and health care personnel to determine nutritional needs and diet restrictions of patient or client.",
+  "occupation_title": "Dietitians and Nutritionists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Consultations with physicians and healthcare staff are often conducted through electronic health records, messaging systems, phone, or video meetings, allowing remote collaboration. However, many instances occur in person during hospital rounds or on-site care coordination."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining nutritional needs in consultation with clinicians requires integrating comorbidities, medications, lab trends, and patient-specific factors, often relying on experience-based clinical judgment beyond formal guidelines.",
+      "adequacy_evidence": "AI systems can apply clinical nutrition guidelines and synthesize patient data, but they show gaps in nuanced, context-sensitive judgment and interdisciplinary calibration in complex or atypical cases.",
+      "_timestamp": "2026-04-05T21:03:02"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous clinical contexts (different diseases, comorbidities, ages, cultural diets, care settings) and requires adapting to diverse physician inputs and patient-specific constraints.",
+      "adequacy_evidence": "There is extensive coverage in medical literature, clinical guidelines, and case examples, but real-world interdisciplinary consultation patterns and rare or complex patient cases are often locked in private clinical data, leaving some gaps that require synthesis.",
+      "_timestamp": "2026-04-05T21:03:03"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While clinical data and physician orders provide explicit inputs, determining appropriate nutrition plans requires interpreting comorbidities, treatment goals, and sometimes unstated clinician preferences or patient-specific nuances.",
+      "adequacy_evidence": "Current agents can extract and synthesize structured medical information and guidelines, but they often miss subtle contextual cues or require iterative clarification to align with clinician intent.",
+      "_timestamp": "2026-04-05T21:03:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step interactions\u2014gathering patient information, clarifying medical constraints with clinicians, and iteratively refining nutritional requirements\u2014but sequences are typically bounded and not deeply interdependent over long horizons.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across moderate multi-turn consultations, though some degradation can occur in tracking constraints or integrating updates over extended exchanges.",
+      "_timestamp": "2026-04-05T21:03:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Consultations often draw on patient history (prior diagnoses, lab trends, past dietary plans) and ongoing care coordination, but each consult can also be conducted with a well-documented current record.",
+      "adequacy_evidence": "Current agents can integrate with EHRs and retrieve prior context, but reliability in maintaining, updating, and appropriately prioritizing longitudinal patient information across systems remains uneven.",
+      "_timestamp": "2026-04-05T21:03:04"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Consultations with physicians and healthcare staff typically occur in meetings, calls, or messages where responses are expected within seconds to minutes, but not under strict real-time pressure.",
+      "adequacy_evidence": "Frontier AI agents can generate well-reasoned, context-aware responses within this time window, so latency does not meaningfully constrain output quality.",
+      "_timestamp": "2026-04-05T21:03:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple patient-specific inputs (medical conditions, lab values, medications, allergies, and clinician input) within a single consultation, requiring active tracking and synthesis but not extreme scale or volatility.",
+      "adequacy_evidence": "Current agents can manage structured clinical information reasonably well within a session, but may lose nuance or fail to consistently prioritize all relevant factors, especially when information is heterogeneous or updated \u05d1\u05de\u05d4\u05dc\u05da interaction.",
+      "_timestamp": "2026-04-05T21:03:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves verbal or written communication with healthcare providers and interpreting textual or numeric data such as medical records and lab results, with minimal reliance on non-text modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based communication and structured clinical data effectively, and no significant multimodal capabilities are required for this task.",
+      "_timestamp": "2026-04-05T21:03:05"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incorrect interpretation of nutritional needs or restrictions can negatively affect patient health (e.g., contraindicated diets), but the collaborative, consultative nature and downstream clinical oversight make occasional errors typically detectable and correctable.",
+      "adequacy_evidence": "Even with review, AI may miss nuanced clinical context or implicit physician intent, leaving some residual risk that could propagate into care plans, though not usually at a level of immediate severe harm.",
+      "_timestamp": "2026-04-05T21:03:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves direct collaboration with physicians and healthcare staff, who must trust and engage with the contributor\u2019s recommendations, though it is primarily professional-to-professional interaction rather than patient-facing persuasion.",
+      "adequacy_evidence": "While clinicians may accept AI-assisted input, many would be cautious about relying on an AI agent as a peer in clinical decision-making, especially regarding accountability and professional judgment.",
+      "_timestamp": "2026-04-05T21:03:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing appropriate nutrition and diet restrictions requires clinical expertise to interpret medical history, labs, and comorbidities; errors are not always obvious but can be checked through chart review and clinician consultation.",
+      "adequacy_evidence": "Current AI can synthesize guidelines but may misinterpret patient-specific nuances or clinical context, so outputs require routine professional review, though verification is feasible with standard clinical processes.",
+      "_timestamp": "2026-04-05T21:03:07"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Medical nutrition therapy and related clinical decision-making are often restricted to licensed dietitians under state laws, meaning an AI cannot independently fulfill the role without supervision. However, there is no explicit prohibition on AI assisting in consultations, creating a partial rather than full restriction.",
+      "_timestamp": "2026-04-05T21:03:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

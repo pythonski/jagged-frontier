@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-6014.00",
+  "task_id": 2812,
+  "task_statement": "Arrange conference, meeting, or travel reservations for office personnel.",
+  "occupation_title": "Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Booking conference spaces, meetings, flights, or hotels is typically done through online reservation systems, email, or phone from a computer, and does not require physical presence or specialized equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Arranging reservations involves implicit preferences (cost vs. convenience, travel times, seating, loyalty programs) and coordination constraints that are not always fully specified upfront.",
+      "adequacy_evidence": "Current agents can infer many defaults and ask clarifying questions, but they often miss nuanced or unstated preferences, requiring back-and-forth with humans to fully satisfy expectations.",
+      "_timestamp": "2026-04-05T22:30:56"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many steps follow explicit procedures (booking systems, policies), effective performance often involves experience-based judgment about preferences, tradeoffs (cost vs. convenience), and handling edge cases or last-minute changes.",
+      "adequacy_evidence": "Current agents can handle standard booking and stated preferences well, but show gaps in nuanced, context-sensitive judgment (e.g., implicit preferences, interpersonal considerations, or unusual disruptions) that experienced assistants navigate smoothly.",
+      "_timestamp": "2026-04-05T22:30:56"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of scenarios (different travel policies, preferences, destinations, and constraints like visas or accessibility) but follows relatively standardized workflows and tools.",
+      "adequacy_evidence": "There is abundant accessible data (booking systems, travel guidelines, historical itineraries) and clear procedural structure, enabling feasible training via real and synthetic examples that cover the important variation.",
+      "_timestamp": "2026-04-05T22:30:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Arranging travel or meetings involves multiple interdependent steps (gathering preferences, searching options, booking, confirming, and handling changes), but sequences are typically moderate in length and loosely coupled.",
+      "adequacy_evidence": "Frontier agents can manage these workflows with tools, but may occasionally lose constraints or require supervision across steps, leading to moderate degradation over longer or more complex bookings.",
+      "_timestamp": "2026-04-05T22:30:56"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Arranging conference, meeting, or travel reservations primarily involves text-based information such as dates, locations, preferences, and booking details through digital systems or communication channels.",
+      "adequacy_evidence": "Current AI agents can handle text-based scheduling, booking, and coordination tasks effectively without reliance on non-text modalities.",
+      "_timestamp": "2026-04-05T22:30:57"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often benefits from retaining employee preferences (e.g., seating, airlines, hotels, scheduling habits) and prior booking details, but each reservation can still be completed with freshly provided information.",
+      "adequacy_evidence": "Current AI systems integrated with calendars, profiles, and booking tools can reliably store and retrieve user preferences and histories across sessions, meeting typical needs for this task.",
+      "_timestamp": "2026-04-05T22:30:57"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple details (dates, times, locations, participant preferences, and confirmation numbers) across a single booking episode, requiring some coordination and state management but not extreme scale or complexity.",
+      "adequacy_evidence": "Modern LLM agents with tool integration (calendars, booking systems) can reliably maintain and update these constraints within a session, with minimal loss of context or state.",
+      "_timestamp": "2026-04-05T22:30:57"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Arranging reservations typically allows minutes to hours for completion, involving searching options, comparing prices, and confirming details rather than real-time response.",
+      "adequacy_evidence": "Current AI agents can perform searches, comparisons, and bookings well within acceptable timeframes without needing to truncate reasoning, so speed constraints do not degrade quality.",
+      "_timestamp": "2026-04-05T22:30:57"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from arranging travel, meeting, or conference reservations. This task does not require licensure or legally mandated human involvement.",
+      "_timestamp": "2026-04-05T22:30:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in reservations (wrong dates, locations, or bookings) can cause disruptions, costs, and inconvenience, but are typically recoverable and not catastrophic.",
+      "adequacy_evidence": "With standard confirmation checks (itineraries, booking confirmations, calendar alignment), AI-generated reservations can be verified effectively, leaving minimal residual risk.",
+      "_timestamp": "2026-04-05T22:30:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with internal staff and external vendors (airlines, hotels, conference organizers), who must act on the reservations, but the performer\u2019s personal identity is usually not critical.",
+      "adequacy_evidence": "Booking and reservation tasks are already widely handled by automated systems and agents; stakeholders generally accept AI-mediated interactions as long as details are accurate.",
+      "_timestamp": "2026-04-05T22:30:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Mistakes (wrong dates, locations, traveler details, or conflicts) are usually detectable by reviewing itineraries, confirmations, and calendars, but require careful cross-checking against preferences and constraints.",
+      "adequacy_evidence": "Current AI can handle booking workflows but still makes coordination or preference errors, so human review of confirmations and details remains necessary though not excessively burdensome.",
+      "_timestamp": "2026-04-05T22:30:59"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

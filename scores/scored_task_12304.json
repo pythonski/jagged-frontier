@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-8012.00",
+  "task_id": 12304,
+  "task_statement": "Distribute or regulate the flow of power between entities, such as generating stations, substations, distribution lines, or users, keeping track of the status of circuits or connections.",
+  "occupation_title": "Power Distributors and Dispatchers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Power distributors and dispatchers typically regulate and route electricity using computerized control systems (e.g., SCADA) that monitor circuits and send commands digitally. The task is performed through software interfaces rather than physical manipulation of equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly variable grid states, including routine load balancing, equipment failures, weather-driven disruptions, and rare cascading outages across different network topologies and regulatory regimes.",
+      "adequacy_evidence": "While simulations, historical SCADA logs, and engineering procedures provide substantial coverage, critical edge cases (e.g., rare cascading failures) and much real-world operational data are proprietary or sparse, limiting full representativeness.",
+      "_timestamp": "2026-04-06T01:58:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Core objectives (maintain grid stability, balance load, follow operating procedures and constraints) are well-defined, but operators must interpret evolving conditions, prioritize contingencies, and apply context-dependent judgment.",
+      "adequacy_evidence": "Current agents can follow explicit rules and optimize flows given data, but they still struggle with real-time interpretation of novel grid conditions and implicit prioritization without human guidance.",
+      "_timestamp": "2026-04-06T01:58:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Power dispatching involves continuous, tightly coupled monitoring and control of grid states over long periods, where each action affects subsequent system conditions and requires consistent tracking of circuit status.",
+      "adequacy_evidence": "AI agents can manage multi-step workflows and maintain context for extended periods, but sustaining flawless, real-time coordination over long, interdependent sequences still shows some degradation (e.g., drift or missed updates) under current capabilities.",
+      "_timestamp": "2026-04-06T01:58:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires continuous tracking of numerous rapidly changing system states (loads, circuit statuses, outages, flows) across a large grid, where missing or misremembering a single element can lead to operational errors.",
+      "adequacy_evidence": "Agentic systems with dashboards and state-tracking tools can manage large streams of structured data, but they still risk losing or misprioritizing critical context under high-frequency updates and complex interdependencies.",
+      "_timestamp": "2026-04-06T01:58:09"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Real-time grid balancing and contingency management rely heavily on operator intuition about system stability, equipment behavior, and emergent conditions beyond written procedures.",
+      "adequacy_evidence": "While AI can model grid states and optimize flows, it still lacks robust experience-based judgment in rare or rapidly evolving failure scenarios, though it performs well in routine and modeled conditions.",
+      "_timestamp": "2026-04-06T01:58:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Power dispatch requires continuous real-time monitoring and rapid adjustments (often within seconds) to maintain grid stability and prevent outages, leaving little tolerance for delay.",
+      "adequacy_evidence": "Modern AI agents can process streaming data quickly, but achieving high-quality, context-aware decisions under strict real-time constraints can require truncating deeper reasoning, leading to occasional performance degradation.",
+      "_timestamp": "2026-04-06T01:58:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Operators rely on visual interfaces such as SCADA dashboards, grid diagrams, and real-time status displays to monitor and control power flows, though much information is structured and symbolic.",
+      "adequacy_evidence": "Current agents can process structured telemetry and some visual inputs, but remain less reliable in interpreting complex, dynamic control-room visualizations and integrating them with real-time decision-making.",
+      "_timestamp": "2026-04-06T01:58:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Grid operations are continuously monitored via SCADA/EMS systems with alarms and telemetry, so many errors (e.g., overloads, misrouted power) surface quickly, but verifying correct dispatch decisions still requires expertise and situational awareness.",
+      "adequacy_evidence": "Current AI would require ongoing human oversight to validate decisions against real-time grid conditions; while discrepancies can often be detected via monitoring systems, ensuring correctness still imposes a meaningful review burden.",
+      "_timestamp": "2026-04-06T01:58:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Operators rely on accumulated system state such as ongoing outages, maintenance schedules, and prior switching actions across shifts, but this information is typically stored in external grid management systems rather than personal memory.",
+      "adequacy_evidence": "Modern AI agents can interface with persistent databases, SCADA logs, and enterprise systems to retrieve cross-session state, so current memory infrastructure is sufficient for this level of longitudinal context.",
+      "_timestamp": "2026-04-06T01:58:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in power dispatch can trigger cascading outages, equipment damage, or safety hazards, so even rare residual mistakes after monitoring can have severe, system-wide consequences.",
+      "adequacy_evidence": "Current AI systems remain brittle in rare grid contingencies and real-time control contexts; even with human oversight and automated checks, unpredictable failure modes leave unacceptable residual risk.",
+      "_timestamp": "2026-04-06T01:58:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordination with grid operators, utilities, and field personnel who rely on dispatch decisions, but interaction is primarily technical and system-mediated rather than based on personal rapport.",
+      "adequacy_evidence": "Stakeholders may be cautious about fully accepting AI control over critical infrastructure due to trust and safety concerns, though resistance could be mitigated with proven reliability and oversight.",
+      "_timestamp": "2026-04-06T01:58:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "NERC reliability standards require certified human system operators to be responsible for real-time grid operations, including dispatch and control decisions. This creates an explicit requirement for licensed human oversight, effectively prohibiting fully autonomous AI from performing the task independently.",
+      "_timestamp": "2026-04-06T01:58:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

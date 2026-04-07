@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3031.03",
+  "task_id": 17623,
+  "task_statement": "Make bids or offers to buy or sell securities.",
+  "occupation_title": "Securities, Commodities, and Financial Services Sales Agents",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Bids and offers for securities are typically placed through electronic trading platforms or communication systems from a computer, but some instances still occur on physical trading floors or through in-person brokerage environments."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective bidding and offering relies on trader intuition about market microstructure, timing, liquidity, and counterpart behavior, as well as client-specific preferences, which are learned through experience rather than explicit rules.",
+      "adequacy_evidence": "While AI systems can model market data and suggest prices, they still lack robust real-time calibration to nuanced human factors (e.g., counterpart signaling, shifting sentiment, client negotiation dynamics) in less structured or novel situations.",
+      "_timestamp": "2026-04-06T04:26:25"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous conditions: different asset classes, market microstructures, liquidity regimes, client objectives, and real-time strategic interactions, creating a long-tailed and context-sensitive distribution.",
+      "adequacy_evidence": "There is extensive historical market data, order book records, and simulation environments to train on, but key elements like proprietary trading strategies, real-time intent, and nuanced dealer-client interactions are partially inaccessible or only approximable via synthetic setups.",
+      "_timestamp": "2026-04-06T04:26:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective bidding requires interpreting latent factors like client intent, risk tolerance, market sentiment, and timing, which are often implicit and evolve rapidly during trading interactions.",
+      "adequacy_evidence": "Current agents can incorporate explicit parameters and market data but still struggle to fully infer nuanced, shifting human intentions and contextual cues without iterative human guidance.",
+      "_timestamp": "2026-04-06T04:26:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Making bids or offers can involve short sequences such as assessing market conditions, selecting price/quantity, and adjusting orders in response to feedback, but these are typically not long, tightly interdependent chains.",
+      "adequacy_evidence": "Current AI agents can handle these short-to-moderate trading sequences with stable performance, as they do not require extended multi-step coherence where degradation typically appears.",
+      "_timestamp": "2026-04-06T04:26:27"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective bidding and offering relies on prior knowledge of client portfolios, risk tolerances, and ongoing trading strategies, which accumulate across interactions but are typically structured and recorded in systems.",
+      "adequacy_evidence": "Current AI agents can integrate with CRM and trading databases to retain and retrieve this information, but inconsistencies in data integration and context surfacing can still lead to occasional gaps or suboptimal use of historical context.",
+      "_timestamp": "2026-04-06T04:26:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Placing bids or offers for securities is primarily conducted through electronic trading systems, phone, or text-based communication, relying on numerical and textual information rather than visual or other sensory inputs.",
+      "adequacy_evidence": "Current AI agents can fully handle text- and data-based inputs and outputs involved in trading without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T04:26:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking rapidly changing market data (prices, spreads, order book depth), client instructions, and firm risk limits in real time, where missing a detail can lead to immediate financial loss.",
+      "adequacy_evidence": "Agents can integrate structured data feeds and tools to manage this information, but maintaining precise, continuously updated state and prioritizing salient signals under fast-changing conditions remains somewhat error-prone.",
+      "_timestamp": "2026-04-06T04:26:29"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Bids and offers in securities markets often must be made within seconds or faster to respond to price movements, client demands, and competitive market conditions, creating tight latency constraints.",
+      "adequacy_evidence": "While AI agents can generate reasonable bids quickly with preprocessed data and heuristics, deeper reasoning about market context or optimal pricing may be truncated under time pressure, leading to some quality loss but not total failure.",
+      "_timestamp": "2026-04-06T04:26:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interaction with market counterparties where offers must be accepted, but decisions are driven primarily by price and timing rather than the identity of the agent making the bid.",
+      "adequacy_evidence": "Financial markets already widely accept algorithmic and AI-driven trading systems, with counterparties largely indifferent to whether orders originate from humans or machines.",
+      "_timestamp": "2026-04-06T04:26:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Order details (price, quantity, instrument) are typically validated by trading systems, market data, and compliance checks, making many errors immediately detectable, though assessing whether a bid is strategically appropriate or optimally priced requires expertise.",
+      "adequacy_evidence": "AI-generated bids would need routine human or system oversight to confirm correctness and market alignment, as models can misinterpret context or pricing, but most errors are catchable with standard trading controls.",
+      "_timestamp": "2026-04-06T04:26:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Automated trading systems are legally permitted, but securities transactions must occur under a registered broker-dealer with licensed supervision and compliance controls. AI cannot independently fulfill licensure requirements, creating partial regulatory constraints rather than a full prohibition.",
+      "_timestamp": "2026-04-06T04:26:30"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in bids or offers (e.g., wrong price, size, or instrument) can cause immediate financial losses, regulatory violations, or unintended market impact, and are often irreversible once executed.",
+      "adequacy_evidence": "Even with pre-trade controls and human oversight, AI systems can introduce unpredictable judgment or context errors in fast-moving markets, leaving residual risk that remains meaningfully concerning though partially mitigable.",
+      "_timestamp": "2026-04-06T04:26:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

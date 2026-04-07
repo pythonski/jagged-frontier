@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-2091.00",
+  "task_id": 9937,
+  "task_statement": "Interpret flight test data to diagnose malfunctions and systemic performance problems.",
+  "occupation_title": "Avionics Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Interpreting flight test data typically involves analyzing telemetry and diagnostic data using computer software, which can be done remotely. However, avionics technicians often perform this analysis alongside on-site testing activities or with direct access to specialized systems and teams, making some instances require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Flight test data spans many aircraft types, sensor suites, flight conditions, and rare failure modes, with highly context-sensitive patterns that differ across platforms and missions.",
+      "adequacy_evidence": "Much of the relevant data (especially anomalous or failure cases) is proprietary, sparse, and not publicly documented with step-by-step diagnostic reasoning, limiting feasible training coverage despite simulation options.",
+      "_timestamp": "2026-04-06T01:17:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosing malfunctions from flight test data requires pattern recognition, contextual judgment, and experience with how subtle signal deviations map to real-world system faults, which is not fully captured in explicit rules.",
+      "adequacy_evidence": "Well-equipped AI agents can analyze structured telemetry and known fault patterns, but they still lack the experiential calibration needed to reliably interpret ambiguous or novel system interactions across varied flight conditions.",
+      "_timestamp": "2026-04-06T01:17:39"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The goal (diagnosing malfunctions and performance issues) is clear, but interpreting flight test data requires contextual understanding of system behavior, test conditions, and subtle deviations from expected norms that are not fully explicit.",
+      "adequacy_evidence": "Current AI can analyze structured data and known patterns but often misses context-specific nuances and implicit diagnostic cues, requiring human guidance to correctly interpret ambiguous or novel anomalies.",
+      "_timestamp": "2026-04-06T01:17:40"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing malfunctions from flight test data involves multi-step analysis (data preprocessing, signal interpretation, cross-referencing systems, and hypothesis testing), but these steps are moderately bounded rather than deeply long-horizon or tightly interdependent over many stages.",
+      "adequacy_evidence": "Current AI agents can sustain coherent multi-step analytical workflows with tools, but may show some degradation in maintaining consistent assumptions and tracking intermediate findings across longer diagnostic chains.",
+      "_timestamp": "2026-04-06T01:17:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting flight test data requires integrating large volumes of heterogeneous telemetry (time-series sensor data, system logs, environmental conditions) and tracking relationships across many variables simultaneously, where missing a parameter trend can lead to incorrect diagnosis.",
+      "adequacy_evidence": "Well-tooled agents can process and retrieve large datasets using external memory and analysis tools, but they still show weaknesses in maintaining coherent compressed representations across many interacting signals and may overlook subtle cross-variable dependencies.",
+      "_timestamp": "2026-04-06T01:17:40"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Diagnosing avionics issues often benefits from prior flight test data, historical fault patterns, and maintenance logs, but many analyses can still be performed on a single test dataset with reference documentation.",
+      "adequacy_evidence": "Current agents can store and retrieve prior test data and logs via external memory systems, but maintaining well-structured, longitudinal context across multiple aircraft, tests, and evolving issues is still inconsistently handled.",
+      "_timestamp": "2026-04-06T01:17:40"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Interpreting flight test data for diagnostics is typically conducted post-flight or in controlled analysis settings where minutes to hours of processing time are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform deep analysis within these relaxed time constraints without needing to sacrifice reasoning depth, so latency does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T01:17:40"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnosing malfunctions from flight test data involves subtle signal patterns, cross-system interactions, and domain-specific interpretation where errors may not be immediately evident without deep expertise and time-consuming analysis.",
+      "adequacy_evidence": "Current AI systems can misinterpret complex, noisy telemetry or causal relationships, and verifying their diagnoses requires expert review and cross-checking against multiple data sources, making the checking burden substantial.",
+      "_timestamp": "2026-04-06T01:17:41"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Flight test data often includes time-series plots, sensor graphs, and telemetry visualizations that require interpreting patterns across visual and numerical formats, not just text summaries.",
+      "adequacy_evidence": "Current agents can analyze structured data and simple charts, but struggle with complex, high-resolution time-series patterns and nuanced cross-sensor visual correlations typical in flight diagnostics.",
+      "_timestamp": "2026-04-06T01:17:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Misdiagnosing flight test data can allow critical avionics faults or systemic performance issues to persist, posing serious safety risks and potentially leading to catastrophic failures in flight operations.",
+      "adequacy_evidence": "Even with standard review processes, AI systems can miss rare or subtle failure patterns and produce overconfident but incorrect interpretations, leaving residual risks that are unacceptable in high-stakes aviation contexts.",
+      "_timestamp": "2026-04-06T01:17:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task\u2019s outputs are used by engineers, safety personnel, and regulators who rely on the diagnosis, but interaction is primarily technical and does not hinge strongly on the performer\u2019s personal identity.",
+      "adequacy_evidence": "Stakeholders in aviation are cautious and may be reluctant to rely solely on AI-generated diagnoses without human validation, but AI-supported analysis is increasingly acceptable when overseen by certified technicians.",
+      "_timestamp": "2026-04-06T01:17:42"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "FAA regulations require certified personnel (e.g., licensed mechanics or authorized engineers) to make and sign off on airworthiness and maintenance decisions, which this diagnostic work can inform. While AI use is not explicitly prohibited, it cannot legally replace the certified human authority, creating a partial restriction.",
+      "_timestamp": "2026-04-06T01:17:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

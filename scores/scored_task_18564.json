@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3051.00",
+  "task_id": 18564,
+  "task_statement": "Conduct verifications of employment.",
+  "occupation_title": "Payroll and Timekeeping Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Employment verifications typically involve checking HR/payroll records and responding to requests via email, web portals, or phone. However, some cases still involve handling mailed forms, signatures, or internal paper records, which introduces occasional non-digital steps."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Employment verification spans different employer systems, document formats, jurisdictions, and edge cases (e.g., unverifiable records, third-party services), creating moderate variability in instances.",
+      "adequacy_evidence": "General procedures, scripts, and examples are well-documented and can be synthesized, but real-world edge cases (e.g., fraudulent claims, atypical employment arrangements, restricted databases) are underrepresented in accessible training data.",
+      "_timestamp": "2026-04-06T02:08:29"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Employment verification follows standardized procedures, but clerks sometimes need judgment to handle discrepancies, incomplete records, or ambiguous employer responses.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably follow verification protocols and apply rule-based checks, with sufficient capability to flag or resolve most non-routine cases using existing documentation and patterns.",
+      "_timestamp": "2026-04-06T02:08:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Employment verification follows standardized procedures (e.g., confirming dates, titles, wages) but may involve some context-specific interpretation of acceptable documentation or employer responses.",
+      "adequacy_evidence": "Current AI agents can reliably follow verification protocols, interpret common variations in responses, and resolve minor ambiguities using rules and iterative clarification without major difficulty.",
+      "_timestamp": "2026-04-06T02:08:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Employment verification tasks are typically self-contained, relying on current payroll or HR records rather than accumulated context from prior cases.",
+      "adequacy_evidence": "Existing systems (databases, HRIS) already store and retrieve necessary records, and AI agents can access these without needing complex cross-session memory.",
+      "_timestamp": "2026-04-06T02:08:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Employment verifications are typically handled via email, forms, or phone calls with turnaround expectations ranging from minutes to hours or even days, not requiring immediate real-time responses.",
+      "adequacy_evidence": "AI systems can easily operate within these loose time constraints, allowing sufficient reasoning and tool use without any meaningful degradation in output quality.",
+      "_timestamp": "2026-04-06T02:08:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Employment verification primarily involves reviewing and exchanging structured or semi-structured text (forms, emails, HR records) and possibly basic phone communication; it does not inherently require rich multimodal perception or generation.",
+      "adequacy_evidence": "Current AI agents can handle text-based document processing, data extraction, and even simple audio transcription adequately, so there is no meaningful modality gap for this task.",
+      "_timestamp": "2026-04-06T02:08:32"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Employment verification involves a multi-step process (collecting requests, contacting employers or databases, confirming details, recording results), where consistency across steps matters but sequences are typically short and loosely coupled.",
+      "adequacy_evidence": "AI agents can generally manage these structured, moderate-length workflows, but may show some degradation in maintaining context or handling follow-ups across multiple interactions or edge cases.",
+      "_timestamp": "2026-04-06T02:08:32"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Employment verification requires tracking multiple data points (e.g., dates, job titles, wages) from forms, employer responses, and internal records, but the volume and complexity remain moderate and structured.",
+      "adequacy_evidence": "Current AI agents can reliably manage and organize this level of structured, within-episode information using standard tools (forms, retrieval, validation) with minimal loss or drift.",
+      "_timestamp": "2026-04-06T02:08:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in employment verification can lead to hiring mistakes, compliance issues, or administrative delays, but they are typically correctable and rarely cause irreversible harm.",
+      "adequacy_evidence": "With standard checks like cross-referencing records and confirming with employers, AI-generated verifications can be reliably validated, leaving little unacceptable residual risk.",
+      "_timestamp": "2026-04-06T02:08:33"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from conducting employment verifications. While privacy and consumer reporting laws (e.g., FCRA) impose requirements on accuracy, consent, and data handling, they do not mandate human performance of the task.",
+      "_timestamp": "2026-04-06T02:08:34"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Employment verification requires interaction with external parties (e.g., prior employers, lenders, agencies) who rely on the provided information, though the specific identity of the clerk is usually not central.",
+      "adequacy_evidence": "Many verification processes are already standardized or automated, but some stakeholders still expect human confirmation or may distrust fully AI-mediated responses, leading to moderate acceptance friction.",
+      "_timestamp": "2026-04-06T02:08:34"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying employment involves cross-checking dates, titles, and employer responses against records; discrepancies can be caught with documentation but require deliberate review and follow-up with external sources.",
+      "adequacy_evidence": "AI can assist with gathering and organizing data, but still requires human validation of source authenticity and responses, as errors or fabricated details are not always immediately obvious without checking.",
+      "_timestamp": "2026-04-06T02:08:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9095.00",
+  "task_id": 2061,
+  "task_statement": "Calculate anticipated drug usage for a prescribed period.",
+  "occupation_title": "Pharmacy Aides",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Calculating anticipated drug usage involves analyzing prescription or inventory data and can be done entirely using pharmacy management software or spreadsheets. It does not inherently require physical presence or handling medications."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves moderate variation across drug types, dosing regimens, durations, and patient-specific adjustments, but follows standardized calculation patterns in pharmacy practice.",
+      "adequacy_evidence": "Extensive pharmacy training materials, worked examples, and structured rules exist, and synthetic generation of diverse dosing scenarios is straightforward for current AI systems.",
+      "_timestamp": "2026-04-05T22:45:56"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves applying explicit prescription details (dosage, frequency, duration) to compute quantities, which follows clear procedural rules with little need for experiential judgment.",
+      "adequacy_evidence": "Current AI systems can reliably perform these rule-based calculations and handle minor variations without needing tacit calibration.",
+      "_timestamp": "2026-04-05T22:45:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves straightforward, short calculations (e.g., dosage \u00d7 frequency \u00d7 duration) with minimal step interdependence and no extended workflow.",
+      "adequacy_evidence": "AI systems reliably handle short arithmetic and simple multi-step calculations without degradation over such brief sequences.",
+      "_timestamp": "2026-04-05T22:45:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves some context-dependent assumptions (e.g., patient adherence, refill timing, dosage schedules), but is largely governed by standard pharmacy calculations and prescription data.",
+      "adequacy_evidence": "Current AI agents can reliably infer and apply the relevant assumptions and formulas when given typical pharmacy inputs, with minimal need for iterative clarification.",
+      "_timestamp": "2026-04-05T22:45:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on prescription data such as dosage, frequency, and duration, which are typically represented in text or numeric form; no non-text modalities are essential.",
+      "adequacy_evidence": "Since the task is fundamentally text- and number-based, current AI systems can handle it without needing multimodal capabilities.",
+      "_timestamp": "2026-04-05T22:45:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating anticipated drug usage is typically based solely on the current prescription details (dosage, frequency, duration), making each instance self-contained.",
+      "adequacy_evidence": "Since the task does not depend on cross-session memory, current AI systems fully meet the requirement without needing persistent state.",
+      "_timestamp": "2026-04-05T22:45:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is an internal calculation supporting pharmacy operations, with no direct interaction requiring stakeholder acceptance of the performer.",
+      "adequacy_evidence": "Because there are no relevant stakeholders engaged with the performer, acceptance of an AI agent is not a factor in task performance.",
+      "_timestamp": "2026-04-05T22:45:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in estimating drug usage can lead to stockouts or overstocking, which affect pharmacy operations and potentially patient access, but are typically correctable and not immediately life-threatening.",
+      "adequacy_evidence": "With standard verification (inventory systems, pharmacist oversight, historical data checks), AI-generated calculations can be reliably validated, leaving little unacceptable residual risk.",
+      "_timestamp": "2026-04-05T22:45:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating anticipated drug usage is typically a routine planning or inventory task where delays of seconds to minutes are acceptable and do not impact outcomes.",
+      "adequacy_evidence": "Current AI systems can perform the required arithmetic and data lookup well within any reasonable time budget, with no meaningful quality degradation due to latency constraints.",
+      "_timestamp": "2026-04-05T22:45:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI or software from performing medication usage calculations; such computations are already routinely done with software under pharmacy supervision. Regulations focus on licensed oversight for dispensing and clinical decisions, not on the calculation task itself.",
+      "_timestamp": "2026-04-05T22:46:00"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Calculations can be checked against prescription records, standard dosing schedules, and historical usage, but require some domain knowledge and careful reconciliation of units and assumptions.",
+      "adequacy_evidence": "AI can perform the arithmetic reliably but may misinterpret inputs or context, so human review of inputs, units, and plausibility against known usage patterns is still needed.",
+      "_timestamp": "2026-04-05T22:46:00"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task typically involves a small set of structured inputs (dosage, frequency, duration, possibly number of patients) that easily fit within a single working context without complex state tracking.",
+      "adequacy_evidence": "Current AI systems reliably handle small-scale arithmetic and short-context information without losing or mismanaging relevant details in a single episode.",
+      "_timestamp": "2026-04-05T22:46:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

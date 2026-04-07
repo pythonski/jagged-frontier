@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3011.01",
+  "task_id": 166,
+  "task_statement": "Analyze technical implications of architect's design concept, calculating weights, volumes, and stress factors.",
+  "occupation_title": "Architectural and Civil Drafters",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Analyzing architectural design concepts and calculating weights, volumes, and stress factors is typically done using CAD and engineering analysis software based on digital plans and specifications, which can be performed entirely on a computer without physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The architect\u2019s design concept often leaves implicit assumptions about materials, load conditions, and code compliance, requiring the drafter to interpret intent and fill in technical details.",
+      "adequacy_evidence": "Current AI agents can infer many engineering assumptions from context and standards but still frequently miss implicit design constraints or require iterative clarification to align with the architect\u2019s intent.",
+      "_timestamp": "2026-04-06T02:09:57"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step calculations (weights, volumes, stress factors) that must remain internally consistent, but these sequences are typically bounded and modular rather than deeply long or open-ended.",
+      "adequacy_evidence": "AI agents with tools can generally maintain coherence across these calculation chains, though some error propagation or constraint drift can occur in longer or more complex analyses.",
+      "_timestamp": "2026-04-06T02:09:57"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of building types, materials, and structural scenarios, but is grounded in well-defined engineering principles and standardized calculation methods.",
+      "adequacy_evidence": "Extensive textbooks, design codes, CAD datasets, and physics-based simulations provide strong coverage, though some edge cases (e.g., novel materials or highly customized designs) are less represented and may require targeted synthesis.",
+      "_timestamp": "2026-04-06T02:09:57"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task relies on established engineering formulas and standards, interpreting design concepts, selecting appropriate assumptions, and recognizing non-obvious load paths or edge cases requires some experience-based judgment.",
+      "adequacy_evidence": "Current agents can reliably perform standard calculations and apply documented rules, but they show gaps in nuanced interpretation of unconventional designs and in calibrating assumptions for atypical or context-sensitive scenarios.",
+      "_timestamp": "2026-04-06T02:09:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Work is typically organized around ongoing projects where prior calculations, design iterations, and constraints may need to be referenced across sessions, but each analysis task is often largely self-contained given current plans and specifications.",
+      "adequacy_evidence": "Current AI systems with standard project storage, retrieval, and file management can reliably persist and recall relevant project data across sessions, and the memory demands are not unusually complex or longitudinal.",
+      "_timestamp": "2026-04-06T02:09:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking multiple parameters (dimensions, materials, loads) and intermediate calculations, but these are structured and can be organized into formulas or tables within a single workflow.",
+      "adequacy_evidence": "Current agents with tool use (e.g., code execution, spreadsheets) can reliably store, retrieve, and manipulate these quantities without losing context, keeping within-episode state consistent.",
+      "_timestamp": "2026-04-06T02:09:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting an architect\u2019s design concept typically requires analyzing drawings, blueprints, or CAD models with spatial and geometric detail, not just text descriptions.",
+      "adequacy_evidence": "Current AI systems can process drawings and CAD data to a degree, but still struggle with complex spatial relationships, precise geometry interpretation, and cross-modal reasoning in detailed engineering contexts.",
+      "_timestamp": "2026-04-06T02:09:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "These analyses are typically performed as part of design workflows where minutes to hours are acceptable; they are not real-time or time-critical calculations.",
+      "adequacy_evidence": "Current AI systems with tool use can perform engineering calculations quickly within the available time window, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T02:09:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in calculating loads, volumes, or stress factors can propagate into structural design flaws, potentially affecting safety, compliance, and project cost, so only very low residual error is tolerable.",
+      "adequacy_evidence": "Even with standard checks (engineering review, code-based validation), AI systems can still introduce subtle calculation or assumption errors, leaving some residual risk that remains concerning but not clearly prohibitive.",
+      "_timestamp": "2026-04-06T02:10:00"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Calculations of weights, volumes, and stress factors can be independently recomputed or checked with engineering tools, but doing so requires domain expertise and careful review of assumptions and inputs.",
+      "adequacy_evidence": "Current AI can perform these calculations but is prone to errors in setup, units, or assumptions, so outputs require consistent expert verification using standard engineering methods.",
+      "_timestamp": "2026-04-06T02:10:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The analysis is used by architects and engineers who rely on the results, but the performer\u2019s identity is secondary to the correctness of calculations and technical soundness.",
+      "adequacy_evidence": "Stakeholders in this domain already accept software and automated tools for structural calculations, so an AI agent performing this role would face little resistance if outputs are reliable.",
+      "_timestamp": "2026-04-06T02:10:00"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Engineering-related calculations tied to building design often require review and sign-off by a licensed professional (e.g., PE or architect), but there is no explicit prohibition on AI performing the analytical work as a tool. The restriction applies to who can take legal responsibility, not to AI use itself.",
+      "_timestamp": "2026-04-06T02:10:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

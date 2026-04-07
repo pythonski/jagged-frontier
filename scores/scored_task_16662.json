@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3029.04",
+  "task_id": 16662,
+  "task_statement": "Select electronics equipment, components, or systems to meet functional specifications.",
+  "occupation_title": "Engineering Technologists and Technicians, Except Drafters, All Other",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Selecting electronics equipment or components is often done by reviewing specifications, datasheets, simulations, and vendor catalogs on a computer. However, some cases require hands-on evaluation, testing with physical systems, or coordination with on-site hardware setups."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Functional specifications are often partially explicit but require interpretation of tradeoffs (cost, reliability, environment, compatibility) and implicit constraints from the application context.",
+      "adequacy_evidence": "Current agents can map specs to components and suggest options, but often miss implicit priorities or context-specific constraints without iterative human clarification.",
+      "_timestamp": "2026-04-06T04:48:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting specifications, identifying candidate components, comparing options, and ensuring compatibility, requiring a multi-step but not deeply extended sequence.",
+      "adequacy_evidence": "AI agents can generally handle these sequences with tooling, but may show some constraint drift or inconsistency when tracking multiple requirements across steps.",
+      "_timestamp": "2026-04-06T04:48:31"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Component selection involves trade-offs (e.g., tolerances, thermal margins, reliability, supplier variability) that often rely on experience and case-based judgment beyond formal specifications.",
+      "adequacy_evidence": "AI agents can use datasheets, simulation tools, and design heuristics to perform much of the selection, but still show gaps in nuanced real-world calibration (e.g., derating practices, vendor quirks) in non-routine contexts.",
+      "_timestamp": "2026-04-06T04:48:31"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of application domains (e.g., power systems, communications, embedded devices) with varying constraints, but relies on well-structured specifications and standardized component categories.",
+      "adequacy_evidence": "Extensive public datasheets, application notes, design guides, and worked examples provide strong coverage of selection processes, and synthetic or tool-augmented pipelines can readily fill remaining gaps.",
+      "_timestamp": "2026-04-06T04:48:31"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting electronics components involves tracking multiple specifications (e.g., voltage, tolerance, interfaces, environmental limits) across datasheets and requirements, requiring moderate aggregation and comparison within a single task episode.",
+      "adequacy_evidence": "Current agents can retrieve and compare specs with tools, but may lose or misprioritize constraints across many documents or iterations, leading to occasional context drift or missed details.",
+      "_timestamp": "2026-04-06T04:48:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Selecting electronics components to meet specifications is typically an engineering design activity with flexible timelines (minutes to hours or longer), not requiring rapid real-time responses.",
+      "adequacy_evidence": "Current AI agents can comfortably perform multi-step reasoning, lookup, and comparison within the available time, so latency does not meaningfully constrain output quality.",
+      "_timestamp": "2026-04-06T04:48:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting components often involves interpreting datasheets, schematics, and wiring diagrams alongside textual specifications, requiring some cross-modal understanding of visual and tabular information.",
+      "adequacy_evidence": "Current agents can handle many datasheets and simple diagrams but remain inconsistent on complex schematics, layout nuances, and fine-grained visual details.",
+      "_timestamp": "2026-04-06T04:48:32"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Equipment selection often benefits from prior project knowledge, vendor performance, and accumulated design preferences, but many instances can still be completed from current specifications alone.",
+      "adequacy_evidence": "Current agents can persist and retrieve project data via external memory systems, but they inconsistently surface the most relevant historical context and may miss nuances from past cases.",
+      "_timestamp": "2026-04-06T04:48:32"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI selecting electronic components, but in regulated contexts (e.g., safety-critical or public infrastructure projects) a licensed engineer may be required to review or approve final selections, creating partial constraints without banning AI involvement.",
+      "_timestamp": "2026-04-06T04:48:34"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task typically serves internal engineers, project managers, or clients who rely on the selection, but the performer\u2019s personal identity is less central than the technical adequacy of the choice.",
+      "adequacy_evidence": "Stakeholders would often accept AI-assisted recommendations, but full delegation to an AI without human validation may face some resistance, especially for accountability and trust in engineering decisions.",
+      "_timestamp": "2026-04-06T04:48:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect component or system selection can lead to device failure, safety hazards, or costly redesigns, especially in regulated or high-performance applications, so very low residual error is required.",
+      "adequacy_evidence": "While simulations, datasheet checks, and engineering review can catch many issues, AI may still miss edge cases or context-specific constraints, leaving some non-negligible residual risk after standard quality control.",
+      "_timestamp": "2026-04-06T04:48:34"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying correct component/system selection requires interpreting datasheets, tolerances, environmental constraints, and system interactions; many errors (e.g., thermal limits, signal integrity issues) are subtle and may only surface through detailed analysis or testing.",
+      "adequacy_evidence": "Current AI can propose plausible components but often misses edge-case constraints or integration nuances, so expert review, simulation, and cross-checking against specifications remain necessary and non-trivial.",
+      "_timestamp": "2026-04-06T04:48:35"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

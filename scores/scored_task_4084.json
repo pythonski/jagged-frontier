@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1071.00",
+  "task_id": 4084,
+  "task_statement": "Order medical and laboratory supplies and equipment.",
+  "occupation_title": "Physician Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Ordering supplies is typically done through electronic purchasing systems, email, or vendor websites, which can be completed remotely. However, it often involves on-site awareness of inventory levels or coordination with physical storage and staff in a clinical setting."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering medical and lab supplies varies across clinical settings, formularies, vendors, and inventory systems, but follows relatively structured procurement patterns with recurring item categories and workflows.",
+      "adequacy_evidence": "There is abundant accessible data (procurement records, supply catalogs, EHR workflows, guidelines) and clear process traces, enabling feasible training coverage across most relevant scenarios.",
+      "_timestamp": "2026-04-06T04:13:27"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While ordering often follows formularies, inventory protocols, and supplier catalogs, PAs must use experience to anticipate usage patterns, assess product quality differences, and ensure compatibility with clinical workflows and physician preferences.",
+      "adequacy_evidence": "Current agents can follow protocols and optimize based on data, but they lack nuanced, experience-based calibration for edge cases like subtle product reliability differences or shifting clinical preferences, leading to moderate gaps.",
+      "_timestamp": "2026-04-06T04:13:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ordering medical and laboratory supplies involves multiple coordinated steps (assessing needs, checking inventory, selecting vendors, placing and tracking orders), but these steps are moderately structured and not deeply interdependent.",
+      "adequacy_evidence": "AI agents can generally manage these multi-step procurement workflows with tooling, though some degradation can occur over longer sequences (e.g., missed constraints or tracking errors) without careful orchestration.",
+      "_timestamp": "2026-04-06T04:13:27"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ordering medical and laboratory supplies requires interpreting clinical needs, usage patterns, budget constraints, and institutional preferences, which are partly implicit and context-dependent rather than fully specified each time.",
+      "adequacy_evidence": "AI agents can use inventory data and protocols to infer many needs, but they may miss nuanced preferences, emergent clinical priorities, or informal constraints, requiring human adjustment.",
+      "_timestamp": "2026-04-06T04:13:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering medical and laboratory supplies requires tracking current inventory, usage needs, vendor options, and specifications, but the information is structured and bounded within typical ordering systems.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably manage lists, inventories, and ordering workflows using tools and databases, with minimal risk of losing critical within-episode context.",
+      "_timestamp": "2026-04-06T04:13:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering medical and laboratory supplies is typically an administrative task that can be completed over minutes to hours without strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can generate accurate supply orders well within acceptable timeframes, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T04:13:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering supplies benefits from remembering prior orders, inventory levels, and vendor preferences, but each order can still be completed using current inventory data and standard protocols.",
+      "adequacy_evidence": "Current AI systems integrated with inventory and procurement software can reliably store and retrieve order histories and stock levels, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T04:13:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering medical and laboratory supplies is primarily a text-based task involving reviewing inventories, specifications, and vendor catalogs, which are typically accessible in structured text or standardized forms.",
+      "adequacy_evidence": "Current AI agents can handle text-based procurement workflows, including interpreting supply lists and placing orders, without meaningful reliance on non-text modalities.",
+      "_timestamp": "2026-04-06T04:13:31"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect orders can lead to supply shortages or wrong equipment, causing care delays or inefficiencies, but these issues are typically reversible and rarely immediately dangerous after standard checks.",
+      "adequacy_evidence": "With inventory systems, approval workflows, and order verification, AI-generated orders can be reliably checked, leaving low residual risk that is generally acceptable for this task.",
+      "_timestamp": "2026-04-06T04:13:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Orders can be checked against standard catalogs, prior orders, and inventory needs, but require domain knowledge to ensure correct item specifications, compatibility, and quantities.",
+      "adequacy_evidence": "AI can generate plausible orders but may select incorrect variants or quantities, so routine human verification against requirements and inventory systems remains necessary.",
+      "_timestamp": "2026-04-06T04:13:31"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing rules prohibiting AI systems from ordering medical or laboratory supplies; this is an administrative/procurement function that can be delegated or automated. Human authorization or oversight may be required in practice, but regulations do not bar AI involvement.",
+      "_timestamp": "2026-04-06T04:13:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with vendors and internal procurement systems where orders must be accepted and processed, but the identity of the individual (human vs. agent) is not central to success.",
+      "adequacy_evidence": "Organizations already use automated procurement systems, and vendors typically accept orders electronically without regard to whether a human or AI initiated them.",
+      "_timestamp": "2026-04-06T04:13:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

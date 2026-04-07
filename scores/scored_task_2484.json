@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3011.00",
+  "task_id": 2484,
+  "task_statement": "Notify credit departments, order merchandise repossession or service disconnection, and turn over account records to attorneys when customers fail to respond to collection attempts.",
+  "occupation_title": "Bill and Account Collectors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "These actions are typically carried out through digital systems, emails, databases, or phone calls to credit departments, repossession agents, or attorneys, and by transmitting electronic records. However, some cases may involve mailing or transferring physical account documents or formal notices."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans variations in debtor situations, jurisdictional rules, and company-specific escalation policies, but follows relatively standardized workflows and legal procedures in collections.",
+      "adequacy_evidence": "There is extensive accessible data (regulations, compliance guidelines, SOPs, and training materials) that document both procedures and decision processes, enabling strong coverage through existing and synthetic training pipelines.",
+      "_timestamp": "2026-04-06T04:50:42"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task follows established policies and legal thresholds (e.g., non-response timelines, escalation procedures), with only some situational judgment in borderline cases or customer-specific nuances.",
+      "adequacy_evidence": "Well-scaffolded agents can reliably apply explicit rules, track timelines, and trigger appropriate actions; remaining judgment is limited and can be encoded or guided with policy rules.",
+      "_timestamp": "2026-04-06T04:50:42"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves applying organizational policies and legal thresholds (e.g., when to escalate to repossession or legal action), which can vary by context and require some interpretation of customer status and prior attempts.",
+      "adequacy_evidence": "Given clear SOPs, account data, and regulatory rules, current AI agents can reliably infer when to trigger notifications, service disconnection, or legal escalation with minimal ambiguity.",
+      "_timestamp": "2026-04-06T04:50:44"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step workflow (escalation, notification, action initiation, and record transfer) where steps must be completed in order, but sequences are relatively bounded and procedural rather than deeply interdependent over long horizons.",
+      "adequacy_evidence": "Well-scaffolded agents can generally manage these procedural sequences, though some risk remains of missed steps or state-tracking errors across the workflow, especially when handling multiple cases concurrently.",
+      "_timestamp": "2026-04-06T04:50:44"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires synthesizing account status, prior contact attempts, policy thresholds, and customer records from internal systems, but this information is typically structured and bounded per case.",
+      "adequacy_evidence": "Current AI agents with tool integration can reliably retrieve, track, and apply structured account data within a single workflow, with minimal risk of losing critical context.",
+      "_timestamp": "2026-04-06T04:50:45"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task depends on maintaining account histories (prior contact attempts, responses, delinquency status) across multiple interactions before escalation actions are taken.",
+      "adequacy_evidence": "Current AI systems integrated with standard databases/CRMs can reliably store and retrieve persistent account records, making cross-session memory largely sufficient for this task.",
+      "_timestamp": "2026-04-06T04:50:45"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of administrative actions such as sending notifications, ordering repossession or disconnection, and transferring records, all of which are primarily text- and system-based workflows.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based communication, record handling, and workflow initiation without needing multimodal capabilities.",
+      "_timestamp": "2026-04-06T04:50:46"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "These actions (notifications, repossession orders, forwarding records) are typically handled within business-process timelines (hours to days), not requiring immediate or real-time responses.",
+      "adequacy_evidence": "Current AI agents can generate and route such communications quickly well within acceptable timeframes, with no meaningful quality loss due to latency constraints.",
+      "_timestamp": "2026-04-06T04:50:47"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking account status, delinquency criteria, and compliance with legal and company policies, which requires some expertise and careful review but is supported by structured records and clear rules.",
+      "adequacy_evidence": "AI outputs would need routine human or rule-based checks to confirm correct account handling and legal thresholds; errors are generally detectable with standard auditing but not trivially so.",
+      "_timestamp": "2026-04-06T04:50:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interacting with customers, internal credit departments, and external attorneys, who must act on notifications and decisions, though the performer's identity is not highly central.",
+      "adequacy_evidence": "Many elements (automated notices, referrals) are already system-driven, but customers and legal stakeholders may react negatively or scrutinize decisions if clearly attributed to AI, creating moderate acceptance friction.",
+      "_timestamp": "2026-04-06T04:50:49"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors can lead to wrongful repossession, improper service disconnection, or premature legal escalation, all of which carry significant financial, legal, and reputational consequences for both the company and customers.",
+      "adequacy_evidence": "Even with standard checks (account verification, rule-based triggers, supervisory review), AI may still misinterpret edge cases or customer responses, leaving some residual risk that is meaningful but generally manageable with oversight.",
+      "_timestamp": "2026-04-06T04:50:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Consumer protection laws (e.g., FDCPA, FCRA) and sector-specific rules govern collections, repossession, and service disconnection, and repossession itself typically requires licensed agents, while legal escalation involves attorneys. These create compliance constraints and partial role restrictions, but do not explicitly prohibit AI systems from initiating or managing these actions under supervision.",
+      "_timestamp": "2026-04-06T04:50:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2112.03",
+  "task_id": 18180,
+  "task_statement": "Review product designs for manufacturability or completeness.",
+  "occupation_title": "Manufacturing Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Product design reviews are usually conducted using digital CAD models, drawings, and documentation on a computer. However, some reviews involve inspecting physical prototypes or consulting with on-site manufacturing processes, requiring occasional in-person evaluation."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many manufacturability criteria are codified (DFM guidelines, tolerances, material constraints), important aspects depend on specific production processes, facility capabilities, and implicit engineering judgment about risk and cost tradeoffs.",
+      "adequacy_evidence": "Current agents can apply documented DFM rules and check completeness, but often miss context-specific constraints (e.g., shop-floor capabilities or nuanced tradeoffs), requiring human iteration to fully align with true intent.",
+      "_timestamp": "2026-04-05T21:09:58"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Manufacturability review spans diverse products, materials, processes (e.g., machining, injection molding, electronics), and firm-specific constraints, creating a highly heterogeneous, context-dependent distribution.",
+      "adequacy_evidence": "There is substantial public DFM guidance, engineering case studies, and CAD data, but many critical instances depend on proprietary process capabilities, supplier constraints, and internal standards that are only partially accessible or reproducible via current training pipelines.",
+      "_timestamp": "2026-04-05T21:09:58"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing manufacturability relies heavily on experience with process capabilities, tooling constraints, tolerance stack-ups, and shop-floor realities that are often undocumented and learned through practice.",
+      "adequacy_evidence": "Current agents can apply formal DFM rules and documented constraints, but lack nuanced, plant-specific calibration and experiential judgment for edge cases and trade-offs, leading to gaps in non-routine scenarios.",
+      "_timestamp": "2026-04-05T21:09:59"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step evaluation across drawings, specifications, tolerances, materials, and processes, requiring consistent checks but not deeply interdependent long chains where early errors cascade heavily.",
+      "adequacy_evidence": "LLM-based agents can follow structured review checklists across documents, but performance can degrade over longer or more complex design packages, with some risk of missed constraints or drift.",
+      "_timestamp": "2026-04-05T21:09:59"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing designs for manufacturability requires integrating large volumes of heterogeneous information (CAD drawings, tolerances, materials, process constraints, BOMs) where small overlooked details can materially affect conclusions.",
+      "adequacy_evidence": "Current agents can ingest and summarize multiple documents with retrieval tools, but they still show gaps in reliably tracking fine-grained constraints and cross-referencing details across complex design artifacts.",
+      "_timestamp": "2026-04-05T21:10:00"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing designs often benefits from prior iteration history, known manufacturing issues, and evolving design standards, but each review can largely be conducted using current design documents and specifications.",
+      "adequacy_evidence": "Current agents can store and retrieve prior designs and feedback via external memory systems, but they can inconsistently surface relevant historical context or maintain nuanced project continuity across sessions.",
+      "_timestamp": "2026-04-05T21:10:00"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Design for manufacturability reviews are typically conducted offline or in scheduled review cycles, where minutes to hours (or longer) are acceptable for thorough analysis.",
+      "adequacy_evidence": "Because latency is not a binding constraint, AI systems can use extended reasoning and tool use without degrading performance due to time pressure.",
+      "_timestamp": "2026-04-05T21:10:00"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reviewing manufacturability relies heavily on interpreting CAD models, engineering drawings, tolerances, and spatial relationships, which are inherently visual and often require cross-modal reasoning with specifications.",
+      "adequacy_evidence": "Current AI can analyze simple diagrams and some CAD-like representations, but struggles with fine-grained geometric reasoning, complex assemblies, and nuanced visual-manufacturing constraints, leading to inconsistent performance on harder cases.",
+      "_timestamp": "2026-04-05T21:10:01"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Missed manufacturability issues can lead to large-scale production defects, costly redesigns, delays, or safety risks, so even rare residual errors can have major downstream consequences.",
+      "adequacy_evidence": "Even with standard checks, AI may overlook nuanced process constraints or edge-case tolerances, leaving some non-trivial residual risk, though human review layers can mitigate the most severe failures.",
+      "_timestamp": "2026-04-05T21:10:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing manufacturability requires expert evaluation of tolerances, materials, process constraints, and edge-case failure modes, many of which are subtle and may only manifest during production or prototyping.",
+      "adequacy_evidence": "Current AI systems can flag obvious issues but frequently miss nuanced constraints and shop-floor realities, requiring thorough expert review and validation to catch non-obvious but critical errors.",
+      "_timestamp": "2026-04-05T21:10:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from reviewing product designs for manufacturability or completeness. While certain industries may require human sign-off (e.g., licensed engineers for final approvals), the review task itself can be performed by AI without legal restriction.",
+      "_timestamp": "2026-04-05T21:10:02"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves internal stakeholders such as product designers and production teams who rely on the review, and the reviewer\u2019s credibility can influence how feedback is received.",
+      "adequacy_evidence": "AI-assisted design-for-manufacturability tools are already widely used, and stakeholders are generally comfortable with AI contributing to or performing these reviews as long as outputs are validated.",
+      "_timestamp": "2026-04-05T21:10:02"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

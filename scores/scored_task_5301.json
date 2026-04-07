@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2081.00",
+  "task_id": 5301,
+  "task_statement": "Impose payment deadlines on delinquent taxpayers and monitor payments to ensure that deadlines are met.",
+  "occupation_title": "Tax Examiners and Collectors, and Revenue Agents",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Setting deadlines and tracking taxpayer payments are typically handled through tax administration systems, databases, and electronic or mailed notices, all of which can be managed remotely via a computer and internet access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Payment deadlines and monitoring procedures are largely governed by explicit tax codes, agency policies, and standardized workflows with minimal reliance on experiential judgment.",
+      "adequacy_evidence": "Given clear rules and structured data, current AI agents can reliably apply deadlines and track compliance without needing tacit, experience-based calibration.",
+      "_timestamp": "2026-04-06T02:02:52"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a moderate range of cases (individual vs. business taxpayers, varying delinquency scenarios, hardship claims, and jurisdictional rules) but follows relatively standardized procedures and policies.",
+      "adequacy_evidence": "While general tax collection procedures and examples are well-documented, detailed case-level data (e.g., real enforcement decisions, taxpayer negotiations) is often confidential, leaving some subpopulations only partially represented but still amenable to synthetic approximation.",
+      "_timestamp": "2026-04-06T02:02:52"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While statutes and agency policies define deadlines and procedures, examiners must interpret context such as taxpayer circumstances, payment plans, and enforcement priorities when setting and adjusting deadlines.",
+      "adequacy_evidence": "These rules and decision criteria are largely codified and documentable, allowing well-scaffolded agents to apply policies and infer appropriate actions with minimal ambiguity.",
+      "_timestamp": "2026-04-06T02:02:52"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves setting deadlines, tracking payments over time, and following up on delinquencies, requiring a multi-step but relatively structured workflow with moderate interdependence.",
+      "adequacy_evidence": "AI agents can manage task sequences with scheduling and tracking tools, but may show some degradation over longer monitoring periods (e.g., missed follow-ups or state drift) without robust orchestration.",
+      "_timestamp": "2026-04-06T02:02:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking taxpayer account details, imposed deadlines, and incoming payments within a case, involving multiple data points but typically within structured systems.",
+      "adequacy_evidence": "With database access and tool integration, current agents can reliably store, retrieve, and update these structured records within an episode without significant context loss.",
+      "_timestamp": "2026-04-06T02:02:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Monitoring delinquent taxpayers and enforcing deadlines requires maintaining longitudinal case records, including prior communications, payment plans, deadlines, and payment histories across extended periods.",
+      "adequacy_evidence": "Current AI agents can reliably integrate with databases, case management systems, and schedulers to persist and retrieve structured taxpayer records over time, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T02:02:53"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on structured financial records, notices, and payment tracking systems, all of which are fundamentally text and numeric data; no meaningful visual, audio, or spatial processing is required.",
+      "adequacy_evidence": "Since the task is effectively text- and data-based, current AI systems can fully handle the modality requirements without limitation.",
+      "_timestamp": "2026-04-06T02:02:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Setting payment deadlines and monitoring compliance are administrative processes with timelines spanning days to weeks, not requiring rapid or real-time responses.",
+      "adequacy_evidence": "Current AI systems can easily operate within these relaxed timeframes, performing tracking, reminders, and status checks without any meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T02:02:54"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Deadlines and payment compliance can be checked against statutory rules and account records, but doing so requires access to tax systems and domain knowledge to confirm correct application of policies.",
+      "adequacy_evidence": "AI may misapply rules or overlook account nuances, so outputs would need routine cross-checking against authoritative records, though discrepancies are generally detectable through existing audit trails.",
+      "_timestamp": "2026-04-06T02:02:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Tax collection actions like setting deadlines and enforcing compliance are legally vested in authorized government officials, and current frameworks assume a human decision-maker exercising delegated authority. While AI can assist, there is no clear provision allowing fully autonomous AI to exercise this authority, creating a partial regulatory constraint.",
+      "_timestamp": "2026-04-06T02:02:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task directly engages delinquent taxpayers, where perceived legal authority and legitimacy of the actor issuing deadlines and monitoring compliance are central to effectiveness.",
+      "adequacy_evidence": "While automated notices and systems are already common and partially accepted, taxpayers may resist or distrust fully AI-driven enforcement actions, especially in disputes or edge cases where human authority and discretion are expected.",
+      "_timestamp": "2026-04-06T02:02:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in setting or monitoring payment deadlines can lead to improper penalties, missed collections, or taxpayer disputes, but these issues are typically reversible through appeals or corrections.",
+      "adequacy_evidence": "Even with standard checks, AI systems may still miss edge cases (e.g., payment timing nuances or account mismatches), leaving some residual risk that can cause administrative or fairness issues, though not usually severe or irreversible.",
+      "_timestamp": "2026-04-06T02:02:56"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

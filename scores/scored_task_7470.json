@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3031.02",
+  "task_id": 7470,
+  "task_statement": "Research resources such as survey maps or legal descriptions to verify property lines or to obtain information needed for mapping.",
+  "occupation_title": "Surveying and Mapping Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Researching survey maps and legal descriptions is often done using digital GIS databases, scanned records, and online property archives, but some cases still require consulting physical records or maps in local offices or archives."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied document types (survey plats, deeds, metes-and-bounds descriptions) across jurisdictions with differing conventions, but remains within a relatively structured domain of cadastral records.",
+      "adequacy_evidence": "Many examples exist in public records and GIS datasets, but significant portions (e.g., local archives, handwritten or poorly digitized records) are not fully accessible or well-represented in training pipelines.",
+      "_timestamp": "2026-04-05T22:55:42"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting legal descriptions, historical survey maps, and jurisdiction-specific conventions, where relevant criteria (e.g., which sources are authoritative or how to resolve discrepancies) are partly context-dependent.",
+      "adequacy_evidence": "Current agents can retrieve and parse many documents but often miss nuanced jurisdictional rules or fail to reconcile conflicting records without human guidance, requiring iterative clarification.",
+      "_timestamp": "2026-04-05T22:55:42"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step research\u2014locating relevant documents, interpreting legal descriptions, and cross-referencing sources\u2014but these steps are moderately scoped and not deeply interdependent over long horizons.",
+      "adequacy_evidence": "AI agents can generally sustain performance across such research sequences, though they may exhibit some drift or inconsistency when integrating multiple sources or maintaining precise alignment across steps.",
+      "_timestamp": "2026-04-05T22:55:42"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting survey maps and legal descriptions often requires experience with conventions (e.g., metes and bounds, plat inconsistencies) and judgment in resolving ambiguities or conflicting records, though much is guided by established rules and standards.",
+      "adequacy_evidence": "Current agents can parse and cross-reference documents and apply formal rules, but they struggle with nuanced interpretation of ambiguous descriptions and local surveying conventions, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-05T22:55:42"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interpreting survey maps and spatial representations alongside textual legal descriptions, requiring some visual-spatial understanding but not exclusively multimodal processing.",
+      "adequacy_evidence": "Current AI can handle basic map and diagram interpretation, but struggles with complex, fine-grained geospatial details and precise cross-referencing with legal descriptions.",
+      "_timestamp": "2026-04-05T22:55:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves consulting multiple documents (e.g., survey maps, legal descriptions, plats) and integrating their details, requiring moderate tracking and comparison of structured spatial and textual information.",
+      "adequacy_evidence": "Current agents can retrieve and summarize multiple sources, but may lose precision when aligning technical legal descriptions or maintaining exact spatial relationships across documents.",
+      "_timestamp": "2026-04-05T22:55:43"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many instances are tied to a specific parcel and can be handled independently, technicians often benefit from retaining prior project files, historical surveys, or jurisdiction-specific knowledge across sessions.",
+      "adequacy_evidence": "Current AI systems with standard retrieval and document storage can reliably persist and access prior project materials, making cross-session memory needs largely manageable.",
+      "_timestamp": "2026-04-05T22:55:43"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Researching survey maps and legal descriptions is typically an offline task with flexible timelines; minutes to hours are acceptable without impacting outcomes.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to retrieve, parse, and reason over documents without meaningful pressure from latency constraints.",
+      "_timestamp": "2026-04-05T22:55:44"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying property lines from survey maps and legal descriptions requires specialized knowledge to interpret bearings, distances, and legal language, and discrepancies can be subtle and not immediately observable without cross-referencing multiple sources.",
+      "adequacy_evidence": "Current AI systems can misinterpret legal descriptions or overlook inconsistencies, and detecting these errors requires expert review and cross-checking, making verification both necessary and non-trivial in practice.",
+      "_timestamp": "2026-04-05T22:55:45"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in verifying property lines or interpreting legal descriptions can lead to boundary disputes, legal liability, and costly corrections, so even rare residual mistakes can have serious consequences.",
+      "adequacy_evidence": "Even with standard checks, AI may misinterpret nuanced legal descriptions or reconcile conflicting records imperfectly, leaving some non-trivial residual risk that requires expert human oversight.",
+      "_timestamp": "2026-04-05T22:55:45"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "No explicit laws prohibit AI from conducting background research on survey maps or legal descriptions. Licensing requirements apply to final boundary determinations and certified surveying work, not to the information-gathering task itself.",
+      "_timestamp": "2026-04-05T22:55:45"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of internal research and document analysis, with outputs consumed as technical inputs rather than requiring direct stakeholder interaction or trust in the performer's identity.",
+      "adequacy_evidence": "Since outputs are evaluated based on accuracy of sourced information rather than who produced them, stakeholders are generally indifferent to whether an AI or human performed the research.",
+      "_timestamp": "2026-04-05T22:55:46"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

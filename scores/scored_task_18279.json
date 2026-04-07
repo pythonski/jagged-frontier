@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4012.01",
+  "task_id": 18279,
+  "task_statement": "Compare crop yield maps with maps of soil test data, chemical application patterns, or other information to develop site-specific crop management plans.",
+  "occupation_title": "Precision Agriculture Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Comparing yield maps with soil, chemical, or other geospatial datasets and developing management plans is typically done using GIS or similar software on a computer. The task involves digital data analysis and mapping and does not require physical presence in the field."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous conditions across crop types, soil compositions, climates, sensor formats, and management practices, with many localized and long-tailed edge cases.",
+      "adequacy_evidence": "While agronomic datasets, yield maps, and research trials exist, much high-resolution farm data and expert decision processes are proprietary or sparsely documented, though partial coverage can be synthesized or approximated.",
+      "_timestamp": "2026-04-05T22:36:16"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing site-specific crop management plans requires interpreting relationships between yield, soil, and treatment maps with context like local conditions, crop types, and farmer goals, which are not fully explicit in the data.",
+      "adequacy_evidence": "Current agents can analyze geospatial data and suggest plans, but often miss nuanced agronomic intent or local constraints, requiring human refinement to align recommendations with real-world objectives.",
+      "_timestamp": "2026-04-05T22:36:16"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting spatial yield and soil data into management zones requires experience with local soil\u2013crop interactions, weather patterns, and agronomic trade-offs that are not fully captured by explicit rules.",
+      "adequacy_evidence": "Current AI systems can integrate geospatial and agronomic data and apply documented heuristics, but often lack reliable calibration to local, context-specific nuances and edge cases that experienced technicians handle.",
+      "_timestamp": "2026-04-05T22:36:17"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple interdependent steps\u2014integrating spatial datasets, comparing patterns, and translating findings into management plans\u2014but the sequence is bounded and does not require long, tightly coupled chains of actions.",
+      "adequacy_evidence": "Frontier AI agents can generally maintain coherence across these moderate-length analytical workflows, though some degradation (e.g., dropped constraints or minor inconsistencies) can occur when integrating multiple data sources and steps.",
+      "_timestamp": "2026-04-05T22:36:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple large, heterogeneous spatial datasets (yield maps, soil tests, application layers) and maintaining alignment across them, where missing localized details can materially affect recommendations.",
+      "adequacy_evidence": "Agents can offload much of this to external GIS tools and structured retrieval, but they still show some weakness in consistently tracking all relevant spatial relationships and compressed summaries across complex layers.",
+      "_timestamp": "2026-04-05T22:36:18"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Developing site-specific crop plans often benefits from historical yield maps, past soil tests, and prior management actions across seasons, but individual analyses can still be performed with current-season datasets alone.",
+      "adequacy_evidence": "Current AI systems can persist and retrieve structured agricultural data across sessions via databases or farm management platforms, though integration and consistent use of longitudinal context can be uneven in practice.",
+      "_timestamp": "2026-04-05T22:36:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Developing site-specific crop management plans from multiple spatial datasets is an offline analytical task where minutes to hours of processing time are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform geospatial comparisons and planning within these relaxed time constraints without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-05T22:36:19"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing correctness requires agronomic expertise to interpret spatial patterns, soil variability, and treatment interactions, with many errors only revealed after a growing season or field validation.",
+      "adequacy_evidence": "Current AI can misinterpret geospatial correlations or agronomic context, so outputs require expert review and cross-checking with multiple data sources, making verification effort substantial and unavoidable.",
+      "_timestamp": "2026-04-05T22:36:20"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task fundamentally involves interpreting and comparing geospatial yield maps, soil data layers, and application maps, requiring spatial and visual reasoning over raster/vector data rather than text alone.",
+      "adequacy_evidence": "Current AI agents can process and overlay geospatial datasets using GIS tools, but they are less reliable at nuanced spatial interpretation and agronomic pattern recognition across heterogeneous map layers.",
+      "_timestamp": "2026-04-05T22:36:20"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in site-specific crop management plans can lead to reduced yields, wasted inputs, or environmental harm, but these impacts are typically localized and economically recoverable rather than catastrophic.",
+      "adequacy_evidence": "With standard agronomic checks and data validation, AI-generated plans can be reviewed for plausibility, but current systems may still miss nuanced soil\u2013crop interactions, leaving some residual risk that is noticeable though not prohibitive.",
+      "_timestamp": "2026-04-05T22:36:20"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from analyzing agricultural data or generating site-specific crop management plans. While certain downstream actions (e.g., pesticide application) may require licensed professionals, the analytical planning task itself is not legally restricted.",
+      "_timestamp": "2026-04-05T22:36:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces crop management plans that farmers or agribusiness clients rely on, so stakeholders must engage with and trust the output, though the performer\u2019s personal identity is not central.",
+      "adequacy_evidence": "Farmers already widely use precision agriculture software and decision-support tools, so AI-generated analyses are generally acceptable as long as they are accurate and actionable.",
+      "_timestamp": "2026-04-05T22:36:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

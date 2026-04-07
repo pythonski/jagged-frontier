@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1141.02",
+  "task_id": 17323,
+  "task_statement": "Interpret diagnostic or laboratory tests, such as electrocardiograms (EKGs) and renal functioning tests.",
+  "occupation_title": "Advanced Practice Psychiatric Nurses",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Interpreting lab results or EKG readings is primarily a cognitive task that can be done by reviewing digital records or images in electronic health systems. However, in many clinical settings the interpretation occurs on-site as part of in-person care and may involve reviewing paper printouts or equipment outputs."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpretation of EKGs and renal tests spans diverse patient populations, comorbidities, medication effects, and rare pathological patterns, making the instance distribution broad and clinically heterogeneous.",
+      "adequacy_evidence": "There is extensive medical literature, annotated datasets, and training material (including waveform data and lab interpretation guides), but coverage of rare conditions and full clinical context integration remains partially limited and often locked in private datasets.",
+      "_timestamp": "2026-04-06T02:27:44"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting EKGs and lab tests follows established clinical criteria, but meaningful interpretation depends on patient context (medications, comorbidities, psychiatric status), requiring some implicit judgment.",
+      "adequacy_evidence": "Current AI can apply explicit interpretation rules and incorporate context when provided, but may miss nuanced clinical intent or prioritize irrelevant factors without iterative human guidance.",
+      "_timestamp": "2026-04-06T02:27:45"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpreting EKGs or lab results involves a small sequence of steps (review values, compare to norms, synthesize findings), but these steps are relatively short and loosely coupled rather than long, cascading chains.",
+      "adequacy_evidence": "Frontier AI systems can reliably sustain coherence across these short reasoning sequences, with little degradation in performance over the limited number of steps required.",
+      "_timestamp": "2026-04-06T02:27:45"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting tests often benefits from prior results, medication history, and patient baseline trends, but individual interpretations can still be performed with the current test and provided context.",
+      "adequacy_evidence": "Current AI systems can retrieve and use longitudinal patient data via EHR integrations, but may inconsistently surface or prioritize relevant historical context across sessions without careful system design.",
+      "_timestamp": "2026-04-06T02:27:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting EKGs and renal tests requires pattern recognition, clinical context integration (e.g., medications, comorbidities), and judgment about significance and next steps that are refined through experience rather than fully codified rules.",
+      "adequacy_evidence": "Frontier AI systems can accurately read many standard patterns and lab abnormalities, but they still show gaps in context-sensitive interpretation and clinical prioritization in atypical or multi-factor cases.",
+      "_timestamp": "2026-04-06T02:27:46"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpretation of tests like EKGs and lab results is typically expected within seconds to minutes in clinical workflows, but not usually under extreme real-time pressure for psychiatric nurses except in urgent cases.",
+      "adequacy_evidence": "Frontier AI systems can analyze structured lab data and EKG patterns rapidly with high accuracy, and do not require long reasoning time to meet these moderate latency expectations.",
+      "_timestamp": "2026-04-06T02:27:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting EKGs requires visual analysis of waveform patterns, while lab tests like renal panels are largely numeric/text-based, making multimodal input important but not universally central.",
+      "adequacy_evidence": "Current AI systems can interpret straightforward EKGs and lab values, but reliability drops on subtle waveform abnormalities and complex clinical contexts requiring fine-grained visual judgment.",
+      "_timestamp": "2026-04-06T02:27:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpreting EKGs and lab tests requires integrating multiple data points (e.g., waveform features, lab values, medications, clinical context) within a single episode, but the total information volume is moderate and structured.",
+      "adequacy_evidence": "Current AI agents can reliably manage and integrate these bounded, structured inputs within a single session using tools and context management, with little evidence of systematic information loss.",
+      "_timestamp": "2026-04-06T02:27:46"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting EKGs and renal function tests involves subtle pattern recognition and clinical context; misreads can be non-obvious and require trained expertise and sometimes longitudinal data to confirm.",
+      "adequacy_evidence": "Current AI can assist but still makes clinically significant interpretation errors and lacks full context integration, so expert review is necessary and nontrivial, with meaningful effort required to validate outputs.",
+      "_timestamp": "2026-04-06T02:27:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting diagnostic tests directly informs patient care decisions and requires trust from both patients and collaborating clinicians in the practitioner's clinical judgment and professional authority.",
+      "adequacy_evidence": "While clinicians increasingly accept AI-assisted interpretation tools, full substitution by an AI agent would face skepticism from both providers and patients who expect a licensed human to validate and take responsibility for medical interpretations.",
+      "_timestamp": "2026-04-06T02:27:48"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misinterpretation of EKGs or renal function tests can lead to missed life-threatening conditions (e.g., arrhythmias, kidney failure) or inappropriate treatment, so even rare residual errors can have severe consequences.",
+      "adequacy_evidence": "Current AI can perform well on many standard interpretations, but still exhibits occasional clinically significant errors and brittleness in edge cases, leaving some non-negligible residual risk even after typical review processes.",
+      "_timestamp": "2026-04-06T02:27:48"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Interpreting diagnostic tests is considered the practice of medicine and must be performed or overseen by a licensed clinician under state law; AI may assist but cannot legally act as the autonomous decision-maker or signer. These licensure requirements explicitly restrict independent AI performance of the task.",
+      "_timestamp": "2026-04-06T02:27:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

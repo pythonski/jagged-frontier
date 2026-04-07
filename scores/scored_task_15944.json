@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1041.08",
+  "task_id": 15944,
+  "task_statement": "Advise customers on import and export restrictions, tariff systems, insurance requirements, quotas, or other customs-related matters.",
+  "occupation_title": "Customs Brokers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Advising clients on customs regulations and tariffs is typically done via email, phone, video calls, or digital reports using regulatory databases and documents. However, some instances involve in-person consultations or meetings with clients, so not all cases are fully remote."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous cases across countries, product categories, trade agreements, and frequently changing regulations, creating a long-tailed, context-sensitive distribution.",
+      "adequacy_evidence": "Extensive public documentation (tariff schedules, regulations, rulings) and examples exist, but real-world edge cases, firm-specific practices, and up-to-date interpretive guidance are unevenly captured and partially inaccessible.",
+      "_timestamp": "2026-04-06T00:20:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising clients involves multi-step reasoning\u2014gathering shipment details, interpreting relevant regulations, and tailoring guidance\u2014but these steps are moderately scoped rather than long, tightly interdependent chains.",
+      "adequacy_evidence": "LLM-based agents can generally maintain coherence across such advisory sequences, though some degradation (e.g., missed constraints or inconsistencies) can occur as complexity and conditional branching increase.",
+      "_timestamp": "2026-04-06T00:20:07"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising on customs matters depends on client-specific details (goods classification, jurisdictions, risk tolerance, business goals), requiring interpretation beyond explicit rules but still grounded in codified regulations.",
+      "adequacy_evidence": "Current agents can infer many relevant factors from provided context and regulations, but often miss nuanced client constraints or edge cases, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T00:20:07"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of customs advice is grounded in codified regulations (tariff schedules, quotas, legal texts), brokers routinely apply experience to interpret ambiguous classifications, anticipate enforcement practices, and tailor advice to specific shipment contexts.",
+      "adequacy_evidence": "Current AI agents can apply rules and retrieve relevant regulations well, but they often lack calibrated judgment on edge cases, evolving enforcement norms, and risk-sensitive interpretations that experienced brokers develop through practice.",
+      "_timestamp": "2026-04-06T00:20:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Advising on customs regulations is typically done via consultations, emails, or scheduled interactions where responses within seconds to a few minutes are acceptable rather than instantaneous.",
+      "adequacy_evidence": "Frontier AI agents can retrieve and synthesize relevant regulations quickly within this time window, so meeting moderate latency expectations does not significantly degrade output quality.",
+      "_timestamp": "2026-04-06T00:20:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising on customs matters requires integrating multiple sources (tariff schedules, country-specific restrictions, product classifications, and client details) within a single interaction, but the information is typically structured and externally retrievable.",
+      "adequacy_evidence": "Current agents can use retrieval tools to access and organize relevant regulations, but may occasionally miss or mis-prioritize details when multiple constraints interact, leading to moderate context management issues.",
+      "_timestamp": "2026-04-06T00:20:08"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Customs advice depends on complex, frequently changing regulations, tariff schedules, and country-specific rules; verifying correctness often requires expert knowledge and cross-checking authoritative sources, with errors not always immediately obvious.",
+      "adequacy_evidence": "Current AI systems can misinterpret nuanced trade rules or use outdated information, and detecting these errors requires expert review against official regulations, making verification effort substantial and unavoidable.",
+      "_timestamp": "2026-04-06T00:20:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Advising often benefits from remembering client-specific details such as prior shipments, product classifications, and compliance history, but many consultations can still be handled independently using current regulations.",
+      "adequacy_evidence": "Existing systems (CRMs, databases, retrieval-augmented agents) can reliably store and recall client histories and regulatory updates, so current AI can meet these cross-session memory needs with minimal gaps.",
+      "_timestamp": "2026-04-06T00:20:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Advising on import/export restrictions and related matters is primarily based on interpreting and communicating textual regulations, policies, and documentation.",
+      "adequacy_evidence": "Since the task is fundamentally text-driven, current AI systems handle the required modalities adequately with no meaningful multimodal gap.",
+      "_timestamp": "2026-04-06T00:20:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect advice on tariffs, quotas, or import/export restrictions can lead to fines, shipment seizures, legal penalties, and major financial losses, so very low residual error tolerance is required.",
+      "adequacy_evidence": "Even with review, AI can miss jurisdiction-specific updates or nuanced regulatory interpretations, leaving some non-trivial residual risk, though not categorically unusable.",
+      "_timestamp": "2026-04-06T00:20:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clients rely on customs brokers for legally sensitive guidance where perceived expertise, licensing, and accountability are central to trust and decision-making.",
+      "adequacy_evidence": "Many clients would be cautious about relying solely on an AI for compliance advice due to liability concerns, though acceptance is growing if AI is supervised by a licensed broker.",
+      "_timestamp": "2026-04-06T00:20:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. law requires customs business, including advising on tariffs and import/export restrictions, to be conducted under the supervision of a licensed customs broker (19 U.S.C. \u00a7 1641). This does not explicitly prohibit AI use, but it requires a licensed human to be responsible, creating a partial restriction on fully autonomous AI performance.",
+      "_timestamp": "2026-04-06T00:20:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

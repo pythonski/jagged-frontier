@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2043.00",
+  "task_id": 9122,
+  "task_statement": "Compile and evaluate hydrologic information to prepare navigational charts and maps and to predict atmospheric conditions.",
+  "occupation_title": "Hydrologists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Compiling and evaluating hydrologic data and producing navigational charts, maps, and atmospheric predictions are typically done using GIS, modeling software, and digital datasets, all of which can be handled entirely on a computer."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating hydrologic data and producing navigational charts requires integrating model outputs with local environmental context, sensor limitations, and anomaly interpretation, which relies on experience-based judgment beyond explicit rules.",
+      "adequacy_evidence": "Current AI systems can process models and data but lack robust real-world calibration and field-tested intuition for edge cases (e.g., unusual hydrologic patterns or conflicting signals), leading to gaps in nuanced professional discernment.",
+      "_timestamp": "2026-04-06T03:10:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hydrologic charting and atmospheric prediction are guided by established scientific standards and protocols, but require contextual judgment about data selection, modeling assumptions, and safety thresholds depending on region and use case.",
+      "adequacy_evidence": "Current agents can follow formal specifications and infer many goals from context, but they often miss nuanced local conditions or implicit safety considerations, requiring human oversight to fully resolve ambiguity.",
+      "_timestamp": "2026-04-06T03:10:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-stage workflows: gathering diverse hydrologic and atmospheric data, cleaning and integrating datasets, running models, and iteratively refining outputs for charts and predictions, where errors can propagate across steps.",
+      "adequacy_evidence": "Well-scaffolded AI agents can execute multi-step analytical pipelines, but performance can degrade over long, interdependent sequences with risks of error propagation or loss of constraints without careful orchestration.",
+      "_timestamp": "2026-04-06T03:10:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large, heterogeneous datasets (e.g., hydrologic time series, spatial maps, atmospheric data) and maintaining consistency across models and map outputs within a single workflow.",
+      "adequacy_evidence": "Current agents with tools can handle multi-source data via retrieval and external computation, but they can lose track of intermediate states or mis-handle complex geospatial/temporal dependencies without careful orchestration.",
+      "_timestamp": "2026-04-06T03:10:37"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse hydrologic regimes (rivers, coasts, groundwater), geographic contexts, and atmospheric conditions, including rare or extreme events, making the instance distribution highly heterogeneous and context-sensitive.",
+      "adequacy_evidence": "Large volumes of satellite data, sensor records, simulation outputs, and scientific literature exist, providing substantial coverage, but rare events, localized phenomena, and some expert interpretation processes remain underrepresented or only partially captured.",
+      "_timestamp": "2026-04-06T03:10:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Hydrologic analysis and chart/map preparation are typically conducted on timescales of hours to days, with forecasting workflows allowing batch processing rather than real-time response.",
+      "adequacy_evidence": "Frontier AI systems can deliver high-quality analysis well within these generous time windows, so extended reasoning does not conflict with latency requirements.",
+      "_timestamp": "2026-04-06T03:10:38"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Hydrologists rely on historical datasets (e.g., streamflow records, prior surveys, climate trends) and project continuity, but these are typically stored in external databases rather than requiring implicit memory across sessions.",
+      "adequacy_evidence": "Current AI systems can persist and retrieve structured environmental and project data through databases and retrieval systems, so cross-session memory needs are well-supported with existing tooling.",
+      "_timestamp": "2026-04-06T03:10:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in hydrologic analyses, navigational charts, and atmospheric predictions can be subtle, data-dependent, and only apparent through expert cross-checking with measurements, models, and domain knowledge; feedback loops can be delayed and indirect.",
+      "adequacy_evidence": "Current AI systems can produce plausible but incorrect geophysical interpretations or maps, and these errors are not easily detectable without expert review and independent validation, making substantial verification effort necessary.",
+      "_timestamp": "2026-04-06T03:10:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on geospatial data, satellite imagery, sensor readings, and the generation of navigational charts and maps, all of which require rich spatial and visual reasoning beyond text.",
+      "adequacy_evidence": "Current agents can process geospatial datasets and generate maps with tools, but they remain less reliable on complex spatial interpretations, integrating heterogeneous sensor inputs, and producing high-stakes, publication-grade cartographic outputs.",
+      "_timestamp": "2026-04-06T03:10:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from compiling hydrologic data, generating navigational charts, or predicting atmospheric conditions; such work can be performed using AI tools. While official chart publication is restricted to authorized agencies like NOAA, this governs institutional authority, not the use of AI within the task.",
+      "_timestamp": "2026-04-06T03:10:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in navigational charts or atmospheric predictions can lead to vessel groundings, flooding mismanagement, or safety hazards, where even rare residual mistakes can have severe consequences.",
+      "adequacy_evidence": "Even after standard quality control, AI systems can introduce subtle geospatial or physical modeling inconsistencies that are hard to fully eliminate, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T03:10:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces navigational charts and atmospheric predictions used by mariners, engineers, and agencies, who rely on their accuracy, though trust is typically placed in the issuing institution rather than the individual analyst.",
+      "adequacy_evidence": "Stakeholders already accept model-generated forecasts and map products, but full reliance on AI without human oversight may face some resistance, especially for safety-critical navigation contexts.",
+      "_timestamp": "2026-04-06T03:10:42"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1213.00",
+  "task_id": 17089,
+  "task_statement": "Prescribe hormonal agents or topical treatments such as contraceptives, spironolactone, antiandrogens, oral corticosteroids, retinoids, benzoyl peroxide, or antibiotics.",
+  "occupation_title": "Dermatologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Prescribing medications is typically done electronically through an EHR or e\u2011prescribing system and can occur during telemedicine visits, but many cases are tied to in\u2011person clinical evaluations or procedures that require physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting and prescribing dermatologic agents requires interpreting patient-specific factors (e.g., comorbidities, pregnancy risk, prior treatment response, lifestyle, risk tolerance) and balancing multiple latent goals like efficacy, safety, and adherence.",
+      "adequacy_evidence": "Current AI can infer many relevant factors from structured data and guidelines but still struggles to fully resolve nuanced tradeoffs and implicit patient preferences without clinician input, often requiring iteration or oversight.",
+      "_timestamp": "2026-04-06T00:49:39"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Prescribing dermatologic agents spans diverse patient factors (age, pregnancy status, comorbidities, skin types, drug interactions, severity variations), creating a heterogeneous and context-sensitive distribution with many edge cases.",
+      "adequacy_evidence": "Clinical guidelines, trials, formularies, and case literature provide strong coverage for common scenarios, but real-world edge cases (complex comorbidities, rare contraindication combinations, nuanced patient histories) are underrepresented in accessible training data.",
+      "_timestamp": "2026-04-06T00:49:39"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While guidelines exist for dermatologic prescribing, clinicians must calibrate choices based on patient-specific factors (e.g., pregnancy risk, comorbidities, prior treatment response), requiring some experience-based judgment beyond explicit rules.",
+      "adequacy_evidence": "Current agents can follow protocols and handle common cases but show gaps in nuanced risk\u2013benefit tradeoffs and individualized adjustments in more complex or context-sensitive scenarios.",
+      "_timestamp": "2026-04-06T00:49:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Prescribing involves a multi-step but bounded sequence: assess patient history and contraindications, select an appropriate agent, determine dosing, and provide guidance, with moderate interdependence between steps.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain coherence across these moderate-length clinical reasoning sequences without significant degradation, especially with structured workflows and checklists.",
+      "_timestamp": "2026-04-06T00:49:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Prescribing requires integrating multiple patient-specific factors (medical history, current medications, contraindications, pregnancy status, prior treatment response), but the total information volume is typically bounded and structured within a single encounter.",
+      "adequacy_evidence": "Current agents can track and use structured clinical inputs reasonably well, but may miss or misweight key details (e.g., drug interactions or contraindications) when context is complex or partially specified.",
+      "_timestamp": "2026-04-06T00:49:40"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Safe prescribing requires longitudinal patient data such as prior treatments, response history, side effects, comorbidities, and pregnancy status, often tracked over multiple visits.",
+      "adequacy_evidence": "Current agents can integrate with EHRs to access prior records, but persistence, completeness, and reliable retrieval of nuanced treatment history and evolving patient context are still inconsistent.",
+      "_timestamp": "2026-04-06T00:49:40"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Prescribing dermatologic treatments is informed by visual assessment of skin lesions (e.g., acne severity, morphology), but the prescribing act itself is largely text-based once diagnosis is established.",
+      "adequacy_evidence": "Current agents can interpret many dermatologic images but remain inconsistent on subtle or atypical presentations, which can affect treatment selection in more complex cases.",
+      "_timestamp": "2026-04-06T00:49:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Prescribing medications requires patient trust in the clinician\u2019s judgment, authority, and accountability, and patients must accept both the diagnosis and treatment plan.",
+      "adequacy_evidence": "Patients and healthcare systems currently show strong resistance to AI autonomously prescribing medications due to safety, liability, and trust concerns, making acceptance a major barrier.",
+      "_timestamp": "2026-04-06T00:49:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Correct prescribing depends on patient-specific factors (contraindications, comorbidities, drug interactions, pregnancy status), and errors may not be immediately observable, often requiring expert chart review and follow-up to detect harm.",
+      "adequacy_evidence": "Current AI systems can suggest plausible treatments but still make non-obvious errors in dosing, contraindications, or patient tailoring, requiring careful clinician verification that is time-consuming and cannot be safely skipped.",
+      "_timestamp": "2026-04-06T00:49:42"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dermatologists typically make prescribing decisions during clinical encounters, requiring responses within seconds to a few minutes but not true real-time immediacy.",
+      "adequacy_evidence": "Frontier AI agents can generate high-quality treatment recommendations well within this time window without needing to truncate reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T00:49:42"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "U.S. law requires that prescribing medications be performed by a licensed clinician (e.g., physician, NP, PA) with appropriate authority, and prescriptions must be issued under that license. AI systems cannot legally prescribe independently, making this a fully restricted task.",
+      "_timestamp": "2026-04-06T00:49:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Dermatologic prescribing includes agents with significant risks (e.g., teratogenic retinoids, systemic corticosteroids, hormonal therapies), where even rare errors can cause serious, sometimes irreversible harm.",
+      "adequacy_evidence": "While guideline checks and clinical review can catch many issues, AI systems still exhibit nontrivial rates of contraindication or interaction errors, leaving some residual risk that remains clinically concerning.",
+      "_timestamp": "2026-04-06T00:49:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2151.00",
+  "task_id": 3562,
+  "task_statement": "Select locations and plan underground or surface mining operations, specifying processes, labor usage, and equipment that will result in safe, economical, and environmentally sound extraction of minerals and ores.",
+  "occupation_title": "Mining and Geological Engineers, Including Mining Safety Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Selecting locations and planning mining operations is largely done using geological data, modeling software, maps, and planning tools on a computer, but it often relies on site inspections and field assessments that require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous geological formations, mining methods (surface vs. underground), regulatory regimes, and site-specific safety and environmental constraints, creating a long-tailed, context-sensitive distribution.",
+      "adequacy_evidence": "While textbooks, case studies, and engineering reports provide partial coverage and simulators can generate synthetic scenarios, much high-fidelity data (e.g., site-specific geotechnical data, operational tradeoffs) is proprietary or sparse, leaving some important subpopulations underrepresented.",
+      "_timestamp": "2026-04-05T23:48:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting mining locations and designing operations requires balancing implicit, site-specific tradeoffs among safety, cost, environmental impact, and regulatory/stakeholder expectations that are often not fully specified upfront.",
+      "adequacy_evidence": "Current agents can integrate many constraints and propose plans, but often miss nuanced local, regulatory, or stakeholder priorities and require iterative human guidance to fully resolve these latent objectives.",
+      "_timestamp": "2026-04-05T23:48:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Planning mining operations requires nuanced judgment about geological variability, safety tradeoffs, equipment suitability, and site-specific risks that are typically learned through field experience and accumulated case-based reasoning.",
+      "adequacy_evidence": "Current AI systems can analyze data and suggest plans but lack the experiential calibration and situational intuition needed to reliably handle complex, high-stakes, site-specific decisions across many real-world cases.",
+      "_timestamp": "2026-04-05T23:48:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Planning mining operations requires long, tightly coupled sequences (site selection, extraction methods, safety systems, environmental controls, labor/equipment planning) where early decisions constrain later ones and inconsistencies can cascade.",
+      "adequacy_evidence": "Frontier agents can handle multi-step planning with tools and iteration, but still show some degradation over long, interdependent sequences (e.g., missed constraints or inconsistencies across plan components), especially at this scale of complexity.",
+      "_timestamp": "2026-04-05T23:48:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Mine planning and site selection are long-horizon engineering tasks typically conducted over days to months, with no requirement for rapid or real-time responses.",
+      "adequacy_evidence": "AI agents can take ample time for extended reasoning, simulations, and optimization without degrading usefulness, as latency is not a binding constraint.",
+      "_timestamp": "2026-04-05T23:48:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Planning mining operations requires interpreting geological maps, core samples, geophysical imaging, and spatial terrain data, as well as producing site layouts and engineering diagrams, making multimodal and spatial reasoning central.",
+      "adequacy_evidence": "Current agents can process maps and generate plans with tools, but remain limited in reliably integrating complex 3D subsurface data and nuanced visual-spatial interpretations compared to human experts.",
+      "_timestamp": "2026-04-05T23:48:29"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Mining operation planning unfolds over long project lifecycles, requiring retention of geological surveys, prior design decisions, safety assessments, regulatory interactions, and evolving site conditions across many sessions.",
+      "adequacy_evidence": "Current agents can store and retrieve project data via external databases and tools, but they still show gaps in reliably surfacing the most relevant historical context and integrating it consistently into complex, evolving plans.",
+      "_timestamp": "2026-04-05T23:48:29"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Planning mining operations requires integrating large volumes of heterogeneous data (geological surveys, safety constraints, environmental regulations, equipment specs, cost models) and maintaining consistency across interdependent decisions within a single planning episode.",
+      "adequacy_evidence": "Current agents can use tools and structured retrieval to handle large contexts, but still exhibit failures in maintaining consistency across many interdependent variables and may lose or misprioritize critical details during long, complex planning workflows.",
+      "_timestamp": "2026-04-05T23:48:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Mining operation plans involve complex geotechnical, environmental, and economic interactions where errors may only surface after costly implementation or long-term monitoring, requiring extensive expert review, modeling, and site validation to detect.",
+      "adequacy_evidence": "Current AI systems can generate plausible plans but frequently miss site-specific constraints or subtle safety and environmental risks, and verifying these outputs requires intensive expert analysis, simulations, and field data, making unchecked use unsafe.",
+      "_timestamp": "2026-04-05T23:48:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Mine planning and safety decisions must be approved and signed off by licensed Professional Engineers and comply with MSHA and state regulations, which require accountable human decision-makers. AI cannot legally serve as the responsible licensee, so fully autonomous performance is prohibited.",
+      "_timestamp": "2026-04-05T23:48:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Mining plans must be accepted by regulators, company leadership, safety inspectors, and often local communities, with strong reliance on the engineer\u2019s professional authority and credentials.",
+      "adequacy_evidence": "Stakeholders typically require licensed human engineers to sign off due to safety, environmental, and legal liability concerns, and would strongly resist relying on an AI agent in this role without human oversight.",
+      "_timestamp": "2026-04-05T23:48:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in mine planning can lead to fatalities, environmental damage, regulatory violations, and major financial loss, so even rare residual mistakes after review can have severe, irreversible consequences.",
+      "adequacy_evidence": "Even with standard engineering checks, AI-generated plans may contain subtle geotechnical, safety, or site-specific judgment errors that are hard to fully eliminate, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-05T23:48:32"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

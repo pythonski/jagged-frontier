@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.02",
+  "task_id": 3308,
+  "task_statement": "Evaluate freight or inventory costs associated with transit times to ensure that costs are appropriate.",
+  "occupation_title": "Transportation, Storage, and Distribution Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Evaluating freight or inventory costs relative to transit times is typically done by analyzing logistics data, invoices, and shipping metrics in spreadsheets or logistics software, which can be accessed remotely. The task is primarily analytical and does not require physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves applying cost models and business rules, but also requires experiential judgment to account for variability in transit reliability, supplier behavior, and operational tradeoffs not fully captured in formal models.",
+      "adequacy_evidence": "Current AI systems can model costs and analyze scenarios effectively, but often lack calibrated judgment for edge cases like disruptions, informal carrier practices, or nuanced tradeoffs learned through operational experience.",
+      "_timestamp": "2026-04-05T20:39:47"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different transport modes, routes, commodities, and cost structures, but follows fairly standardized logistics and cost-accounting frameworks rather than a highly long-tailed distribution.",
+      "adequacy_evidence": "There is substantial coverage in logistics datasets, operations research literature, and enterprise records, but key elements like negotiated freight rates and firm-specific cost structures are often proprietary and thinly represented.",
+      "_timestamp": "2026-04-05T20:39:47"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The notion of 'appropriate' costs depends on context such as service level targets, perishability, contractual obligations, and trade-offs between speed and cost, which are not fully explicit in the task description.",
+      "adequacy_evidence": "Current AI can use historical data and stated policies to approximate these trade-offs, but often misses implicit business priorities or evolving stakeholder preferences without iterative human guidance.",
+      "_timestamp": "2026-04-05T20:39:48"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis (collecting transit time data, calculating associated costs, and comparing against benchmarks), requiring some consistency across steps but not long, tightly coupled sequences.",
+      "adequacy_evidence": "AI agents can generally handle these structured analytical workflows, but may show moderate degradation in maintaining consistency across multiple data transformations or assumptions without careful scaffolding.",
+      "_timestamp": "2026-04-05T20:39:48"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often benefits from comparing current costs and transit times to historical benchmarks or prior analyses, but this information is typically stored in external systems and does not require persistent agent-held memory.",
+      "adequacy_evidence": "Current AI agents can reliably retrieve and use historical logistics and cost data from databases or records on demand, so cross-session memory limitations do not meaningfully constrain performance.",
+      "_timestamp": "2026-04-05T20:39:50"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating multiple data elements (freight rates, transit times, inventory carrying costs) and comparing scenarios, but the information is structured and bounded within typical datasets or reports.",
+      "adequacy_evidence": "Current agents with tool use (e.g., spreadsheets, databases) can reliably track, retrieve, and compute over these inputs within a session without significant context loss.",
+      "_timestamp": "2026-04-05T20:39:50"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves analyzing numerical and textual data such as transit times, cost figures, and logistics records, which are typically represented in structured text or tables.",
+      "adequacy_evidence": "Current AI systems can fully handle structured and textual data analysis without needing multimodal capabilities for this task.",
+      "_timestamp": "2026-04-05T20:39:50"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Evaluating freight or inventory costs tied to transit times is a planning and analysis task typically conducted over minutes to hours, not under real-time constraints.",
+      "adequacy_evidence": "Current AI systems can perform cost analyses and scenario comparisons well within these relaxed timeframes without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T20:39:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from evaluating freight or inventory costs. This is an internal business analytics function without licensing or mandated human decision-maker requirements.",
+      "_timestamp": "2026-04-05T20:39:52"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in evaluating freight or inventory costs can lead to inefficiencies, budget overruns, or suboptimal logistics decisions, but these are typically correctable and rarely catastrophic.",
+      "adequacy_evidence": "Cost evaluations are structured, data-driven, and auditable, so standard checks (e.g., reconciliations, benchmarks) can catch most issues, leaving little residual risk from AI outputs.",
+      "_timestamp": "2026-04-05T20:39:53"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces analyses used by internal stakeholders (e.g., managers, finance, logistics teams), but interaction is indirect and does not depend strongly on the analyst\u2019s personal identity.",
+      "adequacy_evidence": "Organizations already accept AI-driven analytics for cost evaluation; stakeholders typically prioritize accuracy and efficiency over whether a human or AI produced the analysis.",
+      "_timestamp": "2026-04-05T20:39:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves checking cost models, rate inputs, and transit-time assumptions against contracts or historical data, which requires domain knowledge and careful review but is not inherently opaque.",
+      "adequacy_evidence": "AI can perform calculations and comparisons but may mis-handle inputs, omit constraints, or use incorrect assumptions, so outputs typically require human validation against source data and business rules.",
+      "_timestamp": "2026-04-05T20:39:53"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

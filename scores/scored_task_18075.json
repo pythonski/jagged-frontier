@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "47-4011.01",
+  "task_id": 18075,
+  "task_statement": "Analyze energy bills, including utility rates or tariffs, to gather historical energy usage data.",
+  "occupation_title": "Energy Auditors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Analyzing energy bills and utility tariffs is typically done using digital documents, spreadsheets, or billing portals on a computer. The task involves data review and analysis that can be performed entirely remotely."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Energy bills and tariffs vary across utilities, regions, customer classes, and rate structures, but follow semi-standardized formats and regulatory frameworks.",
+      "adequacy_evidence": "Large volumes of real and synthetic bills, tariff schedules, and worked examples are publicly available, though some niche commercial/industrial rate structures and proprietary formats are less well represented.",
+      "_timestamp": "2026-04-06T04:55:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpreting utility tariffs and billing structures (e.g., time-of-use rates, demand charges) sometimes requires experience to recognize anomalies or special cases, but most elements follow documented rules and formats.",
+      "adequacy_evidence": "Well-scaffolded agents can reliably parse bills, apply tariff rules, and extract usage patterns using structured data extraction and rule-based reasoning, with minimal need for human-like experiential judgment.",
+      "_timestamp": "2026-04-06T04:55:36"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step processing (reading bills, interpreting tariff structures, extracting and aggregating usage data), but the steps are moderately sized and only loosely interdependent.",
+      "adequacy_evidence": "Frontier AI agents with document parsing and structured extraction tools can maintain consistent performance across these sequences without significant degradation, as each step is well-bounded and verifiable.",
+      "_timestamp": "2026-04-06T04:55:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves extracting and aggregating data from multiple bills, rate schedules, and time periods, requiring moderate tracking of figures, units, and tariff structures within a single analysis session.",
+      "adequacy_evidence": "Current LLM-based agents with document parsing and tabular reasoning tools can reliably manage and aggregate this level of structured information without significant context loss.",
+      "_timestamp": "2026-04-06T04:55:36"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analyzing energy bills and tariffs is typically a back-office task with no real-time pressure; minutes to hours are acceptable for thorough review.",
+      "adequacy_evidence": "Current AI systems can process documents and extract usage data well within generous time windows, so extended reasoning does not conflict with latency requirements.",
+      "_timestamp": "2026-04-06T04:55:36"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Energy bills and tariffs vary in format and structure, requiring interpretation of billing periods, rate structures, and which fields constitute 'historical usage,' but the overall objective is fairly well-defined.",
+      "adequacy_evidence": "Current agents can extract and interpret most billing data with tools like OCR and structured parsing, but they still struggle with nuanced tariff structures, irregular formats, and implicit context, often needing human correction.",
+      "_timestamp": "2026-04-06T04:55:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is typically self-contained within a single engagement, as historical usage data is directly extracted from the set of bills provided, without needing prior session context.",
+      "adequacy_evidence": "Current agents can handle any minimal persistence (e.g., storing prior analyses) with standard tools, but such cross-session memory is generally unnecessary for task completion.",
+      "_timestamp": "2026-04-06T04:55:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI from analyzing utility bills or extracting historical energy usage data. While general data privacy and utility data access rules apply, they do not restrict AI from performing this task.",
+      "_timestamp": "2026-04-06T04:55:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in extracting or interpreting energy usage data can affect audit conclusions and savings estimates, but they are typically correctable and rarely cause irreversible harm.",
+      "adequacy_evidence": "With standard checks like cross-referencing totals and rate structures, AI errors in bill analysis are usually detectable and correctable, leaving acceptable residual risk.",
+      "_timestamp": "2026-04-06T04:55:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Energy bills and tariffs are often provided as PDFs or scanned documents with tables, charts, and layout-dependent information that requires some visual parsing beyond plain text.",
+      "adequacy_evidence": "Current agents handle most document parsing and OCR reliably, but can struggle with complex layouts, poor scan quality, or intricate tariff tables, leading to occasional extraction errors.",
+      "_timestamp": "2026-04-06T04:55:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Energy bills and tariff documents contain structured data (kWh, dates, rates) that can be cross-checked against source documents, but complex rate structures and billing nuances require domain knowledge to verify accurately.",
+      "adequacy_evidence": "Current AI can extract and summarize data but often misinterprets tariff details or billing formats, so human review of calculations and extracted fields is still needed to ensure correctness.",
+      "_timestamp": "2026-04-06T04:55:38"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is a back-office analytical activity using utility bills and tariffs, with outputs typically consumed internally or incorporated into reports rather than requiring direct stakeholder interaction.",
+      "adequacy_evidence": "Since stakeholders do not directly engage with the performer during this task, acceptance of an AI agent is largely irrelevant and poses no barrier.",
+      "_timestamp": "2026-04-06T04:55:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

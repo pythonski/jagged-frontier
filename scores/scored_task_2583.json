@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4051.00",
+  "task_id": 2583,
+  "task_statement": "Determine charges for services requested, collect deposits or payments, or arrange for billing.",
+  "occupation_title": "Customer Service Representatives",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Determining charges and arranging billing are typically done through computer billing systems and can be handled remotely, including taking electronic payments. However, many customer service roles also involve in-person payment collection (e.g., cash or card at service counters), which requires physical presence."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short multi-step workflow (calculating charges, confirming terms, processing payment or billing), where steps must be done in order but are not deeply interdependent over long horizons.",
+      "adequacy_evidence": "Current AI agents with tool integrations (billing systems, payment APIs) can reliably maintain consistency across these short transactional sequences without meaningful degradation.",
+      "_timestamp": "2026-04-05T23:37:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While pricing and billing rules are often defined, representatives must interpret context such as customer eligibility, service bundles, discounts, or special requests, which introduces moderate implicit criteria.",
+      "adequacy_evidence": "Current AI agents can reliably infer relevant billing rules and clarify missing details through interaction, handling most context-dependent aspects with minimal iteration.",
+      "_timestamp": "2026-04-05T23:37:06"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different billing systems, pricing rules, discounts, and payment scenarios across industries, but these variations are structured and follow codified procedures rather than highly open-ended distributions.",
+      "adequacy_evidence": "There is abundant accessible data (billing workflows, invoices, payment scripts, enterprise systems) and clear procedural documentation, and synthetic environments can readily cover edge cases, leaving little meaningful coverage gap.",
+      "_timestamp": "2026-04-05T23:37:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While most charges and billing processes follow explicit pricing rules and policies, handling exceptions (e.g., goodwill adjustments, unclear service scopes, or negotiating deposits) can require some experience-based judgment.",
+      "adequacy_evidence": "Current AI agents can reliably apply pricing rules and handle common exception patterns when policies are provided, with minimal shortfall in replicating the limited tacit judgment involved.",
+      "_timestamp": "2026-04-05T23:37:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customer service interactions typically require responses within seconds to a minute while the customer is on the line or chat, creating moderate time pressure.",
+      "adequacy_evidence": "Calculating charges or retrieving billing information is straightforward for well-integrated AI systems, which can deliver accurate results within the required latency without needing extended reasoning.",
+      "_timestamp": "2026-04-05T23:37:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking customer details, requested services, pricing rules, and payment status within a single interaction, but the information scope is typically structured and limited.",
+      "adequacy_evidence": "Current AI agents with tool integration reliably handle structured data retrieval and short-term state tracking in billing workflows, with minimal loss of relevant context.",
+      "_timestamp": "2026-04-05T23:37:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often relies on accessing prior account information such as billing history, outstanding balances, and prior payments, but this context is typically structured and episodic rather than deeply longitudinal.",
+      "adequacy_evidence": "Current AI systems integrated with billing/CRM databases can reliably store and retrieve customer account histories across sessions, with minimal gaps in persistence or recall for this type of structured data.",
+      "_timestamp": "2026-04-05T23:37:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves processing structured billing information, prices, and payment details, which are text and numeric in nature; non-text modalities are not central to performance.",
+      "adequacy_evidence": "Current AI agents can reliably handle text and numeric data and integrate with payment and billing systems, so there is no meaningful multimodal shortfall.",
+      "_timestamp": "2026-04-05T23:37:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in billing or payment collection can cause financial discrepancies and customer dissatisfaction, but they are typically reversible through refunds, adjustments, or follow-up corrections.",
+      "adequacy_evidence": "With standard safeguards like validation rules, transaction logs, and audits, AI-driven systems can reduce residual errors to acceptable levels, and remaining mistakes are usually detectable and correctable without severe consequences.",
+      "_timestamp": "2026-04-05T23:37:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers must interact with the agent to understand charges and complete payments, and some degree of trust and clarity is needed, but the task does not heavily depend on personal authority or empathy.",
+      "adequacy_evidence": "Customers already widely accept automated and AI-mediated billing, payment collection, and checkout systems, and generally do not require a human for routine transactions.",
+      "_timestamp": "2026-04-05T23:37:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI systems from determining charges, processing payments, or arranging billing, provided they comply with applicable rules (e.g., PCI-DSS, consumer protection laws). These regulations govern how the task is performed, not whether AI can perform it.",
+      "_timestamp": "2026-04-05T23:37:10"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Charges and billing can be checked against price lists, contracts, and transaction records, but doing so requires some attention to detail and system lookup rather than being instantly obvious.",
+      "adequacy_evidence": "AI can generate billing outputs but may misapply pricing rules or miss context, so routine verification against systems or rules is still needed, though it is not highly burdensome.",
+      "_timestamp": "2026-04-05T23:38:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

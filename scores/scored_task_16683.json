@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3029.05",
+  "task_id": 16683,
+  "task_statement": "Prepare layouts of machinery or equipment, using drafting equipment or computer-aided design (CAD) software.",
+  "occupation_title": "Engineering Technologists and Technicians, Except Drafters, All Other",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Preparing machinery or equipment layouts is usually done using CAD software on a computer, which can be performed remotely. However, some instances require on-site measurements, inspection of existing equipment, or collaboration around physical setups, introducing a non-digital component."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many inputs (dimensions, standards, equipment specs) are explicit, effective layouts depend on contextual factors like workflow efficiency, maintenance access, and safety considerations that are often only partially specified.",
+      "adequacy_evidence": "Current agents can interpret structured constraints and generate plausible layouts, but they often miss implicit operational or contextual requirements without iterative human clarification.",
+      "_timestamp": "2026-04-06T04:50:36"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Machinery and equipment layout tasks vary across industries, scales, and constraints (e.g., manufacturing lines, plant layouts, safety clearances), but follow recurring engineering and CAD design patterns.",
+      "adequacy_evidence": "There is substantial public and synthetic data (CAD files, engineering drawings, tutorials), though some real-world layouts and constraints are proprietary or sparsely documented, leaving moderate gaps in full distribution coverage.",
+      "_timestamp": "2026-04-06T04:50:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many layout principles (clearances, standards, ergonomic guidelines) are documented, effective arrangements often rely on experiential judgment about workflow efficiency, maintenance access, and site-specific constraints.",
+      "adequacy_evidence": "AI agents can apply codified rules and generate plausible CAD layouts, but they often lack nuanced calibration for context-specific tradeoffs and practical shop-floor considerations, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T04:50:38"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing machinery layouts in CAD involves multi-step workflows (component placement, constraints, alignment, iteration), where consistency across steps matters but tasks are often modular and revisable.",
+      "adequacy_evidence": "AI agents can manage multi-step CAD-like workflows with tools, but may exhibit some drift in constraint tracking or require corrections over longer sequences, especially in complex layouts.",
+      "_timestamp": "2026-04-06T04:50:38"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Preparing machinery layouts requires tracking many interdependent parameters (dimensions, tolerances, spatial relationships, component specs) across a complex, evolving design within a single session, where missing details can cause functional errors.",
+      "adequacy_evidence": "While tool-integrated agents can offload some state to CAD systems, they still show moderate weaknesses in consistently retrieving and maintaining all constraints and relationships across iterative steps, leading to occasional context loss or misalignment.",
+      "_timestamp": "2026-04-06T04:50:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Preparing machinery or equipment layouts is inherently visual and spatial, requiring precise geometric reasoning, interpretation of schematics, and generation of CAD drawings or diagrams.",
+      "adequacy_evidence": "Current agents can assist with CAD scripting and basic layout generation, but they remain inconsistent on complex spatial constraints, precision engineering requirements, and high-fidelity design outputs.",
+      "_timestamp": "2026-04-06T04:50:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Layouts are reviewed and used by engineers, project managers, or manufacturing teams, so stakeholders must engage with and approve the output, though the creator\u2019s identity is not central.",
+      "adequacy_evidence": "Stakeholders in engineering workflows already accept CAD automation and tool-assisted design, so AI-generated layouts would generally be accepted if they meet technical standards.",
+      "_timestamp": "2026-04-06T04:50:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "CAD layouts can be checked with tools like clash detection, dimension constraints, and standards compliance, but verifying functional fit, safety clearances, and engineering intent still requires expert review.",
+      "adequacy_evidence": "AI-generated layouts would need consistent human validation for design correctness and standards adherence; while many errors are detectable with CAD tools, they are frequent enough to require routine, non-trivial checking.",
+      "_timestamp": "2026-04-06T04:50:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in machinery or equipment layouts can lead to misalignment, safety hazards, costly rework, or operational inefficiencies, so even small residual mistakes after review can have significant downstream consequences.",
+      "adequacy_evidence": "While CAD outputs can be checked through simulations, standards, and human review, AI-generated layouts may still introduce subtle integration or constraint errors that are not always caught, leaving some residual risk.",
+      "_timestamp": "2026-04-06T04:50:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing machinery or equipment layouts in CAD is typically an iterative design task where minutes to hours of latency are acceptable, and immediate real-time responses are not required.",
+      "adequacy_evidence": "Current AI agents can take sufficient time for extended reasoning and tool use without impacting usability, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T04:50:57"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Machinery layout work often builds on prior project files, standards, and revisions, but most necessary context is captured in CAD files and documentation rather than relying on persistent human memory.",
+      "adequacy_evidence": "Current AI systems integrated with file storage, version control, and retrieval can reliably access and reuse prior designs and project context, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T04:50:58"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from generating machinery or equipment layouts using CAD tools. While final engineering approval or stamping may require a licensed professional in some contexts, the drafting/layout task itself is not legally restricted.",
+      "_timestamp": "2026-04-06T04:51:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

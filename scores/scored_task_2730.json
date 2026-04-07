@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5032.00",
+  "task_id": 2730,
+  "task_statement": "Monitor personnel or equipment locations and utilization to coordinate service and schedules.",
+  "occupation_title": "Dispatchers, Except Police, Fire, and Ambulance",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Monitoring personnel or equipment locations and utilization is typically done through computer-based dispatch, GPS tracking, and communication systems (phone, radio, or messaging), all of which can be accessed remotely via standard software and internet."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different industries (e.g., trucking, utilities, taxis) with varying routing constraints, resource types, and scheduling norms, but follows broadly similar monitoring and coordination patterns.",
+      "adequacy_evidence": "While large volumes of dispatch logs, GPS traces, and scheduling records exist, much of the detailed, real-time operational data is proprietary, though partial coverage can be approximated via simulation and synthetic workflows.",
+      "_timestamp": "2026-04-06T01:33:42"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of dispatch monitoring follows explicit tracking and scheduling rules, effective coordination often requires experiential judgment about delays, resource tradeoffs, and context-specific prioritization (e.g., anticipating disruptions or human constraints).",
+      "adequacy_evidence": "Current agents can optimize routing and scheduling with data-driven methods, but they show gaps in nuanced, experience-based adjustments for atypical or context-sensitive situations like ambiguous delays or informal workarounds.",
+      "_timestamp": "2026-04-06T01:33:43"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves implicit priorities (e.g., urgency, efficiency, service quality) and context-dependent tradeoffs when coordinating personnel and equipment, requiring interpretation beyond explicit rules.",
+      "adequacy_evidence": "Current agents can use rules, historical data, and optimization heuristics to infer intent, but they often miss nuanced operational priorities or shifting constraints without human guidance.",
+      "_timestamp": "2026-04-06T01:33:44"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing monitoring and periodic coordination decisions, requiring consistent tracking of multiple entities over time but not long, tightly interdependent action chains.",
+      "adequacy_evidence": "AI agents can manage multi-step monitoring with tools and state tracking, but may show some drift or missed updates over extended sequences, especially in dynamic, real-time environments.",
+      "_timestamp": "2026-04-06T01:33:44"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Dispatchers must track multiple moving personnel and equipment units, their statuses, locations, and schedules in real time, often integrating updates from several channels; missing a detail can disrupt coordination.",
+      "adequacy_evidence": "Agents can maintain structured state with tool support (databases, trackers), but may still lose or misprioritize rapidly updating information streams or struggle with dynamic re-planning under changing conditions.",
+      "_timestamp": "2026-04-06T01:33:44"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Dispatching relies on continuously updated knowledge of personnel availability, equipment status, and prior assignments across shifts and days, forming an ongoing operational state.",
+      "adequacy_evidence": "Current AI agents can reliably integrate with databases and scheduling systems to store and retrieve persistent state across sessions, with little inherent limitation in maintaining this kind of structured longitudinal information.",
+      "_timestamp": "2026-04-06T01:33:44"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Dispatchers must continuously track locations and utilization and adjust schedules in near real time, often reacting within seconds to minutes as conditions change.",
+      "adequacy_evidence": "AI systems can process streams and suggest updates quickly, but maintaining high-quality coordination under strict latency can limit deeper optimization, leading to occasional suboptimal decisions under time pressure.",
+      "_timestamp": "2026-04-06T01:33:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatchers often rely on map interfaces, GPS feeds, and occasionally radio/audio communications to track locations and utilization, introducing meaningful but not essential multimodal elements beyond pure text.",
+      "adequacy_evidence": "Current AI agents can effectively process structured location data, map APIs, and basic multimodal inputs, making the non-text requirements well within existing capabilities.",
+      "_timestamp": "2026-04-06T01:33:46"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Location, status, and utilization data are typically tracked via dispatch systems (e.g., GPS, logs), making many errors observable, but verifying correctness of scheduling decisions or subtle inefficiencies requires attention and contextual knowledge.",
+      "adequacy_evidence": "AI outputs can be cross-checked against real-time system data and communication with personnel, but models may misinterpret dynamic conditions or constraints, requiring ongoing human review to catch mismatches or suboptimal coordination.",
+      "_timestamp": "2026-04-06T01:33:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from monitoring personnel or equipment locations and coordinating schedules in dispatcher roles. While sector-specific oversight (e.g., transportation safety) may impose operational standards, they do not mandate that only humans perform this monitoring task.",
+      "_timestamp": "2026-04-06T01:33:47"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatchers coordinate with drivers, technicians, and sometimes customers, who must follow schedules and routing decisions, so there is ongoing stakeholder interaction where the source of instructions is visible.",
+      "adequacy_evidence": "In logistics and service industries, automated dispatching and routing systems are already widely used and generally accepted, with workers typically indifferent to whether coordination comes from a human or AI system.",
+      "_timestamp": "2026-04-06T01:33:47"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in monitoring and coordination can cause delays, misallocation, or reduced service efficiency, but are typically correctable and rarely catastrophic in non-emergency dispatch contexts.",
+      "adequacy_evidence": "With real-time tracking systems, human oversight, and automated alerts, remaining AI errors after standard checks are likely to be caught or have limited impact, making residual risk acceptable.",
+      "_timestamp": "2026-04-06T01:33:47"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

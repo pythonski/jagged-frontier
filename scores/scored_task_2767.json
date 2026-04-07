@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5081.03",
+  "task_id": 2767,
+  "task_statement": "Determine sequence and release of back orders according to stock availability.",
+  "occupation_title": "Stock Clerks- Stockroom, Warehouse, or Storage Yard",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Determining the order and release of back orders is typically done using inventory or order\u2011management software, making the core decision process digital. However, in many workplaces stock availability may require on\u2011site verification or coordination with warehouse staff, so not all instances can be performed fully remotely."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans variations in inventory systems, prioritization rules, and order characteristics, but remains within structured, rule-governed logistics workflows rather than highly heterogeneous contexts.",
+      "adequacy_evidence": "Extensive ERP, warehouse management, and order fulfillment datasets provide detailed process traces, and synthetic simulation of inventory scenarios is straightforward, giving strong coverage of relevant cases.",
+      "_timestamp": "2026-04-06T05:34:09"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While stock availability is explicit, prioritizing which back orders to release often depends on implicit factors like customer priority, deadlines, or business rules not fully specified in the task statement.",
+      "adequacy_evidence": "Current agents can apply explicit rules well but may miss or misinfer latent prioritization criteria without clear guidance, requiring human clarification or iteration.",
+      "_timestamp": "2026-04-06T05:34:10"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many warehouses use explicit rules (e.g., FIFO, priority codes), workers often apply experience-based judgment for exceptions such as partial fulfillment, urgent orders, or customer importance.",
+      "adequacy_evidence": "Frontier AI agents integrated with inventory systems and business rules can consistently apply these heuristics and replicate exception handling once encoded, with little residual reliance on human-only tacit judgment.",
+      "_timestamp": "2026-04-06T05:34:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple interdependent steps (checking stock levels, matching against back orders, prioritizing, and releasing orders), but the sequence is relatively short and structured rather than deeply extended.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably manage short-to-moderate workflow sequences with database access and rules, showing little degradation across these steps.",
+      "_timestamp": "2026-04-06T05:34:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily relies on inventory records, order queues, and stock data typically represented in text or structured digital systems (e.g., ERP), with little need for visual or other sensory input.",
+      "adequacy_evidence": "Current AI agents can readily process and reason over structured and textual inventory and order data, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-06T05:34:12"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple back orders, inventory levels, and prioritization rules within a single decision episode, requiring moderate information retrieval and state management.",
+      "adequacy_evidence": "Well-scaffolded AI agents with database access and tool use can reliably track and update these structured data elements without significant context loss or compression errors.",
+      "_timestamp": "2026-04-06T05:34:12"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task depends on awareness of ongoing back orders, inventory levels, and prioritization rules across time, but this state is typically stored in inventory/order management systems rather than human memory.",
+      "adequacy_evidence": "Current AI agents can reliably access and update persistent databases and enterprise systems, so maintaining and retrieving cross-session order and inventory state is not a significant limitation.",
+      "_timestamp": "2026-04-06T05:34:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Back-order sequencing typically needs to be updated promptly (seconds to minutes) to keep warehouse operations flowing, but does not require split-second real-time responses.",
+      "adequacy_evidence": "Current AI systems can compute prioritization and sequencing logic quickly within these time bounds, with no meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T05:34:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification requires cross-checking inventory levels, order priorities, and business rules in warehouse or ERP systems; errors are not always immediately obvious but can be identified with routine review.",
+      "adequacy_evidence": "AI systems can apply rules but may mis-handle edge cases (e.g., priority customers, partial shipments), so human or system-based checks are still needed with moderate effort.",
+      "_timestamp": "2026-04-06T05:34:13"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in sequencing or releasing back orders can cause delays, customer dissatisfaction, and inventory misallocation, but impacts are typically reversible and operational rather than catastrophic.",
+      "adequacy_evidence": "Inventory systems, order logs, and fulfillment checks make discrepancies visible, and AI-driven decisions can be cross-validated against stock data, leaving low residual risk after normal quality control.",
+      "_timestamp": "2026-04-06T05:34:14"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal inventory control function where outputs are system-driven decisions about order sequencing, not requiring direct stakeholder interaction or trust in the performer\u2019s identity.",
+      "adequacy_evidence": "Since there are no meaningful external stakeholders sensitive to who performs the task, AI execution would face no acceptance barriers in practice.",
+      "_timestamp": "2026-04-06T05:34:14"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from determining sequencing and release of back orders in warehouse operations. This is an internal logistics task without licensure or mandated human decision-maker requirements.",
+      "_timestamp": "2026-04-06T05:34:15"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

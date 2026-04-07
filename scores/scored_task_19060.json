@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "23-1012.00",
+  "task_id": 19060,
+  "task_statement": "Prepare periodic reports on court proceedings, as required.",
+  "occupation_title": "Judicial Law Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Writing and compiling periodic reports is primarily computer-based using case records, transcripts, and notes. However, gathering the underlying information may sometimes involve attending court proceedings or handling physical records in the courthouse."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Periodic court reports follow institutional formats but still require selecting salient details, tone, and emphasis based on judge preferences and case context, which are partly implicit.",
+      "adequacy_evidence": "Agents can generate structured summaries from transcripts and prior examples, but often miss judge-specific priorities or nuanced legal relevance without iterative human guidance.",
+      "_timestamp": "2026-04-06T01:14:15"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Court reporting spans different case types, jurisdictions, and procedural contexts, but follows relatively standardized formats and conventions across courts.",
+      "adequacy_evidence": "Large volumes of court transcripts, filings, and some example summaries are publicly available, though internal clerk report formats and deliberative processes are often private and only partially recoverable.",
+      "_timestamp": "2026-04-06T01:14:15"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Producing useful court proceeding reports requires judgment about what details are salient, how to frame procedural developments, and how to align with a judge\u2019s preferences, which goes beyond explicit rules.",
+      "adequacy_evidence": "Current agents can summarize proceedings well but often misjudge legal salience or omit context-specific nuances, especially regarding what a particular court or judge considers important.",
+      "_timestamp": "2026-04-06T01:14:16"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing periodic reports involves multi-step workflows (reviewing proceedings, synthesizing key points, drafting, revising), where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or tightly coupled.",
+      "adequacy_evidence": "AI agents can generally handle document drafting workflows with scaffolding, but may show some drift or inconsistency over multi-step synthesis and revision, especially across longer or more complex reporting cycles.",
+      "_timestamp": "2026-04-06T01:14:16"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing periodic reports requires synthesizing information from multiple sources such as transcripts, filings, and prior notes, with selective compression of salient legal and procedural details.",
+      "adequacy_evidence": "Current agents can retrieve and summarize large document sets with tooling, but may miss nuanced details or misprioritize information when compressing complex legal proceedings.",
+      "_timestamp": "2026-04-06T01:14:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Periodic reporting requires awareness of prior hearings, filings, and procedural history within a case, but this information is typically well-documented in accessible court records and transcripts.",
+      "adequacy_evidence": "Current AI systems can reliably store, index, and retrieve structured case histories and prior reports via external memory systems, making cross-session context management largely sufficient for this task.",
+      "_timestamp": "2026-04-06T01:14:17"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing reports on court proceedings primarily involves synthesizing written materials such as transcripts, filings, and orders; the task is fundamentally text-based.",
+      "adequacy_evidence": "Since the task is largely text-in, text-out, current AI systems can handle the modality requirements without meaningful limitation.",
+      "_timestamp": "2026-04-06T01:14:17"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Periodic court reports are typically prepared on hourly, daily, or longer timelines, allowing ample time for drafting, review, and revision rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can generate and refine such reports well within these relaxed timeframes, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T01:14:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Court proceeding reports must accurately reflect events and can influence legal understanding, but they are typically reviewed by judges or attorneys and can be corrected if errors are found.",
+      "adequacy_evidence": "With standard human review and cross-checking against transcripts or recordings, AI-generated drafts can be validated effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T01:14:19"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reports are used by judges, attorneys, or court staff who rely on their accuracy and professionalism, but the clerk\u2019s personal identity is not central beyond institutional trust.",
+      "adequacy_evidence": "Stakeholders in legal settings may be cautious about AI-generated reports due to accuracy and accountability concerns, though acceptance is plausible with human oversight and verification.",
+      "_timestamp": "2026-04-06T01:14:19"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from preparing reports on court proceedings. While confidentiality, data security, and court policy constraints apply, they do not explicitly bar AI assistance or automation for this task.",
+      "_timestamp": "2026-04-06T01:14:20"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reports can be checked against transcripts, recordings, and docket entries, but doing so requires careful comparison and legal understanding to catch omissions or mischaracterizations.",
+      "adequacy_evidence": "Current AI can misinterpret or hallucinate details from proceedings, so human reviewers must routinely verify summaries against source materials, creating a moderate but manageable checking burden.",
+      "_timestamp": "2026-04-06T01:14:20"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

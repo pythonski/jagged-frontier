@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "51-4111.00",
+  "task_id": 8504,
+  "task_statement": "Develop and design new tools and dies, using computer-aided design software.",
+  "occupation_title": "Tool and Die Makers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Designing tools and dies using computer-aided design (CAD) software is performed entirely on a computer using digital models and specifications, and does not require physical presence or hands-on equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective tool and die design relies heavily on experiential judgment about material behavior, tolerances, wear, manufacturability, and shop-specific constraints that are not fully captured in formal rules or CAD procedures.",
+      "adequacy_evidence": "While AI agents can generate CAD designs and apply documented engineering principles, they still lack robust calibration to nuanced, shop-floor realities and edge-case tradeoffs that experienced toolmakers handle routinely.",
+      "_timestamp": "2026-04-05T21:26:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing tools and dies involves multi-stage, tightly coupled workflows (concept design, modeling, tolerancing, simulation, iteration), where early decisions propagate and errors can cascade through later steps.",
+      "adequacy_evidence": "LLM-based agents with CAD tooling can manage multi-step design processes, but they still show some degradation over long iterative sequences, including constraint drift and inconsistency across revisions.",
+      "_timestamp": "2026-04-05T21:26:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tool and die design involves interpreting part specifications, tolerances, materials, and production constraints, with important tradeoffs (e.g., manufacturability, durability, cost) often implicit rather than fully specified.",
+      "adequacy_evidence": "Current agents can generate plausible CAD designs from explicit inputs but often miss tacit shop-floor constraints or stakeholder preferences, requiring iterative human refinement to align with true objectives.",
+      "_timestamp": "2026-04-05T21:26:36"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Tool and die design spans diverse part geometries, materials, manufacturing processes (stamping, molding, forging), tolerances, and shop-specific constraints, creating a highly heterogeneous, long-tailed distribution of cases.",
+      "adequacy_evidence": "There is substantial coverage via CAD repositories, engineering textbooks, standards, and simulations, but detailed, process-rich examples tied to real production constraints are often proprietary or sparse, leaving some subdomains only partially covered.",
+      "_timestamp": "2026-04-05T21:26:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing tools and dies in CAD requires tracking many interdependent parameters (dimensions, tolerances, material properties, machining constraints) and maintaining consistency across complex assemblies where small omissions can cause functional failure.",
+      "adequacy_evidence": "Current agents can manage structured design context with tooling and retrieval, but they still struggle with reliably maintaining and updating large, interdependent parameter sets over extended design iterations without losing or distorting details.",
+      "_timestamp": "2026-04-05T21:26:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tool and die design often spans multiple sessions, requiring reuse of prior CAD models, client specifications, and iterative revisions across a project lifecycle.",
+      "adequacy_evidence": "Current agents can persist and retrieve design files and project data via external systems, but may inconsistently track evolving design rationale, preferences, or nuanced project context across sessions.",
+      "_timestamp": "2026-04-05T21:26:37"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Designing tools and dies in CAD requires creating and interpreting detailed 2D/3D geometric models, spatial relationships, and technical drawings, which are inherently visual and spatial rather than text-based.",
+      "adequacy_evidence": "Current AI agents can generate and modify CAD models and interpret drawings in simpler cases, but they remain less reliable for complex, high-precision geometry, tolerancing, and nuanced spatial reasoning required in advanced tool and die design.",
+      "_timestamp": "2026-04-05T21:26:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing tools and dies in CAD is typically a deliberative engineering process where hours or longer iteration cycles are standard; there is no requirement for immediate or real-time responses.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to reason, iterate, and refine designs within acceptable timelines, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T21:26:37"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily technical and internal, producing CAD designs for tools and dies that are evaluated based on functionality and specifications rather than the identity of the designer.",
+      "adequacy_evidence": "Since stakeholders focus on the quality and precision of the design output, they are largely indifferent to whether it is produced by a human or an AI system.",
+      "_timestamp": "2026-04-05T21:26:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in tool and die design can lead to defective parts, production downtime, equipment damage, or safety hazards, so even rare residual mistakes can have significant downstream consequences.",
+      "adequacy_evidence": "While simulations, CAD validation tools, and expert review catch many issues, AI-generated designs may still contain subtle flaws or edge-case failures that are not always detected, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-05T21:26:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit AI systems from performing CAD-based design of tools and dies. While downstream use in regulated industries may require human sign-off, the design activity itself is not legally restricted.",
+      "_timestamp": "2026-04-05T21:26:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Tool and die designs must meet tight tolerances, material constraints, and manufacturability requirements; errors like interference, stress failure, or improper clearances may only surface through simulation, expert review, or physical prototyping.",
+      "adequacy_evidence": "AI-generated CAD designs currently require extensive expert validation, including simulations and detailed inspection, because models frequently miss subtle engineering constraints and produce designs that appear plausible but fail under real-world conditions.",
+      "_timestamp": "2026-04-05T21:26:38"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

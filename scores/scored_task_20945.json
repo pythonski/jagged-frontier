@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.04",
+  "task_id": 20945,
+  "task_statement": "Monitor suppliers' activities to assess performance in meeting quality or delivery requirements.",
+  "occupation_title": "Supply Chain Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Supplier performance is commonly monitored through digital tools such as ERP systems, delivery metrics, quality reports, and email or video communication. However, some situations involve on-site supplier visits or physical audits to verify quality and processes."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring supplier performance involves ongoing, multi-step processes (data collection, comparison to SLAs, trend tracking, and follow-up), but steps are relatively modular rather than tightly interdependent.",
+      "adequacy_evidence": "AI agents can manage monitoring workflows with tools and automation, but over extended periods they may exhibit drift in tracking criteria or miss subtle changes without careful orchestration and refresh mechanisms.",
+      "_timestamp": "2026-04-05T23:23:15"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Supplier monitoring spans varied industries, contract types, geographies, and performance metrics (quality defects, on-time delivery, compliance), creating moderate heterogeneity in cases and evaluation criteria.",
+      "adequacy_evidence": "While general procurement data, KPIs, and case studies are available, much high-fidelity signal (internal supplier scorecards, dispute cases, real-time performance data) is proprietary, leaving gaps that are only partially addressable via synthesis or limited fine-tuning.",
+      "_timestamp": "2026-04-05T23:23:15"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing supplier performance often involves interpreting ambiguous signals (e.g., whether delays are systemic vs. situational) and weighing contextual factors like relationship history or industry norms beyond explicit KPIs.",
+      "adequacy_evidence": "AI agents can track metrics and flag deviations but still struggle with nuanced, context-sensitive judgments about supplier reliability and intent that rely on accumulated experiential calibration.",
+      "_timestamp": "2026-04-05T23:23:15"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Quality and delivery requirements are often formally specified in contracts and KPIs, but acceptable deviations, supplier context, and prioritization involve implicit business judgment.",
+      "adequacy_evidence": "Agents can track metrics and flag deviations reliably, but often miss contextual nuances (e.g., strategic supplier importance or justified exceptions) without human guidance.",
+      "_timestamp": "2026-04-05T23:23:15"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Assessing supplier performance depends on tracking historical quality and delivery metrics over time, requiring access to accumulated performance records across multiple periods.",
+      "adequacy_evidence": "Current AI agents can reliably leverage external databases, ERP systems, and logs to store and retrieve longitudinal supplier data, so cross-session memory needs are well-supported.",
+      "_timestamp": "2026-04-05T23:23:16"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Supplier performance monitoring is typically periodic or dashboard-based, with acceptable latency ranging from minutes to hours or longer rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can analyze supplier data and generate assessments well within these timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T23:23:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Performance monitoring is largely based on textual reports, KPIs, and structured data, but can include inspection images, shipment photos, or sensor/visual evidence for quality issues.",
+      "adequacy_evidence": "Current agents can process standard reports and some visual inputs, but struggle with nuanced interpretation of industrial imagery, video, or cross-modal signals in complex supplier contexts.",
+      "_timestamp": "2026-04-05T23:23:16"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves aggregating and tracking multiple data points (delivery schedules, quality metrics, supplier communications) within a monitoring period, requiring moderate information integration and updating.",
+      "adequacy_evidence": "Current agents can use tools and structured data retrieval to manage these streams, but may lose or misprioritize details when contexts become fragmented or data sources are inconsistently integrated.",
+      "_timestamp": "2026-04-05T23:23:17"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Supplier performance can be checked against delivery records, defect rates, and contracts, but requires aggregation of multiple data sources and contextual judgment about acceptable thresholds and anomalies.",
+      "adequacy_evidence": "AI can compile and flag metrics, but may misinterpret incomplete or inconsistent supplier data and miss context-specific issues, so human review and cross-checking remain necessary.",
+      "_timestamp": "2026-04-05T23:23:18"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from monitoring supplier performance. While regulated industries may require human accountability for compliance, they do not forbid AI-assisted or automated monitoring of supplier activities.",
+      "_timestamp": "2026-04-05T23:23:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Missing or misjudging supplier performance can lead to delays, quality issues, and cost overruns, but these impacts are usually detectable and correctable downstream rather than immediately catastrophic.",
+      "adequacy_evidence": "AI can flag performance issues using structured data and audits, but may still miss nuanced or emerging supplier risks, leaving some residual risk even after standard checks.",
+      "_timestamp": "2026-04-05T23:23:18"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves suppliers whose activities are being evaluated, and internal stakeholders rely on the assessments, but direct interpersonal acceptance of the monitor\u2019s identity is not central.",
+      "adequacy_evidence": "Suppliers and internal teams are generally indifferent to whether monitoring is performed by AI as long as evaluations are accurate, and such analytics are already commonly automated.",
+      "_timestamp": "2026-04-05T23:23:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "21-1014.00",
+  "task_id": 1609,
+  "task_statement": "Gather information about community mental health needs or resources that could be used in conjunction with therapy.",
+  "occupation_title": "Mental Health Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Information about community mental health needs and resources is often gathered through online research, databases, emails, and phone or video communication, but counselors may also attend community meetings or visit local organizations in person to learn about available services."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous local contexts (geography, demographics, cultural factors, available services), with significant variation in community needs and resource landscapes.",
+      "adequacy_evidence": "While substantial data exists (public health reports, service directories, nonprofit databases), granular, up-to-date, and informal community-specific knowledge is often sparse or not well captured in training-accessible corpora.",
+      "_timestamp": "2026-04-06T04:41:48"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task depends on context such as client population, local community characteristics, and therapeutic goals, which are often implicit and require interpretation beyond a literal request.",
+      "adequacy_evidence": "Current agents can gather relevant resources and infer general intent, but often miss nuanced local needs or therapist-specific priorities without iterative human guidance.",
+      "_timestamp": "2026-04-06T04:41:49"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step information gathering (identifying sources, collecting data, filtering, and synthesizing), but steps are loosely coupled and can often be executed independently or iteratively.",
+      "adequacy_evidence": "AI agents can generally sustain coherent performance across such research workflows, though longer sequences may introduce some drift or missed constraints without careful orchestration.",
+      "_timestamp": "2026-04-06T04:41:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves collecting and synthesizing information from multiple sources (e.g., local services, population needs, eligibility criteria), requiring moderate tracking and summarization within a single session.",
+      "adequacy_evidence": "Current AI agents with retrieval and summarization tools can reliably manage and organize this level of information within an episode without significant loss or drift.",
+      "_timestamp": "2026-04-06T04:41:49"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Gathering community mental health resources is typically an asynchronous research task where minutes to hours are acceptable, not requiring immediate response.",
+      "adequacy_evidence": "Current AI agents can perform web searches, retrieval, and synthesis well within this relaxed time window without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T04:41:49"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves collecting and synthesizing information from textual sources such as reports, directories, databases, and written communications; non-text modalities are not essential.",
+      "adequacy_evidence": "Current AI agents can effectively handle text-based information gathering and synthesis, so there is no meaningful shortfall related to multimodal capabilities for this task.",
+      "_timestamp": "2026-04-06T04:41:49"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Identifying relevant and appropriate community mental health resources requires some experiential judgment about quality, cultural fit, accessibility, and client suitability that goes beyond simple directory lookup.",
+      "adequacy_evidence": "Current agents can compile and summarize resources but often lack nuanced, experience-based calibration about real-world service quality and contextual appropriateness across diverse local settings.",
+      "_timestamp": "2026-04-06T04:41:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task can benefit from accumulated knowledge of local resources, prior assessments, and evolving community needs, but each instance can also be performed independently with fresh data gathering.",
+      "adequacy_evidence": "Current agents can reliably store and retrieve structured information about resources and prior findings using external databases or retrieval systems, with minimal cross-session memory limitations for this task.",
+      "_timestamp": "2026-04-06T04:41:50"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Information about community mental health resources can be checked against directories, official listings, or by contacting providers, but requires time and some domain judgment to assess relevance, accuracy, and currency.",
+      "adequacy_evidence": "AI systems can compile plausible resource lists but may include outdated, incorrect, or non-local options, so human verification (e.g., confirming availability and suitability) is still routinely necessary.",
+      "_timestamp": "2026-04-06T04:41:52"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing rules prohibiting AI from gathering information about community mental health resources or needs. While privacy laws like HIPAA may constrain how data is accessed or used, they do not bar AI from performing this general information-gathering task.",
+      "_timestamp": "2026-04-06T04:41:52"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task may involve contacting or interpreting information from community organizations or stakeholders, but it is primarily informational and does not rely heavily on personal trust or therapeutic rapport.",
+      "adequacy_evidence": "Stakeholders are generally indifferent to whether information gathering is done by an AI or human, and AI is already widely accepted for research and resource aggregation tasks.",
+      "_timestamp": "2026-04-06T04:41:52"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inaccurate or incomplete information about community resources can affect care coordination or access, but errors are typically correctable and unlikely to cause severe, irreversible harm on their own.",
+      "adequacy_evidence": "With standard verification (e.g., checking sources, contacting providers), AI-generated resource lists can be validated effectively, leaving minimal residual risk at acceptable levels.",
+      "_timestamp": "2026-04-06T04:41:53"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

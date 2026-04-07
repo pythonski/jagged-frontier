@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "33-3021.00",
+  "task_id": 23030,
+  "task_statement": "Examine records and governmental agency files to find identifying data about suspects.",
+  "occupation_title": "Detectives and Criminal Investigators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Most modern law enforcement records and government files are stored in digital databases that investigators can search remotely via computer systems. However, some cases still involve examining physical records or files located at agencies or archives."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task spans highly heterogeneous records (local, state, federal databases; structured and unstructured files; varying formats, jurisdictions, and data quality), with many edge cases and context-specific retrieval strategies.",
+      "adequacy_evidence": "Much of the relevant data (law enforcement databases, restricted government files) is inaccessible for training, and real investigative workflows are sparsely documented, limiting representative coverage despite some public records and synthetic approximations.",
+      "_timestamp": "2026-04-06T00:36:04"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves some experience-based judgment, such as recognizing aliases, inconsistencies, and which records are most probative, but much of it follows structured search and cross-referencing procedures.",
+      "adequacy_evidence": "Current AI agents can perform large-scale record linkage and pattern detection well, but lack the nuanced investigative calibration needed to reliably interpret ambiguous or conflicting identity signals in all cases.",
+      "_timestamp": "2026-04-06T00:36:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple records and agency files, requiring tracking and cross-referencing details across sources, but typically within a bounded investigative scope rather than massive real-time data streams.",
+      "adequacy_evidence": "Current agents with retrieval tools can handle multi-document review, but they still exhibit occasional context loss or imperfect synthesis when juggling many details across files.",
+      "_timestamp": "2026-04-06T00:36:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the general goal (identify suspect information) is clear, investigators must interpret which records are relevant, resolve aliases, and decide what constitutes useful identifying data based on case context.",
+      "adequacy_evidence": "Current agents can retrieve and extract structured identifiers but often struggle with contextual relevance, alias resolution, and subtle investigative cues, requiring human guidance to refine objectives.",
+      "_timestamp": "2026-04-06T00:36:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing records and agency files to identify suspect information is typically an investigative task without strict real-time constraints; analysts can take minutes to hours to ensure accuracy.",
+      "adequacy_evidence": "Current AI systems can process and search large document sets quickly within acceptable timeframes, so speed constraints do not meaningfully limit performance quality.",
+      "_timestamp": "2026-04-06T00:36:06"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task primarily involves text-based records but can include photos, scanned documents, fingerprints, or other visual identifiers that require some multimodal interpretation.",
+      "adequacy_evidence": "Current agents handle standard documents and basic image analysis well but are less reliable on specialized forensic imagery or degraded records requiring fine-grained visual interpretation.",
+      "_timestamp": "2026-04-06T00:36:07"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Investigations often span multiple sessions and require recalling prior searches, linked cases, and previously identified aliases or identifiers, but each lookup task can often be executed with access to the relevant records at hand.",
+      "adequacy_evidence": "Current agents can store and retrieve structured case data across sessions, but they still show gaps in reliably maintaining and integrating evolving investigative context (e.g., entity resolution, linking across cases) without careful system design.",
+      "_timestamp": "2026-04-06T00:36:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves iterative searching, cross-referencing multiple records, and refining queries across systems, requiring consistent reasoning over several steps but not highly interdependent long chains.",
+      "adequacy_evidence": "AI agents can manage multi-step retrieval and synthesis, but performance can degrade with longer search chains through context loss or missed links between records.",
+      "_timestamp": "2026-04-06T00:36:07"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misidentifying or incorrectly linking suspect identities can lead to wrongful investigation, legal harm, and civil rights violations, so even rare residual errors carry serious consequences.",
+      "adequacy_evidence": "With structured databases and cross-checking, many AI errors can be caught, but risks like incorrect entity resolution or subtle record mismatches may still slip through at a non-negligible rate.",
+      "_timestamp": "2026-04-06T00:36:08"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Identifying data can be cross-checked against official records and databases, but verification requires careful comparison across sources and awareness of aliases, inconsistencies, or outdated information.",
+      "adequacy_evidence": "AI systems can retrieve and summarize records but may misattribute identities or miss subtle discrepancies, requiring human review and cross-referencing to ensure correctness.",
+      "_timestamp": "2026-04-06T00:36:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily an internal analytical activity using records and databases, with no direct interaction requiring stakeholder acceptance of the performer\u2019s identity.",
+      "adequacy_evidence": "Law enforcement agencies already use automated and AI-assisted data search tools, and there is little resistance tied to whether a human or AI performs this back-end records examination.",
+      "_timestamp": "2026-04-06T00:36:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Access to law enforcement and government databases (e.g., CJIS/NCIC) is legally restricted to authorized personnel, and sharing data with external systems is tightly controlled, which can limit autonomous AI use. However, there is no explicit law broadly prohibiting AI tools from assisting with record examination under authorized human oversight.",
+      "_timestamp": "2026-04-06T00:36:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

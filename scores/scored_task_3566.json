@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2151.00",
+  "task_id": 3566,
+  "task_statement": "Monitor mine production rates to assess operational effectiveness.",
+  "occupation_title": "Mining and Geological Engineers, Including Mining Safety Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Monitoring production rates is typically done by reviewing digital production reports, sensor outputs, or mine management software, which can be accessed remotely. However, some situations involve on-site verification or direct observation of operations, so not all instances are fully remote."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring mine production rates involves ongoing data collection, tracking trends over time, and periodically updating assessments, requiring consistent but not deeply interdependent multi-step sequences.",
+      "adequacy_evidence": "AI systems can reliably handle continuous monitoring, data aggregation, and trend analysis over extended sequences using pipelines and memory without significant degradation.",
+      "_timestamp": "2026-04-06T05:47:56"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing operational effectiveness from production rates requires selecting appropriate benchmarks, accounting for site-specific geology, equipment constraints, and business targets, which are not fully explicit.",
+      "adequacy_evidence": "Current agents can track metrics and compare to stated targets, but often miss implicit context (e.g., when deviations are acceptable or due to external constraints), requiring human interpretation to refine judgments.",
+      "_timestamp": "2026-04-06T05:47:56"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring production rates spans different mining methods (surface vs. underground), commodities, equipment, and site conditions, creating moderate variation in data patterns and operational contexts.",
+      "adequacy_evidence": "While sensor logs, SCADA data, and industry reports provide substantial signal, much high-fidelity operational data is proprietary and not broadly accessible, leaving some subpopulations underrepresented but partially recoverable via simulation or synthetic data.",
+      "_timestamp": "2026-04-06T05:47:56"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting production rates requires contextual judgment about geological variability, equipment performance, and operational disruptions that are not fully captured by explicit rules.",
+      "adequacy_evidence": "AI agents can analyze trends and flag anomalies but often lack site-specific calibration and experiential context to reliably interpret non-routine deviations or subtle operational signals.",
+      "_timestamp": "2026-04-06T05:47:57"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring production rates involves tracking time-series data from multiple sources (equipment outputs, shifts, sites) and comparing against targets, requiring moderate aggregation and state tracking within an episode.",
+      "adequacy_evidence": "With tool integration (dashboards, databases, scripts), current agents can reliably retrieve, summarize, and maintain this level of operational data without significant context loss.",
+      "_timestamp": "2026-04-06T05:47:57"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Production monitoring typically involves near-real-time or periodic updates (e.g., minutes) to track throughput and detect issues, but does not usually demand split-second responses.",
+      "adequacy_evidence": "Current AI systems can ingest data streams and perform analysis within these timeframes without sacrificing reasoning quality, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T05:47:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Assessing production rates requires comparing current outputs to historical trends and prior performance data over time, but this is typically structured and systematically recorded.",
+      "adequacy_evidence": "Current AI systems can reliably store, query, and analyze longitudinal production data via databases and monitoring systems, with little difficulty maintaining cross-session context.",
+      "_timestamp": "2026-04-06T05:47:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily an internal analytical function, with outputs (production metrics and assessments) consumed impersonally by management systems or teams without reliance on the performer's identity.",
+      "adequacy_evidence": "Stakeholders in mining operations already accept automated monitoring and analytics systems, so AI involvement would not meaningfully affect acceptance or engagement.",
+      "_timestamp": "2026-04-06T05:47:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in monitoring mine production rates can lead to suboptimal operational decisions, cost inefficiencies, or missed performance issues, but are unlikely to cause immediate severe or irreversible harm if occasional mistakes occur.",
+      "adequacy_evidence": "Production data is typically structured, instrumented, and cross-checkable via dashboards and reports, so after normal validation processes, AI-generated assessments would leave minimal residual risk.",
+      "_timestamp": "2026-04-06T05:47:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring production rates involves interpreting sensor data, time-series metrics, and often visual dashboards or charts, though these can typically be represented in structured or textual form.",
+      "adequacy_evidence": "Current AI agents can reliably process structured data, logs, and visualizations like charts or dashboards, so multimodal demands here are well within existing capabilities.",
+      "_timestamp": "2026-04-06T05:47:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Production rates can be cross-checked against equipment logs, sensor data, and shift reports, but doing so requires domain knowledge and reconciliation of multiple data sources, so errors are not always immediately obvious.",
+      "adequacy_evidence": "AI systems can aggregate and analyze production data but may mis-handle noisy inputs or context (e.g., downtime, geology variability), so human review and cross-checking remain necessary at a moderate level.",
+      "_timestamp": "2026-04-06T05:47:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from monitoring mine production rates. While mining operations are regulated (e.g., MSHA oversight), these rules do not restrict the use of automated or AI-based monitoring tools, provided human accountability remains in place.",
+      "_timestamp": "2026-04-06T05:48:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

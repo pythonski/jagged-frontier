@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1134.00",
+  "task_id": 14699,
+  "task_statement": "Identify problems uncovered by testing or customer feedback, and correct problems or refer problems to appropriate personnel for correction.",
+  "occupation_title": "Web Developers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Identifying issues from software testing or customer feedback and correcting them or routing them to the appropriate personnel is typically done through digital tools such as issue trackers, code editors, and communication platforms, requiring only a computer and internet access."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Customer feedback and test results often contain implicit signals about severity, user intent, and business impact, requiring interpretation beyond explicit instructions.",
+      "adequacy_evidence": "Current agents can extract and categorize issues but often miss nuanced priorities or misinterpret vague feedback, requiring human guidance to align with true objectives.",
+      "_timestamp": "2026-04-06T02:32:52"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting test failures and customer feedback often requires experience-based judgment to prioritize issues, infer root causes, and decide whether to fix or escalate, beyond purely explicit rules.",
+      "adequacy_evidence": "Current agents can analyze logs, tests, and feedback effectively, but show gaps in contextual prioritization, nuanced UX judgment, and escalation decisions in non-routine cases.",
+      "_timestamp": "2026-04-06T02:32:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows\u2014interpreting feedback, reproducing issues, diagnosing causes, implementing or delegating fixes, and verifying outcomes\u2014requiring consistency across several dependent steps.",
+      "adequacy_evidence": "Well-scaffolded AI agents can manage these sequences with tooling, but performance can degrade over extended debugging chains, with risks of losing context or misprioritizing issues across steps.",
+      "_timestamp": "2026-04-06T02:32:53"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "The task spans a highly heterogeneous distribution of issues, including diverse bug types, user behaviors, environments, and feedback formats (e.g., logs, tickets, reviews), often with long-tailed edge cases.",
+      "adequacy_evidence": "There is extensive accessible data from public code repositories, issue trackers, QA logs, and synthetic testing environments that capture both problems and debugging processes, enabling strong coverage of the distribution.",
+      "_timestamp": "2026-04-06T02:32:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Identifying and resolving issues from testing or customer feedback typically occurs on timescales of minutes to hours, not requiring immediate or real-time responses.",
+      "adequacy_evidence": "AI agents can comfortably perform debugging analysis and propose fixes within this time window without needing to sacrifice reasoning depth or output quality.",
+      "_timestamp": "2026-04-06T02:32:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking information from bug reports, test outputs, and user feedback alongside relevant code context, but this information is typically structured and bounded within a single debugging session.",
+      "adequacy_evidence": "Current agents can aggregate logs, feedback, and code context using tools, but may lose or misprioritize details across multiple issues or long traces, leading to occasional context drift.",
+      "_timestamp": "2026-04-06T02:32:55"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Bug identification and resolution often relies on prior test results, recurring user complaints, and historical issue tracking across development cycles, but many individual instances can still be handled with local context and documentation.",
+      "adequacy_evidence": "Current agents can integrate with ticketing systems, logs, and repositories to retrieve past issues, but they still show inconsistencies in maintaining and surfacing relevant cross-session context without careful system design.",
+      "_timestamp": "2026-04-06T02:32:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from identifying and addressing issues in web development workflows. While sector-specific compliance (e.g., for healthcare or finance systems) may impose requirements on outcomes or oversight, they do not bar AI from performing this task.",
+      "_timestamp": "2026-04-06T02:32:56"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much feedback is textual (bug reports, logs), developers often rely on screenshots, screen recordings, or UI behavior to diagnose issues, making some multimodal interpretation useful but not central.",
+      "adequacy_evidence": "Current agents can interpret common artifacts like screenshots and logs, but struggle with subtle UI/UX issues, dynamic behaviors, or complex visual debugging, leading to occasional gaps.",
+      "_timestamp": "2026-04-06T02:32:56"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many issues can be validated with automated tests, logs, and user reports, but reproducing bugs and confirming root causes or complete fixes often requires developer judgment and time.",
+      "adequacy_evidence": "AI agents can assist in debugging and triage but still produce incorrect fixes or misprioritize issues, requiring developers to run tests, review changes, and verify behavior before deployment.",
+      "_timestamp": "2026-04-06T02:32:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Residual errors (e.g., missed bugs or misprioritized fixes) can impact user experience or business metrics, but are typically recoverable through patches and iterative updates rather than causing irreversible harm.",
+      "adequacy_evidence": "With standard QA practices (automated tests, code review, monitoring), AI-identified and resolved issues can be validated sufficiently, and remaining errors are generally tolerable and correctable in subsequent iterations.",
+      "_timestamp": "2026-04-06T02:32:57"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interpreting customer feedback and coordinating with team members, so stakeholders engage with the output, though the performer\u2019s identity is not central.",
+      "adequacy_evidence": "Organizations and users are generally indifferent to whether bug identification and routing is done by AI as long as issues are resolved effectively, and AI-assisted workflows are already widely accepted.",
+      "_timestamp": "2026-04-06T02:32:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

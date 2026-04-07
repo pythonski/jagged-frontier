@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2021.00",
+  "task_id": 9079,
+  "task_statement": "Conduct numerical simulations of climate conditions to understand and predict global or regional weather patterns.",
+  "occupation_title": "Atmospheric and Space Scientists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Numerical climate simulations are performed using computer models and software on local machines or remote high\u2011performance computing systems, which can be accessed over the internet. The task involves computational work and data analysis rather than physical presence or equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While simulation goals (e.g., predicting climate patterns) are broadly defined, key choices\u2014model selection, parameterization, spatial/temporal resolution, and evaluation criteria\u2014depend on context and expert judgment rather than fully explicit instructions.",
+      "adequacy_evidence": "Current agents can follow specified modeling setups but often struggle to infer appropriate modeling assumptions, tradeoffs, and success criteria without iterative human guidance, especially in novel or research-oriented scenarios.",
+      "_timestamp": "2026-04-06T04:25:18"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Climate simulation spans highly heterogeneous models (global vs regional, atmospheric vs coupled systems), parameterizations, emissions scenarios, and edge cases like extreme events, requiring broad coverage of diverse scientific and computational setups.",
+      "adequacy_evidence": "There is extensive public data (papers, model codebases like CESM, CMIP outputs, and documented workflows) providing strong coverage, but some high-fidelity practices (e.g., expert tuning, proprietary datasets, HPC-specific configurations) remain only partially accessible.",
+      "_timestamp": "2026-04-06T04:25:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Climate simulations involve large state spaces (multi-variable grids over time), parameter configurations, intermediate outputs, and iterative adjustments, all of which must be tracked and correctly integrated within a single run.",
+      "adequacy_evidence": "Agents can offload much of this to external tools (e.g., simulation software, files), but still show weaknesses in consistently tracking evolving parameters, intermediate results, and dependencies across complex multi-step workflows.",
+      "_timestamp": "2026-04-06T04:25:18"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Climate simulation work often spans multiple runs, parameter sweeps, and evolving model configurations, requiring reference to prior outputs and experiment setups across sessions.",
+      "adequacy_evidence": "Current AI agents can reliably use external storage (files, databases, version control) to persist and retrieve simulation parameters and results, meeting cross-session memory needs without major gaps.",
+      "_timestamp": "2026-04-06T04:25:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Climate simulations are typically run as batch jobs on HPC systems and can take hours to days; immediate responsiveness is not required.",
+      "adequacy_evidence": "AI agents can take ample time to plan, configure, and analyze simulations without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T04:25:20"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Climate simulation workflows involve long, tightly coupled sequences including data ingestion, model configuration, parameter tuning, execution, validation, and iterative refinement, where early errors propagate through the pipeline.",
+      "adequacy_evidence": "LLM-based agents can orchestrate multi-step workflows with tools, but they show some degradation over extended sequences, especially in maintaining consistency during iterative debugging and parameter calibration.",
+      "_timestamp": "2026-04-06T04:25:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves generating and interpreting spatial-temporal data (e.g., maps, grids, visualizations of climate fields), but the core modeling and simulation logic is numerical and text-based.",
+      "adequacy_evidence": "Current AI systems can reliably handle multimodal elements like geospatial data visualization and interpretation through standard tools, with no major shortfall for typical simulation workflows.",
+      "_timestamp": "2026-04-06T04:25:21"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective climate simulation requires expert judgment in selecting model structures, tuning parameterizations, handling numerical instability, and interpreting ensemble outputs\u2014skills developed through experience beyond formal rules.",
+      "adequacy_evidence": "Current AI agents can follow documented modeling workflows and assist with tuning, but lack the deep experiential calibration needed to reliably resolve subtle model biases and context-specific tradeoffs in non-routine scenarios.",
+      "_timestamp": "2026-04-06T04:25:21"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Climate simulations involve complex numerical models with many parameters and assumptions; errors can be subtle, only detectable through expert analysis, benchmarking against historical data, and long-run validation of outputs.",
+      "adequacy_evidence": "Current AI systems can generate or run simulations but frequently introduce configuration, modeling, or interpretation errors that are difficult to spot without extensive expert review, making thorough verification unavoidable.",
+      "_timestamp": "2026-04-06T04:25:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit or restrict AI systems from conducting climate simulations; such modeling is routinely performed using automated computational tools. Any constraints are limited to general research governance or data controls, not AI-specific prohibitions.",
+      "_timestamp": "2026-04-06T04:25:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Simulation outputs are used by other scientists, agencies, and policymakers, so stakeholders rely on the results, but they primarily evaluate the quality and validity of the models rather than the performer\u2019s identity.",
+      "adequacy_evidence": "Numerical climate modeling is already heavily automated, and stakeholders generally accept computational systems as standard tools, with little concern about whether an AI agent generated the simulations.",
+      "_timestamp": "2026-04-06T04:25:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Climate simulations inform research conclusions and policy-relevant insights, so errors can meaningfully mislead downstream decisions, but individual model runs are typically contextualized within ensembles and ongoing scientific scrutiny, making occasional residual errors survivable.",
+      "adequacy_evidence": "Even after validation against physical constraints and historical data, AI-generated or AI-assisted simulations may still introduce subtle modeling or parameterization errors that are not immediately detectable, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T04:25:25"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

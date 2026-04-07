@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1299.05",
+  "task_id": 21784,
+  "task_statement": "Troubleshoot security and network problems.",
+  "occupation_title": "Information Security Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Most troubleshooting of security and network issues is done remotely using monitoring tools, logs, and configuration interfaces on computers. However, some cases require physical access to networking hardware, cabling, or on-site systems, which prevents it from being fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Security and network troubleshooting spans highly heterogeneous environments (different architectures, vendors, configurations, threat types, and failure modes), including rare and novel incidents, making the distribution long-tailed and context-sensitive.",
+      "adequacy_evidence": "There is substantial public and synthetic data (logs, incident reports, CTFs, lab simulations), but important subpopulations\u2014such as proprietary enterprise environments, zero-day exploits, and organization-specific configurations\u2014are underrepresented or inaccessible.",
+      "_timestamp": "2026-04-06T05:24:02"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Troubleshooting security and network issues involves uncovering ambiguous root causes, balancing competing constraints (availability vs. security), and inferring priorities from context such as business impact, threat models, and incomplete signals.",
+      "adequacy_evidence": "Current agents can analyze logs and suggest fixes, but often miss latent organizational priorities or subtle contextual cues, requiring human guidance to converge on the correct interpretation and resolution.",
+      "_timestamp": "2026-04-06T05:24:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective troubleshooting often relies on experiential pattern recognition (e.g., distinguishing benign anomalies from threats, prioritizing signals in noisy logs, and inferring root causes from partial evidence) that goes beyond explicit procedures.",
+      "adequacy_evidence": "Frontier agents can follow documented playbooks and analyze logs but still lack robust real-world calibration for novel, ambiguous, or adversarial scenarios, leading to gaps in nuanced judgment in non-routine cases.",
+      "_timestamp": "2026-04-06T05:24:03"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Troubleshooting security and network problems involves long, interdependent diagnostic sequences: collecting logs, forming and testing hypotheses, isolating root causes, and validating fixes where earlier steps strongly shape later actions.",
+      "adequacy_evidence": "LLM-based agents can follow multi-step troubleshooting workflows but show moderate degradation over long sequences, including losing intermediate hypotheses or misprioritizing signals as context grows.",
+      "_timestamp": "2026-04-06T05:24:03"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Troubleshooting security and network issues requires integrating large volumes of heterogeneous data (logs, configurations, traffic traces, alerts, system states) and tracking evolving hypotheses where missing a detail can lead to incorrect diagnosis.",
+      "adequacy_evidence": "Modern agents can use tools and retrieval to manage large contexts, but still exhibit context loss, imperfect prioritization, and drift in multi-step investigations, leading to occasional missed or misweighted evidence.",
+      "_timestamp": "2026-04-06T05:24:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Troubleshooting often benefits from prior incident history, known network configurations, and recurring vulnerability patterns, but many issues can still be addressed using current system state and logs within a single session.",
+      "adequacy_evidence": "Agents can persist and retrieve tickets, logs, and configuration data via external systems, but they may inconsistently surface relevant past context or integrate it effectively across incidents without careful system design.",
+      "_timestamp": "2026-04-06T05:24:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Troubleshooting often uses logs, alerts, configs, and command-line outputs (text), but may also involve network diagrams, dashboards, or packet capture visualizations as supporting inputs.",
+      "adequacy_evidence": "Current AI agents can effectively interpret parsed outputs (e.g., logs, metrics, pcaps via tools) and handle basic visual artifacts, with most multimodal elements already convertible into structured or textual representations.",
+      "_timestamp": "2026-04-06T05:24:05"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from troubleshooting security and network problems. While organizations may impose internal controls or compliance requirements (e.g., for sensitive systems), these do not constitute legal bans on AI performing the task.",
+      "_timestamp": "2026-04-06T05:24:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnosing security and network issues often involves interpreting noisy logs, complex system interactions, and intermittent failures where incorrect conclusions may appear plausible and only surface later under specific conditions.",
+      "adequacy_evidence": "Current AI agents frequently misattribute root causes or overlook edge-case interactions, and verifying their diagnoses requires deep expertise, log analysis, and sometimes live testing, making unchecked use impractical.",
+      "_timestamp": "2026-04-06T05:24:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with internal stakeholders such as IT staff, engineers, or end users who rely on the troubleshooter\u2019s guidance, though the performer\u2019s identity is not central to effectiveness.",
+      "adequacy_evidence": "In IT and security contexts, stakeholders already accept automated tools and AI-assisted diagnostics, so an AI agent would generally be accepted if it performs effectively.",
+      "_timestamp": "2026-04-06T05:24:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Troubleshooting security and network issues often requires responses within seconds to a few minutes during incidents, but not strict real-time control-loop latency.",
+      "adequacy_evidence": "Well-tooled agents can analyze logs, correlate signals, and suggest fixes within this time window without needing to truncate reasoning significantly.",
+      "_timestamp": "2026-04-06T05:24:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Mistakes in troubleshooting security and network issues can leave vulnerabilities unpatched or cause outages, leading to breaches, data loss, or major service disruptions, so very low residual error tolerance is required.",
+      "adequacy_evidence": "Even with logs, monitoring, and validation checks, AI can miss subtle attack vectors or misdiagnose root causes in complex systems, leaving some non-trivial residual risk, though human-in-the-loop and rollback mechanisms can mitigate the worst outcomes.",
+      "_timestamp": "2026-04-06T05:24:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

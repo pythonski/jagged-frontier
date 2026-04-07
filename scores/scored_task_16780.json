@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-1029.01",
+  "task_id": 16780,
+  "task_statement": "Test new and updated bioinformatics tools and software.",
+  "occupation_title": "Bioinformatics Scientists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Testing bioinformatics tools and software involves running programs, evaluating outputs, debugging, and benchmarking using computers and datasets, all of which can be done remotely with standard computing resources."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing bioinformatics tools often requires interpreting whether outputs are biologically plausible, recognizing artifacts from pipelines, and selecting meaningful benchmarks\u2014judgments that go beyond explicit test protocols.",
+      "adequacy_evidence": "Current agents can execute test suites and compare outputs but show gaps in nuanced domain calibration, especially in diagnosing subtle biological inconsistencies or context-specific edge cases.",
+      "_timestamp": "2026-04-06T00:34:21"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing bioinformatics tools involves selecting appropriate datasets, benchmarks, and evaluation metrics (e.g., accuracy, sensitivity, biological relevance), which are partly context-dependent and not fully specified in advance.",
+      "adequacy_evidence": "Current agents can propose standard testing protocols and metrics, but often miss domain-specific priorities or subtle biological validity considerations, requiring human guidance to refine the evaluation criteria.",
+      "_timestamp": "2026-04-06T00:34:22"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Testing bioinformatics tools spans diverse data types (genomics, transcriptomics, proteomics), experimental conditions, edge-case datasets, and pipeline configurations, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "There is substantial public data (benchmarks, repositories, tutorials, CI test suites) enabling training, but some real-world edge cases and proprietary or messy biological datasets are underrepresented, leaving moderate gaps.",
+      "_timestamp": "2026-04-06T00:34:22"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing bioinformatics software involves multi-step workflows such as installation, configuration, running test datasets, evaluating outputs, and documenting results, where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or deeply interdependent.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step testing workflows with tooling, but they show some degradation over longer sequences (e.g., losing track of configuration details or evaluation criteria), leading to moderate error accumulation.",
+      "_timestamp": "2026-04-06T00:34:22"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Testing bioinformatics tools often involves interpreting visual outputs such as genome browser views, alignment plots, or QC graphs alongside textual logs and code, making multimodal input relevant but not central.",
+      "adequacy_evidence": "Current agents can handle standard plots and visual outputs reasonably well but may struggle with complex, domain-specific visualizations or nuanced cross-modal interpretation in edge cases.",
+      "_timestamp": "2026-04-06T00:34:22"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Testing bioinformatics tools involves tracking datasets, parameter settings, software versions, test cases, and output comparisons across multiple runs, where missing details can invalidate results.",
+      "adequacy_evidence": "Agents can externalize state via code, files, and logs, but still show moderate issues with maintaining consistent context across complex multi-step experiments and accurately recalling prior configurations.",
+      "_timestamp": "2026-04-06T00:34:22"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Testing bioinformatics tools often benefits from retaining prior test results, known bugs, configurations, and benchmarking history across sessions, but individual testing tasks can still be executed largely independently.",
+      "adequacy_evidence": "Current AI systems with standard database, logging, and retrieval integrations can reliably store and access prior test artifacts and histories, making cross-session memory needs well-supported.",
+      "_timestamp": "2026-04-06T00:34:22"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Testing bioinformatics tools typically occurs in offline, research or development workflows where runs can take minutes to hours or longer without issue.",
+      "adequacy_evidence": "Current AI agents can take sufficient time for extended reasoning or iterative testing without impacting task quality, as there are no tight latency constraints.",
+      "_timestamp": "2026-04-06T00:34:23"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from testing bioinformatics tools or software. While downstream use in regulated environments (e.g., clinical diagnostics under FDA or CLIA) may impose requirements, the act of testing software itself is not legally restricted.",
+      "_timestamp": "2026-04-06T00:34:24"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Testing bioinformatics tools is typically an internal technical activity with outputs consumed by the development or research team, not requiring stakeholder engagement tied to performer identity.",
+      "adequacy_evidence": "There are effectively no stakeholders whose acceptance depends on whether the tester is human or AI; automated and AI-driven testing is already standard and uncontroversial in this context.",
+      "_timestamp": "2026-04-06T00:34:24"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Validating bioinformatics tools requires checking algorithmic correctness, statistical validity, and performance across diverse biological datasets; errors can be subtle (e.g., bias, edge-case failures) and often need domain expertise and benchmarking to detect.",
+      "adequacy_evidence": "AI-generated tests or evaluations would still need extensive expert review and empirical validation, as current systems often miss domain-specific edge cases and produce analyses whose correctness is nontrivial to verify.",
+      "_timestamp": "2026-04-06T00:34:24"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect testing or validation of bioinformatics software can allow faulty tools into research or clinical pipelines, potentially leading to erroneous biological conclusions or downstream health impacts, so residual errors must be very rare.",
+      "adequacy_evidence": "AI can generate and run test cases and detect many issues, but may miss subtle domain-specific edge cases or validation nuances, leaving some non-negligible residual risk even after standard checks.",
+      "_timestamp": "2026-04-06T00:34:24"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

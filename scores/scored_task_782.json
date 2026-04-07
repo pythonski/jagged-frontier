@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-6013.00",
+  "task_id": 782,
+  "task_statement": "Operate office equipment, such as voice mail messaging systems, and use word processing, spreadsheet, or other software applications to prepare reports, invoices, financial statements, letters, case histories, or medical records.",
+  "occupation_title": "Medical Secretaries and Administrative Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Preparing reports, invoices, letters, and medical records with software can be done entirely on a computer, but operating office equipment (e.g., phone/voicemail systems, printers, or fax machines) and handling certain records may require physical presence in a medical office."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple document types (reports, invoices, medical records) and software tools, but these follow relatively standardized formats and workflows within medical administration.",
+      "adequacy_evidence": "There is extensive accessible data (templates, software usage logs, de-identified medical documentation, office workflows) and strong synthetic generation pathways, providing good coverage of relevant instances.",
+      "_timestamp": "2026-04-06T02:26:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing documents like reports or medical records involves multi-step workflows (data entry, formatting, revisions) where consistency across steps matters but tasks are often modular and interruptible.",
+      "adequacy_evidence": "LLM-based agents can generally maintain coherence across such workflows with tooling, though some degradation (e.g., formatting inconsistencies or missed constraints) can appear over longer sequences.",
+      "_timestamp": "2026-04-06T02:26:10"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Most tasks (operating office software, preparing standard documents) follow established procedures and templates, but some judgment is needed for formatting, prioritization, and handling sensitive medical information appropriately.",
+      "adequacy_evidence": "Current AI agents, with access to templates and context, can reliably reproduce these routine judgments and conventions, with minimal gaps in handling typical administrative scenarios.",
+      "_timestamp": "2026-04-06T02:26:10"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many outputs (e.g., medical records, financial statements, letters) follow established formats and templates, but still require context-sensitive choices about content inclusion, tone, and compliance with organizational or regulatory norms.",
+      "adequacy_evidence": "Current agents handle standard document preparation well when given examples or templates, but often miss implicit preferences, institution-specific conventions, or subtle compliance requirements without human clarification.",
+      "_timestamp": "2026-04-06T02:26:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintaining and updating medical records, case histories, billing records, and correspondence requires persistent access to longitudinal patient and organizational information across many sessions.",
+      "adequacy_evidence": "Current AI agents can integrate with databases and EHR systems to store and retrieve persistent data, but they still show gaps in reliably surfacing the right historical context and maintaining consistency across complex, evolving records.",
+      "_timestamp": "2026-04-06T02:26:12"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves managing multiple documents and data sources (e.g., patient records, financial data, correspondence) within a session, requiring organization and accurate transfer of structured information, but typically within bounded and standardized formats.",
+      "adequacy_evidence": "Current agents can handle moderate document and data management but may lose track of details across multiple files or fields, especially when context grows or requires precise alignment across records.",
+      "_timestamp": "2026-04-06T02:26:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tasks like drafting documents, preparing reports, and managing office software typically allow minutes rather than requiring instantaneous responses, though some responsiveness is expected in administrative workflows.",
+      "adequacy_evidence": "Current AI agents can generate documents and process information well within these time windows without needing to truncate reasoning, so latency does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T02:26:12"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is primarily text-based (documents, spreadsheets, records) but includes some interaction with audio systems like voicemail, introducing limited multimodal input.",
+      "adequacy_evidence": "Current AI systems handle speech-to-text and basic audio processing reliably, and the core document production work is fully within text-based capabilities.",
+      "_timestamp": "2026-04-06T02:26:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in reports, invoices, or medical records (e.g., incorrect patient data, billing codes, or figures) typically require attentive review and some domain familiarity, but are usually detectable through standard checks and reconciliation \u092a\u094d\u0930\u0915\u094d\u0930sses.",
+      "adequacy_evidence": "Current AI systems can generate well-structured documents but still introduce factual or transcription errors, requiring routine human verification to ensure accuracy and compliance, though these errors are generally catchable with careful review.",
+      "_timestamp": "2026-04-06T02:26:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces documents (e.g., medical records, invoices, reports) used by clinicians, administrators, and patients, but the identity of the preparer is typically not central as long as outputs are accurate and compliant.",
+      "adequacy_evidence": "Many stakeholders would accept AI assistance for document preparation, but some resistance remains in medical contexts due to privacy, trust, and accountability concerns, especially for sensitive records.",
+      "_timestamp": "2026-04-06T02:26:13"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing clerical and documentation tasks, but handling medical records is subject to HIPAA and related privacy/security rules, which impose compliance requirements and constraints on how AI systems can be used.",
+      "_timestamp": "2026-04-06T02:26:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in documents like medical records or financial statements can have meaningful administrative, legal, or billing consequences, but most residual mistakes after normal review are unlikely to be catastrophic.",
+      "adequacy_evidence": "With standard human review or automated checks, AI-generated outputs can be corrected to an acceptable level, leaving residual risk comparable to typical human clerical work.",
+      "_timestamp": "2026-04-06T02:26:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

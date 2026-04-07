@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-6012.00",
+  "task_id": 773,
+  "task_statement": "Submit articles and information from searches to attorneys for review and approval for use.",
+  "occupation_title": "Legal Secretaries and Administrative Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Submitting search results and articles to attorneys is typically done via email or document management systems, but in some offices it may involve printing and physically delivering documents or materials."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of legal topics, sources, and relevance criteria, but follows a fairly consistent workflow of gathering, filtering, and forwarding information.",
+      "adequacy_evidence": "There is abundant accessible data (search workflows, legal research examples, document routing practices) and the process can be well captured through existing corpora and synthetic demonstrations.",
+      "_timestamp": "2026-04-06T02:02:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves some judgment in selecting and forwarding relevant, credible materials, but this is largely guided by explicit instructions, search criteria, and attorney preferences.",
+      "adequacy_evidence": "Current AI agents can reliably replicate relevance filtering and basic credibility assessment using provided criteria and past examples, with minimal shortfall in typical cases.",
+      "_timestamp": "2026-04-06T02:02:46"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting which articles and information to submit requires interpreting attorney preferences, relevance to the case, jurisdictional applicability, and quality\u2014criteria that are partly implicit and context-dependent.",
+      "adequacy_evidence": "Current agents can approximate relevance and filter results but often miss nuanced preferences or legal context, requiring human review and iteration to ensure the right materials are submitted.",
+      "_timestamp": "2026-04-06T02:02:47"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence\u2014collecting search results and forwarding them\u2014without long, interdependent chains where earlier steps heavily constrain later ones.",
+      "adequacy_evidence": "AI agents can reliably handle short workflows like retrieving, organizing, and transmitting information without noticeable degradation over such limited sequences.",
+      "_timestamp": "2026-04-06T02:02:47"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves collecting and transmitting text-based materials (articles, search results) to attorneys, typically via email or document systems.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based aggregation and submission workflows; no meaningful multimodal perception or generation is required.",
+      "_timestamp": "2026-04-06T02:02:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Submitting compiled articles and search results to attorneys is an asynchronous administrative task where minutes to hours of latency is acceptable.",
+      "adequacy_evidence": "Current AI systems can easily gather, organize, and transmit information well within these relaxed time constraints without needing to sacrifice reasoning quality.",
+      "_timestamp": "2026-04-06T02:02:48"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering multiple search results, selecting relevant articles, and organizing them for attorney review, requiring some tracking and compression of information within a session.",
+      "adequacy_evidence": "Current AI agents handle document retrieval, filtering, and summarization reliably within a single episode, with minimal loss of relevant context for tasks of this scale.",
+      "_timestamp": "2026-04-06T02:02:48"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task benefits from remembering attorney preferences, ongoing case topics, and previously submitted materials, but many instances can still be handled with current-session context and explicit instructions.",
+      "adequacy_evidence": "Current agents can store and retrieve prior documents and preferences using standard memory tools, but they may inconsistently surface the most relevant past context or adapt to evolving preferences without careful system design.",
+      "_timestamp": "2026-04-06T02:02:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors involve relevance, correctness of retrieved articles, and citation accuracy, which require some domain awareness and manual review but can generally be checked by inspecting sources and links.",
+      "adequacy_evidence": "AI systems can retrieve and summarize sources but still produce occasional hallucinated or misinterpreted citations, requiring consistent human verification though not extremely burdensome.",
+      "_timestamp": "2026-04-06T02:02:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors such as submitting irrelevant, incomplete, or slightly incorrect materials can waste attorney time or cause minor inefficiencies, but attorneys conduct their own review before use, limiting downstream harm.",
+      "adequacy_evidence": "With standard checks (e.g., verifying relevance and source accuracy), AI-generated or AI-assisted submissions would leave minimal residual risk, as attorneys serve as a final safeguard before any material is relied upon.",
+      "_timestamp": "2026-04-06T02:02:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from gathering articles or search results and forwarding them to attorneys for review. This is an administrative support function that does not require licensure or constitute the practice of law.",
+      "_timestamp": "2026-04-06T02:02:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves submitting materials to attorneys, who are internal stakeholders that rely on the output, though the sender\u2019s identity is not central to effectiveness.",
+      "adequacy_evidence": "Attorneys are generally indifferent to whether information aggregation is done by AI or a human assistant, as long as quality and relevance are maintained.",
+      "_timestamp": "2026-04-06T02:02:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

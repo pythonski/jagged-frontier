@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1243.00",
+  "task_id": 16101,
+  "task_statement": "Identify, evaluate and recommend hardware or software technologies to achieve desired database performance.",
+  "occupation_title": "Database Architects",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Evaluating and recommending database hardware or software is usually done through digital research, benchmarking, documentation, and remote analysis. However, some cases involve hands-on testing with physical servers or coordination with on-site infrastructure, introducing a limited non-remote component."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Database performance optimization spans highly heterogeneous workloads (OLTP, OLAP, distributed systems), hardware configurations, scale regimes, and domain-specific constraints, creating a long-tailed and context-sensitive distribution.",
+      "adequacy_evidence": "There is substantial public data (benchmarks, vendor docs, tuning guides, case studies) and synthetic generation is feasible, but real-world performance traces and edge-case production scenarios are often proprietary or underrepresented.",
+      "_timestamp": "2026-04-06T02:46:27"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting database technologies and configurations involves case-based judgment about workload patterns, trade-offs (e.g., latency vs. throughput), and vendor/tool nuances that are not fully captured in explicit rules.",
+      "adequacy_evidence": "Current agents can recommend architectures using documented best practices and benchmarks, but often lack reliable calibration for edge cases, evolving workloads, and nuanced trade-offs seen in complex real-world deployments.",
+      "_timestamp": "2026-04-06T02:46:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis (requirements gathering, benchmarking options, tradeoff evaluation, and recommendation), where consistency across steps matters but sequences are not extremely long or tightly coupled.",
+      "adequacy_evidence": "LLM-based agents can generally sustain coherence across these evaluation steps, but may show some drift or inconsistency in assumptions and tradeoffs over longer analyses without careful scaffolding.",
+      "_timestamp": "2026-04-06T02:46:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Desired database performance depends on implicit factors like workload patterns, latency vs. throughput tradeoffs, budget, scalability expectations, and organizational constraints that are often not fully specified upfront.",
+      "adequacy_evidence": "Agents can elicit and reason over many requirements, but they often miss latent constraints or evolving stakeholder priorities, requiring human iteration to fully align recommendations with real-world objectives.",
+      "_timestamp": "2026-04-06T02:46:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Evaluating and recommending database hardware/software primarily relies on textual sources such as specifications, benchmarks, logs, and documentation; visual or other modalities are not essential to core task performance.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI systems can handle the modality requirements without limitation.",
+      "_timestamp": "2026-04-06T02:46:29"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective recommendations often depend on prior knowledge of the organization's workloads, existing infrastructure, past performance issues, and evolving design preferences, but many evaluations can still be done per-project with refreshed inputs.",
+      "adequacy_evidence": "Current agents can persist and retrieve project context via external memory systems, but they still show gaps in consistently updating, prioritizing, and correctly applying accumulated cross-session knowledge.",
+      "_timestamp": "2026-04-06T02:46:29"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Technology evaluation and recommendation for database performance is typically a deliberative design task with timelines ranging from hours to days, not requiring rapid or real-time responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform deep analysis, benchmarking comparisons, and reasoning without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T02:46:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements prohibiting AI from recommending hardware or software technologies for database performance. While sector-specific procurement or security policies may constrain tool usage, they do not legally bar AI from performing this task.",
+      "_timestamp": "2026-04-06T02:46:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommendations are consumed by engineering teams, IT leadership, and procurement stakeholders who rely on the architect\u2019s judgment, so performer credibility matters but is not central like in client-facing advisory roles.",
+      "adequacy_evidence": "Many organizations would cautiously accept AI-generated recommendations if validated by human experts, but full trust in AI alone is not universal, especially for high-stakes infrastructure decisions.",
+      "_timestamp": "2026-04-06T02:46:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether a recommended database technology or hardware setup will meet performance goals requires workload-specific benchmarking, capacity planning, and nuanced trade-off analysis; errors may only surface under realistic load or over time.",
+      "adequacy_evidence": "AI-generated recommendations are often plausible but can misjudge workload characteristics or constraints, requiring extensive expert validation (e.g., load testing, cost/performance modeling) before trust, making verification both necessary and nontrivial.",
+      "_timestamp": "2026-04-06T02:46:31"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking diverse and interdependent information such as workload characteristics, performance metrics, system constraints, vendor specifications, and trade-offs across multiple candidate technologies, where missing a detail can lead to suboptimal recommendations.",
+      "adequacy_evidence": "Current agents can offload and retrieve context using tools, but still exhibit occasional context loss or imperfect compression of complex trade-offs, especially across many options and constraints within a single episode.",
+      "_timestamp": "2026-04-06T02:46:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect recommendations can lead to performance degradation, cost inefficiency, or scalability issues, but these are typically detectable through testing and can be corrected without irreversible harm.",
+      "adequacy_evidence": "Performance benchmarking, load testing, and monitoring provide strong post-check validation, so residual AI errors are usually caught and do not pose unacceptable risk.",
+      "_timestamp": "2026-04-06T02:46:32"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

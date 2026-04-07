@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-9021.00",
+  "task_id": 23575,
+  "task_statement": "Schedule work with customers and initiate work orders, house requisitions, and orders from stock.",
+  "occupation_title": "Heating, Air Conditioning, and Refrigeration Mechanics and Installers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Scheduling with customers and creating work orders or requisitions is commonly done through phones, email, or computerized maintenance/work-order systems. However, in many shops it may also involve on-site coordination with physical inventory or paper forms, so not all instances are fully remote."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans moderately diverse scenarios (different customer constraints, equipment types, inventory systems, and scheduling conflicts) but follows relatively standardized business processes.",
+      "adequacy_evidence": "While general workflows and examples are well-documented in CRM/ERP systems and service manuals, much real-world variation resides in proprietary systems and informal practices, leaving some gaps that require targeted adaptation.",
+      "_timestamp": "2026-04-06T02:47:43"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling requires some experience-based judgment about job duration, urgency, travel time, and customer preferences that are not fully codified in rules.",
+      "adequacy_evidence": "Current agents can handle routine scheduling and order initiation but struggle with nuanced tradeoffs (e.g., conflicting priorities, uncertain job scope) that benefit from field experience.",
+      "_timestamp": "2026-04-06T02:47:43"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling and initiating work orders requires interpreting customer availability, urgency, and constraints (e.g., equipment status, parts needs), which are not always fully specified and may require clarification.",
+      "adequacy_evidence": "Current agents can gather details and propose schedules, but often miss implicit priorities or constraints (e.g., urgency signals, logistical nuances), requiring human follow-up to finalize plans.",
+      "_timestamp": "2026-04-06T02:47:45"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling work and initiating orders primarily involve handling textual or structured data (customer information, schedules, inventory records) and do not inherently require image, audio, or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents can fully manage text-based scheduling and order initiation workflows without needing multimodal capabilities.",
+      "_timestamp": "2026-04-06T02:47:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step workflow\u2014coordinating schedules with customers, then generating corresponding work orders and requisitions\u2014but steps are relatively short and loosely coupled rather than deeply interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute these structured, tool-driven sequences (calendar coordination, form generation, inventory requests) with minimal degradation over the required sequence length.",
+      "_timestamp": "2026-04-06T02:47:46"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling with customers often occurs in real-time conversations or short-response windows, but does not require instant split-second decisions; brief pauses for coordination are acceptable.",
+      "adequacy_evidence": "Current AI agents can generate schedules, confirm availability, and initiate orders within seconds, with sufficient quality well inside typical time expectations.",
+      "_timestamp": "2026-04-06T02:47:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling and order initiation benefit from retaining customer histories, prior service records, and ongoing job statuses across sessions, but each transaction can often proceed with limited historical depth.",
+      "adequacy_evidence": "Current AI agents integrated with CRM/ERP systems can reliably store and retrieve customer and job data across sessions, meeting these moderate persistence needs with minimal gaps.",
+      "_timestamp": "2026-04-06T02:47:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking customer details, scheduling constraints, job specifications, and inventory needs within a single workflow, requiring moderate coordination of multiple information sources.",
+      "adequacy_evidence": "Current AI agents with tool integration (calendars, CRM, inventory systems) can reliably manage and retrieve this level of structured information within a session without significant loss or drift.",
+      "_timestamp": "2026-04-06T02:47:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from handling administrative tasks like scheduling, initiating work orders, or managing requisitions in HVAC services. Licensing requirements apply to performing technical work, not to clerical or coordination functions.",
+      "_timestamp": "2026-04-06T02:47:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in scheduling or work orders (wrong customer details, timing, or parts) are typically detectable through calendar checks, customer confirmation, and inventory validation, but require attentive review and coordination.",
+      "adequacy_evidence": "AI can populate and organize these records but may mis-handle details or context, so routine human verification (e.g., confirming appointments and order accuracy) remains necessary though not overly burdensome.",
+      "_timestamp": "2026-04-06T02:47:48"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in scheduling or initiating work orders can cause delays, incorrect parts allocation, or customer dissatisfaction, but are typically correctable and not safety-critical.",
+      "adequacy_evidence": "With standard checks (e.g., confirmation of schedules, order details, and inventory), AI-generated outputs can be reliably validated, leaving minimal residual risk.",
+      "_timestamp": "2026-04-06T02:47:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires direct interaction with customers to coordinate schedules and communicate work orders, so stakeholder engagement is present but does not hinge on deep trust or authority.",
+      "adequacy_evidence": "Customers widely accept automated scheduling systems and service coordination tools, and AI-driven agents can perform these interactions with minimal resistance in this context.",
+      "_timestamp": "2026-04-06T02:47:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9094.00",
+  "task_id": 9419,
+  "task_statement": "Identify mistakes in reports and check with doctors to obtain the correct information.",
+  "occupation_title": "Medical Transcriptionists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Identifying mistakes in transcripts and clarifying details with physicians can be done using digital reports and electronic communication (EHR messaging, email, phone, or chat), allowing the task to be completed entirely on a computer with internet access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied medical report types, specialties, and error patterns, but remains within a relatively structured clinical documentation domain.",
+      "adequacy_evidence": "Large corpora of medical texts and some annotated error-correction data exist, but realistic distributions of transcription errors and doctor clarification interactions are partially private and underrepresented, though partially recoverable via synthesis.",
+      "_timestamp": "2026-04-06T02:43:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Identifying errors in medical reports often requires contextual understanding of medical terminology and typical documentation patterns, along with judgment about when something is inconsistent or implausible.",
+      "adequacy_evidence": "Current AI can detect many textual inconsistencies and flag likely errors, but still shows gaps in nuanced clinical judgment and in deciding when clarification from a physician is necessary.",
+      "_timestamp": "2026-04-06T02:43:39"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining what constitutes a 'mistake' in medical reports often depends on clinical context, implicit standards, and physician intent, requiring interpretation beyond explicit rules.",
+      "adequacy_evidence": "Current agents can detect inconsistencies and suggest clarifications, but they often miss nuanced clinical intent and require human guidance when interacting with doctors to resolve ambiguities.",
+      "_timestamp": "2026-04-06T02:43:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step workflow\u2014reviewing reports, identifying discrepancies, contacting physicians, and updating information\u2014requiring consistency across several interdependent actions but not extremely long or complex sequences.",
+      "adequacy_evidence": "AI agents can generally maintain coherence across such moderate workflows, but may show some degradation in tracking corrections and managing iterative back-and-forth communication with doctors, especially over multiple exchanges.",
+      "_timestamp": "2026-04-06T02:43:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each report can be reviewed and corrected independently using the current document and direct clarification from the physician, with little need for historical case context.",
+      "adequacy_evidence": "Since the task is largely self-contained per instance, existing AI systems do not require persistent cross-session memory to perform effectively.",
+      "_timestamp": "2026-04-06T02:43:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves comparing report content, tracking identified discrepancies, and integrating clarifications from doctors, requiring management of multiple pieces of related information within a single workflow.",
+      "adequacy_evidence": "Current agents can handle document comparison and track issues with tool support, but may lose or misalign specific details across longer or complex reports without careful structuring.",
+      "_timestamp": "2026-04-06T02:43:40"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Medical transcription review and error checking are typically performed within workflow deadlines (minutes to hours), not in real-time interaction, though some responsiveness is expected when coordinating with doctors.",
+      "adequacy_evidence": "Frontier AI agents can analyze reports and draft clarifications quickly within these timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T02:43:40"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing written reports and communicating corrections, which are fundamentally text-based activities. Any interaction with doctors can be handled via text or simple conversation without reliance on rich multimodal inputs.",
+      "adequacy_evidence": "Current AI systems handle text processing and basic communication effectively, and no significant multimodal perception or generation is required for competent performance.",
+      "_timestamp": "2026-04-06T02:43:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in medical reports can propagate into patient records and clinical decisions, so even rare residual mistakes after checking can have serious health and legal consequences.",
+      "adequacy_evidence": "Even with review and doctor confirmation workflows, AI may miss subtle clinical inconsistencies or introduce misinterpretations, leaving a non-trivial residual risk though not overwhelmingly severe given human-in-the-loop checks.",
+      "_timestamp": "2026-04-06T02:43:42"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires interacting with physicians to clarify and correct report errors, so stakeholders must engage with the performer and may consider their role and credibility.",
+      "adequacy_evidence": "Doctors may be somewhat hesitant to rely on or respond to AI-driven queries due to trust, workflow, and liability concerns, though resistance is not absolute and could be mitigated with integration and oversight.",
+      "_timestamp": "2026-04-06T02:43:42"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There is no explicit US law or licensing requirement that prohibits AI from identifying errors in medical reports or communicating with physicians, provided HIPAA and data privacy rules are followed. These regulations constrain handling of patient data but do not bar AI from performing the task.",
+      "_timestamp": "2026-04-06T02:43:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "Errors can often be identified by comparing transcripts to source dictation and medical context, but this requires domain knowledge and sometimes confirmation with physicians, making verification non-trivial.",
+      "adequacy_evidence": "Current AI systems still produce clinically significant transcription or interpretation errors, and verifying them often requires expert review and doctor consultation, creating a high and unavoidable checking burden.",
+      "_timestamp": "2026-04-06T02:43:42"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

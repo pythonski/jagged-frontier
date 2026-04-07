@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-9092.00",
+  "task_id": 17513,
+  "task_statement": "Collect for, or share with, research projects patient data on specific genetic disorders or syndromes.",
+  "occupation_title": "Genetic Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Sharing and compiling patient data for research is typically done through electronic health records, databases, and secure digital transmission. However, collecting the data may sometimes involve in-person patient interactions or handling consent forms and clinical information gathered during physical appointments."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task spans many rare and heterogeneous genetic disorders, diverse patient populations, varying clinical contexts, and differing data standards, creating a long-tailed and highly variable distribution of cases.",
+      "adequacy_evidence": "Much of the relevant data is protected health information, fragmented across institutions, and not publicly available for training; rare disorders are especially underrepresented, limiting feasible coverage even with synthesis.",
+      "_timestamp": "2026-04-06T05:55:45"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (identifying eligible cases, ensuring consent, extracting and formatting data, and securely transmitting it), where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or deeply interdependent.",
+      "adequacy_evidence": "Current AI agents can generally manage such structured workflows with tooling, but may show moderate degradation through missed constraints or minor inconsistencies across steps, especially in compliance-sensitive handling.",
+      "_timestamp": "2026-04-06T05:55:46"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Research protocols and data-sharing agreements specify many criteria, but practitioners must interpret inclusion/exclusion nuances, consent scope, and privacy constraints within institutional and patient-specific contexts.",
+      "adequacy_evidence": "Current agents can follow explicit protocol rules but often miss subtle consent limitations, IRB expectations, or context-specific data handling norms without human guidance.",
+      "_timestamp": "2026-04-06T05:55:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves aggregating and organizing patient genetic data, clinical histories, and research criteria from multiple sources within a session, requiring some active retrieval and structuring but not extreme volume.",
+      "adequacy_evidence": "Current agents can handle structured data aggregation and summarization, but may lose nuances (e.g., eligibility criteria, subtle phenotype distinctions) or mishandle heterogeneous medical records without careful scaffolding.",
+      "_timestamp": "2026-04-06T05:55:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While governed by protocols (consent, privacy, data standards), selecting, interpreting, and appropriately contextualizing patient genetic data often requires case-based judgment about relevance, phenotype nuance, and ethical considerations.",
+      "adequacy_evidence": "Current agents can follow structured data-sharing rules but show gaps in nuanced clinical interpretation and context-sensitive ethical judgment, especially in atypical or ambiguous cases.",
+      "_timestamp": "2026-04-06T05:55:47"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Collecting and sharing patient genetic data for research projects is typically asynchronous and administrative, with timelines spanning hours to days rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can perform data extraction, formatting, and sharing well within these relaxed time constraints without needing to truncate reasoning or compromise quality.",
+      "_timestamp": "2026-04-06T05:55:47"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often relies on accessing and updating patient records, consent status, and prior data-sharing history across encounters, but much of this context is stored in external clinical or research databases rather than in the counselor\u2019s own memory.",
+      "adequacy_evidence": "Current AI agents can interface with structured databases and persistent storage, but may have reliability issues in consistently retrieving, reconciling, and updating longitudinal patient data across systems and sessions.",
+      "_timestamp": "2026-04-06T05:55:47"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is primarily text and structured data exchange (medical records, genetic reports), but can include multimodal elements like pedigree charts or cytogenetic images that require interpretation.",
+      "adequacy_evidence": "Current AI can handle basic document and image interpretation (e.g., pedigrees, standard reports) but is less reliable on complex or specialized visual data like detailed karyotypes or nuanced clinical imagery.",
+      "_timestamp": "2026-04-06T05:55:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying correctness of genetic data, patient matching, diagnosis coding, and proper de-identification requires domain expertise and careful cross-checking; errors can be subtle and not immediately apparent.",
+      "adequacy_evidence": "Current AI systems are prone to mistakes in medical data extraction, coding, and privacy handling, and these errors are difficult to detect without expert review, necessitating intensive verification.",
+      "_timestamp": "2026-04-06T05:55:49"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in sharing or labeling genetic patient data can compromise patient privacy, violate legal protections (e.g., HIPAA), and corrupt research datasets, leading to significant downstream scientific and ethical consequences.",
+      "adequacy_evidence": "Even with quality checks, AI systems may still introduce subtle data handling or de-identification errors; however, structured validation pipelines and human oversight can reduce residual risk to a moderate but still non-negligible level.",
+      "_timestamp": "2026-04-06T05:55:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves patients, researchers, and clinical teams who must trust and consent to the collection and sharing of sensitive genetic data, making the performer\u2019s legitimacy and handling of information central.",
+      "adequacy_evidence": "While AI could technically manage data workflows, many patients and institutions would be cautious about AI handling sensitive genetic information without human oversight, though acceptance is plausible with safeguards.",
+      "_timestamp": "2026-04-06T05:55:50"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "HIPAA, Common Rule (IRB oversight), and state privacy/genetic data laws impose strict controls on collection, use, and sharing of patient data, typically requiring accountable covered entities and human oversight. These do not explicitly prohibit AI use, but create partial restrictions since AI cannot independently fulfill legal responsibilities like consent, authorization, and compliance.",
+      "_timestamp": "2026-04-06T05:55:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

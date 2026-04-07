@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-3041.00",
+  "task_id": 13759,
+  "task_statement": "Calculate bills according to record of repairs made, labor time, and parts used.",
+  "occupation_title": "Farm Equipment Mechanics and Service Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Calculating customer bills is typically done using invoicing or shop management software based on recorded labor and parts. However, in many repair shops it may also be done on paper or tied to in-person service workflows, so not all instances are fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Billing for repairs involves moderate variation across parts catalogs, labor rates, shop policies, and tax rules, but follows well-structured and repetitive patterns.",
+      "adequacy_evidence": "Extensive real-world data (invoices, service records, pricing tables) and straightforward synthetic generation provide strong coverage of the task\u2019s full distribution.",
+      "_timestamp": "2026-04-05T22:31:29"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Billing generally follows explicit shop policies (labor rates, parts pricing, markups), but mechanics may apply some experience-based judgment for classifying tasks, bundling charges, or applying discounts/warranty considerations.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably apply pricing rules and handle common judgment patterns when policies are specified, with minimal gaps limited to edge-case discretionary decisions.",
+      "_timestamp": "2026-04-05T22:31:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Billing requires interpreting repair records, applying labor rates, parts pricing, taxes, and possibly warranties or shop policies, which can introduce some context-dependent judgment.",
+      "adequacy_evidence": "Current AI agents can reliably apply pricing rules, infer standard billing practices, and handle minor ambiguities with minimal iteration when given access to relevant policies and records.",
+      "_timestamp": "2026-04-05T22:31:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short multi-step process (aggregating labor time, parts costs, and applying rates or markups), where steps are somewhat interdependent but limited in length.",
+      "adequacy_evidence": "Frontier AI systems can reliably handle these short, structured calculations without noticeable degradation, maintaining consistency across the required steps.",
+      "_timestamp": "2026-04-05T22:31:30"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating bills relies on textual and numerical records (repair logs, labor hours, parts lists) rather than interpreting images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI systems can fully handle text- and number-based billing tasks without needing multimodal capabilities.",
+      "_timestamp": "2026-04-05T22:31:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Billing based on repair records, labor time, and parts is an administrative task typically completed after service, where minutes of processing time are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform these calculations and compile bills almost instantly, well within any practical time constraints without sacrificing quality.",
+      "_timestamp": "2026-04-05T22:31:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking multiple inputs (repair records, labor hours, parts used, pricing) and combining them accurately, but the information volume is structured and typically bounded per job.",
+      "adequacy_evidence": "Current AI agents can reliably manage and compute over structured billing data using tools (e.g., spreadsheets, databases), with minimal risk of losing relevant within-episode information.",
+      "_timestamp": "2026-04-05T22:31:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Billing is calculated from existing repair records, labor logs, and parts lists for a given job, which are typically stored in external systems and accessed per instance rather than requiring accumulated memory across sessions.",
+      "adequacy_evidence": "Current AI agents can reliably retrieve and use structured records from databases or logs when provided, so cross-session memory limitations do not meaningfully constrain performance.",
+      "_timestamp": "2026-04-05T22:31:31"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from calculating repair bills; this is a routine administrative function that can legally be automated. Any oversight or approval requirements do not specifically restrict AI use for this task.",
+      "_timestamp": "2026-04-05T22:31:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Billing errors affect revenue, customer trust, and potential disputes, but are typically reversible and not safety-critical or irreversible.",
+      "adequacy_evidence": "With standard checks (e.g., comparing against work orders and parts lists), AI-generated calculations are highly verifiable, and residual errors are unlikely to pose significant ongoing risk.",
+      "_timestamp": "2026-04-05T22:31:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Customers rely on and may question the billed amounts, so they engage with the output and may care about its legitimacy and accuracy.",
+      "adequacy_evidence": "Automated invoicing systems are already widely accepted; as long as calculations are transparent and correct, stakeholders are generally indifferent to whether AI generated the bill.",
+      "_timestamp": "2026-04-05T22:31:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Billing can be cross-checked against work orders, labor rates, and parts lists, but requires careful reconciliation and domain familiarity to ensure all charges are correct and complete.",
+      "adequacy_evidence": "AI can perform calculations reliably but may misinterpret records or omit items, so human review of inputs, rates, and totals is still needed though not overly burdensome.",
+      "_timestamp": "2026-04-05T22:31:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

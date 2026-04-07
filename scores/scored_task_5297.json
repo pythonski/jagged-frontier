@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2081.00",
+  "task_id": 5297,
+  "task_statement": "Review selected tax returns to determine the nature and extent of audits to be performed on them.",
+  "occupation_title": "Tax Examiners and Collectors, and Revenue Agents",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most tax return reviews are conducted through digital tax administration systems and electronic filings, allowing remote analysis. However, some cases still involve reviewing paper returns or physical documents within an office environment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining audit scope requires interpreting implicit risk signals, applying evolving enforcement priorities, and exercising judgment beyond explicit rules in the tax code or guidelines.",
+      "adequacy_evidence": "Current AI can apply codified audit criteria and detect anomalies, but often misses nuanced contextual cues and agency-specific priorities, requiring human oversight to refine audit decisions.",
+      "_timestamp": "2026-04-06T03:42:18"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a wide variety of taxpayer profiles (individuals, small businesses, corporations), income sources, jurisdictions, and potential compliance issues, including rare and evolving fraud patterns.",
+      "adequacy_evidence": "While tax forms, regulations, and some audit guidelines are publicly available and can be synthesized, detailed audit selection heuristics and real-world case distributions are often proprietary or confidential, leaving partial but not complete coverage.",
+      "_timestamp": "2026-04-06T03:42:18"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis\u2014reviewing returns, identifying risk indicators, applying tax rules, and determining audit scope\u2014where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092fnt long or deeply interdependent.",
+      "adequacy_evidence": "Current AI agents can generally sustain coherent multi-step document analysis, but may exhibit some drift or missed constraints over longer reasoning chains, especially when integrating multiple tax rules and judgment calls.",
+      "_timestamp": "2026-04-06T03:42:19"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining audit scope involves applying codified criteria (e.g., risk scores, discrepancy thresholds) but also benefits from experience-based judgment about materiality, industry patterns, and subtle red flags not fully captured in rules.",
+      "adequacy_evidence": "Current AI agents can apply explicit audit selection rules and detect common anomalies, but show gaps in nuanced calibration for borderline or context-specific cases where seasoned examiner intuition matters.",
+      "_timestamp": "2026-04-06T03:42:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing tax returns and determining audit scope is an analytical task typically performed over minutes to hours, with no need for immediate or real-time responses.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform detailed analysis without degrading quality, as there is no tight latency constraint forcing rushed reasoning.",
+      "_timestamp": "2026-04-06T03:42:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing tax returns primarily involves reading structured text, numerical data, and forms; any images (e.g., scanned documents) are typically converted to text or are not central to the task.",
+      "adequacy_evidence": "Current AI systems can handle text and structured financial data effectively, and basic document digitization (OCR) is mature, so there is no meaningful multimodal gap.",
+      "_timestamp": "2026-04-06T03:42:20"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reviewing tax returns often benefits from access to prior filings, past audits, and taxpayer history, but each review can largely be conducted using the current return and retrieved records.",
+      "adequacy_evidence": "Current AI systems integrated with databases and case management tools can reliably store and retrieve taxpayer histories and prior audit data across sessions, meeting these moderate memory needs.",
+      "_timestamp": "2026-04-06T03:42:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing tax returns involves integrating multiple forms, schedules, and supporting documents, tracking inconsistencies and risk indicators across them within a single review episode.",
+      "adequacy_evidence": "Agents with document retrieval and summarization can handle multi-document contexts, but may still miss or misweight details across forms or lose fidelity when compressing complex financial relationships.",
+      "_timestamp": "2026-04-06T03:42:21"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining appropriate audit scope involves nuanced judgment about risk indicators, compliance patterns, and interpretation of complex tax law, making errors subtle and requiring expert review to detect.",
+      "adequacy_evidence": "Current AI systems can miss contextual red flags or misinterpret tax rules, so their recommendations would require thorough expert validation, with non-obvious errors likely to persist without careful scrutiny.",
+      "_timestamp": "2026-04-06T03:42:21"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in selecting or scoping audits can lead to missed noncompliance or unnecessary investigations, affecting revenue collection and fairness, but impacts are typically correctable and not immediately catastrophic.",
+      "adequacy_evidence": "Even with review layers, AI may overlook nuanced patterns of tax avoidance or misinterpret complex filings, leaving a moderate level of residual risk that could still affect audit quality.",
+      "_timestamp": "2026-04-06T03:42:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is an internal analytic review used to plan audits; it does not involve direct interaction with taxpayers or other external stakeholders at this stage.",
+      "adequacy_evidence": "Because the output is consumed internally by the agency, stakeholder acceptance of AI vs human identity is largely irrelevant for task effectiveness.",
+      "_timestamp": "2026-04-06T03:42:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Tax examination and audit determinations are legally assigned to authorized government officials (e.g., IRS agents), which implies a required human decision-maker. While AI can be used as a tool, there is no explicit framework allowing it to autonomously perform or sign off on such determinations, creating partial regulatory restriction.",
+      "_timestamp": "2026-04-06T03:42:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

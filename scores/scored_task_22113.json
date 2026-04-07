@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3031.00",
+  "task_id": 22113,
+  "task_statement": "Analyze aerial photographs to detect and interpret significant military, industrial, resource, or topographical data.",
+  "occupation_title": "Surveying and Mapping Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Interpreting aerial or satellite imagery is typically performed using digital imagery and GIS/remote sensing software on a computer. While imagery could theoretically be reviewed on physical prints, modern practice is overwhelmingly digital and can be done entirely on a computer."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task spans highly heterogeneous imagery (varying terrains, resolutions, sensor types, and rare or deliberately concealed military/industrial features), requiring broad and long-tailed coverage.",
+      "adequacy_evidence": "While general satellite and aerial imagery are abundant, labeled datasets for military and sensitive targets are often classified or sparse, and expert analytic reasoning traces are rarely available, leaving major gaps in representative training signal.",
+      "_timestamp": "2026-04-06T01:40:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting aerial imagery involves recognizing patterns, shadows, and contextual cues (e.g., distinguishing natural vs. man-made features or identifying concealed structures), which benefits from experience-based calibration beyond explicit rules.",
+      "adequacy_evidence": "Current multimodal AI systems perform well on standard image interpretation but still show gaps in nuanced, context-dependent judgments such as detecting deception, rare configurations, or subtle environmental cues.",
+      "_timestamp": "2026-04-06T01:40:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task fundamentally depends on interpreting aerial imagery, requiring detailed visual analysis of spatial patterns, terrain features, and man-made structures; text alone cannot substitute for the image-based input.",
+      "adequacy_evidence": "Current multimodal agents can analyze aerial images and detect many features, but they remain inconsistent on fine-grained, high-stakes interpretations (e.g., subtle military or industrial indicators) and complex spatial reasoning.",
+      "_timestamp": "2026-04-06T01:40:48"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The notion of what counts as 'significant' military, industrial, or topographical data depends on project goals or mission context, requiring some interpretation beyond explicit instructions, though often guided by established criteria and briefs.",
+      "adequacy_evidence": "Current AI can detect and label features in aerial imagery but often misses context-dependent priorities or intent, requiring human guidance to refine what is considered relevant or significant.",
+      "_timestamp": "2026-04-06T01:40:48"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves scanning large, information-dense images, tracking multiple features (e.g., terrain, structures, patterns), and integrating observations across regions, requiring active selection and compression of relevant details.",
+      "adequacy_evidence": "Current agents can segment images and iteratively analyze regions, but may lose or misprioritize details across passes, leading to occasional omissions or drift in aggregated interpretation.",
+      "_timestamp": "2026-04-06T01:40:48"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis\u2014examining imagery, identifying features, cross-referencing with geographic or contextual data, and forming interpretations\u2014but these steps are moderately coupled and often repeatable across images.",
+      "adequacy_evidence": "AI systems can generally maintain coherence across these moderate sequences, but may show some degradation in consistency when chaining multiple interpretive steps or integrating context over extended analyses.",
+      "_timestamp": "2026-04-06T01:40:48"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While individual image analyses can be self-contained, the task often benefits from comparing imagery across time, referencing prior surveys, and maintaining project-specific geographic context.",
+      "adequacy_evidence": "Current AI systems can reliably store and retrieve cross-session geospatial data, prior imagery, and annotations via databases and retrieval pipelines, so longitudinal context is generally well-supported.",
+      "_timestamp": "2026-04-06T01:40:49"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Analysis of aerial photographs for surveying and mapping is typically conducted in offline workflows where minutes to hours of processing time are acceptable, not requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can perform detailed image analysis within acceptable timeframes for this task, and extended reasoning does not conflict with practical latency expectations.",
+      "_timestamp": "2026-04-06T01:40:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting aerial imagery for military or geospatial insights involves subtle pattern recognition and contextual judgment; errors (e.g., misidentifying structures or terrain features) are often not obvious without expert review or ground truth comparison.",
+      "adequacy_evidence": "Current AI vision systems can misclassify or over-interpret ambiguous imagery, and these mistakes are difficult to detect without skilled human analysts, making thorough and expert verification consistently necessary.",
+      "_timestamp": "2026-04-06T01:40:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The output is used by analysts, planners, or decision-makers who rely on its accuracy, and the credibility of the source can matter in high-stakes contexts like military or infrastructure planning.",
+      "adequacy_evidence": "AI-assisted imagery analysis is already used, but full acceptance of autonomous AI judgments\u2014especially in sensitive military or intelligence contexts\u2014remains cautious, with human validation often expected.",
+      "_timestamp": "2026-04-06T01:40:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no blanket prohibition on AI performing image analysis, but access to and analysis of sensitive or classified aerial imagery (e.g., military intelligence) is restricted to cleared, authorized entities. These constraints can limit or condition AI deployment, creating partial regulatory restriction rather than a full ban.",
+      "_timestamp": "2026-04-06T01:40:51"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Misinterpretation of aerial imagery in military or resource contexts can lead to severe consequences such as strategic errors, safety risks, or misallocation of resources, so even rare residual errors are highly consequential.",
+      "adequacy_evidence": "Current AI vision systems still exhibit non-trivial failure modes in complex, ambiguous, or adversarial imagery (e.g., camouflage, low resolution), and these errors may persist even after standard review, leaving unacceptable residual risk.",
+      "_timestamp": "2026-04-06T01:40:51"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1199.03",
+  "task_id": 14736,
+  "task_statement": "Administer internet/intranet infrastructure, including components such as web, file transfer protocol (FTP), news and mail servers.",
+  "occupation_title": "Web Administrators",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Administering web, FTP, news, and mail servers is typically done through remote management tools, command lines, and web interfaces. However, some instances require physical access to servers or networking hardware in data centers for installation, troubleshooting, or maintenance."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Core goals like uptime, security, and performance are well understood, but priorities (e.g., cost vs. redundancy, access policies, acceptable downtime) depend on organizational context and implicit stakeholder expectations.",
+      "adequacy_evidence": "Current agents can apply general best practices and infer typical goals, but often miss organization-specific priorities or constraints without iterative human clarification.",
+      "_timestamp": "2026-04-05T22:46:38"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Routine server administration follows documented procedures, but diagnosing intermittent failures, performance tuning, and security hardening often rely on experience-based judgment and pattern recognition beyond explicit rules.",
+      "adequacy_evidence": "Agents can handle standard configuration and many troubleshooting scenarios using logs and playbooks, but they still lack reliable calibration in novel, context-specific outages or subtle system interactions.",
+      "_timestamp": "2026-04-05T22:46:38"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Administering internet/intranet infrastructure involves multi-step workflows (configuration, deployment, monitoring, troubleshooting) where steps are interdependent but often modular and restartable rather than tightly coupled end-to-end sequences.",
+      "adequacy_evidence": "AI agents can generally manage these workflows with tooling, but over longer sequences they may exhibit some drift (e.g., losing track of system state or prior configurations), leading to moderate degradation without careful orchestration.",
+      "_timestamp": "2026-04-05T22:46:38"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse infrastructures (web, FTP, mail, news servers), operating systems, network topologies, security configurations, and failure modes, creating a highly heterogeneous and context-dependent distribution.",
+      "adequacy_evidence": "Extensive documentation, tutorials, config examples, logs, and reproducible lab environments exist for most common setups, but coverage is thinner for proprietary systems, rare failure cases, and organization-specific architectures.",
+      "_timestamp": "2026-04-05T22:46:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Administering web, FTP, and mail servers requires maintaining persistent knowledge of system configurations, prior incidents, patch histories, user access patterns, and evolving infrastructure changes over time.",
+      "adequacy_evidence": "Current agents can integrate with logs, config management systems, and ticket histories, but often struggle with reliably maintaining and retrieving coherent long-term context across disparate systems without careful engineering and human oversight.",
+      "_timestamp": "2026-04-05T22:46:40"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Administering web and server infrastructure primarily involves text-based interfaces such as configuration files, command-line tools, logs, and scripts, with minimal reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI agents handle text-based system administration tasks effectively, and no significant multimodal capabilities are required for competent performance.",
+      "_timestamp": "2026-04-05T22:46:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Administering web, FTP, mail, and related servers requires tracking configurations, logs, network states, dependencies, and concurrent services within a single session; missing details (e.g., ports, permissions, or service states) can break systems.",
+      "adequacy_evidence": "Current agents can use tools and retrieval to manage configs and logs, but they still lose track of evolving system state or interdependencies in longer sessions, especially across multiple services and files.",
+      "_timestamp": "2026-04-05T22:46:40"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Web administrators must respond to incidents, outages, and performance issues within seconds to minutes, but most administrative tasks (configuration, updates, maintenance) tolerate minutes or longer.",
+      "adequacy_evidence": "Frontier agents can deliver high-quality diagnostics and actions within these time windows without needing unusually long reasoning, so speed constraints rarely degrade performance.",
+      "_timestamp": "2026-04-05T22:46:41"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit AI from administering web or network infrastructure; this work is not a regulated, licensed activity. While organizations may impose internal security or compliance controls, these do not constitute legal restrictions on AI performing the task.",
+      "_timestamp": "2026-04-05T22:46:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Infrastructure administration can be validated through monitoring tools, logs, uptime checks, and automated tests, but some issues (e.g., security misconfigurations or performance bottlenecks) may not be immediately obvious and require expertise to detect.",
+      "adequacy_evidence": "AI-generated configurations and actions can be checked with standard DevOps tooling, but current systems still make non-trivial errors in setup and security, requiring consistent human review and testing.",
+      "_timestamp": "2026-04-05T22:46:41"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task supports internal users and services that rely on infrastructure uptime, but stakeholders interact with system performance rather than the administrator\u2019s identity directly.",
+      "adequacy_evidence": "Organizations already accept automation and AI-assisted tooling in infrastructure management, and stakeholders generally do not object as long as systems function reliably.",
+      "_timestamp": "2026-04-05T22:46:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misconfigurations in web, FTP, or mail servers can cause outages, security vulnerabilities, or data exposure, where even rare residual errors can have significant organizational impact.",
+      "adequacy_evidence": "While monitoring, testing, and rollback mechanisms catch many issues, AI systems can still introduce subtle configuration or security errors that evade checks, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-05T22:46:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

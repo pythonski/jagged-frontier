@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4012.01",
+  "task_id": 18289,
+  "task_statement": "Create, layer, and analyze maps showing precision agricultural data, such as crop yields, soil characteristics, input applications, terrain, drainage patterns, or field management history.",
+  "occupation_title": "Precision Agriculture Technicians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Creating, layering, and analyzing precision agriculture maps is typically done using GIS or similar software on a computer with digital datasets. The task itself does not require field presence, even if the underlying data were collected physically."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous geospatial, agronomic, and temporal data across crops, regions, soil types, and management practices, with many context-specific edge cases.",
+      "adequacy_evidence": "Public GIS datasets, remote sensing data, and agronomic studies provide substantial coverage, but farm-specific management histories and high-resolution proprietary datasets are often inaccessible, leaving some gaps that can only be partially filled via synthesis.",
+      "_timestamp": "2026-04-06T01:42:44"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires selecting relevant data layers, visualization methods, and analytical approaches based on the specific agronomic question or stakeholder goal, which are often only partially specified.",
+      "adequacy_evidence": "Current agents can generate maps and suggest analyses when given clear objectives, but often need iterative human guidance to align outputs with the implicit goals and context-specific priorities of agricultural decision-making.",
+      "_timestamp": "2026-04-06T01:42:44"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While GIS procedures for layering and mapping are well-documented, interpreting patterns (e.g., yield variability vs. soil/drainage interactions) often relies on agronomic experience and context-specific judgment.",
+      "adequacy_evidence": "Current AI agents can generate and analyze layered maps with tools, but they show gaps in nuanced, field-specific interpretation and calibration that experienced technicians develop over time.",
+      "_timestamp": "2026-04-06T01:42:45"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step GIS workflows (data ingestion, cleaning, layering, spatial analysis, and interpretation) where outputs from earlier steps feed into later ones, but many steps are modular and can be checked independently.",
+      "adequacy_evidence": "AI agents can generally execute these structured workflows with tools, but over longer sequences they may exhibit mild error accumulation or lose track of constraints (e.g., projection consistency or layer alignment), requiring some oversight.",
+      "_timestamp": "2026-04-06T01:42:45"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple heterogeneous geospatial layers (yields, soils, terrain, inputs, drainage, history) and maintaining alignment, resolution, and attribute consistency across them within a single analytical workflow.",
+      "adequacy_evidence": "Current agents with GIS tooling can manage layered data and intermediate states, but they can lose track of transformations, projections, or feature-level details when workflows become large or iterative.",
+      "_timestamp": "2026-04-06T01:42:46"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centrally involves creating and interpreting geospatial map layers (raster/vector data, terrain models, yield maps), requiring spatial and visual reasoning beyond text.",
+      "adequacy_evidence": "Current agents with GIS tooling can generate and manipulate maps, but often struggle with complex spatial reasoning, nuanced layer integration, and high-fidelity geospatial interpretation.",
+      "_timestamp": "2026-04-06T01:42:46"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Precision agriculture mapping relies heavily on longitudinal datasets such as multi-season crop yields, soil changes, input applications, and field management history, which must be accumulated and compared over time.",
+      "adequacy_evidence": "Current AI systems can integrate with GIS databases and persistent storage to retain and retrieve historical layers, but maintaining consistent, well-structured cross-season context and ensuring correct linkage across datasets can still be error-prone.",
+      "_timestamp": "2026-04-06T01:42:46"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Creating, layering, and analyzing precision agriculture maps is typically an offline GIS workflow where minutes to hours are acceptable for processing and analysis.",
+      "adequacy_evidence": "Frontier AI systems can perform geospatial data processing and analysis within acceptable timeframes without needing to truncate reasoning, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T01:42:46"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The maps are used by farmers, agronomists, or managers who rely on the outputs for decisions, but the identity of the creator is not central as long as results are accurate and usable.",
+      "adequacy_evidence": "Stakeholders in precision agriculture already widely accept software and automated analytics tools, so an AI agent performing this task would face little resistance if outputs meet expectations.",
+      "_timestamp": "2026-04-06T01:42:47"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit AI from creating, layering, or analyzing precision agriculture maps. While data privacy or environmental regulations may govern how data is used, they do not restrict AI from performing this task.",
+      "_timestamp": "2026-04-06T01:42:47"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in precision agriculture maps can lead to suboptimal input use or yield impacts, but these effects are typically localized, detectable over time, and correctable in future cycles rather than catastrophic.",
+      "adequacy_evidence": "With GIS tooling, data validation, and agronomic review, AI-generated maps can be checked against known data layers and field observations, leaving residual risks that are generally acceptable in practice.",
+      "_timestamp": "2026-04-06T01:42:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Geospatial mapping errors (e.g., misaligned layers, incorrect projections, faulty interpolation, or misinterpreted agronomic patterns) can be subtle and often require domain expertise, ground-truth comparison, or statistical validation to detect.",
+      "adequacy_evidence": "AI systems can generate and manipulate GIS layers but still make non-obvious mistakes in spatial reasoning and agronomic interpretation, requiring expert review and cross-checking, though many issues can be caught with standard GIS validation workflows.",
+      "_timestamp": "2026-04-06T01:42:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

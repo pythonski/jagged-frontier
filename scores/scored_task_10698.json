@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-4031.00",
+  "task_id": 10698,
+  "task_statement": "Review schedules, switching orders, way bills, and shipping records to obtain cargo loading and unloading information and to plan work.",
+  "occupation_title": "Railroad Conductors and Yardmasters",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Reviewing schedules, switching orders, waybills, and shipping records is commonly done through computerized railroad logistics systems or digital documents, though in some yards it may involve paper records or on-site coordination tied to physical operations."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple document types (schedules, waybills, switching orders) and operational contexts (yards, routes, disruptions), but remains within a relatively structured and standardized domain.",
+      "adequacy_evidence": "While general document patterns and procedures are well represented in training data, detailed, real-world railroad operational records and edge-case scenarios are often proprietary, though partially recoverable via synthetic data and domain-specific fine-tuning.",
+      "_timestamp": "2026-04-06T11:23:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple operational documents and inferring priorities, timing constraints, and exceptions that are not always explicitly stated but follow established rail yard practices.",
+      "adequacy_evidence": "Current agents can extract and synthesize structured logistics information, but they often miss implicit operational priorities or context-specific adjustments without human guidance.",
+      "_timestamp": "2026-04-06T11:23:01"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the task follows documented procedures (reading schedules, waybills, and switching orders), effective planning often relies on experience-based judgment about yard conditions, timing tradeoffs, and handling irregularities or conflicts.",
+      "adequacy_evidence": "Current AI agents can interpret structured records and generate plans, but they lack calibrated judgment for handling edge cases, local operational nuances, and implicit priorities that experienced conductors apply.",
+      "_timestamp": "2026-04-06T11:23:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating information from multiple documents (schedules, switching orders, waybills, shipping records) and forming a coherent plan, requiring several interdependent steps but not extremely long chains.",
+      "adequacy_evidence": "AI agents can generally handle multi-document review and planning, but may exhibit some degradation over longer sequences, such as missing constraints or inconsistencies when synthesizing across sources.",
+      "_timestamp": "2026-04-06T11:23:02"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task centers on reviewing schedules, switching orders, waybills, and shipping records, which are primarily textual or structured data documents with minimal reliance on non-text modalities.",
+      "adequacy_evidence": "Current AI agents handle text and structured document parsing well, so there is no meaningful shortfall related to multimodal capabilities for this task.",
+      "_timestamp": "2026-04-06T11:23:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While most information is contained in current schedules, waybills, and shipping records, some continuity across shifts (e.g., ongoing cargo movements, prior delays, yard status) can matter for planning work.",
+      "adequacy_evidence": "Modern AI systems with database integration and persistent storage can reliably retain and retrieve such operational context across sessions, making this a well-supported capability.",
+      "_timestamp": "2026-04-06T11:23:02"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating information from multiple documents (schedules, switching orders, waybills, shipping records) and keeping track of relationships between them, but the total volume and structure are typically manageable within a single operational context.",
+      "adequacy_evidence": "Well-scaffolded agents with document retrieval and structured parsing can reliably track and synthesize this level of information within an episode, with minimal loss or distortion.",
+      "_timestamp": "2026-04-06T11:23:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Yard operations require timely review of schedules and shipping documents to coordinate movements, typically within seconds to a few minutes, but not strict real-time deadlines.",
+      "adequacy_evidence": "Current AI systems can parse and synthesize structured and semi-structured logistics data quickly within these time windows without needing to truncate reasoning, maintaining output quality.",
+      "_timestamp": "2026-04-06T11:23:03"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors can often be caught by cross-checking schedules, waybills, and shipping records against each other, but this requires domain familiarity and careful review to notice inconsistencies or omissions.",
+      "adequacy_evidence": "AI can extract and summarize these documents but may misinterpret rail-specific terminology or miss conflicts, so human verification is still needed though not prohibitively difficult.",
+      "_timestamp": "2026-04-06T11:23:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal operational activity involving review of documents to plan work, with no direct interaction requiring stakeholder acceptance of the performer\u2019s identity.",
+      "adequacy_evidence": "Since there are no relevant stakeholders for this task, acceptance of an AI agent is not a factor and would not affect task performance.",
+      "_timestamp": "2026-04-06T11:23:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in interpreting or planning from shipping records can lead to misrouted trains, improper loading, or safety hazards, where even rare mistakes can have significant operational or safety consequences.",
+      "adequacy_evidence": "Although much of the information is structured and can be cross-checked, AI systems may still introduce occasional misinterpretations or omissions that, even after review, pose non-trivial residual risk in this safety-sensitive context.",
+      "_timestamp": "2026-04-06T11:23:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Federal Railroad Administration rules require certified human conductors or yardmasters to be responsible for operational planning and safety-critical decisions, but they do not explicitly prohibit AI tools from assisting with document review. This creates partial restriction since a licensed human must oversee and take responsibility for the task.",
+      "_timestamp": "2026-04-06T11:23:05"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

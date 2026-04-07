@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2021.02",
+  "task_id": 7288,
+  "task_statement": "Compute final estimation of property values, taking into account such factors as depreciation, replacement costs, value comparisons of similar properties, and income potential.",
+  "occupation_title": "Appraisers, Real Estate",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Computing the final property value estimate is an analytical task using collected data (comparables, depreciation, income potential) and is typically performed with software, databases, and spreadsheets. Any physical inspection occurs in earlier steps, not during the calculation itself."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Final property valuation requires nuanced judgment in weighting comparables, adjusting for unique property features, local market dynamics, and interpreting imperfect signals like neighborhood trends and buyer sentiment.",
+      "adequacy_evidence": "Current agents can apply standard valuation methods and analyze comparables, but often lack reliable calibration for subtle, context-specific adjustments and local market intuition that experienced appraisers develop.",
+      "_timestamp": "2026-04-06T02:16:23"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Property appraisal spans highly heterogeneous cases across property types, locations, market conditions, and valuation methods (sales comparison, income, cost), with significant context sensitivity.",
+      "adequacy_evidence": "Large datasets exist (MLS, transaction records, appraisal reports, cost manuals), but many are proprietary and lack full transparency into expert reasoning processes, leaving some subpopulations and tacit adjustments underrepresented.",
+      "_timestamp": "2026-04-06T02:16:23"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the core objective (estimate property value) is clear, the weighting of factors like comparables, depreciation, and income potential depends on context such as appraisal purpose, local market norms, and professional judgment.",
+      "adequacy_evidence": "Current agents can apply standard valuation methods but often miss context-specific priorities or stakeholder expectations, requiring human guidance to align with real-world appraisal standards.",
+      "_timestamp": "2026-04-06T02:16:24"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple interdependent steps\u2014gathering data on depreciation, comparables, costs, and income, then synthesizing them into a final estimate\u2014but these steps are structured and not extremely long or deeply sequential.",
+      "adequacy_evidence": "AI agents can generally manage multi-step valuation workflows with tools, but may show some degradation through minor inconsistencies or misweighting of factors across steps, especially in more complex or atypical cases.",
+      "_timestamp": "2026-04-06T02:16:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each property appraisal is largely self-contained, relying on current market data, comparable sales, and property-specific characteristics rather than accumulated cross-session history.",
+      "adequacy_evidence": "Current AI systems can easily retrieve relevant external data (e.g., comps, cost tables) per instance, and the task does not depend on persistent longitudinal memory across sessions.",
+      "_timestamp": "2026-04-06T02:16:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple data sources (comparable sales, cost estimates, depreciation factors, and income streams) and maintaining consistency across them within a single valuation analysis.",
+      "adequacy_evidence": "Agents can generally manage these structured inputs with tools, but may occasionally lose track of assumptions or intermediate values when synthesizing multiple valuation approaches, leading to moderate reliability issues.",
+      "_timestamp": "2026-04-06T02:16:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Appraisers often rely on property photos, site observations, maps, and spatial layouts alongside textual and numerical data to assess condition, comparables, and depreciation.",
+      "adequacy_evidence": "Current agents can interpret property images and structured data reasonably well but struggle with nuanced visual judgments (e.g., subtle condition differences, neighborhood context) and integrating them reliably into valuation decisions.",
+      "_timestamp": "2026-04-06T02:16:25"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Property appraisal involves detailed analysis and documentation, typically completed over hours or days rather than requiring rapid responses.",
+      "adequacy_evidence": "AI systems can take sufficient time to perform extended reasoning and data synthesis without impacting task quality, as there is no meaningful latency pressure.",
+      "_timestamp": "2026-04-06T02:16:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Property valuations directly impact lending decisions, taxation, and transactions; even modest residual errors can lead to significant financial mispricing, legal disputes, or regulatory issues.",
+      "adequacy_evidence": "While many inputs (comparables, cost data) are checkable, AI may still misweight factors or miss nuanced local conditions, leaving some non-trivial residual risk even after standard review.",
+      "_timestamp": "2026-04-06T02:16:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "U.S. real estate appraisal for federally related transactions must be performed and signed by a state-licensed or certified appraiser under USPAP and FIRREA requirements. These rules require a human license holder to take responsibility for the valuation, preventing fully autonomous AI performance of the task.",
+      "_timestamp": "2026-04-06T02:16:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Validating a property valuation requires expert review of comparable sales selection, adjustment logic, depreciation estimates, and income assumptions; mistakes can be subtle and not immediately evident without domain knowledge and local market data.",
+      "adequacy_evidence": "Current AI systems can mis-select comps, apply inappropriate adjustments, or mishandle local market nuances, so thorough expert checking is needed and errors are not trivially detectable from the output alone.",
+      "_timestamp": "2026-04-06T02:16:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Property valuations are relied upon by lenders, buyers, insurers, and regulators, who depend on the appraiser\u2019s certified judgment and professional credibility for financial and legal decisions.",
+      "adequacy_evidence": "Stakeholders and institutions typically require licensed human appraisers and are unlikely to accept fully AI-generated valuations due to trust, liability, and compliance concerns.",
+      "_timestamp": "2026-04-06T02:16:26"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

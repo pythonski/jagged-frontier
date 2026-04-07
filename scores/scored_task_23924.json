@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2052.00",
+  "task_id": 23924,
+  "task_statement": "Enter prescription information into computer databases.",
+  "occupation_title": "Pharmacy Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "The act of entering prescription data into a database is entirely computer-based, but in many real pharmacy workflows the technician must first access or handle physical prescriptions or interact with in\u2011store systems, tying the task to on-site presence in a substantial share of cases."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Prescription entry spans variability in formats (handwritten vs electronic, different drug names, dosages, insurance fields), but remains a structured, well-bounded domain with recurring patterns.",
+      "adequacy_evidence": "Large volumes of prescription data formats, medical vocabularies, and synthetic generation pipelines provide ample representative coverage, including step-by-step extraction and entry processes.",
+      "_timestamp": "2026-04-05T21:24:57"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Entering prescription data follows standardized formats and explicit rules (drug names, dosages, patient info) with minimal need for experience-based judgment.",
+      "adequacy_evidence": "Current AI systems can reliably extract and structure prescription information from text or images using well-defined rules and patterns, with little reliance on tacit knowledge.",
+      "_timestamp": "2026-04-05T21:24:57"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely structured with predefined database fields, but requires interpreting prescriptions (e.g., abbreviations, handwriting, dosage conventions) and resolving minor context-dependent ambiguities.",
+      "adequacy_evidence": "Current AI can often infer and standardize prescription details using OCR and drug knowledge bases, but still struggles with illegible inputs and nuanced clinical conventions, requiring human clarification in some cases.",
+      "_timestamp": "2026-04-05T21:24:58"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence of steps\u2014reading prescription details and entering multiple fields accurately\u2014but each entry is relatively bounded and not part of a long, tightly coupled workflow.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain consistency over such short, structured data-entry sequences with negligible degradation, especially with validation checks and form-based interfaces.",
+      "_timestamp": "2026-04-05T21:24:58"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple structured data fields (patient details, drug name, dosage, prescriber, insurance) that must be correctly mapped and entered, requiring moderate within-episode information tracking.",
+      "adequacy_evidence": "Frontier AI systems with form-filling, extraction, and validation tools can reliably manage and retain this level of structured information within a single episode with minimal loss or drift.",
+      "_timestamp": "2026-04-05T21:24:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Prescription entry is typically expected to be completed within seconds to a minute to maintain workflow in a busy pharmacy, but does not require instantaneous real-time response.",
+      "adequacy_evidence": "Well-scaffolded AI systems can process and enter structured prescription data rapidly with high accuracy well within these time constraints, without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T21:24:59"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves reading handwritten or printed prescription orders, labels, or scanned documents, requiring visual text recognition beyond pure digital text input.",
+      "adequacy_evidence": "Current AI systems with OCR and vision capabilities handle clear printed text well but remain unreliable on messy handwriting and ambiguous prescriptions, which are common in practice.",
+      "_timestamp": "2026-04-05T21:24:59"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each prescription entry is largely self-contained, relying on the current prescription and existing database records rather than requiring the agent to remember prior interactions across sessions.",
+      "adequacy_evidence": "Persistent storage is handled by the pharmacy database itself, and current AI systems can reliably read/write such records without needing their own cross-session memory.",
+      "_timestamp": "2026-04-05T21:24:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Errors in prescription data entry (drug, dose, patient, interactions) can lead to serious patient harm, so even rare residual mistakes after checking are not well tolerated.",
+      "adequacy_evidence": "The task is highly structured with multiple redundancy layers (pharmacist verification, barcode checks, EHR validation), and AI can perform accurate transcription with low residual error after these checks.",
+      "_timestamp": "2026-04-05T21:25:00"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Entering prescription information is an internal data-processing task; outputs are consumed within pharmacy systems, and there is no direct stakeholder interaction where performer identity matters.",
+      "adequacy_evidence": "Pharmacies already rely on automated data entry and verification systems, and stakeholders (pharmacists, organizations) are generally indifferent to whether a human or AI performs this backend function.",
+      "_timestamp": "2026-04-05T21:25:01"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Pharmacy regulations typically require that prescription data entry be performed by licensed/registered technicians under pharmacist supervision, creating ambiguity for fully autonomous AI. There is no explicit ban on software-assisted entry, but accountability and licensure rules partially constrain independent AI execution.",
+      "_timestamp": "2026-04-05T21:25:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Prescription entry is highly structured and routinely double-checked against the original prescription, with software validation rules (e.g., drug codes, dosages, patient fields) making most errors easy to detect before use.",
+      "adequacy_evidence": "AI systems can still make transcription or mapping errors, so human verification against the source prescription remains necessary, though the checking process itself is straightforward and standardised.",
+      "_timestamp": "2026-04-05T21:25:02"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

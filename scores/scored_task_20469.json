@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.01",
+  "task_id": 20469,
+  "task_statement": "Supervise clerks assigning tariff classifications or preparing billing.",
+  "occupation_title": "Transportation, Storage, and Distribution Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Supervising clerks who assign tariff classifications or prepare billing is largely done through computer systems, emails, and digital records, which can be managed remotely. However, supervision often occurs within an office or logistics setting and may involve in-person coordination or handling physical documentation."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tariff classification and billing supervision spans diverse goods categories, regulatory nuances, and edge cases, but operates within structured classification systems (e.g., HTS) and standardized billing practices.",
+      "adequacy_evidence": "Extensive public and proprietary datasets (customs rulings, classification guides, billing records) plus synthetic case generation provide strong coverage of both routine and edge scenarios, including procedural reasoning.",
+      "_timestamp": "2026-04-06T02:39:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Tariff classification and billing follow structured rules (e.g., tariff schedules, codes), but supervisors must resolve ambiguous cases, interpret edge conditions, and guide clerks using experience with prior rulings and organizational practices.",
+      "adequacy_evidence": "AI agents can apply codified rules and past examples effectively, but they still show gaps in handling nuanced, context-dependent classification disputes and subtle judgment calls that rely on accumulated practical experience.",
+      "_timestamp": "2026-04-06T02:39:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Supervising clerks involves ongoing review, feedback, and coordination across multiple billing or classification cases, requiring consistency over extended but loosely coupled sequences rather than a single tightly interdependent chain.",
+      "adequacy_evidence": "AI agents can manage multi-step oversight workflows, but over longer supervisory sequences they can exhibit drift in priorities or miss inconsistencies across cases, leading to moderate degradation.",
+      "_timestamp": "2026-04-06T02:39:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The supervisor must track multiple shipments, tariff codes, billing details, and clerks\u2019 outputs simultaneously, requiring integration of several information streams but not at extreme scale.",
+      "adequacy_evidence": "Current agents can manage multi-item contexts with tool support, but may lose or misprioritize details when monitoring several parallel cases or evolving billing states.",
+      "_timestamp": "2026-04-06T02:39:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Supervision involves tracking clerks\u2019 past performance, prior classification decisions, recurring billing issues, and evolving tariff rules across time, but most individual supervision actions are not deeply dependent on long longitudinal histories.",
+      "adequacy_evidence": "Current AI systems can persist and retrieve records via standard databases and workflow tools, but they may inconsistently surface relevant past decisions or performance context without careful system design and integration.",
+      "_timestamp": "2026-04-06T02:39:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Supervising tariff classification and billing work is primarily based on reviewing text-based documentation, codes, and reports rather than interpreting images, audio, or other non-text inputs.",
+      "adequacy_evidence": "Since the task is fundamentally text-centric, current AI systems can adequately handle the modality requirements without meaningful gaps.",
+      "_timestamp": "2026-04-06T02:39:36"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While tariff classification and billing follow formal rules, supervisors must interpret policy nuances, handle exceptions, and align with organization- and client-specific practices that are not fully explicit.",
+      "adequacy_evidence": "Current agents can apply codified rules and infer many patterns but often miss subtle organizational preferences or edge-case interpretations, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T02:39:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Supervision of clerks in tariff classification and billing occurs within ongoing operational workflows, where timely responses (seconds to minutes) are expected but not real-time critical.",
+      "adequacy_evidence": "Frontier AI agents can deliver guidance, review, and decisions within these timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T02:39:37"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Checking tariff classifications and billing requires domain expertise (e.g., tariff schedules, regulations, contract terms) and careful review; errors are not always obvious without deliberate inspection.",
+      "adequacy_evidence": "Current AI can assist but still makes nontrivial classification and billing mistakes, so consistent human review is needed, though verification is feasible with established procedures.",
+      "_timestamp": "2026-04-06T02:39:38"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves supervising internal clerks, so there are stakeholders (employees) who interact with and respond to the supervisor, but the role is primarily operational rather than authority grounded in personal legitimacy.",
+      "adequacy_evidence": "Clerks and organizational leadership may show some resistance to AI-based supervision, especially regarding accountability and trust, though structured workflows and oversight could mitigate concerns.",
+      "_timestamp": "2026-04-06T02:39:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in tariff classification or billing can lead to financial discrepancies, regulatory penalties, or shipment delays, but they are typically detectable and correctable after the fact. The task tolerates occasional residual errors without catastrophic consequences.",
+      "adequacy_evidence": "Even with quality control, AI systems may still produce occasional misclassifications or billing inconsistencies in edge cases, leaving some residual risk that could require correction or lead to minor penalties.",
+      "_timestamp": "2026-04-06T02:39:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "U.S. customs regulations (e.g., 19 CFR Part 111) require a licensed customs broker to exercise responsible supervision and control over tariff classification activities, implying a legally accountable human must oversee the work. This does not explicitly ban AI use, but it restricts fully autonomous AI supervision without licensed human involvement.",
+      "_timestamp": "2026-04-06T02:39:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

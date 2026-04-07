@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1254.00",
+  "task_id": 14719,
+  "task_statement": "Recommend and implement performance improvements.",
+  "occupation_title": "Web Developers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Analyzing system performance, recommending optimizations, and implementing improvements to code, databases, or server configurations are all done using software tools and remote access to systems, requiring only a computer and internet connection."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Performance optimization often involves context-specific tradeoffs (e.g., caching strategies, database tuning, frontend vs backend bottlenecks) that benefit from experience-based judgment beyond explicit rules.",
+      "adequacy_evidence": "Current agents can apply known optimization patterns and profiling techniques, but they often lack nuanced calibration for edge cases or system-specific constraints, leading to suboptimal or misprioritized improvements in non-routine scenarios.",
+      "_timestamp": "2026-04-06T04:38:28"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Improving web performance requires tracking large, heterogeneous within-episode context: code across multiple files, runtime metrics, network traces, caching layers, and dependencies, where missing details can lead to ineffective or harmful optimizations.",
+      "adequacy_evidence": "Agents can use tools (repo search, profiling outputs) to manage context, but still struggle with maintaining coherent representations of large codebases and evolving performance state, leading to occasional missed interactions or suboptimal changes.",
+      "_timestamp": "2026-04-06T04:38:28"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Web performance optimization spans diverse stacks (frontend frameworks, backends, CDNs, databases), traffic patterns, and bottleneck types, creating a heterogeneous, context-dependent distribution.",
+      "adequacy_evidence": "There is abundant public data (benchmarks, case studies, open-source repos, profiling tools) and synthetic environments, but real-world production telemetry and edge-case performance issues are often private, leaving some gaps.",
+      "_timestamp": "2026-04-06T04:38:28"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Performance improvement involves multi-step workflows such as profiling, identifying bottlenecks, modifying code, and validating results, where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or tightly coupled.",
+      "adequacy_evidence": "AI agents can generally sustain coherence across these workflows with tooling, but may show some degradation such as missed constraints or suboptimal follow-through over longer implementation and testing cycles.",
+      "_timestamp": "2026-04-06T04:38:28"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Performance optimization often depends on prior profiling results, past changes, and evolving site behavior, but each improvement cycle can be re-established from current code, metrics, and documentation.",
+      "adequacy_evidence": "Agents can persist and retrieve project context via repositories, logs, and monitoring tools, but integration is imperfect and important historical context may be inconsistently surfaced or maintained.",
+      "_timestamp": "2026-04-06T04:38:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Performance optimization often involves interpreting visual artifacts like browser devtools timelines, network waterfalls, and rendered UI behavior, though much analysis is still text/code-based.",
+      "adequacy_evidence": "Current agents can process screenshots and profiling outputs reasonably well, but may struggle with complex, fine-grained visual diagnostics or nuanced UI performance issues.",
+      "_timestamp": "2026-04-06T04:38:30"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Performance improvements depend on context (e.g., Core Web Vitals targets, SEO vs. feature tradeoffs, infrastructure limits), and goals are often only partially specified, requiring interpretation of stakeholder priorities.",
+      "adequacy_evidence": "Agents can run audits and propose common optimizations, but often miss implicit business constraints or prioritization, requiring human guidance to refine what \u2018improvement\u2019 means in context.",
+      "_timestamp": "2026-04-06T04:38:30"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from recommending or implementing web performance improvements. This work is not regulated in a way that mandates human-only execution in the general US context.",
+      "_timestamp": "2026-04-06T04:38:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Performance optimization work is typically done asynchronously (e.g., profiling, code changes, testing), where minutes to hours of analysis and iteration are acceptable.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to analyze code and suggest optimizations without meaningful degradation, as there is no strict latency pressure.",
+      "_timestamp": "2026-04-06T04:38:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommending and implementing performance improvements typically involves clients, product managers, or team members who must review, approve, and trust the changes, so stakeholder engagement matters but is not deeply tied to personal authority.",
+      "adequacy_evidence": "Many stakeholders are open to AI-assisted performance optimization, but some may hesitate to fully trust or delegate implementation decisions to AI without human oversight, especially for production systems.",
+      "_timestamp": "2026-04-06T04:38:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Performance improvements can be validated with metrics (e.g., load times, Core Web Vitals, profiling), but require careful testing across environments to catch regressions or tradeoffs like increased resource usage.",
+      "adequacy_evidence": "AI-generated optimizations often need benchmarking, cross-browser/device testing, and code review to confirm gains and avoid regressions, creating a consistent but manageable verification burden.",
+      "_timestamp": "2026-04-06T04:38:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Performance improvements can affect site speed, scalability, and cost, but issues (e.g., regressions) are typically detectable via monitoring and reversible through rollbacks, making consequences meaningful but not catastrophic.",
+      "adequacy_evidence": "With standard practices like benchmarking, A/B testing, and monitoring, AI-suggested changes can be validated and rolled back if needed, keeping residual risk within acceptable bounds.",
+      "_timestamp": "2026-04-06T04:38:32"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

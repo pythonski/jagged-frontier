@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-2022.00",
+  "task_id": 10624,
+  "task_statement": "Receive and post weather information and flight plan data, such as air routes and arrival and departure times.",
+  "occupation_title": "Airfield Operations Specialists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Receiving weather updates and flight plan data and posting them typically occurs through digital aviation information systems, databases, and communication networks. The task primarily involves computer-based data entry and information sharing that can be done remotely with system access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely procedural, involving receiving, recording, and posting standardized weather and flight plan information according to established formats and protocols.",
+      "adequacy_evidence": "Current AI systems can reliably follow structured data-handling procedures and apply formatting rules without needing experience-based judgment.",
+      "_timestamp": "2026-04-06T04:00:50"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans variations in weather reports (e.g., METARs, TAFs) and flight plan formats across locations and conditions, but these are highly standardized within aviation systems.",
+      "adequacy_evidence": "Extensive public and training data exist for aviation weather and flight data formats, including structured examples and procedural documentation, providing strong coverage for all major subcases.",
+      "_timestamp": "2026-04-06T04:00:50"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on standardized aviation data formats (e.g., METARs, TAFs, flight plans) with explicit fields and clear procedural requirements, leaving little room for interpretation.",
+      "adequacy_evidence": "Current AI systems can reliably parse, interpret, and transmit structured aviation and weather data with minimal ambiguity, as the objectives and success criteria are well-defined.",
+      "_timestamp": "2026-04-06T04:00:50"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a multi-step workflow (receiving, interpreting, and posting structured data like weather updates and flight plans), where consistency across steps matters but sequences are relatively short and standardized.",
+      "adequacy_evidence": "Current AI agents can reliably handle structured, repeatable multi-step data processing workflows with minimal degradation over sequence length, especially when supported by tools and validation checks.",
+      "_timestamp": "2026-04-06T04:00:51"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves handling current weather reports and flight plan data, which are time-sensitive and largely self-contained per instance without reliance on historical context.",
+      "adequacy_evidence": "Since little to no cross-session memory is required, existing AI systems with standard session handling already meet the task's needs.",
+      "_timestamp": "2026-04-06T04:00:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple structured data elements (weather updates, flight routes, times) and ensuring they are correctly associated and updated, but the information volume is moderate and typically well-organized.",
+      "adequacy_evidence": "Current AI agents with tool integration and structured data handling can reliably track, update, and post such information within a single episode without significant loss or drift.",
+      "_timestamp": "2026-04-06T04:00:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Posting weather updates and flight plan data requires timely handling, typically within seconds to a few minutes to remain operationally relevant, but not strict real-time control-loop latency.",
+      "adequacy_evidence": "Frontier AI systems can ingest, format, and transmit structured data well within these time bounds without needing extended reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T04:00:52"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves handling structured textual and numerical data such as weather reports, flight routes, and schedules, typically via digital systems or radio communication transcripts.",
+      "adequacy_evidence": "Current AI systems handle text-based and structured data processing reliably, and no meaningful multimodal perception or generation is required for competent performance.",
+      "_timestamp": "2026-04-06T04:00:53"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Pilots, air traffic controllers, and airport personnel rely on the posted weather and flight data, but primarily care about accuracy and timeliness rather than the identity of the provider.",
+      "adequacy_evidence": "Stakeholders already accept automated and system-generated aviation data feeds; an AI agent performing this function would face little to no resistance if reliability standards are met.",
+      "_timestamp": "2026-04-06T04:00:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "The task involves structured, standardized data (weather reports, flight plans) that can be cross-checked against authoritative systems and validated with automated consistency checks, making errors relatively easy to detect.",
+      "adequacy_evidence": "Current AI systems can handle structured data reliably but still make occasional transcription or integration errors, requiring routine but not intensive human or automated verification.",
+      "_timestamp": "2026-04-06T04:00:53"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "FAA regulations require certified personnel (e.g., air traffic or flight service specialists) to be responsible for handling and disseminating official flight and weather information, which creates a human-in-the-loop requirement. While AI can support these functions, current rules do not clearly authorize fully autonomous AI to perform them independently.",
+      "_timestamp": "2026-04-06T04:00:54"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in weather or flight plan data can propagate into flight operations, affecting routing, timing, and safety; even rare mistakes can have serious downstream consequences in aviation contexts.",
+      "adequacy_evidence": "AI can handle structured data posting with cross-checks and validation systems, but occasional misinterpretations or integration errors could still slip through, leaving some residual risk that remains concerning in high-stakes environments.",
+      "_timestamp": "2026-04-06T04:00:54"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

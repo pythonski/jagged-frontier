@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4031.00",
+  "task_id": 1538,
+  "task_statement": "Compile and interpret results of tests and analyses.",
+  "occupation_title": "Chemical Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Compiling and interpreting test results is typically done using computers, spreadsheets, or laboratory information systems, but chemical technicians often perform this work on-site in conjunction with laboratory instruments or paper records that may not be fully accessible remotely."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting chemical test results often involves recognizing instrument artifacts, sample contamination, or borderline values, which requires some experience-based judgment beyond written protocols.",
+      "adequacy_evidence": "AI systems can handle standard interpretation rules and known patterns but are less reliable when subtle lab-specific quirks or ambiguous signals require calibrated human judgment.",
+      "_timestamp": "2026-04-05T20:47:29"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of laboratory tests, instruments, and chemical contexts, but follows standardized procedures and reporting conventions across settings.",
+      "adequacy_evidence": "There is abundant accessible data (lab reports, SOPs, textbooks, instrument manuals, and worked examples) that capture both results and interpretation processes, and synthetic data can cover remaining variation.",
+      "_timestamp": "2026-04-05T20:47:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting chemical test results requires applying contextual knowledge about experimental goals, acceptable ranges, and anomalies, which are not always fully specified in the raw data or instructions.",
+      "adequacy_evidence": "Current agents can follow explicit analysis protocols but often miss subtle contextual cues or implicit objectives, requiring human guidance to ensure interpretations align with real experimental intent.",
+      "_timestamp": "2026-04-05T20:47:29"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps\u2014collecting test outputs, organizing data, checking consistency, and synthesizing interpretations\u2014but these steps are moderately sequential rather than deeply interdependent.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain coherence across such moderate multi-step data compilation and interpretation workflows, with minimal degradation over sequence length when properly scaffolded.",
+      "_timestamp": "2026-04-05T20:47:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple test outputs, measurements, and analytical notes within a single workflow, often comparing values and tracking conditions, but the total information volume is typically structured and bounded.",
+      "adequacy_evidence": "Current agents can handle moderate structured datasets and summaries, but may lose track of intermediate values or misinterpret relationships when multiple results must be jointly reasoned over.",
+      "_timestamp": "2026-04-05T20:47:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting test results often involves comparing with prior experiments, calibration records, or batch histories, but many analyses can still be performed on self-contained datasets.",
+      "adequacy_evidence": "Agents can store and retrieve historical lab data via databases or LIMS integrations, but maintaining consistent, well-linked longitudinal context across projects and surfacing the right prior results remains somewhat unreliable.",
+      "_timestamp": "2026-04-05T20:47:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting instrument outputs such as chromatograms, spectra, and other graphical or visual data alongside numerical tables, making multimodal inputs relevant but not dominant.",
+      "adequacy_evidence": "Current AI can interpret many standard plots and structured outputs, but struggles with complex, noisy, or specialized scientific visualizations and nuanced cross-modal interpretation.",
+      "_timestamp": "2026-04-05T20:47:32"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling and interpreting laboratory test results is typically done over minutes to hours as data is processed and reviewed; it is not a real-time task requiring immediate responses.",
+      "adequacy_evidence": "Current AI systems can perform data aggregation and interpretation well within these timeframes without needing to truncate reasoning, so speed constraints do not degrade output quality.",
+      "_timestamp": "2026-04-05T20:47:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting chemical test results involves nuanced judgment about instrument accuracy, experimental conditions, and statistical validity; errors can be subtle and require domain expertise and re-analysis to detect.",
+      "adequacy_evidence": "Current AI systems can misinterpret data patterns, overlook experimental context, or introduce analytical errors, meaning expert review and cross-checking remain necessary and nontrivial.",
+      "_timestamp": "2026-04-05T20:47:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Results are typically used by scientists, engineers, or quality/regulatory personnel who rely on the technician\u2019s interpretations, so credibility matters but not in a highly interpersonal or trust-sensitive way.",
+      "adequacy_evidence": "Stakeholders in lab and industrial settings are increasingly open to AI-assisted analysis, but often still require human validation or sign-off, reflecting moderate resistance to fully autonomous AI in this role.",
+      "_timestamp": "2026-04-05T20:47:36"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Laboratory regulations (e.g., CLIA for clinical labs, FDA GLP requirements) require qualified human personnel to review, validate, and take responsibility for test interpretation, which limits fully autonomous AI use. However, these rules do not explicitly prohibit AI assistance, creating partial rather than total restriction.",
+      "_timestamp": "2026-04-05T20:47:36"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misinterpreting chemical test results can lead to unsafe products, regulatory violations, or faulty process decisions, where even rare residual errors can have serious safety or compliance consequences.",
+      "adequacy_evidence": "While many outputs (e.g., numerical results, standard analyses) are checkable and structured, AI may still introduce subtle misinterpretations or context errors that are not always caught, leaving some residual risk after normal QC.",
+      "_timestamp": "2026-04-05T20:47:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

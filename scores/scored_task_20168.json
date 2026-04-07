@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3031.01",
+  "task_id": 20168,
+  "task_statement": "Monitor financial activities and details, such as cash flow and reserve levels, to ensure that all legal and regulatory requirements are met.",
+  "occupation_title": "Treasurers and Controllers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Monitoring cash flow, reserve levels, and compliance with financial regulations is typically done through financial software, accounting systems, and digital reports, all of which can be accessed and analyzed remotely on a computer."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Regulatory requirements are largely codified, but applying them requires context-sensitive interpretation (e.g., materiality thresholds, jurisdictional nuances, and evolving guidance) and aligning monitoring to firm-specific risk profiles.",
+      "adequacy_evidence": "Current agents can map rules to data and flag issues, but often miss nuanced interpretations or firm-specific compliance expectations, requiring human review and iterative refinement.",
+      "_timestamp": "2026-04-05T21:56:28"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Financial monitoring for compliance spans diverse firm sizes, industries, jurisdictions, regulatory regimes, and edge cases (e.g., unusual transactions, evolving rules), creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "While regulations, accounting standards, and some audit/compliance examples are well-documented, much real-world signal (internal financial data, nuanced decision processes, rare violations) is private or sparse, though partially recoverable via synthetic data and structured training.",
+      "_timestamp": "2026-04-05T21:56:28"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Much of the task follows explicit accounting standards and regulatory rules, but experienced professionals apply judgment in interpreting borderline transactions, assessing compliance risk, and prioritizing anomalies.",
+      "adequacy_evidence": "AI agents can apply codified rules and flag irregularities well, but they show gaps in nuanced, context-sensitive interpretations and risk calibration in atypical or ambiguous cases.",
+      "_timestamp": "2026-04-05T21:56:29"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing monitoring across multiple data streams (cash flow, reserves, compliance checks), requiring consistent tracking over time but with largely modular, repeatable steps rather than tightly interdependent chains.",
+      "adequacy_evidence": "AI agents can sustain monitoring workflows with tooling, but over extended sequences they show some drift (e.g., missed anomalies, inconsistent rule application) without careful orchestration and checkpointing.",
+      "_timestamp": "2026-04-05T21:56:29"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring financial activities like cash flow and reserve levels primarily involves structured numerical data and text-based reports, which are inherently text-compatible.",
+      "adequacy_evidence": "Current AI systems handle structured financial data, spreadsheets, and textual reports effectively without needing advanced multimodal perception or generation.",
+      "_timestamp": "2026-04-05T21:56:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires continuous tracking of financial positions, trends, and compliance status over time, relying on accumulated historical data (e.g., cash flow patterns, reserve changes, prior compliance checks).",
+      "adequacy_evidence": "Current AI systems can integrate with financial databases and persist state, but they can struggle with reliably surfacing the most relevant historical context and maintaining coherent long-horizon interpretations without careful system design.",
+      "_timestamp": "2026-04-05T21:56:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring financial activities often involves periodic reviews and automated alerts; while some anomalies require timely attention, most analysis can occur within seconds to minutes rather than strict real-time constraints.",
+      "adequacy_evidence": "Frontier AI systems can process financial data streams and flag compliance issues well within required timeframes, with no significant degradation from speed constraints in typical use.",
+      "_timestamp": "2026-04-05T21:56:31"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking multiple financial streams (cash flow, reserves, transactions) and regulatory thresholds, requiring integration and summarization of structured data from several sources within a monitoring episode.",
+      "adequacy_evidence": "Agents can process and aggregate large financial datasets with tools, but may struggle with maintaining precise state across many concurrent signals or compressing evolving financial details without occasional omissions or drift.",
+      "_timestamp": "2026-04-05T21:56:31"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in monitoring cash flow, reserves, and regulatory compliance can lead to legal penalties, financial misstatements, liquidity crises, or regulatory sanctions, making even rare residual mistakes high-impact.",
+      "adequacy_evidence": "While AI can flag anomalies and support compliance checks, it can still miss nuanced regulatory interpretations or edge cases, leaving non-trivial residual risk even after standard review processes.",
+      "_timestamp": "2026-04-05T21:56:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Detecting errors in financial monitoring and regulatory compliance requires expert review of complex transactions, reconciliations, and evolving legal standards; issues can be subtle and not immediately visible.",
+      "adequacy_evidence": "Current AI systems can flag anomalies but still produce interpretation or omission errors that require thorough human auditing, making verification effort substantial and unavoidable.",
+      "_timestamp": "2026-04-05T21:56:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task primarily produces internal monitoring outputs used by executives, auditors, and regulators, who rely on the results but do not typically interact directly with the performer; however, accountability and credibility of the role still matter.",
+      "adequacy_evidence": "Stakeholders such as regulators and auditors often expect accountable human oversight and may be cautious about fully delegating compliance monitoring to AI, even if AI-generated analyses are accurate.",
+      "_timestamp": "2026-04-05T21:56:33"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from monitoring financial activities for compliance purposes. While ultimate responsibility and sign-off typically rest with human officers (e.g., treasurers, controllers), the use of AI as a tool in monitoring is permitted.",
+      "_timestamp": "2026-04-05T21:56:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2051.00",
+  "task_id": 7308,
+  "task_statement": "Determine the prices at which securities should be syndicated and offered to the public.",
+  "occupation_title": "Financial and Investment Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Setting offering prices for syndicated securities is based on financial modeling, market data analysis, and communication with stakeholders, all of which can be performed using computers and online information systems without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Pricing syndicated securities depends on highly heterogeneous factors including market conditions, investor demand, sector dynamics, deal structure, and real-time bookbuilding feedback, creating a long-tailed and context-sensitive distribution.",
+      "adequacy_evidence": "While public data on past offerings exists, critical inputs like order books, investor negotiations, and internal pricing deliberations are largely private and not captured in training data, leaving major gaps in representative process-level coverage.",
+      "_timestamp": "2026-04-06T03:09:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Setting offering prices relies heavily on tacit judgment about investor sentiment, market timing, comparable deals, and nuanced signals from bookbuilding that are not fully captured in explicit rules or historical data alone.",
+      "adequacy_evidence": "Current AI can model comparables and market data well, but lacks reliable calibration of soft signals like investor appetite and underwriter discretion, leading to gaps in non-routine or volatile market conditions.",
+      "_timestamp": "2026-04-06T03:09:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Setting offering prices requires interpreting implicit objectives like balancing issuer capital goals, investor demand, market sentiment, and signaling effects, often under shifting conditions and incomplete information.",
+      "adequacy_evidence": "Current agents can model market data and simulate pricing scenarios, but they struggle to fully infer and adapt to nuanced stakeholder preferences and real-time bookbuilding dynamics without human guidance.",
+      "_timestamp": "2026-04-06T03:09:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining offering prices involves multi-step analysis (financial modeling, comparable valuations, market conditions, investor demand) where steps are interdependent but not extremely long-horizon.",
+      "adequacy_evidence": "AI agents can execute these analytical sequences reasonably well, but may show some drift or inconsistency when integrating multiple factors over iterative steps, especially under changing assumptions.",
+      "_timestamp": "2026-04-06T03:09:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Pricing syndicated securities benefits from knowledge of prior deals, issuer history, and evolving market relationships, but each offering can largely be analyzed using current market data and comparable transactions.",
+      "adequacy_evidence": "Current AI systems can reliably store and retrieve historical deal data, comparables, and client preferences via standard databases and retrieval systems, meeting the task's cross-session needs.",
+      "_timestamp": "2026-04-06T03:09:06"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining syndication pricing relies on financial models, market data, comparable offerings, and textual/numeric analysis rather than perception or generation of non-text modalities.",
+      "adequacy_evidence": "Current AI systems can fully operate on structured financial and textual data without needing multimodal capabilities, so there is no modality-related shortfall.",
+      "_timestamp": "2026-04-06T03:09:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining offering prices requires integrating large, heterogeneous inputs within a single episode: issuer financials, comparable transactions, current market conditions, investor demand signals, and iterative book-building updates where missing details can materially affect pricing.",
+      "adequacy_evidence": "Current agents can aggregate and summarize multiple data sources, but they still show weaknesses in maintaining consistent, up-to-date state across many evolving inputs (e.g., shifting demand curves or comparables), leading to occasional loss or distortion of key context.",
+      "_timestamp": "2026-04-06T03:09:07"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Securities pricing for public offerings is a regulated activity performed by registered broker-dealers under SEC and FINRA oversight, with required licensed human supervision and accountability. There is no explicit prohibition on using AI as a tool, but autonomous AI decision-making without a licensed entity and supervisory principal would not satisfy current regulatory requirements.",
+      "_timestamp": "2026-04-06T03:09:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Setting offering prices for securities directly affects capital raised, investor returns, and issuer reputation; mispricing can lead to large financial losses, failed offerings, or legal exposure, so very little residual error is tolerable.",
+      "adequacy_evidence": "Even with standard checks (comparables, book-building feedback, committee review), AI may still misjudge market sentiment or demand dynamics, leaving some non-trivial residual risk, though not clearly beyond what oversight processes can mitigate.",
+      "_timestamp": "2026-04-06T03:09:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Syndication pricing decisions are made over hours to days using valuation models, comps, and investor feedback; they are not real-time decisions requiring immediate response.",
+      "adequacy_evidence": "AI systems can take sufficient time to perform deep analysis without latency pressure, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T03:09:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Setting syndication and offering prices requires integrating market conditions, investor demand signals, comparable deals, and firm-specific risk factors; mispricing may not be immediately evident and often only becomes clear after market reception, requiring deep expertise to evaluate ex ante.",
+      "adequacy_evidence": "Current AI can assist with comps and modeling but still produces recommendations that require intensive expert validation, as errors in judgment or missing tacit market signals are hard to detect and could lead to significant financial consequences if unchecked.",
+      "_timestamp": "2026-04-06T03:09:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Pricing securities for syndication requires buy-in from issuers, underwriters, and institutional investors, where credibility, reputation, and perceived judgment of the analyst or bank are central to acceptance.",
+      "adequacy_evidence": "While quantitative models are widely used, stakeholders still expect human judgment and accountability in pricing decisions, so a fully AI-driven role would face noticeable but not prohibitive resistance.",
+      "_timestamp": "2026-04-06T03:09:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

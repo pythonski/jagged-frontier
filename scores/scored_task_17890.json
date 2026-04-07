@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "53-1021.01",
+  "task_id": 17890,
+  "task_statement": "Assign truck drivers or recycling technicians to routes.",
+  "occupation_title": "Transportation Vehicle, Equipment and Systems Inspectors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Route assignment and dispatching can be completed using scheduling or dispatch software, email, messaging, or phone from a computer with internet access, without needing physical presence or specialized equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Route assignment spans varying constraints (geography, vehicle capacity, labor rules, service windows), but these fall within well-studied routing/scheduling problem families with structured variability rather than highly open-ended cases.",
+      "adequacy_evidence": "Extensive datasets, benchmarks (e.g., VRP variants), and operational logs provide rich process-level examples, and synthetic generation plus optimization environments can cover edge cases effectively.",
+      "_timestamp": "2026-04-05T21:49:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While routing can follow explicit constraints (availability, regulations, geography), effective assignment often relies on experiential judgment about driver reliability, familiarity with routes, and handling of contingencies like traffic or customer quirks.",
+      "adequacy_evidence": "Current AI can optimize routes and incorporate structured constraints, but struggles to fully capture nuanced human factors and informal heuristics that experienced dispatchers apply in edge cases.",
+      "_timestamp": "2026-04-05T21:49:26"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Route assignment involves some context-dependent factors (driver availability, route priorities, regulatory constraints, and operational preferences) that are not always fully explicit but are typically captured in scheduling rules or policies.",
+      "adequacy_evidence": "Current AI systems can reliably infer and optimize based on provided constraints and historical patterns, and any residual ambiguity can usually be resolved through structured inputs or minor human clarification.",
+      "_timestamp": "2026-04-05T21:49:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assigning drivers or technicians to routes involves multi-step scheduling with interdependent constraints (availability, route requirements, coverage), requiring consistent reasoning across a moderate sequence of decisions.",
+      "adequacy_evidence": "Current AI agents can handle structured scheduling workflows with tools, but may exhibit some constraint drift or suboptimal allocations as complexity increases, especially without careful orchestration.",
+      "_timestamp": "2026-04-05T21:49:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Assigning drivers or technicians to routes primarily relies on structured data such as schedules, locations, and availability, which can be represented textually or in tabular form.",
+      "adequacy_evidence": "Current AI agents can handle routing and assignment using text and structured data without needing advanced multimodal perception or generation.",
+      "_timestamp": "2026-04-05T21:49:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Assigning personnel to routes requires tracking multiple variables (driver availability, route requirements, timing, and constraints) within a single scheduling episode, but the information is structured and of moderate scope.",
+      "adequacy_evidence": "Well-scaffolded agents using structured data tables or scheduling tools can reliably manage and update these variables within an episode without significant context loss or compression errors.",
+      "_timestamp": "2026-04-05T21:49:27"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Assignment decisions regularly rely on stored information such as driver qualifications, availability, prior routes, and equipment status, but this information is typically structured and maintained in operational databases rather than requiring complex longitudinal reasoning.",
+      "adequacy_evidence": "Current AI systems integrated with standard scheduling and database tools can reliably store, retrieve, and update this type of structured cross-session information, with no major gaps in persistence or access.",
+      "_timestamp": "2026-04-05T21:49:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Route assignments can be checked against constraints like availability, capacity, and regulatory limits, but doing so requires domain knowledge and review of schedules and logistics rather than instant verification.",
+      "adequacy_evidence": "AI-generated assignments can be validated with existing scheduling rules and tools, but models still make coordination and constraint errors often enough that human review and adjustment are routinely needed.",
+      "_timestamp": "2026-04-05T21:49:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Route assignment is typically done on operational timescales (seconds to minutes), with occasional need for timely adjustments but not strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can generate high-quality routing and assignment plans within these time windows without significant degradation from latency constraints.",
+      "_timestamp": "2026-04-05T21:49:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations that prohibit AI systems from assigning drivers or technicians to routes. Dispatching decisions are not legally restricted to licensed humans, though firms must still comply with labor, safety, and hours-of-service rules regardless of how assignments are made.",
+      "_timestamp": "2026-04-05T21:49:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Route assignment errors can cause delays, missed service, or inefficiencies, but typically do not lead to severe or irreversible harm if corrected; operations can recover from occasional mistakes.",
+      "adequacy_evidence": "With standard checks (constraint validation, schedule review), AI-generated routing is generally reliable, and remaining errors are comparable to human planners and operationally manageable.",
+      "_timestamp": "2026-04-05T21:49:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordinating with drivers or technicians who must follow assigned routes, so they engage with and rely on the assignment decisions, though personal authority or identity is not central.",
+      "adequacy_evidence": "Route assignment and dispatch are already commonly automated, and workers generally accept algorithmic scheduling systems, so AI identity would not meaningfully reduce acceptance.",
+      "_timestamp": "2026-04-05T21:49:29"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

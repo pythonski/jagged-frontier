@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2051.02",
+  "task_id": 16334,
+  "task_statement": "Perform hydraulic analyses of water supply systems or water distribution networks to model flow characteristics, test for pressure losses, or to identify opportunities to mitigate risks and improve operational efficiency.",
+  "occupation_title": "Water/Wastewater Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Hydraulic analyses of water distribution systems are typically conducted using computer-based modeling and simulation software with existing system data. The task itself involves digital modeling and analysis and does not require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hydraulic modeling relies on established physical laws and software tools, but engineers must apply experience to calibrate models, interpret anomalous results, and choose appropriate assumptions for real-world network conditions.",
+      "adequacy_evidence": "Current AI agents can execute standard analyses and apply documented methods, but they show gaps in handling atypical system behaviors, noisy data, and nuanced calibration decisions that depend on field experience.",
+      "_timestamp": "2026-04-05T22:07:10"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Water distribution systems vary in topology, demand patterns, pipe materials, and operating conditions, but are governed by well-understood hydraulic principles and standardized modeling approaches (e.g., EPANET).",
+      "adequacy_evidence": "Extensive textbooks, engineering documentation, and open-source simulation tools allow generation of rich synthetic data and step-by-step analyses, providing strong coverage of relevant scenarios.",
+      "_timestamp": "2026-04-05T22:07:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While core goals (e.g., modeling flow, assessing pressure loss) are explicit, key elements like boundary conditions, acceptable risk thresholds, and system-specific assumptions depend on local context, standards, and engineering judgment.",
+      "adequacy_evidence": "Current agents can follow general modeling objectives but often miss context-specific constraints or implicit performance criteria, requiring human guidance to refine assumptions and ensure relevance.",
+      "_timestamp": "2026-04-05T22:07:12"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydraulic modeling requires managing large, structured datasets (e.g., network topology, pipe attributes, demand patterns) and tracking multiple interdependent variables and simulation states within a single analysis session.",
+      "adequacy_evidence": "Agents with tool use can offload much of this to external computation and structured storage, but they still show moderate fragility in consistently tracking all parameters and intermediate states without omissions or drift.",
+      "_timestamp": "2026-04-05T22:07:13"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Hydraulic analysis requires multi-step workflows (data preparation, model construction, calibration, simulation, and iterative refinement) where early errors propagate through tightly coupled stages.",
+      "adequacy_evidence": "Well-scaffolded AI can execute many steps, but performance degrades over long iterative modeling cycles, with risks of constraint drift or miscalibration accumulating across steps.",
+      "_timestamp": "2026-04-05T22:07:13"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Analyses often build on prior models, calibration data, and historical system performance, but each study can typically be reconstructed from saved datasets and engineering files rather than requiring rich longitudinal memory.",
+      "adequacy_evidence": "Current agents can persist and retrieve models, datasets, and prior outputs via external storage and tooling, but may inconsistently manage evolving project context or seamlessly integrate past assumptions without careful setup.",
+      "_timestamp": "2026-04-05T22:07:13"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Hydraulic analyses of water distribution systems are typically conducted using modeling software in offline, project-based workflows where minutes to hours of computation and review time are acceptable.",
+      "adequacy_evidence": "AI agents can take sufficient time to perform multi-step reasoning, run simulations, and validate outputs without meaningful pressure to truncate reasoning, so latency does not degrade quality.",
+      "_timestamp": "2026-04-05T22:07:14"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Hydraulic analysis often uses spatial network data (GIS maps, pipe layouts), schematics, and sensor data, where visual or spatial representations aid understanding, though much can be encoded numerically or textually.",
+      "adequacy_evidence": "Current agents can process structured data and generate visualizations via tools, but remain inconsistent with complex spatial reasoning or detailed interpretation of engineering diagrams and GIS data.",
+      "_timestamp": "2026-04-05T22:07:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Hydraulic modeling involves complex assumptions, boundary conditions, and parameter choices where errors (e.g., in flow regimes or network constraints) can be subtle and require expert review, simulation validation, and cross-checking against empirical data.",
+      "adequacy_evidence": "Current AI systems can generate plausible analyses but frequently make non-obvious modeling or assumption errors, requiring thorough expert verification and recalculation before results can be trusted.",
+      "_timestamp": "2026-04-05T22:07:15"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in hydraulic modeling of water distribution systems can lead to infrastructure failure, inadequate pressure, contamination risks, or regulatory violations, with potentially severe public health and economic consequences.",
+      "adequacy_evidence": "Results can be cross-validated with established engineering software, physical laws, and peer review, but AI-generated analyses may still introduce subtle modeling or assumption errors that are not always caught, leaving some residual risk.",
+      "_timestamp": "2026-04-05T22:07:15"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The analyses are used by utilities, regulators, and engineering teams who rely on the results for planning and compliance, and typically expect work associated with a qualified engineer.",
+      "adequacy_evidence": "AI-assisted modeling is increasingly accepted as a tool, but stakeholders often require human oversight and licensed sign-off, so full acceptance of an autonomous AI performer remains limited.",
+      "_timestamp": "2026-04-05T22:07:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Engineering analyses that impact public infrastructure typically must be performed under the supervision of, and signed/sealed by, a licensed Professional Engineer (PE). While AI tools are not explicitly prohibited, they cannot independently fulfill the legal responsibility or certification requirements, creating a partial regulatory constraint.",
+      "_timestamp": "2026-04-05T22:07:16"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

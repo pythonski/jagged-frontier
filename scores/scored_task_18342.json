@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1141.03",
+  "task_id": 18342,
+  "task_statement": "Document patients' treatment plans, interventions, outcomes, or plan revisions.",
+  "occupation_title": "Critical Care Nurses",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Documentation of treatment plans and outcomes is usually entered into electronic health records on a computer, making the activity largely digital. However, it is typically performed on-site in the clinical setting and may occasionally involve paper charting or systems only accessible within the hospital."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical documentation follows structured standards but still requires selecting relevant details, interpreting clinician intent, and aligning with evolving patient context and care priorities.",
+      "adequacy_evidence": "Current agents can map structured inputs to documentation formats but often miss nuanced clinical intent or implicit priorities without human clarification, requiring iteration.",
+      "_timestamp": "2026-04-06T00:19:26"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Documentation spans varied patient conditions, interventions, and outcomes in ICU settings, but is structured by standardized formats (EHR templates, SOAP notes) that bound variability.",
+      "adequacy_evidence": "There are substantial training sources (e.g., de-identified clinical notes, guidelines, templates), but real-world ICU documentation is partly inaccessible due to privacy and includes edge-case complexity that is only partially captured.",
+      "_timestamp": "2026-04-06T00:19:26"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While documentation follows clinical standards and templates, nurses must use experience to judge what details are clinically salient, how to contextualize changes, and how to accurately reflect evolving patient status.",
+      "adequacy_evidence": "Current agents can generate structured clinical notes from data and guidelines, but often lack nuanced clinical judgment about relevance, emphasis, and subtle contextual interpretation in complex or rapidly changing ICU cases.",
+      "_timestamp": "2026-04-06T00:19:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Documentation involves multiple related entries over a patient stay (plans, interventions, outcomes, revisions) that must remain consistent, but each note is typically a bounded, semi-independent task.",
+      "adequacy_evidence": "Current AI systems can maintain coherence within and across such documentation sequences using structured inputs and records, with minimal degradation over the typical length of charting workflows.",
+      "_timestamp": "2026-04-06T00:19:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Documenting treatment plans and related updates is primarily a text-based task, even though information may originate from various sources; the act of documentation itself is fundamentally text-in, text-out.",
+      "adequacy_evidence": "Current AI systems can handle text-based documentation tasks effectively, and any upstream multimodal inputs are typically already translated into structured or textual data before documentation.",
+      "_timestamp": "2026-04-06T00:19:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Critical care documentation requires integrating large volumes of heterogeneous, rapidly changing patient data (vitals, labs, interventions, physician orders, and evolving plans) within a single shift, where missing details can affect care continuity.",
+      "adequacy_evidence": "Current agents can summarize and structure clinical information, but they still show occasional context loss or omission when tracking many concurrent data points, especially under rapidly updating conditions.",
+      "_timestamp": "2026-04-06T00:19:28"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Clinical documentation in critical care is expected to be completed promptly (often within minutes of care events or shift intervals) but does not require split-second real-time response.",
+      "adequacy_evidence": "Frontier AI systems can generate structured clinical documentation quickly within the available time window without needing extended reasoning, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T00:19:28"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate documentation requires integrating ongoing patient history, prior interventions, evolving treatment plans, and outcomes across multiple shifts and encounters, making it inherently longitudinal.",
+      "adequacy_evidence": "Current AI systems can leverage EHR integrations and persistent storage to track patient data across sessions, but they still show gaps in reliably retrieving, reconciling, and prioritizing longitudinal clinical context in all cases.",
+      "_timestamp": "2026-04-06T00:19:28"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification requires clinical expertise to ensure documentation accurately reflects patient status, interventions, and evolving care plans; discrepancies may not be immediately obvious without cross-checking charts and context.",
+      "adequacy_evidence": "Current AI can generate plausible clinical documentation but is prone to omissions, misinterpretations, or hallucinated details, requiring consistent clinician review to ensure accuracy.",
+      "_timestamp": "2026-04-06T00:19:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "In critical care, documentation directly informs ongoing treatment decisions; even small residual errors (e.g., incorrect interventions or outcomes) can lead to inappropriate care with serious patient harm.",
+      "adequacy_evidence": "AI-generated clinical documentation can still introduce subtle omissions or inaccuracies that may evade routine checks, leaving a non-trivial residual risk despite human review.",
+      "_timestamp": "2026-04-06T00:19:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Clinical documentation in critical care must be performed and authenticated by licensed nurses under state practice acts and hospital policies, which assign legal responsibility to the human clinician. While AI can assist (e.g., drafting notes), regulations require a licensed provider to review and sign, creating a partial restriction rather than a full prohibition.",
+      "_timestamp": "2026-04-06T00:19:30"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The documentation is used by other clinicians, auditors, and regulators who rely on its accuracy and on the accountable author, but it is primarily an internal clinical record rather than a direct interpersonal interaction.",
+      "adequacy_evidence": "AI-assisted documentation is increasingly acceptable, but full replacement of a nurse as the accountable author would face resistance due to legal liability, trust, and professional standards requiring human sign-off.",
+      "_timestamp": "2026-04-06T00:19:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

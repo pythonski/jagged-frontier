@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5011.00",
+  "task_id": 20271,
+  "task_statement": "Track delivery progress of shipments.",
+  "occupation_title": "Cargo and Freight Agents",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Tracking shipment progress is usually done through logistics software, carrier tracking systems, emails, or phone calls, which can be handled remotely. However, in some cases agents verify status directly at terminals or docks, requiring physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking shipment progress spans multiple carriers, transport modes, and exception scenarios (delays, customs, rerouting), but follows fairly standardized tracking workflows and status updates.",
+      "adequacy_evidence": "Extensive digital logs, tracking APIs, logistics datasets, and documented workflows provide rich, process-level data; synthetic simulation of shipment states is also straightforward, leaving little coverage gap.",
+      "_timestamp": "2026-04-06T01:14:34"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking shipments is largely driven by explicit status codes, tracking systems, and standard operating procedures, but some experience helps interpret ambiguous updates or anticipate delays from partial signals.",
+      "adequacy_evidence": "Well-integrated AI agents can reliably aggregate tracking data, interpret common status patterns, and flag exceptions, with minimal shortfall in the modest tacit judgment required.",
+      "_timestamp": "2026-04-06T01:14:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking shipment progress involves predefined milestones, statuses, and logistics data, but may require some context-sensitive interpretation of delays, exceptions, or client priorities.",
+      "adequacy_evidence": "With access to tracking systems and business rules, current agents can reliably infer goals and handle routine ambiguities such as delays or rerouting without significant human clarification.",
+      "_timestamp": "2026-04-06T01:14:36"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking shipment progress involves ongoing monitoring, updating statuses, and coordinating information across multiple steps over time, but each update cycle is relatively modular and not tightly interdependent.",
+      "adequacy_evidence": "AI agents with tool integration (APIs, tracking systems, alerts) can reliably maintain state and handle repeated monitoring cycles without significant degradation across steps.",
+      "_timestamp": "2026-04-06T01:14:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking shipment progress involves monitoring multiple shipments, status updates, locations, timestamps, and exceptions, requiring aggregation and retrieval of structured, evolving information within a session.",
+      "adequacy_evidence": "Current AI agents with tool integration (e.g., databases, APIs, dashboards) can reliably track and update this structured information without significant loss or drift within an episode.",
+      "_timestamp": "2026-04-06T01:14:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking shipment progress requires maintaining state (status, location, delays) across time until delivery, but typically within well-defined shipment records rather than rich evolving histories.",
+      "adequacy_evidence": "Current AI agents can reliably use external databases and tracking APIs to persist and retrieve shipment states across sessions, with minimal gaps in cross-session memory handling.",
+      "_timestamp": "2026-04-06T01:14:37"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Tracking shipment progress primarily relies on text-based status updates, tracking numbers, timestamps, and database queries; maps or visuals are optional aids rather than essential inputs.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based tracking data and integrate with logistics systems, with no meaningful shortfall in multimodal capabilities for this task.",
+      "_timestamp": "2026-04-06T01:14:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking shipment progress often requires timely updates (seconds to minutes) to reflect current status and respond to inquiries, but does not demand split-second decisions.",
+      "adequacy_evidence": "Current AI systems can retrieve, monitor, and report shipment status in real time using integrations with tracking systems without needing extended reasoning.",
+      "_timestamp": "2026-04-06T01:14:37"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Shipment status can be directly verified against authoritative carrier tracking systems, EDI feeds, and timestamps, making discrepancies easy to detect with routine checks.",
+      "adequacy_evidence": "AI systems can reliably pull and cross-check tracking data via APIs, and any errors are straightforward to spot against source systems, requiring minimal additional verification.",
+      "_timestamp": "2026-04-06T01:14:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in tracking shipment progress can lead to miscommunication, delays, or inefficient logistics coordination, but these are typically correctable and rarely catastrophic.",
+      "adequacy_evidence": "With automated tracking systems, cross-checks against carrier data, and real-time updates, residual AI errors can be detected and corrected, keeping risk within acceptable bounds.",
+      "_timestamp": "2026-04-06T01:14:38"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Tracking shipment progress often feeds information to customers, shippers, or internal teams who rely on timely updates, though the performer's identity is not central to trust.",
+      "adequacy_evidence": "Stakeholders are already accustomed to automated tracking systems and dashboards, so AI performing this task would be broadly accepted without resistance.",
+      "_timestamp": "2026-04-06T01:14:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from tracking shipment delivery progress. This task is operational and can be automated, though it must comply with general data protection and contractual obligations, which do not restrict AI use specifically.",
+      "_timestamp": "2026-04-06T01:14:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

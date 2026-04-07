@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9041.01",
+  "task_id": 9786,
+  "task_statement": "Calculate amount of claim.",
+  "occupation_title": "Insurance Claims and Policy Processing Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Calculating the amount of an insurance claim is typically performed using computer systems that apply policy rules to submitted claim data and documentation. The task involves data review and calculation, which can be completed entirely with standard digital tools."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Calculating claim amounts involves applying policy rules across varied claim types (e.g., medical, property, auto) with some edge cases, but the structure is generally well-defined and rule-based.",
+      "adequacy_evidence": "Extensive documentation, training materials, claims examples, and synthetic scenarios can capture the relevant processes, and step-by-step calculation procedures are well represented in accessible data.",
+      "_timestamp": "2026-04-05T20:47:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many claim calculations follow explicit policy rules and formulas, important details like coverage interpretation, exclusions, and context-specific adjustments require some judgment and reading between documents.",
+      "adequacy_evidence": "Current agents can apply structured rules and extract relevant policy terms, but they still struggle with nuanced interpretation of ambiguous clauses or edge cases, often requiring human clarification.",
+      "_timestamp": "2026-04-05T20:47:54"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While much of claim calculation follows explicit policy terms, fee schedules, and formulas, clerks often apply experience to interpret ambiguous coverage limits, exceptions, or documentation inconsistencies.",
+      "adequacy_evidence": "Given clear policy rules and documentation, current AI systems can reliably replicate these calculations and apply consistent interpretations in most cases, with minimal reliance on tacit human calibration.",
+      "_timestamp": "2026-04-05T20:47:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Calculating a claim amount requires integrating information from claim forms, policy terms, coverage limits, and possibly supporting documents, but the volume is typically bounded and structured.",
+      "adequacy_evidence": "Current AI agents with retrieval and tool use can reliably track and integrate these structured inputs within a single episode without significant context loss.",
+      "_timestamp": "2026-04-05T20:47:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating the amount of a claim is typically a self-contained task based on the current claim's documentation, policy terms, and submitted evidence rather than prior case history.",
+      "adequacy_evidence": "Since the task does not depend on cross-session context, existing AI systems do not face meaningful limitations in long-term memory for this function.",
+      "_timestamp": "2026-04-05T20:47:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Calculating a claim amount typically involves a multi-step process (reviewing policy terms, applying deductibles, limits, and adjustments), where each step builds on the previous one but the sequence is relatively bounded and procedural.",
+      "adequacy_evidence": "Well-scaffolded AI systems handle these structured, moderately long calculation sequences reliably, with minimal degradation in consistency across steps given clear rules and inputs.",
+      "_timestamp": "2026-04-05T20:47:56"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating claim amounts is typically a back-office clerical task with no strict real-time requirement; minutes per case are acceptable.",
+      "adequacy_evidence": "AI systems can perform the necessary calculations and rule applications well within available time, with no need to sacrifice reasoning quality for speed.",
+      "_timestamp": "2026-04-05T20:47:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Calculating claim amounts is primarily based on structured/textual policy and claim data, but often involves interpreting scanned documents, receipts, or images as supporting inputs.",
+      "adequacy_evidence": "Current agents handle OCR and basic document/image parsing reasonably well, but can be unreliable with complex layouts, poor-quality scans, or nuanced visual details affecting claim calculations.",
+      "_timestamp": "2026-04-05T20:47:57"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Claim calculations are based on structured rules (policy terms, deductibles, coverage limits) and can be checked via recomputation or audit, but require domain knowledge to ensure correct application of rules.",
+      "adequacy_evidence": "AI can perform calculations but may misinterpret policy nuances or edge cases, so human review or systematic checks are still needed to verify correctness.",
+      "_timestamp": "2026-04-05T20:47:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in claim calculations can lead to overpayments or underpayments, creating financial discrepancies and customer dissatisfaction, but they are typically detectable and correctable through audits or appeals.",
+      "adequacy_evidence": "With standard validation checks, rule-based verification, and human oversight, AI-generated calculations can be reliably corrected, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T20:47:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Calculating the amount of a claim is an internal, procedural task; stakeholders do not directly interact with the performer during this step, and the output is used within organizational workflows.",
+      "adequacy_evidence": "Because the task is backend and identity-independent, stakeholders are largely indifferent to whether a human or AI performs it, and AI is already widely accepted in similar calculation roles.",
+      "_timestamp": "2026-04-05T20:47:58"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Insurance claim valuation often falls under activities that, in many states, must be overseen or approved by a licensed claims adjuster, creating a requirement for human accountability. However, there is no explicit prohibition on AI performing the calculation itself, so restrictions are partial rather than absolute.",
+      "_timestamp": "2026-04-05T20:48:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

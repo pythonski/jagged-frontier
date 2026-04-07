@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9094.00",
+  "task_id": 9423,
+  "task_statement": "Set up and maintain medical files and databases, including records such as x-ray, lab, and procedure reports, medical histories, diagnostic workups, admission and discharge summaries, and clinical resumes.",
+  "occupation_title": "Medical Transcriptionists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Maintaining medical files and databases is typically done within electronic health record systems and can be performed remotely on a computer, but some instances may involve handling or organizing physical documents or records in healthcare facilities."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple medical record types (x-rays, labs, histories, summaries) and institutional formats, creating moderate heterogeneity but within standardized healthcare documentation practices.",
+      "adequacy_evidence": "While documentation standards and examples are widely available, much real-world data is protected by privacy laws (HIPAA), limiting direct access to representative distributions; however, de-identified data and synthetic generation partially mitigate this.",
+      "_timestamp": "2026-04-06T00:08:14"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on standardized documentation formats, established medical record conventions, and explicit procedures for organizing and maintaining files rather than experiential judgment.",
+      "adequacy_evidence": "Current AI systems can reliably follow structured rules, recognize document types, and organize records using codified schemas without needing experience-based calibration.",
+      "_timestamp": "2026-04-06T00:08:14"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows such as organizing, updating, and cross-referencing various medical records, but these steps are largely modular and not tightly interdependent over long sequences.",
+      "adequacy_evidence": "AI agents can generally manage structured record workflows with tools, but may show some degradation in consistency over extended updates or when maintaining alignment across multiple records and fields.",
+      "_timestamp": "2026-04-06T00:08:14"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many aspects follow standardized medical record formats and compliance rules, decisions about categorization, completeness, and handling atypical or inconsistent source documents require some contextual interpretation.",
+      "adequacy_evidence": "Current AI can generally infer structure and organize records correctly using standards, but it still struggles with ambiguous or incomplete inputs and may require human correction in edge cases.",
+      "_timestamp": "2026-04-06T00:08:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple heterogeneous medical documents (e.g., lab reports, histories, summaries) and organizing them into structured records, requiring active retrieval and consistent mapping of fields within an episode.",
+      "adequacy_evidence": "Well-scaffolded agents with database tools and document parsing can reliably track, extract, and organize this level of information within a session, with minimal loss or drift in context.",
+      "_timestamp": "2026-04-06T00:08:15"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Setting up and maintaining medical files and databases is an administrative task typically performed with minutes-to-hours timeframes rather than strict real-time demands.",
+      "adequacy_evidence": "Current AI systems can process, organize, and structure medical records well within acceptable time windows without needing to sacrifice reasoning quality.",
+      "_timestamp": "2026-04-06T00:08:15"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Maintaining medical files requires persistent, longitudinal records for each patient across many encounters, including histories, reports, and evolving clinical documentation.",
+      "adequacy_evidence": "Modern AI agents can rely on established database systems and EHR integrations to store and retrieve persistent records reliably across sessions, so cross-session memory is not a core limitation.",
+      "_timestamp": "2026-04-06T00:08:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves converting audio dictation into text and handling references to imaging outputs (e.g., x-rays), but core work centers on textual records and databases rather than direct image interpretation.",
+      "adequacy_evidence": "Current AI systems handle speech-to-text transcription and basic multimodal integration (e.g., linking reports to records) reliably, with minimal gaps for typical use cases.",
+      "_timestamp": "2026-04-06T00:08:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws prohibiting AI from setting up or maintaining medical records. Regulations like HIPAA impose strict privacy, security, and accountability requirements, but they allow automated systems (including AI) as long as compliance is maintained.",
+      "_timestamp": "2026-04-06T00:08:17"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in medical records (e.g., wrong lab values, diagnoses, or histories) can directly impact clinical decisions, billing, and legal documentation, so even rare residual mistakes can have serious consequences.",
+      "adequacy_evidence": "With standard quality control like human review and cross-checking, many AI transcription and structuring errors can be caught, but subtle clinical misinterpretations or omissions may still slip through at a non-negligible rate.",
+      "_timestamp": "2026-04-06T00:08:17"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily internal record management; clinicians and administrative staff use the outputs, but they do not rely on or interact with the performer as an identifiable agent.",
+      "adequacy_evidence": "Healthcare systems already widely use automated and AI-assisted record systems, and stakeholders are generally indifferent to whether records are maintained by humans or AI as long as accuracy and compliance are met.",
+      "_timestamp": "2026-04-06T00:08:17"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in medical records (e.g., medication names, dosages, diagnoses, or procedural details) can be subtle and require clinical knowledge and careful cross-checking against source materials to detect.",
+      "adequacy_evidence": "Current AI systems still produce transcription and structuring errors in complex medical contexts, and these errors are often not obvious without expert review, making thorough human verification necessary.",
+      "_timestamp": "2026-04-06T00:08:17"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

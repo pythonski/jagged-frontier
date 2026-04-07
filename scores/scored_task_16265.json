@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.01",
+  "task_id": 16265,
+  "task_statement": "Analyze clinical or survey data, using statistical approaches such as longitudinal analysis, mixed-effect modeling, logistic regression analyses, and model-building techniques.",
+  "occupation_title": "Biostatisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Analyzing clinical or survey datasets using statistical models is performed with statistical software on a computer. The task involves computational analysis and interpretation of digital data and does not require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Applying statistical models in biostatistics requires judgment in selecting appropriate methods, handling confounders, diagnosing model assumptions, and interpreting results in context, which goes beyond strict procedural rules.",
+      "adequacy_evidence": "Current AI agents can implement standard analyses and suggest models but often lack reliable calibration in nuanced decisions like causal inference framing, assumption violations, and context-sensitive interpretation.",
+      "_timestamp": "2026-04-06T05:12:31"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Biostatistical analysis spans highly heterogeneous clinical and survey contexts (different diseases, study designs, populations, missing data patterns, and modeling choices), requiring broad coverage of diverse real-world data-generating processes.",
+      "adequacy_evidence": "There is extensive public data, methodological literature, and worked examples for many standard models, but important portions (e.g., proprietary clinical trial data, rare conditions, complex real-world data idiosyncrasies) are only partially accessible and must be approximated via synthesis.",
+      "_timestamp": "2026-04-06T05:12:32"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step, tightly coupled workflows (data preprocessing, model selection, fitting, diagnostics, iteration), where early decisions affect all downstream results.",
+      "adequacy_evidence": "Well-scaffolded AI agents can execute multi-step analyses, but performance can degrade over long sequences with risk of missed assumptions, inconsistent choices, or error propagation across steps.",
+      "_timestamp": "2026-04-06T05:12:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical and survey analyses are usually guided by study protocols and predefined endpoints, but still require interpretation of modeling choices, covariate handling, and assumptions that depend on context and stakeholder goals.",
+      "adequacy_evidence": "Current agents can follow stated objectives and propose reasonable models, but often miss nuanced domain-specific intentions (e.g., regulatory expectations, causal vs. associative framing), requiring iterative human clarification.",
+      "_timestamp": "2026-04-06T05:12:32"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves structured numerical and textual data (e.g., datasets, model outputs) and statistical computation, which are fundamentally text/table-based rather than requiring rich multimodal inputs or outputs.",
+      "adequacy_evidence": "Current AI systems handle tabular data processing, statistical modeling, and even basic visualization generation effectively, with no meaningful multimodal limitations for this task.",
+      "_timestamp": "2026-04-06T05:12:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Biostatistical analyses such as longitudinal modeling or regression are typically conducted offline, with timelines ranging from hours to days; there is no requirement for immediate or real-time responses.",
+      "adequacy_evidence": "Frontier AI agents can take sufficient time to perform multi-step reasoning, model fitting, and validation without pressure, so latency does not meaningfully constrain output quality.",
+      "_timestamp": "2026-04-06T05:12:34"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves managing multiple variables, model specifications, assumptions, and intermediate outputs, but most large-scale data handling is offloaded to statistical software rather than held in active memory.",
+      "adequacy_evidence": "Agents can use tools to store and retrieve data and results, but they still show lapses in tracking transformations, model iterations, and assumptions across steps.",
+      "_timestamp": "2026-04-06T05:12:34"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Biostatistical analyses are often conducted over extended projects requiring recall of prior model specifications, data preprocessing decisions, and evolving research questions across sessions, but each analysis can often be reconstructed from saved artifacts.",
+      "adequacy_evidence": "Current agents can persist and retrieve project files, code, and notes via external storage and tooling, but may inconsistently track evolving context or implicit decisions without explicit documentation, leading to moderate gaps.",
+      "_timestamp": "2026-04-06T05:12:35"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing statistical analyses, but in regulated clinical research (e.g., FDA submissions), a qualified human biostatistician must take responsibility and sign off on analyses. This creates a partial constraint rather than a full ban on AI use.",
+      "_timestamp": "2026-04-06T05:12:35"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in statistical analysis of clinical or survey data can lead to incorrect conclusions about treatment efficacy or safety, potentially impacting patient outcomes, regulatory decisions, and scientific validity.",
+      "adequacy_evidence": "Even with standard quality checks, AI systems can introduce subtle modeling errors (e.g., mis-specified models, unrecognized confounding, data leakage) that are difficult to detect, leaving some meaningful residual risk.",
+      "_timestamp": "2026-04-06T05:12:35"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Statistical analyses in clinical/survey contexts involve nuanced choices (model specification, assumptions, covariate handling, diagnostics) where errors can be subtle and not immediately observable, requiring expert review and reanalysis to detect.",
+      "adequacy_evidence": "Current AI systems frequently make mistakes in data preprocessing, model selection, assumption checking, and interpretation, so thorough human validation, code review, and reproducibility checks are necessary before results can be trusted.",
+      "_timestamp": "2026-04-06T05:12:36"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The analyses are consumed by clinicians, researchers, and regulators who rely on the results for decisions, and credibility of the analyst can matter, though interaction is indirect.",
+      "adequacy_evidence": "While AI-assisted analysis is increasingly accepted, stakeholders (especially in clinical research and regulatory contexts) still expect human oversight and may be cautious about fully autonomous AI-generated statistical conclusions.",
+      "_timestamp": "2026-04-06T05:12:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

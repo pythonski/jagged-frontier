@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4021.00",
+  "task_id": 20982,
+  "task_statement": "Place orders for laboratory equipment and supplies.",
+  "occupation_title": "Biological Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Placing orders for lab equipment and supplies is usually done through online procurement systems, email, or vendor websites, which can be performed remotely. However, it may sometimes involve coordinating with on-site inventory, approvals, or physical paperwork within the lab or institution."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different vendors, equipment types, institutional procurement rules, and occasional edge cases (e.g., specialized reagents), but follows fairly standardized ordering and documentation patterns.",
+      "adequacy_evidence": "Extensive training data exists in the form of procurement records, catalogs, SOPs, and communication examples, and synthetic workflows can readily cover variations, providing strong process-level signal.",
+      "_timestamp": "2026-04-06T01:34:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ordering lab equipment requires interpreting experiment needs, compatibility with existing setups, budget constraints, and institutional preferences, which are not always fully specified in a request.",
+      "adequacy_evidence": "Current agents can infer many requirements from context and documentation, but often miss tacit preferences (e.g., brand reliability, subtle compatibility issues), requiring human clarification.",
+      "_timestamp": "2026-04-06T01:34:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple details such as item specifications, quantities, vendor options, catalog numbers, and budget constraints, requiring moderate information organization within a single ordering episode.",
+      "adequacy_evidence": "Current AI agents can reliably manage structured lists, retrieve relevant details, and maintain coherence across these inputs using tools and memory scaffolding, with minimal loss or drift.",
+      "_timestamp": "2026-04-06T01:34:08"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Placing orders involves a multi-step workflow (checking inventory, selecting vendors, specifying items, approvals, and submission), where consistency matters but steps are not tightly interdependent over long horizons.",
+      "adequacy_evidence": "Current AI agents with workflow tooling can reliably handle procurement-style sequences without significant degradation, as the steps are structured, bounded, and supported by external systems.",
+      "_timestamp": "2026-04-06T01:34:09"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Selecting appropriate laboratory supplies can involve some experience-based judgment (e.g., choosing reliable vendors, compatible consumables, or suitable substitutes), but much of the task follows explicit specifications, catalogs, and protocols.",
+      "adequacy_evidence": "Current AI agents can leverage detailed product databases, prior purchasing records, and specifications to replicate most of this judgment reliably, with only minor gaps in highly context-specific preferences.",
+      "_timestamp": "2026-04-06T01:34:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Placing orders for laboratory equipment and supplies is typically an administrative task with flexible timelines, often allowing minutes to hours for completion without impacting outcomes.",
+      "adequacy_evidence": "Current AI systems can generate accurate purchase orders or vendor selections well within these loose time constraints, so speed does not meaningfully limit quality.",
+      "_timestamp": "2026-04-06T01:34:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Placing orders for laboratory equipment and supplies is primarily a text-based task involving item specifications, catalogs, SKUs, and procurement systems; visual or other non-text inputs are not essential.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based ordering workflows, including interpreting specifications and generating purchase orders, with no meaningful multimodal limitations.",
+      "_timestamp": "2026-04-06T01:34:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering lab supplies often benefits from recalling prior orders, vendor preferences, inventory patterns, and budget constraints, but this context is typically structured and stored in external systems rather than requiring rich longitudinal reasoning.",
+      "adequacy_evidence": "Current AI agents can reliably integrate with inventory databases, procurement systems, and logs to retrieve and use cross-session information, so memory infrastructure is sufficient for this level of persistence.",
+      "_timestamp": "2026-04-06T01:34:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from placing orders for laboratory equipment and supplies. While internal procurement policies may require human authorization or signatures, these are organizational controls rather than legal restrictions on AI use.",
+      "_timestamp": "2026-04-06T01:34:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering the wrong supplies can cause delays, added costs, or temporary disruption of experiments, but issues are typically correctable and rarely irreversible or dangerous after standard checks.",
+      "adequacy_evidence": "With structured catalogs, approval workflows, and confirmation steps, current AI systems can reduce residual errors to an acceptable level for this task.",
+      "_timestamp": "2026-04-06T01:34:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Order accuracy can be checked against catalogs, prior orders, and experimental needs, but requires attention to details like specifications, compatibility, and quantities that are not always trivial.",
+      "adequacy_evidence": "AI can draft orders but may select incorrect SKUs or overlook context-specific requirements, so human review of item specifications and order details remains necessary.",
+      "_timestamp": "2026-04-06T01:34:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with vendors or internal procurement systems, so there are stakeholders receiving and processing the order, but the individual\u2019s identity is not central to success.",
+      "adequacy_evidence": "Ordering is already commonly automated via procurement software and e-commerce systems, and vendors are generally indifferent to whether orders are placed by humans or AI agents.",
+      "_timestamp": "2026-04-06T01:34:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

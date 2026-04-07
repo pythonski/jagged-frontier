@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.01",
+  "task_id": 16252,
+  "task_statement": "Prepare tables and graphs to present clinical data or results.",
+  "occupation_title": "Biostatisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Preparing tables and graphs for clinical data is done using statistical or visualization software on a computer, and does not require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Choosing appropriate summaries, handling edge cases (e.g., censored data, subgroup stratification), and presenting results in clinically meaningful ways often relies on experience beyond explicit rules.",
+      "adequacy_evidence": "Current agents can follow standard statistical and visualization conventions but may misjudge context-specific presentation choices or subtle clinical interpretation norms in non-routine cases.",
+      "_timestamp": "2026-04-05T21:53:22"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different study designs, endpoints, and reporting standards (e.g., clinical trials, observational studies, regulatory formats), creating moderate variation in how tables and graphs are constructed.",
+      "adequacy_evidence": "There is extensive accessible data including published studies, statistical textbooks, code repositories, and reporting guidelines (e.g., CONSORT, CDISC) that provide detailed, process-level examples for generating such outputs.",
+      "_timestamp": "2026-04-05T21:53:22"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective tables and graphs depend on implicit factors such as study design, audience (e.g., regulatory vs. academic), clinical endpoints, and conventions like CONSORT or CDISC, which are not fully specified in the task statement.",
+      "adequacy_evidence": "Current agents can generate reasonable visualizations given context but often miss domain-specific presentation norms or stakeholder expectations, requiring human guidance and iteration to align with true objectives.",
+      "_timestamp": "2026-04-05T21:53:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Preparing tables and graphs involves a multi-step workflow (data selection, transformation, statistical summarization, visualization, formatting), where consistency across steps matters but sequences are typically bounded and modular.",
+      "adequacy_evidence": "With code execution and iterative tooling, AI agents can reliably maintain coherence across these moderate-length workflows, with minimal degradation or error compounding in typical use.",
+      "_timestamp": "2026-04-05T21:53:23"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking multiple variables, dataset structures, transformations, and labeling conventions, but this information is typically well-structured and handled through tools rather than raw recall.",
+      "adequacy_evidence": "With code execution and data tools, current agents reliably manage datasets and intermediate states without losing critical context, minimizing working memory strain.",
+      "_timestamp": "2026-04-05T21:53:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Preparing tables and graphs often benefits from continuity with prior analyses (e.g., consistent formatting, study-specific conventions, or prior outputs), but each instance is largely driven by provided datasets and protocols.",
+      "adequacy_evidence": "Current agents can store and retrieve project files and prior outputs, but may inconsistently surface relevant historical context or formatting preferences without explicit prompting.",
+      "_timestamp": "2026-04-05T21:53:23"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing tables and graphs for clinical data is typically an offline analytical task with turnaround times ranging from minutes to hours or longer, not requiring real-time responsiveness.",
+      "adequacy_evidence": "Current AI systems can generate high-quality tables and visualizations well within these relaxed time constraints without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-05T21:53:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires generating visual outputs (tables and statistical graphs) to communicate clinical data, though inputs are typically structured/tabular rather than perceptual modalities.",
+      "adequacy_evidence": "Current AI agents with code execution and plotting libraries can reliably produce high-quality tables and standard clinical graphs, including customization for publication, with minimal modality-related limitations.",
+      "_timestamp": "2026-04-05T21:53:24"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Tables and graphs summarizing clinical data directly inform scientific conclusions, regulatory submissions, and medical decisions; even small residual errors can mislead interpretation and have significant downstream consequences.",
+      "adequacy_evidence": "While AI can generate accurate visualizations, it can still introduce subtle labeling, transformation, or aggregation errors that may evade routine checks, leaving some non-trivial residual risk even after quality control.",
+      "_timestamp": "2026-04-05T21:53:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces tables and graphs consumed by researchers, clinicians, or regulators who rely on the output, but the producer\u2019s identity is usually secondary to clarity and accuracy.",
+      "adequacy_evidence": "Stakeholders already accept software-generated visualizations, and AI-assisted figure preparation would generally be acceptable if outputs meet standards and can be reviewed.",
+      "_timestamp": "2026-04-05T21:53:26"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI generating tables and graphs, but in regulated clinical contexts (e.g., FDA submissions under GxP and 21 CFR Part 11), outputs must come from validated systems and are subject to human oversight and sign-off, creating partial constraints on autonomous AI use.",
+      "_timestamp": "2026-04-05T21:53:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying clinical tables and graphs requires checking data transformations, cohort definitions, statistical summaries, and labeling; errors can be subtle but are typically detectable with careful review and access to source data.",
+      "adequacy_evidence": "AI-generated outputs often include mistakes in data handling, statistical calculations, or labeling, so meaningful human review and cross-checking against source data are still necessary.",
+      "_timestamp": "2026-04-05T21:53:26"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

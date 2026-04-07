@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1022.00",
+  "task_id": 20712,
+  "task_statement": "Examine, select, order, or purchase merchandise consistent with quality, quantity, specification requirements, or other factors, such as environmental soundness.",
+  "occupation_title": "Wholesale and Retail Buyers, Except Farm Products",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Buyers often analyze specifications, compare suppliers, negotiate, and place orders using digital systems and online catalogs. However, examining merchandise quality frequently involves reviewing physical samples or attending showrooms/trade shows, which requires physical interaction."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting merchandise involves nuanced judgment about product quality, supplier reliability, market trends, and customer preferences, which are often learned through experience and not fully captured in explicit rules.",
+      "adequacy_evidence": "AI agents can analyze historical data and specifications effectively, but still lack robust calibration for shifting consumer tastes, informal supplier signals, and context-specific tradeoffs that experienced buyers routinely apply.",
+      "_timestamp": "2026-04-06T02:29:46"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous product categories, supplier contexts, pricing regimes, and specification constraints, often varying by industry, seasonality, and organizational strategy.",
+      "adequacy_evidence": "While there is substantial coverage in catalogs, procurement data, and documented purchasing practices, key signals like negotiated terms, internal decision rationales, and supplier-specific nuances are often private or weakly represented, though partially recoverable via synthesis and tooling.",
+      "_timestamp": "2026-04-06T02:29:46"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows\u2014evaluating specifications, comparing options, selecting vendors, and executing orders\u2014where consistency across steps matters but sequences are not extremely long or tightly coupled.",
+      "adequacy_evidence": "Current AI agents can manage these procurement workflows with tooling, but may exhibit some drift in maintaining constraints (e.g., specs or preferences) across steps, especially in longer or more complex purchasing processes.",
+      "_timestamp": "2026-04-06T02:29:47"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting merchandise requires interpreting implicit criteria like brand fit, customer preferences, market trends, and evolving priorities (e.g., sustainability), which are rarely fully specified and shift with context.",
+      "adequacy_evidence": "Current agents can use data and heuristics to approximate preferences, but often miss nuanced, tacit factors (e.g., brand identity or emerging trends), requiring human guidance to refine selections.",
+      "_timestamp": "2026-04-06T02:29:47"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple product specifications, vendor options, pricing, quantities, and constraints (e.g., quality or environmental standards), but these are typically structured and manageable with standard tools.",
+      "adequacy_evidence": "Current agents can organize and retrieve this information using tools and external memory, but may still lose nuance across many options or misprioritize constraints when compressing large comparison sets.",
+      "_timestamp": "2026-04-06T02:29:47"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Buyers rely on past purchase records, supplier performance, pricing trends, and evolving product preferences, but many decisions can still be made with current market data and specifications.",
+      "adequacy_evidence": "Current AI systems can integrate with databases and CRMs to retain and retrieve this information, but they still show gaps in consistently surfacing the most relevant historical context and adapting to nuanced preference evolution.",
+      "_timestamp": "2026-04-06T02:29:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Buyers often rely on product images, samples, packaging visuals, and occasionally in-person inspection to assess quality, design, and compliance with specifications, though many decisions are still guided by textual specs and supplier data.",
+      "adequacy_evidence": "Current AI can interpret product images and specs reasonably well but struggles with fine-grained quality judgments, tactile attributes, and nuanced visual distinctions that experienced buyers use in complex cases.",
+      "_timestamp": "2026-04-06T02:29:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Merchandise selection and purchasing decisions are typically planned activities with hours to days available for analysis, comparison, and approval rather than requiring immediate responses.",
+      "adequacy_evidence": "AI systems can easily operate within these relaxed timeframes, allowing full use of extended reasoning and tool use without any meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T02:29:49"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from selecting, ordering, or purchasing merchandise in wholesale or retail contexts; organizations are free to automate procurement processes, subject only to general commercial and contract law.",
+      "_timestamp": "2026-04-06T02:29:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether merchandise selections meet quality, specification, sustainability, and market-fit criteria often requires domain expertise, supplier evaluation, and may only be fully validated after procurement and downstream outcomes.",
+      "adequacy_evidence": "Current AI can suggest options but frequently misses nuanced constraints (e.g., supplier reliability, shifting demand, hidden quality issues), so human experts must thoroughly review and validate recommendations, making verification effort substantial.",
+      "_timestamp": "2026-04-06T02:29:50"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with suppliers and internal stakeholders (e.g., merchandising teams), where communication and trust matter but are not heavily dependent on personal identity.",
+      "adequacy_evidence": "Procurement and purchasing are already partially automated (e.g., EDI systems, algorithmic ordering), and most stakeholders are likely to accept AI-driven agents as long as transactions are accurate and reliable.",
+      "_timestamp": "2026-04-06T02:29:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in purchasing decisions can lead to financial losses, excess or insufficient inventory, or reputational impacts, but these are typically reversible or mitigable through returns, renegotiation, or inventory adjustments.",
+      "adequacy_evidence": "Even with standard checks like approvals and supplier validation, AI may still miss nuanced factors (e.g., supplier reliability or subtle spec mismatches), leaving some residual risk that remains meaningful but generally manageable.",
+      "_timestamp": "2026-04-06T02:29:51"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

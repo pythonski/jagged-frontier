@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "23-2093.00",
+  "task_id": 9232,
+  "task_statement": "Read search requests to ascertain types of title evidence required and to obtain descriptions of properties and names of involved parties.",
+  "occupation_title": "Title Examiners, Abstractors, and Searchers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Search requests are typically received and read through digital systems such as email, title software, or online order platforms, but in some offices they may still arrive as physical documents or paper forms that must be read in person."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Search requests vary across jurisdictions, document formats, and property types, requiring exposure to moderately diverse legal and clerical language patterns.",
+      "adequacy_evidence": "Large corpora of title documents, legal forms, and annotated examples are widely available, and synthetic augmentation can cover remaining variation, providing sufficient process-level signal.",
+      "_timestamp": "2026-04-06T03:17:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Search requests often contain legal shorthand, varying formats, and implicit expectations about what title evidence is needed, requiring interpretation of context and domain conventions.",
+      "adequacy_evidence": "Current agents can extract entities and infer intent in many cases, but they still miss subtle legal nuances or implicit requirements, often needing human clarification or correction.",
+      "_timestamp": "2026-04-06T03:17:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves reading and extracting specific information from individual search requests, which is typically a short, bounded activity without extended multi-step dependencies.",
+      "adequacy_evidence": "AI systems can reliably handle this level of short text parsing without sequence-related degradation, as the task does not require sustained multi-step coherence.",
+      "_timestamp": "2026-04-06T03:17:54"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interpreting varied request language and mapping it to appropriate title evidence types, which can require some domain familiarity and judgment in ambiguous or non-standard phrasing.",
+      "adequacy_evidence": "Frontier LLM-based agents with retrieval and domain prompts can reliably interpret request language and extract relevant entities, handling most contextual variations without needing human-like experiential calibration.",
+      "_timestamp": "2026-04-06T03:17:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves extracting and organizing multiple fields (e.g., property descriptions, party names, evidence types) from search requests, requiring moderate within-episode tracking of structured details.",
+      "adequacy_evidence": "Current AI agents reliably handle document parsing and structured information extraction within a single context window, with minimal loss or mismanagement of relevant details.",
+      "_timestamp": "2026-04-06T03:17:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each search request typically contains all necessary details (property description, parties, evidence type) and is processed independently without reliance on prior cases.",
+      "adequacy_evidence": "Current agents can fully handle stateless interpretation of individual requests; no persistent cross-session memory is needed for competent performance.",
+      "_timestamp": "2026-04-06T03:17:56"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Interpreting search requests in title work is typically part of a document-processing workflow where minutes of latency are acceptable; there is no real-time interaction requirement.",
+      "adequacy_evidence": "Current agents can parse and interpret such requests quickly and accurately well within available time, with no meaningful quality loss due to speed constraints.",
+      "_timestamp": "2026-04-06T03:17:56"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Outputs can be checked against the original search request and supporting documents, but doing so requires domain familiarity with title terminology and careful comparison to avoid subtle omissions or misinterpretations.",
+      "adequacy_evidence": "Current AI can extract and classify much of this information, but still makes occasional errors in legal descriptions or party identification, necessitating routine human verification.",
+      "_timestamp": "2026-04-06T03:17:57"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task centers on reading and interpreting written search requests to extract textual information such as property descriptions and party names, which are fundamentally text-based inputs and outputs.",
+      "adequacy_evidence": "Current AI systems handle text ingestion and extraction tasks reliably, with no meaningful reliance on non-text modalities in typical instances of this task.",
+      "_timestamp": "2026-04-06T03:17:57"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal document interpretation activity; stakeholders do not directly engage with the performer, only with the resulting processed information.",
+      "adequacy_evidence": "Since the work is backend and identity-agnostic, stakeholders are unlikely to notice or care whether an AI performs it, making acceptance effectively a non-issue.",
+      "_timestamp": "2026-04-06T03:17:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misinterpreting search requests or extracting incorrect property or party details can lead to incomplete title searches, missed encumbrances, and significant legal or financial consequences in real estate transactions.",
+      "adequacy_evidence": "While outputs can be cross-checked against source documents, AI systems still show occasional misinterpretation of legal phrasing or entity details, leaving some residual risk even after standard review.",
+      "_timestamp": "2026-04-06T03:17:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from reading search requests or extracting property and party information. While some states regulate who may issue title opinions, this specific task (document review and information extraction) is not restricted to licensed humans.",
+      "_timestamp": "2026-04-06T03:17:59"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

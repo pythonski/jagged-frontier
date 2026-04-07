@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1123.00",
+  "task_id": 382,
+  "task_statement": "Refer clients to community resources or services.",
+  "occupation_title": "Physical Therapists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Referrals are commonly made through electronic health records, emails, phone calls, or online resource searches, which can be done on a computer. However, some instances involve providing printed materials or discussing referrals during in-person clinical visits."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Matching patients to appropriate community resources requires some experiential judgment about individual needs, preferences, social context, and reliability of services beyond explicit criteria.",
+      "adequacy_evidence": "Agents can map stated needs to known resources, but often lack nuanced calibration about service quality, patient fit, and informal local knowledge that clinicians develop through experience.",
+      "_timestamp": "2026-04-06T05:47:30"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Referrals depend on highly variable factors including patient condition, insurance, socioeconomic context, and hyperlocal availability of community resources, creating a broad and context-sensitive distribution.",
+      "adequacy_evidence": "While general referral patterns and resource directories are documented and can be aggregated, up-to-date, hyperlocal, and eligibility-specific information is often fragmented or private, leaving some coverage gaps that are only partially addressable with current pipelines.",
+      "_timestamp": "2026-04-06T05:47:31"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Identifying appropriate community resources depends on patient-specific factors (functional status, social support, insurance, preferences) and local availability, which are not fully explicit in the task description.",
+      "adequacy_evidence": "Current agents can infer likely needs and suggest resources, but often miss nuanced contextual factors (e.g., patient motivation, cultural fit, real-time availability), requiring clinician refinement.",
+      "_timestamp": "2026-04-06T05:47:31"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short multi-step process (assessing client needs, identifying appropriate resources, matching and communicating referrals), but steps are loosely coupled and not highly interdependent over long sequences.",
+      "adequacy_evidence": "Frontier AI agents can reliably handle these short, structured workflows with minimal drift or compounding error, especially when supported by retrieval tools and checklists.",
+      "_timestamp": "2026-04-06T05:47:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Referring clients to community resources primarily involves gathering and communicating information about services, which is largely text-based and does not depend on interpreting or generating non-text modalities.",
+      "adequacy_evidence": "Current AI systems can effectively handle text-based information retrieval and recommendation tasks, so there is no meaningful multimodal capability gap for this task.",
+      "_timestamp": "2026-04-06T05:47:32"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating client-specific details (condition, location, insurance, preferences) with available community resources, but the information volume is moderate and typically structured or checklist-driven.",
+      "adequacy_evidence": "Current AI agents with retrieval tools can reliably track and match these constraints within a single episode, with minimal risk of losing or mismanaging relevant information.",
+      "_timestamp": "2026-04-06T05:47:32"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Referring clients to community resources is typically done during or after a session and can tolerate minutes of lookup and consideration; it is not a time-critical, real-time task.",
+      "adequacy_evidence": "Current AI agents can identify and suggest relevant resources well within acceptable timeframes, with no meaningful degradation in quality due to latency constraints.",
+      "_timestamp": "2026-04-06T05:47:32"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Referrals often benefit from knowledge of the client\u2019s prior treatment progress, past referrals, insurance constraints, and evolving functional needs across sessions, but each referral can still be made with mostly current-session information.",
+      "adequacy_evidence": "Current agents can store and retrieve client histories via EHR integrations or memory systems, but they may inconsistently surface the most relevant prior context or maintain up-to-date longitudinal state without careful system design.",
+      "_timestamp": "2026-04-06T05:47:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying referrals requires checking service relevance, eligibility criteria, and current availability, which often involves professional judgment and possibly contacting providers; errors are not always immediately obvious.",
+      "adequacy_evidence": "AI can generate plausible referrals but may include outdated, inappropriate, or mismatched resources, so clinicians must routinely review and validate suggestions, though the checking burden is manageable.",
+      "_timestamp": "2026-04-06T05:47:33"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect referrals can delay care or reduce support effectiveness, but typically do not cause severe or irreversible harm and can often be corrected downstream.",
+      "adequacy_evidence": "Available directories and human review make referrals easy to verify, and AI-generated suggestions can be checked with low residual risk remaining.",
+      "_timestamp": "2026-04-06T05:47:34"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clients must trust and act on referrals to external services, so they engage with the provider\u2019s recommendation and may consider the provider\u2019s credibility and understanding of their needs.",
+      "adequacy_evidence": "Many clients would accept AI-generated referrals if accurate, but some would question relevance, personalization, or empathy, leading to moderate resistance compared to human-guided recommendations.",
+      "_timestamp": "2026-04-06T05:47:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Physical therapy practice is licensed and patient guidance is typically expected to be overseen by a licensed clinician, creating ambiguity about fully autonomous AI referrals. However, there is no explicit law prohibiting AI from suggesting or facilitating referrals to community resources, especially as an assistive tool.",
+      "_timestamp": "2026-04-06T05:47:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

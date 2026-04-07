@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-6011.00",
+  "task_id": 2779,
+  "task_statement": "Make travel arrangements for executives.",
+  "occupation_title": "Executive Secretaries and Executive Administrative Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Most travel arrangements are made using online booking systems, email, and phone to reserve flights, hotels, and transportation. However, some cases may involve handling physical documents such as passports, visas, or printed materials, requiring in-person or physical coordination."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Arranging executive travel involves nuanced judgment about preferences, priorities, and tradeoffs (e.g., convenience vs. cost, risk tolerance, status considerations) that are often learned through experience rather than fully specified rules.",
+      "adequacy_evidence": "Current agents can capture many preferences and apply past patterns, but they still struggle with subtle, context-dependent judgment (e.g., anticipating unstated preferences or handling ambiguous edge cases) without human calibration.",
+      "_timestamp": "2026-04-06T05:54:24"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse but structured scenarios (flights, hotels, visas, preferences, disruptions), with variability across executives, destinations, and constraints but within well-understood domains.",
+      "adequacy_evidence": "There is abundant data on booking workflows and policies, but some coverage gaps remain around private executive preferences, rare disruptions, and nuanced corporate norms, which are only partially recoverable via synthesis or fine-tuning.",
+      "_timestamp": "2026-04-06T05:54:25"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Arranging executive travel involves multi-step coordination (itineraries, preferences, bookings, confirmations, contingencies) where earlier choices constrain later ones, but the sequences are not extremely long or deeply interdependent.",
+      "adequacy_evidence": "Current AI agents can execute multi-step booking workflows with tools, but they sometimes lose constraints or make inconsistent decisions across steps, especially when plans change or involve multiple dependencies.",
+      "_timestamp": "2026-04-06T05:54:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Making travel arrangements primarily involves text-based information such as itineraries, schedules, pricing, and preferences, typically handled through booking systems and written communication.",
+      "adequacy_evidence": "Current AI agents can fully manage text-based travel planning workflows, and any minor visual elements (e.g., seat maps) are not essential to core task performance.",
+      "_timestamp": "2026-04-06T05:54:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Making executive travel arrangements typically allows minutes to hours for research, booking, and coordination rather than requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI agents can perform itinerary search, comparison, and booking within acceptable timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T05:54:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves coordinating multiple pieces of information (schedules, preferences, budgets, itineraries, booking options) that must be tracked and updated within a single workflow.",
+      "adequacy_evidence": "Current agents can manage structured travel planning with tools, but may lose or misprioritize constraints (e.g., preferences, timing changes) during multi-step coordination.",
+      "_timestamp": "2026-04-06T05:54:27"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Executive travel planning involves implicit preferences (airlines, seating, loyalty programs, risk tolerance, scheduling buffers) and shifting constraints that are often not fully specified upfront.",
+      "adequacy_evidence": "Current agents can gather preferences and iterate, but often miss latent priorities or edge constraints without back-and-forth, requiring human correction to converge on acceptable itineraries.",
+      "_timestamp": "2026-04-06T05:54:28"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective travel planning relies on accumulated knowledge of executives\u2019 preferences (airlines, seating, loyalty programs, schedules) and prior itineraries, but this information is typically structured and not deeply complex over time.",
+      "adequacy_evidence": "Current agents can store and retrieve user preferences via CRM-like memory systems, but they still show inconsistencies in recalling nuanced or evolving preferences across sessions.",
+      "_timestamp": "2026-04-06T05:54:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI systems from making travel arrangements. While standard consumer protection, data privacy, and payment authorization rules apply, they do not restrict AI from performing this task.",
+      "_timestamp": "2026-04-06T05:54:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in travel arrangements (e.g., incorrect dates, bookings, or connections) can cause disruptions and costs but are usually recoverable and rarely catastrophic after standard confirmations and reviews.",
+      "adequacy_evidence": "With existing safeguards like itinerary reviews, confirmation emails, and system checks, AI-generated arrangements can be validated effectively, leaving minimal residual risk.",
+      "_timestamp": "2026-04-06T05:54:30"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with external vendors (airlines, hotels) and internal executives who rely on the arrangements, but success depends more on accuracy and coordination than on the assistant\u2019s personal identity.",
+      "adequacy_evidence": "Travel booking is already widely automated via online systems and agents; stakeholders generally accept AI-mediated arrangements as long as details are correct, with little concern about whether a human or AI performed the task.",
+      "_timestamp": "2026-04-06T05:54:31"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Travel arrangements can be verified by checking dates, times, locations, and confirmations against known constraints, but this requires careful review of multiple details and preferences to catch mismatches or infeasible itineraries.",
+      "adequacy_evidence": "Current AI agents can assemble plausible itineraries but still make non-trivial errors (e.g., timing conflicts, incorrect assumptions, outdated availability), so consistent human verification is needed though not excessively difficult.",
+      "_timestamp": "2026-04-06T05:54:31"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1081.02",
+  "task_id": 20010,
+  "task_statement": "Reorganize shipping schedules to consolidate loads, maximize vehicle usage, or limit the movement of empty vehicles or containers.",
+  "occupation_title": "Logistics Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Reorganizing shipping schedules is typically performed using transportation management systems, spreadsheets, and digital communication with carriers or dispatchers. The analysis and schedule adjustments can be completed entirely on a computer without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous logistics networks with varying constraints (fleet types, demand variability, routing rules, regional regulations, and real-time disruptions), creating a long-tailed distribution of scenarios.",
+      "adequacy_evidence": "There is extensive public and synthetic data (vehicle routing problems, supply chain benchmarks, simulation environments) that capture core patterns, but firm-specific constraints and real-world edge cases are often proprietary and only partially reproducible.",
+      "_timestamp": "2026-04-06T02:36:08"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of load consolidation and routing can be formalized via optimization models, effective scheduling still relies on experience with carrier reliability, customer priorities, and practical trade-offs not fully captured in explicit rules.",
+      "adequacy_evidence": "Current agents can optimize structured logistics data well, but they lack consistent calibration for nuanced, context-specific judgments (e.g., informal carrier performance or evolving operational constraints), leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T02:36:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reorganizing shipping schedules involves multiple interdependent adjustments (routes, timing, load consolidation), but these can often be handled in structured optimization cycles rather than long, fragile action chains.",
+      "adequacy_evidence": "AI agents with optimization tools can manage multi-step planning reasonably well, but may show some degradation through constraint drift or suboptimal updates across iterations, especially in complex, dynamic scenarios.",
+      "_timestamp": "2026-04-06T02:36:09"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves balancing multiple partially competing objectives (load consolidation, utilization, empty miles) under contextual constraints like delivery windows, service levels, and cost priorities that are not always fully specified upfront.",
+      "adequacy_evidence": "Current agents can optimize well when constraints and objectives are clearly formalized, but often miss implicit business priorities or soft constraints, requiring human iteration to refine the specification.",
+      "_timestamp": "2026-04-06T02:36:09"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking many concurrent shipments, routes, capacities, timing constraints, and consolidation options, where missing or misaligning details can lead to inefficient or infeasible schedules.",
+      "adequacy_evidence": "Agents can offload much of this to structured tools (databases, optimization solvers), but still show moderate weaknesses in reliably maintaining and updating complex state across iterative adjustments.",
+      "_timestamp": "2026-04-06T02:36:10"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reorganizing shipping schedules primarily relies on structured data (orders, routes, capacities, timing) that can be represented and processed in text or tabular form; visual maps or diagrams are helpful but not essential.",
+      "adequacy_evidence": "Current AI agents handle text and structured logistics data well, and any optional visualizations (e.g., route maps) are not critical to core task performance.",
+      "_timestamp": "2026-04-06T02:36:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reorganizing shipping schedules benefits from accumulated context like prior shipment patterns, carrier performance, and standing constraints, but this information is typically stored in external logistics systems rather than requiring intrinsic agent memory.",
+      "adequacy_evidence": "Current AI agents can reliably access and integrate cross-session data via databases and enterprise systems, so persistent memory limitations are not a significant bottleneck for this task.",
+      "_timestamp": "2026-04-06T02:36:10"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reorganizing shipping schedules is often time-sensitive, especially in dynamic logistics environments, but typically allows seconds to minutes rather than requiring split-second responses.",
+      "adequacy_evidence": "Current AI agents with optimization tools can generate high-quality scheduling adjustments within these time windows without needing to significantly truncate reasoning.",
+      "_timestamp": "2026-04-06T02:36:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from performing logistics scheduling or optimization tasks. While transportation operations are regulated, the planning and scheduling function itself is not restricted to licensed human decision-makers.",
+      "_timestamp": "2026-04-06T02:36:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in shipping schedule optimization mainly lead to higher costs, delays, or underutilized capacity, which are operationally significant but typically reversible and not safety-critical.",
+      "adequacy_evidence": "AI-generated schedules can be validated through simulation, historical comparison, and KPI checks (e.g., utilization, transit times), and remaining errors are unlikely to produce unacceptable residual risk.",
+      "_timestamp": "2026-04-06T02:36:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task affects carriers, warehouse staff, and clients who must operate according to revised schedules, but it primarily involves internal operational planning where personal identity of the planner is not central.",
+      "adequacy_evidence": "Logistics optimization software is already widely accepted, and stakeholders generally care about efficiency and reliability rather than whether a human or AI produced the schedule.",
+      "_timestamp": "2026-04-06T02:36:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Feasibility constraints (capacity, routing, timing) can often be programmatically checked, but assessing consolidation quality, cost tradeoffs, and downstream service impacts requires domain expertise and scenario analysis.",
+      "adequacy_evidence": "AI can generate plausible schedules but may violate subtle constraints or miss better consolidations, so outputs require systematic validation with optimization tools and expert review, though not prohibitively difficult.",
+      "_timestamp": "2026-04-06T02:36:13"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

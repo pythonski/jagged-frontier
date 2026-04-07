@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3031.00",
+  "task_id": 23193,
+  "task_statement": "Monitor markets or positions.",
+  "occupation_title": "Securities, Commodities, and Financial Services Sales Agents",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Monitoring financial markets or client/trading positions is typically done through online trading platforms, market data feeds, analytics software, and news services, all accessible via computer and internet without physical presence."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring markets or positions involves ongoing observation over time, but individual checks and updates are loosely coupled rather than forming a tightly interdependent multi-step sequence.",
+      "adequacy_evidence": "AI systems can continuously track data streams and trigger alerts without meaningful degradation over time, as each monitoring step is relatively independent and does not rely on long sequential reasoning chains.",
+      "_timestamp": "2026-04-06T11:19:56"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring markets or positions requires interpreting implicit objectives such as risk tolerance, client strategy, and which signals matter, rather than following a fully explicit checklist.",
+      "adequacy_evidence": "Current agents can track predefined indicators and surface anomalies, but they often miss nuanced, context-dependent priorities without human guidance or iterative refinement.",
+      "_timestamp": "2026-04-06T11:19:56"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Monitoring markets or positions involves interpreting noisy, rapidly changing signals and distinguishing meaningful trends from transient fluctuations, which benefits from experience-based judgment beyond explicit rules.",
+      "adequacy_evidence": "Current AI systems can track and analyze market data but often lack robust calibration in ambiguous or regime-shifting conditions, leading to gaps in context-sensitive judgment.",
+      "_timestamp": "2026-04-06T11:19:56"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Monitoring markets or positions spans highly heterogeneous conditions across asset classes, time horizons, volatility regimes, and client portfolios, requiring coverage of diverse and shifting market scenarios.",
+      "adequacy_evidence": "There is abundant high-frequency market data, historical time series, trading logs, and simulated environments that expose both outcomes and decision processes, making representative coverage broadly accessible.",
+      "_timestamp": "2026-04-06T11:19:56"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring markets or positions requires continuously tracking multiple fast-changing data streams (prices, volumes, news, client positions, risk metrics), where missing or misweighting a detail can materially affect decisions.",
+      "adequacy_evidence": "Agents can offload much of this to external tools and dashboards, but still show weaknesses in reliably maintaining and prioritizing rapidly updating context within a single episode, leading to occasional omissions or stale summaries.",
+      "_timestamp": "2026-04-06T11:19:57"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring markets or positions requires maintaining awareness of prior positions, transaction history, and evolving client or firm strategies across sessions, but the state is typically structured and well-defined.",
+      "adequacy_evidence": "Current AI systems integrated with databases and portfolio management tools can reliably store and retrieve this structured longitudinal data, with minimal gaps in cross-session memory.",
+      "_timestamp": "2026-04-06T11:19:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring markets or positions is primarily based on numerical data streams, text-based news, and structured financial indicators; charts are helpful but not essential to task completion.",
+      "adequacy_evidence": "Current AI systems can fully handle text and numerical data ingestion and analysis, and any optional visualizations are well within existing capabilities.",
+      "_timestamp": "2026-04-06T11:19:58"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from monitoring markets or positions; automated monitoring and algorithmic tools are widely used in finance. Regulations focus on supervision, risk controls, and accountability rather than banning AI from this function.",
+      "_timestamp": "2026-04-06T11:19:59"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring markets or positions is primarily an internal analytical activity with no direct stakeholder interaction; outputs are consumed impersonally within the firm.",
+      "adequacy_evidence": "Financial firms already rely heavily on automated systems for market monitoring, and there is little to no stakeholder concern about whether a human or AI performs this function.",
+      "_timestamp": "2026-04-06T11:19:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Missing or misinterpreting market movements or position risks can lead to significant financial losses or missed opportunities, and even small residual errors can cascade quickly in volatile markets.",
+      "adequacy_evidence": "AI systems can effectively track and flag many signals, but they still exhibit gaps in contextual judgment and anomaly detection, leaving some non-trivial residual risk even after standard monitoring and oversight.",
+      "_timestamp": "2026-04-06T11:19:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Market data itself is transparent and can be cross-checked against reliable feeds, but interpreting trends, anomalies, or risk signals requires domain expertise and errors may not be immediately obvious.",
+      "adequacy_evidence": "AI can reliably track and surface raw data, but its interpretations and alerts still require human validation to avoid missed context or spurious signals, creating a moderate verification burden.",
+      "_timestamp": "2026-04-06T11:19:59"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring financial markets and positions often requires near-real-time awareness of price movements, news, and risk exposures, where delays of seconds can matter for decisions.",
+      "adequacy_evidence": "AI systems can ingest and process streaming data quickly, but deeper reasoning or contextual interpretation under tight latency can require simplification, occasionally reducing quality in fast-moving or complex situations.",
+      "_timestamp": "2026-04-06T11:20:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

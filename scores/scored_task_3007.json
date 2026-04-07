@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-3042.00",
+  "task_id": 3007,
+  "task_statement": "Schedule maintenance for industrial machines and equipment, and keep equipment service records.",
+  "occupation_title": "Mobile Heavy Equipment Mechanics, Except Engines",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Scheduling maintenance and maintaining service records are commonly done in digital maintenance management systems or spreadsheets, which can be handled on a computer. However, in many shops these tasks are tied to on-site operations or paper logs and coordination with physical equipment, so not all instances are fully remote."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different machine types, usage patterns, service intervals, and operating environments, creating moderate variation in scheduling and record-keeping practices.",
+      "adequacy_evidence": "General maintenance schedules, manuals, and CMMS data are widely available, but detailed, real-world fleet usage and failure data are often proprietary, leaving some gaps that require approximation or synthesis.",
+      "_timestamp": "2026-04-05T21:00:18"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintenance scheduling follows manufacturer guidelines and documented intervals but often requires adjustment based on usage intensity, environmental conditions, and observed wear patterns, which rely on experience.",
+      "adequacy_evidence": "AI systems can apply rules and incorporate sensor/log data, but they may lack nuanced calibration for atypical wear patterns or informal shop-floor heuristics used in non-routine cases.",
+      "_timestamp": "2026-04-05T21:00:18"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintenance scheduling depends on implicit factors like usage intensity, operating conditions, safety priorities, and downtime constraints, which are not fully specified and require contextual judgment.",
+      "adequacy_evidence": "Current agents can use manuals, sensor data, and logs to propose schedules, but often miss site-specific nuances or shifting priorities without human guidance, requiring iteration.",
+      "_timestamp": "2026-04-05T21:00:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling maintenance and maintaining service records are primarily text- and data-based tasks involving logs, dates, and written documentation, with minimal reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI agents handle structured data, text records, and scheduling workflows effectively, with no meaningful multimodal capability gap for this task.",
+      "_timestamp": "2026-04-05T21:00:20"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step planning (tracking service intervals, scheduling future maintenance, updating records) where consistency matters, but steps are loosely coupled and often modular rather than tightly interdependent.",
+      "adequacy_evidence": "Modern AI agents with scheduling tools and databases can reliably handle multi-step planning and record updates without significant degradation over the sequence lengths typical of this task.",
+      "_timestamp": "2026-04-05T21:00:20"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintenance scheduling and service records depend on detailed longitudinal histories of each machine, including past repairs, usage patterns, and upcoming service intervals across many sessions.",
+      "adequacy_evidence": "Current AI systems can integrate with databases and CMMS tools to store and retrieve records, but they still show gaps in reliably maintaining, updating, and contextually surfacing long-term histories across fragmented workflows.",
+      "_timestamp": "2026-04-05T21:00:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple machines, service intervals, usage data, and prior maintenance records, requiring coordination of several structured information sources within a session.",
+      "adequacy_evidence": "With standard database or CMMS integrations, current agents can reliably store, retrieve, and update this structured information without significant loss or drift.",
+      "_timestamp": "2026-04-05T21:00:21"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintenance scheduling and record-keeping are typically planned tasks with flexible timelines; minutes to hours of latency are acceptable without impacting outcomes.",
+      "adequacy_evidence": "Current AI systems can easily generate schedules and update records within these timeframes without needing to sacrifice reasoning quality for speed.",
+      "_timestamp": "2026-04-05T21:00:21"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintenance schedules and service records can be checked against manufacturer guidelines, usage hours, and existing logs, but doing so requires domain knowledge and careful cross-referencing; some errors may only surface after missed or mistimed maintenance.",
+      "adequacy_evidence": "AI can generate plausible schedules and records, but it may misinterpret usage data or intervals, so human review is needed to verify correctness and consistency with equipment requirements.",
+      "_timestamp": "2026-04-05T21:00:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordinating with operators, supervisors, and maintenance teams who rely on schedules and records, but it does not depend strongly on the personal identity or authority of the scheduler.",
+      "adequacy_evidence": "Stakeholders already accept software systems for maintenance scheduling and record-keeping, so an AI agent performing this role would face little to no resistance.",
+      "_timestamp": "2026-04-05T21:00:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in maintenance scheduling or record-keeping can lead to equipment downtime, increased wear, or safety risks, but most organizations have buffers (inspections, redundancies) that make occasional mistakes survivable rather than catastrophic.",
+      "adequacy_evidence": "With standard checks such as supervisor review, system alerts, and cross-referencing service logs, AI-generated schedules and records can be validated effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T21:00:22"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from scheduling maintenance or maintaining service records for industrial equipment. While recordkeeping may be regulated (e.g., OSHA or DOT requirements), these rules govern content and retention, not whether AI can perform the task.",
+      "_timestamp": "2026-04-05T21:00:23"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

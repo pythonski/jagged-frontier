@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4092.00",
+  "task_id": 1573,
+  "task_statement": "Interpret laboratory findings or test results to identify and classify substances, materials, or other evidence collected at crime scenes.",
+  "occupation_title": "Forensic Science Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Interpreting laboratory results typically involves reviewing digital data outputs (e.g., spectra, chromatograms, database matches) on computers, which can often be done remotely. However, in many real lab settings analysts also consult physical samples, instruments, or in-lab systems, making some instances require on-site presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting forensic lab results often requires experience-based judgment to distinguish signal from noise, assess contamination, weigh conflicting indicators, and contextualize findings within case specifics beyond strict protocols.",
+      "adequacy_evidence": "While AI systems can apply documented analytical rules and pattern recognition, they still show gaps in nuanced calibration for atypical or borderline cases, especially where subtle contextual or experiential cues influence interpretation.",
+      "_timestamp": "2026-04-06T04:00:45"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Forensic interpretation spans a wide range of substances (biological, chemical, trace materials), instrument outputs, and case contexts, including rare or novel compounds and degraded samples, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "While large corpora of forensic reports, scientific literature, and instrument data exist, many real-world cases involve proprietary lab data, rare edge cases, and limited access to full reasoning traces, leaving some subpopulations only partially covered.",
+      "_timestamp": "2026-04-06T04:00:45"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While laboratory protocols and reference standards guide interpretation, analysts must incorporate case context, uncertainty thresholds, and domain judgment to determine evidentiary significance and classification.",
+      "adequacy_evidence": "Current AI can follow explicit rules and match patterns but often misses context-dependent nuances (e.g., evidentiary relevance, borderline results), requiring human oversight to resolve ambiguities.",
+      "_timestamp": "2026-04-06T04:00:45"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple lab results (e.g., chemical assays, microscopy, instrument outputs) into a coherent interpretation, requiring a multi-step but bounded reasoning sequence where earlier interpretations inform later conclusions.",
+      "adequacy_evidence": "Frontier agents can generally maintain coherence across these moderate-length analytical chains, but may show some drift or inconsistency when combining multiple heterogeneous results, especially if reasoning is not explicitly scaffolded.",
+      "_timestamp": "2026-04-06T04:00:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple data sources (e.g., lab instrument outputs, reference databases, case notes) and maintaining consistency across them, but the volume is typically structured and bounded within a single analysis session.",
+      "adequacy_evidence": "Current agents can manage moderate multi-source context with retrieval and tool use, but may lose or misprioritize details when handling heterogeneous scientific data and intermediate interpretations.",
+      "_timestamp": "2026-04-06T04:00:47"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Interpreting forensic laboratory results is typically conducted over hours or longer, with no requirement for immediate or real-time responses; careful, methodical analysis is standard.",
+      "adequacy_evidence": "Given the generous time horizon, AI systems can use extended reasoning without latency pressure, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T04:00:47"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Interpreting forensic lab results is primarily case-specific, but practitioners sometimes reference prior cases, known substance profiles, or historical patterns to inform classification.",
+      "adequacy_evidence": "Current AI systems with standard database integration and retrieval can reliably store and access prior case data or reference libraries, meeting these modest cross-session memory needs.",
+      "_timestamp": "2026-04-06T04:00:47"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting forensic lab results relies heavily on non-text data such as chromatograms, mass spectra, microscopy images, and other instrument outputs that require visual and cross-modal analysis.",
+      "adequacy_evidence": "Current AI systems can analyze many standard visual and spectral formats, but they are less reliable on complex, noisy, or novel forensic samples requiring fine-grained expert interpretation.",
+      "_timestamp": "2026-04-06T04:00:47"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Misinterpretation of forensic lab results can directly affect criminal investigations and court outcomes, potentially leading to wrongful convictions or acquittals, so even rare residual errors have severe consequences.",
+      "adequacy_evidence": "Even with standard quality control, AI systems can exhibit subtle reasoning errors or misinterpret edge-case data in complex forensic analyses, leaving residual risks that are unacceptable given the legal stakes.",
+      "_timestamp": "2026-04-06T04:00:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Findings are used by investigators, attorneys, and courts, where the analyst\u2019s credibility and expert authority are central to decisions and legal admissibility.",
+      "adequacy_evidence": "Courts and legal stakeholders currently require human expert testimony and would strongly resist AI as the primary interpreter, limiting acceptance despite technical performance.",
+      "_timestamp": "2026-04-06T04:00:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting forensic lab results (e.g., toxicology, DNA, trace evidence) involves subtle statistical thresholds, contamination risks, and domain-specific judgment; errors are not obvious and typically require expert review, replication, or peer verification to detect.",
+      "adequacy_evidence": "Current AI systems can misinterpret complex lab data, chain-of-custody nuances, or probabilistic reporting standards, and these mistakes are hard to spot without expert reanalysis, making substantial, expert-level verification necessary.",
+      "_timestamp": "2026-04-06T04:00:49"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Forensic analyses used in criminal proceedings must be conducted and certified by qualified human experts under accreditation and evidentiary standards (e.g., expert testimony rules), which implicitly require human responsibility and sign-off. However, there is no explicit prohibition on AI assistance, creating partial restriction rather than a full ban.",
+      "_timestamp": "2026-04-06T04:00:49"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

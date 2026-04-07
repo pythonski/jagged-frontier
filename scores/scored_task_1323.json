@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1244.00",
+  "task_id": 1323,
+  "task_statement": "Recommend changes to improve systems and network configurations, and determine hardware or software requirements related to such changes.",
+  "occupation_title": "Network and Computer Systems Administrators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Recommending configuration changes and determining hardware or software requirements primarily involves analyzing system data, documentation, and performance metrics and producing recommendations, all of which can be done remotely using standard computer tools."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommending system and network changes often involves context-specific tradeoffs (performance vs. cost, security vs. usability, legacy constraints) that benefit from experience with similar environments, but much of the reasoning can be grounded in documented best practices and patterns.",
+      "adequacy_evidence": "Current agents can apply documented best practices and reason over configurations, but they lack some real-world calibration for edge cases, organizational constraints, and nuanced tradeoffs seen in non-routine production environments.",
+      "_timestamp": "2026-04-06T00:55:41"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous environments (different network architectures, security postures, legacy systems, scales, and organizational constraints), requiring coverage of many context-specific configurations and edge cases.",
+      "adequacy_evidence": "There is extensive public data (documentation, configs, troubleshooting guides, forums) and synthetic generation is feasible, but important enterprise-specific setups and failure modes are often proprietary or underrepresented.",
+      "_timestamp": "2026-04-06T00:55:42"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommendations depend on implicit organizational priorities (e.g., cost, security posture, uptime, compliance) and legacy constraints that are not fully specified in the task and must be inferred or elicited.",
+      "adequacy_evidence": "Current agents can propose reasonable improvements but often miss context-specific constraints or tradeoffs (like legacy dependencies or risk tolerance), requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T00:55:43"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step analytical sequence\u2014assessing current configurations, identifying issues or goals, mapping dependencies, and formulating coherent recommendations\u2014but these steps are not deeply long or tightly coupled across extended horizons.",
+      "adequacy_evidence": "Frontier agents can generally maintain coherence across this level of multi-step reasoning, though some degradation can occur in longer analyses (e.g., missed constraints or partial inconsistency across recommendations).",
+      "_timestamp": "2026-04-06T00:55:43"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Recommending system and network configuration changes requires synthesizing large amounts of heterogeneous information (current configs, performance metrics, constraints, dependencies, and compatibility requirements) where missing a detail can lead to incorrect recommendations.",
+      "adequacy_evidence": "Frontier agents can handle sizable context via retrieval and tooling, but still show weaknesses in reliably tracking interdependent configuration details and constraints across long reasoning chains, leading to occasional omissions or inconsistencies.",
+      "_timestamp": "2026-04-06T00:55:43"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recommending configuration changes and requirements is primarily based on textual artifacts such as logs, configuration files, command outputs, and documentation rather than images or other modalities.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based inputs and outputs typical of this task, with no meaningful reliance on multimodal perception or generation.",
+      "_timestamp": "2026-04-06T00:55:44"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recommending configuration changes and hardware/software requirements is typically an analytical, planning-oriented task where minutes to hours of deliberation are acceptable rather than real-time response.",
+      "adequacy_evidence": "Current AI agents can use extended reasoning, tools, and retrieval within acceptable timeframes for this task, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T00:55:44"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective recommendations depend on prior configuration history, past incidents, existing architecture, and organizational standards, but much of this can be documented and retrieved rather than requiring deeply accumulated tacit memory.",
+      "adequacy_evidence": "Current agents can use external memory systems (CMDBs, logs, documentation) to retrieve prior context, but integration is often incomplete or brittle, leading to missed or outdated information in a meaningful share of cases.",
+      "_timestamp": "2026-04-06T00:55:45"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from recommending network or system configuration changes; while organizations may require human oversight for accountability or compliance (e.g., in regulated sectors), these do not ban AI from performing the task itself.",
+      "_timestamp": "2026-04-06T00:55:45"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves advising internal stakeholders such as IT teams, managers, or clients who must evaluate and approve recommended system and network changes, so the performer's credibility and communication matter to some extent.",
+      "adequacy_evidence": "While some organizations would accept AI-generated recommendations, others may be hesitant to rely on AI for infrastructure decisions without human validation, especially for critical systems.",
+      "_timestamp": "2026-04-06T00:55:46"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Incorrect recommendations can lead to outages, security vulnerabilities, or costly misconfigurations, but these effects are typically reversible and mitigated through staging, rollback, and monitoring practices.",
+      "adequacy_evidence": "Even after review and testing, AI may miss environment-specific constraints or edge cases, leaving some meaningful residual risk, though not to a clearly unacceptable level under standard safeguards.",
+      "_timestamp": "2026-04-06T00:55:46"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing configuration changes requires anticipating performance, security, and compatibility impacts that often only surface under realistic workloads or after deployment, making errors subtle and detection non-trivial.",
+      "adequacy_evidence": "AI-generated recommendations frequently miss environment-specific constraints or introduce latent issues, so thorough expert review, testing, and validation are required before implementation.",
+      "_timestamp": "2026-04-06T00:55:46"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

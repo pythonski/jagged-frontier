@@ -66,6 +66,9 @@
     .rb-table .b1 { color: #f0ad4e; }
     .rb-table .b2 { color: #d9534f; }
     .rb-table .r0 { color: #bbb; }
+    .rb-table td.evidence { font-size: 13px; color: #555; font-style: italic; font-weight: 400; line-height: 1.4; }
+    .rb-table .ev-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: #999; font-style: normal; }
+    .evidence-loading { color: #999; font-style: italic; font-size: 14px; margin: 8px 0; }
 
     /* Weight controls */
     .weight-panel { background: #f5f7fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px 24px; margin: 16px 0 24px; }
@@ -146,7 +149,7 @@
         <div class="task-statement" id="task-statement"></div>
         <h3>Dimension Scores</h3>
         <table class="rb-table">
-          <thead><tr><th>Dimension</th><th class="num">R</th><th class="num">B</th><th>Assessment</th></tr></thead>
+          <thead><tr><th>Dimension</th><th class="num">R</th><th class="num">B</th><th>Assessment</th><th>Evidence</th></tr></thead>
           <tbody id="task-rb-body"></tbody>
         </table>
         <h3>Bottleneck Profile</h3>
@@ -610,8 +613,36 @@
           <td class="num ${rClass(r)}">${r}</td>
           <td class="num ${bClass(b)}">${b}</td>
           <td>${assessLabel(r, b)}</td>
+          <td class="evidence" id="ev-${d.n}"><span class="evidence-loading">loading...</span></td>
         </tr>`;
       }).join('');
+
+      // Lazy-load reasoning traces
+      const taskId = row.task_id;
+      fetch(`scores/scored_task_${taskId}.json`)
+        .then(r => r.ok ? r.json() : null)
+        .then(json => {
+          if (!json || !json.scores) return;
+          for (const d of DIMS) {
+            const el = document.getElementById(`ev-${d.n}`);
+            if (!el) continue;
+            const s = json.scores[String(d.n)];
+            if (!s) { el.textContent = '—'; continue; }
+            const req = s.requirement_evidence || '';
+            const adeq = s.adequacy_evidence || '';
+            el.innerHTML =
+              (req ? `<span class="ev-label">R:</span> ${req}` : '') +
+              (req && adeq ? '<br>' : '') +
+              (adeq ? `<span class="ev-label">B:</span> ${adeq}` : '') +
+              (!req && !adeq ? '—' : '');
+          }
+        })
+        .catch(() => {
+          for (const d of DIMS) {
+            const el = document.getElementById(`ev-${d.n}`);
+            if (el) el.textContent = '—';
+          }
+        });
 
       // Radar chart — R as-is (0-2), B inverted as automability (1 - B/2), clamped to [0,1]
       if (taskRadarChart) taskRadarChart.destroy();

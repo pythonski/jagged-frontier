@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-3022.00",
+  "task_id": 3956,
+  "task_statement": "Check reference materials, such as books, news files, or public records, to obtain relevant facts.",
+  "occupation_title": "Reporters and Correspondents",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Most reference materials such as news archives, books, and public records are now accessed through online databases and digital libraries, allowing the task to be done remotely. However, some investigations still require consulting physical archives, books, or records in libraries or government offices."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves iterating over multiple sources and queries, but each lookup is relatively modular and loosely coupled rather than requiring long, interdependent chains of reasoning.",
+      "adequacy_evidence": "Frontier agents can reliably sustain performance across multi-step search and retrieval workflows with minimal degradation, especially with tool use and retrieval support.",
+      "_timestamp": "2026-04-06T00:39:10"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While the basic goal of finding facts is clear, determining what counts as 'relevant' depends on the story angle, editorial priorities, and context, requiring some interpretive judgment.",
+      "adequacy_evidence": "Current agents can retrieve and summarize factual information effectively, but they often misjudge relevance or miss implicit angles without iterative human guidance.",
+      "_timestamp": "2026-04-06T00:39:10"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans diverse domains (topics, source types like books, news archives, public records), but the underlying activity\u2014fact lookup and cross-referencing\u2014is relatively consistent across instances.",
+      "adequacy_evidence": "There is abundant accessible data (digitized texts, archives, search logs, QA datasets) and clear process signals (retrieval, citation, verification), making coverage across relevant subpopulations well-supported by current training pipelines.",
+      "_timestamp": "2026-04-06T00:39:10"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of fact retrieval follows explicit procedures, reporters must exercise judgment in assessing source credibility, relevance, and contextual interpretation of records.",
+      "adequacy_evidence": "Current agents can retrieve and summarize information well but show gaps in nuanced source evaluation and context-sensitive judgment, especially in ambiguous or contested cases.",
+      "_timestamp": "2026-04-06T00:39:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Checking reference materials for facts is typically a self-contained activity that does not rely on retaining information across prior sessions.",
+      "adequacy_evidence": "Since the task does not require cross-session memory, current AI systems' memory limitations do not impede performance.",
+      "_timestamp": "2026-04-06T00:39:12"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves consulting multiple sources and selecting relevant facts, requiring some active retrieval and light synthesis within a single reporting episode.",
+      "adequacy_evidence": "Frontier agents with retrieval tools can reliably gather, track, and summarize relevant information from multiple documents within context limits, with minimal loss or drift.",
+      "_timestamp": "2026-04-06T00:39:12"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal information-gathering activity that does not require interaction with external stakeholders or reliance on the performer\u2019s identity.",
+      "adequacy_evidence": "Since no stakeholders are involved in this step, acceptance of an AI agent is not relevant and poses no barrier.",
+      "_timestamp": "2026-04-06T00:39:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reporters often work under deadlines, but checking reference materials like archives or public records typically allows seconds to minutes rather than requiring instantaneous responses.",
+      "adequacy_evidence": "Current AI agents with retrieval tools can access and synthesize relevant facts quickly within these timeframes without needing to truncate reasoning or significantly degrade output quality.",
+      "_timestamp": "2026-04-06T00:39:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI systems from checking reference materials like books, news files, or public records to obtain facts. While copyright and data access rules may govern specific sources, they do not restrict AI from performing the task itself.",
+      "_timestamp": "2026-04-06T00:39:13"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and extracting information from textual sources like books, news files, and public records; any non-text elements are incidental and not central to task performance.",
+      "adequacy_evidence": "Current AI systems can reliably process text and handle occasional scanned or image-based documents via OCR, so there is no meaningful multimodal shortfall.",
+      "_timestamp": "2026-04-06T00:39:13"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Facts can usually be verified by consulting primary or authoritative sources, but doing so requires time, access, and some judgment to ensure sources are reliable and correctly interpreted.",
+      "adequacy_evidence": "AI systems still frequently miscite, hallucinate, or misinterpret sources, so human cross-checking against original materials is routinely needed to ensure accuracy.",
+      "_timestamp": "2026-04-06T00:39:13"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect facts in reporting can harm credibility and misinform the public, but most errors are correctable and do not typically cause irreversible harm when caught later.",
+      "adequacy_evidence": "With tool-assisted retrieval and cross-checking against authoritative sources, AI systems can reduce residual error to acceptable levels for this task after normal verification.",
+      "_timestamp": "2026-04-06T00:39:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

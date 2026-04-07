@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "25-1123.00",
+  "task_id": 21128,
+  "task_statement": "Schedule courses.",
+  "occupation_title": "English Language and Literature Teachers, Postsecondary",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Course scheduling is typically done using university scheduling software, spreadsheets, and email or online systems, all of which can be accessed remotely. No physical presence or specialized equipment is inherently required."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Course scheduling involves varied but structured constraints (faculty availability, room capacity, student demand, prerequisites) across institutions, creating moderate diversity without extreme long-tail variation.",
+      "adequacy_evidence": "There is abundant accessible data and well-studied optimization formulations (e.g., timetabling problems), and realistic instances can be readily synthesized, providing strong coverage of the task distribution.",
+      "_timestamp": "2026-04-05T22:45:27"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Course scheduling involves explicit constraints (curriculum requirements, room capacity, faculty availability) but also implicit priorities like balancing workloads, accommodating preferences, and anticipating student demand.",
+      "adequacy_evidence": "Current agents can optimize over explicit constraints but often miss or misweight tacit preferences and institutional norms, requiring human iteration to refine acceptable schedules.",
+      "_timestamp": "2026-04-05T22:45:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling courses primarily involves text-based information such as course listings, time slots, room assignments, and constraints; it does not inherently require non-text modalities.",
+      "adequacy_evidence": "Since the task is fundamentally text-driven, current AI systems can handle the required inputs and outputs without any multimodal limitations.",
+      "_timestamp": "2026-04-05T22:45:27"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Course scheduling in a postsecondary context is typically done over hours to days, with no need for immediate real-time responses.",
+      "adequacy_evidence": "AI systems can generate high-quality schedules well within acceptable timeframes, so latency does not meaningfully constrain performance.",
+      "_timestamp": "2026-04-05T22:45:27"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Course scheduling involves balancing explicit constraints (room availability, enrollment caps, prerequisites) with some experience-based judgment about student demand, course sequencing, and faculty preferences.",
+      "adequacy_evidence": "Current agents can handle formal constraints and optimization well, but are less reliable at nuanced tradeoffs (e.g., anticipating demand shifts or informal departmental norms) that rely on accumulated institutional experience.",
+      "_timestamp": "2026-04-05T22:45:27"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling courses involves coordinating multiple constraints (faculty availability, room assignments, student needs, and curriculum requirements) across a sequence of planning steps, but these are typically modular rather than tightly interdependent chains.",
+      "adequacy_evidence": "AI agents can handle multi-step scheduling with tools, but over longer sequences they may miss constraints or introduce conflicts without iterative validation, showing moderate degradation.",
+      "_timestamp": "2026-04-05T22:45:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling courses requires tracking multiple constraints (instructor availability, room capacity, time slots, course conflicts, and student needs), but the information is structured and typically bounded within manageable datasets.",
+      "adequacy_evidence": "With spreadsheet tools, constraint solvers, and retrieval over structured data, current agents can reliably manage and update this information within an episode without significant loss or drift.",
+      "_timestamp": "2026-04-05T22:45:28"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Course scheduling depends on prior term offerings, curriculum sequencing, room assignments, and evolving departmental constraints, requiring some cross-session context retention.",
+      "adequacy_evidence": "Current agents can store and retrieve structured scheduling data, but often struggle with reliably integrating evolving institutional constraints and historical context across systems without gaps.",
+      "_timestamp": "2026-04-05T22:45:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from scheduling courses in higher education. While institutions may have internal policies or data privacy obligations (e.g., FERPA), these do not constitute a legal ban on AI performing the task.",
+      "_timestamp": "2026-04-05T22:45:29"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in course scheduling (e.g., time conflicts, room capacity mismatches, or prerequisite sequencing issues) can disrupt students and faculty but are typically detectable and correctable without lasting harm.",
+      "adequacy_evidence": "With standard checks (conflict detection, enrollment limits, prerequisite validation), AI-generated schedules can be reliably verified, leaving minimal residual risk in practice.",
+      "_timestamp": "2026-04-05T22:45:30"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling courses involves coordination with students, administrators, and institutional systems, where stakeholders rely on the output but do not strongly depend on the scheduler\u2019s personal identity.",
+      "adequacy_evidence": "Automated and AI-assisted scheduling systems are already widely accepted in academic settings, and stakeholders generally do not object as long as schedules are accurate and fair.",
+      "_timestamp": "2026-04-05T22:45:30"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Course scheduling errors such as time conflicts, room capacity issues, or unmet prerequisites are typically easy to detect using institutional systems and constraint checks.",
+      "adequacy_evidence": "Current AI may overlook institutional rules or preferences, so human review is still needed to verify constraints and edge cases, though errors are generally straightforward to catch.",
+      "_timestamp": "2026-04-05T22:45:30"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

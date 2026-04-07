@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2011.00",
+  "task_id": 3502,
+  "task_statement": "Design, review, and help administer insurance, annuity and pension plans, determining financial soundness and calculating premiums.",
+  "occupation_title": "Actuaries",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Designing, reviewing, and administering insurance or pension plans and calculating premiums are primarily analytical tasks performed with statistical software, spreadsheets, and documents, all of which can be handled remotely. Any collaboration or review processes can be conducted via digital communication without requiring physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Actuarial work spans many product types (life, health, pensions, annuities), regulatory regimes, demographic segments, and rare risk scenarios, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "Much of the critical data (claims histories, underwriting details, firm-specific experience) is proprietary and not publicly available, and detailed process-level actuarial reasoning is sparsely documented, leaving major gaps even with synthetic augmentation.",
+      "_timestamp": "2026-04-05T21:52:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Actuarial work requires setting assumptions (e.g., mortality, lapse rates, discount rates) and evaluating plan design tradeoffs under uncertainty, which depend heavily on professional judgment built from experience with real-world deviations and edge cases.",
+      "adequacy_evidence": "Current AI can replicate standard actuarial methods and analyze scenarios, but lacks robust calibration for nuanced assumption-setting and context-specific judgment in non-routine or high-stakes cases, especially involving tail risks and regulatory interpretation.",
+      "_timestamp": "2026-04-05T21:52:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Actuarial work involves multi-step processes (data preparation, model selection, assumption setting, financial projections, and iterative review), but many components are modular and can be validated independently rather than forming a single fragile chain.",
+      "adequacy_evidence": "LLM-based agents can generally handle multi-step analytical workflows with tooling, but over long sequences may exhibit drift in assumptions or lose consistency across modeling steps without careful orchestration and checks.",
+      "_timestamp": "2026-04-05T21:52:04"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Actuarial tasks involve balancing explicit quantitative goals (e.g., solvency, pricing) with context-dependent factors like regulatory interpretation, market competitiveness, and stakeholder risk tolerance, requiring some inference beyond stated criteria.",
+      "adequacy_evidence": "Current AI agents can model financial outcomes and follow regulations but often miss nuanced business objectives or implicit stakeholder preferences, requiring iterative human guidance to fully align outputs.",
+      "_timestamp": "2026-04-05T21:52:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Actuarial work involves integrating large volumes of heterogeneous data (demographics, financial assumptions, regulatory constraints, model outputs) and tracking multiple interdependent variables and scenarios within a single analysis.",
+      "adequacy_evidence": "LLM-based agents with tools can offload much of this to code and external memory, but still show occasional context loss or misalignment when managing complex, multi-step model states and assumptions.",
+      "_timestamp": "2026-04-05T21:52:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Actuarial work relies on longitudinal data such as historical claims, prior model assumptions, regulatory changes, and evolving client plan details that must persist across projects and time horizons.",
+      "adequacy_evidence": "Current AI systems can integrate with databases and retrieval systems to store and access historical context, but maintaining coherent, evolving multi-year actuarial context and assumptions across engagements remains imperfect and requires careful engineering.",
+      "_timestamp": "2026-04-05T21:52:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Actuarial work such as designing and reviewing insurance and pension plans is typically performed over hours to days, with no need for real-time or rapid-response outputs.",
+      "adequacy_evidence": "AI systems can take sufficient time to run complex analyses and reasoning without impacting usability, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T21:52:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Actuarial work is primarily based on numerical data, statistical models, and textual/structured financial information; visual or other non-text modalities are not essential to performing the core task.",
+      "adequacy_evidence": "Since the task is fundamentally text- and data-driven, current AI systems handle the required modalities fully without meaningful gaps.",
+      "_timestamp": "2026-04-05T21:52:05"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Actuarial outputs depend on complex stochastic models, assumptions about future events, and regulatory constraints; errors can be subtle, only surfacing over long horizons and requiring expert review, sensitivity analysis, and validation to detect.",
+      "adequacy_evidence": "Current AI can generate plausible models and calculations but often makes hidden assumption errors or misapplies actuarial methods, requiring intensive expert auditing, recalculation, and validation to ensure correctness.",
+      "_timestamp": "2026-04-05T21:52:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves insurers, regulators, and corporate clients who rely on actuarial analyses, where professional credibility and sign-off matter but direct interpersonal trust is not central.",
+      "adequacy_evidence": "Stakeholders may accept AI-assisted analysis, but full replacement by an AI agent would face resistance due to expectations of credentialed human actuaries and regulatory norms requiring human accountability.",
+      "_timestamp": "2026-04-05T21:52:07"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Insurance regulations require credentialed, human actuaries (e.g., members of the American Academy of Actuaries) to sign Statements of Actuarial Opinion and certify financial soundness; these legal sign-off and accountability requirements cannot be fulfilled by an AI system, effectively prohibiting fully autonomous AI performance of the task.",
+      "_timestamp": "2026-04-05T21:52:07"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in actuarial design and pricing can lead to insolvency, regulatory violations, or large-scale financial losses affecting policyholders and institutions, so even rare residual errors have severe consequences.",
+      "adequacy_evidence": "Even after standard validation and review, AI systems can introduce subtle modeling or assumption errors (e.g., tail risk, dependencies) that are hard to fully eliminate, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-05T21:52:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

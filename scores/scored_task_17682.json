@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5011.01",
+  "task_id": 17682,
+  "task_statement": "Reserve necessary space on ships, aircraft, trains, or trucks.",
+  "occupation_title": "Freight Forwarders",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Reserving cargo space with carriers is typically done through online booking systems, email, or digital logistics platforms, all of which can be performed remotely using a computer and internet access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Booking freight capacity involves some experiential judgment about carrier reliability, seasonal demand fluctuations, routing tradeoffs, and overbooking risk that goes beyond explicit rules.",
+      "adequacy_evidence": "Agents can follow structured booking procedures and use data on schedules and rates, but they lack robust calibration for nuanced tradeoffs (e.g., reliability vs. cost under uncertainty) and relationship-based heuristics common in non-routine cases.",
+      "_timestamp": "2026-04-06T00:19:40"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple transport modes, carrier systems, routing constraints, and shipment types, but follows relatively standardized logistics workflows and booking procedures.",
+      "adequacy_evidence": "While general booking processes and constraints are well-documented and can be simulated, key data like real-time capacity, carrier-specific systems, and negotiated practices are often proprietary and thinly represented in training data.",
+      "_timestamp": "2026-04-06T00:19:40"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reserving freight space requires interpreting shipment priorities, cost\u2013speed tradeoffs, routing preferences, and constraints (e.g., hazardous goods, capacity variability), which are often only partially specified and context-dependent.",
+      "adequacy_evidence": "Current agents can infer many standard logistics preferences and query for missing details, but they still frequently require human clarification to resolve nuanced tradeoffs or implicit client priorities.",
+      "_timestamp": "2026-04-06T00:19:40"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reserving freight space involves multiple coordinated steps\u2014checking schedules, comparing options, securing bookings, and confirming details\u2014but these steps are relatively short and loosely coupled.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute these multi-step booking workflows via APIs and structured systems with minimal degradation across steps.",
+      "_timestamp": "2026-04-06T00:19:41"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reserving freight space is primarily conducted through text-based booking systems, schedules, contracts, and electronic data interchange, with minimal reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based coordination, scheduling, and booking workflows without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T00:19:41"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking shipment details (dimensions, weight, deadlines), carrier schedules, and availability, but the information is structured and limited in scope within a single booking episode.",
+      "adequacy_evidence": "Current agents can reliably manage and retrieve this level of structured booking data using tools and short-term context without significant loss or drift.",
+      "_timestamp": "2026-04-06T00:19:41"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many bookings are transactional, freight forwarders often rely on stored client preferences, contract rates, and recurring shipment patterns across engagements.",
+      "adequacy_evidence": "Current AI systems with standard database/CRM integrations can reliably store and retrieve such structured client and shipment history, with minimal limitations for this task.",
+      "_timestamp": "2026-04-06T00:19:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Booking freight space often requires timely responses to secure capacity, especially in competitive lanes, but decisions typically occur over minutes rather than seconds.",
+      "adequacy_evidence": "AI agents can query schedules, compare options, and execute bookings via APIs quickly without needing prolonged reasoning, fitting comfortably within typical time expectations.",
+      "_timestamp": "2026-04-06T00:19:42"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Booking freight space incorrectly can cause delays, extra costs, or missed shipments, but issues are typically detectable and correctable before catastrophic consequences occur.",
+      "adequacy_evidence": "With confirmation systems, standardized booking interfaces, and cross-checks against schedules and capacity, AI systems can reduce residual errors to an acceptable level for this task.",
+      "_timestamp": "2026-04-06T00:19:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Booking reservations can be verified through carrier confirmations, schedules, and capacity systems, but require careful cross-checking of dates, routes, and cargo details to catch mismatches.",
+      "adequacy_evidence": "AI-generated reservations would still need human review against carrier systems and constraints, as errors in routing, availability, or terms are plausible and not always immediately obvious without validation.",
+      "_timestamp": "2026-04-06T00:19:43"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with carriers or booking systems to secure space, so external stakeholders are engaged, but the performer's identity is not central as long as booking requirements are met.",
+      "adequacy_evidence": "Carriers already accept automated and digital booking systems (e.g., EDI, online platforms), so an AI agent performing this role would face little to no resistance.",
+      "_timestamp": "2026-04-06T00:19:43"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from reserving freight space; this function is already commonly performed through automated logistics and booking software under company authority.",
+      "_timestamp": "2026-04-06T00:19:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

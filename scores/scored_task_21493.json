@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1199.07",
+  "task_id": 21493,
+  "task_statement": "Monitor tapes or digital recordings to identify the source of losses.",
+  "occupation_title": "Security Management Specialists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Reviewing surveillance recordings is often done digitally on computers through security video systems, but some instances involve accessing on-site DVR systems or handling physical tapes that require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied environments (retail, industrial, different camera qualities, lighting conditions, and loss scenarios), but the core activity\u2014reviewing recordings for anomalies or theft\u2014follows relatively consistent patterns.",
+      "adequacy_evidence": "There is substantial video surveillance data and anomaly-detection research, but real-world edge cases (rare theft tactics, occlusions, proprietary footage) are often private or underrepresented, leaving some gaps that require targeted synthesis or adaptation.",
+      "_timestamp": "2026-04-06T11:19:09"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires interpreting recordings to infer what constitutes a 'loss' event and its source, which depends on context (e.g., theft vs. error) and situational judgment beyond explicit rules.",
+      "adequacy_evidence": "Current AI can flag anomalies and recognize patterns but often struggles with context-dependent intent and subtle cues, requiring human review to correctly interpret ambiguous situations.",
+      "_timestamp": "2026-04-06T11:19:09"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Identifying sources of losses often involves interpreting ambiguous behaviors, contextual cues, and patterns (e.g., distinguishing routine actions from suspicious ones), which benefits from experience-based judgment beyond explicit rules.",
+      "adequacy_evidence": "Current AI systems can analyze video and detect anomalies but still lack consistent calibration for nuanced intent and context-dependent interpretations, leading to gaps in non-routine or subtle cases.",
+      "_timestamp": "2026-04-06T11:19:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many reviews of recordings are self-contained, analysts may benefit from recalling prior incidents, known loss patterns, or ongoing investigations across sessions.",
+      "adequacy_evidence": "Current AI systems can reliably store, index, and retrieve prior recordings, incident logs, and metadata across sessions using standard databases and retrieval pipelines.",
+      "_timestamp": "2026-04-06T11:19:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing potentially long recordings and maintaining attention across time, but segments are largely independent rather than tightly interdependent sequences.",
+      "adequacy_evidence": "AI systems can process long recordings via chunking and retrieval, but may show some degradation in consistency or miss patterns over extended sequences without careful orchestration.",
+      "_timestamp": "2026-04-06T11:19:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on analyzing video and possibly audio recordings (e.g., surveillance footage) to detect theft, fraud, or procedural failures, requiring visual and temporal pattern recognition beyond text.",
+      "adequacy_evidence": "Current AI systems can process video and detect objects/events, but they remain inconsistent in complex, real-world surveillance scenarios involving occlusion, subtle behaviors, and contextual interpretation.",
+      "_timestamp": "2026-04-06T11:19:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing tapes or digital recordings to identify loss sources is typically done post hoc, where analysts can take minutes to hours to examine footage without strict real-time constraints.",
+      "adequacy_evidence": "AI systems can process and analyze recorded media within these relaxed time windows without needing to sacrifice reasoning depth, so latency does not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T11:19:10"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing potentially long, multi-source video or audio recordings, tracking sequences of events over time, and retaining fine-grained details (e.g., timestamps, movements, anomalies) to identify loss sources.",
+      "adequacy_evidence": "Current agents can segment and analyze recordings with tooling, but maintaining coherent tracking over long temporal spans and ensuring no critical detail is missed remains imperfect, leading to moderate information management gaps.",
+      "_timestamp": "2026-04-06T11:19:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing requirements that prohibit AI systems from analyzing surveillance recordings to identify loss sources. While privacy and data protection laws govern how recordings are collected and used, they do not restrict AI from performing the monitoring task itself.",
+      "_timestamp": "2026-04-06T11:19:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal analytical activity reviewing recordings to detect loss sources, with no direct interaction or reliance on stakeholder acceptance of the performer\u2019s identity.",
+      "adequacy_evidence": "Since outputs are used internally and impersonally, stakeholders are largely indifferent to whether an AI or human performs the task, and AI is already widely accepted in surveillance analysis contexts.",
+      "_timestamp": "2026-04-06T11:19:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors can lead to unresolved theft, financial loss, or wrongful suspicion, which have meaningful but generally non-catastrophic consequences for the organization.",
+      "adequacy_evidence": "Even after review, AI systems can miss subtle indicators or misinterpret behaviors in footage, leaving a moderate level of residual risk that could still impact investigations.",
+      "_timestamp": "2026-04-06T11:19:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification typically involves re-watching recordings, checking timestamps, and corroborating events; this takes time and attention but does not usually require deep or inaccessible expertise.",
+      "adequacy_evidence": "Current AI vision systems can miss subtle cues or generate false positives, so human review of flagged footage is still needed, but errors are generally catchable through straightforward re-inspection.",
+      "_timestamp": "2026-04-06T11:19:13"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

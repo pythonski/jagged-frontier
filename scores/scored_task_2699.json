@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4161.00",
+  "task_id": 2699,
+  "task_statement": "Select applicants meeting specified job requirements and refer them to hiring personnel.",
+  "occupation_title": "Human Resources Assistants, Except Payroll and Timekeeping",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Screening applications against job requirements and forwarding qualified candidates is typically done through applicant tracking systems, email, and digital resumes, but some workplaces may still handle paper applications or conduct parts of the process in person."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Applicant screening spans varied roles, industries, and resume formats, but follows relatively structured patterns (matching qualifications to specified criteria).",
+      "adequacy_evidence": "Large volumes of resumes, job descriptions, and documented screening practices are publicly available and easily augmentable with synthetic data, providing strong coverage of relevant cases.",
+      "_timestamp": "2026-04-06T02:03:21"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Although job requirements are often formally specified, important criteria such as cultural fit, soft skills, and hiring manager preferences are partly implicit and context-dependent.",
+      "adequacy_evidence": "Current agents can match explicit qualifications well but often miss nuanced or shifting preferences, requiring human review and iteration to ensure alignment with true hiring intent.",
+      "_timestamp": "2026-04-06T02:03:21"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves comparing multiple applicants against specified job criteria, tracking qualifications, and filtering candidates, requiring active management of several information sources within an episode.",
+      "adequacy_evidence": "Current agents can handle multi-document comparison with retrieval tools, but may lose or misprioritize details across many applicants or criteria, especially without careful structuring.",
+      "_timestamp": "2026-04-06T02:03:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing multiple applicants, comparing qualifications against criteria, and consistently applying selection standards across a batch, requiring some sequential consistency but not long, tightly coupled chains.",
+      "adequacy_evidence": "Modern AI agents can reliably process and evaluate multiple candidates in sequence with stable criteria application, showing little degradation over the modest sequence length involved.",
+      "_timestamp": "2026-04-06T02:03:21"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While much of applicant screening follows explicit criteria (qualifications, experience, skills), borderline cases and interpretation of resumes often require some experience-based judgment.",
+      "adequacy_evidence": "Current AI systems can reliably parse resumes, apply criteria, and handle many nuanced comparisons using learned patterns, covering most of the required judgment in typical screening scenarios.",
+      "_timestamp": "2026-04-06T02:03:21"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from retaining applicant histories, job requisition details, and prior screening outcomes across sessions, but much of the work can be performed using current applicant data for a given posting.",
+      "adequacy_evidence": "Existing AI systems integrated with applicant tracking systems can reliably store and retrieve candidate records and job criteria across sessions, with minimal gaps in persistence or recall.",
+      "_timestamp": "2026-04-06T02:03:22"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Applicant screening and referral is typically done in batches with turnaround expectations ranging from minutes to hours or longer, not real-time interaction.",
+      "adequacy_evidence": "Current AI systems can easily operate within these relaxed time constraints, allowing full reasoning without quality degradation from speed pressure.",
+      "_timestamp": "2026-04-06T02:03:22"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Selecting applicants based on job requirements is primarily a text-based task involving resumes, applications, and job descriptions, all of which are typically structured or unstructured text documents.",
+      "adequacy_evidence": "Current AI systems handle text processing and matching tasks well, with little to no reliance on non-text modalities for this function.",
+      "_timestamp": "2026-04-06T02:03:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interaction with hiring personnel who rely on the assistant\u2019s screening decisions, but the assistant\u2019s personal identity is not central as long as criteria are applied correctly.",
+      "adequacy_evidence": "Automated screening tools (ATS systems) are already widely accepted in this context, and hiring personnel generally do not require a human for initial applicant filtering.",
+      "_timestamp": "2026-04-06T02:03:23"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Screening errors (e.g., overlooking qualified candidates or referring marginal ones) have meaningful but reversible consequences, as later hiring stages provide additional filtering.",
+      "adequacy_evidence": "With structured criteria and spot-checking, AI-assisted screening produces residual errors that are comparable to human variability and are typically caught downstream, keeping risk acceptable.",
+      "_timestamp": "2026-04-06T02:03:24"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying selections involves checking resumes and applications against explicit job criteria, which is feasible but requires time and attention to detail; some mismatches or missed qualifications may not be immediately obvious without careful review.",
+      "adequacy_evidence": "AI can perform resume screening reasonably well, but still makes classification and extraction errors often enough that human spot-checking and validation against criteria remain necessary.",
+      "_timestamp": "2026-04-06T02:03:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "No US law outright prohibits AI from screening and referring applicants, but regulations like NYC Local Law 144 (bias audits and notice requirements) and EEOC guidance on algorithmic discrimination impose compliance obligations that constrain how AI can be used.",
+      "_timestamp": "2026-04-06T02:03:24"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

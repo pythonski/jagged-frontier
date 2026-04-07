@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9161.00",
+  "task_id": 7253,
+  "task_statement": "Keep informed of activities or changes that could affect the likelihood of an emergency, response efforts, or plan implementation.",
+  "occupation_title": "Emergency Management Directors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Staying informed typically involves monitoring digital reports, alerts, weather data, emails, and interagency communications. However, it can also include in-person briefings, site visits, or direct coordination with local officials, which require physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Identifying which evolving activities or signals materially affect emergency risk or response requires experiential judgment about local context, weak signals, and interagency dynamics that are not fully codified in procedures.",
+      "adequacy_evidence": "AI agents can aggregate and summarize large streams of information, but they still struggle with nuanced prioritization and context-sensitive calibration, especially for ambiguous or low-signal developments.",
+      "_timestamp": "2026-04-06T04:38:39"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining which activities or changes are relevant requires ongoing interpretation of evolving risks, local context, stakeholder priorities, and implicit thresholds for action, which are not fully specified in advance.",
+      "adequacy_evidence": "AI agents can aggregate and summarize signals from many sources, but often struggle to correctly prioritize context-specific relevance or detect subtle, emerging risks without human guidance and iterative calibration.",
+      "_timestamp": "2026-04-06T04:38:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves continuously integrating large volumes of heterogeneous, rapidly changing information (e.g., weather data, infrastructure status, intelligence reports), where missing or misprioritizing details can materially affect emergency readiness and response.",
+      "adequacy_evidence": "Current agents can aggregate and summarize multiple streams but still struggle with sustained context tracking, prioritization, and avoiding loss or distortion of critical details over extended monitoring within a single episode.",
+      "_timestamp": "2026-04-06T04:38:40"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous, context-dependent signals (weather, infrastructure status, public events, intelligence reports, local vulnerabilities) across jurisdictions and hazard types, creating a long-tailed distribution of scenarios.",
+      "adequacy_evidence": "Large portions of relevant data (e.g., weather, news, historical incidents) are accessible and trainable, but important local, real-time, and sensitive information streams (e.g., internal briefings, informal networks) are sparse or inaccessible for training.",
+      "_timestamp": "2026-04-06T04:38:40"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves monitoring diverse inputs such as weather maps, satellite imagery, sensor dashboards, and situational visuals alongside textual reports, making multimodal perception meaningfully useful but not always central.",
+      "adequacy_evidence": "Current agents can interpret many visual and geospatial inputs, but reliability drops with complex, real-time, or integrated cross-modal streams (e.g., synthesizing evolving map data with live reports).",
+      "_timestamp": "2026-04-06T04:38:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring emerging threats and situational updates requires timely awareness, often within seconds to minutes, but does not typically demand split-second decision output for every instance.",
+      "adequacy_evidence": "Well-tooled AI agents can ingest, filter, and summarize real-time data streams quickly without needing deep multi-step reasoning, so latency constraints rarely degrade output quality.",
+      "_timestamp": "2026-04-06T04:38:42"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires continuously tracking evolving risks, past incidents, infrastructure changes, and plan updates over long time horizons, building a persistent situational picture across many episodes.",
+      "adequacy_evidence": "Current agents can use databases, alerts, and retrieval systems to maintain and surface longitudinal context, but integration gaps and imperfect recall across heterogeneous sources still cause moderate reliability issues.",
+      "_timestamp": "2026-04-06T04:38:42"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from monitoring information about risks, activities, or changes relevant to emergency management. This task can be performed as an information-gathering and analysis function without requiring a licensed human decision-maker.",
+      "_timestamp": "2026-04-06T04:38:42"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task primarily involves monitoring information sources and staying updated on relevant developments, with no direct need for stakeholder interaction or reliance on performer identity.",
+      "adequacy_evidence": "Since there are no stakeholders who must accept or engage with the performer, acceptance of an AI agent is not a limiting factor.",
+      "_timestamp": "2026-04-06T04:38:43"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing monitoring and integration of multiple information streams over time, requiring consistency across updates, but not tightly coupled step-by-step execution where each step critically depends on the last.",
+      "adequacy_evidence": "AI agents can maintain monitoring workflows with tooling, but over extended periods may exhibit drift, missed updates, or inconsistent prioritization without careful orchestration and supervision.",
+      "_timestamp": "2026-04-06T04:38:43"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task depends on comprehensive, up-to-date situational awareness across many heterogeneous sources; errors are often omissions or misinterpretations that are hard to detect without deep domain knowledge and cross-source validation.",
+      "adequacy_evidence": "Current AI can aggregate information but frequently misses subtle or emerging signals and may misjudge relevance, requiring extensive human cross-checking and continuous monitoring to ensure nothing critical is overlooked.",
+      "_timestamp": "2026-04-06T04:38:44"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Missing or misinterpreting emerging risks (e.g., weather shifts, infrastructure vulnerabilities, or threat intelligence) can lead to inadequate preparedness and severe consequences during emergencies.",
+      "adequacy_evidence": "AI can aggregate and monitor large information streams, but may still miss nuanced, locally contextual, or weak signals; even after checks, some residual risk remains but is not consistently catastrophic.",
+      "_timestamp": "2026-04-06T04:38:45"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

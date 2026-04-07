@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3025.00",
+  "task_id": 3647,
+  "task_statement": "Obtain product information, identify vendors or suppliers, or order materials or equipment to maintain inventory.",
+  "occupation_title": "Environmental Engineering Technologists and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Obtaining product information, identifying vendors, and placing orders are typically done through online research, email, procurement systems, or phone. However, some instances may involve in-person vendor interactions or physical verification of materials or equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting and ordering materials requires interpreting implicit constraints like quality standards, environmental compliance, supplier reliability, and budget/lead-time tradeoffs that are not always fully specified.",
+      "adequacy_evidence": "Agents can use past data and policies to infer many preferences, but they often miss organization-specific priorities or nuanced constraints, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T02:31:46"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of products, vendors, and procurement contexts (e.g., environmental sampling equipment, regulatory-compliant materials), but follows recurring patterns in sourcing and ordering workflows.",
+      "adequacy_evidence": "Extensive coverage exists via product catalogs, supplier databases, procurement records, and standard operating procedures, and missing private data (e.g., pricing contracts) can be approximated or supplemented through enterprise integrations.",
+      "_timestamp": "2026-04-06T02:31:46"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting suppliers and materials involves some experience-based judgment about vendor reliability, quality tradeoffs, and suitability for specific environmental projects beyond written specs.",
+      "adequacy_evidence": "AI agents can use structured data, past records, and reviews to approximate these judgments, but may lack nuanced, context-specific calibration about local vendors or subtle quality differences in non-routine cases.",
+      "_timestamp": "2026-04-06T02:31:46"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple pieces of information such as product specifications, vendor options, pricing, and current inventory levels, requiring moderate within-episode organization and comparison.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, databases, retrieval) can reliably manage, update, and reference this level of structured information without significant loss or drift.",
+      "_timestamp": "2026-04-06T02:31:47"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (gathering product specs, comparing vendors, placing orders, and tracking inventory needs) with some interdependence between steps, but sequences are not \u0905\u0924\u094d\u092f long or tightly coupled.",
+      "adequacy_evidence": "Well-scaffolded AI agents can generally handle these multi-step procurement workflows, though some degradation (e.g., missed constraints or inconsistencies across steps) can emerge over longer or more complex sequences.",
+      "_timestamp": "2026-04-06T02:31:47"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Obtaining product information, identifying vendors, and ordering materials are primarily text- and data-driven activities (spec sheets, catalogs, pricing, and order systems) with minimal reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based procurement workflows, including parsing specifications and interacting with vendor systems, with little need for multimodal capabilities.",
+      "_timestamp": "2026-04-06T02:31:48"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintaining inventory and sourcing materials depends on accumulated information such as supplier relationships, past orders, pricing history, and stock levels across time.",
+      "adequacy_evidence": "Current agent systems can integrate with databases or ERP tools to persist and retrieve such information, but they still show inconsistencies in reliably updating, recalling, and prioritizing evolving cross-session context without robust external scaffolding.",
+      "_timestamp": "2026-04-06T02:31:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Procurement and vendor identification tasks typically allow minutes to hours for research, comparison, and ordering, without strict real-time constraints.",
+      "adequacy_evidence": "Current AI agents can perform information gathering, vendor comparison, and ordering workflows well within these timeframes without needing to sacrifice reasoning quality.",
+      "_timestamp": "2026-04-06T02:31:48"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interaction with external vendors or suppliers who must respond to inquiries and fulfill orders, but the performer's personal identity or authority is usually not central.",
+      "adequacy_evidence": "Vendors commonly accept automated procurement systems, emails, and EDI platforms, so AI agents would generally be accepted as long as transactions are clear and valid.",
+      "_timestamp": "2026-04-06T02:31:49"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from obtaining product information, identifying suppliers, or ordering materials. While procurement may be subject to organizational policies or contracting rules, these do not specifically restrict AI use.",
+      "_timestamp": "2026-04-06T02:31:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying product specs, vendor legitimacy, pricing, and compliance requires checking datasheets, certifications, and quotes; this takes some expertise and effort but is generally feasible with available documentation.",
+      "adequacy_evidence": "AI can retrieve and summarize vendor and product information but may hallucinate specs or use outdated sources, so human cross-checking against reliable documents and supplier communications remains necessary.",
+      "_timestamp": "2026-04-06T02:31:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in ordering or vendor selection can cause delays, cost overruns, or use of suboptimal materials, but are typically correctable and rarely lead to severe or irreversible consequences.",
+      "adequacy_evidence": "With standard checks like human approval, specification matching, and vendor validation, AI-generated recommendations or orders can be reliably vetted, leaving minimal residual risk.",
+      "_timestamp": "2026-04-06T02:31:50"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

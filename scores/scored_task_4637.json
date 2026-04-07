@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-2011.00",
+  "task_id": 4637,
+  "task_statement": "Monitor alarm systems to ensure that secure conditions are maintained.",
+  "occupation_title": "Switchboard Operators, Including Answering Service",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Alarm systems are often monitored through computerized dashboards or central monitoring software that can be accessed remotely, making the task largely digital. However, some roles require being physically present at a facility to monitor dedicated alarm panels or integrated security systems."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Alarm monitoring involves some variation across system types, signal patterns, and response protocols, but overall follows structured, repetitive patterns within well-defined operational contexts.",
+      "adequacy_evidence": "Extensive logs, SOPs, and simulated alarm environments provide accessible, process-level training data, and synthetic generation can cover edge cases effectively.",
+      "_timestamp": "2026-04-05T23:36:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing monitoring over time, requiring sustained attention, but actions are typically reactive and not tightly interdependent sequences where earlier steps constrain later ones.",
+      "adequacy_evidence": "AI systems can reliably handle continuous monitoring with alerting logic and do not significantly degrade over time in maintaining consistent performance for this type of low-interdependence sequence.",
+      "_timestamp": "2026-04-05T23:36:08"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While the core objective (maintain security by monitoring alarms) is clear, operators must interpret context such as distinguishing false alarms, prioritizing alerts, and applying situational judgment based on implicit protocols.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably follow alarm rules, integrate sensor data, and apply predefined escalation logic, resolving most contextual ambiguity with minimal need for human interpretation.",
+      "_timestamp": "2026-04-05T23:36:08"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring alarm systems primarily follows explicit protocols (e.g., respond to specific signals, escalate per guidelines), with limited need for experience-based judgment beyond recognizing common false alarms or prioritizing alerts.",
+      "adequacy_evidence": "Current AI systems can reliably replicate these rule-based monitoring and triage patterns, including filtering noise and applying escalation logic, with little shortfall in tacit judgment.",
+      "_timestamp": "2026-04-05T23:36:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking ongoing alarm signals and system states, potentially across multiple channels, requiring some active monitoring and short-term state management but not large or complex information loads.",
+      "adequacy_evidence": "Current AI agents with streaming, alert-handling, and logging tools can reliably track and manage such information within an episode without significant loss or confusion.",
+      "_timestamp": "2026-04-05T23:36:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring alarm systems often involves interpreting auditory alerts (tones, alarms) and visual indicators on panels or software dashboards, not just text.",
+      "adequacy_evidence": "Current AI systems can reliably process and classify audio signals and visual dashboard data with standard integrations, making multimodal demands well within existing capabilities.",
+      "_timestamp": "2026-04-05T23:36:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Monitoring alarm systems requires continuous vigilance and near-instant response to alerts to maintain security, often within seconds.",
+      "adequacy_evidence": "Current AI systems can process event streams and trigger alerts in real time with minimal reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-05T23:36:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring alarm systems is primarily a real-time, session-bound task where each alert is handled based on current system status; historical context is typically stored in the alarm system itself rather than in operator memory.",
+      "adequacy_evidence": "Current AI systems can easily log and retrieve past alarm events if needed, but the task does not depend on persistent cross-session memory beyond what existing systems already provide.",
+      "_timestamp": "2026-04-05T23:36:10"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task can involve notifying clients, emergency services, or colleagues when alarms trigger, so others may interact with or rely on the monitoring function, though identity is not central.",
+      "adequacy_evidence": "Stakeholders generally accept automated alarm monitoring systems already, and AI-based monitoring would not materially change their willingness to engage or respond.",
+      "_timestamp": "2026-04-05T23:36:11"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Alarm monitoring is regulated at the state level, often requiring licensed alarm companies and sometimes certified operators or designated responsible persons, which implicitly assumes human oversight. However, there is no explicit prohibition on AI systems assisting or performing monitoring functions, creating partial but not absolute restriction.",
+      "_timestamp": "2026-04-05T23:36:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 2,
+      "requirement_evidence": "Alarm monitoring produces explicit signals and logs that can be audited, but missed alarms or misinterpretations may not be immediately obvious without cross-checking system status or incident outcomes.",
+      "adequacy_evidence": "Current AI systems can mis-handle real-time event streams or edge cases, and missed or mishandled alarms are hard to detect without continuous human oversight, making verification burdens high in practice.",
+      "_timestamp": "2026-04-05T23:36:11"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Failing to detect or respond to an alarm can lead to security breaches, safety incidents, or property loss, so even rare missed errors can have serious consequences.",
+      "adequacy_evidence": "Alarm monitoring is typically structured and machine-readable, with redundancy and logging, allowing AI systems to achieve high reliability and leave minimal residual risk after standard checks.",
+      "_timestamp": "2026-04-05T23:36:12"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

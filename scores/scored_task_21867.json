@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2111.00",
+  "task_id": 21867,
+  "task_statement": "Evaluate potential health hazards or damage that could occur from product misuse.",
+  "occupation_title": "Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Engineers often evaluate misuse hazards using design documents, safety standards, incident data, and risk analysis tools on a computer. However, some cases require examining or testing physical products or prototypes to assess real-world misuse risks."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Product misuse scenarios span a wide, long-tailed distribution across different products, user behaviors, environments, and failure modes, requiring coverage of many rare and context-specific cases.",
+      "adequacy_evidence": "There are substantial data sources (incident reports, safety analyses, standards, FMEA examples), but rare or novel misuse scenarios are sparsely documented and often lack detailed process-level reasoning, leaving partial gaps that can only be partly filled via synthesis.",
+      "_timestamp": "2026-04-05T22:16:46"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating hazards from product misuse requires inferring plausible misuse scenarios, user behaviors, and context-specific risks that are rarely fully specified and depend on professional judgment and standards.",
+      "adequacy_evidence": "Current agents can generate reasonable misuse scenarios and hazard analyses using guidelines and data, but often miss nuanced or context-specific risks and require human iteration to ensure completeness.",
+      "_timestamp": "2026-04-05T22:16:47"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple interdependent steps such as identifying misuse scenarios, mapping failure modes, and evaluating resulting hazards, but these sequences are typically bounded and structured rather than deeply long or iterative.",
+      "adequacy_evidence": "Frontier AI agents can generally sustain coherent reasoning across these moderate-length analyses, though some degradation (e.g., missed edge cases or inconsistent assumptions) can emerge over multi-step hazard evaluations.",
+      "_timestamp": "2026-04-05T22:16:47"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple information sources (product specifications, materials, usage scenarios, exposure pathways, and safety standards) and tracking several plausible misuse cases, but the volume is typically bounded and structured rather than massive or rapidly changing.",
+      "adequacy_evidence": "Current agents can synthesize technical documents and enumerate hazard scenarios, but they may omit less obvious interactions or lose track of edge-case conditions when juggling multiple misuse pathways within a single analysis.",
+      "_timestamp": "2026-04-05T22:16:48"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing misuse hazards often involves interpreting product designs, physical configurations, diagrams, or incident photos alongside textual specifications, making multimodal input meaningfully useful but not always essential.",
+      "adequacy_evidence": "Current agents can analyze images and diagrams in straightforward cases, but struggle with nuanced physical interactions, complex schematics, or subtle hazard cues in real-world visual data.",
+      "_timestamp": "2026-04-05T22:16:48"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Evaluating potential hazards from product misuse is typically an analytical, non-real-time task conducted during design reviews, risk assessments, or safety audits where minutes to hours are acceptable.",
+      "adequacy_evidence": "Current AI agents can perform hazard analysis within acceptable timeframes without meaningful degradation from latency constraints, as extended reasoning can be accommodated.",
+      "_timestamp": "2026-04-05T22:16:49"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While structured methods like hazard analysis and FMEA guide the task, anticipating realistic misuse scenarios and their consequences often relies on experience with user behavior, materials, and prior incidents.",
+      "adequacy_evidence": "AI can apply known frameworks and draw on documented cases, but lacks lived calibration for nuanced, context-specific misuse patterns and may miss subtle but important real-world risk factors.",
+      "_timestamp": "2026-04-05T22:16:49"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing hazards from product misuse often involves predicting non-obvious failure modes, indirect exposure pathways, and long-term health effects, which require deep domain expertise, testing, and scenario analysis to verify.",
+      "adequacy_evidence": "Current AI systems can generate plausible hazard assessments but frequently miss edge cases or misjudge severity, and verifying their outputs demands expert review, experimental validation, or detailed standards checks.",
+      "_timestamp": "2026-04-05T22:16:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Hazard evaluation can benefit from prior incident reports, historical misuse patterns, and accumulated domain knowledge, but each product assessment is largely self-contained.",
+      "adequacy_evidence": "Current AI systems with standard retrieval and database integration can reliably store and access relevant historical cases and safety data across sessions.",
+      "_timestamp": "2026-04-05T22:16:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Misjudging hazards from product misuse can lead to serious injuries, regulatory violations, or large-scale harm, so even rare residual errors can have severe consequences.",
+      "adequacy_evidence": "While expert review and testing can catch many issues, AI may still miss uncommon misuse scenarios or complex causal chains, leaving some non-negligible residual risk after standard checks.",
+      "_timestamp": "2026-04-05T22:16:51"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task informs engineers, product teams, and regulators who rely on the assessment, but interaction is typically indirect and based on the quality of analysis rather than the evaluator\u2019s personal presence.",
+      "adequacy_evidence": "AI-generated hazard analyses would face some skepticism from safety professionals and regulators, especially around liability and rigor, but could be accepted with validation and human oversight.",
+      "_timestamp": "2026-04-05T22:16:52"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Safety evaluations in many sectors (e.g., OSHA compliance, product safety, FDA-regulated products) require oversight or sign-off by qualified professionals, which indirectly limits fully autonomous AI use. However, there is no explicit prohibition on AI performing the analysis itself, only on who bears responsibility.",
+      "_timestamp": "2026-04-05T22:16:52"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

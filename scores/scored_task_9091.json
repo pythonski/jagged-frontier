@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-2032.00",
+  "task_id": 9091,
+  "task_statement": "Recommend materials for reliable performance in various environments.",
+  "occupation_title": "Materials Scientists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Material recommendations are often based on digital analysis of data, simulations, literature, and preparation of reports or specifications. However, many cases rely on laboratory testing, examining physical samples, or collaborating with engineers around prototypes, which require physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Material recommendations must span diverse environments (e.g., temperature extremes, corrosion, mechanical stress, radiation), involving many material classes and context-specific tradeoffs, creating a highly heterogeneous and long-tailed distribution.",
+      "adequacy_evidence": "Extensive literature, databases, and simulation tools provide strong coverage for many standard conditions, but proprietary industrial data and rare edge-case environments remain thin, though partially addressable via modeling and synthetic generation.",
+      "_timestamp": "2026-04-06T02:47:10"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting materials for diverse environments (e.g., corrosive, high-temperature, cyclic loading) relies heavily on experiential judgment about failure modes, trade-offs, and subtle interactions not fully captured in formal rules or datasets.",
+      "adequacy_evidence": "Current agents can leverage materials databases and documented heuristics but often lack the nuanced, experience-based calibration needed for edge cases and complex, context-specific trade-offs.",
+      "_timestamp": "2026-04-06T02:47:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Recommending materials requires inferring unstated constraints such as cost limits, manufacturability, safety margins, regulatory standards, and environment-specific degradation modes, which are often only partially specified and evolve with stakeholder needs.",
+      "adequacy_evidence": "Current agents can surface relevant factors and propose reasonable candidates, but they often miss subtle tradeoffs or implicit priorities (e.g., long-term reliability vs. cost), requiring iterative human clarification and refinement.",
+      "_timestamp": "2026-04-06T02:47:11"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommending materials requires a multi-step process: analyzing environmental conditions, mapping required properties, comparing candidate materials, and evaluating trade-offs, but the sequence is not extremely long or tightly coupled.",
+      "adequacy_evidence": "Current AI agents can generally maintain coherence across these moderate-length reasoning chains, though some degradation (e.g., dropped constraints or inconsistent trade-offs) can occur as steps accumulate.",
+      "_timestamp": "2026-04-06T02:47:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple factors\u2014material properties, environmental conditions (e.g., temperature, corrosion, stress), and performance tradeoffs\u2014within a single reasoning episode, but the scope is typically bounded and structured.",
+      "adequacy_evidence": "Current agents can track and synthesize these factors reasonably well, but may lose or oversimplify constraints (e.g., subtle environmental interactions or edge-case requirements) when context grows or becomes highly detailed.",
+      "_timestamp": "2026-04-06T02:47:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Material recommendation typically involves literature review, simulation, and comparative analysis, where minutes to hours of deliberation are acceptable and expected.",
+      "adequacy_evidence": "Current AI agents can deliver high-quality recommendations within these timeframes without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T02:47:13"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Materials recommendations often draw on phase diagrams, microstructure images, and performance charts, but much of the reasoning can be expressed through textual descriptions and tabulated data.",
+      "adequacy_evidence": "Current agents can interpret standard diagrams and generate visualizations, but struggle with nuanced interpretation of complex materials imagery or integrating subtle cross-modal cues reliably.",
+      "_timestamp": "2026-04-06T02:47:14"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Material recommendations often benefit from accumulated knowledge such as prior test results, client requirements, and performance histories across projects, but many instances can still be handled with self-contained data and references.",
+      "adequacy_evidence": "Current agents can use databases and retrieval systems to persist and access prior information, but they can inconsistently maintain and surface relevant cross-session context without careful system design.",
+      "_timestamp": "2026-04-06T02:47:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing whether a material will perform reliably across environments often requires deep domain expertise, experimental validation, and long-term testing under varied conditions; errors may not surface until deployment or stress testing.",
+      "adequacy_evidence": "AI-generated recommendations can sound plausible but may miss critical failure modes, environmental interactions, or edge cases, requiring extensive expert review and often physical testing to verify correctness.",
+      "_timestamp": "2026-04-06T02:47:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Material selection errors can lead to structural failure, safety hazards, or costly degradation in real-world environments, so even rare residual mistakes can have serious consequences.",
+      "adequacy_evidence": "While testing, simulation, and standards-based review can catch many issues, AI may still miss edge-case interactions or long-term degradation effects, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T02:47:15"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no blanket prohibition on AI recommending materials, but in regulated domains (e.g., aerospace, medical devices, civil infrastructure), licensed professionals or certified processes are often required to approve final material selections, creating partial constraints on autonomous AI use.",
+      "_timestamp": "2026-04-06T02:47:16"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recommendations are used by engineers, product designers, or clients who rely on the scientist\u2019s expertise, so stakeholder trust in the source matters to some extent.",
+      "adequacy_evidence": "While some organizations already use computational tools for materials selection, stakeholders may still prefer human expert validation for high-stakes or safety-critical applications, leading to moderate resistance to fully AI-driven recommendations.",
+      "_timestamp": "2026-04-06T02:47:16"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

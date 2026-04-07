@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1199.04",
+  "task_id": 15958,
+  "task_statement": "Recommend or implement methods to monitor, evaluate, or enable resolution of safety, operations, or compliance interruptions.",
+  "occupation_title": "Business Continuity Planners",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Recommending and designing monitoring or resolution methods is typically done through digital analysis, documentation, and coordination tools. However, implementing or evaluating these methods can sometimes involve on-site reviews of safety processes or operational environments."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous interruption scenarios (safety incidents, operational failures, regulatory breaches) across industries, each with distinct contexts, risks, and response protocols, creating a long-tailed distribution.",
+      "adequacy_evidence": "There are substantial public and synthetic sources (incident reports, standards, tabletop exercises), but many real-world cases are proprietary, rare, or context-specific, leaving gaps that can be partially but not fully covered by current training pipelines.",
+      "_timestamp": "2026-04-05T22:13:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task depends heavily on organization-specific risk tolerance, regulatory context, operational priorities, and implicit stakeholder expectations, which are rarely fully specified upfront.",
+      "adequacy_evidence": "Current agents can propose plausible monitoring and mitigation frameworks but often miss nuanced organizational constraints or evolving stakeholder priorities, requiring human refinement.",
+      "_timestamp": "2026-04-05T22:13:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating heterogeneous, often real-time information such as incident reports, operational data, compliance rules, and mitigation options, where missing details can affect recommendations or resolution strategies.",
+      "adequacy_evidence": "Well-scaffolded agents can use retrieval and tools to manage large contexts, but they still exhibit context loss and imperfect compression when tracking multiple evolving inputs within a single episode.",
+      "_timestamp": "2026-04-05T22:13:36"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step processes such as assessing risks, designing monitoring systems, evaluating interruptions, and coordinating resolution methods, where consistency across steps matters but sequences are not extremely long or tightly coupled.",
+      "adequacy_evidence": "Frontier agents can generally sustain coherence across these moderate workflows, but may exhibit some drift or inconsistency in longer planning or implementation chains, especially when tracking multiple constraints over time.",
+      "_timestamp": "2026-04-05T22:13:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective monitoring and resolution methods depend on accumulated knowledge of prior incidents, system vulnerabilities, compliance history, and evolving continuity plans over time.",
+      "adequacy_evidence": "Current agents can use external databases and retrieval systems to store and access historical context, but maintaining fully integrated, consistently updated longitudinal state across complex enterprise environments remains imperfect.",
+      "_timestamp": "2026-04-05T22:13:36"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting and tailoring monitoring and resolution methods for safety, operational, or compliance disruptions requires context-sensitive judgment about risk tradeoffs, organizational dynamics, and failure modes that are not fully captured in formal procedures.",
+      "adequacy_evidence": "Current agents can apply standard frameworks and analyze scenarios, but often lack the nuanced calibration and situational judgment needed for atypical disruptions or complex organizational contexts.",
+      "_timestamp": "2026-04-05T22:13:37"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Business continuity planning can involve time-sensitive incident response recommendations, but many aspects (designing monitoring methods, evaluating processes) allow seconds-to-minutes of deliberation.",
+      "adequacy_evidence": "Frontier agents can generate high-quality recommendations within typical operational time windows, so latency constraints rarely force meaningful degradation in output quality.",
+      "_timestamp": "2026-04-05T22:13:39"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task can involve interpreting dashboards, sensor feeds, or visual reports (e.g., facility monitoring, incident visuals), but much of the core work is based on structured data and textual plans rather than rich multimodal input.",
+      "adequacy_evidence": "Current AI systems with tool integrations can handle typical multimodal inputs like charts, logs, and basic imagery adequately, and the task rarely depends on fine-grained perceptual nuance beyond current capabilities.",
+      "_timestamp": "2026-04-05T22:13:39"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Failures in monitoring or resolving safety, operational, or compliance interruptions can lead to regulatory penalties, safety incidents, or major business disruptions, so even rare residual errors can have severe consequences.",
+      "adequacy_evidence": "Even after standard review and testing, AI may overlook edge-case failure modes or nuanced regulatory/operational contexts, leaving some residual risk that remains concerning but not categorically prohibitive with human oversight.",
+      "_timestamp": "2026-04-05T22:13:39"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no blanket prohibition on AI performing business continuity planning tasks, but in regulated sectors (e.g., finance, healthcare, critical infrastructure), laws and compliance frameworks often require accountable human oversight, approval, or sign-off. This creates partial constraints without fully barring AI involvement.",
+      "_timestamp": "2026-04-05T22:13:39"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Effectiveness of monitoring and response methods is often only revealed during real incidents or rigorous drills, and flaws can remain latent; verifying quality requires expert review, simulations, and scenario testing.",
+      "adequacy_evidence": "AI-generated recommendations can overlook organization-specific risks, dependencies, or regulatory nuances, and these errors are hard to detect without substantial expert validation and testing, making verification burdens high.",
+      "_timestamp": "2026-04-05T22:13:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires coordinating with internal stakeholders (e.g., operations, compliance teams) who must trust and act on the recommended monitoring and resolution methods, though deep personal authority is not always central.",
+      "adequacy_evidence": "Organizations may accept AI-generated recommendations, but some stakeholders could hesitate to rely fully on AI for safety or compliance decisions, preferring human oversight or validation.",
+      "_timestamp": "2026-04-05T22:13:40"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

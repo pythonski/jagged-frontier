@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-1023.00",
+  "task_id": 1149,
+  "task_statement": "Confer with staff, users, and vendors to discuss defective or unacceptable goods or services and determine corrective action.",
+  "occupation_title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Discussing defective goods or services with staff and vendors is typically done via email, phone, or video meetings using standard software. However, some cases involve in-person meetings or coordination alongside physical inspection of the problematic items."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining appropriate corrective action in disputes over defective goods involves situational judgment, negotiation norms, and balancing cost, vendor relationships, and user needs, which are not fully captured by explicit rules.",
+      "adequacy_evidence": "AI agents can apply documented policies and analyze cases, but often lack nuanced calibration in stakeholder negotiation and context-sensitive tradeoffs, leading to gaps in non-routine or relationship-sensitive situations.",
+      "_timestamp": "2026-04-05T23:22:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining 'defective or unacceptable' and appropriate corrective action depends on stakeholder perspectives, contractual nuances, and context-specific tradeoffs, requiring interpretation beyond explicit criteria.",
+      "adequacy_evidence": "Agents can extract issues and propose reasonable resolutions from documentation and dialogue, but often miss subtle stakeholder priorities or negotiation dynamics, requiring human guidance to fully align outcomes.",
+      "_timestamp": "2026-04-05T23:22:38"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous scenarios involving different product types, defect types, contractual terms, vendor relationships, and organizational policies, requiring coverage of many context-specific negotiation and resolution patterns.",
+      "adequacy_evidence": "While there is substantial related data (emails, complaint handling, negotiation playbooks), much of the richest process-level signal (real vendor disputes, internal deliberations) is private, though partially recoverable via synthetic data and general business corpora.",
+      "_timestamp": "2026-04-05T23:22:38"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step interactions\u2014gathering input from staff, users, and vendors, diagnosing issues, and negotiating corrective actions\u2014but these sequences are typically bounded and episodic rather than deeply interdependent over long horizons.",
+      "adequacy_evidence": "Current AI agents can manage multi-turn conversations and track goals across moderate sequences, but may exhibit some drift or inconsistency in complex, back-and-forth stakeholder negotiations.",
+      "_timestamp": "2026-04-05T23:22:38"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves tracking details about defects, contract terms, prior communications, and stakeholder inputs within a conversation, requiring moderate integration and summarization of multi-party information.",
+      "adequacy_evidence": "Current agents can manage this level of context with tools (notes, retrieval), but may lose nuances across extended discussions or misprioritize conflicting stakeholder inputs without careful scaffolding.",
+      "_timestamp": "2026-04-05T23:22:39"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective handling of defective goods often benefits from access to prior incident histories, vendor performance records, and past resolutions, but individual cases can still be addressed with current-session information if needed.",
+      "adequacy_evidence": "Current AI systems can use external memory stores (e.g., CRM or ticketing systems) to retrieve past interactions, but integration gaps and inconsistent retrieval across sessions can lead to missed or underutilized historical context.",
+      "_timestamp": "2026-04-05T23:22:40"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from participating in or conducting discussions with staff, users, or vendors about defective goods or corrective actions. While contractual authority or final decisions may require a human agent in some contexts, the communication and consultation task itself is not legally restricted.",
+      "_timestamp": "2026-04-05T23:22:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires direct interaction and negotiation with staff, users, and external vendors, where trust, authority, and relationship management influence outcomes and agreement on corrective actions.",
+      "adequacy_evidence": "While some structured vendor communications could be handled by AI, many stakeholders may be wary of negotiating or resolving disputes with an AI agent, especially when accountability or relationship nuances are important.",
+      "_timestamp": "2026-04-05T23:22:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interactive discussions with stakeholders where responses are expected within conversational timeframes (seconds to minutes), but not under strict real-time or safety-critical latency constraints.",
+      "adequacy_evidence": "Frontier AI agents can sustain coherent, context-aware dialogue at conversational speeds without significant degradation in reasoning quality for typical procurement discussions.",
+      "_timestamp": "2026-04-05T23:22:41"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Discussing defective goods often involves referencing physical product characteristics, samples, photos, or demonstrations, but much of the task can still be conducted through verbal or textual descriptions.",
+      "adequacy_evidence": "Current agents can interpret images and documents reasonably well, but may struggle with subtle quality defects, material properties, or context-specific visual judgments that arise in real-world product evaluation.",
+      "_timestamp": "2026-04-05T23:22:41"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing whether goods/services are defective and selecting corrective actions requires reviewing specifications, contracts, and stakeholder input; errors are not always obvious without domain knowledge and follow-up checks.",
+      "adequacy_evidence": "AI can structure discussions and suggest plausible diagnoses or remedies, but it may misinterpret context or constraints, so human verification against specs and stakeholder feedback is still needed.",
+      "_timestamp": "2026-04-05T23:22:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in determining corrective actions can lead to financial loss, supply delays, or strained vendor relationships, but these outcomes are typically reversible or renegotiable rather than catastrophic.",
+      "adequacy_evidence": "Even with normal review, AI may misinterpret stakeholder priorities or negotiation nuances, leading to suboptimal resolutions that still pose moderate practical risks.",
+      "_timestamp": "2026-04-05T23:22:41"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

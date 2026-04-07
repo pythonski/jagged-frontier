@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "35-1012.00",
+  "task_id": 2158,
+  "task_statement": "Forecast staff, equipment, and supply requirements, based on a master menu.",
+  "occupation_title": "First-Line Supervisors of Food Preparation and Serving Workers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Forecasting staffing, equipment, and supply needs from a master menu is largely an analytical planning task typically done using spreadsheets or management software. However, it may sometimes require in-person checks of inventory levels, equipment capacity, or kitchen operations."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Forecasting needs from a master menu requires experience-based adjustments for local demand patterns, staff efficiency, spoilage rates, and unexpected variability not fully captured in explicit rules.",
+      "adequacy_evidence": "AI systems can model demand and resource needs using historical data and heuristics, but often lack fine-grained calibration to site-specific quirks and real-time contextual judgment that experienced supervisors apply.",
+      "_timestamp": "2026-04-06T01:33:31"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task varies across restaurant types, menu complexity, customer volume patterns, and local context, but follows fairly structured and repeatable planning logic tied to menus and historical demand patterns.",
+      "adequacy_evidence": "While general menu planning, staffing heuristics, and supply estimation data are widely available, detailed, high-quality historical demand and operations data are often proprietary, leaving some gaps that can only be partially filled with synthetic or proxy data.",
+      "_timestamp": "2026-04-06T01:33:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Translating a master menu into staffing and supply needs requires inferring context like expected customer volume, service standards, local demand patterns, and waste tolerance, which are not fully specified in the menu itself.",
+      "adequacy_evidence": "Current AI agents can incorporate historical data and typical heuristics, but often miss local, situational nuances (e.g., events, staff skill mix, informal norms), requiring human adjustment to align with true operational expectations.",
+      "_timestamp": "2026-04-06T01:33:32"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple interdependent steps\u2014interpreting the master menu, estimating demand, mapping recipes to ingredient quantities, and translating this into staffing and supply needs\u2014but the sequence is structured and not \u0905\u0924\u094d\u092f long or deeply branching.",
+      "adequacy_evidence": "Current AI agents can manage multi-step planning and forecasting workflows with tools, but may show some degradation over longer chains (e.g., maintaining consistency across assumptions or updates), leading to moderate risk of drift or small compounding errors.",
+      "_timestamp": "2026-04-06T01:33:33"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating menu items, expected volumes, recipes, staffing norms, and current inventory, but the information is structured and typically manageable within standard planning tools or spreadsheets.",
+      "adequacy_evidence": "Current AI agents can reliably track and manipulate this level of structured, within-episode data using tools like tables and calculations, with minimal loss of context or retrieval errors.",
+      "_timestamp": "2026-04-06T01:33:33"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Forecasting from a master menu relies on textual and numerical data such as recipes, portion sizes, and historical demand; it does not inherently require image, audio, or other non-text inputs or outputs.",
+      "adequacy_evidence": "Current AI systems handle text- and data-based forecasting tasks well, with no meaningful dependence on multimodal capabilities for this task.",
+      "_timestamp": "2026-04-06T01:33:33"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Forecasting benefits from historical demand patterns, prior staffing decisions, and seasonal trends, but these can be provided as structured inputs rather than requiring deeply accumulated longitudinal memory.",
+      "adequacy_evidence": "Current AI systems can reliably store and retrieve historical data (e.g., sales, past forecasts) via databases or integrations, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T01:33:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Forecasting staff, equipment, and supplies from a master menu is a planning task typically done in advance (e.g., daily or weekly), where minutes or longer latency is acceptable.",
+      "adequacy_evidence": "Current AI agents can perform forecasting calculations and reasoning well within these relaxed time constraints without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T01:33:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Forecasting errors can lead to overstaffing, shortages, or waste, affecting cost control and service quality, but these impacts are typically reversible and not catastrophic.",
+      "adequacy_evidence": "With standard checks like historical comparisons and managerial review, AI-generated forecasts can be validated and adjusted, leaving residual risk at an acceptable level for this operational context.",
+      "_timestamp": "2026-04-06T01:33:35"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations requiring a human to perform forecasting of staffing, equipment, or supply needs in food service operations. This task is an internal planning function and is not subject to licensing or mandated human decision-making.",
+      "_timestamp": "2026-04-06T01:33:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The forecasts are used by managers and staff for planning, so others rely on the output, but acceptance depends mainly on accuracy rather than who produced it.",
+      "adequacy_evidence": "Organizations already accept software and automated systems for forecasting staffing and supplies, so an AI agent would face little resistance if outputs are reliable.",
+      "_timestamp": "2026-04-06T01:33:36"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Forecasts can be checked against historical sales, standard recipes, and staffing norms, but doing so requires domain knowledge and some analysis; errors may only become evident during service (e.g., shortages or overstaffing).",
+      "adequacy_evidence": "Current AI can generate reasonable forecasts but often misses local patterns or constraints, so managers would still need to review against past data and operational realities, creating a moderate verification burden.",
+      "_timestamp": "2026-04-06T01:33:36"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

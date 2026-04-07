@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "23-1012.00",
+  "task_id": 19055,
+  "task_statement": "Compile court-related statistics.",
+  "occupation_title": "Judicial Law Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Court statistics are typically compiled from electronic case management systems or digital records using spreadsheets or databases. However, some courts still require pulling data from physical files or paper archives, introducing occasional in\u2011person components."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Compiling court-related statistics involves applying standard definitions and aggregation procedures, but may require some judgment in categorizing cases or handling ambiguous records.",
+      "adequacy_evidence": "Current AI systems can reliably follow statistical definitions, apply consistent categorization rules, and handle edge cases with documented guidance, showing little shortfall in this level of judgment.",
+      "_timestamp": "2026-04-05T21:41:50"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Compiling court-related statistics involves multiple steps such as gathering data from sources, cleaning, aggregating, and summarizing, but these steps are typically modular and not tightly interdependent over long horizons.",
+      "adequacy_evidence": "Well-scaffolded AI agents with data-processing tools can reliably execute these multi-step workflows without significant degradation, as each step can be checkpointed and validated independently.",
+      "_timestamp": "2026-04-05T21:41:51"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often depends on implicit choices about which metrics, timeframes, case types, and definitions to use, which vary by judge, court, or project context.",
+      "adequacy_evidence": "Current agents can usually infer or elicit these parameters, but they often miss jurisdiction-specific conventions or unstated preferences without human clarification.",
+      "_timestamp": "2026-04-05T21:41:51"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different courts, case types, and reporting formats, but remains largely structured and procedural with recurring statistical categories and methods.",
+      "adequacy_evidence": "Extensive public records, administrative reports, and documented workflows provide ample process-level examples, and synthetic or retrieved data can cover most variations without major gaps.",
+      "_timestamp": "2026-04-05T21:41:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling court-related statistics primarily involves extracting and aggregating data from textual records, databases, and numerical datasets rather than interpreting images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI systems handle text and structured data processing well, so there is no meaningful multimodal gap affecting performance on this task.",
+      "_timestamp": "2026-04-05T21:41:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling court-related statistics is typically a back-office analytical task with flexible deadlines (hours to days), not requiring immediate or real-time responses.",
+      "adequacy_evidence": "Current AI agents can perform data aggregation and statistical compilation well within these relaxed timeframes without needing to sacrifice reasoning depth.",
+      "_timestamp": "2026-04-05T21:41:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Compiling court-related statistics requires aggregating and tracking data from multiple cases, databases, or reports, but the information is typically structured and can be incrementally processed rather than held entirely in memory.",
+      "adequacy_evidence": "With tool use (databases, spreadsheets, retrieval systems), current agents can reliably manage and update intermediate state, minimizing risk of losing relevant within-episode information.",
+      "_timestamp": "2026-04-05T21:41:51"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling court-related statistics is typically a self-contained task using existing records or databases for a given reporting period, without needing accumulated cross-session context.",
+      "adequacy_evidence": "Current AI systems with standard data access and storage can easily retrieve needed records for each instance; no persistent longitudinal memory is required beyond routine data querying.",
+      "_timestamp": "2026-04-05T21:41:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from compiling court-related statistics. While access to certain court data may be restricted or governed by privacy/confidentiality rules, these apply equally to humans and AI tools and do not specifically bar AI use.",
+      "_timestamp": "2026-04-05T21:41:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Compiling court-related statistics involves aggregating and validating data from legal records; errors can be detected through cross-checking with source documents and recalculating figures, but this requires careful review and domain familiarity.",
+      "adequacy_evidence": "Current AI can assist with aggregation but may misinterpret data sources or make calculation errors, so human verification against primary records is still necessary and moderately effortful.",
+      "_timestamp": "2026-04-05T21:41:53"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Compiling court-related statistics is primarily an internal analytical task with outputs consumed impersonally by judges or court administrators, with little reliance on the compiler\u2019s identity.",
+      "adequacy_evidence": "Since stakeholders do not depend on or interact with the performer directly, there is minimal concern about whether an AI agent performs the task.",
+      "_timestamp": "2026-04-05T21:41:53"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in compiled court statistics can misinform reports, policy analysis, or judicial administration, but are typically correctable and rarely cause irreversible harm.",
+      "adequacy_evidence": "With standard verification (e.g., cross-checking data sources and calculations), AI-generated statistics can be made sufficiently reliable, leaving minimal residual risk.",
+      "_timestamp": "2026-04-05T21:41:53"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

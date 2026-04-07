@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5071.00",
+  "task_id": 4737,
+  "task_statement": "Prepare documents, such as work orders, bills of lading, or shipping orders, to route materials.",
+  "occupation_title": "Shipping, Receiving, and Inventory Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Preparing work orders, bills of lading, or shipping orders is usually done in shipping or warehouse management software on a computer, but in many workplaces it is tied to on\u2011site operations such as printing, attaching, or coordinating paperwork with physical shipments."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing standard shipping documents like bills of lading and work orders is governed by explicit templates, rules, and documented procedures with minimal reliance on experiential judgment.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured templates and rules, populate required fields, and handle routine variations without needing tacit knowledge.",
+      "_timestamp": "2026-04-06T04:34:05"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple document types (work orders, bills of lading, shipping orders) with variation across industries, carriers, and regulatory contexts, but follows structured and well-defined formats.",
+      "adequacy_evidence": "Extensive examples, templates, and procedural documentation exist in public and enterprise systems, and synthetic data generation can readily cover variations, providing strong process-level training signal.",
+      "_timestamp": "2026-04-06T04:34:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Preparing shipping documents relies on standardized forms and explicit data (e.g., item details, destinations, routing codes), but some context-dependent judgment is needed for exceptions or incomplete information.",
+      "adequacy_evidence": "Current AI systems with access to templates, databases, and validation rules can reliably infer required fields and handle routine ambiguities, with only minor need for human clarification in edge cases.",
+      "_timestamp": "2026-04-06T04:34:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Preparing shipping documents involves multiple interdependent steps (gathering shipment details, verifying quantities, entering data, and ensuring consistency across fields), but sequences are moderately sized and structured.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably handle these structured, short-to-moderate workflows with minimal degradation, especially when supported by templates, validation rules, and tool integration.",
+      "_timestamp": "2026-04-06T04:34:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Preparing shipping documents requires assembling structured details (item quantities, destinations, routing codes) from multiple sources within a single transaction, but the volume is bounded and standardized per document.",
+      "adequacy_evidence": "Current agents handle structured data extraction, consolidation, and form-filling reliably within a single episode, with minimal loss or distortion of relevant information.",
+      "_timestamp": "2026-04-06T04:34:06"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing work orders or shipping documents is typically driven by current transaction data (order details, shipment specs) and does not require recalling prior cases beyond what is already embedded in the current record.",
+      "adequacy_evidence": "Since the task is largely self-contained per instance and any needed history is stored in structured systems, current AI agents can access required data without needing sophisticated cross-session memory.",
+      "_timestamp": "2026-04-06T04:34:06"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing work orders, bills of lading, and shipping orders is primarily a text- and data-driven task involving structured information entry and formatting, with minimal reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based document preparation and structured data processing well, and no significant multimodal capability is required for competent performance.",
+      "_timestamp": "2026-04-06T04:34:07"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Preparing work orders, bills of lading, or shipping documents typically allows minutes rather than requiring instant responses, even in active warehouse settings.",
+      "adequacy_evidence": "Current AI agents can generate accurate documents well within these timeframes without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T04:34:08"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The documents are used by carriers, warehouse staff, and logistics partners who rely on their accuracy, but the preparer's identity is not central as long as documents meet standards.",
+      "adequacy_evidence": "Stakeholders already accept automated and system-generated shipping documents widely; AI-generated outputs would not face meaningful resistance if accurate.",
+      "_timestamp": "2026-04-06T04:34:09"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "These documents are highly structured with standardized fields (quantities, SKUs, addresses) that can be cross-checked against source systems (ERP, inventory databases), making most errors easy to detect through routine validation or reconciliation.",
+      "adequacy_evidence": "AI systems can generate these documents but may introduce mapping or data consistency errors, so routine verification against source records is still needed, though it is straightforward and not especially burdensome.",
+      "_timestamp": "2026-04-06T04:34:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from preparing shipping documents like work orders or bills of lading; such tasks are already commonly performed by software systems. While human oversight or signatures may be required in some contexts, this does not restrict AI from performing the preparation itself.",
+      "_timestamp": "2026-04-06T04:34:10"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in work orders or bills of lading can cause shipment delays, misrouting, or billing discrepancies, but these are typically correctable and rarely catastrophic after standard checks.",
+      "adequacy_evidence": "With structured data entry, validation rules, and human or system review, AI-generated documents can be reliably checked, leaving low residual risk at acceptable levels.",
+      "_timestamp": "2026-04-06T04:34:10"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

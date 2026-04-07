@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2141.00",
+  "task_id": 20738,
+  "task_statement": "Estimate costs or submit bids for engineering, construction, or extraction projects.",
+  "occupation_title": "Mechanical Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Cost estimation and bid preparation are typically done using digital plans, spreadsheets, and estimating software. However, many projects require site visits or physical inspections to gather accurate information before preparing the estimate or bid."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Cost estimation and bidding spans highly heterogeneous projects (different industries, materials, geographies, regulatory contexts, and market conditions), with many edge cases and context-specific cost drivers.",
+      "adequacy_evidence": "While there is substantial public and semi-structured data (textbooks, case studies, historical estimates), much high-quality signal (detailed bids, firm-specific cost models, negotiated outcomes) is proprietary, leaving some gaps that are only partially recoverable via synthesis or limited disclosures.",
+      "_timestamp": "2026-04-05T21:02:22"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate cost estimation and bidding require experiential judgment about uncertainties (e.g., site conditions, supplier reliability, labor productivity, risk contingencies) that are not fully captured in formal models or documented procedures.",
+      "adequacy_evidence": "AI agents can apply cost models and historical data but still struggle to calibrate context-specific risks and implicit market factors, leading to gaps in non-routine or high-uncertainty bids.",
+      "_timestamp": "2026-04-05T21:02:22"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Project plans and specifications provide a baseline, but estimators must interpret incomplete designs, client preferences, risk tolerances, and local conditions to produce competitive bids.",
+      "adequacy_evidence": "Current agents can process plans and historical cost data but often miss implicit factors like contractor strategy, risk contingencies, and stakeholder expectations without human guidance.",
+      "_timestamp": "2026-04-05T21:02:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation and bid preparation involve multi-step workflows (requirements analysis, quantity takeoffs, cost modeling, risk adjustments), but these steps are modular and partially decomposable rather than tightly interdependent in a single long chain.",
+      "adequacy_evidence": "LLM-based agents can handle multi-step estimation workflows with tools, but may show some degradation over longer sequences (e.g., missed constraints or inconsistencies across components) without careful orchestration and validation.",
+      "_timestamp": "2026-04-05T21:02:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Estimating costs or preparing bids requires integrating large volumes of heterogeneous information (drawings, specifications, material quantities, labor rates, timelines, and constraints) where missing details can materially affect estimates.",
+      "adequacy_evidence": "Current agents can manage large contexts with retrieval tools and structured workflows, but still show weaknesses in consistently tracking all interdependent quantities and assumptions without omissions or drift.",
+      "_timestamp": "2026-04-05T21:02:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Cost estimation and bid preparation for engineering or construction projects typically allow hours to days for analysis, data gathering, and review rather than requiring rapid or real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform detailed reasoning and iterative calculations well within these generous timeframes, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T21:02:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation and bidding benefit from historical project data, prior bids, supplier pricing trends, and lessons learned, but each bid can largely be executed using documented records and databases rather than rich evolving personal memory.",
+      "adequacy_evidence": "Current agents can leverage external databases and retrieval systems for past project data, but may inconsistently integrate or prioritize relevant historical context across instances without well-engineered memory pipelines.",
+      "_timestamp": "2026-04-05T21:02:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation often requires interpreting engineering drawings, CAD models, and site diagrams alongside textual specifications, making multimodal input meaningfully important but not always central.",
+      "adequacy_evidence": "Current agents can process many drawings and extract quantities, but struggle with complex, noisy, or highly detailed spatial/visual information, leading to moderate reliability gaps in real-world cases.",
+      "_timestamp": "2026-04-05T21:02:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Cost estimates and bids integrate complex assumptions (materials, labor, contingencies, site conditions) where errors can be subtle and may only surface during execution, requiring expert review and cross-checking against detailed project data.",
+      "adequacy_evidence": "Current AI systems can produce plausible estimates but often miss context-specific factors or make unjustified assumptions, requiring extensive expert validation and recalculation to ensure reliability.",
+      "_timestamp": "2026-04-05T21:02:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from assisting with or performing cost estimation or bid preparation. While licensed engineers may need to review or approve certain engineering deliverables, cost estimates and bids themselves are not legally restricted from AI involvement.",
+      "_timestamp": "2026-04-05T21:02:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Cost estimates and bids directly affect contract pricing, profitability, and project feasibility; even small residual errors can lead to large financial losses, legal disputes, or project failure.",
+      "adequacy_evidence": "With standard human review, benchmarking, and spreadsheet validation, many AI-generated errors can be caught, but models still risk subtle omissions or misjudgments (e.g., site conditions, contingencies) that leave non-trivial residual risk.",
+      "_timestamp": "2026-04-05T21:02:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Cost estimates and bids are evaluated by clients, procurement officers, and partners who rely on the credibility, accountability, and professional standing of the submitting engineer or firm.",
+      "adequacy_evidence": "While AI-assisted estimates are increasingly acceptable, stakeholders typically expect a human-led firm to stand behind bids; a fully autonomous AI agent would face trust and accountability concerns but could be accepted if overseen by licensed professionals.",
+      "_timestamp": "2026-04-05T21:02:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

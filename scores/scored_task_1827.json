@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1223.00",
+  "task_id": 1827,
+  "task_statement": "Analyze and evaluate patient data or test findings to diagnose nature or extent of mental disorder.",
+  "occupation_title": "Psychiatrists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Analyzing and evaluating patient records, assessments, and test results can often be done on a computer using electronic health records and reports. However, psychiatrists frequently rely on observations from in-person clinical evaluations or non-digital inputs that limit fully remote execution in some cases."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Psychiatric diagnosis spans highly heterogeneous patient presentations, including diverse cultural contexts, comorbidities, developmental stages, and rare disorders, making the instance distribution broad and long-tailed.",
+      "adequacy_evidence": "While there is substantial data in clinical notes, case studies, and diagnostic guidelines, much high-quality, process-level reasoning is embedded in private or restricted datasets, and nuanced edge cases are underrepresented though partially synthesizable.",
+      "_timestamp": "2026-04-06T00:46:37"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Psychiatric diagnosis requires integrating extended interview data, history, symptom evolution, and test findings across multiple interdependent steps where earlier interpretations shape later questioning and conclusions.",
+      "adequacy_evidence": "Frontier agents can manage multi-step reasoning but show some drift and inconsistency over long clinical-style evaluations, especially in maintaining coherent hypotheses across extended interactions.",
+      "_timestamp": "2026-04-06T00:46:37"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Psychiatric diagnosis relies heavily on nuanced clinical judgment\u2014interpreting subjective reports, affect, context, comorbidities, and longitudinal patterns that require experience-derived calibration beyond formal criteria.",
+      "adequacy_evidence": "Current agents can apply diagnostic criteria but lack reliable calibration for ambiguous, context-rich cases (e.g., differentiating disorders with overlapping symptoms, assessing credibility, cultural factors), leading to systematic gaps in expert-level discernment.",
+      "_timestamp": "2026-04-06T00:46:37"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Psychiatric diagnosis requires interpreting ambiguous, subjective, and context-dependent patient reports, behavioral cues, and histories, with criteria that are often latent and evolve through interaction.",
+      "adequacy_evidence": "Current AI agents struggle to infer nuanced mental states, reconcile conflicting or incomplete information, and iteratively refine diagnostic understanding in context-sensitive ways without substantial human guidance.",
+      "_timestamp": "2026-04-06T00:46:38"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Psychiatric diagnosis relies heavily on longitudinal patient history, including prior episodes, treatment responses, behavioral patterns, and evolving symptoms across many sessions.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured records, but often struggle with integrating nuanced, evolving psychosocial context and maintaining coherent, clinically meaningful longitudinal narratives over time.",
+      "_timestamp": "2026-04-06T00:46:38"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Psychiatric diagnosis relies not only on textual records but also on speech patterns, tone, facial expressions, and behavior observed during interviews, making audio/visual cues meaningfully important.",
+      "adequacy_evidence": "Current AI can process speech and some visual signals, but remains inconsistent in interpreting subtle affect, nonverbal cues, and complex cross-modal clinical context needed for reliable psychiatric assessment.",
+      "_timestamp": "2026-04-06T00:46:38"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Diagnosis requires integrating large volumes of heterogeneous within-episode information (patient history, symptoms, behavioral observations, test results, comorbidities), where missing or misweighting details can change conclusions.",
+      "adequacy_evidence": "Frontier agents can process long clinical contexts but still show reliability issues with selective attention, losing salient details or misprioritizing information in complex psychiatric cases.",
+      "_timestamp": "2026-04-06T00:46:38"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Psychiatric diagnosis typically occurs over clinical interviews and review of records where minutes to hours of deliberation are acceptable; there is no strict real-time latency requirement.",
+      "adequacy_evidence": "Current AI systems can operate well within these loose time constraints, allowing extended reasoning without quality degradation due to speed pressures.",
+      "_timestamp": "2026-04-06T00:46:39"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Psychiatric diagnosis relies on subjective interpretation of patient narratives, behavioral cues, and longitudinal patterns, with no definitive ground truth; errors can be subtle and may only become apparent over time or with clinical expertise.",
+      "adequacy_evidence": "Current AI systems can produce plausible but unreliable mental health assessments, and verifying their correctness requires extensive expert review and often additional patient interaction, making the checking burden high and unavoidable.",
+      "_timestamp": "2026-04-06T00:46:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Psychiatric diagnosis relies heavily on patient trust, disclosure, and acceptance of the clinician\u2019s authority and empathy, making stakeholder engagement central to task effectiveness.",
+      "adequacy_evidence": "Many patients are unlikely to trust or fully disclose sensitive mental health information to an AI, and clinician legitimacy is tightly linked to human judgment, creating strong resistance that would undermine diagnostic quality.",
+      "_timestamp": "2026-04-06T00:46:40"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Diagnosing mental disorders constitutes the practice of medicine, which by law requires a licensed physician (psychiatrist). AI systems cannot legally perform diagnoses independently or serve as the responsible decision-maker without licensed human oversight.",
+      "_timestamp": "2026-04-06T00:46:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Diagnostic errors in psychiatry can lead to inappropriate treatment (e.g., wrong medications), missed risk of self-harm or harm to others, and long-term deterioration, making even rare residual errors potentially severe.",
+      "adequacy_evidence": "Even with clinical oversight, current AI systems show instability in nuanced psychiatric judgment, risk assessment, and contextual interpretation, leaving residual errors that are too unpredictable and consequential for safe reliance.",
+      "_timestamp": "2026-04-06T00:46:40"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

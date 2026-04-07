@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1141.00",
+  "task_id": 1839,
+  "task_statement": "Maintain accurate, detailed reports and records.",
+  "occupation_title": "Registered Nurses",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Nurses typically maintain patient reports and records using electronic health record systems on computers, making the task largely digital. However, it is usually performed within clinical settings and may sometimes involve paper documentation or direct integration with in-person care activities."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Nursing documentation follows formal standards (e.g., SOAP notes, EHR fields), but what counts as sufficiently detailed or clinically relevant often depends on patient context, legal considerations, and evolving care priorities.",
+      "adequacy_evidence": "AI agents can follow templates and infer many documentation norms, but they still miss subtle clinical relevance, priority shifts, and liability-sensitive phrasing without human guidance.",
+      "_timestamp": "2026-04-05T22:59:04"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Nursing documentation spans different specialties, patient conditions, and care settings, but follows relatively standardized formats (e.g., SOAP notes, EHR templates) that bound the variation.",
+      "adequacy_evidence": "Large amounts of clinical documentation and guidelines exist, but much real-world EHR data is private and not fully accessible, leaving some gaps that can be partially filled with de-identified data and synthetic generation.",
+      "_timestamp": "2026-04-05T22:59:04"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much nursing documentation follows standardized formats and protocols, nurses must still use experience to judge what details are clinically salient, how to phrase observations, and when subtle changes warrant emphasis.",
+      "adequacy_evidence": "Current AI can handle structured documentation and common patterns, but it lacks reliable clinical judgment to consistently prioritize nuanced, context-dependent details across varied patient situations.",
+      "_timestamp": "2026-04-05T22:59:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Nursing documentation involves ongoing, shift-based entries that must remain consistent and accurate over time, but individual notes are often modular rather than tightly interdependent chains.",
+      "adequacy_evidence": "AI systems can handle multi-step documentation workflows, but over extended sequences may show drift in consistency, formatting, or detail retention, especially without strong state management.",
+      "_timestamp": "2026-04-05T22:59:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintaining nursing reports involves integrating large volumes of heterogeneous, time-sensitive patient data (vitals, medications, symptoms, interventions) where missing or misrecording details can affect care continuity.",
+      "adequacy_evidence": "Current agents can manage structured data and summarize records but still show weaknesses in reliably tracking all evolving details over long contexts, with some risk of omission or drift in compressed representations.",
+      "_timestamp": "2026-04-05T22:59:06"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining reports and records in nursing is primarily text and structured data entry (e.g., notes, vitals, medication logs) within electronic health records, with minimal reliance on direct multimodal input or output.",
+      "adequacy_evidence": "Current AI systems handle text and structured data generation and organization well, so there is no meaningful modality-related shortfall for this task.",
+      "_timestamp": "2026-04-05T22:59:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Nurses are expected to complete documentation promptly during or shortly after patient care, but the task typically allows seconds to minutes rather than requiring real-time instant output.",
+      "adequacy_evidence": "AI systems can generate and structure clinical documentation well within these time constraints without needing to truncate reasoning, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T22:59:07"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Nurses must maintain and update patient records across shifts and encounters, incorporating longitudinal histories, prior interventions, and evolving clinical status over time.",
+      "adequacy_evidence": "AI systems can integrate with EHRs and retrieve stored data, but maintaining coherent, contextually appropriate longitudinal state across varied systems and episodes still shows gaps in reliability and consistency.",
+      "_timestamp": "2026-04-05T22:59:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Nursing records integrate clinical observations, medication administration, and patient responses where errors can be subtle, context-dependent, and may not surface until later clinical review or adverse outcomes.",
+      "adequacy_evidence": "AI-generated documentation would require careful expert review against source data (e.g., vitals, orders, patient status) because errors or hallucinations can be clinically plausible yet incorrect, making them hard to reliably detect without thorough checking.",
+      "_timestamp": "2026-04-05T22:59:07"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Inaccurate nursing records can lead to medication errors, misinformed clinical decisions, and legal liability; even rare residual errors can have serious patient safety consequences.",
+      "adequacy_evidence": "While AI-generated documentation can be reviewed, subtle omissions or clinically significant misstatements may still slip through, leaving a moderate level of residual risk after typical quality checks.",
+      "_timestamp": "2026-04-05T22:59:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Nursing records are relied upon by physicians, other nurses, administrators, and regulators, and the credibility of the recorder (a licensed nurse) carries some importance for trust and accountability.",
+      "adequacy_evidence": "While stakeholders may accept AI-assisted documentation, many would be uneasy with fully autonomous AI-generated records without nurse oversight due to concerns about accountability, accuracy, and professional responsibility.",
+      "_timestamp": "2026-04-05T22:59:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Healthcare regulations require that licensed nurses are responsible for creating, reviewing, and authenticating patient records, but they do not explicitly prohibit AI from assisting in documentation. AI can be used as a tool, but final responsibility and sign-off must remain with a licensed professional, creating partial restriction.",
+      "_timestamp": "2026-04-05T22:59:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

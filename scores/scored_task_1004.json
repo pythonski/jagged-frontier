@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3121.00",
+  "task_id": 1004,
+  "task_statement": "Study legislation, arbitration decisions, and collective bargaining contracts to assess industry trends.",
+  "occupation_title": "Human Resources Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Reviewing legislation, arbitration decisions, and collective bargaining agreements primarily involves reading and analyzing documents and legal databases, which are widely available online and can be assessed entirely using a computer and internet access."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse and evolving legal sources across jurisdictions, industries, and contract types, with substantial variation in language, context, and precedent interpretation.",
+      "adequacy_evidence": "Large corpora of legislation and many arbitration decisions are publicly available with analytical examples, but collective bargaining agreements and some arbitration outcomes are often private or unevenly accessible, leaving partial gaps.",
+      "_timestamp": "2026-04-05T22:46:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis\u2014reviewing multiple legal and contractual documents and synthesizing trends\u2014but steps are loosely coupled and partial errors do not strongly cascade.",
+      "adequacy_evidence": "LLM-based agents can handle multi-document synthesis but show some degradation over long sequences (e.g., context loss, inconsistent weighting of sources), leading to moderate performance drift.",
+      "_timestamp": "2026-04-05T22:46:21"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing 'industry trends' from legal and contractual materials requires interpreting relevance, weighting signals, and inferring implicit HR priorities rather than following fully explicit criteria.",
+      "adequacy_evidence": "Current agents can synthesize patterns from such documents but often miss nuanced contextual signals or stakeholder-specific interpretations, requiring human guidance to refine what counts as a meaningful trend.",
+      "_timestamp": "2026-04-05T22:46:22"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing industry trends from legal and labor materials requires interpreting nuanced signals, weighting precedents, and understanding evolving labor relations context beyond explicit rules.",
+      "adequacy_evidence": "Current agents can synthesize and summarize patterns from such documents, but often lack calibrated judgment about which signals matter most in ambiguous or context-sensitive cases.",
+      "_timestamp": "2026-04-05T22:46:22"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Assessing legislation and industry trends is a deliberative research task where hours or longer turnaround is acceptable; there is no expectation of real-time responsiveness.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to retrieve, analyze, and synthesize legal and contractual information without meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-05T22:46:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task consists of analyzing written documents such as legislation, arbitration decisions, and contracts, which are fundamentally text-based sources.",
+      "adequacy_evidence": "Current AI systems handle text ingestion and analysis well, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-05T22:46:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing industry trends benefits from tracking prior legislation, rulings, and contract patterns over time, but each analysis can largely be reconstructed from external sources rather than requiring deep persistent state.",
+      "adequacy_evidence": "Current agents can use document stores and retrieval systems to maintain cross-session context, but they often miss nuanced continuity or fail to consistently surface the most relevant historical comparisons.",
+      "_timestamp": "2026-04-05T22:46:24"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal analytical research; outputs are consumed within the organization and do not depend on stakeholder interaction with or perception of the performer.",
+      "adequacy_evidence": "Since stakeholder acceptance is not central to this task, there is no meaningful resistance to AI performing it.",
+      "_timestamp": "2026-04-05T22:46:24"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Assessing legislation, arbitration decisions, and labor contracts requires nuanced legal and contextual interpretation; errors (e.g., misreading clauses or precedent) are often subtle and require domain expertise and cross-referencing to detect.",
+      "adequacy_evidence": "Current AI systems frequently misinterpret legal nuances or overgeneralize trends, and verifying their analyses demands careful expert review of primary sources, making the checking burden high and unavoidable.",
+      "_timestamp": "2026-04-05T22:46:24"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI systems from analyzing legislation, arbitration decisions, or collective bargaining agreements. While providing formal legal advice may require licensure, the task as described\u2014research and trend assessment\u2014can be performed by AI without regulatory restriction.",
+      "_timestamp": "2026-04-05T22:46:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in assessing legal and labor trends can misguide HR strategy or negotiations, but impacts are typically indirect and correctable rather than immediately severe or irreversible.",
+      "adequacy_evidence": "With standard review of sources and summaries, AI-generated analyses can be checked against primary documents, leaving residual risk at an acceptable level for strategic planning tasks.",
+      "_timestamp": "2026-04-05T22:46:25"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing large volumes of heterogeneous legal texts (statutes, arbitration rulings, contracts) and tracking nuanced provisions, timelines, and patterns where missing details can distort trend analysis.",
+      "adequacy_evidence": "Current agents can chunk, retrieve, and summarize large corpora with tooling, but still exhibit context loss and compression drift across many documents, leading to occasional missed or misweighted details.",
+      "_timestamp": "2026-04-05T22:46:25"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

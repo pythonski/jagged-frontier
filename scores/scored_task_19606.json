@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2051.00",
+  "task_id": 19606,
+  "task_statement": "Analyze manufacturing processes or byproducts to identify engineering solutions to minimize the output of carbon or other pollutants.",
+  "occupation_title": "Civil Engineers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Engineers often analyze process data, emissions reports, and models using software to identify pollution-reduction solutions. However, many cases also involve site visits, observation of manufacturing operations, or physical sampling to understand processes and byproducts."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly diverse manufacturing processes, materials, regulatory contexts, and site-specific conditions, creating a long-tailed distribution of cases requiring distinct engineering analyses.",
+      "adequacy_evidence": "While academic literature, case studies, and emissions data provide partial coverage, much detailed process data and optimization know-how are proprietary or sparsely documented, leaving gaps that must be bridged with synthesis or approximation.",
+      "_timestamp": "2026-04-06T00:00:01"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many pollution reduction approaches rely on established engineering principles and documented methods, effective solutions often require case-specific judgment about process tradeoffs, feasibility, and unintended impacts informed by experience.",
+      "adequacy_evidence": "Current AI can apply known frameworks and analyze process data, but it lacks consistent real-world calibration for nuanced, context-dependent tradeoffs and practical constraints encountered in non-routine industrial settings.",
+      "_timestamp": "2026-04-06T00:00:01"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Identifying engineering solutions to reduce emissions requires interpreting implicit constraints (cost, regulatory limits, site conditions, stakeholder priorities) and balancing tradeoffs that are rarely fully specified upfront.",
+      "adequacy_evidence": "Current agents can propose plausible analyses and solutions but often miss context-specific constraints or priorities, requiring human iteration to refine objectives and ensure alignment with real-world conditions.",
+      "_timestamp": "2026-04-06T00:00:02"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step analysis\u2014examining processes, identifying emission sources, and evaluating engineering interventions\u2014but these steps are moderately interdependent rather than tightly coupled over long horizons.",
+      "adequacy_evidence": "LLM-based agents can generally sustain performance across such multi-step analytical workflows, though some degradation can occur in maintaining consistency of assumptions and constraints across longer reasoning chains.",
+      "_timestamp": "2026-04-06T00:00:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves interpreting process diagrams, plant layouts, emissions measurements, and sensor data, not just text, though much reasoning can be documented textually.",
+      "adequacy_evidence": "Current agents can handle standard diagrams and structured data but are less reliable with complex, noisy industrial sensor streams or detailed spatial/process visualizations.",
+      "_timestamp": "2026-04-06T00:00:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This analysis is typically part of engineering studies or projects where timelines are hours to weeks, not real-time decision-making, allowing ample time for thorough reasoning.",
+      "adequacy_evidence": "Current AI systems can take the necessary time to perform detailed analysis without meaningful degradation from latency constraints, as speed is not a limiting factor.",
+      "_timestamp": "2026-04-06T00:00:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating process parameters, material flows, emissions data, and engineering constraints from multiple documents and analyses, but these are typically structured and bounded within a project scope.",
+      "adequacy_evidence": "Current agents can manage multi-source technical context with retrieval tools, but may lose or misweight details across long documents or complex process descriptions, requiring careful scaffolding.",
+      "_timestamp": "2026-04-06T00:00:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Projects often build on prior analyses of a facility\u2019s processes, emissions data, and previously attempted mitigation strategies, but many assessments can still be conducted as largely self-contained studies.",
+      "adequacy_evidence": "Current agents can store and retrieve project histories via external databases, but they may inconsistently surface relevant past decisions or contextual nuances across sessions without careful system design.",
+      "_timestamp": "2026-04-06T00:00:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Evaluating proposed pollution-reduction solutions requires domain expertise, process modeling, and often pilot testing or emissions measurements; errors may only surface after implementation or detailed analysis.",
+      "adequacy_evidence": "Current AI can suggest plausible engineering ideas but frequently lacks fidelity to specific plant conditions, so experts must rigorously validate assumptions, run simulations, and verify compliance, making verification effort substantial.",
+      "_timestamp": "2026-04-06T00:00:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no explicit prohibition on AI performing analytical tasks, but in civil engineering contexts, licensed Professional Engineers are typically required to review, approve, and take responsibility for engineering decisions, creating partial regulatory constraints on fully autonomous AI use.",
+      "_timestamp": "2026-04-06T00:00:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in emissions reduction analysis can lead to regulatory violations, environmental damage, and costly retrofits, so even small residual mistakes after review can have significant consequences.",
+      "adequacy_evidence": "With standard engineering review and validation, many AI errors can be caught, but subtle process interactions or edge cases may still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T00:00:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The analysis informs decisions by clients, regulators, and project teams, who rely on the engineer\u2019s recommendations, though direct interpersonal engagement is limited.",
+      "adequacy_evidence": "Stakeholders often require accountability and professional certification (e.g., licensed engineers), so AI-generated analyses may face moderate resistance or require human validation.",
+      "_timestamp": "2026-04-06T00:00:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

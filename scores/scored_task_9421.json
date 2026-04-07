@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9094.00",
+  "task_id": 9421,
+  "task_statement": "Produce medical reports, correspondence, records, patient-care information, statistics, medical research, and administrative material.",
+  "occupation_title": "Medical Transcriptionists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Producing medical reports, correspondence, and related materials for transcriptionists is done by typing, editing, and formatting documents from dictated recordings using computer software. The work can be completed entirely on a computer with internet access and does not require physical presence."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of the work follows standardized formats and medical terminology, transcriptionists must use experience to resolve unclear dictation, infer intended terms, and apply context-specific formatting and conventions.",
+      "adequacy_evidence": "Current AI can handle structured medical language well but still shows gaps in resolving ambiguous audio/text inputs and subtle context-dependent judgments, especially in noisy or non-standard cases.",
+      "_timestamp": "2026-04-06T00:56:00"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple medical specialties, document types (reports, correspondence, research), and formatting conventions, creating moderate diversity in language, structure, and terminology.",
+      "adequacy_evidence": "Large volumes of medical text and some dictation-transcription pairs exist, but much high-quality, process-revealing data (e.g., raw dictations with aligned outputs) is private, leaving some subdomains thin though partially recoverable via synthesis and fine-tuning.",
+      "_timestamp": "2026-04-06T00:56:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Medical transcription follows established formats and conventions, but requires interpreting physician dictation, resolving ambiguities in terminology, and applying context-specific formatting and documentation standards.",
+      "adequacy_evidence": "Current AI systems can reliably infer structure, apply templates, and resolve most contextual cues in medical dictation, with only occasional edge-case ambiguity requiring clarification.",
+      "_timestamp": "2026-04-06T00:56:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Tasks involve processing lengthy dictations and integrating numerous clinical details (terminology, patient data, formatting rules) where omissions or mix-ups can cause material errors.",
+      "adequacy_evidence": "Frontier agents can handle long contexts and structured transcription fairly well, but still exhibit occasional detail loss, misalignment, or drift in extended or information-dense cases.",
+      "_timestamp": "2026-04-06T00:56:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows such as interpreting source material, transcribing, formatting, and ensuring consistency across a document, but these steps are moderately bounded and not tightly interdependent over long horizons.",
+      "adequacy_evidence": "Frontier AI can generally maintain coherence over document-length outputs, though minor drift, formatting inconsistencies, or dropped constraints can appear in longer or more complex reports.",
+      "_timestamp": "2026-04-06T00:56:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Medical transcription often benefits from access to prior patient records, physician-specific formatting preferences, and historical reports, but many individual dictations can be completed with the information provided in the current encounter.",
+      "adequacy_evidence": "Current AI systems integrated with document storage and retrieval (e.g., EHR systems, template libraries) can reliably maintain and access cross-session context such as patient histories and formatting conventions.",
+      "_timestamp": "2026-04-06T00:56:02"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies significantly on converting spoken medical dictation (audio) into structured text, making audio-to-text transcription a core component, though outputs are primarily textual.",
+      "adequacy_evidence": "Current AI systems handle medical speech recognition well in clear conditions but still struggle with noisy audio, heavy accents, and specialized terminology, leading to nontrivial error rates.",
+      "_timestamp": "2026-04-06T00:56:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Medical transcription and report production typically allow minutes to hours (or longer) for completion, with no need for real-time or near-instant responses.",
+      "adequacy_evidence": "Current AI systems can generate high-quality drafts well within these relaxed timeframes, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T00:56:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The outputs are used by clinicians, administrators, and insurers who rely on accuracy, but the identity of the transcriptionist is not central to their acceptance.",
+      "adequacy_evidence": "AI-assisted transcription and medical documentation tools are already widely accepted, and stakeholders generally care about accuracy and compliance rather than whether a human or AI produced the text.",
+      "_timestamp": "2026-04-06T00:56:03"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in medical transcription (e.g., misheard terms, incorrect dosages, or patient details) can be subtle and require domain expertise and careful comparison to source audio to detect, with potentially serious consequences.",
+      "adequacy_evidence": "Current AI transcription systems still produce non-trivial errors in medical terminology, context interpretation, and formatting, requiring thorough human review to reliably catch mistakes before use.",
+      "_timestamp": "2026-04-06T00:56:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Medical reports and patient-care documentation directly inform clinical decisions, billing, and legal records, so even small residual errors (e.g., medication names, dosages, or findings) can have serious downstream consequences.",
+      "adequacy_evidence": "Modern AI transcription with structured QA and human review can catch most errors, but subtle clinical inaccuracies or context misinterpretations can still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T00:56:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws prohibiting AI from generating medical documentation or transcription outputs; tools can be used as long as HIPAA and data privacy requirements are met. No regulation mandates that only a licensed human must perform this specific task.",
+      "_timestamp": "2026-04-06T00:56:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

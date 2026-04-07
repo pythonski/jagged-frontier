@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1069.10",
+  "task_id": 17228,
+  "task_statement": "Serve as an offsite teleradiologist for facilities that do not have on-site radiologists.",
+  "occupation_title": "Hospitalists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Offsite teleradiology involves remotely reviewing and interpreting medical imaging transmitted digitally and communicating findings electronically, all of which can be done using a computer and internet connection."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Teleradiology requires nuanced visual pattern recognition, subtle abnormality detection, and context-sensitive interpretation that depend heavily on accumulated case experience and clinical judgment beyond explicit rules.",
+      "adequacy_evidence": "Current AI systems perform well on many imaging tasks but still show gaps in calibration for edge cases, ambiguous findings, and integrating clinical context, indicating a moderate shortfall in tacit judgment.",
+      "_timestamp": "2026-04-06T03:39:11"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Teleradiology spans many imaging modalities, body systems, patient populations, and rare pathologies, creating a highly heterogeneous and long-tailed distribution of cases.",
+      "adequacy_evidence": "Large corpora of medical images and reports exist, but much high-quality labeled data and expert reasoning traces are private or sparse, leaving gaps especially for rare conditions and nuanced diagnostic processes.",
+      "_timestamp": "2026-04-06T03:39:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Teleradiology requires integrating large imaging studies (often hundreds of slices), prior exams, clinical history, and comparison findings within a single read, where missing a detail can change diagnosis.",
+      "adequacy_evidence": "Current agents can process large contexts with tooling, but still struggle with reliably tracking all relevant details across extensive image series and associated metadata, leading to occasional omissions or drift.",
+      "_timestamp": "2026-04-06T03:39:12"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Each case involves a multi-step sequence (image review across slices, synthesis, report drafting, and possible clarification), but cases are largely independent rather than forming a single long, tightly coupled chain.",
+      "adequacy_evidence": "Frontier agents can handle per-case workflows with some consistency, but over extended sequences (e.g., many cases, iterative clarifications) they show mild drift and occasional missed constraints.",
+      "_timestamp": "2026-04-06T03:39:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Teleradiologists must often deliver reads within minutes, especially for urgent or ED studies, though not strictly real-time at sub-second latency.",
+      "adequacy_evidence": "Frontier AI systems can generate high-quality interpretations within seconds to under a minute, well within typical turnaround expectations without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T03:39:13"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Radiology reporting follows standardized goals (identify findings, provide impressions), but prioritization, clinical relevance, and communication of uncertainty depend on patient context and referring clinician needs.",
+      "adequacy_evidence": "Current AI can follow general reporting conventions but often misses subtle context-dependent priorities (e.g., incidental vs urgent findings) and requires human clarification or oversight to align with clinical intent.",
+      "_timestamp": "2026-04-06T03:39:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Radiologic interpretation directly drives diagnoses and urgent treatment decisions; even rare residual errors (e.g., missed hemorrhage, cancer) can cause severe or irreversible harm.",
+      "adequacy_evidence": "Current AI systems still exhibit non-negligible miss rates and unpredictable failure modes in edge cases, and even with human-style quality control, the remaining risk exceeds what is acceptable for autonomous diagnostic responsibility.",
+      "_timestamp": "2026-04-06T03:39:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Radiologic interpretation errors can be subtle (missed lesions, mischaracterized findings) and often require expert review or downstream clinical outcomes to detect, making verification inherently difficult and time-intensive.",
+      "adequacy_evidence": "Current AI systems still produce clinically significant misses and false positives in imaging interpretation, necessitating thorough expert overreads; reliable verification cannot be automated or made lightweight in practice.",
+      "_timestamp": "2026-04-06T03:39:14"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Radiologists often reference prior imaging studies and patient history across encounters, but this context is typically supplied via PACS/EHR systems rather than relying on the clinician\u2019s own longitudinal memory.",
+      "adequacy_evidence": "Current AI agents can reliably retrieve and use prior studies and records through integrated systems, so cross-session memory needs are largely met by existing infrastructure rather than agent-internal memory.",
+      "_timestamp": "2026-04-06T03:39:14"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Teleradiology fundamentally relies on interpreting complex medical images (e.g., CT, MRI, X-ray) and integrating visual findings with clinical context; text alone cannot substitute for image-based diagnosis.",
+      "adequacy_evidence": "While AI systems can analyze medical images in narrow settings, they remain unreliable for broad, high-stakes radiologic interpretation across modalities and edge cases, lacking consistent diagnostic accuracy and robustness.",
+      "_timestamp": "2026-04-06T03:39:14"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Clinicians depend on radiology interpretations for diagnosis and treatment decisions, and the radiologist\u2019s perceived expertise and legitimacy are central to trust and clinical action.",
+      "adequacy_evidence": "While AI-assisted radiology is gaining traction, many clinicians and institutions still require human radiologist oversight or sign-off, and full replacement by an AI-only teleradiologist would face notable but not insurmountable resistance.",
+      "_timestamp": "2026-04-06T03:39:14"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "U.S. medical practice laws require diagnostic radiology services to be performed and signed off by a licensed physician; AI systems cannot independently act as the legal provider of record. Current FDA frameworks allow AI as assistive tools, not autonomous teleradiologists, and credentialing, liability, and reimbursement rules all require a human licensee.",
+      "_timestamp": "2026-04-06T03:39:15"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

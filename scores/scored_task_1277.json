@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1251.00",
+  "task_id": 1277,
+  "task_statement": "Perform systems analysis and programming tasks to maintain and control the use of computer systems software as a systems programmer.",
+  "occupation_title": "Computer Programmers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Systems analysis and programming for system software are performed through code editing, debugging, and system monitoring tools on computers, which can be accessed remotely without physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Systems programming spans diverse operating systems, hardware configurations, legacy environments, and organization-specific infrastructures, producing a highly heterogeneous and long-tailed distribution of tasks and failure modes.",
+      "adequacy_evidence": "There is extensive public code, documentation, and debugging traces for many common environments, but significant gaps remain in proprietary systems, rare edge cases, and real-world incident data, which are only partially recoverable via synthesis or simulation.",
+      "_timestamp": "2026-04-06T04:20:18"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Systems programming often involves diagnosing subtle bugs, performance bottlenecks, and environment-specific issues that benefit from experience-based judgment beyond formal documentation.",
+      "adequacy_evidence": "Current agents can handle many standard debugging and configuration tasks but still struggle with nuanced, system-specific edge cases and lack the lived calibration from real-world operational contexts.",
+      "_timestamp": "2026-04-06T04:20:18"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintaining and controlling systems software involves interpreting implicit requirements from legacy code, organizational policies, performance constraints, and evolving system needs that are not always fully documented.",
+      "adequacy_evidence": "Current agents can infer many typical goals and constraints from codebases and documentation, but often miss organization-specific priorities or latent requirements, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-06T04:20:18"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Systems programming involves long, interdependent sequences such as analyzing system behavior, modifying low-level code, testing, debugging, and ensuring compatibility across components where early errors propagate downstream.",
+      "adequacy_evidence": "Frontier AI agents can manage multi-step coding workflows but show some degradation over extended sequences, including context loss, inconsistent assumptions, and error compounding in complex system-level tasks.",
+      "_timestamp": "2026-04-06T04:20:19"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintaining and controlling systems software requires ongoing awareness of system configurations, prior fixes, architecture decisions, and evolving project state across long time horizons.",
+      "adequacy_evidence": "Current agents can use external memory stores and version control histories, but they still show gaps in reliably retrieving and integrating long-range project context without careful scaffolding.",
+      "_timestamp": "2026-04-06T04:20:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Systems programming and analysis are overwhelmingly text-based, involving code, configuration files, logs, and documentation; multimodal inputs like images or audio are not integral to task execution.",
+      "adequacy_evidence": "Because the task is fundamentally text-in/text-out, current AI agents fully meet modality needs without relying on non-text capabilities.",
+      "_timestamp": "2026-04-06T04:20:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Systems analysis and programming tasks (e.g., debugging, writing code, maintaining systems software) typically allow minutes to hours for completion and do not require real-time responses.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to reason, test, and iterate within these loose latency constraints without meaningful degradation in output quality.",
+      "_timestamp": "2026-04-06T04:20:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Systems programming involves tracking large codebases, configurations, logs, and interdependent components, where missing a single dependency or state detail can cause system-level errors.",
+      "adequacy_evidence": "Tool-augmented agents can index and retrieve relevant code and state, but still struggle with maintaining coherent context across large, evolving codebases and multi-step debugging sessions.",
+      "_timestamp": "2026-04-06T04:20:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit or restrict AI systems from performing systems analysis or programming tasks. While organizations may impose internal controls, no enforceable regulation mandates a human to perform these functions.",
+      "_timestamp": "2026-04-06T04:20:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordination with internal stakeholders such as developers, IT staff, and system users who rely on the programmer\u2019s outputs, but interaction is typically technical and role-based rather than identity-sensitive.",
+      "adequacy_evidence": "In software engineering contexts, stakeholders are generally comfortable with AI-assisted or AI-driven contributions as long as performance is reliable, and AI use is already widely accepted in programming workflows.",
+      "_timestamp": "2026-04-06T04:20:21"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Systems programming involves low-level behavior, concurrency, performance, and environment-specific interactions where bugs can be subtle, latent, and only surface under specific conditions, requiring extensive testing, debugging, and expert review.",
+      "adequacy_evidence": "Current AI-generated systems code often contains logical, edge-case, and integration errors that are not immediately visible, necessitating thorough human-led testing, code review, and validation pipelines before safe deployment.",
+      "_timestamp": "2026-04-06T04:20:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Systems-level programming affects core OS functions, resource management, and security; even rare residual bugs can cause crashes, data loss, or vulnerabilities with wide downstream impact.",
+      "adequacy_evidence": "While testing, code review, and monitoring catch many issues, current AI systems still introduce subtle logic, concurrency, or security flaws that can slip through, leaving non-trivial residual risk.",
+      "_timestamp": "2026-04-06T04:20:22"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

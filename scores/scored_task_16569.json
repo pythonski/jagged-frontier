@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2199.11",
+  "task_id": 16569,
+  "task_statement": "Perform computer simulation of solar photovoltaic (PV) generation system performance or energy production to optimize efficiency.",
+  "occupation_title": "Solar Energy Systems Engineers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Computer simulation of PV system performance is conducted using specialized software and digital data, and can be performed entirely on a computer without physical presence or equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "PV performance simulation spans varied system designs, climates, irradiance patterns, and component configurations, but is largely governed by well-understood physical models and standardized toolchains.",
+      "adequacy_evidence": "Extensive public datasets, simulation software (e.g., NREL SAM, PVsyst), and detailed worked examples provide strong coverage, and synthetic generation via physics-based models can fill remaining gaps.",
+      "_timestamp": "2026-04-05T21:58:17"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (data input selection, parameter tuning, running simulations, and interpreting outputs), where consistency across steps matters but sequences are not extremely long or tightly coupled.",
+      "adequacy_evidence": "AI agents can generally manage these structured simulation workflows with tools, but may show some degradation in maintaining parameter consistency or tracking assumptions across longer iterative optimization cycles.",
+      "_timestamp": "2026-04-05T21:58:17"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "PV system performance simulations are typically run offline during design or analysis phases, where minutes to hours of computation are acceptable and expected.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to plan, configure, and execute simulations without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T21:58:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves managing multiple inputs (e.g., irradiance data, system parameters, component specs, time-series simulations) and intermediate results, requiring structured handling and some compression but typically within well-defined modeling frameworks.",
+      "adequacy_evidence": "Agents can offload most state to external tools (e.g., code, simulation software), but may still lose track of assumptions or parameter interactions across steps, leading to occasional context drift or mis-specified runs.",
+      "_timestamp": "2026-04-05T21:58:18"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While simulation goals like maximizing energy yield or efficiency are broadly defined, key criteria (e.g., cost tradeoffs, site constraints, degradation assumptions, grid interaction goals) are often context-dependent and not fully specified upfront.",
+      "adequacy_evidence": "Current agents can set up and run standard PV simulations and infer common objectives, but they often miss nuanced stakeholder priorities or implicit constraints without iterative human guidance.",
+      "_timestamp": "2026-04-05T21:58:18"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "PV system simulation work often involves iterative design refinement using prior model configurations, site data, and historical performance assumptions, but individual simulation runs can still be executed with self-contained inputs.",
+      "adequacy_evidence": "Current agents can store and retrieve prior project data via external tools or databases, but maintaining coherent, evolving project context across sessions is not fully reliable and requires structured integration.",
+      "_timestamp": "2026-04-05T21:58:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "PV performance simulation often uses spatial layouts, irradiance maps, and sometimes CAD or GIS data alongside numerical and textual inputs, making multimodal handling useful though not strictly essential.",
+      "adequacy_evidence": "Current agents can process structured data and basic visual inputs, but may struggle with complex spatial reasoning (e.g., shading from 3D layouts) or integrating detailed GIS/CAD data reliably.",
+      "_timestamp": "2026-04-05T21:58:19"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While core PV performance modeling relies on well-documented physics and standard tools (e.g., SAM, PVsyst), practitioners must apply experience-based judgment in selecting assumptions (e.g., derates, soiling, shading, weather normalization) and interpreting imperfect site data.",
+      "adequacy_evidence": "Current AI agents can execute standard simulations and apply documented heuristics, but they show gaps in nuanced calibration for atypical sites, messy real-world data, and subtle modeling tradeoffs that experienced engineers handle through case-based judgment.",
+      "_timestamp": "2026-04-05T21:58:19"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The simulation results are used by engineers, project developers, or clients to inform design decisions, so others do rely on the output, but the identity of the performer is not central.",
+      "adequacy_evidence": "Stakeholders in engineering contexts already widely accept software and automated simulation tools; an AI agent producing comparable results would face little to no resistance.",
+      "_timestamp": "2026-04-05T21:58:20"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in PV performance simulations can lead to suboptimal system design, reduced efficiency, or financial losses, but they are typically not safety-critical or irreversible and can be corrected in later project stages.",
+      "adequacy_evidence": "Simulation outputs can be cross-validated with established physical models, software tools, and empirical benchmarks, so remaining AI errors after standard checks are unlikely to pose unacceptable residual risk.",
+      "_timestamp": "2026-04-05T21:58:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from performing PV system performance simulations. While licensed engineers may need to review or approve final designs, using AI tools for simulation itself is unrestricted.",
+      "_timestamp": "2026-04-05T21:58:21"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "PV performance simulations depend on numerous interacting assumptions (irradiance data, shading, degradation, system losses), and errors can be subtle, only detectable through expert review or comparison to empirical benchmarks and long-term data.",
+      "adequacy_evidence": "AI-generated simulations may mis-specify inputs, models, or assumptions in ways that are not immediately obvious, requiring expert validation and cross-checking with trusted tools or datasets to ensure reliability.",
+      "_timestamp": "2026-04-05T21:58:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

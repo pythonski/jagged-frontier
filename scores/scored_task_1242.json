@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2011.02",
+  "task_id": 1242,
+  "task_statement": "Examine records and interview workers to ensure recording of transactions and compliance with laws and regulations.",
+  "occupation_title": "Accountants and Auditors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Examining financial records and interviewing workers can often be done remotely using digital records, email, and video calls. However, audits and compliance checks sometimes involve on-site visits, access to physical documents, or in-person interviews."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Auditing requires interpreting regulatory standards in context, probing inconsistencies through interviews, and exercising judgment about what constitutes adequate evidence and compliance, which is often implicit and case-specific.",
+      "adequacy_evidence": "Current agents can reference standards and suggest audit procedures, but often miss nuanced cues from interviews and context-dependent red flags, requiring human guidance to fully resolve ambiguity.",
+      "_timestamp": "2026-04-06T04:46:14"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Auditing and compliance assessment require professional skepticism, interpreting ambiguous records, and judging credibility during interviews\u2014skills built through experience and not fully codified in rules.",
+      "adequacy_evidence": "Current agents can apply rules and flag anomalies but lack robust calibration in interpreting nuanced human behavior, contextual red flags, and subtle fraud indicators across varied real-world cases.",
+      "_timestamp": "2026-04-06T04:46:15"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multiple steps\u2014reviewing records, conducting interviews, and cross-checking for compliance\u2014but these are relatively modular rather than tightly interdependent across long sequences.",
+      "adequacy_evidence": "AI agents can handle multi-step workflows with tooling, but over extended audits may show some drift in tracking constraints or integrating findings across steps, leading to moderate degradation.",
+      "_timestamp": "2026-04-06T04:46:15"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse industries, regulatory regimes, transaction types, and informal interview contexts, with many edge cases (e.g., fraud patterns, internal control variations) creating a long-tailed distribution.",
+      "adequacy_evidence": "While accounting standards, audit procedures, and some case examples are well documented, much real-world audit evidence (workpapers, interview dynamics, firm-specific practices) is proprietary, though partially approximable via synthetic data and training.",
+      "_timestamp": "2026-04-06T04:46:16"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Examining records and interviewing workers for compliance is typically conducted over extended periods (hours to days), with no need for immediate real-time responses.",
+      "adequacy_evidence": "AI systems can take sufficient time to analyze documents and generate questions or summaries without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T04:46:16"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Detecting errors or noncompliance in financial records and interviews often requires deep domain expertise, cross-referencing multiple sources, and identifying subtle inconsistencies or fraud patterns that are not immediately observable.",
+      "adequacy_evidence": "Current AI systems can miss nuanced discrepancies or misinterpret context in records and interviews, so their outputs would require thorough expert review and corroboration, making verification effort substantial and unavoidable.",
+      "_timestamp": "2026-04-06T04:46:17"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Audits and compliance checks often build on prior periods\u2019 findings, client history, and evolving understanding of internal controls, but much of this information is documented in external records rather than requiring implicit memory.",
+      "adequacy_evidence": "Current AI systems can persist and retrieve structured records and prior audit materials, but they can inconsistently maintain and surface nuanced, evolving context (e.g., prior judgment calls or informal insights) across engagements.",
+      "_timestamp": "2026-04-06T04:46:17"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing financial records and conducting interviews, both of which are fundamentally text-based once documents are digitized and speech is transcribed.",
+      "adequacy_evidence": "Current AI systems can reliably process text documents and transcribed interviews, and handle basic document digitization, so multimodal limitations do not meaningfully constrain performance.",
+      "_timestamp": "2026-04-06T04:46:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large volumes of heterogeneous information\u2014financial records, transaction logs, and interview responses\u2014where missing or misaligning details can affect compliance judgments.",
+      "adequacy_evidence": "Agents can use retrieval and summarization tools to manage large document sets, but still show weaknesses in consistently tracking cross-source details and maintaining precise alignment across complex evidence within a single episode.",
+      "_timestamp": "2026-04-06T04:46:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Missed misstatements or compliance violations can lead to financial restatements, legal penalties, or undetected fraud, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "Even with human review and standard audit checks, AI systems may still miss subtle fraud signals or misinterpret nuanced regulatory contexts, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T04:46:18"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Auditors must interview employees and assess compliance, where their perceived authority, credibility, and professional judgment directly influence cooperation and candor.",
+      "adequacy_evidence": "While some data review could be accepted, workers and organizations may be less forthcoming or trusting with an AI interviewer, and professional norms still favor human auditors, though resistance is not absolute.",
+      "_timestamp": "2026-04-06T04:46:18"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Auditing functions tied to compliance (e.g., issuing audit opinions for public companies) legally require licensed human CPAs and registered audit firms under PCAOB and state laws. While AI can assist, it cannot autonomously perform or take legal responsibility for these duties.",
+      "_timestamp": "2026-04-06T04:46:19"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

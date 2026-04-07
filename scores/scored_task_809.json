@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9041.02",
+  "task_id": 809,
+  "task_statement": "Modify, update, and process existing policies and claims to reflect any change in beneficiary, amount of coverage, or type of insurance.",
+  "occupation_title": "Insurance Claims and Policy Processing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Most policy and claim modifications are performed in insurance administration software and digital records systems, but some cases still involve handling mailed forms or physical documentation that requires in-office processing."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple policy types, change scenarios (beneficiary, coverage amount, policy type), and insurer-specific rules, but follows largely standardized procedures and forms.",
+      "adequacy_evidence": "While general procedures and examples are well-documented and learnable, much real-world data (claims systems, policy records) is proprietary, leaving some edge cases underrepresented but partially recoverable via synthetic data and documentation.",
+      "_timestamp": "2026-04-05T20:36:53"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely governed by explicit business rules, standardized forms, and clear procedural guidelines for updating policy and claims information.",
+      "adequacy_evidence": "Current AI agents can reliably follow structured rules and apply updates consistently when given proper system access and validation checks.",
+      "_timestamp": "2026-04-05T20:36:55"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task follows structured procedures with defined policy rules, but some interpretation is needed to correctly apply changes based on policy terms, documentation, and edge cases.",
+      "adequacy_evidence": "Current AI agents can reliably infer intent and apply updates using structured inputs, business rules, and validation checks, with minimal difficulty resolving the limited ambiguity involved.",
+      "_timestamp": "2026-04-05T20:36:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple structured data fields (policy details, beneficiary changes, coverage amounts) and ensuring consistency across documents within a single processing episode, but the information is typically well-bounded and form-based.",
+      "adequacy_evidence": "Current AI agents integrated with structured data systems and retrieval tools can reliably manage, update, and cross-check these bounded records without significant context loss or memory drift.",
+      "_timestamp": "2026-04-05T20:36:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multi-step workflows (reviewing policy details, applying updates, recalculating coverage, and recording changes) where consistency matters, but steps are relatively standardized and not deeply interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably execute structured, rule-based sequences with minimal degradation, especially when supported by validation checks and transactional systems.",
+      "_timestamp": "2026-04-05T20:36:56"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves processing structured and unstructured text data (policy details, beneficiary information, coverage amounts) within digital systems, with minimal reliance on images or other modalities.",
+      "adequacy_evidence": "Current AI systems handle text-based data extraction, form processing, and even basic document OCR reliably, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-05T20:36:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Processing policy and claim updates requires accessing prior records (policy details, past changes, beneficiary history), but this information is typically structured and stored in external systems rather than relying on implicit memory.",
+      "adequacy_evidence": "Current AI agents can reliably use databases, retrieval systems, and audit trails to access and maintain cross-session state, so persistent memory needs are well-supported.",
+      "_timestamp": "2026-04-05T20:36:56"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Policy and claims processing tasks are typically handled in batch workflows or within standard business turnaround times, where minutes to hours are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform data extraction, validation, and updates well within these time windows without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-05T20:36:57"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Updates involve structured data fields and business rules that can be cross-checked against source documents and system validations, but require careful review to catch mismatches or rule violations.",
+      "adequacy_evidence": "AI can perform many updates correctly, but still makes occasional mapping or interpretation errors, so routine human or rule-based verification remains necessary to ensure accuracy.",
+      "_timestamp": "2026-04-05T20:36:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in updating policies or claims can lead to financial discrepancies, coverage issues, or customer dissatisfaction, but they are typically detectable and correctable without catastrophic consequences.",
+      "adequacy_evidence": "Given structured data, rule-based validation, and standard review processes, AI-generated updates can be effectively checked, leaving minimal residual risk after normal quality control.",
+      "_timestamp": "2026-04-05T20:36:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task affects policyholders and beneficiaries, but interaction is typically indirect and transactional, with limited reliance on the clerk\u2019s personal identity or rapport.",
+      "adequacy_evidence": "Insurance customers already accept automated and digital processing systems for policy updates, and do not strongly differentiate between human and AI handling for routine administrative changes.",
+      "_timestamp": "2026-04-05T20:36:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Insurance operations are regulated and often require accountability, auditability, and in some cases licensed oversight for policy changes, but there is no explicit prohibition on AI performing clerical processing tasks. Existing rules create partial constraints around supervision and responsibility rather than banning AI use outright.",
+      "_timestamp": "2026-04-05T20:36:59"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

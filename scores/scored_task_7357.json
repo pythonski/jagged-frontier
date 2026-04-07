@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2071.01",
+  "task_id": 7357,
+  "task_statement": "Open accounts for clients and disburse funds from clients' accounts to creditors.",
+  "occupation_title": "Credit Counselors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Opening client accounts and distributing payments to creditors is typically done through banking or financial management software and electronic transfers. However, some cases may involve handling physical paperwork or checks, requiring limited in-person processing."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a range of client financial situations, creditor types, and institutional procedures, but follows relatively standardized workflows (account setup, authorization, payment routing) with bounded variation.",
+      "adequacy_evidence": "Extensive documentation, financial service APIs, compliance guidelines, and transaction-processing examples are available, and realistic scenarios can be readily simulated or synthesized, providing strong coverage of the task distribution.",
+      "_timestamp": "2026-04-06T04:37:31"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Opening accounts and disbursing funds follows standardized financial procedures and compliance rules, but some case-based judgment is needed for handling client-specific constraints, prioritizing creditors, or detecting irregularities.",
+      "adequacy_evidence": "Well-scaffolded agents can reliably execute rule-based workflows and incorporate policy guidelines, with minimal gaps limited to uncommon edge cases that can be escalated.",
+      "_timestamp": "2026-04-06T04:37:31"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves some context-dependent judgment such as interpreting client authorization, prioritizing creditors, and adhering to varying institutional and regulatory requirements, but much of the process is governed by standardized procedures.",
+      "adequacy_evidence": "Current agents can follow structured workflows and infer basic intent, but they often struggle with nuanced client-specific constraints, exceptions, and compliance subtleties without human clarification.",
+      "_timestamp": "2026-04-06T04:37:32"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Opening accounts and disbursing funds involves a multi-step workflow (collecting client data, verifying details, setting up accounts, coordinating payments) where steps are interdependent but not deeply long-horizon.",
+      "adequacy_evidence": "Current agents can handle structured multi-step financial workflows with tooling, but may show some degradation (e.g., missed constraints or minor inconsistencies) over extended sequences without careful orchestration.",
+      "_timestamp": "2026-04-06T04:37:33"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Opening accounts and disbursing funds is primarily a text- and data-driven process involving forms, financial records, and digital systems, with minimal reliance on non-text modalities.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based financial workflows and structured data processing without needing advanced multimodal capabilities.",
+      "_timestamp": "2026-04-06T04:37:33"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Opening accounts and managing disbursements requires maintaining client financial records, account details, and transaction history across multiple interactions, but not deeply complex longitudinal narratives.",
+      "adequacy_evidence": "Current AI systems integrated with standard databases and CRM tools can reliably store, retrieve, and update client account and transaction data across sessions with minimal gaps.",
+      "_timestamp": "2026-04-06T04:37:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Transactions can be checked through account records, confirmations, and reconciliation processes, but require careful review of client details, authorization, and amounts to catch errors.",
+      "adequacy_evidence": "AI systems may mis-handle edge cases or data entry details, so human or procedural verification (e.g., audits, confirmations) remains necessary but is manageable with standard controls.",
+      "_timestamp": "2026-04-06T04:37:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in opening accounts or disbursing client funds can lead to misallocated payments, fraud exposure, regulatory violations, and financial harm that may be difficult to reverse, so residual risk must be extremely low.",
+      "adequacy_evidence": "While layered controls (identity verification, transaction limits, human approval) can mitigate many risks, AI systems still pose non-negligible risks of subtle errors or edge-case failures that leave some residual risk even after standard checks.",
+      "_timestamp": "2026-04-06T04:37:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves managing client identity data, account details, balances, and creditor payment instructions within a session, requiring coordination across multiple structured data elements but not at extreme scale.",
+      "adequacy_evidence": "Current AI agents with tool integration and structured data handling can reliably track and update this level of information within an episode, with minimal loss or misretrieval.",
+      "_timestamp": "2026-04-06T04:37:36"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Opening accounts and disbursing funds typically occur within structured workflows where responses are expected within seconds to a few minutes, especially during client interactions or transaction processing.",
+      "adequacy_evidence": "Current AI agents can complete form processing, verification steps, and transaction orchestration well within these time bounds without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T04:37:36"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task directly involves clients and creditors who must trust the agent to securely handle accounts and financial transactions, making perceived legitimacy and reliability central.",
+      "adequacy_evidence": "While automated financial services are increasingly common, many clients may still hesitate to entrust sensitive account management and fund disbursement to an AI, especially in a counseling context involving trust and financial vulnerability.",
+      "_timestamp": "2026-04-06T04:37:36"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Financial services tasks like account opening and fund disbursement are governed by KYC/AML, consumer protection, and licensing rules that require accountable, regulated entities and human oversight, but they do not explicitly prohibit AI use. The regulatory framework creates partial constraints and ambiguity rather than a clear ban on AI performing the task.",
+      "_timestamp": "2026-04-06T04:37:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

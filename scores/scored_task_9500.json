@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "35-2012.00",
+  "task_id": 9500,
+  "task_statement": "Determine meal prices, based on calculations of ingredient prices.",
+  "occupation_title": "Cooks, Institution and Cafeteria",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Calculating meal prices from ingredient costs can be done using spreadsheets or other software with supplier price data, requiring only a computer and internet. Physical presence in the kitchen is not necessary for performing the calculation itself."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining meal prices from ingredient costs involves short, straightforward calculations (summing costs, applying markups) with minimal step interdependence.",
+      "adequacy_evidence": "AI systems handle basic multi-step arithmetic and cost aggregation reliably without degradation over such short sequences.",
+      "_timestamp": "2026-04-05T22:24:36"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Beyond simple cost summation, cooks often incorporate experience-based judgments about portion sizes, waste, overhead allocation, and acceptable price points for their specific clientele.",
+      "adequacy_evidence": "Current AI agents can reliably apply standard costing formulas and incorporate heuristic adjustments (e.g., markup, waste factors) when specified, covering most practical cases with minimal loss of judgment quality.",
+      "_timestamp": "2026-04-05T22:24:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Meal pricing calculations are typically based on current ingredient costs and standard markup rules, making each instance largely self-contained without needing historical context.",
+      "adequacy_evidence": "Since little to no cross-session memory is required, existing AI systems can fully meet the task's needs without relying on persistent state.",
+      "_timestamp": "2026-04-05T22:24:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple ingredients, quantities, and unit costs within a single pricing calculation, requiring some aggregation and intermediate state management but on a limited scale.",
+      "adequacy_evidence": "Current AI systems with tool use (e.g., spreadsheets or code execution) reliably manage and compute over such structured, small-to-moderate datasets without losing context.",
+      "_timestamp": "2026-04-05T22:24:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining meal prices from ingredient costs is primarily a numerical and text-based calculation task that does not inherently require image, audio, or other non-text inputs or outputs.",
+      "adequacy_evidence": "Current AI systems can fully handle text and numerical reasoning for cost calculations without reliance on multimodal capabilities.",
+      "_timestamp": "2026-04-05T22:24:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While ingredient cost calculations are explicit, setting meal prices also depends on implicit factors like portion sizes, overhead, institutional budgets, and pricing policies.",
+      "adequacy_evidence": "Given these factors are typically documented or can be elicited, current AI agents can reliably infer and apply them with minimal ambiguity in most settings.",
+      "_timestamp": "2026-04-05T22:24:38"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Small pricing errors mainly affect margins or customer perception and are easily corrected; consequences are low-stakes and reversible.",
+      "adequacy_evidence": "AI systems perform cost calculations reliably, and any residual errors after basic checks would be minor and acceptable in this context.",
+      "_timestamp": "2026-04-05T22:24:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Meal pricing based on ingredient costs is straightforward to audit by recalculating inputs, checking unit prices, and verifying margins with simple arithmetic or spreadsheets.",
+      "adequacy_evidence": "AI systems perform these calculations reliably, and any mistakes are easily caught with quick recomputation or automated checks, so verification burden is minimal.",
+      "_timestamp": "2026-04-05T22:24:39"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Meal pricing based on ingredient costs is typically done during planning or periodic menu updates, where minutes or longer are acceptable for calculation and adjustment.",
+      "adequacy_evidence": "AI systems can easily perform cost calculations and pricing decisions well within generous time budgets, with no meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T22:24:40"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations in the US that prohibit or restrict AI from calculating meal prices based on ingredient costs in institutional or cafeteria settings; this is an internal business decision task.",
+      "_timestamp": "2026-04-05T22:24:40"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining meal prices from ingredient costs is an internal calculation task; outputs are used operationally and do not require direct stakeholder interaction or trust in the performer\u2019s identity.",
+      "adequacy_evidence": "Since there are no meaningful external stakeholders for this task, acceptance of an AI agent is not a limiting factor.",
+      "_timestamp": "2026-04-05T22:24:40"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Meal pricing spans some variability (ingredient sourcing, portion sizes, overhead allocation, institutional policies), but follows broadly standardized cost-plus and recipe-costing patterns.",
+      "adequacy_evidence": "There is abundant accessible data (recipes with cost breakdowns, food service pricing guides) and the reasoning process can be easily synthesized, making coverage of relevant cases straightforward for current AI systems.",
+      "_timestamp": "2026-04-06T11:26:34"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

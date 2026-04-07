@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-6014.00",
+  "task_id": 2805,
+  "task_statement": "Conduct searches to find needed information, using such sources as the Internet.",
+  "occupation_title": "Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Searching for information using Internet sources can be entirely performed on a computer with internet access and does not require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Conducting information searches primarily relies on explicit techniques such as keyword selection, source filtering, and iterative query refinement, which are well-documented and procedural.",
+      "adequacy_evidence": "Current AI agents reliably perform search, query reformulation, and source evaluation using codified heuristics, with little need for experience-based judgment beyond what is already captured in training and tools.",
+      "_timestamp": "2026-04-06T00:31:06"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a variety of information needs (e.g., scheduling details, vendor lookup, policy queries) across domains, but follows broadly similar search-and-filter patterns rather than highly specialized long-tail cases.",
+      "adequacy_evidence": "There is abundant training data (web corpora, search interactions, tutorials, synthetic browsing tasks) that captures both queries and step-by-step search strategies, making representative coverage readily achievable.",
+      "_timestamp": "2026-04-06T00:31:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task hinges on interpreting what information is 'needed,' including relevance, credibility, and scope, which are often implicit and context-dependent rather than fully specified.",
+      "adequacy_evidence": "Current agents can usually infer intent from context and refine queries, but they still often miss nuanced relevance criteria or require iteration to align with unstated expectations.",
+      "_timestamp": "2026-04-06T00:31:07"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task typically involves iterative querying, refining search terms, and reviewing multiple sources, but sequences are relatively short and loosely coupled rather than deeply interdependent.",
+      "adequacy_evidence": "Frontier AI agents can sustain coherent multi-step search and retrieval workflows with minimal degradation over the short to moderate sequences required for information gathering.",
+      "_timestamp": "2026-04-06T00:31:08"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking queries, scanning multiple sources, and retaining relevant snippets, but the information volume is typically moderate and can be iteratively managed.",
+      "adequacy_evidence": "Current agents handle multi-source retrieval and short-term context well with tools like search and summarization, with minimal loss of relevant information within a single episode.",
+      "_timestamp": "2026-04-06T00:31:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Individual search tasks are typically self-contained, with queries defined by the immediate information need rather than requiring accumulated context from prior searches.",
+      "adequacy_evidence": "Since the task does not depend on cross-session memory, current agents' ability to optionally store and reuse preferences is more than sufficient.",
+      "_timestamp": "2026-04-06T00:31:09"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Conducting information searches is primarily text-based, involving queries, reading web pages, and extracting written information; multimodal inputs are not essential to core performance.",
+      "adequacy_evidence": "Current AI agents handle text-based search, retrieval, and summarization effectively, and any occasional image or media handling is non-essential and already adequately supported.",
+      "_timestamp": "2026-04-06T00:31:09"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Administrative information searches are typically expected within seconds to a few minutes, supporting workflow efficiency but not requiring instant real-time responses.",
+      "adequacy_evidence": "LLM-based agents with browsing and retrieval tools can execute searches and synthesize results well within this time window without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T00:31:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Information searches for administrative support are generally low-stakes and easily double-checked; minor inaccuracies are unlikely to cause severe or irreversible harm.",
+      "adequacy_evidence": "Current AI systems, combined with routine verification (e.g., source checking), leave minimal residual risk for this task and are sufficient for typical administrative use.",
+      "_timestamp": "2026-04-06T00:31:10"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements that prohibit AI systems from conducting information searches on the Internet. While general data privacy or organizational policies may govern how information is accessed or used, they do not restrict AI from performing the search task itself.",
+      "_timestamp": "2026-04-06T00:31:11"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal information-gathering activity with no direct stakeholder interaction; outputs are consumed within the organization without regard to who performed the search.",
+      "adequacy_evidence": "Because there are no relevant external stakeholders for this task, acceptance of AI is not a constraint and does not affect task effectiveness.",
+      "_timestamp": "2026-04-06T00:31:11"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Search results and retrieved information can typically be verified quickly by checking source links, cross-referencing multiple websites, or confirming recency and credibility, making errors easy to spot.",
+      "adequacy_evidence": "AI agents may misinterpret queries, select low-quality sources, or hallucinate details, so users still need to review sources and confirm accuracy, though verification is straightforward.",
+      "_timestamp": "2026-04-06T00:31:11"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

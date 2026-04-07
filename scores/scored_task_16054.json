@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2099.04",
+  "task_id": 16054,
+  "task_statement": "Create and maintain logs, records, or databases of information about fraudulent activity.",
+  "occupation_title": "Fraud Examiners, Investigators and Analysts",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Maintaining logs or databases of fraud activity is typically done using digital case management systems, spreadsheets, or databases, but some organizations may still maintain or update accompanying physical case files or paper records."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While logging fraud activity has clear general goals, important details like what constitutes 'fraud,' which attributes to capture, and formatting/compliance requirements depend on organizational policies and regulatory context.",
+      "adequacy_evidence": "Current agents can propose reasonable schemas and adapt through iteration, but they often miss organization-specific definitions, evolving criteria, and implicit reporting expectations without human guidance.",
+      "_timestamp": "2026-04-06T05:33:03"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Fraud activity spans diverse schemes (financial, insurance, cyber, etc.), requiring logs to accommodate varied case details, but the structure of recordkeeping itself is relatively standardized across contexts.",
+      "adequacy_evidence": "There is abundant accessible data (case reports, compliance logs, database schemas, investigative documentation) demonstrating how to structure and maintain such records, and synthetic examples can readily cover edge cases.",
+      "_timestamp": "2026-04-06T05:33:04"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While much of logging and maintaining fraud records follows structured schemas and documented procedures, practitioners often apply experience-based judgment when categorizing ambiguous activities or determining relevance and detail level.",
+      "adequacy_evidence": "Current AI systems handle standard classification and record-keeping well but show gaps in nuanced, context-sensitive judgment for borderline or evolving fraud patterns that typically rely on practitioner experience.",
+      "_timestamp": "2026-04-06T05:33:04"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves aggregating and organizing information from multiple sources (e.g., transaction records, reports, evidence) into structured logs or databases, requiring moderate within-episode tracking and consolidation.",
+      "adequacy_evidence": "Current AI systems with database tools and retrieval mechanisms can reliably manage, structure, and update this level of information within a session without significant loss or drift.",
+      "_timestamp": "2026-04-06T05:33:05"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing, structured updates to logs or databases where consistency in formatting, categorization, and linkage matters over time, but individual entries are often relatively modular rather than tightly interdependent.",
+      "adequacy_evidence": "Modern AI agents with database tools and schemas can reliably maintain consistency across extended logging sequences, with minimal degradation when proper validation and structure are in place.",
+      "_timestamp": "2026-04-06T05:33:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "The task is inherently longitudinal, requiring persistent accumulation, updating, and retrieval of records about fraudulent activities across many cases and time periods.",
+      "adequacy_evidence": "Current AI systems can reliably use external databases, case management systems, and retrieval pipelines to store and access cross-session information, with mature infrastructure supporting persistent state management.",
+      "_timestamp": "2026-04-06T05:33:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Creating and maintaining logs or databases of fraudulent activity is primarily a text and structured-data task, involving written descriptions, categorical fields, and numerical entries.",
+      "adequacy_evidence": "Current AI agents handle text and structured data entry, transformation, and database maintenance reliably, with no meaningful multimodal limitations for this task.",
+      "_timestamp": "2026-04-06T05:33:05"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in fraud logs can mislead investigations, affect case prioritization, or compromise evidence trails, but many issues are discoverable and correctable during downstream review or audits.",
+      "adequacy_evidence": "Even with quality control, AI may introduce subtle misclassifications, omissions, or inconsistencies that are not always caught, leaving a moderate level of residual risk for investigative use.",
+      "_timestamp": "2026-04-06T05:33:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining logs and databases of fraudulent activity is typically asynchronous and administrative, with updates acceptable on the scale of minutes to hours rather than requiring immediate response.",
+      "adequacy_evidence": "Current AI systems can generate, update, and structure records \u0628\u0633\u0631\u0639\u0629 well within these relaxed time constraints without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T05:33:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily an internal record-keeping function; outputs are databases or logs consumed impersonally by systems or internal staff, with no reliance on the creator\u2019s identity.",
+      "adequacy_evidence": "Since stakeholders do not meaningfully interact with or evaluate the performer, acceptance of AI is not a factor and would not affect task effectiveness.",
+      "_timestamp": "2026-04-06T05:33:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from creating or maintaining fraud-related logs or databases. While data handling must comply with privacy and security regulations (e.g., GLBA, HIPAA), these govern how data is managed, not whether AI can perform the task.",
+      "_timestamp": "2026-04-06T05:33:07"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Entries can be checked against source documents, transaction records, and audit trails, but ensuring completeness, correct categorization, and linkage across cases requires domain expertise and careful review.",
+      "adequacy_evidence": "AI systems can structure and populate logs but may introduce subtle errors (e.g., misclassification, omissions, incorrect entity linking), requiring consistent human verification though not prohibitively difficult to detect.",
+      "_timestamp": "2026-04-06T05:33:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4021.00",
+  "task_id": 11286,
+  "task_statement": "Obtain written authorization to access required medical information.",
+  "occupation_title": "Correspondence Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Authorization can often be obtained through electronic forms, email, or e-signature systems, allowing the process to be handled entirely online. However, many organizations still require or receive signed paper consent forms via mail or fax, introducing a physical document component in some cases."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves a short sequence of coordinated steps (identifying required information, contacting the appropriate party, sending forms, and confirming receipt), but these steps are not deeply interdependent or long-running.",
+      "adequacy_evidence": "Current AI agents can reliably manage brief multi-step workflows like drafting requests, tracking responses, and following up without significant degradation over such limited sequences.",
+      "_timestamp": "2026-04-05T23:25:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves identifying the correct authorization form, scope of information, and applicable privacy requirements (e.g., HIPAA), which depend on context like jurisdiction, provider policies, and purpose of access.",
+      "adequacy_evidence": "Agents can usually infer standard requirements and generate appropriate requests or forms, but they may miss nuanced context (e.g., special restrictions, provider-specific procedures), requiring human correction.",
+      "_timestamp": "2026-04-05T23:25:11"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderate variation across healthcare providers, jurisdictions, and patient situations (e.g., different consent forms, legal requirements, and communication contexts) but follows standardized processes like HIPAA authorization procedures.",
+      "adequacy_evidence": "There is abundant accessible data including authorization templates, compliance guidelines, and documented workflows, and synthetic generation can cover variations, providing strong representative training coverage.",
+      "_timestamp": "2026-04-05T23:25:11"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task generally follows standardized procedures (e.g., HIPAA-compliant forms and authorization workflows) but may involve minor judgment in handling incomplete requests or identifying the correct parties.",
+      "adequacy_evidence": "Current AI systems can reliably follow templates, apply rules, and handle routine variations, covering most of the modest tacit judgment required in practice.",
+      "_timestamp": "2026-04-05T23:25:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking patient identifiers, authorization requirements, and correspondence details, but the information volume is modest and structured (forms, templates, records).",
+      "adequacy_evidence": "Current agents can reliably manage and organize this level of structured, within-episode information using tools and memory buffers without significant loss or drift.",
+      "_timestamp": "2026-04-05T23:25:12"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily text-based, involving drafting, sending, and receiving written authorization forms or correspondence; any physical documents can be handled as text via standard digitization.",
+      "adequacy_evidence": "Current AI systems with OCR and document handling can fully process the minimal non-text elements (e.g., scanned signatures) involved, with no meaningful performance gap.",
+      "_timestamp": "2026-04-05T23:25:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Obtaining written authorization typically involves drafting requests, sending forms, and waiting for responses, with turnaround times measured in hours to days rather than seconds.",
+      "adequacy_evidence": "AI systems can generate and process authorization requests well within these loose time constraints, with no meaningful degradation from latency considerations.",
+      "_timestamp": "2026-04-05T23:25:13"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "HIPAA and related regulations require valid patient authorization (e.g., a signed form) but do not mandate that a human must request or process it. AI systems can be used to generate, send, and collect authorization forms as long as compliance requirements (e.g., consent, identity verification) are met.",
+      "_timestamp": "2026-04-05T23:25:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verification involves ensuring the authorization is properly completed (correct patient, scope, signatures, and HIPAA compliance), which requires some domain knowledge and careful review but is generally checklist-driven.",
+      "adequacy_evidence": "AI can draft or process authorization requests, but may miss specific compliance or formatting requirements, so human review is still needed to catch moderate but detectable errors.",
+      "_timestamp": "2026-04-05T23:25:14"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Clerks often need to track prior requests, follow-ups, and authorization status across interactions, but each authorization is largely tied to a specific case rather than requiring deep longitudinal history.",
+      "adequacy_evidence": "Existing AI systems integrated with standard databases/CRMs can reliably store and retrieve case histories and authorization statuses across sessions, with little technical limitation.",
+      "_timestamp": "2026-04-05T23:25:14"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires patients or authorized parties to trust the requester and sign sensitive medical release forms, where legitimacy and perceived authority of the requester matter.",
+      "adequacy_evidence": "While AI-generated requests could be acceptable if clearly tied to a legitimate organization, some individuals may hesitate to grant medical access to an AI agent, creating moderate resistance.",
+      "_timestamp": "2026-04-05T23:25:14"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Errors in obtaining or documenting authorization for medical information can lead to serious legal and privacy violations (e.g., HIPAA breaches), making even rare residual errors potentially severe.",
+      "adequacy_evidence": "This task typically involves standardized forms and explicit verification steps (identity, signatures, completeness), so with normal quality control, AI-generated outputs can be reliably checked and residual risk kept low.",
+      "_timestamp": "2026-04-05T23:25:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

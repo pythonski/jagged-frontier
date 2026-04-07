@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9121.01",
+  "task_id": 15598,
+  "task_statement": "Order drugs or devices necessary for study completion.",
+  "occupation_title": "Clinical Research Coordinators",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Placing orders for study drugs or devices is typically done through electronic procurement systems, vendor portals, email, or phone, all of which can be handled remotely via computer and internet without physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Study protocols, sponsor requirements, and site constraints define much of what to order, but coordinators must interpret inventory levels, timing, substitutions, and vendor specifics that are not fully explicit.",
+      "adequacy_evidence": "Agents can extract requirements from protocols and track inventory, but often miss site-specific constraints or implicit preferences, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-05T22:26:03"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task varies across study protocols, institutional procurement systems, drug/device types, and regulatory constraints, creating moderate diversity in workflows and edge cases.",
+      "adequacy_evidence": "While general procedures and SOPs are well-documented and can be simulated, many real instances depend on proprietary systems, vendor-specific processes, and institution-specific approvals that are not fully represented in accessible training data.",
+      "_timestamp": "2026-04-05T22:26:03"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While ordering follows protocol specifications and sponsor guidelines, coordinators rely on experience to anticipate supply needs, vendor reliability, and timing issues that are not fully captured in formal procedures.",
+      "adequacy_evidence": "Agents can follow protocols and inventory rules, but may lack practical calibration around edge cases like supply disruptions, implicit site preferences, or nuanced coordination with vendors and sponsors.",
+      "_timestamp": "2026-04-05T22:26:03"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Ordering study drugs/devices requires tracking protocol specifications, dosing schedules, inventory levels, vendor requirements, and regulatory constraints within a single workflow, but the information is structured and bounded.",
+      "adequacy_evidence": "Agents can manage these inputs using retrieval and structured tools, but may occasionally miss or misprioritize details (e.g., protocol nuances or inventory status) without careful scaffolding.",
+      "_timestamp": "2026-04-05T22:26:04"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering drugs or devices primarily involves text-based workflows such as reviewing protocols, completing requisition forms, and interacting with ordering systems; non-text modalities are not central.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based ordering processes, and the minimal multimodal elements (e.g., product images) are not necessary for task completion.",
+      "_timestamp": "2026-04-05T22:26:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step workflow (reviewing protocol requirements, selecting approved vendors, placing orders, tracking shipments, and documenting compliance), where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or tightly coupled.",
+      "adequacy_evidence": "LLM-based agents can generally manage these procedural workflows with tools, but may exhibit some degradation over longer sequences, such as missed constraints or tracking errors without careful orchestration.",
+      "_timestamp": "2026-04-05T22:26:05"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Ordering study drugs or devices is an administrative/procurement task typically handled over hours or days, with no need for immediate or real-time responses.",
+      "adequacy_evidence": "Current AI agents can perform the necessary coordination, documentation, and ordering steps well within acceptable timeframes without any quality-speed tradeoff.",
+      "_timestamp": "2026-04-05T22:26:05"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Ordering requires awareness of ongoing study needs, current inventory levels, prior orders, and protocol-specific requirements accumulated over time, but does not demand deeply complex longitudinal histories.",
+      "adequacy_evidence": "Modern AI agents can reliably integrate with inventory, procurement, and study management systems to persist and retrieve relevant cross-session data, making this level of memory need well-supported.",
+      "_timestamp": "2026-04-05T22:26:06"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Orders must match study protocols, dosing schedules, device specifications, and regulatory requirements, requiring knowledgeable cross-checking against study documents and inventories, but discrepancies are typically detectable through review.",
+      "adequacy_evidence": "AI can assist with drafting orders but may misinterpret protocol details or select incorrect specifications, so human verification against source documents remains necessary and non-trivial.",
+      "_timestamp": "2026-04-05T22:26:06"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Ordering incorrect drugs/devices or quantities can compromise patient safety, violate study protocols, and jeopardize regulatory compliance, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "With standard controls like approval workflows, inventory systems, and protocol checks, many AI errors would be caught, but occasional mismatches (e.g., protocol nuances or supplier constraints) could still slip through and pose moderate residual risk.",
+      "_timestamp": "2026-04-05T22:26:06"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Ordering drugs (and often investigational devices) typically requires authorization by a licensed investigator or clinician, with legal requirements for prescriptions, signatures, and accountability that an AI cannot fulfill. These are explicit regulatory and licensure constraints that prevent autonomous AI execution.",
+      "_timestamp": "2026-04-05T22:26:07"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves interacting with vendors, pharmacies, or institutional procurement systems that rely on authorized personnel to place orders, so stakeholders do engage with and depend on the performer's role.",
+      "adequacy_evidence": "Automated procurement systems are already common, but full acceptance of an AI agent is limited by requirements for human authorization and accountability, leading to moderate resistance without human oversight.",
+      "_timestamp": "2026-04-05T22:26:07"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

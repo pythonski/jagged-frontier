@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-1022.01",
+  "task_id": 16296,
+  "task_statement": "Compute, retrace, or adjust existing surveys of features such as highway alignments, property boundaries, utilities, control and other surveys to match the ground elevation-dependent grids, geodetic grids, or property boundaries and to ensure accuracy and continuity of data used in engineering, surveying, or construction projects.",
+  "occupation_title": "Geodetic Surveyors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Computing, retracing, and adjusting existing survey data is typically done using GIS, CAD, and geodetic processing software on a computer. The task uses previously collected data and does not require field presence or physical equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of survey types (highway alignments, property boundaries, geodetic grids) and varying terrain and coordinate systems, but follows established geodetic and surveying principles rather than an extremely long-tailed distribution.",
+      "adequacy_evidence": "There is substantial coverage in textbooks, standards (e.g., NGS, GIS workflows), and worked examples, but real-world edge cases (legacy data inconsistencies, local regulations, project-specific constraints) are often proprietary or under-documented.",
+      "_timestamp": "2026-04-05T22:45:30"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While core procedures (coordinate transformations, datum alignment, error adjustment) are well-defined, surveyors must interpret project specifications, tolerances, and reconcile discrepancies between datasets and real-world conditions.",
+      "adequacy_evidence": "Current agents can follow formal geodetic rules and standards, but often struggle to resolve conflicting inputs, implicit project priorities, or context-specific tolerances without human guidance.",
+      "_timestamp": "2026-04-05T22:45:31"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on established geodetic formulas and procedures, but practitioners must apply experience-based judgment when reconciling discrepancies between surveys, selecting control points, and handling local anomalies or measurement error.",
+      "adequacy_evidence": "Current AI systems can execute transformations and adjustments but lack consistent calibration for resolving real-world inconsistencies and context-specific judgment in non-routine survey reconciliation scenarios.",
+      "_timestamp": "2026-04-05T22:45:31"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step transformations, recalculations, and consistency checks across survey datasets where each step (e.g., coordinate adjustments, grid alignment, continuity validation) depends on prior outputs, creating tightly coupled sequences.",
+      "adequacy_evidence": "LLM-based agents with geospatial tools can execute structured workflows reliably, but over long sequences they can exhibit some error propagation or lose constraints without careful orchestration and validation.",
+      "_timestamp": "2026-04-05T22:45:32"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "This task requires managing large volumes of precise spatial data (coordinates, control points, multiple survey layers, transformations between grids) where small omissions or misalignments can cause significant downstream errors.",
+      "adequacy_evidence": "Agents can leverage external tools (GIS, CAD, databases) to handle large datasets, but they still show moderate weaknesses in reliably tracking all constraints and transformations without drift or missed details.",
+      "_timestamp": "2026-04-05T22:45:33"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Geodetic survey computations and adjustments are typically performed in office or field workflows where minutes to hours are acceptable, with no strict real-time requirement.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to perform multi-step geospatial calculations and checks without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T22:45:33"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on spatial data, maps, coordinate systems, elevation models, and survey measurements, requiring interpretation and generation of geospatial representations beyond text.",
+      "adequacy_evidence": "Current AI agents can process GIS and spatial data with tooling, but struggle with high-precision alignment, complex geodetic transformations, and nuanced spatial reasoning across heterogeneous survey inputs.",
+      "_timestamp": "2026-04-05T22:45:33"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Survey adjustments often rely on prior measurements, control networks, and historical project data, but these are typically stored in external files and databases rather than requiring implicit memory across sessions.",
+      "adequacy_evidence": "Current AI systems can reliably use external storage, retrieval systems, and project databases to persist and access cross-session information, largely meeting the task's longitudinal data needs.",
+      "_timestamp": "2026-04-05T22:45:33"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Ensuring accuracy and continuity in geodetic surveys involves detecting subtle spatial, mathematical, and datum-related inconsistencies that often require expert review, field validation, and cross-referencing with control data.",
+      "adequacy_evidence": "Current AI systems can perform calculations but are prone to subtle geospatial or transformation errors, and verifying these outputs demands significant expert effort and often external validation, making unverified use risky.",
+      "_timestamp": "2026-04-05T22:45:34"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in adjusted or retraced survey data can propagate into construction misalignment, legal boundary disputes, and infrastructure failures, so even rare residual inaccuracies can have serious, costly, and sometimes irreversible consequences.",
+      "adequacy_evidence": "While standard surveying checks (e.g., redundancy, closure, cross-validation) can catch many issues, AI systems may still introduce subtle geodetic or transformation errors that are hard to detect, leaving a moderate level of residual risk after quality control.",
+      "_timestamp": "2026-04-05T22:45:34"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Survey adjustments feed into legally and technically sensitive engineering and property boundary determinations that must be accepted by engineers, regulators, and clients, often requiring a licensed surveyor\u2019s authority and sign-off.",
+      "adequacy_evidence": "Stakeholders typically require accountable, licensed human professionals for survey validation; an AI agent alone would not be accepted for legal certification or liability-bearing roles, limiting trust and usability.",
+      "_timestamp": "2026-04-05T22:45:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State surveying laws generally require that surveying work, including computations and adjustments of survey data used for legal or engineering purposes, be performed under the supervision of and certified by a licensed Professional Land Surveyor. This creates an explicit legal requirement for human oversight and sign-off, preventing fully autonomous AI performance of the task.",
+      "_timestamp": "2026-04-05T22:45:35"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

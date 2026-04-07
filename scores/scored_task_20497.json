@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2072.00",
+  "task_id": 20497,
+  "task_statement": "Operate computer-assisted engineering or design software or equipment to perform electronics engineering tasks.",
+  "occupation_title": "Electronics Engineers, Except Computer",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Operating computer-assisted engineering or design software (e.g., CAD, simulation, circuit design tools) is performed entirely on a computer and can be done remotely; any required equipment is typically software-based or accessible via a computer interface."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans many tools (EDA, PCB design, simulation packages) and application domains (RF, embedded systems, power electronics), creating a highly heterogeneous and long-tailed distribution of workflows and edge cases.",
+      "adequacy_evidence": "There is extensive public documentation, tutorials, and example projects for major tools, but many real-world design processes, proprietary workflows, and edge-case scenarios are not well-represented in accessible training data.",
+      "_timestamp": "2026-04-05T22:42:52"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Using engineering design and simulation tools requires interpreting outputs, choosing modeling assumptions, and tuning parameters based on practical experience and domain-specific judgment beyond explicit instructions.",
+      "adequacy_evidence": "Current agents can follow documented workflows and suggest reasonable configurations, but they lack consistent calibration in nuanced tradeoffs, edge-case modeling decisions, and context-sensitive interpretation of results.",
+      "_timestamp": "2026-04-05T22:42:53"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Using computer-assisted engineering tools involves multi-step workflows (e.g., schematic design, simulation, debugging, iteration), where outputs from earlier steps feed into later ones but are often modular and checkpointed within software environments.",
+      "adequacy_evidence": "AI agents can generally manage these structured tool-based sequences, but over longer workflows they show some degradation such as losing constraints or making integration errors across steps.",
+      "_timestamp": "2026-04-05T22:42:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Using engineering/design software typically involves working from partially specified requirements (performance targets, constraints, trade-offs) that require interpretation and domain judgment to implement correctly.",
+      "adequacy_evidence": "Current agents can follow explicit specifications in tools but often miss implicit engineering constraints or intent, requiring iterative human guidance to refine designs.",
+      "_timestamp": "2026-04-05T22:42:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Operating EDA/CAD tools requires tracking large schematics, component parameters, constraints, simulation settings, and interdependent design states where missing a detail can cause functional errors.",
+      "adequacy_evidence": "Agents can offload much state to external tools and retrieve on demand, but still show context loss and imperfect retrieval/compression when managing complex, evolving designs within a session.",
+      "_timestamp": "2026-04-05T22:42:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Electronics engineering design tools rely heavily on visual schematics, PCB layouts, and waveform plots, requiring interpretation of spatial and graphical information alongside textual parameters.",
+      "adequacy_evidence": "Current AI agents can interpret and generate basic diagrams and visuals, but struggle with complex, fine-grained CAD environments and precise spatial reasoning needed for advanced electronics design workflows.",
+      "_timestamp": "2026-04-05T22:42:54"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Electronics engineering work in CAD/EDA tools (e.g., circuit design, simulation, PCB layout) typically allows minutes to hours for completion, with no strict real-time responsiveness requirement.",
+      "adequacy_evidence": "AI agents can take sufficient time for extended reasoning and tool use without impacting usability, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T22:42:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Electronics engineering design work typically spans multiple sessions, requiring reuse of prior schematics, design constraints, simulation results, and project context stored in files or repositories.",
+      "adequacy_evidence": "Current agents can leverage external storage (files, version control, databases) to persist and retrieve context, but they still show gaps in reliably recalling and integrating relevant prior state across complex, evolving projects.",
+      "_timestamp": "2026-04-05T22:42:55"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Operating engineering or design software is primarily an internal, technical activity where outputs are evaluated on correctness and functionality, not on who or what produced them.",
+      "adequacy_evidence": "Stakeholders (e.g., team members or managers) are typically indifferent to whether outputs come from a human or AI as long as technical standards are met, and AI-assisted tools are already widely accepted in this workflow.",
+      "_timestamp": "2026-04-05T22:42:56"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "EDA tools provide automated checks (e.g., design rule checks, simulations), but many errors in schematics, layouts, or parameter choices require expert review and may only surface under specific conditions or later testing.",
+      "adequacy_evidence": "AI-generated designs can pass basic automated checks yet still contain subtle flaws, so engineers must perform simulations, reviews, and validation steps, creating a consistent but manageable verification burden.",
+      "_timestamp": "2026-04-05T22:42:56"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from operating engineering or design software for electronics tasks. While licensed engineers may be required to review or sign off on certain work products, the use of AI tools in performing the underlying tasks is not legally restricted.",
+      "_timestamp": "2026-04-05T22:42:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in electronics engineering design (e.g., schematic, PCB layout, or simulation setup) can lead to device failure, safety hazards, or costly manufacturing defects, so even rare residual mistakes can have major downstream consequences.",
+      "adequacy_evidence": "While simulation, rule checks, and human review catch many issues, AI systems still exhibit occasional subtle design or parameter errors that can pass automated checks, leaving a non-trivial residual risk in high-stakes applications.",
+      "_timestamp": "2026-04-05T22:42:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

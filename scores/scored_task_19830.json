@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5011.01",
+  "task_id": 19830,
+  "task_statement": "Arrange for transport, using a variety of modes, such as rail, short sea shipping, air, or roadways, to minimize carbon emissions or other environmental impacts.",
+  "occupation_title": "Freight Forwarders",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Arranging transport modes and optimizing for environmental impact is typically done through logistics software, email, and online carrier booking systems without needing physical presence. The task primarily involves digital coordination, research, and scheduling."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Minimizing environmental impact requires balancing implicit tradeoffs (cost, transit time, client preferences, available routes, regulatory constraints), which are often not fully specified upfront.",
+      "adequacy_evidence": "Current agents can propose low-emission routing strategies but often need iterative clarification to align with unstated priorities and constraints, occasionally missing nuanced stakeholder preferences.",
+      "_timestamp": "2026-04-06T02:14:36"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting transport modes to minimize environmental impact involves tradeoffs among cost, timing, routing constraints, and carrier practices that often rely on experiential judgment and familiarity with real-world logistics nuances.",
+      "adequacy_evidence": "AI agents can optimize routes and estimate emissions using available data, but they lack consistent calibration for edge cases like unreliable carriers, informal practices, or rapidly changing local conditions that experienced forwarders handle.",
+      "_timestamp": "2026-04-06T02:14:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple shipment options, constraints (cost, timing, emissions), routing details, and mode comparisons within a single planning episode, but the information scope is structured and bounded rather than massive.",
+      "adequacy_evidence": "Current agents can handle multi-constraint logistics planning with tools, but may lose or inconsistently weight details (e.g., emissions vs. cost tradeoffs) across steps without careful orchestration or external state tracking.",
+      "_timestamp": "2026-04-06T02:14:37"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Arranging multimodal freight transport involves coordinating several interdependent steps (mode selection, routing, scheduling, emissions tradeoffs), but the sequences are typically bounded and decomposable rather than deeply long-horizon.",
+      "adequacy_evidence": "Current agents can manage multi-step logistics planning with tools, but may lose track of constraints (e.g., emissions vs. cost tradeoffs) or introduce inconsistencies across steps as plans grow more complex.",
+      "_timestamp": "2026-04-06T02:14:37"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves analyzing schedules, routes, costs, and emissions data, which are typically available in structured or text-based formats; visual or sensory modalities are not essential.",
+      "adequacy_evidence": "Current AI agents can effectively process and reason over text and structured logistics data, with minimal need for multimodal capabilities in standard freight planning scenarios.",
+      "_timestamp": "2026-04-06T02:14:38"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Arranging freight transport to optimize environmental impact is a planning task that typically unfolds over minutes to hours, with time for comparing routes, modes, and constraints rather than requiring immediate responses.",
+      "adequacy_evidence": "Current AI agents can perform multi-step optimization and data gathering well within these time windows, so extended reasoning does not conflict with latency expectations.",
+      "_timestamp": "2026-04-06T02:14:38"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous scenarios across geographies, transport modes, regulatory regimes, carrier options, and evolving emissions data, with many context-specific constraints and edge cases.",
+      "adequacy_evidence": "While logistics, routing, and emissions estimation data are widely available and can be simulated, key real-world distributions (e.g., proprietary carrier data, negotiated contracts, real-time disruptions) are partially inaccessible, leaving some gaps that are only partially recoverable via synthesis.",
+      "_timestamp": "2026-04-06T02:14:38"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Freight forwarders benefit from retaining client preferences, prior routing decisions, carrier performance, and sustainability targets across shipments, but many routing decisions can still be made per-shipment with current data.",
+      "adequacy_evidence": "Current AI systems with CRM and logistics integrations can store and retrieve such history, but maintaining consistently structured, up-to-date cross-session context (e.g., evolving emissions goals or carrier reliability) can be uneven across deployments.",
+      "_timestamp": "2026-04-06T02:14:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are licensing and registration requirements for freight forwarders (e.g., FMC licensing for ocean freight), but these apply to the legal entity, not to the use of AI tools. No explicit laws prohibit AI from arranging transport under a licensed operator\u2019s authority.",
+      "_timestamp": "2026-04-06T02:14:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordinating with shippers, carriers, and clients who must accept routing and transport decisions, but interactions are largely transactional and performance-driven rather than identity-dependent.",
+      "adequacy_evidence": "Logistics planning is already heavily automated via transport management systems, and stakeholders generally accept software-driven decisions if they meet cost, timing, and environmental goals.",
+      "_timestamp": "2026-04-06T02:14:40"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying correctness requires checking routing feasibility, carrier options, schedules, and emissions calculations, which involve domain data and tools but are not inherently opaque or unobservable.",
+      "adequacy_evidence": "Current AI can propose plausible routes but may misestimate emissions or overlook constraints, so human or software-based verification is still needed at a moderate level.",
+      "_timestamp": "2026-04-06T02:14:40"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in selecting transport modes or routes mainly lead to higher emissions, costs, or missed optimization targets, but are typically reversible or correctable and rarely cause severe downstream harm.",
+      "adequacy_evidence": "AI-supported plans can be checked against known routes, emissions calculators, and constraints; after such review, remaining errors are unlikely to pose significant residual risk.",
+      "_timestamp": "2026-04-06T02:14:40"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

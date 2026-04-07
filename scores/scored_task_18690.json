@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1181.00",
+  "task_id": 18690,
+  "task_statement": "Maintain patient records at all stages, including initial and subsequent evaluation and treatment activities.",
+  "occupation_title": "Audiologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Maintaining patient records is typically done in electronic health record systems on a computer, but some clinics still use or supplement with paper charts or in-person documentation processes, so not all instances are fully digital."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Maintaining patient records involves structured documentation standards but also requires some clinical judgment in selecting, summarizing, and contextualizing relevant patient information across evaluations and treatments.",
+      "adequacy_evidence": "Current AI systems can reliably follow documentation protocols and capture clinically relevant details when provided with inputs, showing minimal gaps in the level of tacit judgment required for most record-keeping tasks.",
+      "_timestamp": "2026-04-06T02:59:00"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Patient record maintenance spans varied cases (different hearing conditions, treatment plans, and longitudinal updates) but follows standardized medical documentation formats and workflows.",
+      "adequacy_evidence": "While clinical documentation practices are well-documented and partially available via de-identified records and templates, full real-world coverage is limited by privacy constraints and uneven access to detailed longitudinal patient data.",
+      "_timestamp": "2026-04-06T02:59:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintaining audiology patient records follows structured clinical and regulatory standards, but requires judgment about what details are clinically relevant, how to summarize findings, and how to document evolving treatment context.",
+      "adequacy_evidence": "Current AI systems can generally infer documentation structure and content from templates and guidelines, but they still miss nuanced clinical priorities or implicit expectations, requiring human review and correction.",
+      "_timestamp": "2026-04-06T02:59:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Maintaining patient records spans long, longitudinal sequences across multiple visits, requiring consistent updates, accurate carryover of prior information, and integration of new evaluations and treatments over time.",
+      "adequacy_evidence": "AI systems can manage structured record updates and maintain coherence within sessions, but over extended, multi-episode timelines they can exhibit drift, miss context, or inconsistently integrate prior information without robust external memory systems.",
+      "_timestamp": "2026-04-06T02:59:01"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintaining patient records requires integrating multiple data types (case history, audiometric test results, treatment notes) and updating them consistently within an episode, but the information is typically structured and bounded within standard clinical workflows.",
+      "adequacy_evidence": "Current agents can handle structured data entry and retrieval with tool support, but may still lose or misprioritize relevant details across updates or compress clinical nuances imperfectly during longer interactions.",
+      "_timestamp": "2026-04-06T02:59:02"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Audiology records often include non-text artifacts such as audiograms, tympanometry graphs, and other diagnostic visualizations that must be interpreted and documented alongside text notes.",
+      "adequacy_evidence": "Current agents can process and generate structured records and interpret many medical visuals, but reliability drops for nuanced or low-quality diagnostic graphs and precise clinical interpretation.",
+      "_timestamp": "2026-04-06T02:59:02"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Audiologists must track longitudinal patient data across many visits, including hearing test results, device fittings, adjustments, and treatment history, all of which depend on persistent cross-session records.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured patient records via EHR integrations, but interoperability gaps, context fragmentation, and occasional retrieval failures still create moderate limitations.",
+      "_timestamp": "2026-04-06T02:59:02"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Maintaining patient records is typically done during or after clinical encounters with flexibility for minutes to hours; it does not require immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can generate and update structured clinical documentation well within acceptable timeframes, with no meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-06T02:59:02"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Healthcare regulations (e.g., HIPAA, state licensure laws) require licensed providers to be responsible for patient records and ensure privacy and accuracy, but do not prohibit use of AI systems as tools. This creates partial restriction since AI cannot independently fulfill the legal responsibility without clinician oversight.",
+      "_timestamp": "2026-04-06T02:59:03"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Patient records are used by clinicians and may be accessed by patients, so stakeholders rely on the output, but the identity of who maintains the record is not central to its usefulness.",
+      "adequacy_evidence": "AI-assisted medical record systems are increasingly accepted, though some patients and providers have concerns about privacy and accuracy, leading to moderate but not prohibitive resistance.",
+      "_timestamp": "2026-04-06T02:59:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Patient record accuracy requires clinical knowledge to verify completeness, correct terminology, and consistency with evaluations and treatments, but many elements are structured and auditable.",
+      "adequacy_evidence": "Current AI can generate plausible records but may omit details or introduce subtle inaccuracies, so routine expert review is still needed though verification is manageable.",
+      "_timestamp": "2026-04-06T02:59:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Accurate patient records are critical for safe treatment decisions, continuity of care, legal compliance, and billing; even rare residual errors (e.g., incorrect test results or treatment notes) can lead to significant downstream harm.",
+      "adequacy_evidence": "AI can generate and structure clinical documentation effectively, and routine review processes can catch many issues, but risks like subtle misdocumentation or attribution errors mean residual risk is not fully negligible.",
+      "_timestamp": "2026-04-06T02:59:04"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

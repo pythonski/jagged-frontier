@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "27-3012.00",
+  "task_id": 7699,
+  "task_statement": "Preview any music intended to be broadcast over the public address system.",
+  "occupation_title": "Public Address System and Other Announcers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Previewing music typically involves listening to audio files or streams on a computer or broadcast software before queuing them for the PA system. However, in some venues it may be done using on-site mixing consoles, physical media, or local audio equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans varied music genres, languages, cultural contexts, and broadcast settings (e.g., family-friendly venues vs. adult events), but remains relatively bounded in scope.",
+      "adequacy_evidence": "Large-scale audio datasets, metadata, content moderation corpora, and synthetic labeling pipelines provide strong coverage of music characteristics, explicit content detection, and audio quality assessment.",
+      "_timestamp": "2026-04-06T04:54:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Previewing music requires judging contextual fit (audience demographics, event tone, appropriateness of lyrics, volume and timing), which are not fully specified and depend on situational norms.",
+      "adequacy_evidence": "Agents can use metadata and policy guidelines to approximate suitability, but often miss nuanced cultural or situational cues, requiring human oversight to ensure proper fit.",
+      "_timestamp": "2026-04-06T04:54:29"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Selecting music for public broadcast involves some experience-based judgment about audience appropriateness, tone, and context (e.g., avoiding offensive content or mismatched mood), beyond strictly explicit rules.",
+      "adequacy_evidence": "Current AI systems can reliably evaluate lyrics, sentiment, genre, and contextual fit using available metadata and content analysis, covering most judgment needed without significant gaps.",
+      "_timestamp": "2026-04-06T04:54:29"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Previewing music is a short, largely self-contained task (listen and assess suitability), with little need for extended, interdependent sequences of actions.",
+      "adequacy_evidence": "AI systems can easily maintain consistency over such brief, simple sequences without degradation, especially with basic playback and content-checking workflows.",
+      "_timestamp": "2026-04-06T04:54:30"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves evaluating a single piece of audio at a time against straightforward criteria (e.g., appropriateness, quality), with minimal information to track within the episode.",
+      "adequacy_evidence": "Current AI systems can easily manage the limited within-episode context (single audio input and simple criteria) without losing or mismanaging information.",
+      "_timestamp": "2026-04-06T04:54:30"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Previewing music typically occurs shortly before broadcast, requiring decisions within seconds to a few minutes, but not strict real-time instant reactions.",
+      "adequacy_evidence": "AI systems can rapidly process and evaluate audio content within this timeframe without needing extended reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T04:54:31"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Previewing music for broadcast is an internal quality-control task with no direct stakeholder interaction or reliance on performer identity.",
+      "adequacy_evidence": "Since no stakeholders are involved, there is no acceptance barrier; AI performing this function would not affect task effectiveness.",
+      "_timestamp": "2026-04-06T04:54:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires listening to audio recordings to assess sound quality, content appropriateness, and broadcast suitability, which cannot be reduced to text alone.",
+      "adequacy_evidence": "Current AI systems can process and analyze audio but are less reliable at nuanced auditory judgment (e.g., perceived loudness, distortion, or contextual suitability in a specific PA environment).",
+      "_timestamp": "2026-04-06T04:54:31"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Previewing a music track for broadcast is typically a self-contained task focused on assessing that specific audio instance, without needing prior history or accumulated context.",
+      "adequacy_evidence": "Since the task does not rely on cross-session memory, current AI systems fully meet its negligible long-term memory requirements.",
+      "_timestamp": "2026-04-06T04:54:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Previewing music requires listening for explicit content, appropriateness, and audio quality; while most issues are detectable through direct listening, it still takes time and some judgment to confirm suitability.",
+      "adequacy_evidence": "AI can flag obvious issues (e.g., explicit lyrics) but may miss context-specific appropriateness or subtle content concerns, so human listening and review remain necessary.",
+      "_timestamp": "2026-04-06T04:54:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Residual errors such as missing inappropriate lyrics or audio issues can cause embarrassment or minor reputational harm, but are typically not severe or irreversible.",
+      "adequacy_evidence": "With standard preview checks (e.g., human review or automated content filters), current AI systems can reduce residual risk to acceptable levels for this low-stakes context.",
+      "_timestamp": "2026-04-06T04:54:32"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from previewing music for broadcast over a public address system; this task does not require licensure or mandated human judgment under current US rules.",
+      "_timestamp": "2026-04-06T04:54:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1151.00",
+  "task_id": 18377,
+  "task_statement": "Request anesthesia equipment repairs, adjustments, or safety tests.",
+  "occupation_title": "Nurse Anesthetists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Requesting repairs or safety checks is typically done through electronic maintenance systems, email, or messaging, but in practice it is also often communicated verbally or in person with biomedical or facilities staff in the clinical setting."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans a moderate range of equipment types (e.g., anesthesia machines, monitors) and issue categories (malfunctions, calibration, safety checks), but follows relatively standardized reporting and request patterns.",
+      "adequacy_evidence": "There is ample documentation in manuals, maintenance logs, biomedical engineering workflows, and clinical protocols that capture both the problems and appropriate request procedures, making representative training data readily obtainable.",
+      "_timestamp": "2026-04-05T22:02:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Determining when and what to request (repair vs adjustment vs safety test, urgency, and specifics) depends on clinical context, equipment behavior, and safety standards, not just a fixed rule.",
+      "adequacy_evidence": "Given clear observations or logs, current agents can reliably infer appropriate request types and details, and can iteratively clarify missing information with minimal difficulty.",
+      "_timestamp": "2026-04-05T22:02:29"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task typically involves a short sequence: identifying an issue, selecting the appropriate service channel, and submitting a request, with minimal interdependence between steps.",
+      "adequacy_evidence": "AI agents can reliably handle short, structured workflows like drafting and submitting service requests without noticeable degradation over such limited sequences.",
+      "_timestamp": "2026-04-05T22:02:29"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While formal maintenance protocols and checklists exist, recognizing when anesthesia equipment needs repair or adjustment often relies on experiential judgment about subtle performance deviations, unusual readings, or patterns observed during use.",
+      "adequacy_evidence": "AI systems can follow documented thresholds and maintenance schedules, but may lack reliable calibration for nuanced, context-dependent cues that experienced clinicians use to detect non-obvious issues.",
+      "_timestamp": "2026-04-05T22:02:29"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires gathering and conveying several pieces of contextual information (equipment type, malfunction details, location, urgency, and possibly prior issues), but the total information load is modest and structured.",
+      "adequacy_evidence": "Current AI agents can reliably manage and organize this level of structured, within-episode information without significant loss or drift, especially when integrated with forms or maintenance systems.",
+      "_timestamp": "2026-04-05T22:02:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Requesting anesthesia equipment repairs or tests is typically administrative or procedural, where delays of minutes to hours are acceptable except in rare urgent failures.",
+      "adequacy_evidence": "AI agents can generate or route such requests instantly, so speed constraints do not meaningfully limit reasoning quality or performance.",
+      "_timestamp": "2026-04-05T22:02:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Identifying the need for repairs or adjustments may involve visual or auditory cues from equipment (e.g., alarms, display anomalies), but the act of requesting service is primarily text or structured communication.",
+      "adequacy_evidence": "Current agents can handle the communication and documentation aspects effectively, and any multimodal inputs (e.g., images of faulty equipment) are within existing capabilities.",
+      "_timestamp": "2026-04-05T22:02:31"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations that prohibit AI systems from requesting equipment repairs or safety tests. While healthcare facilities may have internal policies requiring licensed staff oversight, these are not legal prohibitions against AI performing the task.",
+      "_timestamp": "2026-04-05T22:02:32"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each repair or safety test request is typically triggered by current equipment status or immediate observations, and does not fundamentally depend on maintaining longitudinal case histories across sessions.",
+      "adequacy_evidence": "Since the task is largely self-contained per instance, existing systems can easily handle any minimal record-keeping needed, leaving no meaningful cross-session memory gap.",
+      "_timestamp": "2026-04-05T22:02:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in requesting necessary repairs or safety tests for anesthesia equipment can lead to equipment failure during procedures, posing severe and potentially life-threatening risks to patients.",
+      "adequacy_evidence": "While requests can be reviewed and verified by clinicians or technicians, AI may still miss urgency, specificity, or context, leaving some residual risk that is concerning but generally catchable in standard workflows.",
+      "_timestamp": "2026-04-05T22:02:32"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves interacting with maintenance or biomedical engineering staff who receive and act on repair or safety requests, so another party must engage with the output.",
+      "adequacy_evidence": "These stakeholders already accept standardized, system-generated service requests, so an AI agent issuing clear, accurate requests would likely be accepted with minimal resistance.",
+      "_timestamp": "2026-04-05T22:02:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Errors in repair or test requests (e.g., wrong device, missing details) are typically obvious to clinical staff and can be quickly corrected through routine review or follow-up with technicians.",
+      "adequacy_evidence": "AI-generated requests would be straightforward to check for accuracy and completeness, and any mistakes would be easy to detect and fix without significant effort.",
+      "_timestamp": "2026-04-05T22:02:32"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

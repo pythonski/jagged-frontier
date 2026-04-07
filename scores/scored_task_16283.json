@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2051.02",
+  "task_id": 16283,
+  "task_statement": "Analyze clinical data using appropriate statistical tools.",
+  "occupation_title": "Clinical Data Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Analyzing clinical data with statistical tools is performed using computer software (e.g., statistical packages, databases) and does not require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical data analysis is typically guided by study protocols and statistical analysis plans, but still requires interpreting endpoints, handling edge cases, and aligning with regulatory and clinical intent.",
+      "adequacy_evidence": "Current agents can follow explicit plans and standard methods, but often miss subtle clinical context or implicit stakeholder expectations, requiring human clarification and iteration.",
+      "_timestamp": "2026-04-05T22:21:20"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical data analysis spans diverse study designs (e.g., randomized trials, observational studies), endpoints (safety, efficacy, survival), and statistical methods, but follows well-documented frameworks like statistical analysis plans and standard biostatistical techniques.",
+      "adequacy_evidence": "While textbooks, public datasets, and SAPs provide strong procedural coverage, much real-world clinical trial data is proprietary and heterogeneous, leaving gaps in exposure to rare edge cases and sponsor-specific practices that are only partially addressable via synthesis.",
+      "_timestamp": "2026-04-05T22:21:21"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate statistical methods for clinical data often requires experience with study design nuances, data quality issues, and domain-specific conventions (e.g., handling missing data, censoring, endpoints) beyond explicit rules.",
+      "adequacy_evidence": "Current AI agents can apply standard statistical techniques and guidelines but show gaps in context-sensitive judgment for atypical datasets, nuanced protocol considerations, and subtle assumption violations.",
+      "_timestamp": "2026-04-05T22:21:21"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves managing multiple variables, datasets, cohort definitions, and intermediate outputs, requiring organized tracking and selective retrieval during analysis but typically offloaded to statistical software environments.",
+      "adequacy_evidence": "Well-scaffolded agents can externalize data handling to tools (e.g., dataframes, scripts), minimizing memory strain and reliably tracking intermediate state without significant loss or drift.",
+      "_timestamp": "2026-04-05T22:21:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (data cleaning, transformation, model selection, assumption checking, and interpretation) where earlier choices influence later results, but sequences are typically bounded and modular rather than deeply long-horizon.",
+      "adequacy_evidence": "Current AI agents can execute end-to-end statistical workflows with tooling, but may show some drift or inconsistency across steps (e.g., mismatched assumptions or dropped constraints) as sequence length and complexity increase.",
+      "_timestamp": "2026-04-05T22:21:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves structured numerical and textual clinical datasets (e.g., tables, coded variables) analyzed with statistical software; visualizations are optional outputs rather than essential inputs.",
+      "adequacy_evidence": "Current AI agents handle tabular data processing, statistical analysis, and basic visualization generation effectively, with no meaningful multimodal limitations for this task.",
+      "_timestamp": "2026-04-05T22:21:21"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Clinical data analysis is typically conducted in offline workflows where minutes to hours (or longer) are acceptable for running statistical models and interpreting results.",
+      "adequacy_evidence": "Frontier AI systems can take sufficient time to perform thorough analysis without meaningful degradation from latency constraints, as real-time responsiveness is not required.",
+      "_timestamp": "2026-04-05T22:21:21"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Clinical data analysis often relies on prior study context such as statistical analysis plans, variable definitions, data cleaning decisions, and protocol amendments, but much of this can be documented and reloaded per analysis session.",
+      "adequacy_evidence": "Current AI systems can persist and retrieve structured project artifacts via external memory tools, but inconsistencies in maintaining and correctly surfacing evolving study context still occur in a meaningful share of workflows.",
+      "_timestamp": "2026-04-05T22:21:22"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Statistical analysis of clinical data involves complex model selection, assumptions, data cleaning, and interpretation where errors (e.g., mis-specified models, bias, data leakage) can be subtle and require expert review and domain knowledge to detect.",
+      "adequacy_evidence": "Current AI systems frequently make non-obvious statistical or methodological errors and require thorough expert validation, as many mistakes are not easily caught by simple checks and can materially affect conclusions.",
+      "_timestamp": "2026-04-05T22:21:23"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from analyzing clinical data; such tasks can be performed by software under appropriate validation and compliance frameworks (e.g., GxP, HIPAA). Regulations govern data handling and system validation, not the use of AI itself.",
+      "_timestamp": "2026-04-05T22:21:23"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The analysis outputs are used by clinicians, researchers, and regulators who rely on their validity, but direct interaction with the analyst is limited and identity is not central.",
+      "adequacy_evidence": "AI-driven statistical analysis is increasingly accepted in clinical research, but some stakeholders (especially regulators and sponsors) still prefer human oversight, creating moderate resistance.",
+      "_timestamp": "2026-04-05T22:21:24"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Statistical analyses of clinical data inform trial outcomes, regulatory decisions, and patient safety; even rare undetected errors can lead to incorrect efficacy or safety conclusions with serious downstream consequences.",
+      "adequacy_evidence": "While AI-generated analyses can be audited through code review, replication, and validation checks, subtle modeling or data-handling errors may still slip through, leaving some residual risk that remains non-trivial.",
+      "_timestamp": "2026-04-05T22:21:24"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

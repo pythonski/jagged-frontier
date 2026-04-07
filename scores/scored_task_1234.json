@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2011.02",
+  "task_id": 1234,
+  "task_statement": "Inspect account books and accounting systems for efficiency, effectiveness, and use of accepted accounting procedures to record transactions.",
+  "occupation_title": "Accountants and Auditors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Reviewing account books and accounting systems is typically done through digital financial records and accounting software that can be accessed remotely. However, some audits or inspections still involve on-site access to physical documents or internal systems within an organization."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Evaluating efficiency, effectiveness, and adherence to accounting standards requires professional skepticism, materiality judgments, and contextual interpretation of ambiguous or borderline practices that are not fully codified in rules.",
+      "adequacy_evidence": "Current AI can apply accounting standards and flag anomalies, but lacks robust calibration in nuanced judgment calls (e.g., materiality, intent, or subtle control weaknesses) that experienced auditors develop through practice.",
+      "_timestamp": "2026-04-05T21:46:25"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans varied industries, firm sizes, accounting systems (e.g., different ERPs), and control environments, but is structured by standardized frameworks like GAAP and auditing standards.",
+      "adequacy_evidence": "There is abundant public documentation, textbooks, and some example audits, but detailed real-world audit workpapers and edge-case system configurations are often proprietary, leaving some gaps that are only partially addressable via synthetic data.",
+      "_timestamp": "2026-04-05T21:46:25"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task relies on interpreting concepts like 'efficiency,' 'effectiveness,' and 'accepted accounting procedures,' which depend on context such as firm policies, materiality thresholds, and applicable standards (e.g., GAAP), requiring professional judgment beyond explicit instructions.",
+      "adequacy_evidence": "Current agents can apply codified standards and infer general audit goals, but often miss context-specific priorities or nuanced risk interpretations, requiring human guidance to fully align with stakeholder expectations.",
+      "_timestamp": "2026-04-05T21:46:26"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step review of financial records, controls, and procedures, where findings from earlier checks inform later assessments, but much of the work can be decomposed into semi-independent audit procedures.",
+      "adequacy_evidence": "AI agents can sustain performance across moderate audit sequences with tooling, but may show drift or miss cross-step inconsistencies in large, complex engagements requiring prolonged coherence.",
+      "_timestamp": "2026-04-05T21:46:26"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Auditing and inspection of account books are typically conducted over hours to days, with no requirement for real-time or rapid responses.",
+      "adequacy_evidence": "AI agents can take sufficient time to perform deep analysis without impacting task quality, as there is no meaningful latency pressure in typical audit workflows.",
+      "_timestamp": "2026-04-05T21:46:26"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing structured financial records, ledgers, and system logs, which are text- and number-based; any visual elements (e.g., spreadsheets or dashboards) are readily interpretable as text/tabular data.",
+      "adequacy_evidence": "Current AI agents handle text and structured financial data effectively, and any minor visual components (like charts or tables) are well within existing multimodal capabilities.",
+      "_timestamp": "2026-04-05T21:46:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Auditing requires examining large volumes of financial records across ledgers, systems, and transaction histories, integrating multiple data sources while tracking inconsistencies and compliance details within a single review episode.",
+      "adequacy_evidence": "LLM agents with retrieval and tool use can manage large document sets, but still exhibit context loss, imperfect aggregation, and occasional drift when synthesizing many interrelated financial details.",
+      "_timestamp": "2026-04-05T21:46:26"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Audits and accounting system inspections often rely on prior-year workpapers, historical client issues, and evolving knowledge of the entity, but much of this context is formally documented and can be reloaded per engagement rather than requiring deeply persistent memory.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured audit histories and documents via external databases, but they can inconsistently surface relevant past context or maintain nuanced continuity across engagements without careful system design.",
+      "_timestamp": "2026-04-05T21:46:27"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Evaluating accounting systems for compliance and effectiveness involves nuanced judgment about GAAP application, internal controls, and transaction flows; errors can be subtle and require expert review and cross-checking across records.",
+      "adequacy_evidence": "Current AI can miss context-specific accounting irregularities or misinterpret procedures, and these errors are not trivially detectable without thorough expert auditing, making verification effort substantial and unavoidable.",
+      "_timestamp": "2026-04-05T21:46:28"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in auditing account books can lead to undetected fraud, regulatory violations, and material misstatements with legal and financial consequences, so very low residual error tolerance is required.",
+      "adequacy_evidence": "Even with standard audit checks, AI systems can miss nuanced irregularities or context-specific compliance issues, leaving some residual risk that remains concerning but not universally disqualifying under human oversight.",
+      "_timestamp": "2026-04-05T21:46:28"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "US auditing standards (e.g., PCAOB, AICPA) require a licensed CPA or registered audit firm to take responsibility and sign off on audit work, which implicitly requires human oversight. AI can assist in inspecting accounting systems, but cannot independently fulfill the legally recognized role of auditor of record.",
+      "_timestamp": "2026-04-05T21:46:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Inspection of accounting systems is performed for clients, management, and regulators who rely on the auditor\u2019s professional judgment and certified authority, making performer identity and credibility central.",
+      "adequacy_evidence": "Stakeholders (especially regulators and clients) generally require licensed human auditors and may not trust or legally accept AI-only inspection, so resistance would significantly limit effectiveness.",
+      "_timestamp": "2026-04-05T21:46:30"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

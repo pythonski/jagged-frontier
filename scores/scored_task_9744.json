@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4061.00",
+  "task_id": 9744,
+  "task_statement": "Compute and authorize amounts of assistance for programs, such as grants, monetary payments, and food stamps.",
+  "occupation_title": "Eligibility Interviewers, Government Programs",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Computing and authorizing benefit amounts is typically done within digital case management systems and databases. However, some instances may involve reviewing or processing physical application documents or signatures in an office setting."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans many programs with differing rules, household compositions, income types, and edge-case eligibility scenarios, creating a heterogeneous and policy-sensitive distribution.",
+      "adequacy_evidence": "Program rules and some worked examples are publicly documented and can be simulated, but detailed case-level adjudication data and edge-case handling are often restricted or sparse, leaving partial gaps.",
+      "_timestamp": "2026-04-05T23:51:23"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While eligibility rules are largely codified, workers must interpret ambiguous applicant information, assess documentation credibility, and apply case-based judgment in edge cases or incomplete filings.",
+      "adequacy_evidence": "Current AI can apply formal rules reliably but is less consistent in nuanced judgment around ambiguous or borderline cases, especially involving implicit context or credibility assessments.",
+      "_timestamp": "2026-04-05T23:51:23"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Eligibility and benefit amounts are largely governed by explicit statutes, formulas, and program rules, but real cases involve some context-dependent interpretation (e.g., household composition, irregular income, exceptions).",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably follow codified rules and request clarification for missing inputs, handling most ambiguity through structured workflows and rule-based logic.",
+      "_timestamp": "2026-04-05T23:51:23"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves processing structured and unstructured text and numerical data from applications and policy rules; non-text modalities are not central to computing or authorizing benefits.",
+      "adequacy_evidence": "Since the task is fundamentally text- and data-driven, current AI systems can handle the modality requirements without meaningful limitation.",
+      "_timestamp": "2026-04-05T23:51:24"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step workflow (data collection, rule application, calculation, verification, authorization) where consistency across steps matters, but sequences are typically bounded and structured rather than deeply long or highly interdependent.",
+      "adequacy_evidence": "Well-scaffolded AI agents can generally maintain coherence across these moderate-length workflows, though some degradation (e.g., missed constraints or calculation inconsistencies) can occur without careful orchestration and validation.",
+      "_timestamp": "2026-04-05T23:51:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Determining and authorizing assistance often relies on prior case records (income history, prior benefits, eligibility decisions), but each determination is largely based on updated current data rather than deeply evolving longitudinal context.",
+      "adequacy_evidence": "Modern AI systems integrated with case management databases can reliably store and retrieve applicant histories across sessions, so cross-session memory needs are well within current capabilities.",
+      "_timestamp": "2026-04-05T23:51:25"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Eligibility determinations and benefit calculations are typically completed during or shortly after an interview, implying expectations of responsiveness within seconds to a few minutes rather than extended delays.",
+      "adequacy_evidence": "Well-scaffolded AI systems can apply program rules and compute benefit amounts almost instantly, so meeting these moderate latency expectations does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-05T23:51:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in calculating or authorizing benefits can lead to improper payments, legal violations, financial harm to vulnerable individuals, or fraud, so even rare residual mistakes can have serious consequences.",
+      "adequacy_evidence": "While much of the task is rule-based and can be checked via audits and automated validation, AI may still misinterpret complex policy nuances or edge cases, leaving some non-negligible residual risk after standard quality control.",
+      "_timestamp": "2026-04-05T23:51:27"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Public benefits determinations typically must be made or formally authorized by a government official, and due process rules require accountable human oversight, but there is no explicit prohibition on AI assistance. This creates partial restriction because AI cannot be the sole legally recognized decision-maker in many current agency frameworks.",
+      "_timestamp": "2026-04-05T23:51:27"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task directly affects applicants receiving or being denied benefits, requiring trust in the decision-maker\u2019s authority, fairness, and legitimacy, and often involving interaction or appeal processes.",
+      "adequacy_evidence": "While automated eligibility systems already exist, many stakeholders are wary of AI-driven benefit decisions due to fairness and accountability concerns, leading to partial but not prohibitive resistance.",
+      "_timestamp": "2026-04-05T23:51:27"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating multiple pieces of applicant information (income, household size, eligibility rules, documentation) within a single case, requiring structured tracking and rule-based calculations but not extremely large or dynamic information loads.",
+      "adequacy_evidence": "Current agents can manage structured case data and calculations with tools, but may occasionally lose or misweight details across multiple inputs or rule conditions without careful scaffolding and validation.",
+      "_timestamp": "2026-04-05T23:52:01"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Calculations are rule-based and can be cross-checked against program guidelines and applicant data, but require careful review of eligibility criteria, documentation, and edge cases to ensure correctness.",
+      "adequacy_evidence": "AI can perform structured calculations but may misinterpret policy nuances or input data, so human or system-level verification (e.g., audits, rule checks) is still needed to catch non-obvious errors.",
+      "_timestamp": "2026-04-05T23:52:02"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

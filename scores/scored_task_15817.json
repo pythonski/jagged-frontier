@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9199.09",
+  "task_id": 15817,
+  "task_statement": "Estimate costs associated with operations, including repairs or preventive maintenance.",
+  "occupation_title": "Wind Energy Operations Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Cost estimation is typically done using digital records, maintenance data, spreadsheets, and vendor quotes on a computer. However, some estimates may depend on on-site inspections or technician assessments of turbine conditions, requiring occasional physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation spans different turbine models, site conditions, failure modes, and maintenance strategies, but follows recurring industry patterns and cost structures rather than an extremely long-tailed distribution.",
+      "adequacy_evidence": "There is substantial data from OEM manuals, maintenance logs, and industry benchmarks, but much is proprietary and sparse for rare failures or novel contexts, making coverage only partially complete.",
+      "_timestamp": "2026-04-06T02:16:06"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation for wind operations relies partly on experience with site-specific factors like turbine wear patterns, weather exposure, contractor reliability, and failure likelihoods that are not fully captured in formal models.",
+      "adequacy_evidence": "AI systems can leverage historical cost data and maintenance records, but often lack the nuanced calibration for atypical conditions, evolving equipment states, or informal operational knowledge that experienced managers apply.",
+      "_timestamp": "2026-04-06T02:16:06"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Estimating operational and maintenance costs involves multi-step processes (gathering historical data, forecasting maintenance needs, integrating repair schedules, and aggregating costs), but these steps are moderately interdependent rather than tightly coupled over long horizons.",
+      "adequacy_evidence": "AI agents can generally sustain coherence across these structured estimation workflows, though some degradation can occur in longer chains (e.g., inconsistent assumptions or dropped constraints across steps), especially when integrating multiple data sources.",
+      "_timestamp": "2026-04-06T02:16:06"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation requires context-specific assumptions about asset condition, failure rates, supplier contracts, downtime costs, and budgeting horizons, which are not fully explicit in the task description.",
+      "adequacy_evidence": "Current agents can synthesize data and typical cost models but often miss site-specific constraints and stakeholder preferences, requiring human iteration to refine assumptions.",
+      "_timestamp": "2026-04-06T02:16:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Estimating operational and maintenance costs requires integrating multiple inputs (equipment condition, historical costs, labor rates, parts, schedules) and maintaining consistent assumptions within the calculation process.",
+      "adequacy_evidence": "Current AI agents with tool use (spreadsheets, retrieval, structured calculation) can reliably track and update these inputs within a single episode without significant loss of context.",
+      "_timestamp": "2026-04-06T02:16:08"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimation often draws on sensor data, maintenance logs, and occasionally visual inspections (e.g., turbine blade damage), but much of the task can be handled through structured numerical and textual data.",
+      "adequacy_evidence": "Current agents can process structured data and basic visual inputs, but may struggle with nuanced interpretation of complex sensor patterns or detailed visual assessments needed for accurate repair cost estimation.",
+      "_timestamp": "2026-04-06T02:16:08"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Cost estimation for operations and maintenance is typically part of planning, budgeting, or reporting cycles where minutes to hours are acceptable, not real-time decision-making.",
+      "adequacy_evidence": "Frontier AI systems can perform cost estimation with sufficient depth well within these relaxed time constraints, so speed does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T02:16:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from estimating operational or maintenance costs in wind energy. While human managers retain accountability for decisions, AI use for cost estimation is unrestricted.",
+      "_timestamp": "2026-04-06T02:16:08"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Accurate cost estimation often relies on historical maintenance records, prior repair costs, equipment performance trends, and site-specific operational history accumulated over time.",
+      "adequacy_evidence": "Current AI agents can interface with databases and logs to retrieve such history, but integration gaps, inconsistent data structuring, and occasional retrieval failures can limit reliable cross-session context use.",
+      "_timestamp": "2026-04-06T02:16:08"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Cost estimates for wind operations can be checked against historical data, vendor quotes, and engineering norms, but doing so requires domain expertise and careful review; errors are not always immediately obvious.",
+      "adequacy_evidence": "Current AI can generate plausible estimates but may miss site-specific factors or up-to-date pricing, so outputs require expert validation and cross-checking against real operational data.",
+      "_timestamp": "2026-04-06T02:16:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Cost estimates are used by internal stakeholders (finance teams, executives, maintenance planners) and sometimes external vendors, who rely on the output but are not strongly dependent on who produced it.",
+      "adequacy_evidence": "Stakeholders in this domain already accept software-driven and model-based cost estimation, so an AI agent producing accurate estimates would face little resistance based on identity alone.",
+      "_timestamp": "2026-04-06T02:16:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Cost estimation errors can affect budgeting, maintenance scheduling, and financial performance, but are typically correctable and rarely cause immediate safety or irreversible harm.",
+      "adequacy_evidence": "With standard financial review processes, benchmarking against historical data, and audits, AI-generated estimates can be validated effectively, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T02:16:09"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

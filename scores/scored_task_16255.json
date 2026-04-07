@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.01",
+  "task_id": 16255,
+  "task_statement": "Develop or use mathematical models to track changes in biological phenomena, such as the spread of infectious diseases.",
+  "occupation_title": "Biostatisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Developing or applying mathematical models for biological phenomena is performed using statistical software and digital datasets on computers, and does not require physical presence or specialized non-computer equipment."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Modeling biological phenomena like disease spread requires choosing structures, assumptions, and metrics based on context (e.g., policy goals, data quality, intervention scenarios), which are not fully specified in the task statement.",
+      "adequacy_evidence": "Current agents can propose reasonable models and infer common objectives (e.g., forecasting, parameter estimation), but often miss nuanced stakeholder goals or context-specific constraints without iterative human guidance.",
+      "_timestamp": "2026-04-05T21:35:34"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Biostatistical modeling of biological phenomena spans highly heterogeneous contexts (different diseases, populations, data quality regimes, and intervention scenarios), requiring coverage of long-tailed and context-sensitive cases.",
+      "adequacy_evidence": "There is extensive public literature, datasets, and well-documented modeling workflows (e.g., epidemiological models, simulations), but some real-world edge cases and high-resolution or proprietary health data remain thin or inaccessible.",
+      "_timestamp": "2026-04-05T21:35:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Developing and applying biostatistical models involves multi-stage, tightly coupled workflows (data preprocessing, model specification, fitting, validation, iteration) where early errors propagate and consistency must be maintained throughout.",
+      "adequacy_evidence": "LLM-based agents can execute end-to-end modeling pipelines with tools, but over long sequences they show some drift in assumptions, parameter tracking, and iterative refinement, leading to moderate degradation rather than complete failure.",
+      "_timestamp": "2026-04-05T21:35:35"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many epidemiological modeling techniques (e.g., compartmental models, regression, Bayesian inference) are well-documented, effective use requires experience-based judgment in selecting assumptions, handling noisy or biased data, and interpreting model limitations in context.",
+      "adequacy_evidence": "Current AI agents can implement standard models and workflows but often lack robust calibration in choosing appropriate structures, priors, and adjustments for real-world epidemiological complexities, especially in novel or messy scenarios.",
+      "_timestamp": "2026-04-05T21:35:35"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple data sources (e.g., epidemiological data, covariates, model parameters) and tracking assumptions and intermediate results, but this information is typically structured and tool-manageable rather than overwhelming in volume.",
+      "adequacy_evidence": "Current agents can use code, external memory, and retrieval tools to manage structured modeling workflows, but may still lose track of assumptions or intermediate states in longer or more complex modeling sessions.",
+      "_timestamp": "2026-04-05T21:35:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves ongoing projects where models are updated with new data and prior assumptions, requiring awareness of previous analyses, parameter choices, and data revisions across sessions.",
+      "adequacy_evidence": "Current agents can persist and retrieve data and model artifacts via external storage and tooling, but they show gaps in consistently integrating evolving context and maintaining coherent project history without careful scaffolding.",
+      "_timestamp": "2026-04-05T21:35:36"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves interpreting structured datasets and generating visualizations (e.g., epidemic curves, heat maps), but core modeling can be performed with text and numerical data alone.",
+      "adequacy_evidence": "Current AI agents can reliably process structured data and produce standard scientific visualizations and summaries, with no major multimodal limitations for typical use cases.",
+      "_timestamp": "2026-04-05T21:35:36"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Biostatistical modeling of biological phenomena (e.g., infectious disease spread) typically operates on analysis cycles where minutes to hours or longer are acceptable, not requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform modeling, simulation, and analysis well within these relaxed time constraints, with no meaningful degradation in quality due to latency limits.",
+      "_timestamp": "2026-04-05T21:35:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in infectious disease modeling can misinform public health responses, leading to significant morbidity, mortality, or resource misallocation, so even small residual errors can have major consequences.",
+      "adequacy_evidence": "Even after standard validation and expert review, AI-generated models may embed subtle structural or assumption errors that are hard to detect, leaving some meaningful residual risk.",
+      "_timestamp": "2026-04-05T21:35:37"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task produces models used by public health officials, researchers, and policymakers who rely on the outputs, but engagement is primarily with the results rather than the individual performing the work.",
+      "adequacy_evidence": "While stakeholders already accept computational tools, some may hesitate to rely fully on AI-generated models for high-stakes decisions, especially regarding transparency and accountability.",
+      "_timestamp": "2026-04-05T21:35:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from developing or using mathematical models for biological phenomena; such modeling can be performed by software tools under human oversight. Any regulatory requirements (e.g., in public health or clinical settings) apply to outcomes or responsible parties, not to the use of AI itself.",
+      "_timestamp": "2026-04-05T21:35:38"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Modeling infectious disease dynamics involves subtle choices (model structure, assumptions, priors, data cleaning) where errors may not be immediately observable and often require expert diagnostics, validation studies, or real-world comparison to detect.",
+      "adequacy_evidence": "Current AI can generate plausible models and code, but frequently makes hidden errors (misspecification, incorrect assumptions, data leakage) that require extensive expert review, simulation checks, and validation before use.",
+      "_timestamp": "2026-04-05T21:35:39"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-9062.00",
+  "task_id": 3073,
+  "task_statement": "Evaluate technical specifications to identify equipment or systems best suited for intended use and possible purchase, based on specifications, user needs, or technical requirements.",
+  "occupation_title": "Medical Equipment Repairers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Reviewing technical specifications, vendor documentation, and user requirements can typically be done on a computer, but some cases involve physically inspecting or testing equipment or assessing on-site compatibility before recommending a purchase."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate equipment requires interpreting user needs, clinical context, and operational constraints that are not always fully specified in technical documents.",
+      "adequacy_evidence": "Current agents can analyze specifications and infer likely matches, but often miss nuanced contextual priorities (e.g., workflow fit, institutional preferences) without iterative human clarification.",
+      "_timestamp": "2026-04-06T02:28:35"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step comparison of specifications, mapping them to user needs, and iterating across options, but these steps are only moderately interdependent and can often be decomposed or revisited without cascading failure.",
+      "adequacy_evidence": "AI agents can generally handle structured multi-step evaluations with tool support, but may show some degradation over longer comparisons, such as dropping constraints or inconsistently applying criteria across options.",
+      "_timestamp": "2026-04-06T02:28:36"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Selecting appropriate medical equipment from specifications involves some experience-based judgment about reliability, maintainability, and real-world performance tradeoffs that are not fully captured in formal specs or rules.",
+      "adequacy_evidence": "AI systems can systematically compare specifications and align them with stated requirements, but they still lack consistent calibration for nuanced, context-specific tradeoffs (e.g., service history, environment fit) that experienced technicians infer.",
+      "_timestamp": "2026-04-06T02:28:36"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a range of medical device categories, clinical use cases, and user requirements, but relies on structured artifacts like specification sheets, standards, and procurement criteria that are moderately diverse rather than fully long-tailed.",
+      "adequacy_evidence": "Extensive public and proprietary documentation (manuals, specs, regulatory filings) exists, but some context-specific procurement rationales and real-world tradeoff deliberations are thin or inaccessible, leaving partial gaps.",
+      "_timestamp": "2026-04-06T02:28:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires comparing multiple specification sheets, user requirements, and constraints, but the information is structured and can be organized into manageable comparisons within a single evaluation episode.",
+      "adequacy_evidence": "Current AI agents with retrieval, note-taking, and structured comparison tools can reliably track and synthesize these inputs without significant loss of critical details.",
+      "_timestamp": "2026-04-06T02:28:37"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Technical specifications are primarily text-based but often include diagrams, schematics, and layout visuals that aid understanding of equipment compatibility and performance.",
+      "adequacy_evidence": "Current agents can interpret standard diagrams and spec sheets reasonably well, but may struggle with complex schematics, subtle visual details, or cross-referencing multimodal inputs in edge cases.",
+      "_timestamp": "2026-04-06T02:28:37"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Evaluating equipment often benefits from prior experience with similar devices, vendor reliability, and user preferences, but many decisions can be made from current specifications and stated requirements alone.",
+      "adequacy_evidence": "Current AI agents can reliably use external memory systems (databases, RAG) to store and retrieve prior cases or preferences, which is sufficient for the moderate cross-session context needed here.",
+      "_timestamp": "2026-04-06T02:28:38"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Evaluating technical specifications for equipment selection is typically an offline analytical task where minutes to hours of review are acceptable and expected.",
+      "adequacy_evidence": "Current AI systems can take sufficient time to reason through specifications without meaningful degradation, as there is no strict latency pressure constraining performance.",
+      "_timestamp": "2026-04-06T02:28:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from evaluating technical specifications for equipment selection; while healthcare settings may require human oversight in procurement decisions, this task itself is not legally restricted to humans.",
+      "_timestamp": "2026-04-06T02:28:39"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether equipment specifications truly meet clinical and technical requirements involves nuanced compatibility, safety, and performance judgments that are not easily validated without domain expertise and careful cross-checking.",
+      "adequacy_evidence": "Current AI can misinterpret specifications or overlook edge-case constraints, and these errors are often subtle enough that expert review is required, making verification effort substantial and unavoidable.",
+      "_timestamp": "2026-04-06T02:28:39"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting inappropriate medical equipment can compromise patient safety, regulatory compliance, and clinical effectiveness, so even rare residual errors can have serious consequences.",
+      "adequacy_evidence": "With human oversight and vendor verification, many AI errors can be caught, but subtle mismatches to clinical context or edge-case requirements may still slip through, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T02:28:39"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task informs purchasing and deployment decisions for medical equipment, so clinicians, administrators, and procurement staff rely on and interact with the evaluator\u2019s recommendations, with some attention to credibility and expertise.",
+      "adequacy_evidence": "Stakeholders would likely accept AI-assisted analysis, but full delegation to an AI agent may face trust and liability concerns, especially for clinical equipment decisions, requiring human oversight or endorsement.",
+      "_timestamp": "2026-04-06T02:28:40"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

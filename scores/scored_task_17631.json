@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "41-3031.03",
+  "task_id": 17631,
+  "task_statement": "Receive sales order tickets and inspect forms to determine accuracy of information.",
+  "occupation_title": "Securities, Commodities, and Financial Services Sales Agents",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Sales order tickets and forms are often received and verified through electronic order systems or emailed documents, making the task commonly computer-based. However, in some settings workers still handle or review physical order tickets or printed forms, requiring in-person document handling."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Sales order verification spans multiple financial products, firm-specific formats, and regulatory fields, creating moderate variation with some edge cases in documentation and compliance checks.",
+      "adequacy_evidence": "While many examples of financial forms and validation procedures exist and can be synthesized, a significant portion of real-world data (firm-specific systems, error patterns, and workflows) is proprietary and only partially accessible.",
+      "_timestamp": "2026-04-06T01:42:49"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing individual sales order tickets for accuracy, typically a short, bounded checklist-like inspection rather than a long, interdependent sequence.",
+      "adequacy_evidence": "AI systems can reliably handle short, structured verification tasks without degradation, as the sequence length and dependency between steps are minimal.",
+      "_timestamp": "2026-04-06T01:42:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves checking multiple fields on sales order tickets for consistency and accuracy, requiring comparison across form elements but within a limited, structured information scope.",
+      "adequacy_evidence": "Current AI agents can reliably process and cross-check structured form data within a single episode, with minimal risk of losing or mismanaging relevant context.",
+      "_timestamp": "2026-04-06T01:42:50"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves checking forms against known rules (e.g., required fields, consistency, compliance), but may require some contextual judgment to interpret unclear entries or reconcile minor discrepancies.",
+      "adequacy_evidence": "Current AI agents with structured validation logic and access to business rules can reliably infer intended checks and flag inconsistencies, with minimal difficulty handling the modest ambiguity present.",
+      "_timestamp": "2026-04-06T01:42:50"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Inspecting sales order tickets involves applying documented rules (e.g., completeness, compliance fields, consistency checks), but some edge cases require experience-based judgment about irregular or borderline entries.",
+      "adequacy_evidence": "Current AI agents can reliably apply structured validation rules and learned patterns from examples, handling most judgment calls in this domain with minimal gap once properly configured.",
+      "_timestamp": "2026-04-06T01:42:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Sales order ticket inspection is typically a self-contained verification task, with all necessary information (e.g., client details, transaction specifics) present on the form or accessible in the immediate system.",
+      "adequacy_evidence": "Since the task does not rely on accumulating cross-session context, current AI systems with standard retrieval tools can fully meet any minimal persistence needs.",
+      "_timestamp": "2026-04-06T01:42:51"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task often involves reviewing structured forms or tickets that may appear as scanned documents or PDFs, requiring visual parsing of layout, fields, and possibly handwritten or formatted entries.",
+      "adequacy_evidence": "Current AI systems handle standard digital forms and OCR reasonably well but remain less reliable on low-quality scans, complex layouts, or handwritten inputs, leading to occasional extraction or interpretation errors.",
+      "_timestamp": "2026-04-06T01:42:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Sales order tickets are typically processed in operational workflows where responses are expected quickly (seconds to a few minutes) to avoid delaying transactions, but not in strict real-time conditions.",
+      "adequacy_evidence": "Frontier AI systems can parse and validate structured or semi-structured forms rapidly with high accuracy well within these time constraints, without needing to truncate reasoning.",
+      "_timestamp": "2026-04-06T01:42:51"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily an internal back-office function involving verification of sales order forms, with no direct interaction requiring stakeholder acceptance of the performer.",
+      "adequacy_evidence": "Because outputs are consumed internally and impersonally, stakeholders are indifferent to whether the task is performed by a human or AI system.",
+      "_timestamp": "2026-04-06T01:42:52"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US regulations prohibiting AI from receiving or checking sales order tickets for accuracy; such administrative and compliance-support tasks can be automated under broker-dealer supervision. Rules require supervision and responsibility by licensed firms, but do not mandate that this specific task be performed by a human.",
+      "_timestamp": "2026-04-06T01:42:52"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in sales order tickets for securities transactions can lead to incorrect trades, regulatory violations, or financial losses, so even rare residual mistakes can have significant consequences.",
+      "adequacy_evidence": "While much of the information is structured and can be cross-checked, AI systems can still miss subtle inconsistencies or context-specific compliance details, leaving some non-trivial residual risk after standard checks.",
+      "_timestamp": "2026-04-06T01:42:52"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves checking structured financial order data (e.g., quantities, prices, account details) against known rules and systems, where many errors are detectable through reconciliation and validation but some require domain knowledge.",
+      "adequacy_evidence": "Current AI can reliably parse and cross-check structured forms, but still makes occasional mistakes in edge cases or nuanced financial rules, requiring consistent but not intensive human verification.",
+      "_timestamp": "2026-04-06T01:42:53"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

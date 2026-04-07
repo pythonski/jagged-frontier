@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-1029.03",
+  "task_id": 16837,
+  "task_statement": "Create or use statistical models for the analysis of genetic data.",
+  "occupation_title": "Geneticists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Creating or applying statistical models to analyze genetic data is performed using computational tools and software (e.g., R, Python, statistical packages) on digital datasets, which can be done entirely on a computer without physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While statistical modeling techniques are well-defined, choosing the appropriate model, preprocessing steps, and evaluation criteria depends on research goals, data quality, and biological context, which are often implicit.",
+      "adequacy_evidence": "Current agents can suggest and implement reasonable models, but they often misinterpret study goals or overlook nuanced domain considerations, requiring iterative human guidance to align with true objectives.",
+      "_timestamp": "2026-04-06T04:18:20"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Genetic data analysis spans diverse organisms, sequencing technologies, population structures, and rare variant regimes, creating a highly heterogeneous and long-tailed task distribution.",
+      "adequacy_evidence": "There is extensive public genomic data and methodological literature with worked examples, but key subpopulations (e.g., rare diseases, proprietary clinical datasets, underrepresented ancestries) remain thin or inaccessible, leaving moderate coverage gaps.",
+      "_timestamp": "2026-04-06T04:18:20"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many statistical genetics methods (e.g., GWAS pipelines, mixed models) are well-documented, selecting appropriate models, handling population structure, and interpreting results in biologically meaningful ways often require experience-based judgment.",
+      "adequacy_evidence": "Current agents can implement standard models and workflows reliably but show gaps in nuanced decisions (e.g., correcting subtle confounders or judging model validity in atypical datasets), indicating moderate shortfall in tacit calibration.",
+      "_timestamp": "2026-04-06T04:18:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Genetic data analysis and statistical modeling are typically conducted offline in research or clinical pipelines where runtimes of minutes to hours (or longer) are standard and acceptable.",
+      "adequacy_evidence": "Current AI systems can take extended time for reasoning, code generation, and iterative refinement without impacting task viability, as there are no tight latency constraints degrading output quality.",
+      "_timestamp": "2026-04-06T04:18:22"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step pipelines (data cleaning, feature selection, model specification, training, validation, and interpretation) where earlier decisions influence later results, but many steps are modular and can be iterated independently.",
+      "adequacy_evidence": "AI agents can generally sustain coherent performance across such pipelines with tooling, but may exhibit moderate degradation through issues like data leakage, mis-specified validation, or loss of consistency over extended workflows.",
+      "_timestamp": "2026-04-06T04:18:22"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves managing multiple inputs (datasets, model parameters, preprocessing steps), but most large-scale data handling is offloaded to statistical software rather than held directly in working memory.",
+      "adequacy_evidence": "Current agents can track workflows with tool use, but may lose or inconsistently recall intermediate decisions (e.g., parameter choices or preprocessing steps) without careful scaffolding.",
+      "_timestamp": "2026-04-06T04:18:22"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Genetic data modeling is primarily based on symbolic and numerical data (e.g., sequences, matrices, tabular datasets) that can be fully represented and processed in text or structured formats.",
+      "adequacy_evidence": "Current AI systems can handle these text- and code-based data representations and generate statistical models without reliance on multimodal perception or generation.",
+      "_timestamp": "2026-04-06T04:18:23"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Genetic modeling work often builds on prior datasets, model iterations, and project context, but this information is typically stored in external artifacts like datasets, code repositories, and lab notes rather than requiring implicit memory.",
+      "adequacy_evidence": "Current AI systems can reliably use external storage (files, databases, version control) to persist and retrieve cross-session context, so longitudinal memory needs are well supported with standard tooling.",
+      "_timestamp": "2026-04-06T04:18:23"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in statistical genetics models (e.g., population stratification, model misspecification, data leakage) are often subtle and require domain expertise, careful validation, and sometimes independent replication to detect.",
+      "adequacy_evidence": "Current AI systems can generate plausible but flawed modeling pipelines or interpretations, and their mistakes (e.g., incorrect assumptions, misuse of methods) are not easily detectable without expert review, making thorough verification necessary.",
+      "_timestamp": "2026-04-06T04:18:23"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in statistical modeling of genetic data can lead to incorrect scientific conclusions or misidentified associations, but findings are typically subject to replication, peer review, and downstream validation, making occasional residual errors survivable.",
+      "adequacy_evidence": "Even after standard checks, AI systems can miss subtle statistical assumptions, population structure issues, or data leakage, leaving some non-trivial residual risk that could affect conclusions.",
+      "_timestamp": "2026-04-06T04:18:24"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task\u2019s outputs are used by scientific colleagues or downstream decision-makers, so others do rely on the results, but interaction is largely technical and does not hinge on personal identity or interpersonal trust.",
+      "adequacy_evidence": "AI tools are already widely accepted in bioinformatics and statistical genetics workflows, and stakeholders generally care about model validity and reproducibility rather than whether a human or AI produced the analysis.",
+      "_timestamp": "2026-04-06T04:18:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from creating or using statistical models for genetic data analysis. While clinical applications may require oversight by licensed professionals (e.g., CLIA-certified labs), AI can be used as a tool within those workflows.",
+      "_timestamp": "2026-04-06T04:18:25"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

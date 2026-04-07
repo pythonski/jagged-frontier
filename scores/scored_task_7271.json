@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9161.00",
+  "task_id": 7271,
+  "task_statement": "Study emergency plans used elsewhere to gather information for plan development.",
+  "occupation_title": "Emergency Management Directors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Studying emergency plans from other jurisdictions typically involves reviewing digital documents, databases, or online resources, but occasionally may include in-person meetings, site visits, or reviewing physical materials from other agencies."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing external emergency plans requires contextual judgment about local applicability, trade-offs, and implicit assumptions that are not fully codified in documents.",
+      "adequacy_evidence": "AI agents can compare plans and extract patterns, but still show gaps in nuanced contextual calibration (e.g., adapting to local risks or institutional constraints) in less standardized cases.",
+      "_timestamp": "2026-04-06T03:08:45"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Emergency plans vary across hazards (natural disasters, terrorism, public health), jurisdictions, and organizational contexts, creating meaningful but not extreme diversity in formats and content. Many plans share common structures (ICS, mitigation/response frameworks).",
+      "adequacy_evidence": "A large corpus of public emergency plans, after-action reports, and guidance documents exists, but some high-quality, real-world plans and internal evaluations are restricted, limiting full coverage of edge cases and operational nuances.",
+      "_timestamp": "2026-04-06T03:08:45"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires interpreting which elements of other emergency plans are relevant, adaptable, and high-quality given local hazards and constraints, which are context-dependent but not deeply tacit.",
+      "adequacy_evidence": "Current AI agents can effectively analyze multiple plans, extract patterns, and tailor summaries to specified contexts with minimal ambiguity, especially when given clear criteria about the target jurisdiction.",
+      "_timestamp": "2026-04-06T03:08:47"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Studying external emergency plans for development is a deliberative research task with no need for real-time or rapid responses; hours or longer are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform literature review and synthesis well within these relaxed time constraints without quality loss due to latency.",
+      "_timestamp": "2026-04-06T03:08:47"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from accumulating and comparing multiple plans over time, but each study instance can largely be conducted independently with external document storage.",
+      "adequacy_evidence": "Current agents with standard retrieval systems (e.g., vector databases, document stores) can reliably retain and access prior plans across sessions, meeting the task\u2019s needs.",
+      "_timestamp": "2026-04-06T03:08:48"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multiple external emergency plans, extracting relevant elements, and synthesizing them, requiring active retrieval and compression of information from several sources within a session.",
+      "adequacy_evidence": "Current agents can manage multi-document analysis with retrieval and summarization tools, but may lose nuance or misprioritize details when compressing large plan sets into coherent insights.",
+      "_timestamp": "2026-04-06T03:08:48"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step research workflows (identifying sources, reviewing multiple plans, extracting relevant elements, and synthesizing insights), where consistency across steps matters but steps are not tightly interdependent.",
+      "adequacy_evidence": "AI agents can generally sustain performance across such research sequences with tooling, but may exhibit some drift or inconsistency in long, multi-document synthesis workflows, requiring oversight.",
+      "_timestamp": "2026-04-06T03:08:48"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors (e.g., misinterpreting procedures, omitting critical elements, or mischaracterizing applicability) require domain knowledge and careful comparison with source plans, but can be checked against accessible documents.",
+      "adequacy_evidence": "Current AI can summarize and compare plans but still introduces omissions or subtle misinterpretations, so human review of sources is needed to verify accuracy and relevance.",
+      "_timestamp": "2026-04-06T03:08:49"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily internal research and information gathering from existing emergency plans, with no direct stakeholder interaction required during execution.",
+      "adequacy_evidence": "Because there are no stakeholders engaged in this task, acceptance of an AI agent is not a relevant concern.",
+      "_timestamp": "2026-04-06T03:08:50"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Emergency plans are primarily documented in textual formats (reports, protocols, written procedures), and the task mainly involves reading and synthesizing these materials; any diagrams or maps are supplementary rather than essential.",
+      "adequacy_evidence": "Current AI agents handle text-based document analysis and synthesis well, and can also interpret common diagrams or maps when present, so there is no meaningful modality gap for this task.",
+      "_timestamp": "2026-04-06T03:08:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in gathering or interpreting external emergency plans can lead to weaker downstream planning, but this is an upstream research task where issues can be caught or mitigated in later stages.",
+      "adequacy_evidence": "With standard review (e.g., cross-checking sources, human oversight), AI-generated summaries or analyses are unlikely to leave unacceptable residual risk for this preparatory information-gathering task.",
+      "_timestamp": "2026-04-06T03:08:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from researching or analyzing emergency plans. This task involves information gathering and review, which is not restricted to licensed humans under current US regulations.",
+      "_timestamp": "2026-04-06T03:08:51"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

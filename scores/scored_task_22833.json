@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2036.00",
+  "task_id": 22833,
+  "task_statement": "Calculate, or verify calculations of, prescribed radiation doses.",
+  "occupation_title": "Medical Dosimetrists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "Radiation dose calculations and verification are typically performed using specialized treatment-planning software and patient imaging data on a computer. The task is computational and review-based, so it can be carried out remotely without physical presence or non-computer equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dose calculation follows well-defined physical models and protocols, but selecting and validating plans requires experience-based judgment about patient anatomy, trade-offs, and clinical intent beyond explicit rules.",
+      "adequacy_evidence": "AI systems can reproduce standard calculations and flag inconsistencies, but they still show gaps in nuanced clinical judgment for atypical anatomies or borderline trade-offs, where experienced calibration matters.",
+      "_timestamp": "2026-04-05T23:24:53"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Radiation dose calculation is guided by physician prescriptions, clinical protocols, and quantitative constraints (tumor coverage, organ-at-risk limits), but involves some context-dependent tradeoffs and interpretation of planning goals.",
+      "adequacy_evidence": "Current agents can follow explicit dosimetric rules and constraints but may struggle to consistently infer nuanced clinical priorities or resolve tradeoffs without human iteration.",
+      "_timestamp": "2026-04-05T23:24:54"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiation dose calculation spans many cancer sites, patient anatomies, modalities (e.g., IMRT, VMAT, brachytherapy), and edge cases requiring context-specific planning and verification, making the instance distribution highly heterogeneous.",
+      "adequacy_evidence": "There are strong training channels via medical physics literature, treatment planning software logs, and physics simulators, but much real-world case data is proprietary and process-level expert reasoning is only partially captured, leaving some gaps.",
+      "_timestamp": "2026-04-05T23:24:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dose calculation and verification involve multiple interdependent steps (e.g., interpreting prescriptions, applying physics models, checking constraints), but sequences are typically bounded and structured rather than long-horizon workflows.",
+      "adequacy_evidence": "AI systems can generally follow structured calculation pipelines, but over multi-step medical physics workflows they may exhibit occasional drift or missed constraints, especially when chaining validation steps.",
+      "_timestamp": "2026-04-05T23:24:54"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Dose calculation requires integrating large, heterogeneous within-case data (patient anatomy from imaging, tumor geometry, dose constraints, machine parameters, and iterative plan adjustments) where small omissions can materially affect outcomes.",
+      "adequacy_evidence": "Well-tooled agents can track and manipulate these data using structured inputs and software integration, but they still show occasional context loss or misalignment across complex constraint sets and iterative updates.",
+      "_timestamp": "2026-04-05T23:24:55"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Radiation dose calculations and verifications are typically performed during treatment planning workflows where minutes to hours are acceptable, not in real-time clinical response windows.",
+      "adequacy_evidence": "Current AI systems can perform complex calculations and verification well within these timeframes without needing to truncate reasoning, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T23:24:55"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Calculating and verifying radiation doses relies heavily on interpreting medical imaging (e.g., CT, MRI), spatial tumor geometry, and dose distribution visualizations such as isodose curves and DVH plots, making non-text modalities central to the task.",
+      "adequacy_evidence": "Current AI systems can process medical images and generate dose plans with specialized tools, but they remain less reliable on complex 3D spatial reasoning, subtle anatomical variation, and integrated visual-clinical judgment compared to expert human dosimetrists.",
+      "_timestamp": "2026-04-05T23:24:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dose calculation and verification are primarily case-specific but often reference prior treatment fractions, cumulative dose limits, and patient history across sessions.",
+      "adequacy_evidence": "Current AI systems can reliably integrate with external records (e.g., treatment planning systems, EHRs) to retrieve and use longitudinal patient data, so cross-session memory is not a significant limitation.",
+      "_timestamp": "2026-04-05T23:24:56"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Radiation dose calculations involve complex patient-specific geometry, tissue heterogeneity, and treatment planning system outputs; errors can be subtle and require expert review, secondary calculations, and QA procedures to detect.",
+      "adequacy_evidence": "Current AI systems can assist but are not reliably accurate across all edge cases, and their errors may be non-obvious, requiring rigorous independent verification and physicist oversight before clinical use.",
+      "_timestamp": "2026-04-05T23:24:56"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Radiation dose calculations directly determine patient exposure; even small residual errors can cause severe harm such as tissue damage or undertreatment of cancer, making tolerance for error extremely low.",
+      "adequacy_evidence": "While standard QA processes (independent checks, treatment planning system validations) catch many issues, AI-generated plans could still introduce subtle, hard-to-detect errors, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-05T23:24:57"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task feeds into clinical treatment planning where physicians and care teams rely on the dosimetrist\u2019s calculations, so stakeholder trust and professional accountability matter but are mediated through team review rather than direct patient interaction.",
+      "adequacy_evidence": "AI-assisted dose calculation tools are already used, but full acceptance of an autonomous AI in this role would face caution from clinicians and regulators, requiring human oversight to maintain trust.",
+      "_timestamp": "2026-04-05T23:24:57"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Radiation dose calculation and verification are regulated under medical physics and radiation control frameworks (e.g., NRC and state laws) that require credentialed professionals (licensed medical physicists/dosimetrists) to perform and sign off on these tasks. This effectively prohibits fully autonomous AI performance without human oversight and approval.",
+      "_timestamp": "2026-04-05T23:24:58"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

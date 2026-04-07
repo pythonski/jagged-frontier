@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3071.01",
+  "task_id": 1037,
+  "task_statement": "Direct activities related to dispatching, routing, or tracking transportation vehicles, such as aircraft or railroad cars.",
+  "occupation_title": "Transportation, Storage, and Distribution Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Dispatching, routing, and tracking vehicles are primarily done through logistics software, tracking systems, and digital communications. However, the role sometimes requires on-site coordination with operations centers or field personnel, making some instances not fully remote."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dispatching and routing require interpreting shifting priorities (e.g., safety, cost, timeliness, regulatory constraints) and resolving tradeoffs that are not always fully specified in advance.",
+      "adequacy_evidence": "Current agents can optimize given explicit constraints but often struggle to infer and adapt to unstated priorities or evolving operational nuances without human guidance.",
+      "_timestamp": "2026-04-05T23:35:15"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many routing and dispatching decisions follow formal rules and optimization models, managers routinely rely on experience to handle disruptions (e.g., delays, equipment issues, conflicting priorities) and to balance efficiency with practical constraints.",
+      "adequacy_evidence": "Current AI systems can replicate structured routing and scheduling logic well, but show gaps in nuanced, context-sensitive judgment during irregular operations where experiential calibration and implicit tradeoffs are critical.",
+      "_timestamp": "2026-04-05T23:35:15"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Dispatching and routing involve continuous, interdependent decisions (scheduling, rerouting, tracking, responding to delays) where earlier choices constrain later options and require sustained coordination over time.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step logistics workflows with tooling, but performance can degrade over extended, dynamic sequences with frequent updates, leading to occasional constraint drift or suboptimal adjustments.",
+      "_timestamp": "2026-04-05T23:35:16"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Dispatching and routing require integrating large, rapidly updating streams of information (vehicle locations, schedules, delays, weather, constraints) where missing a detail can disrupt operations.",
+      "adequacy_evidence": "Agents can offload state to external systems and query databases effectively, but still show weaknesses in consistently maintaining and updating complex, fast-changing state without occasional context loss or misalignment.",
+      "_timestamp": "2026-04-05T23:35:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dispatching and routing rely on ongoing operational context such as vehicle status, schedules, and prior disruptions, but this information is typically maintained in external systems rather than requiring human memory across sessions.",
+      "adequacy_evidence": "Current AI agents can reliably use databases, logs, and enterprise systems to persist and retrieve cross-session state, so longitudinal memory needs are well covered by existing tooling.",
+      "_timestamp": "2026-04-05T23:35:16"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Dispatching and routing span diverse transportation modes, network topologies, regulatory regimes, and stochastic conditions (weather, delays, equipment failures), creating a highly heterogeneous and long-tailed task distribution.",
+      "adequacy_evidence": "While substantial data and simulation environments exist for logistics and routing, much high-fidelity operational data is proprietary and rare disruption scenarios are underrepresented, though partially recoverable via synthetic generation and RL.",
+      "_timestamp": "2026-04-05T23:35:16"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Dispatching and routing rely on spatial data such as maps, tracking dashboards, and sometimes live visual feeds (e.g., radar or GPS interfaces), though much information can be represented textually or numerically.",
+      "adequacy_evidence": "Current agents can process structured spatial and visual data via tools and APIs, but may struggle with real-time, fine-grained interpretation of dynamic visual interfaces or complex cross-modal coordination.",
+      "_timestamp": "2026-04-05T23:35:16"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Dispatching and routing vehicles (e.g., aircraft, rail cars) often requires near-real-time decisions in response to delays, congestion, or safety issues, where seconds to minutes matter.",
+      "adequacy_evidence": "AI agents can generate rapid routing or dispatch suggestions, but under tight time constraints they may rely on shallow heuristics and miss nuanced tradeoffs in complex, dynamic scenarios.",
+      "_timestamp": "2026-04-05T23:35:18"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in dispatching or routing transportation vehicles (especially aircraft or rail systems) can lead to collisions, major delays, or safety incidents, so even rare residual mistakes can have severe consequences.",
+      "adequacy_evidence": "While layered monitoring, human oversight, and rule-based safeguards can catch many issues, AI systems still exhibit occasional unpredictable failures, leaving a non-negligible residual risk in high-stakes, real-time coordination contexts.",
+      "_timestamp": "2026-04-05T23:35:18"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Routing and dispatch decisions can be checked against schedules, constraints, and tracking data, but require domain knowledge and monitoring systems to catch conflicts, inefficiencies, or cascading delays that are not always immediately obvious.",
+      "adequacy_evidence": "Current AI can generate plausible dispatch plans, but errors in constraint handling or dynamic conditions are common enough that human oversight and system-based validation (e.g., conflict detection, feasibility checks) are still needed.",
+      "_timestamp": "2026-04-05T23:35:19"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves coordination with drivers, pilots, and logistics partners who rely on dispatch instructions, but acceptance depends more on clarity and reliability than on the dispatcher\u2019s personal identity.",
+      "adequacy_evidence": "Algorithmic and AI-assisted dispatching systems are already widely used and accepted in transportation, with stakeholders generally indifferent to whether routing decisions originate from humans or AI.",
+      "_timestamp": "2026-04-05T23:35:19"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "In aviation, FAA regulations require certificated human aircraft dispatchers to share legal responsibility for flight planning and monitoring, effectively mandating a licensed human decision-maker. Similar safety regulations in rail and other transport domains require human oversight/control, so AI cannot legally perform this task autonomously.",
+      "_timestamp": "2026-04-05T23:35:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

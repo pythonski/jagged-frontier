@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1071.00",
+  "task_id": 4078,
+  "task_statement": "Prescribe therapy or medication with physician approval.",
+  "occupation_title": "Physician Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Prescribing therapy or medication is typically done through electronic health record systems and can be performed remotely (e.g., telehealth) with physician approval. However, in many real-world cases it occurs during in-person clinical encounters and may involve on-site workflows or regulatory constraints."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Prescribing therapy or medication spans highly heterogeneous patient populations, comorbidities, drug interactions, and context-specific clinical scenarios, including rare and complex edge cases.",
+      "adequacy_evidence": "There is extensive coverage in clinical guidelines, textbooks, trials, and some de-identified case data, but real-world longitudinal EHR data and rare edge-case presentations remain partially inaccessible or thinly represented.",
+      "_timestamp": "2026-04-06T05:46:32"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Prescribing therapy involves interpreting patient-specific factors (symptoms, comorbidities, preferences, risk tolerance) and aligning with evolving clinical guidelines, making objectives and success criteria highly context-dependent and partially implicit.",
+      "adequacy_evidence": "Current AI can apply guidelines and infer reasonable treatments but often struggles with nuanced tradeoffs, patient preferences, and implicit clinical priorities, requiring human oversight to resolve ambiguities.",
+      "_timestamp": "2026-04-06T05:46:32"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Prescribing requires nuanced clinical judgment about patient-specific factors (comorbidities, contraindications, adherence likelihood, subtle presentation differences) that go beyond explicit guidelines and rely on experience-derived calibration.",
+      "adequacy_evidence": "Current agents can follow guidelines and handle common cases well, but they lack reliable calibration in complex, context-sensitive scenarios like polypharmacy or atypical presentations, leading to gaps in non-routine cases.",
+      "_timestamp": "2026-04-06T05:46:33"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Prescribing requires integrating multiple in-episode data sources (patient history, current medications, allergies, labs, vitals, and guidelines), where missing a single detail like a drug interaction can cause harm.",
+      "adequacy_evidence": "Agents can retrieve and organize structured EHR data with tools, but still show lapses in reliably prioritizing and retaining all clinically salient details across the decision process.",
+      "_timestamp": "2026-04-06T05:46:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves a multi-step clinical workflow (assessment, history review, decision-making, safety checks, documentation, and physician sign-off) where consistency across steps matters but sequences are not \u0905\u0924\u094d\u092f long or deeply interdependent.",
+      "adequacy_evidence": "AI agents can generally sustain coherent performance across these moderate-length clinical workflows, but may exhibit some error accumulation or missed constraints (e.g., drug interactions or context carryover) as steps increase.",
+      "_timestamp": "2026-04-06T05:46:34"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Prescribing therapy or medication depends heavily on longitudinal patient data such as medical history, prior treatments, allergies, and response patterns across multiple visits.",
+      "adequacy_evidence": "Current AI agents can integrate with EHR systems to access historical data, but maintaining coherent, continuously updated patient context across sessions is still imperfect and can lead to gaps or misprioritized information.",
+      "_timestamp": "2026-04-06T05:46:35"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Prescribing in clinical settings typically requires decisions within seconds to a few minutes during patient encounters, but not true real-time split-second action.",
+      "adequacy_evidence": "Frontier AI agents can generate safe, guideline-consistent prescribing suggestions within seconds, leaving sufficient time budget for high-quality reasoning without major degradation.",
+      "_timestamp": "2026-04-06T05:46:35"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Prescribing decisions often incorporate non-text inputs such as medical imaging, physical exam observations, and sometimes audio cues (e.g., heart/lung sounds), though many cases can be mediated through structured/textual summaries.",
+      "adequacy_evidence": "Current agents can handle straightforward multimodal inputs (e.g., basic imaging or structured data) but remain inconsistent on nuanced clinical interpretation and cross-modal integration required for complex prescribing decisions.",
+      "_timestamp": "2026-04-06T05:46:35"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Medication and therapy decisions carry significant risk (e.g., adverse drug reactions, contraindications), and even rare residual errors can cause serious harm despite physician oversight.",
+      "adequacy_evidence": "With physician approval as a built-in check, many AI errors would be caught, but subtle issues (e.g., edge-case interactions or context-specific contraindications) may still slip through, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T05:46:36"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "U.S. laws require that prescribing medications and ordering therapy be performed and authorized by licensed clinicians (e.g., physician assistants under physician supervision), with legal responsibility tied to a human licensee. AI systems cannot independently prescribe or hold prescribing authority under current regulations.",
+      "_timestamp": "2026-04-06T05:46:36"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Patients and supervising physicians must trust and accept the prescriber's clinical judgment, authority, and communication, which directly affects adherence and care outcomes.",
+      "adequacy_evidence": "Patients and clinicians are unlikely to accept an AI as the prescribing agent; trust, liability, and expectations of human medical authority create strong resistance absent a human intermediary.",
+      "_timestamp": "2026-04-06T05:46:36"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Verifying prescriptions requires deep clinical expertise, review of patient history, contraindications, dosing, and potential interactions; many errors are subtle and may not produce immediate observable effects.",
+      "adequacy_evidence": "Current AI systems still make clinically significant errors in drug choice, dosing, and contraindication handling, requiring thorough expert review and cross-checking to ensure safety.",
+      "_timestamp": "2026-04-06T05:46:36"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

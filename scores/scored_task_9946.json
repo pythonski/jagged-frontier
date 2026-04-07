@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "49-3011.00",
+  "task_id": 9946,
+  "task_statement": "Read and interpret maintenance manuals, service bulletins, and other specifications to determine the feasibility and method of repairing or replacing malfunctioning or damaged components.",
+  "occupation_title": "Aircraft Mechanics and Service Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Maintenance manuals and service bulletins are commonly accessed and interpreted on computers, making the reading and analysis largely digital. However, in practice mechanics often perform this task while physically inspecting aircraft components or working in the hangar, tying it to an on-site context."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Manuals and service bulletins provide structured guidance, but mechanics must often interpret applicability to specific damage conditions, wear patterns, or constraints using experience-based judgment.",
+      "adequacy_evidence": "Current agents can parse and synthesize documentation well, but lack grounded calibration about real-world aircraft conditions and edge-case feasibility, leading to gaps in non-routine interpretations.",
+      "_timestamp": "2026-04-05T23:10:54"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintenance manuals and service bulletins are structured, but applying them requires interpreting applicability to specific damage conditions, aircraft configurations, and operational constraints, which are partly context-dependent.",
+      "adequacy_evidence": "Current agents can parse and summarize technical documents, but often struggle to reliably map instructions to nuanced real-world conditions and edge cases without human clarification.",
+      "_timestamp": "2026-04-05T23:10:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step reasoning across manuals, bulletins, and specifications, requiring consistent interpretation and cross-referencing, but not extremely long or tightly coupled action sequences.",
+      "adequacy_evidence": "Frontier agents can process and synthesize multiple documents, but performance can degrade with longer or more complex document sets, leading to occasional missed constraints or inconsistencies.",
+      "_timestamp": "2026-04-05T23:10:54"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a wide range of aircraft models, components, manufacturers, and continually updated service bulletins, creating a highly heterogeneous and long-tailed distribution of technical documentation and edge cases.",
+      "adequacy_evidence": "While large volumes of manuals and technical documents exist and can be used for training, many are proprietary or restricted, leaving some gaps; however, targeted data access and synthesis make most of the distribution tractable.",
+      "_timestamp": "2026-04-05T23:10:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Each instance primarily involves consulting current manuals, bulletins, and specifications for a specific issue; it does not depend on maintaining persistent cross-session state or historical case context.",
+      "adequacy_evidence": "Since the task is largely self-contained per instance, existing agent memory systems are sufficient and no meaningful cross-session retention gaps arise.",
+      "_timestamp": "2026-04-05T23:10:55"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Maintenance manuals and service bulletins often include diagrams, schematics, and illustrated parts breakdowns that must be interpreted alongside text to determine repair methods.",
+      "adequacy_evidence": "Current AI systems can interpret many diagrams and technical illustrations but still struggle with complex, domain-specific schematics and precise cross-referencing between visuals and dense technical text.",
+      "_timestamp": "2026-04-05T23:10:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Aircraft maintenance manuals and service bulletins are lengthy, highly technical, and cross-referential; technicians must track multiple constraints, procedures, and component-specific details where missing a clause can lead to incorrect repair decisions.",
+      "adequacy_evidence": "LLM agents with retrieval can handle large documents, but they still show brittleness in maintaining precise cross-references and can overlook or misprioritize critical procedural details across long, heterogeneous texts.",
+      "_timestamp": "2026-04-05T23:10:55"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Interpreting manuals and service bulletins is typically done in a deliberative maintenance context where technicians can take minutes or longer to ensure correctness.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to retrieve, parse, and reason over technical documents without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T23:10:55"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit FAA or other U.S. regulations prohibiting AI from reading or interpreting maintenance manuals or service bulletins. While certified human mechanics are required to perform and approve maintenance actions, the interpretive task itself is not legally restricted to humans.",
+      "_timestamp": "2026-04-05T23:10:57"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect interpretation of maintenance manuals or service bulletins can lead to improper repairs, creating serious safety risks including in-flight failure, so even rare residual errors have severe consequences.",
+      "adequacy_evidence": "While outputs can be cross-checked by certified mechanics and against documentation, AI may still introduce subtle misinterpretations or omissions that are not always caught, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-05T23:10:57"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This task is primarily an internal technical analysis of manuals and specifications, with outputs used within the maintenance workflow rather than requiring direct stakeholder interaction or acceptance of the performer\u2019s identity.",
+      "adequacy_evidence": "Since there are no meaningful external stakeholders whose acceptance depends on who or what performs the task, AI involvement would not face acceptance barriers in this specific activity.",
+      "_timestamp": "2026-04-05T23:10:57"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Interpreting aircraft maintenance manuals and service bulletins involves nuanced technical language, conditional procedures, and safety-critical implications; mistakes may not be obvious without deep domain expertise and may only surface during or after repair work.",
+      "adequacy_evidence": "Current AI systems can misinterpret technical specifications or applicability conditions, and detecting these errors requires expert review; verification is effortful and essential, as mistakes are neither trivial nor consistently obvious.",
+      "_timestamp": "2026-04-05T23:10:57"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

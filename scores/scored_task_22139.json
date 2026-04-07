@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-1031.00",
+  "task_id": 22139,
+  "task_statement": "Gather information from geographic information systems (GIS) databases or applications to formulate land use recommendations.",
+  "occupation_title": "Conservation Scientists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Gathering information from GIS databases or applications is done through computer-based GIS software and digital datasets, which can be accessed and analyzed entirely remotely without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Land use recommendations span diverse ecosystems, geographies, regulatory regimes, and data layers (e.g., soil, hydrology, biodiversity, human use), creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "There is extensive GIS data, environmental studies, and planning documentation available, but many real-world cases rely on localized, proprietary datasets and implicit integration practices that are only partially captured in accessible training pipelines.",
+      "_timestamp": "2026-04-05T20:44:22"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Formulating land use recommendations from GIS data requires interpreting spatial patterns in light of ecological processes, local conditions, and tradeoffs that are not fully codified, relying on professional judgment built through field experience.",
+      "adequacy_evidence": "Current AI can synthesize GIS data and apply general heuristics, but often lacks the nuanced, context-specific calibration (e.g., local ecosystem dynamics or stakeholder constraints) needed for consistently expert-level recommendations.",
+      "_timestamp": "2026-04-05T20:44:22"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Formulating land use recommendations requires interpreting implicit goals (e.g., conservation priorities, economic tradeoffs, regulatory context) and integrating stakeholder-specific criteria that are often not fully specified in the task input.",
+      "adequacy_evidence": "Current agents can synthesize GIS data and propose plausible recommendations, but often miss nuanced local priorities, evolving stakeholder constraints, or implicit policy considerations without iterative human guidance.",
+      "_timestamp": "2026-04-05T20:44:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows\u2014querying GIS databases, selecting relevant layers, integrating spatial data, and synthesizing findings into recommendations\u2014where intermediate outputs inform later steps but are not extremely long or tightly coupled.",
+      "adequacy_evidence": "Current AI agents can manage structured multi-step GIS workflows with tools, but may exhibit some degradation such as minor inconsistencies or dropped constraints over longer sequences, especially during data integration and synthesis.",
+      "_timestamp": "2026-04-05T20:44:23"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on interpreting spatial data layers, maps, and geospatial visualizations from GIS systems, which are inherently non-textual and require cross-modal reasoning.",
+      "adequacy_evidence": "Current agents can process GIS data with tools and handle basic spatial queries, but struggle with complex spatial reasoning, layered map interpretation, and nuanced geospatial judgment.",
+      "_timestamp": "2026-04-05T20:44:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple GIS layers (e.g., soil, vegetation, hydrology, land use constraints) and attribute data, demanding active retrieval and summarization but typically within manageable scope per project.",
+      "adequacy_evidence": "Current agents with GIS tooling can handle multiple datasets, but may lose track of nuances across layers or oversimplify spatial relationships when compressing information into recommendations.",
+      "_timestamp": "2026-04-05T20:44:24"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "GIS data gathering and analysis for land use recommendations is typically conducted over minutes to hours or longer, with no expectation of real-time responsiveness.",
+      "adequacy_evidence": "Current AI agents can perform data retrieval, integration, and analysis within acceptable timeframes without needing to truncate reasoning, so speed does not degrade output quality.",
+      "_timestamp": "2026-04-05T20:44:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Formulating land use recommendations often builds on prior analyses, historical land use patterns, and ongoing project context, but many instances can still be completed using current GIS data and documentation alone.",
+      "adequacy_evidence": "Current agents can store and retrieve project context via databases and memory systems, but integration of evolving, multi-source historical context is sometimes inconsistent or incomplete across sessions.",
+      "_timestamp": "2026-04-05T20:44:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from gathering GIS data or formulating land use recommendations. While final decisions or official plans may require human professional oversight in some contexts, the information-gathering and recommendation task itself is not legally restricted.",
+      "_timestamp": "2026-04-05T20:44:26"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Land use recommendations can influence environmental outcomes, regulatory compliance, and resource allocation, so errors have meaningful consequences, but they are typically subject to review and revision before implementation.",
+      "adequacy_evidence": "Even after standard checks, AI may miss context-specific constraints or misinterpret GIS data layers, leaving some residual risk that could affect recommendations, though not usually at catastrophic levels.",
+      "_timestamp": "2026-04-05T20:44:26"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying GIS-derived land use recommendations requires domain expertise to check data sources, spatial assumptions, and ecological interpretations, but errors can often be identified through cross-referencing datasets and established criteria.",
+      "adequacy_evidence": "Current AI systems can misinterpret spatial data, use outdated or mismatched layers, or apply weak reasoning, so human review is needed, though errors are typically catchable with standard GIS validation practices.",
+      "_timestamp": "2026-04-05T20:44:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces inputs for land use recommendations that are consumed by planners, policymakers, or land managers, who may consider the source but primarily care about data quality.",
+      "adequacy_evidence": "Stakeholders already accept automated and software-driven GIS analysis; AI-generated data gathering is unlikely to face meaningful resistance if outputs are accurate.",
+      "_timestamp": "2026-04-05T20:44:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

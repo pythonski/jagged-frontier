@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2041.01",
+  "task_id": 16259,
+  "task_statement": "Design or maintain databases of biological data.",
+  "occupation_title": "Biostatisticians",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Designing and maintaining databases of biological data is performed using database management and statistical software on computers, with data accessed and managed digitally. No physical presence or specialized non-computer equipment is required."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing biological databases involves judgment about schema structure, ontology alignment, and data curation practices that often rely on experience with domain-specific conventions and downstream use cases.",
+      "adequacy_evidence": "Current agents can follow documented standards and patterns but still show gaps in nuanced decisions like handling ambiguous biological entities or anticipating edge-case data integration issues.",
+      "_timestamp": "2026-04-06T05:55:50"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Database design for biological data depends on research goals, data types (e.g., genomic, clinical), evolving standards, and stakeholder needs, which are often only partially specified and require contextual interpretation.",
+      "adequacy_evidence": "Current agents can propose reasonable schemas and infer common requirements but often miss domain-specific conventions, edge cases, or evolving research needs without iterative human guidance.",
+      "_timestamp": "2026-04-06T05:55:50"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Biological databases span multiple data types (e.g., genomics, clinical, longitudinal studies) and schemas, but are built from recurring design patterns and standards rather than a fully open-ended distribution.",
+      "adequacy_evidence": "There is extensive public data, documentation, and examples for most database types, though some proprietary clinical systems and rare data modalities are underrepresented and harder to access for training.",
+      "_timestamp": "2026-04-06T05:55:51"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Database design and maintenance involve multi-step workflows (requirements analysis, schema design, data integration, validation, updates) where earlier choices affect later steps, but tasks are often modularized and revisable.",
+      "adequacy_evidence": "LLM-based agents can manage multi-step coding and design workflows with tools, but over longer sequences they show some drift (e.g., inconsistent schema decisions, missed constraints), requiring oversight and iteration.",
+      "_timestamp": "2026-04-06T05:55:52"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing and maintaining biological databases is typically an offline, project-based task where minutes to hours (or longer) of latency are acceptable for schema design, data integration, and optimization.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to reason through database design and maintenance tasks without meaningful degradation from speed constraints, as no tight latency requirements are imposed.",
+      "_timestamp": "2026-04-06T05:55:52"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Designing or maintaining biological databases requires tracking schemas, data types, constraints, and multiple data sources within a session, but the information is structured and can be externalized in tools.",
+      "adequacy_evidence": "Agents can manage schemas and documentation with tool support, but may lose track of constraints or relationships in larger or evolving designs, leading to moderate context drift.",
+      "_timestamp": "2026-04-06T05:55:52"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing and maintaining biological databases primarily involves structured data modeling, schemas, metadata, and text-based or symbolic data (e.g., sequences), with minimal reliance on non-text modalities.",
+      "adequacy_evidence": "Current AI agents handle text and structured data tasks well, and the limited multimodal aspects (if any) do not pose a meaningful challenge.",
+      "_timestamp": "2026-04-06T05:55:53"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Designing and maintaining biological databases requires persistent tracking of schemas, data provenance, updates, and evolving project requirements across many sessions over long periods.",
+      "adequacy_evidence": "Current AI systems can rely on external databases, version control, and retrieval systems to store and access persistent state, largely meeting these cross-session memory needs.",
+      "_timestamp": "2026-04-06T05:55:53"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Errors in biological data databases can propagate into research analyses, clinical trials, or regulatory submissions, potentially leading to incorrect scientific conclusions or patient risk, so even rare residual errors can have serious downstream consequences.",
+      "adequacy_evidence": "While many schema, consistency, and validation checks can catch issues, AI systems still exhibit occasional subtle data modeling or integrity mistakes that may pass standard checks, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-06T05:55:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in biological databases (e.g., schema design flaws, mis-specified relationships, data integrity issues, or incorrect metadata standards) can be subtle and may only surface during downstream analyses, requiring domain expertise and careful validation to detect.",
+      "adequacy_evidence": "AI-generated database designs and maintenance scripts often require thorough expert review to catch schema mismatches, improper normalization, or domain-specific annotation errors, and these mistakes are not trivially detectable with automated checks alone.",
+      "_timestamp": "2026-04-06T05:55:53"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Designing or maintaining biological databases is primarily a technical, back-end task with outputs consumed impersonally by researchers or systems, not requiring stakeholder engagement with the performer's identity.",
+      "adequacy_evidence": "Since stakeholders typically care about database functionality and reliability rather than who built it, AI agents are broadly acceptable in this role with minimal resistance.",
+      "_timestamp": "2026-04-06T05:55:53"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from designing or maintaining biological data databases. While frameworks like HIPAA and data protection rules govern how sensitive data must be handled, they regulate compliance requirements rather than banning AI involvement.",
+      "_timestamp": "2026-04-06T05:55:54"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

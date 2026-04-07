@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-1029.02",
+  "task_id": 16814,
+  "task_statement": "Compile and analyze molecular or cellular experimental data and adjust experimental designs as necessary.",
+  "occupation_title": "Molecular and Cellular Biologists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Compiling and analyzing experimental data and revising experimental designs are typically done on computers using statistical or bioinformatics software. However, some instances require interaction with ongoing lab work, instruments, or samples to interpret results and plan adjustments."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous experimental systems (different organisms, assays, omics modalities, lab conditions) with long-tailed edge cases and evolving protocols, requiring broad coverage of diverse data types and designs.",
+      "adequacy_evidence": "While published literature, databases, and protocols provide substantial coverage, key parts of the distribution (negative results, failed experiments, proprietary datasets, tacit lab adjustments) are sparse or inaccessible, though partially recoverable via synthesis and targeted curation.",
+      "_timestamp": "2026-04-05T23:39:29"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting noisy molecular/cellular data and iteratively adjusting experimental designs relies on experiential judgment about assay artifacts, biological variability, and context-specific controls that are not fully codified.",
+      "adequacy_evidence": "Frontier agents can suggest analyses and design tweaks from literature and patterns, but lack lab-specific calibration and embodied experience with failure modes, leading to weaker judgment in non-routine or ambiguous cases.",
+      "_timestamp": "2026-04-05T23:39:29"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Interpreting experimental results and deciding how to adjust designs depends on evolving hypotheses, lab-specific goals, and nuanced domain judgment that are often not fully specified upfront.",
+      "adequacy_evidence": "Current agents can analyze data and suggest design changes, but they frequently miss implicit research goals or context, requiring iterative human guidance to align with true experimental intent.",
+      "_timestamp": "2026-04-05T23:39:30"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "This task involves iterative experimental cycles where data analysis informs subsequent design changes, with tightly coupled dependencies across multiple stages and timepoints.",
+      "adequacy_evidence": "AI agents can manage multi-step analytical workflows, but over long iterative experimental sequences they show some drift in maintaining consistent context and integrating prior results into redesign decisions.",
+      "_timestamp": "2026-04-05T23:39:30"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Experimental biology is inherently iterative and longitudinal, requiring tracking prior datasets, protocols, results, and design changes across many experiments over weeks to years to inform new designs.",
+      "adequacy_evidence": "Current agents can store and retrieve prior data via databases and lab information systems, but they often struggle with reliably integrating evolving experimental context, tacit project history, and nuanced prior decisions across sessions without careful human-managed scaffolding.",
+      "_timestamp": "2026-04-05T23:39:31"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating large, heterogeneous datasets (e.g., gene expression, imaging, assay results) alongside experimental conditions and prior results, where missing details can lead to incorrect analysis or flawed redesigns.",
+      "adequacy_evidence": "While agents can use tools and external memory to handle large datasets, they still exhibit context fragmentation, imperfect retrieval, and drift when synthesizing complex, evolving experimental states.",
+      "_timestamp": "2026-04-05T23:39:31"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Molecular and cellular biology experiments routinely involve interpreting microscopy images, gels, flow cytometry plots, and other visual/spatial data alongside numerical outputs, making multimodal analysis central to the task.",
+      "adequacy_evidence": "Current AI systems can process standard scientific images and plots but remain unreliable for nuanced, high-stakes interpretation of complex biological imagery and subtle experimental artifacts.",
+      "_timestamp": "2026-04-05T23:39:31"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Data analysis and experimental design adjustment in molecular biology are typically conducted over hours to days, not under tight real-time constraints.",
+      "adequacy_evidence": "AI systems can take sufficient time to perform thorough analysis and reasoning without impacting task performance, so latency does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T23:39:32"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in molecular/cellular data analysis (e.g., misapplied statistics, batch effects, misinterpreted assays) are often subtle and may only surface through deep domain review, replication, or downstream experimental failure.",
+      "adequacy_evidence": "Current AI systems can produce plausible but incorrect analyses or design adjustments, and verifying these requires expert scrutiny and often additional experiments, making the checking burden high.",
+      "_timestamp": "2026-04-05T23:39:32"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in analyzing experimental data or adjusting designs can mislead research directions, waste resources, or produce invalid conclusions, but are usually caught over time and rarely cause immediate irreversible harm.",
+      "adequacy_evidence": "Even after standard checks (peer review, replication, statistical validation), AI-generated analyses or design adjustments may still introduce subtle biases or misinterpretations that are not always immediately detectable, leaving some residual risk.",
+      "_timestamp": "2026-04-05T23:39:33"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from compiling or analyzing experimental data or suggesting design adjustments in molecular and cellular biology. While laboratory activities may require human oversight or compliance with safety and ethical regulations, these do not restrict AI use in this analytical task.",
+      "_timestamp": "2026-04-05T23:39:33"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task primarily serves internal stakeholders such as research teams, principal investigators, and peer reviewers who rely on the analysis and experimental adjustments, with some sensitivity to the performer's expertise and credibility.",
+      "adequacy_evidence": "Scientific stakeholders are increasingly open to AI-assisted data analysis, but full delegation to an AI agent may still face skepticism regarding reliability and interpretability, leading to moderate resistance.",
+      "_timestamp": "2026-04-05T23:39:33"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

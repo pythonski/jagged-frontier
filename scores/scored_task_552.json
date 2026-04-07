@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "31-9091.00",
+  "task_id": 552,
+  "task_statement": "Record treatment information in patient records.",
+  "occupation_title": "Dental Assistants",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Recording treatment information is often done in electronic dental/medical record systems on a computer, but in many practices it can also involve writing in paper charts or entering data while physically present during clinical care."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recording treatment information involves entering multiple interrelated data points (procedures, materials, patient responses) accurately within a single record, requiring some consistency across steps but not long multi-stage workflows.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably maintain consistency across short to moderate data-entry sequences, especially in structured EHR contexts, with little performance degradation over the required sequence length.",
+      "_timestamp": "2026-04-06T01:30:21"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While much of the task follows standardized formats (EHR templates, coding systems, clinical protocols), assistants must still interpret what details are relevant to include based on the procedure and dentist instructions.",
+      "adequacy_evidence": "Current AI agents with access to structured templates and clinical documentation guidelines can reliably infer what information to record and how to format it, with minimal ambiguity-related failure.",
+      "_timestamp": "2026-04-06T01:30:21"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recording treatment information requires tracking multiple details from a single patient visit (procedures performed, materials used, provider notes), but the volume is limited and typically structured within a short episode.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably manage and organize this level of structured, within-episode information using forms or prompts, with minimal risk of losing or miscompressing key details.",
+      "_timestamp": "2026-04-06T01:30:22"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recording treatment information involves applying standard documentation practices but also some judgment in selecting relevant details, interpreting clinician notes, and ensuring appropriate clinical terminology and completeness.",
+      "adequacy_evidence": "Well-scaffolded AI systems can reliably extract, structure, and document treatment information from inputs, with only minor limitations in nuanced interpretation that do not significantly hinder overall performance.",
+      "_timestamp": "2026-04-06T01:30:22"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans a moderate range of procedures, patient conditions, and documentation formats across dental practices, but remains fairly standardized in structure and terminology.",
+      "adequacy_evidence": "While general clinical documentation patterns are well-represented in training data and can be synthetically generated, detailed, real-world dental record examples are often private, leaving some edge cases and system-specific nuances undercovered.",
+      "_timestamp": "2026-04-06T01:30:22"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Dental assistants typically document treatment details shortly after or during procedures, so entries are expected within seconds to a few minutes but do not require instantaneous response.",
+      "adequacy_evidence": "Current AI systems can transcribe, structure, and enter treatment information quickly within this time window without needing extended reasoning, so speed constraints do not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T01:30:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recording treatment information is primarily a text-based task involving structured data entry and written notes in patient records, with minimal reliance on interpreting or generating non-text modalities.",
+      "adequacy_evidence": "Current AI systems can reliably handle text entry, structuring, and summarization tasks, so there is no meaningful multimodal capability gap for this task.",
+      "_timestamp": "2026-04-06T01:30:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Recording treatment information typically involves referencing an existing patient chart and maintaining continuity with prior visits (e.g., history, prior procedures, allergies), but the task itself is episodic and structured within established record systems.",
+      "adequacy_evidence": "Current AI systems can reliably store, retrieve, and update longitudinal patient data when integrated with electronic health record systems, so cross-session memory needs are well supported by existing infrastructure.",
+      "_timestamp": "2026-04-06T01:30:24"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces medical records used by dentists, hygienists, and potentially patients, so others rely on the output, though the recorder's personal identity is not central.",
+      "adequacy_evidence": "Healthcare providers already accept electronic and partially automated documentation systems, and AI-assisted recording would likely face minimal resistance if accuracy is maintained.",
+      "_timestamp": "2026-04-06T01:30:24"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in dental charting (e.g., wrong tooth number, procedure code, or treatment detail) are not always immediately obvious and typically require domain knowledge and cross-checking with clinical notes to verify.",
+      "adequacy_evidence": "AI systems can transcribe and structure treatment data but still make non-trivial mistakes (e.g., mislabeling procedures or anatomical details), requiring routine human review to ensure accuracy.",
+      "_timestamp": "2026-04-06T01:30:25"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Accurate dental records are important for continuity of care, billing, and legal documentation, but minor residual errors (e.g., small omissions or phrasing issues) are often correctable and rarely immediately catastrophic.",
+      "adequacy_evidence": "AI-generated entries can be cross-checked against structured inputs, treatment codes, and clinician review, making residual errors after normal quality control relatively low-risk and acceptable.",
+      "_timestamp": "2026-04-06T01:30:25"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from recording treatment information in patient records; AI can be used as a documentation tool under HIPAA-compliant systems. Responsibility and supervision requirements apply to licensed providers, but these do not ban AI assistance in the task.",
+      "_timestamp": "2026-04-06T01:30:27"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

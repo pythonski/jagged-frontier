@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1123.00",
+  "task_id": 370,
+  "task_statement": "Record prognosis, treatment, response, and progress in patient's chart or enter information into computer.",
+  "occupation_title": "Physical Therapists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Documenting prognosis, treatment, and progress is usually done by entering notes into an electronic health record on a computer, which is fully digital. However, some settings still involve paper charts or require on\u2011site documentation within clinical workflows."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Documentation spans diverse patient conditions, treatments, and responses, but follows relatively standardized clinical note structures and conventions within physical therapy practice.",
+      "adequacy_evidence": "Large volumes of clinical notes exist, but access is constrained by privacy; while de-identified data and synthetic generation help, some edge cases and nuanced documentation practices remain underrepresented.",
+      "_timestamp": "2026-04-06T03:06:22"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Recording prognosis and patient progress requires some clinical judgment to accurately interpret and summarize patient responses and functional changes, beyond purely mechanical data entry.",
+      "adequacy_evidence": "Current AI can generate structured clinical notes and summarize treatment responses, but may lack consistent calibration in nuanced clinical interpretation or subtle contextual judgment in non-routine cases.",
+      "_timestamp": "2026-04-06T03:06:23"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While documentation has standardized elements (prognosis, treatment, response, progress), clinicians must decide what details are clinically relevant, how to phrase them, and ensure compliance with medical and billing norms, which introduces moderate context dependence.",
+      "adequacy_evidence": "Current agents can follow documentation templates and infer likely content, but often miss nuanced clinical significance, appropriate emphasis, or compliance subtleties, requiring human review and correction.",
+      "_timestamp": "2026-04-06T03:06:23"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves compiling several related pieces of patient information (prognosis, treatment, response, progress) into a coherent record, requiring some consistency across entries but not a long or tightly interdependent sequence.",
+      "adequacy_evidence": "Current AI systems handle short-to-moderate documentation sequences reliably, maintaining consistency across fields without significant degradation over the required sequence length.",
+      "_timestamp": "2026-04-06T03:06:24"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating multiple pieces of session-specific information (prognosis, treatments delivered, patient responses, and progress) into a coherent record, but the volume is moderate and typically structured within a single encounter.",
+      "adequacy_evidence": "Frontier AI agents with EHR integration and sufficient context windows can reliably track and organize this level of information within an episode, with minimal loss or miscompression under current capabilities.",
+      "_timestamp": "2026-04-06T03:06:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Documenting prognosis, treatment, response, and progress requires referencing and updating a patient's longitudinal record across multiple therapy sessions.",
+      "adequacy_evidence": "Current AI systems can reliably use external databases/EHR integrations to store and retrieve persistent patient records across sessions, so cross-session memory is not a major limitation.",
+      "_timestamp": "2026-04-06T03:06:24"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily text-based documentation of clinical information into charts or computer systems, with no inherent need to process or generate non-text modalities.",
+      "adequacy_evidence": "Current AI agents can handle text entry and structuring tasks effectively, and no multimodal capabilities are required for competent performance.",
+      "_timestamp": "2026-04-06T03:06:25"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Clinical documentation of prognosis, treatment, and progress is typically completed during or shortly after sessions, with minutes available rather than strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can generate and structure clinical notes well within these time windows without needing to truncate reasoning, so speed does not degrade quality.",
+      "_timestamp": "2026-04-06T03:06:25"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reviewing clinical documentation like prognosis and treatment notes requires professional expertise to ensure accuracy and consistency with patient status, and some errors (e.g., subtle mischaracterizations) may not be immediately obvious.",
+      "adequacy_evidence": "AI-generated notes would still require clinician review to confirm correctness and appropriateness, as models can introduce subtle inaccuracies or omissions that are not trivially detectable without domain knowledge.",
+      "_timestamp": "2026-04-06T03:06:26"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The recorded information is used by other clinicians, administrators, and insurers who rely on its accuracy, but the identity of who entered it is not central to its use.",
+      "adequacy_evidence": "Stakeholders generally accept electronic documentation tools and AI-assisted data entry, as long as accuracy and compliance are maintained, so resistance to AI in this role is minimal.",
+      "_timestamp": "2026-04-06T03:06:26"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Clinical documentation in patient charts must be created and authenticated by a licensed physical therapist or supervised personnel under healthcare regulations and billing rules. AI can assist, but cannot independently author or sign records, creating a partial restriction rather than an explicit prohibition.",
+      "_timestamp": "2026-04-06T03:06:27"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Documentation errors in patient charts can affect care continuity, clinical decisions, and legal/billing records, but most are not immediately catastrophic if occasional and later corrected.",
+      "adequacy_evidence": "Even with review, AI systems can introduce subtle inaccuracies or omissions in clinical documentation that may slip through, leaving a moderate level of residual risk.",
+      "_timestamp": "2026-04-06T03:06:28"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

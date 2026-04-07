@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2036.00",
+  "task_id": 22832,
+  "task_statement": "Advise oncology team members on use of beam modifying or immobilization devices in radiation treatment plans.",
+  "occupation_title": "Medical Dosimetrists",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Guidance on beam modifiers or immobilization devices is usually given during digital treatment planning and team consultations using planning software and electronic records. However, some instances require in-person discussion with therapists or review of physical setup and devices in the clinic."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans diverse cancer sites, anatomies, device types (e.g., bolus, wedges, immobilization systems), and patient-specific constraints, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "While textbooks, guidelines, and some case studies exist, detailed, case-level decision rationales and institutional practices are often proprietary or sparsely documented, though partial coverage can be supplemented via simulation and synthetic cases.",
+      "_timestamp": "2026-04-06T02:10:09"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Advising on beam modifying or immobilization devices requires interpreting implicit clinical goals, physician preferences, patient anatomy, and tradeoffs between precision, comfort, and setup reproducibility, which are not fully specified in protocols.",
+      "adequacy_evidence": "Current agents can incorporate guidelines and prior cases but often miss nuanced, context-specific clinical intent or team preferences, requiring human clarification and iteration to align recommendations.",
+      "_timestamp": "2026-04-06T02:10:09"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advising on beam modifying or immobilization devices involves reviewing treatment plans, considering patient-specific constraints, and iterating with clinicians, requiring a moderately extended, interdependent reasoning process.",
+      "adequacy_evidence": "Frontier AI agents can sustain multi-step clinical reasoning with tool support, but may show some drift or missed constraints across iterative discussions and plan refinements.",
+      "_timestamp": "2026-04-06T02:10:09"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Advice is often informed by prior cases, institutional protocols, and clinician preferences, but each treatment plan is largely patient-specific and can be evaluated independently with current data.",
+      "adequacy_evidence": "Current AI systems can persist and retrieve guidelines and past case patterns via databases or EHR integration, but may inconsistently surface the most relevant prior context or adapt to evolving team preferences.",
+      "_timestamp": "2026-04-06T02:10:11"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Advice is typically given during treatment planning discussions or consultations where responses are expected within seconds to a few minutes, but not under strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can generate clinically relevant explanations and recommendations within this time window without needing to truncate reasoning, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-06T02:10:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Advising on beam modifiers and immobilization devices requires interpreting CT/MRI images, spatial anatomy, and device geometry within treatment planning systems, making cross-modal reasoning central.",
+      "adequacy_evidence": "Current agents have limited reliability with clinical-grade 3D imaging, DICOM data, and precise spatial reasoning needed for device selection and placement, leading to significant gaps.",
+      "_timestamp": "2026-04-06T02:10:12"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating patient-specific treatment plans, anatomical constraints, and device specifications within a single advisory interaction, but the information volume is moderate and typically structured within planning systems.",
+      "adequacy_evidence": "Current agents can track and summarize relevant plan details, but may lose nuance in spatial relationships or device-specific constraints when compressing complex clinical context, leading to occasional gaps.",
+      "_timestamp": "2026-04-06T02:10:12"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves advising radiation oncologists and clinical staff, who must rely on and engage with the dosimetrist\u2019s recommendations, with some weight on professional credibility.",
+      "adequacy_evidence": "Clinicians may be cautious about accepting AI-generated technical advice in treatment planning, often preferring human expert validation even if AI performance is strong.",
+      "_timestamp": "2026-04-06T02:10:12"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in advice about beam-modifying or immobilization devices can subtly affect dose distribution and patient positioning, requiring specialized medical physics expertise and plan review to detect; issues may not be immediately visible without detailed analysis.",
+      "adequacy_evidence": "Current AI systems can generate plausible but occasionally incorrect or oversimplified recommendations in this domain, and verifying correctness requires expert review of treatment plans and physics considerations, making the checking burden substantial.",
+      "_timestamp": "2026-04-06T02:10:12"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Guidance on beam modifiers and immobilization directly affects dose distribution and patient positioning; residual errors can lead to significant underdose of tumors or overdose to critical organs with serious harm.",
+      "adequacy_evidence": "Multilayer QA (physics checks, peer review, plan verification) would catch many issues, but AI-generated recommendations could still introduce subtle, context-specific errors that are not always fully eliminated by standard review.",
+      "_timestamp": "2026-04-06T02:10:13"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Radiation treatment planning and related clinical advisement are regulated medical activities requiring licensed professionals (e.g., medical physicists, dosimetrists, and physician oversight). Current regulations and standards of care require a qualified human to make and sign off on these decisions, effectively prohibiting fully autonomous AI from performing this task.",
+      "_timestamp": "2026-04-06T02:10:14"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting and advising on beam modifiers and immobilization devices requires nuanced, experience-based judgment about patient anatomy, tumor geometry, setup reproducibility, and tradeoffs in dose \u0935\u093f\u0924\u0930\u0923 that are not fully captured by explicit rules.",
+      "adequacy_evidence": "Well-scaffolded agents can apply guidelines and learned patterns, but they lack the experiential calibration for atypical anatomies, subtle setup uncertainties, and interdisciplinary negotiation that experienced dosimetrists use in practice.",
+      "_timestamp": "2026-04-06T11:26:51"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-3031.00",
+  "task_id": 2510,
+  "task_statement": "Complete and submit tax forms and returns, workers' compensation forms, pension contribution forms, and other government documents.",
+  "occupation_title": "Bookkeeping, Accounting, and Auditing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Most tax and government forms are prepared and submitted electronically using accounting software and online filing systems, allowing the task to be done entirely on a computer. However, some instances still involve printing, obtaining physical signatures, or mailing paper documents."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Most form completion follows explicit tax codes, instructions, and standardized procedures, though occasional edge cases (e.g., ambiguous classifications or exceptions) benefit from experience-based judgment.",
+      "adequacy_evidence": "Well-scaffolded agents can encode tax rules, follow instructions, and handle common edge cases via retrieval and rule-based logic, with minimal reliance on irreducible tacit knowledge.",
+      "_timestamp": "2026-04-06T05:08:51"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many forms have explicit fields and instructions, correct completion often depends on interpreting context (e.g., tax situations, eligibility, classification choices) and selecting appropriate forms based on nuanced rules.",
+      "adequacy_evidence": "Current AI agents can follow structured instructions and handle standard cases, but they often misinterpret edge cases or fail to infer implicit requirements without human clarification, leading to iterative correction.",
+      "_timestamp": "2026-04-06T05:08:51"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Completing and submitting tax and government forms is typically deadline-driven but not latency-sensitive; minutes to hours per document are acceptable.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to reason through form requirements without pressure, so speed constraints do not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T05:08:53"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking multiple financial figures, source documents, and form fields simultaneously, with some cross-referencing and consistency checks across documents.",
+      "adequacy_evidence": "Well-scaffolded agents with tool use (structured data handling, retrieval, validation scripts) can reliably manage and persist this level of within-episode information without significant loss or drift.",
+      "_timestamp": "2026-04-06T05:08:54"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Completing and submitting tax and government forms is primarily a text- and number-based task, involving structured fields and written instructions rather than inherently multimodal inputs or outputs.",
+      "adequacy_evidence": "Current AI agents can reliably process digital forms, PDFs, and extracted text, with OCR handling most scanned inputs adequately, so multimodal limitations do not meaningfully constrain performance.",
+      "_timestamp": "2026-04-06T05:08:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Completing and submitting tax and government forms involves multi-step processes with interdependent fields (e.g., calculations flowing across sections), but the sequences are structured and bounded rather than \u09a6\u09c0\u09b0\u09cd\u0998 or highly dynamic.",
+      "adequacy_evidence": "Well-scaffolded AI agents can generally follow these structured sequences, but may exhibit occasional error propagation or missed constraints across steps, especially when handling multiple related forms or revisions.",
+      "_timestamp": "2026-04-06T05:08:54"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Filing tax and government forms often relies on prior records (e.g., previous filings, employee data, account histories), but these are structured and routinely stored in accounting systems rather than requiring complex longitudinal reasoning.",
+      "adequacy_evidence": "Current AI systems integrated with databases and accounting software can reliably store and retrieve relevant historical records across sessions, with little fundamental limitation in maintaining this type of persistent state.",
+      "_timestamp": "2026-04-06T05:08:54"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans multiple form types (tax, workers' comp, pensions) across jurisdictions and individual/business scenarios, creating moderate variation in rules, inputs, and edge cases.",
+      "adequacy_evidence": "Most forms, instructions, and common filing scenarios are well-documented and publicly available, enabling strong coverage, but rare edge cases and firm-specific practices are less accessible and only partially capturable via synthesis.",
+      "_timestamp": "2026-04-06T05:08:54"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in tax and government forms can lead to penalties, delays, or compliance issues, but are typically correctable through amendments or follow-up filings rather than causing irreversible harm.",
+      "adequacy_evidence": "Even with validation tools and human review, AI can introduce subtle classification or interpretation errors that may slip through, leaving a moderate but manageable level of residual risk.",
+      "_timestamp": "2026-04-06T05:08:56"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Many fields have built-in validation, standardized formats, and cross-checks (totals, IDs, compliance rules), but subtle errors in classification, deductions, or jurisdictional rules require domain knowledge to catch.",
+      "adequacy_evidence": "Current AI can populate forms and follow rules but still makes non-obvious mistakes in edge cases and interpretations, so human review or software validation is needed to ensure compliance.",
+      "_timestamp": "2026-04-06T05:08:57"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves submitting documents to government agencies and sometimes coordinating with employers or clients, so external stakeholders rely on the output, but they primarily care about accuracy and compliance rather than who completed it.",
+      "adequacy_evidence": "Government e-filing systems and automated tax software are already widely accepted, and stakeholders are generally indifferent to whether forms are prepared by AI as long as they are correct and properly authorized.",
+      "_timestamp": "2026-04-06T05:08:58"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "No explicit laws prohibit AI from preparing or submitting these forms; tax software and e-filing systems already automate much of this work. While filings often require a human taxpayer or licensed preparer\u2019s signature/attestation, this does not restrict AI from performing the task itself.",
+      "_timestamp": "2026-04-06T05:08:58"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

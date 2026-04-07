@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1134.00",
+  "task_id": 14718,
+  "task_statement": "Identify or maintain links to and from other Web sites and check links to ensure proper functioning.",
+  "occupation_title": "Web Developers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Identifying, maintaining, and testing hyperlinks between websites is done through web browsers, content management systems, or code editors, all of which can be accessed remotely with a computer and internet connection."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans some variation (static vs dynamic links, authentication-gated pages, redirects, different protocols), but the overall problem structure is well-bounded and repetitive across websites.",
+      "adequacy_evidence": "Extensive web data, crawling logs, link-checking tools, and synthetic environments provide rich, process-level coverage for detecting and maintaining links, leaving no meaningful gaps for training.",
+      "_timestamp": "2026-04-05T22:52:13"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The core objective (identify and verify links) is explicit, but some context-dependent judgment is needed around which links are relevant, acceptable, or prioritized (e.g., SEO, content strategy, external trustworthiness).",
+      "adequacy_evidence": "Current agents can reliably crawl sites, detect broken links, and apply configurable rules for link inclusion, so they handle the modest ambiguity with minimal human iteration.",
+      "_timestamp": "2026-04-05T22:52:14"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Checking and maintaining web links is largely governed by explicit procedures (e.g., HTTP status checks, URL validation, redirect handling) with clear, rule-based criteria for success.",
+      "adequacy_evidence": "Current AI agents with web access and scripting tools can reliably automate link checking and maintenance, including handling common edge cases like redirects or broken URLs, without needing experiential judgment.",
+      "_timestamp": "2026-04-05T22:52:14"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking multiple URLs, their relationships, and status (e.g., broken, redirected) within a session, requiring some aggregation and state management but not extreme scale or complexity.",
+      "adequacy_evidence": "Current agents can reliably crawl, store, and check link states using tools and structured outputs, with minimal risk of losing or mismanaging within-session information.",
+      "_timestamp": "2026-04-05T22:52:15"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves iterating over many links, checking status, and updating references, but individual checks are largely independent and do not form tightly coupled sequences.",
+      "adequacy_evidence": "Well-scaffolded agents can reliably automate link crawling and validation across large sets using tools, with minimal degradation over sequence length due to parallelization and checkpointing.",
+      "_timestamp": "2026-04-05T22:52:15"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task centers on URLs, HTML, and HTTP responses, which are entirely text-based; no image, audio, or other modality is required for identifying or validating links.",
+      "adequacy_evidence": "Current AI agents with web tooling can fully handle link extraction and validation via text-based parsing and HTTP checks, with no multimodal limitations.",
+      "_timestamp": "2026-04-05T22:52:15"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Link maintenance and validation are typically performed via scheduled scripts or batch processes where minutes or longer runtimes are acceptable, not requiring immediate responses.",
+      "adequacy_evidence": "Current AI agents and automated tools can easily operate within these loose time constraints without needing to sacrifice reasoning depth or accuracy.",
+      "_timestamp": "2026-04-05T22:52:16"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task benefits from retaining a persistent map of site links and prior checks (e.g., known external links, historical failures), but it can also be recomputed by crawling the site each time.",
+      "adequacy_evidence": "Current agents can reliably store and retrieve link inventories and check histories using databases or files, and can also re-crawl sites if needed, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-05T22:52:16"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Broken or misdirected links typically degrade user experience but rarely cause severe or irreversible consequences; issues are easily noticed and corrected post-deployment.",
+      "adequacy_evidence": "Automated link-checking tools and monitoring can reliably catch most errors, and AI systems can perform at or above acceptable reliability with negligible residual risk after such checks.",
+      "_timestamp": "2026-04-05T22:52:16"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Broken or incorrect links are easily detected with automated link checkers (e.g., HTTP status codes, crawl tools) and straightforward manual testing, with immediate feedback.",
+      "adequacy_evidence": "Current AI systems can reliably use existing tools to check link validity and flag issues, and any residual errors are trivial to catch with automated verification.",
+      "_timestamp": "2026-04-05T22:52:17"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements in the U.S. that prohibit or restrict AI systems from identifying, maintaining, or checking web links. This is a standard technical task with no regulated decision-making or mandated human oversight.",
+      "_timestamp": "2026-04-05T22:52:17"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is a back-end technical maintenance task with no direct stakeholder interaction; outputs are system-level (functional links) and do not depend on performer identity.",
+      "adequacy_evidence": "Stakeholders are indifferent to who or what performs link checking as long as links function correctly; AI is already widely accepted for automated site maintenance tasks.",
+      "_timestamp": "2026-04-05T22:52:17"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

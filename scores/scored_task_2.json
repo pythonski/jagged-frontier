@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-2022.00",
+  "task_id": 2,
+  "task_statement": "Monitor customer preferences to determine focus of sales efforts.",
+  "occupation_title": "Sales Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Sales managers often monitor customer preferences using CRM data, sales reports, surveys, and online analytics, which can be done remotely. However, some instances involve in-person meetings with clients, store visits, or trade shows to gauge customer behavior and feedback."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Customer preferences vary widely across industries, regions, product types, and evolving market conditions, creating a highly heterogeneous and context-sensitive distribution of cases.",
+      "adequacy_evidence": "While large amounts of relevant data exist (CRM logs, surveys, market research), much of it is proprietary and lacks transparent process traces, leaving some important segments only partially covered but still tractable with targeted data collection and synthesis.",
+      "_timestamp": "2026-04-05T22:47:18"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting customer preferences and translating them into sales focus involves some experiential judgment about signal vs noise, emerging trends, and contextual business factors beyond explicit rules.",
+      "adequacy_evidence": "AI agents can analyze customer data and detect patterns, but often lack nuanced calibration around shifting market sentiment, weak signals, and firm-specific context, leading to moderate gaps in judgment.",
+      "_timestamp": "2026-04-05T22:47:18"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires interpreting heterogeneous signals (customer behavior, feedback, market trends) and aligning them with shifting business goals, so success criteria are partly implicit and context-dependent.",
+      "adequacy_evidence": "Current agents can analyze data and infer patterns but often miss nuanced strategic priorities or evolving business context, requiring human guidance to refine focus decisions.",
+      "_timestamp": "2026-04-05T22:47:19"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing collection, updating, and interpretation of customer data over time, but individual analysis steps are loosely coupled rather than forming a tightly interdependent sequence.",
+      "adequacy_evidence": "AI systems can reliably handle multi-step data aggregation and trend analysis workflows with minimal degradation, especially when supported by tools and structured pipelines.",
+      "_timestamp": "2026-04-05T22:47:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves synthesizing customer data from CRM systems, sales histories, and market signals, requiring ongoing retrieval and summarization within a decision cycle but not extreme scale or volatility.",
+      "adequacy_evidence": "Current agents can aggregate and summarize multi-source customer data, but may lose nuance in segmentation or misweight signals when compressing evolving preference patterns.",
+      "_timestamp": "2026-04-05T22:47:20"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Tracking customer preferences for sales focus requires accumulating and updating histories across many interactions over time, including evolving needs, buying patterns, and relationship context.",
+      "adequacy_evidence": "Current agents can integrate with CRMs and persist data, but often struggle with consistently updating, disambiguating, and surfacing nuanced preference signals across fragmented systems and long time horizons.",
+      "_timestamp": "2026-04-05T22:47:20"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring customer preferences and adjusting sales focus is typically done through periodic analysis (e.g., weekly or monthly reports), not under tight real-time constraints.",
+      "adequacy_evidence": "Current AI systems can perform data aggregation and analysis well within these relaxed timeframes without needing to sacrifice reasoning depth or output quality.",
+      "_timestamp": "2026-04-05T22:47:20"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Monitoring customer preferences is primarily based on structured data, sales reports, surveys, and textual feedback rather than requiring interpretation of images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI systems can effectively process and analyze the relevant text and numerical data sources, with little to no need for advanced multimodal capabilities in typical cases.",
+      "_timestamp": "2026-04-05T22:47:21"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing customer preferences involves interpreting noisy, multi-source data (sales trends, feedback, market signals), where errors may not be immediately visible and often require domain expertise and time to validate against outcomes.",
+      "adequacy_evidence": "AI can aggregate and analyze customer data, but it can misweight signals or infer spurious patterns, so human review is still needed to validate interpretations and ensure alignment with real market behavior.",
+      "_timestamp": "2026-04-05T22:47:22"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from monitoring customer preferences or informing sales focus. While data privacy laws (e.g., CCPA) regulate how customer data is collected and used, they do not restrict AI from performing this task itself.",
+      "_timestamp": "2026-04-05T22:47:22"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily an internal analytical function using customer data; it does not require direct interaction with customers or reliance on the performer's identity.",
+      "adequacy_evidence": "Since stakeholders do not directly engage with the performer, there is minimal concern about accepting an AI agent in this role, and such analytics are already commonly automated.",
+      "_timestamp": "2026-04-05T22:47:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in interpreting customer preferences can lead to suboptimal sales focus and lost revenue, but impacts are typically reversible and do not cause severe or irreversible harm.",
+      "adequacy_evidence": "With standard checks like performance metrics, A/B testing, and human review of insights, AI-driven analyses can be validated, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-05T22:47:23"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

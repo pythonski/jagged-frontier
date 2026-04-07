@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-2199.03",
+  "task_id": 18156,
+  "task_statement": "Monitor and analyze energy consumption.",
+  "occupation_title": "Energy Engineers, Except Wind and Solar",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Energy consumption is typically monitored through digital building management systems, smart meters, and utility datasets that can be analyzed on a computer, but some instances require on-site meter checks, data logger setup, or verification of equipment."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Interpreting energy consumption patterns often requires experience-based judgment to distinguish normal variability from meaningful inefficiencies, accounting for operational context, equipment behavior, and external factors like weather.",
+      "adequacy_evidence": "Current AI agents can analyze trends and flag anomalies well, but they still lack robust calibration for nuanced, context-specific interpretations and may misjudge atypical but benign patterns or overlook subtle system interactions.",
+      "_timestamp": "2026-04-06T04:36:10"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Energy consumption analysis spans different building types, industrial processes, climates, and metering setups, but patterns (load profiles, efficiency metrics, anomalies) are fairly standardized across contexts.",
+      "adequacy_evidence": "There is substantial public and synthetic data (e.g., smart meter datasets, building simulations), but important segments\u2014like proprietary industrial processes and detailed facility-specific logs\u2014are often inaccessible, leaving some gaps.",
+      "_timestamp": "2026-04-06T04:36:12"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Monitoring and analyzing energy consumption inherently relies on longitudinal data (e.g., historical usage patterns, seasonal trends, baseline comparisons) accumulated across many time periods.",
+      "adequacy_evidence": "While current AI systems can integrate with databases and time-series tools to retain and query historical data, they can still exhibit gaps in consistently maintaining, retrieving, and contextualizing long-term project-specific state without careful system design.",
+      "_timestamp": "2026-04-06T04:36:13"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires interpreting goals such as cost reduction, efficiency targets, or compliance standards, which vary by facility and stakeholder priorities and are not always fully specified.",
+      "adequacy_evidence": "Current agents can analyze consumption data and infer common objectives, but often miss context-specific priorities (e.g., regulatory nuances or operational constraints) without human guidance.",
+      "_timestamp": "2026-04-06T04:36:13"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves integrating time-series data from meters, weather inputs, and system logs, requiring aggregation and comparison across multiple data sources within a single analysis episode.",
+      "adequacy_evidence": "Current agents can handle structured data with tools, but may lose context or mis-summarize trends when juggling multiple streams or long time horizons, leading to moderate reliability issues.",
+      "_timestamp": "2026-04-06T04:36:14"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task often involves interpreting time-series sensor data, dashboards, and occasionally visualizations or equipment readings, but core analysis can be performed on structured numerical/tabular data.",
+      "adequacy_evidence": "Current AI systems with data analysis tools handle time-series data, charts, and basic visual inputs reliably, with minimal gaps for typical energy monitoring scenarios.",
+      "_timestamp": "2026-04-06T04:36:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Energy consumption analysis relies on time-series data, baselines, and contextual factors (weather, operations), so errors like misinterpreted trends or faulty assumptions require domain knowledge and cross-checking against historical and sensor data.",
+      "adequacy_evidence": "Current AI systems can process and summarize energy data but still make mistakes with anomaly detection, unit consistency, or context interpretation, requiring routine expert review and validation against source data.",
+      "_timestamp": "2026-04-06T04:36:15"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves ongoing data collection, trend analysis, and iterative evaluation of energy usage over time, requiring multiple coordinated steps but not highly interdependent long chains where early errors cascade heavily.",
+      "adequacy_evidence": "Modern AI agents can reliably manage multi-step data monitoring and analysis workflows with tooling (e.g., scripts, dashboards) without significant degradation across steps, as processes are modular and checkpointed.",
+      "_timestamp": "2026-04-06T04:36:15"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in analyzing energy consumption can lead to inefficiencies, higher costs, or missed optimization opportunities, but typically do not cause immediate severe or irreversible harm.",
+      "adequacy_evidence": "With standard validation (e.g., cross-checking meter data, trend analysis), AI-generated analyses are generally reliable enough that remaining errors are unlikely to pose significant risk.",
+      "_timestamp": "2026-04-06T04:36:15"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Energy consumption monitoring can involve near-real-time data streams, but most analysis (trend detection, reporting, optimization) tolerates seconds-to-minutes latency rather than strict real-time constraints.",
+      "adequacy_evidence": "Current AI systems can process and analyze energy data within these time windows without sacrificing reasoning depth, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T04:36:16"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from monitoring or analyzing energy consumption. While licensed engineers may be required for certain certified reports or decisions, the underlying analytical task itself can be performed by software tools, including AI.",
+      "_timestamp": "2026-04-06T04:36:16"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task produces analyses used by facility managers, engineers, or clients to guide energy decisions, so stakeholders rely on the output, but interaction with the performer\u2019s identity is limited.",
+      "adequacy_evidence": "Automated energy monitoring and analytics systems are already widely accepted in this domain, and stakeholders typically care about accuracy and insights rather than whether a human or AI produced them.",
+      "_timestamp": "2026-04-06T04:36:18"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

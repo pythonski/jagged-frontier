@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1161.00",
+  "task_id": 18454,
+  "task_statement": "Prescribe medications as permitted by state regulations.",
+  "occupation_title": "Nurse Midwives",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Prescriptions are commonly issued through electronic health record and e\u2011prescribing systems, which can be done remotely. However, they are often tied to in\u2011person clinical visits or occasionally involve paper prescriptions, so not all instances are fully digital."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Medication prescribing in nurse midwifery spans diverse patient populations (pregnancy stages, comorbidities, contraindications), drug classes, and state-specific regulatory scopes, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "Extensive medical literature, prescribing guidelines, and clinical case data exist, but real-world edge cases and nuanced patient-specific variations are often embedded in private EHRs or underrepresented, leaving some gaps that are only partially addressable via synthesis or training.",
+      "_timestamp": "2026-04-06T03:17:41"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Prescribing medications in midwifery depends heavily on patient-specific factors (e.g., pregnancy stage, comorbidities, risk tolerance, patient preferences) and evolving clinical context, requiring interpretation beyond explicit guidelines.",
+      "adequacy_evidence": "Current AI agents struggle to reliably integrate nuanced clinical context, patient values, and evolving conditions into safe prescribing decisions, often requiring substantial human oversight and clarification.",
+      "_timestamp": "2026-04-06T03:17:41"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Prescribing medications involves a multi-step process (assessment, diagnosis, checking contraindications, selecting drug/dose, and follow-up), where consistency across steps matters but sequences are not extremely long or deeply interdependent over time.",
+      "adequacy_evidence": "Frontier AI agents can manage structured multi-step reasoning but show some degradation over longer clinical chains, especially when maintaining consistency across evolving patient details and constraints.",
+      "_timestamp": "2026-04-06T03:17:42"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Prescribing medications requires integrating multiple within-episode data sources (patient history, allergies, current medications, lab results, pregnancy status), but this information is typically structured and bounded within an encounter or record.",
+      "adequacy_evidence": "Current agents can track and synthesize structured clinical data, but may miss or misprioritize key details (e.g., drug interactions or contraindications) when context is dense or fragmented across sources.",
+      "_timestamp": "2026-04-06T03:17:43"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Safe prescribing requires longitudinal patient data such as obstetric history, allergies, prior medications, lab trends, and pregnancy progression across multiple visits.",
+      "adequacy_evidence": "While agents can interface with EHRs and retrieve stored histories, real-world interoperability gaps, incomplete records, and context integration failures still cause moderate reliability issues.",
+      "_timestamp": "2026-04-06T03:17:44"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Prescribing in midwifery requires nuanced, experience-based judgment about maternal\u2013fetal risk, comorbidities, contraindications, and evolving clinical presentation that cannot be fully reduced to protocols.",
+      "adequacy_evidence": "Current agents can follow guidelines and handle routine cases, but lack reliable calibration in complex or borderline scenarios (e.g., atypical presentations, risk tradeoffs in pregnancy), leading to gaps in non-routine clinical judgment.",
+      "_timestamp": "2026-04-06T03:17:44"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Medication prescribing in midwifery involves direct patient care where trust in the clinician\u2019s judgment, authority, and empathy is central to patient acceptance and adherence.",
+      "adequacy_evidence": "Patients and healthcare systems are unlikely to accept an AI as an autonomous prescriber due to trust, liability, and safety concerns, and disclosure of AI involvement would significantly undermine acceptance.",
+      "_timestamp": "2026-04-06T03:17:45"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Medication prescribing relies primarily on textual and structured data (patient history, labs, guidelines), but may incorporate some multimodal inputs like physical exam findings or imaging results in certain cases.",
+      "adequacy_evidence": "Current agents handle structured data and simple reports well but are less reliable when integrating nuanced multimodal clinical signals such as subtle visual findings or complex imaging interpretations.",
+      "_timestamp": "2026-04-06T03:17:45"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Medication prescribing typically occurs during clinical encounters where decisions are expected within seconds to a few minutes, with occasional urgent cases requiring faster responses.",
+      "adequacy_evidence": "Frontier AI systems can generate prescribing recommendations well within these time constraints without needing to truncate reasoning, so speed does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T03:17:45"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Correct prescribing requires integrating patient history, comorbidities, allergies, drug interactions, and gestational considerations; errors may not be immediately visible and can have delayed or subtle clinical consequences.",
+      "adequacy_evidence": "Current AI systems still produce clinically plausible but incorrect or unsafe prescriptions, requiring thorough expert review of dosing, interactions, and patient-specific factors, making verification burdensome and essential.",
+      "_timestamp": "2026-04-06T03:17:46"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "Prescribing medications is legally restricted to licensed clinicians (e.g., nurse midwives with prescriptive authority), requiring a human license, DEA registration for controlled substances, and human accountability. Current laws do not permit AI systems to independently prescribe, making autonomous AI performance explicitly prohibited.",
+      "_timestamp": "2026-04-06T03:17:46"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Medication prescribing in midwifery directly affects maternal and fetal health; even rare errors (e.g., wrong drug, dose, or contraindication) can cause severe or irreversible harm.",
+      "adequacy_evidence": "Even with standard checks, current AI systems can miss nuanced patient-specific factors or rare contraindications, leaving residual risks that are too unpredictable and consequential for safe independent prescribing.",
+      "_timestamp": "2026-04-06T03:17:46"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

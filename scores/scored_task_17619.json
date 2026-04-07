@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9179.02",
+  "task_id": 17619,
+  "task_statement": "Schedule guest appointments.",
+  "occupation_title": "Spa Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Scheduling guest appointments is typically done through digital booking systems, email, or phone using a computer, which can be handled remotely. However, some instances occur at the spa front desk with walk-in guests, requiring on-site interaction."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling spa appointments involves moderate variability (client preferences, service types, staff availability, cancellations), but follows well-structured and repetitive patterns.",
+      "adequacy_evidence": "There is abundant accessible data (calendar scheduling systems, booking logs, customer service interactions) and clear procedural signals, making representative coverage readily achievable with current pipelines.",
+      "_timestamp": "2026-04-06T01:46:00"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling spa appointments involves some context-dependent factors like guest preferences, service durations, therapist specialties, and availability constraints that are not always fully specified upfront.",
+      "adequacy_evidence": "Current AI agents can reliably resolve this ambiguity by asking clarifying questions, using scheduling systems, and iterating with users, handling typical cases without major difficulty.",
+      "_timestamp": "2026-04-06T01:46:01"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling involves some experience-based judgment such as matching clients to appropriate therapists, sequencing services, and accommodating preferences or upselling opportunities, but much of it follows structured rules and availability constraints.",
+      "adequacy_evidence": "Well-configured AI systems with access to scheduling data, client profiles, and business rules can reliably replicate these judgments, with only minor gaps in nuanced interpersonal calibration.",
+      "_timestamp": "2026-04-06T01:46:01"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling guest appointments involves a multi-step process\u2014checking availability, coordinating preferences, booking, and confirming\u2014but the sequence is relatively short and loosely coupled.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably manage scheduling workflows with calendar tools and constraint tracking, showing minimal degradation across the required sequence length.",
+      "_timestamp": "2026-04-06T01:46:02"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires tracking multiple constraints (guest preferences, staff availability, service durations, room/resource availability) within a single interaction, but the information volume is structured and bounded.",
+      "adequacy_evidence": "With calendar integrations and tool use, current agents reliably store, retrieve, and update these constraints within an episode without significant context loss or drift.",
+      "_timestamp": "2026-04-06T01:46:03"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling guest appointments typically occurs in real time during customer interactions (phone, front desk, or chat), requiring responses within seconds to a minute.",
+      "adequacy_evidence": "Current AI systems can handle calendar coordination, availability checks, and booking logic \u0628\u0633\u0631\u0639\u0629 with minimal reasoning, so meeting these latency expectations does not degrade output quality.",
+      "_timestamp": "2026-04-06T01:46:03"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling guest appointments is primarily a text- and data-driven task involving calendars, service listings, and client details; any audio (e.g., phone calls) can be reduced to text without loss of core functionality.",
+      "adequacy_evidence": "Current AI agents can fully handle text-based scheduling workflows, including parsing requests and managing calendars, with no meaningful multimodal limitations affecting performance.",
+      "_timestamp": "2026-04-06T01:46:04"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "Appointment scheduling errors (e.g., double bookings, wrong times, missing client details) are typically obvious in calendar systems and can be quickly detected through simple checks or confirmations.",
+      "adequacy_evidence": "Current AI systems can handle scheduling but still make occasional coordination or constraint errors, requiring routine human review, though such verification is straightforward and not burdensome.",
+      "_timestamp": "2026-04-06T01:46:04"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling errors (e.g., double bookings, wrong times, mismatched services) can inconvenience clients and impact revenue, but are typically reversible and not safety-critical.",
+      "adequacy_evidence": "Modern systems allow easy verification (calendar checks, confirmations), and AI can reliably handle structured scheduling with minimal residual risk after standard checks.",
+      "_timestamp": "2026-04-06T01:46:04"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling often benefits from recalling guest history such as preferred services, providers, and past appointments, but each booking can still be completed with current-session information if needed.",
+      "adequacy_evidence": "Existing systems (CRMs, booking platforms) already store and retrieve client histories effectively, and AI agents can reliably integrate with these databases to access cross-session information.",
+      "_timestamp": "2026-04-06T01:46:04"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI systems from scheduling appointments in a spa setting. While general data privacy rules (e.g., handling customer information) apply, they do not restrict AI from performing this task.",
+      "_timestamp": "2026-04-06T01:46:05"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling guest appointments involves direct interaction with clients, who rely on the scheduler to coordinate times and services, though the personal identity of the scheduler is not central.",
+      "adequacy_evidence": "Customers already widely accept online booking systems and AI-assisted schedulers for appointments, with minimal resistance as long as the process is accurate and convenient.",
+      "_timestamp": "2026-04-06T01:46:05"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

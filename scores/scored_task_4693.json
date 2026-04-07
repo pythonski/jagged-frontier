@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4031.01",
+  "task_id": 4693,
+  "task_statement": "Examine legal documents submitted to courts for adherence to laws or court procedures.",
+  "occupation_title": "Court, Municipal, and License Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Court clerks commonly review filings through electronic filing systems and digital document management tools, but some courts still receive or process paper filings that require in\u2011office handling."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple document types, jurisdictions, and procedural rules, but much of it follows standardized formats and well-defined legal requirements rather than highly idiosyncratic cases.",
+      "adequacy_evidence": "Extensive public corpora of legal documents, court rules, filing guidelines, and annotated examples exist, providing strong coverage and enabling feasible training pipelines with representative procedural reasoning.",
+      "_timestamp": "2026-04-05T21:05:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing documents against multiple procedural and legal criteria in a structured but moderately extended sequence, where consistency across checks matters but steps are not tightly interdependent.",
+      "adequacy_evidence": "AI agents can generally maintain performance across document-length reviews using checklists and structured prompts, though some degradation (e.g., missed criteria or drift) can occur over longer or more complex filings.",
+      "_timestamp": "2026-04-05T21:05:34"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task is largely governed by explicit procedural rules and checklists, but clerks often rely on experience to interpret ambiguous filings, recognize nonstandard formats, or apply local court practices.",
+      "adequacy_evidence": "AI agents can follow codified rules well but show gaps in handling edge cases, informal conventions, and context-sensitive interpretations that clerks learn through experience.",
+      "_timestamp": "2026-04-05T21:05:34"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many filings can be checked against standardized rules independently, clerks often reference case histories, prior filings, and evolving procedural status across sessions.",
+      "adequacy_evidence": "Current agents can store and retrieve case-level data via databases or memory systems, but may inconsistently surface the most relevant prior context or maintain coherent long-term state without careful system design.",
+      "_timestamp": "2026-04-05T21:05:35"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Court filing requirements are largely codified in statutes, rules, and standardized checklists, but clerks must still interpret local rules, edge cases, and implicit acceptability norms across jurisdictions.",
+      "adequacy_evidence": "Current agents can follow explicit procedural rules and flag common issues, but often miss nuanced local practices or borderline compliance judgments, requiring human review and iteration.",
+      "_timestamp": "2026-04-05T21:05:35"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and evaluating written legal text for compliance with rules and procedures; any visual elements (e.g., formatting, signatures) are secondary and can be represented textually.",
+      "adequacy_evidence": "Current AI systems, with OCR and document parsing tools, can reliably handle the limited visual aspects (e.g., layout, signatures) involved, making multimodal capability non-limiting.",
+      "_timestamp": "2026-04-05T21:05:36"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing legal documents for procedural compliance is typically done with minutes to hours available per document, not under real-time or rapid-response constraints.",
+      "adequacy_evidence": "Frontier AI systems can use extended reasoning within these relaxed time windows, so latency does not meaningfully degrade output quality for this task.",
+      "_timestamp": "2026-04-05T21:05:36"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves reviewing multi-page legal filings against procedural rules and checklists, requiring tracking multiple elements (dates, signatures, formatting, required components) but within a bounded document set.",
+      "adequacy_evidence": "Current agents can process long documents with retrieval and structured checks, but may miss or misprioritize details across sections or lose track of checklist completeness without careful scaffolding.",
+      "_timestamp": "2026-04-05T21:05:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in checking legal document compliance can lead to filing rejections, delays, or procedural issues, but are typically correctable and rarely cause irreversible harm.",
+      "adequacy_evidence": "Even with human or automated review, AI may miss nuanced procedural requirements or local rule variations, leaving some residual risk that remains noticeable though generally manageable.",
+      "_timestamp": "2026-04-05T21:05:37"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task interfaces with attorneys, litigants, and court officials who rely on the clerk\u2019s determinations, but the role is largely procedural and does not depend heavily on personal authority or interpersonal trust.",
+      "adequacy_evidence": "Courts and legal stakeholders may be cautious about AI performing compliance checks due to accountability and error concerns, but partial or supervised AI use would likely be tolerated without needing full human identity.",
+      "_timestamp": "2026-04-05T21:05:37"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Checking court filings for procedural compliance relies on established rules and checklists, but still requires familiarity with jurisdiction-specific requirements and careful review to catch formatting, timing, or filing errors.",
+      "adequacy_evidence": "Current AI can apply general rules well but often misses local procedural nuances or edge cases, so human review is still needed though not exceptionally burdensome.",
+      "_timestamp": "2026-04-05T21:05:38"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from assisting with or performing document review for procedural compliance in court clerk functions, as these are administrative tasks without mandated human licensure or decision-making authority requirements.",
+      "_timestamp": "2026-04-05T21:05:40"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

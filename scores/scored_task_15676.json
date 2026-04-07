@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3031.03",
+  "task_id": 15676,
+  "task_statement": "Select or direct the execution of trades.",
+  "occupation_title": "Investment Fund Managers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Selecting or directing trade execution is done through electronic trading platforms, portfolio management systems, email, or messaging with traders and brokers, all of which can be performed remotely on a computer with internet access."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Selecting or directing trades relies heavily on experiential judgment about market dynamics, timing, risk appetite, and interpreting ambiguous signals that are not fully captured by explicit rules or historical examples.",
+      "adequacy_evidence": "Current AI agents can process data and execute strategies but lack robust, experience-derived market intuition and adaptive judgment in novel or regime-shifting conditions, leading to systematic gaps in high-stakes trading decisions.",
+      "_timestamp": "2026-04-06T00:37:38"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Trade selection spans diverse assets, market regimes, strategies, liquidity conditions, and client constraints, creating a highly heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "Extensive market data, historical trades, and simulation environments exist, but proprietary strategies, real-time decision processes, and rare regime behaviors are only partially accessible or inferable.",
+      "_timestamp": "2026-04-06T00:37:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Trade selection depends on implicit factors like evolving market conditions, risk appetite, mandate interpretation, and strategic judgment that are not fully specified in advance.",
+      "adequacy_evidence": "Current agents can follow explicit mandates and optimize against defined signals, but often miss nuanced, shifting objectives and require human guidance to align with tacit investment intent.",
+      "_timestamp": "2026-04-06T00:37:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Trade execution involves multi-step workflows (market monitoring, timing, order placement, adjustment, and post-trade evaluation), but many decisions are episodic rather than forming a single tightly coupled long-horizon sequence.",
+      "adequacy_evidence": "Current AI agents can manage multi-step trading workflows with tools, but show some degradation over extended sequences (e.g., maintaining consistent strategy alignment and constraints over time), leading to moderate coherence issues.",
+      "_timestamp": "2026-04-06T00:37:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting or directing trades requires integrating large volumes of rapidly updating information (market data, portfolio positions, risk constraints, client mandates) within a single decision episode, where missing details can materially affect outcomes.",
+      "adequacy_evidence": "Current agents can use tools and structured state to track much of this information, but still show weaknesses in reliably maintaining and updating complex, fast-changing context without occasional omissions or drift.",
+      "_timestamp": "2026-04-06T00:37:41"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Trade selection depends heavily on persistent knowledge of portfolio holdings, historical trades, performance attribution, risk exposures, and evolving investment strategies over time.",
+      "adequacy_evidence": "While current AI systems can store and retrieve structured portfolio and history data via external databases, maintaining coherent, consistently updated long-horizon investment context and integrating it reliably into decisions still shows gaps.",
+      "_timestamp": "2026-04-06T00:37:41"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Trade selection and execution rely primarily on structured numerical data (prices, volumes, signals) and text-based information feeds; visualizations like charts are helpful but not essential and can be reduced to numeric inputs.",
+      "adequacy_evidence": "Current agents can fully process structured financial data and execute trades via APIs without needing advanced multimodal perception or generation capabilities.",
+      "_timestamp": "2026-04-06T00:37:42"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Trade selection and execution often occur in fast-moving markets where prices shift in seconds or less, especially during volatile periods, requiring timely decisions to avoid slippage or missed opportunities.",
+      "adequacy_evidence": "LLM-based agents can generate decisions quickly with tooling, but achieving high-quality reasoning under tight latency (especially intraday or near-real-time conditions) can require truncation, leading to some degradation compared to slower, more deliberative analysis.",
+      "_timestamp": "2026-04-06T00:37:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Trade decisions are evaluated under uncertainty with delayed and noisy feedback, making errors (e.g., poor timing, mispriced risk, or strategy mismatch) difficult to detect ex ante and often only evident after market movements.",
+      "adequacy_evidence": "Current AI systems can propose trades but still require intensive expert review due to non-obvious failure modes and context sensitivity, and their mistakes are not easily caught without deep financial analysis and monitoring over time.",
+      "_timestamp": "2026-04-06T00:37:43"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Executing trades involves large capital flows where even small errors (wrong asset, size, timing) can cause significant financial losses, market impact, or compliance breaches, so residual errors must be extremely rare.",
+      "adequacy_evidence": "While automated checks (pre-trade controls, limits, reconciliation) reduce many risks, AI systems can still produce occasional misaligned or context-misinterpreted actions, leaving non-negligible residual risk in high-stakes, real-time trading environments.",
+      "_timestamp": "2026-04-06T00:37:44"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Trade selection and execution affect clients, counterparties, and internal stakeholders, who rely on the manager\u2019s decisions and oversight, though interaction is often indirect.",
+      "adequacy_evidence": "Algorithmic and AI-driven trading systems are already widely used and accepted in financial markets, with stakeholders generally comfortable as long as performance and compliance standards are met.",
+      "_timestamp": "2026-04-06T00:37:44"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "There is no prohibition on algorithmic or AI-assisted trading\u2014such systems are widely used\u2014but SEC regulations require a registered investment adviser to retain fiduciary responsibility, oversight, and accountability. This creates a partial constraint since a licensed human or entity must supervise and be responsible for trade decisions.",
+      "_timestamp": "2026-04-06T00:37:46"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

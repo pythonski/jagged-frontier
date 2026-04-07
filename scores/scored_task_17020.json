@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "25-3041.00",
+  "task_id": 17020,
+  "task_statement": "Schedule tutoring appointments with students or their parents.",
+  "occupation_title": "Tutors",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Scheduling tutoring appointments can be done entirely through email, messaging, or online calendar tools with students or parents. No physical presence or non-computer tools are inherently required for the task."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling tutoring appointments involves moderate variation across student/parent preferences, availability constraints, communication styles, and occasional edge cases like rescheduling or conflicts.",
+      "adequacy_evidence": "There is abundant accessible data from customer service, calendaring, and appointment-setting domains, including conversational examples and workflows, providing strong coverage for training AI systems.",
+      "_timestamp": "2026-04-06T01:20:19"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling tutoring appointments primarily follows explicit rules and constraints (availability, time zones, preferences) with minimal need for experience-based judgment.",
+      "adequacy_evidence": "Current AI agents can reliably handle calendar coordination, preference matching, and basic communication without needing tacit knowledge.",
+      "_timestamp": "2026-04-06T01:20:19"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling requires interpreting availability, preferences, time zones, and implicit constraints (e.g., parent/student convenience, recurring patterns), which are not always fully specified upfront.",
+      "adequacy_evidence": "Current agents can gather and reconcile availability but often miss or mishandle nuanced preferences or implicit constraints, requiring back-and-forth clarification to finalize suitable appointments.",
+      "_timestamp": "2026-04-06T01:20:20"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling requires tracking multiple constraints within an episode (student/parent availability, tutor schedule, time zones, preferences), but the information volume is limited and structured.",
+      "adequacy_evidence": "Current agents with calendar integration reliably manage these constraints, maintaining and updating availability without significant loss or drift in context.",
+      "_timestamp": "2026-04-06T01:20:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling involves short multi-step interactions (checking availability, proposing times, confirming, updating calendars) where consistency matters but sequences are typically brief and loosely coupled.",
+      "adequacy_evidence": "Frontier agents with calendar/email tools can reliably manage these short workflows without noticeable degradation, maintaining context and constraints across the interaction.",
+      "_timestamp": "2026-04-06T01:20:21"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling tutoring appointments primarily involves text or simple verbal communication (emails, messages, or calls) without reliance on visual or other non-text modalities.",
+      "adequacy_evidence": "Current AI agents can handle text-based scheduling and even voice interactions effectively, with no meaningful multimodal capability gap for this task.",
+      "_timestamp": "2026-04-06T01:20:21"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling appointments typically occurs over email, messaging, or brief calls where responses within minutes or longer are acceptable; real-time rapid reasoning is not required.",
+      "adequacy_evidence": "Current AI agents can generate and coordinate scheduling options quickly within the available time window, with no need to truncate reasoning to meet latency constraints.",
+      "_timestamp": "2026-04-06T01:20:21"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling tutoring sessions often relies on remembering students' recurring availability, past appointments, and preferences across interactions, but does not require deep or complex longitudinal histories.",
+      "adequacy_evidence": "Current AI systems integrated with calendars and CRM-style memory can reliably store and retrieve scheduling history and preferences across sessions, with minimal gaps for this task.",
+      "_timestamp": "2026-04-06T01:20:21"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling errors (e.g., wrong time, conflicts, missing details) are typically obvious via calendar systems, confirmations, or immediate feedback from participants.",
+      "adequacy_evidence": "Current AI systems may occasionally mis-handle details like time zones or availability, but such errors are easily caught through standard confirmation and calendar checks, requiring minimal effort.",
+      "_timestamp": "2026-04-06T01:20:23"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling errors (e.g., wrong time, missed booking) typically result in minor inconvenience or rescheduling, with no severe or irreversible consequences.",
+      "adequacy_evidence": "With standard confirmations (calendars, reminders, human oversight), current AI systems leave negligible residual risk for this low-stakes coordination task.",
+      "_timestamp": "2026-04-06T01:20:23"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI systems from scheduling tutoring appointments. While privacy laws like FERPA may govern handling student information, they do not restrict AI use for scheduling itself.",
+      "_timestamp": "2026-04-06T01:20:23"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires interaction with students or parents to coordinate times, so stakeholders are directly involved, but the tutor's personal identity is not central to successful scheduling.",
+      "adequacy_evidence": "Stakeholders widely accept automated scheduling tools, chatbots, and calendar systems for appointment booking, so AI handling this role would face little resistance.",
+      "_timestamp": "2026-04-06T01:20:23"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "45-1011.05",
+  "task_id": 11420,
+  "task_statement": "Schedule work crews, equipment, or transportation for several different work locations.",
+  "occupation_title": "First-Line Supervisors of Farming, Fishing, and Forestry Workers",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Scheduling crews, equipment, or transportation is primarily a coordination and planning activity that can be done using computers, scheduling software, email, or phone without being physically present at the work sites."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective scheduling depends on experiential judgment about worker reliability, skill levels, equipment limitations, and dynamic factors like weather or terrain, which are not fully captured in explicit rules.",
+      "adequacy_evidence": "AI agents can optimize schedules using available data and constraints, but often lack nuanced, experience-based calibration for local conditions and human factors, leading to weaker performance in non-routine or rapidly changing situations.",
+      "_timestamp": "2026-04-06T11:24:04"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Scheduling crews and equipment across farming, fishing, and forestry involves highly variable conditions (weather, terrain, crop type, seasonal cycles, labor availability), creating a broad, context-sensitive distribution of cases.",
+      "adequacy_evidence": "While general scheduling patterns and constraints are well-represented in operations research, agricultural-specific, real-time, and locally contingent data (e.g., microclimates, informal labor practices) are thinner but can be partially approximated through simulation and targeted data collection.",
+      "_timestamp": "2026-04-06T11:24:04"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling crews and equipment across multiple locations requires coordinating availability, travel, timing, and resource constraints over several interdependent steps, but these sequences are typically bounded and revisable rather than deeply long or tightly coupled.",
+      "adequacy_evidence": "Current AI agents can handle multi-step scheduling with planning tools, but may exhibit some degradation such as missed constraints or inconsistencies as the number of variables and steps increases.",
+      "_timestamp": "2026-04-06T11:24:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling across multiple agricultural or forestry sites involves implicit priorities like weather timing, crop conditions, worker skill matching, and shifting operational constraints that are not fully specified upfront.",
+      "adequacy_evidence": "Current agents can optimize based on explicit constraints and data but often miss local, tacit factors (e.g., urgency from field conditions or informal crew knowledge), requiring human adjustment.",
+      "_timestamp": "2026-04-06T11:24:06"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling across multiple locations requires tracking crews, equipment availability, locations, and timing constraints, but the information volume is structured and manageable with standard planning tools.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, schedulers) can reliably store, retrieve, and update this level of structured information within an episode without significant loss or drift.",
+      "_timestamp": "2026-04-06T11:24:06"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Scheduling crews, equipment, and transport primarily relies on structured information like availability, locations, timelines, and logistics, which can be handled in text or tabular form without requiring perceptual input.",
+      "adequacy_evidence": "Current AI agents can effectively process and generate schedules from textual and structured data, with no meaningful dependence on multimodal capabilities for competent performance.",
+      "_timestamp": "2026-04-06T11:24:06"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling crews and equipment typically requires timely responses, especially when conditions change, but decisions are usually made over minutes to hours rather than in real-time seconds.",
+      "adequacy_evidence": "Current AI systems can generate and adjust schedules quickly within these timeframes, using optimization tools without significant degradation from latency constraints.",
+      "_timestamp": "2026-04-06T11:24:08"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling errors can cause operational delays, increased costs, or temporary safety/logistical issues, but these are typically correctable and rarely irreversible.",
+      "adequacy_evidence": "Schedules can be reviewed and cross-checked against constraints (availability, location, timing), and current AI systems can produce plans with residual errors that are generally detectable and acceptable after normal quality control.",
+      "_timestamp": "2026-04-06T11:24:08"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from scheduling work crews, equipment, or transportation in agriculture or related sectors; this is an operational management function without mandated human licensure or decision-maker requirements.",
+      "_timestamp": "2026-04-06T11:24:08"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying schedules requires checking multiple constraints (worker availability, equipment capacity, travel time, weather, regulatory limits), which takes domain knowledge and coordination, though many conflicts can be systematically identified.",
+      "adequacy_evidence": "Current AI can generate plausible schedules but often misses nuanced constraints or local conditions, so supervisors must review outputs for feasibility and conflicts, creating a moderate but manageable verification burden.",
+      "_timestamp": "2026-04-06T11:24:09"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling requires coordination with crews and operators who rely on the supervisor\u2019s plans, but the task is primarily logistical and does not heavily depend on personal authority or rapport.",
+      "adequacy_evidence": "Workers may accept AI-generated schedules if endorsed by management, but some resistance or reduced trust could arise, especially in dynamic field conditions where human judgment is traditionally valued.",
+      "_timestamp": "2026-04-06T11:24:10"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Scheduling across multiple locations requires retaining information about crew availability, equipment status, and prior allocations over time, but this state is typically structured and regularly updated rather than deeply historical.",
+      "adequacy_evidence": "Current AI systems with standard database integrations and scheduling tools can reliably store, update, and retrieve this kind of structured cross-session information without significant loss.",
+      "_timestamp": "2026-04-06T11:24:15"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "39-9041.00",
+  "task_id": 6983,
+  "task_statement": "Assign rooms to students.",
+  "occupation_title": "Residential Advisors",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Room assignments are typically handled through housing management systems, spreadsheets, or other digital records that can be managed remotely. However, in some facilities assignments may involve in-person coordination, paper records, or on-site checks of room availability."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Room assignments often require balancing stated preferences, compatibility, behavioral cues, and potential conflicts, which involve some experience-based judgment beyond fixed rules.",
+      "adequacy_evidence": "AI agents can optimize based on explicit constraints and past patterns, but they lack reliable calibration for subtle interpersonal dynamics and edge cases like latent conflicts or social fit.",
+      "_timestamp": "2026-04-06T02:15:11"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Room assignments follow explicit constraints (availability, gender policies, accommodations) but also require interpreting softer factors like roommate compatibility, conflicts, and student preferences.",
+      "adequacy_evidence": "Agents can handle formal constraints and stated preferences, but often miss nuanced social compatibility or latent concerns, requiring human adjustment.",
+      "_timestamp": "2026-04-06T02:15:11"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Room assignment involves varied but structured factors (student preferences, compatibility, accommodations, policy constraints), creating moderate diversity without extreme long-tail complexity.",
+      "adequacy_evidence": "Representative data and processes are widely available via housing policies, matching algorithms, and administrative records, and can be supplemented with synthetic scenarios to cover edge cases.",
+      "_timestamp": "2026-04-06T02:15:11"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assigning rooms involves coordinating multiple constraints (student preferences, availability, compatibility) across a set of assignments, requiring consistency over a moderate sequence of allocation steps.",
+      "adequacy_evidence": "AI agents can generally manage these multi-step allocations but may exhibit some degradation, such as constraint violations or suboptimal matches, as the number of students and interdependencies grows.",
+      "_timestamp": "2026-04-06T02:15:11"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Assigning rooms to students primarily involves processing text-based data such as student preferences, rosters, and housing policies; visual or other modalities are not essential.",
+      "adequacy_evidence": "Since the task is fundamentally text-based, current AI agents can handle the modality requirements without limitation.",
+      "_timestamp": "2026-04-06T02:15:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves tracking student rosters, room availability, preferences, and constraints within a single assignment cycle, requiring some structured information management but not extreme scale.",
+      "adequacy_evidence": "Current AI agents with tool use (e.g., spreadsheets, databases) can reliably store, retrieve, and update this level of structured information without significant loss or drift.",
+      "_timestamp": "2026-04-06T02:15:11"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Room assignments often rely on accumulated information such as student preferences, prior roommate conflicts, and housing accommodations across terms, but each assignment cycle is somewhat bounded.",
+      "adequacy_evidence": "Current AI systems can store and retrieve structured student data across sessions, but may inconsistently surface nuanced historical context (e.g., interpersonal conflicts or evolving preferences) without careful system design.",
+      "_timestamp": "2026-04-06T02:15:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Room assignments are typically planned over hours or days (e.g., before a term), with no need for immediate real-time responses.",
+      "adequacy_evidence": "AI systems can easily generate high-quality room assignments well within these generous timeframes, so speed constraints do not degrade performance.",
+      "_timestamp": "2026-04-06T02:15:12"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from assigning student housing. While privacy laws like FERPA govern handling of student data, they do not bar AI use if compliance is maintained.",
+      "_timestamp": "2026-04-06T02:15:13"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Students are directly affected by room assignments and may care about fairness or responsiveness, but the task is primarily administrative rather than relationship-driven.",
+      "adequacy_evidence": "Many students would accept AI-assisted assignment if perceived as fair and transparent, but some may distrust or contest decisions made without human judgment.",
+      "_timestamp": "2026-04-06T02:15:13"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Incorrect room assignments can cause inconvenience, roommate conflicts, or dissatisfaction, but are typically reversible and do not create severe or irreversible harm.",
+      "adequacy_evidence": "With standard checks (e.g., constraint validation, policy compliance, and human review), AI-generated assignments would leave minimal residual risk that is well within tolerable bounds.",
+      "_timestamp": "2026-04-06T02:15:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Room assignments can be checked against explicit constraints (availability, compatibility, policies), but doing so may require cross-referencing multiple records and preferences, making verification somewhat effortful.",
+      "adequacy_evidence": "AI can generate plausible assignments but may violate constraints or overlook preferences, so systematic checking (often via rule-based validation) is still needed to catch errors.",
+      "_timestamp": "2026-04-06T02:15:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

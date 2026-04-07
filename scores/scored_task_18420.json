@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-1299.01",
+  "task_id": 18420,
+  "task_statement": "Consult with other health professionals to provide optimal patient care, referring patients to traditional health care professionals as necessary.",
+  "occupation_title": "Naturopathic Physicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 65,
+    "reasoning": "Consultations and referrals with other health professionals are often done through phone, email, telehealth platforms, or electronic health record systems, but they also frequently occur through in-person discussions in clinical settings or meetings."
+  },
+  "scores": {
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Coordinating with other health professionals involves multi-step interactions (information sharing, aligning treatment plans, referrals), where consistency across steps matters but sequences are not extremely long or tightly coupled.",
+      "adequacy_evidence": "AI agents can manage multi-step coordination but show some degradation over extended interactions, such as losing context, misaligning recommendations, or failing to consistently track evolving care plans.",
+      "_timestamp": "2026-04-05T23:03:50"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining 'optimal patient care' requires integrating patient preferences, clinical nuances, differing professional opinions, and when referral is appropriate\u2014criteria that are highly context-dependent and often implicit.",
+      "adequacy_evidence": "Current agents can synthesize guidelines and suggest referrals but often miss subtle interpersonal, contextual, and preference-driven factors, requiring human oversight to resolve ambiguity.",
+      "_timestamp": "2026-04-05T23:03:50"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining when and how to coordinate with other providers and when to refer involves nuanced clinical judgment, risk assessment, and context-sensitive integration of patient preferences and conditions that are not fully codified in rules.",
+      "adequacy_evidence": "AI systems can apply referral guidelines and synthesize information, but they lack robust experiential calibration for borderline cases, interdisciplinary nuance, and patient-specific tradeoffs common in real-world practice.",
+      "_timestamp": "2026-04-05T23:03:51"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Coordinating care and making referrals requires maintaining and accessing longitudinal patient histories, prior treatments, and evolving care plans across multiple encounters and providers.",
+      "adequacy_evidence": "Current agents can store and retrieve structured records via EHR integrations, but interoperability gaps, incomplete records, and unreliable long-term context linking still cause meaningful failures.",
+      "_timestamp": "2026-04-05T23:03:51"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous patient conditions, comorbidities, practitioner types, and context-specific coordination decisions, requiring broad coverage of clinical scenarios and interprofessional interactions.",
+      "adequacy_evidence": "While large corpora of medical literature, case reports, and clinical guidelines exist, real-world interprofessional consultation dynamics and naturopath-specific referral patterns are often embedded in private clinical interactions, leaving some gaps that are only partially recoverable through synthesis and training.",
+      "_timestamp": "2026-04-05T23:03:51"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating patient histories, current conditions, and input from multiple health professionals within a single care episode, but the volume is typically structured and bounded.",
+      "adequacy_evidence": "Current agents can manage multi-source clinical context reasonably well with tools, but may lose nuance or misprioritize details when synthesizing across providers.",
+      "_timestamp": "2026-04-05T23:03:52"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Consultation involves sharing and interpreting patient data such as lab results, imaging, and possibly physical exam findings, which introduces meaningful but not dominant multimodal elements.",
+      "adequacy_evidence": "Current AI agents can process common medical images and structured data reasonably well, but may struggle with nuanced, context-rich multimodal interpretation and integration across sources in complex cases.",
+      "_timestamp": "2026-04-05T23:03:53"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Consultations with other health professionals typically occur via scheduled discussions, calls, or messages where responses within minutes are acceptable, though some cases may require prompt replies.",
+      "adequacy_evidence": "Current AI agents can generate high-quality consultative summaries or recommendations within seconds to minutes, well within typical time constraints without needing to truncate reasoning.",
+      "_timestamp": "2026-04-05T23:03:53"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Assessing the appropriateness of consultations and referrals requires clinical expertise and chart review, and some errors (e.g., suboptimal referral choices) may not be immediately obvious without follow-up.",
+      "adequacy_evidence": "AI-generated recommendations for coordination and referral can be checked by clinicians, but require consistent review due to nontrivial error rates and context sensitivity.",
+      "_timestamp": "2026-04-05T23:03:54"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Errors in consulting or referral decisions can lead to delayed diagnosis, inappropriate care pathways, or harmful interactions between treatments, with potentially serious patient health consequences even if rare.",
+      "adequacy_evidence": "Even with review, AI systems can miss nuanced clinical context, interpersonal signals, or edge-case contraindications, leaving residual risks in care coordination and referral judgment that are not reliably eliminated.",
+      "_timestamp": "2026-04-05T23:03:54"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The task centers on interacting with other health professionals and influencing patient referrals, where professional credibility, trust, and legitimacy are essential for coordination and decision acceptance.",
+      "adequacy_evidence": "Clinicians and patients are unlikely to accept an AI as an autonomous consulting or referring authority in care decisions; lack of recognized licensure and trust would significantly undermine effectiveness.",
+      "_timestamp": "2026-04-05T23:03:54"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 2,
+      "reasoning": "State medical practice laws generally require that diagnosis, treatment decisions, and patient referrals be performed by licensed health professionals; AI systems cannot legally practice medicine or independently make referrals. Thus, autonomous AI performance of this task is explicitly restricted without licensed human oversight.",
+      "_timestamp": "2026-04-05T23:03:54"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

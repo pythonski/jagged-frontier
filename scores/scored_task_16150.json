@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-2051.01",
+  "task_id": 16150,
+  "task_statement": "Generate standard or custom reports summarizing business, financial, or economic data for review by executives, managers, clients, and other stakeholders.",
+  "occupation_title": "Business Intelligence Analysts",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Generating reports from business, financial, or economic data is performed using computers, databases, and reporting software, and the outputs are typically shared electronically with stakeholders."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Effective report generation requires judgment about which metrics matter, how to contextualize trends, and how to tailor narratives to stakeholder priorities, which goes beyond explicit rules.",
+      "adequacy_evidence": "Current agents can produce well-structured summaries but often miss nuanced prioritization, business context, or subtle stakeholder expectations in non-routine cases.",
+      "_timestamp": "2026-04-06T01:14:24"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Report generation spans varied industries, metrics, and stakeholder needs, but follows broadly standardized formats and recurring analytical patterns.",
+      "adequacy_evidence": "There is abundant accessible data (reports, dashboards, templates, BI documentation) and strong potential for synthetic generation, providing good coverage of both outputs and underlying processes.",
+      "_timestamp": "2026-04-06T01:14:25"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Report content, structure, and emphasis depend on stakeholder preferences, business context, and implicit goals (e.g., decision support vs. monitoring), requiring interpretation beyond explicit instructions.",
+      "adequacy_evidence": "Current agents can generate plausible reports with guidance but often miss stakeholder-specific priorities or framing, requiring iterative human feedback to align with true intent.",
+      "_timestamp": "2026-04-06T01:14:25"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Producing reports involves multiple steps\u2014data retrieval, validation, analysis, visualization, and narrative synthesis\u2014where consistency across steps matters but tasks are often modular and decomposable.",
+      "adequacy_evidence": "Well-scaffolded AI agents can generally maintain coherence across these steps, though some degradation (e.g., minor inconsistencies or dropped constraints) can occur in longer or more customized report-generation workflows.",
+      "_timestamp": "2026-04-06T01:14:26"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Report generation requires integrating multiple data sources, metrics, and definitions, often involving aggregation and selective summarization of moderately large datasets within a single workflow.",
+      "adequacy_evidence": "Well-scaffolded agents using tools like SQL, dataframes, and retrieval systems can reliably manage, filter, and summarize this information without significant loss or drift within a single episode.",
+      "_timestamp": "2026-04-06T01:14:26"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Business intelligence reporting typically operates on batch or scheduled timelines where minutes to hours of latency are acceptable, especially for executive or stakeholder review.",
+      "adequacy_evidence": "Current AI agents can generate high-quality reports well within these time windows, allowing sufficient reasoning without meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-06T01:14:27"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Report generation often benefits from prior report formats, stakeholder preferences, and historical context, but each report can typically be produced from current data and specifications without deep longitudinal state.",
+      "adequacy_evidence": "Current agents can store and retrieve templates, prior reports, and preferences via external memory systems, but inconsistencies in recall and integration across sessions still occur in practice.",
+      "_timestamp": "2026-04-06T01:14:27"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Business intelligence reports commonly include charts, dashboards, and visual summaries of data, so non-text outputs (e.g., graphs) are an integral but not dominant component of the task.",
+      "adequacy_evidence": "Current AI agents with tool integration (e.g., Python, BI platforms) can reliably generate standard visualizations and embed them in reports, with only minor limitations in highly customized or aesthetic design.",
+      "_timestamp": "2026-04-06T01:14:27"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in business or financial reports can misinform decisions and damage credibility, but most contexts tolerate occasional minor inaccuracies after review and correction.",
+      "adequacy_evidence": "Even with standard checks, AI may introduce subtle aggregation, interpretation, or context errors that are not always caught, leaving some meaningful residual risk.",
+      "_timestamp": "2026-04-06T01:14:29"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Reports can be checked by reconciling figures to source data, rerunning queries, and validating calculations, but this requires domain knowledge of metrics and careful review to catch subtle definition or aggregation errors.",
+      "adequacy_evidence": "AI can generate queries and summaries but still makes non-trivial mistakes (e.g., wrong joins, filters, or metric definitions), so analysts must perform meaningful validation and cross-checks before use.",
+      "_timestamp": "2026-04-06T01:14:29"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Reports are consumed by executives, managers, and clients who rely on the output, but effectiveness depends more on accuracy and clarity than on the analyst\u2019s personal identity or presence.",
+      "adequacy_evidence": "Stakeholders are generally willing to accept AI-generated reports if they are accurate and well-presented; AI-assisted reporting is already common and rarely faces strong identity-based resistance.",
+      "_timestamp": "2026-04-06T01:14:29"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from generating business or financial reports. While certain regulated filings may require human certification or sign-off, AI can be used to produce the underlying reports without legal restriction.",
+      "_timestamp": "2026-04-06T01:14:29"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

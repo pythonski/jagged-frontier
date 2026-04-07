@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1133.00",
+  "task_id": 3448,
+  "task_statement": "Analyze information to determine, recommend, and plan installation of a new system or modification of an existing system.",
+  "occupation_title": "Software Developers, Systems Software",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 90,
+    "reasoning": "Analyzing information and planning system installations or modifications is typically done using digital documentation, system specs, and communication tools. However, some cases may require on-site evaluation of existing hardware or infrastructure before finalizing recommendations."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Selecting and planning system installations or modifications requires nuanced tradeoffs (e.g., performance, reliability, compatibility, and organizational constraints) that are typically refined through hands-on experience and case-based judgment.",
+      "adequacy_evidence": "Current agents can apply documented patterns and reason about tradeoffs, but often lack the situational calibration and implicit organizational knowledge needed for consistently sound decisions in complex, context-specific cases.",
+      "_timestamp": "2026-04-06T01:01:56"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining and planning system installations or modifications requires eliciting stakeholder needs, reconciling competing constraints (performance, cost, security), and interpreting partially specified requirements that evolve during analysis.",
+      "adequacy_evidence": "Current AI agents can assist with requirement synthesis and propose plans, but they often miss latent organizational constraints or stakeholder preferences and require iterative human clarification to converge on appropriate solutions.",
+      "_timestamp": "2026-04-06T01:01:56"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous system contexts (different architectures, legacy constraints, industries, performance/security requirements), with many long-tailed, organization-specific scenarios.",
+      "adequacy_evidence": "While public documentation, codebases, and design patterns provide broad coverage, many real-world cases involve proprietary systems and undocumented constraints, leaving some important subpopulations only partially represented but still partly synthesizable.",
+      "_timestamp": "2026-04-06T01:01:56"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-stage analysis (requirements gathering, system evaluation, tradeoff analysis, and planning) where earlier decisions constrain later steps, making the sequence tightly coupled and interdependent.",
+      "adequacy_evidence": "Current AI agents can sustain coherence across many steps with tooling, but still exhibit some goal drift or inconsistency in longer planning chains, especially when requirements evolve or constraints must be consistently tracked.",
+      "_timestamp": "2026-04-06T01:01:56"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large amounts of heterogeneous information (existing system architecture, requirements, constraints, dependencies, and potential modifications), where missing details can lead to flawed system design decisions.",
+      "adequacy_evidence": "Current agents can manage large contexts using retrieval and tools, but still exhibit context loss, imperfect compression, and occasional misalignment across complex system details during extended reasoning.",
+      "_timestamp": "2026-04-06T01:01:56"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "System planning often depends on prior architecture decisions, legacy system behavior, and organizational preferences, but some instances (e.g., greenfield systems) are more self-contained.",
+      "adequacy_evidence": "Current agents can use external memory stores and documentation retrieval, but they still show gaps in reliably maintaining and surfacing evolving project context across sessions.",
+      "_timestamp": "2026-04-06T01:01:57"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "System analysis and installation planning are typically deliberative tasks with timelines of minutes to hours or longer, not requiring rapid or real-time responses.",
+      "adequacy_evidence": "Current AI agents can take sufficient time to perform extended reasoning and produce high-quality plans without being constrained by latency pressures.",
+      "_timestamp": "2026-04-06T01:01:58"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily based on textual artifacts such as system documentation, logs, specifications, and code; visual diagrams are helpful but not essential to competent performance.",
+      "adequacy_evidence": "Current AI agents handle text-based analysis, planning, and even generation of optional diagrams adequately, with no meaningful reliance on challenging multimodal inputs.",
+      "_timestamp": "2026-04-06T01:01:59"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Mistakes in system installation or modification planning can lead to outages, security vulnerabilities, data loss, or costly rollbacks, so even rare residual errors can have major downstream consequences.",
+      "adequacy_evidence": "With code review, testing, and staging environments, many AI errors can be caught, but subtle integration, scaling, or security issues may still slip through, leaving some non-negligible residual risk.",
+      "_timestamp": "2026-04-06T01:01:59"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task typically involves interaction with internal stakeholders (e.g., managers, engineers, clients) who rely on recommendations, though the performer's personal identity is not central to trust compared to technical accuracy.",
+      "adequacy_evidence": "Many organizations would accept AI-generated analysis as input, but often still expect human oversight or sign-off, indicating moderate resistance to fully delegating this role to AI.",
+      "_timestamp": "2026-04-06T01:01:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements prohibiting AI from analyzing requirements or planning software system installations or modifications. While certain regulated industries may impose oversight, they do not broadly restrict AI from performing this task.",
+      "_timestamp": "2026-04-06T01:01:59"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "System installation and modification plans involve architectural choices, dependencies, and constraints (performance, security, compatibility) whose errors are often latent and only revealed through extensive testing, simulation, or deployment, requiring expert review.",
+      "adequacy_evidence": "Current AI frequently produces plausible but incomplete or incorrect system plans, missing edge cases or integration constraints, so substantial expert validation, testing, and iteration are needed before reliance.",
+      "_timestamp": "2026-04-06T01:01:59"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

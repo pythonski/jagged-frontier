@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-4021.00",
+  "task_id": 11280,
+  "task_statement": "Compose letters in reply to correspondence concerning such items as requests for merchandise, damage claims, credit information requests, delinquent accounts, incorrect billing, or unsatisfactory service.",
+  "occupation_title": "Correspondence Clerks",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 100,
+    "reasoning": "Composing reply correspondence (letters or emails) is performed using computers and standard office software or email systems, and does not require physical presence or specialized non-digital equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple common business scenarios (complaints, billing issues, claims, credit requests), requiring variation in tone, policy application, and context, but these fall within well-understood and recurring categories.",
+      "adequacy_evidence": "Large corpora of customer service emails, business correspondence templates, and synthetic data generation provide rich, process-revealing coverage across these scenarios, making representative training data readily available.",
+      "_timestamp": "2026-04-06T01:11:38"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Replies must interpret customer intent, tone, and context (e.g., complaints vs. inquiries) and align with company policies, which are not always fully explicit in the prompt.",
+      "adequacy_evidence": "Current agents can usually infer intent and draft appropriate responses using patterns and guidelines, but they often miss subtle tone, edge cases, or policy nuances without human review.",
+      "_timestamp": "2026-04-06T01:11:39"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While many replies follow templates and policies, effective handling of complaints, claims, or delinquent accounts requires some judgment in tone, prioritization, and situational phrasing based on experience.",
+      "adequacy_evidence": "Current AI agents, with access to policies and examples, can reliably reproduce appropriate tone and case-based adjustments for most correspondence scenarios, with minimal reliance on human-only tacit calibration.",
+      "_timestamp": "2026-04-06T01:11:39"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves multiple steps\u2014interpreting incoming correspondence, retrieving relevant information or policies, and composing a coherent reply\u2014but sequences are relatively short and loosely coupled.",
+      "adequacy_evidence": "Frontier AI agents can reliably maintain coherence across short drafting workflows, with minimal degradation in quality over the limited sequence length required for composing standard correspondence.",
+      "_timestamp": "2026-04-06T01:11:39"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires integrating multiple pieces of case-specific information (e.g., customer correspondence, order details, policies), but the volume is typically bounded and structured within a single case.",
+      "adequacy_evidence": "Modern agents with retrieval and tool use can reliably manage and reference this level of context within a single interaction without significant loss or drift.",
+      "_timestamp": "2026-04-06T01:11:39"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Composing business correspondence typically allows minutes to hours for drafting and review rather than requiring immediate real-time responses.",
+      "adequacy_evidence": "Current AI systems can generate high-quality draft letters well within these timeframes, so latency does not meaningfully constrain performance.",
+      "_timestamp": "2026-04-06T01:11:40"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is primarily text-based, involving reading written correspondence and composing written replies; any non-text materials (e.g., scanned documents) are incidental and can be transcribed into text.",
+      "adequacy_evidence": "Current AI systems handle text input and output extremely well, and any minor multimodal elements (e.g., reading attachments) are already adequately supported by existing tools.",
+      "_timestamp": "2026-04-06T01:11:40"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Many replies require referencing prior correspondence, account status, or claim history, but each letter is typically grounded in a discrete case file rather than a long evolving narrative.",
+      "adequacy_evidence": "Current AI agents integrated with CRM or document systems can reliably retrieve and use prior case records, so cross-session memory needs are well supported.",
+      "_timestamp": "2026-04-06T01:11:41"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in customer correspondence can lead to dissatisfaction, minor financial discrepancies, or reputational harm, but are typically reversible and rarely cause severe or irreversible consequences.",
+      "adequacy_evidence": "With standard review processes (e.g., human oversight or template checks), AI-generated correspondence errors are usually detectable and correctable, leaving residual risk at an acceptable level.",
+      "_timestamp": "2026-04-06T01:11:41"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws prohibiting AI from composing routine business correspondence. While some letters (e.g., debt collection or credit communications) must comply with regulations like the FDCPA or FCRA, these rules govern content and accountability, not whether AI can draft them.",
+      "_timestamp": "2026-04-06T01:11:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Verifying these letters requires checking facts (account details, policies, billing records) and appropriate tone, which takes some domain knowledge and reference to records but is not highly complex.",
+      "adequacy_evidence": "Current AI can draft plausible letters but may insert incorrect details, misapply policies, or use inappropriate phrasing, so routine human review and correction remain necessary.",
+      "_timestamp": "2026-04-06T01:11:42"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves external stakeholders (customers, claimants, account holders) who rely on and respond to the correspondence, and tone/credibility can influence outcomes.",
+      "adequacy_evidence": "Automated and templated responses are already widely accepted in customer correspondence, and most stakeholders are indifferent to whether a human or AI generated the letter as long as it is clear and appropriate.",
+      "_timestamp": "2026-04-06T01:11:42"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

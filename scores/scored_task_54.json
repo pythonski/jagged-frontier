@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-9111.00",
+  "task_id": 54,
+  "task_statement": "Monitor the use of diagnostic services, inpatient beds, facilities, and staff to ensure effective use of resources and assess the need for additional staff, equipment, and services.",
+  "occupation_title": "Medical and Health Services Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Monitoring utilization of beds, diagnostic services, staffing, and other resources is commonly done through hospital information systems, reports, and dashboards. However, managers often supplement this with on-site observation of facilities and in-person discussions with department staff."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing resource utilization and determining needs for staff or equipment requires experiential judgment about patient flow, clinical priorities, local practice patterns, and tradeoffs not fully captured in explicit rules.",
+      "adequacy_evidence": "AI can analyze utilization data and suggest optimizations, but often lacks the nuanced, context-sensitive calibration (e.g., anticipating clinician behavior or institutional constraints) that experienced managers apply in non-routine cases.",
+      "_timestamp": "2026-04-06T00:02:33"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Resource monitoring spans diverse healthcare settings, patient populations, service lines, and operational constraints, with highly context-sensitive patterns and long-tailed edge cases (e.g., surges, specialty units).",
+      "adequacy_evidence": "While there is abundant healthcare operations literature and some case data, much granular, real-time utilization and staffing data is proprietary and fragmented, leaving gaps that can only be partially filled with synthetic or limited institutional datasets.",
+      "_timestamp": "2026-04-06T00:02:34"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Determining 'effective use of resources' and 'need for additional staff or equipment' depends on implicit goals (cost vs. quality tradeoffs, patient outcomes, regulatory constraints, local demand patterns) that vary by institution and require contextual judgment.",
+      "adequacy_evidence": "AI agents can analyze utilization data and suggest benchmarks, but often miss institution-specific priorities, informal constraints, and shifting stakeholder expectations, requiring human interpretation and iteration to align recommendations.",
+      "_timestamp": "2026-04-06T00:02:34"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves ongoing monitoring, data review, and iterative assessment cycles over time, but individual analyses (e.g., reviewing utilization or staffing needs) are relatively modular rather than tightly interdependent in long chains.",
+      "adequacy_evidence": "AI agents can sustain performance across moderate multi-step monitoring and analysis workflows, though some degradation (e.g., missed context, drift in priorities) can occur over extended sequences without careful orchestration.",
+      "_timestamp": "2026-04-06T00:02:34"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating large, heterogeneous, and frequently updating data streams (bed occupancy, staffing levels, service utilization, equipment availability) and maintaining a coherent situational picture where missing details can lead to poor resource decisions.",
+      "adequacy_evidence": "Well-tooled agents can aggregate and query dashboards or databases, but they still show limitations in reliably tracking evolving state, prioritizing salient signals, and maintaining consistent summaries across complex, shifting inputs.",
+      "_timestamp": "2026-04-06T00:02:35"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Effective monitoring and resource planning depends on longitudinal data such as historical utilization trends, staffing patterns, and evolving service demand across months or years.",
+      "adequacy_evidence": "Current AI systems can integrate with databases and dashboards to retain and retrieve such data, but they still show gaps in consistently maintaining and contextually using evolving organizational state without robust external system design.",
+      "_timestamp": "2026-04-06T00:02:36"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Monitoring hospital resource utilization may involve near-real-time dashboards and periodic reviews, but decisions typically tolerate seconds to minutes of latency rather than requiring instant reactions.",
+      "adequacy_evidence": "Current AI systems can analyze utilization data and generate insights within these timeframes without needing to truncate reasoning, so speed constraints do not meaningfully degrade performance.",
+      "_timestamp": "2026-04-06T00:02:36"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves informing and influencing internal stakeholders (e.g., clinicians, administrators) who rely on the analysis, but direct interpersonal trust or identity is not central to execution.",
+      "adequacy_evidence": "Healthcare organizations already use analytics and decision-support systems for resource monitoring, and stakeholders are generally comfortable acting on AI-assisted insights when validated.",
+      "_timestamp": "2026-04-06T00:02:37"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Assessing resource utilization and staffing needs involves interpreting complex, noisy healthcare data and contextual factors; errors (e.g., misjudging capacity needs) may not be immediately visible and often require expert review and longitudinal validation.",
+      "adequacy_evidence": "AI can aggregate and analyze utilization data, but its recommendations still require careful human validation against local context and constraints, creating a consistent but manageable verification burden.",
+      "_timestamp": "2026-04-06T00:02:37"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily relies on structured data, reports, and text-based records (e.g., utilization statistics, staffing levels, and service reports) rather than images, audio, or other modalities.",
+      "adequacy_evidence": "Current AI systems handle text and structured data analysis well, and no significant multimodal perception or generation is required for competent performance.",
+      "_timestamp": "2026-04-06T00:02:37"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in monitoring resource use or assessing staffing/equipment needs can lead to inefficiencies, higher costs, or strained care delivery, but are usually indirect and correctable rather than immediately catastrophic.",
+      "adequacy_evidence": "AI can support this task with analytics and forecasting, but may still miss nuanced operational signals or context, leaving some residual risk that could affect planning decisions even after review.",
+      "_timestamp": "2026-04-06T00:02:37"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or licensing rules that prohibit AI systems from monitoring healthcare resource utilization; such functions can be performed by analytics tools under human oversight. Regulations like HIPAA govern data handling but do not bar AI from performing the task itself.",
+      "_timestamp": "2026-04-06T00:02:37"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-9041.02",
+  "task_id": 811,
+  "task_statement": "Review and verify data, such as age, name, address, and principal sum and value of property on insurance applications and policies.",
+  "occupation_title": "Insurance Claims and Policy Processing Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Reviewing and verifying application and policy data is typically done in insurance databases or document management systems, but some instances still involve handling or checking paper applications or mailed documents."
+  },
+  "scores": {
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves checking structured data fields against explicit rules and documentation, with clear criteria for correctness and consistency.",
+      "adequacy_evidence": "Current AI systems can reliably apply rule-based validation and pattern checks for such structured data without needing experience-based judgment.",
+      "_timestamp": "2026-04-05T22:02:20"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans moderately diverse formats and edge cases (different document layouts, name/address variations, policy types), but remains structured and well-bounded within standard insurance data fields.",
+      "adequacy_evidence": "Large volumes of representative insurance documents and structured records exist, and synthetic data generation for such fields is straightforward, providing ample process-level supervision for training.",
+      "_timestamp": "2026-04-05T22:02:20"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task is largely governed by explicit rules (matching fields, checking consistency), but some judgment is needed for handling discrepancies or incomplete information.",
+      "adequacy_evidence": "Current AI agents can reliably apply validation rules and flag inconsistencies, and can usually infer appropriate handling of minor ambiguities with minimal human input.",
+      "_timestamp": "2026-04-05T22:02:21"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves checking multiple fields (e.g., name, age, address, property values) for accuracy, requiring consistent attention across a sequence of verification steps, though each check is largely independent.",
+      "adequacy_evidence": "LLM-based agents with tool support can reliably handle multi-field validation workflows without noticeable degradation, as the sequence length is short and does not involve tightly coupled dependencies.",
+      "_timestamp": "2026-04-05T22:02:21"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves comparing multiple structured fields (e.g., name, address, property values) across documents, requiring moderate tracking and cross-referencing within a single case.",
+      "adequacy_evidence": "Current AI agents handle structured data extraction, comparison, and short-context tracking reliably, with minimal loss of relevant information in typical document sets.",
+      "_timestamp": "2026-04-05T22:02:22"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing and verifying application data is a clerical back-office task where minutes or longer processing times are typically acceptable and do not affect outcomes.",
+      "adequacy_evidence": "Current AI systems can perform data verification accurately well within these relaxed time constraints, so speed does not meaningfully degrade quality.",
+      "_timestamp": "2026-04-05T22:02:22"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Errors in applicant or policy data can lead to pricing mistakes, coverage disputes, or administrative delays, but are typically correctable and rarely cause irreversible harm.",
+      "adequacy_evidence": "These fields are structured and easily cross-checked against documents or databases, so after normal validation processes, AI residual errors are unlikely to pose significant risk.",
+      "_timestamp": "2026-04-05T22:02:23"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 0,
+      "B": 1,
+      "requirement_evidence": "The task involves checking structured fields (names, addresses, numeric values) against source documents, where discrepancies are typically obvious and easily cross-referenced.",
+      "adequacy_evidence": "AI systems can perform extraction and comparison but still make occasional mismatches or OCR/context errors, so routine human spot-checking remains necessary though not especially difficult.",
+      "_timestamp": "2026-04-05T22:02:23"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading and verifying structured textual or numeric data fields (e.g., names, addresses, policy values) from applications and policies, which are fundamentally text-based even when digitized from forms.",
+      "adequacy_evidence": "Current AI systems, with OCR and document parsing tools, handle text extraction and verification from both digital and scanned documents reliably, with no significant multimodal limitations for this task.",
+      "_timestamp": "2026-04-05T22:02:23"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or regulations prohibiting AI from reviewing and verifying insurance application data. While privacy and data protection laws (e.g., GLBA) govern handling of such information, they do not restrict the use of AI tools for these clerical verification tasks.",
+      "_timestamp": "2026-04-05T22:02:24"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "This is a back-office data verification task with no direct interaction with customers or stakeholders; outputs are consumed internally within the insurance processing workflow.",
+      "adequacy_evidence": "Because there are no stakeholders engaging with the performer, there is no meaningful resistance to AI performing this task, and such automation is already common in similar contexts.",
+      "_timestamp": "2026-04-05T22:02:24"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Verification may involve referencing prior policy records or customer history, but many checks are performed on self-contained application documents and standard databases rather than requiring rich longitudinal context.",
+      "adequacy_evidence": "Current AI systems with database integration and retrieval tools can reliably store and access prior records across sessions, meeting the modest cross-instance memory needs of this task.",
+      "_timestamp": "2026-04-05T22:02:24"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

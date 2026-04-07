@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "43-5061.00",
+  "task_id": 11370,
+  "task_statement": "Distribute production schedules or work orders to departments.",
+  "occupation_title": "Production, Planning, and Expediting Clerks",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 70,
+    "reasoning": "Production schedules or work orders are often distributed electronically through ERP systems, email, or shared databases, which can be done remotely. However, in many manufacturing environments they are also printed and physically delivered or posted on the shop floor, requiring on-site presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans different industries, scheduling systems, and exception cases, but follows largely standardized workflows (ERP systems, routing rules, priority handling).",
+      "adequacy_evidence": "There is abundant accessible data from enterprise systems, SOPs, and synthetic workflow simulations that capture both process steps and variations, making coverage readily achievable.",
+      "_timestamp": "2026-04-06T01:22:47"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Distributing schedules or work orders typically follows established priorities, routing rules, and standard operating procedures, though some situational judgment (e.g., handling conflicts or urgent changes) may arise.",
+      "adequacy_evidence": "Current AI agents can reliably apply documented rules and incorporate contextual signals (e.g., priority flags, deadlines) to handle routine and moderately variable cases without significant gaps in judgment.",
+      "_timestamp": "2026-04-06T01:22:47"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "While the core objective\u2014sending schedules or work orders to the correct departments\u2014is explicit, there can be mild context dependence around timing, prioritization, formatting, and routing conventions that are not always fully specified.",
+      "adequacy_evidence": "Current AI agents can reliably infer recipients, formats, and timing from available data and organizational rules, handling these minor ambiguities with minimal need for human clarification.",
+      "_timestamp": "2026-04-06T01:22:48"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task mainly involves sending or routing prepared schedules or work orders to relevant departments, typically as discrete, independent actions without long interdependent sequences.",
+      "adequacy_evidence": "AI systems can reliably execute short, repeatable distribution steps (e.g., sending messages, updating systems) without degradation over sequence length.",
+      "_timestamp": "2026-04-06T01:22:49"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Distributing production schedules or work orders is primarily a text-based task involving documents, emails, or system entries, with little to no reliance on images, audio, or other modalities.",
+      "adequacy_evidence": "Since the task is fundamentally text-in/text-out, current AI agents can fully handle the modality requirements without any meaningful limitation.",
+      "_timestamp": "2026-04-06T01:22:49"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves handling multiple schedules or work orders, tracking departments, deadlines, and priorities, requiring some organization and retrieval of relevant details within an episode.",
+      "adequacy_evidence": "Current AI agents with database access and workflow tooling can reliably store, retrieve, and route this information without meaningful loss or compression errors.",
+      "_timestamp": "2026-04-06T01:22:49"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Distributing production schedules or work orders is typically a routine clerical task where delays of minutes or longer are acceptable and do not impair operations.",
+      "adequacy_evidence": "Current AI agents can generate and route schedules or communications well within acceptable timeframes without needing to truncate reasoning, so speed does not degrade output quality.",
+      "_timestamp": "2026-04-06T01:22:50"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Distributing schedules often relies on stable distribution lists, departmental responsibilities, and occasionally updated preferences, but each instance is largely driven by the current schedule or work order.",
+      "adequacy_evidence": "Current AI systems with standard database or CRM integrations can reliably store and retrieve distribution lists and preferences across sessions, with minimal failure in this context.",
+      "_timestamp": "2026-04-06T01:22:50"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Misdistribution of schedules or work orders can cause delays, idle time, or coordination issues, but these are typically correctable and rarely cause irreversible harm.",
+      "adequacy_evidence": "With standard checks (e.g., verifying recipients, timestamps, and content), AI-generated distributions would leave minimal residual risk, as errors are usually detectable and fixable before major impact.",
+      "_timestamp": "2026-04-06T01:22:51"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or licensing requirements that prohibit or restrict AI from distributing production schedules or work orders; this is a routine administrative function without mandated human sign-off.",
+      "_timestamp": "2026-04-06T01:22:51"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors like sending schedules to the wrong department, using outdated versions, or omitting key details can be caught through cross-checks with production plans and distribution lists, but require attention and some domain context.",
+      "adequacy_evidence": "AI systems can automate routing and distribution but may misinterpret updates or recipient mappings, so routine verification (e.g., checking logs or confirmations) is still needed to ensure correctness.",
+      "_timestamp": "2026-04-06T01:22:51"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves internal departments that rely on receiving and acting on schedules or work orders, so there are stakeholders who engage with the output, though the sender\u2019s identity is not central.",
+      "adequacy_evidence": "Distribution of schedules is already commonly automated via ERP/MRP systems, and stakeholders typically accept system-generated outputs without concern for whether a human or AI produced them.",
+      "_timestamp": "2026-04-06T01:22:52"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

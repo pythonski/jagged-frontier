@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "29-2071.00",
+  "task_id": 540,
+  "task_statement": "Resolve or clarify codes or diagnoses with conflicting, missing, or unclear information by consulting with doctors or others or by participating in the coding team's regular meetings.",
+  "occupation_title": "Medical Records and Health Information Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Clarifying codes or diagnoses is usually done through electronic health records, messaging, emails, calls, or virtual meetings, all of which can be handled remotely. However, some instances involve in-person consultations with physicians or team meetings within a healthcare facility."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans a wide range of clinical specialties, documentation styles, ambiguous or conflicting records, and institution-specific coding practices, creating a highly heterogeneous and long-tailed distribution of cases.",
+      "adequacy_evidence": "While coding guidelines, annotated examples, and some de-identified clinical corpora exist, real-world edge cases and the interactive consultation process with clinicians are less well captured and often inaccessible due to privacy constraints, though partially synthesizable.",
+      "_timestamp": "2026-04-05T20:38:17"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task centers on interpreting incomplete or conflicting clinical documentation, where correct coding depends on implicit clinical intent, context, and evolving clarification through interaction with physicians and team norms.",
+      "adequacy_evidence": "Current agents can flag inconsistencies and suggest queries, but often struggle to infer nuanced clinical intent and manage iterative clarification with stakeholders, requiring human oversight.",
+      "_timestamp": "2026-04-05T20:38:18"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Resolving ambiguous or conflicting coding information requires applying coding guidelines to nuanced clinical contexts and exercising judgment about when and how to query providers, which goes beyond purely explicit rules.",
+      "adequacy_evidence": "Current agents can apply coding rules and identify inconsistencies but show gaps in nuanced clinical interpretation and in calibrating when clarification is necessary, especially in edge cases.",
+      "_timestamp": "2026-04-05T20:38:18"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating details from patient records, coding guidelines, and communications with clinicians or team discussions, involving multiple information sources but typically within a bounded case context.",
+      "adequacy_evidence": "Current agents can track and summarize moderate multi-source context, but may lose or misprioritize details across dialogue and documentation, especially when reconciling conflicting inputs.",
+      "_timestamp": "2026-04-05T20:38:19"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many clarification decisions are case-specific, coders benefit from recalling prior physician guidance, past coding rulings, and team consensus patterns across cases.",
+      "adequacy_evidence": "Current agents can store and retrieve prior interactions and preferences via EHR integrations or memory systems, but retrieval can be inconsistent and context-linking across cases is not fully reliable.",
+      "_timestamp": "2026-04-05T20:38:19"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing textual medical records and discussing clarifications with clinicians; any audio from meetings can be fully captured via text (notes or transcripts).",
+      "adequacy_evidence": "Current AI systems handle text-based communication and can process transcripts of discussions effectively, so there is no meaningful shortfall tied to multimodal capabilities.",
+      "_timestamp": "2026-04-05T20:38:19"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step interactions such as reviewing records, identifying discrepancies, consulting clinicians, and following up, requiring consistency across a moderate sequence of steps.",
+      "adequacy_evidence": "AI agents can manage moderate multi-step workflows but may show some degradation in maintaining context and consistency across back-and-forth communications and meetings.",
+      "_timestamp": "2026-04-05T20:38:19"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Resolving or clarifying coding discrepancies typically occurs asynchronously via consultations or scheduled meetings, where delays of minutes to hours are acceptable.",
+      "adequacy_evidence": "Current AI systems can perform necessary reasoning and draft clarifications well within these relaxed time constraints without needing to truncate processing.",
+      "_timestamp": "2026-04-05T20:38:19"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether a clarified diagnosis or code is correct often requires nuanced clinical judgment, cross-referencing documentation, and understanding provider intent, making errors subtle and not trivially detectable.",
+      "adequacy_evidence": "Current AI systems can misinterpret clinical context or coding guidelines, and their errors are not always obvious without expert review, so substantial, expert-level verification remains necessary.",
+      "_timestamp": "2026-04-05T20:38:20"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Coding clarifications affect billing accuracy, compliance, and medical record integrity; errors can lead to financial penalties or audit issues but are usually correctable and rarely immediately life-threatening.",
+      "adequacy_evidence": "Even with human review and consultation, AI may misinterpret nuanced clinical context or documentation gaps, leaving a non-trivial residual risk that is manageable but still problematic.",
+      "_timestamp": "2026-04-05T20:38:21"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI systems from assisting with or conducting coding clarification activities, including communicating with clinicians. While licensed professionals must ultimately make medical decisions, using AI for coding queries or team participation is not legally barred.",
+      "_timestamp": "2026-04-05T20:38:21"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires interaction with physicians and coding team members, who must engage with and respond to the coder\u2019s queries, making stakeholder cooperation relevant though not heavily dependent on personal identity.",
+      "adequacy_evidence": "Clinicians may be cautious or less responsive to an AI agent raising coding clarifications, especially around clinical judgment, but this resistance is moderate and could be mitigated with oversight or hybrid workflows.",
+      "_timestamp": "2026-04-05T20:38:21"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

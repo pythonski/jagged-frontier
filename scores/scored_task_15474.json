@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "11-3051.04",
+  "task_id": 15474,
+  "task_statement": "Plan and schedule plant activities, such as wood, waste, or refuse fuel deliveries, ash removal, and regular maintenance.",
+  "occupation_title": "Biomass Power Plant Managers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 80,
+    "reasoning": "Planning and scheduling deliveries, ash removal, and maintenance are typically done using scheduling software, emails, and calls. However, managers may sometimes need on-site coordination or direct observation of plant conditions to finalize schedules."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task spans different fuel types, plant configurations, logistics constraints, and maintenance regimes, but follows broadly similar operational planning patterns across facilities.",
+      "adequacy_evidence": "While general scheduling, logistics, and maintenance planning data are available, detailed plant-specific operational data and real-world dispatch logs are often proprietary, leaving some gaps that require synthesis or adaptation.",
+      "_timestamp": "2026-04-06T04:02:09"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many constraints (delivery schedules, maintenance intervals, regulatory limits) are explicit, effective planning requires interpreting shifting priorities like fuel availability, equipment condition, and operational tradeoffs.",
+      "adequacy_evidence": "Current agents can optimize schedules given structured inputs but often miss evolving, implicit priorities or require human iteration to align with real-world operational nuance.",
+      "_timestamp": "2026-04-06T04:02:09"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many scheduling elements follow explicit constraints (capacity, maintenance intervals, delivery windows), effective planning also depends on experience with plant-specific quirks, supplier reliability, and operational tradeoffs under changing conditions.",
+      "adequacy_evidence": "Current agents can optimize schedules and incorporate rules and forecasts, but they lack robust calibration for nuanced, context-specific judgments (e.g., anticipating disruptions or informal coordination practices) that experienced managers apply.",
+      "_timestamp": "2026-04-06T04:02:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Planning and scheduling plant operations involves coordinating multiple interdependent activities (fuel deliveries, maintenance, waste handling) over time, where consistency across steps matters but sequences are not deeply coupled at every step.",
+      "adequacy_evidence": "AI agents can generate and manage schedules but often show some degradation over longer planning horizons, such as dropping constraints or failing to maintain consistency across interdependent activities.",
+      "_timestamp": "2026-04-06T04:02:11"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires tracking multiple concurrent schedules (fuel deliveries, maintenance windows, ash removal) and constraints (capacity, timing, logistics), but the information scope is structured and typically manageable with standard planning tools.",
+      "adequacy_evidence": "Current agents can handle multi-source scheduling with tools, but may lose track of interdependencies or evolving constraints without careful scaffolding, leading to occasional inconsistencies or missed details.",
+      "_timestamp": "2026-04-06T04:02:12"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Planning and scheduling plant activities relies primarily on textual, numerical, and structured data (e.g., delivery schedules, maintenance logs, capacity constraints) rather than non-text modalities.",
+      "adequacy_evidence": "Current AI agents can fully handle text- and data-based planning tasks without needing multimodal perception or generation, so there is no meaningful shortfall.",
+      "_timestamp": "2026-04-06T04:02:12"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Planning and scheduling plant logistics and maintenance are typically done on hourly to daily horizons, where minutes or longer deliberation is acceptable.",
+      "adequacy_evidence": "Current AI systems can perform multi-step scheduling and optimization well within these timeframes without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-06T04:02:12"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 0,
+      "requirement_evidence": "Effective scheduling depends on persistent operational context such as maintenance histories, fuel supply contracts, equipment performance trends, and regulatory inspection cycles over long time horizons.",
+      "adequacy_evidence": "Current AI systems can integrate with enterprise systems (e.g., CMMS, ERP) to reliably store and retrieve longitudinal plant data, making cross-session memory needs well-supported.",
+      "_timestamp": "2026-04-06T04:02:13"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Scheduling fuel deliveries, ash removal, and maintenance affects plant efficiency, costs, and operational continuity, but most errors can be corrected or mitigated before causing catastrophic harm.",
+      "adequacy_evidence": "Even after standard review, AI-generated schedules may miss site-specific constraints or dynamic conditions, leaving some residual risk that could disrupt operations, though typically not irreversibly.",
+      "_timestamp": "2026-04-06T04:02:13"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit US laws or regulations prohibiting AI from planning and scheduling plant logistics activities. While overall plant operation must comply with environmental and safety regulations under human responsibility, the scheduling function itself is not restricted to human-only execution.",
+      "_timestamp": "2026-04-06T04:02:14"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Schedules can be checked against constraints like delivery capacity, maintenance windows, and regulatory limits, but doing so requires domain knowledge and careful cross-referencing; some conflicts or inefficiencies are not immediately obvious.",
+      "adequacy_evidence": "Current AI can generate plausible schedules but may miss plant-specific constraints or create subtle conflicts, so human review and adjustment are typically needed to ensure feasibility and efficiency.",
+      "_timestamp": "2026-04-06T04:02:14"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires coordination with fuel suppliers, waste haulers, maintenance teams, and logistics partners who rely on schedules and may interact with the planner, making stakeholder engagement relevant.",
+      "adequacy_evidence": "While stakeholders may accept AI-generated schedules in a logistics context, some may prefer human oversight or negotiation flexibility, leading to moderate resistance if the role is fully automated.",
+      "_timestamp": "2026-04-06T04:02:14"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

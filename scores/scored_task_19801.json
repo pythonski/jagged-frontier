@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "19-4012.01",
+  "task_id": 19801,
+  "task_statement": "Apply precision agriculture information to specifically reduce the negative environmental impacts of farming practices.",
+  "occupation_title": "Precision Agriculture Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 60,
+    "reasoning": "Applying precision agriculture information often involves analyzing GIS data, remote sensing imagery, and creating digital prescriptions or recommendations on a computer, but technicians sometimes need field verification or equipment adjustments that require physical presence."
+  },
+  "scores": {
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires interpreting site-specific conditions (soil, crops, weather), balancing yield vs. environmental tradeoffs, and aligning with farmer goals and regulatory constraints, all of which are context-dependent and not fully explicit.",
+      "adequacy_evidence": "Current agents can integrate data and suggest practices, but often miss nuanced local priorities or implicit tradeoffs, requiring human guidance to refine objectives and ensure alignment.",
+      "_timestamp": "2026-04-06T01:37:39"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Applying precision agriculture to reduce environmental impact requires context-specific judgment about soil variability, weather patterns, crop responses, and tradeoffs between yield and sustainability, which are often learned through field experience rather than fully codified rules.",
+      "adequacy_evidence": "Current AI can leverage agronomic models and data to approximate these decisions, but still lacks robust calibration to local, nuanced conditions and edge cases that experienced technicians handle through tacit knowledge.",
+      "_timestamp": "2026-04-06T01:37:39"
+    },
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task spans highly heterogeneous conditions (crop types, soil profiles, microclimates, farming practices, and environmental regulations), with strong context sensitivity and many edge cases.",
+      "adequacy_evidence": "There is substantial agronomic research, sensor data, and case studies available, but farm-specific, high-resolution, and longitudinal data are often proprietary or sparse, leaving some important subpopulations underrepresented.",
+      "_timestamp": "2026-04-06T01:37:40"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating heterogeneous within-episode data such as soil characteristics, sensor readings, weather forecasts, crop models, and geospatial field maps, where missing or misaligning a variable can affect environmental outcomes.",
+      "adequacy_evidence": "Current agents with tool use can aggregate and reference multiple data sources, but they still exhibit context window limits, imperfect retrieval, and occasional drift when compressing complex, spatially indexed information.",
+      "_timestamp": "2026-04-06T01:37:40"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Reducing environmental impacts in precision agriculture relies on longitudinal data such as soil conditions, input usage, yield history, and environmental responses across seasons and fields.",
+      "adequacy_evidence": "Current AI systems can integrate with farm management platforms and databases to retain and retrieve such data, but maintaining coherent, context-rich histories across heterogeneous systems and long time horizons remains imperfect.",
+      "_timestamp": "2026-04-06T01:37:41"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step processes such as collecting field data, analyzing conditions, generating recommendations, and iteratively adjusting practices, but these steps are modular rather than tightly coupled in long continuous chains.",
+      "adequacy_evidence": "AI agents can generally handle these moderate workflows with tool support, but may show some degradation over extended planning and monitoring cycles, such as losing context or consistency across iterative updates.",
+      "_timestamp": "2026-04-06T01:37:41"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Applying precision agriculture insights (e.g., adjusting inputs, analyzing field data) is typically a deliberative task where minutes to hours of analysis are acceptable rather than requiring real-time responses.",
+      "adequacy_evidence": "Current AI systems can perform the necessary analysis and reasoning within these relaxed timeframes without meaningful degradation in quality.",
+      "_timestamp": "2026-04-06T01:37:41"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task relies heavily on geospatial data, satellite/drone imagery, sensor readings, and field maps to diagnose conditions and guide interventions; text alone cannot capture these spatial and visual patterns.",
+      "adequacy_evidence": "Current agents can analyze many agricultural images and structured sensor data, but performance is less reliable on complex, noisy, or highly localized cross-modal interpretations typical of real farm environments.",
+      "_timestamp": "2026-04-06T01:37:42"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining whether recommendations truly reduce environmental impact (e.g., nutrient runoff, soil degradation) often requires longitudinal field data, sensor validation, and domain expertise, with effects that may only become visible over time.",
+      "adequacy_evidence": "Current AI systems can generate plausible agronomic recommendations but still require extensive expert review and field validation, as errors are not immediately observable and can have delayed, context-specific environmental consequences.",
+      "_timestamp": "2026-04-06T01:37:42"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves advising or influencing farmers, land managers, or agribusiness stakeholders who must act on the recommendations, so engagement matters but does not heavily depend on personal authority or identity.",
+      "adequacy_evidence": "Many stakeholders already use data-driven tools in precision agriculture, but some may be cautious about relying fully on AI-generated recommendations, especially when environmental and economic tradeoffs are involved.",
+      "_timestamp": "2026-04-06T01:37:43"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in applying precision agriculture data can lead to nutrient runoff, soil degradation, or inefficient input use, which have meaningful environmental and cost impacts but are usually not immediately catastrophic and can be corrected over time.",
+      "adequacy_evidence": "Even after standard agronomic checks and monitoring, AI systems may still mis-handle local variability or edge cases, leaving some residual environmental risk that is noticeable but generally manageable with oversight.",
+      "_timestamp": "2026-04-06T01:37:43"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from generating or applying precision agriculture recommendations to reduce environmental impact. While related activities (e.g., pesticide application) may require licensed humans, the informational and decision-support aspect is not restricted to humans.",
+      "_timestamp": "2026-04-06T01:37:43"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

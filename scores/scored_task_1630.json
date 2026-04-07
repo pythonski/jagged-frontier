@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "21-1092.00",
+  "task_id": 1630,
+  "task_statement": "Recommend appropriate penitentiary for initial placement of an offender.",
+  "occupation_title": "Probation Officers and Correctional Treatment Specialists",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 95,
+    "reasoning": "Recommending a penitentiary placement is based on reviewing offender records, risk assessments, and policy guidelines and submitting a recommendation, all of which can be done using digital case management systems and communication tools without physical presence."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Placement decisions depend on a wide range of factors (security classification, medical/mental health needs, gang affiliations, legal constraints, facility availability, and jurisdiction-specific policies), creating a heterogeneous and context-sensitive distribution.",
+      "adequacy_evidence": "While policy manuals and some case guidelines are available, detailed real-world placement data and decision rationales are often restricted, making coverage incomplete but partially recoverable through structured rules, synthetic cases, and domain-specific fine-tuning.",
+      "_timestamp": "2026-04-06T11:16:04"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Placement decisions rely on nuanced judgment about offender risk, needs, compatibility with facility culture, gang dynamics, and informal knowledge of institutions that is not fully captured in formal guidelines.",
+      "adequacy_evidence": "Well-scaffolded agents can apply documented criteria and risk tools, but lack lived institutional insight and subtle calibration about facility-specific dynamics, leading to gaps in non-routine or borderline cases.",
+      "_timestamp": "2026-04-06T11:16:05"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Placement decisions follow formal classification guidelines (security level, offense type, medical needs), but require contextual balancing of factors like institutional capacity, rehabilitation goals, and proximity, which are not fully explicit.",
+      "adequacy_evidence": "Current agents can apply codified rules and policies but often miss evolving constraints (e.g., real-time bed availability, informal practices) and nuanced tradeoffs, requiring human adjustment.",
+      "_timestamp": "2026-04-06T11:16:05"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task requires integrating multiple structured and semi-structured data sources (criminal history, risk assessments, medical needs, security classification, facility constraints) within a single decision episode, but the volume is bounded and typically documented in case files.",
+      "adequacy_evidence": "Current agents can ingest and summarize case files with tool support, but may occasionally miss or misweight critical details (e.g., subtle risk factors or constraints), especially when information is dispersed across documents.",
+      "_timestamp": "2026-04-06T11:16:05"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task relies on reviewing case files, risk assessments, criminal history, and classification guidelines, which are predominantly text-based and structured data inputs.",
+      "adequacy_evidence": "Current AI systems can effectively process and reason over textual and structured information, with no meaningful multimodal demands creating a capability gap.",
+      "_timestamp": "2026-04-06T11:16:06"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "The recommendation directly affects offenders, correctional institutions, and judicial authorities, where perceived professional judgment, legitimacy, and accountability are central to acceptance and implementation.",
+      "adequacy_evidence": "Stakeholders in the criminal justice system would strongly resist delegating or accepting such consequential placement decisions from an AI, due to concerns about fairness, accountability, and legal legitimacy.",
+      "_timestamp": "2026-04-06T11:16:08"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 2,
+      "B": 2,
+      "requirement_evidence": "Determining appropriate placement requires integrating risk assessments, legal constraints, medical/psychological needs, and facility-specific conditions; mistakes are not immediately visible and often only surface after placement outcomes or audits.",
+      "adequacy_evidence": "Current AI would require intensive expert review because it may miss nuanced policy rules, local facility constraints, or subtle risk factors, and such errors are difficult to detect without thorough case analysis.",
+      "_timestamp": "2026-04-06T11:16:09"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "Incorrect placement (e.g., security level or facility type) can lead to serious safety risks, violence, escape potential, and legal liability, so even rare residual errors can have severe consequences.",
+      "adequacy_evidence": "Placement decisions are guided by structured classification tools and review processes, allowing human oversight to catch many errors, but AI misjudgments or edge-case failures could still leave non-trivial residual risk.",
+      "_timestamp": "2026-04-06T11:16:09"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 1,
+      "reasoning": "Correctional placement decisions are typically required to be made or approved by designated human officials within agencies, implying a need for accountable human decision-makers. However, there is no explicit law prohibiting AI from assisting or generating recommendations, creating partial but not absolute restriction.",
+      "_timestamp": "2026-04-06T11:16:10"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves gathering offender characteristics, applying classification criteria, and matching to facility options, requiring several interdependent steps but not a long or highly iterative sequence.",
+      "adequacy_evidence": "Frontier AI agents can reliably handle multi-step structured decision processes of this length without significant degradation, especially with checklists or tool-assisted workflows.",
+      "_timestamp": "2026-04-06T11:17:13"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The recommendation is based on the offender\u2019s existing case file, criminal history, risk assessments, and institutional criteria, all of which are available at the time of decision rather than requiring accumulation across prior interactions.",
+      "adequacy_evidence": "Current AI systems can readily access and retrieve structured case records or databases for each instance, so there is no meaningful gap in cross-session memory capability for this task.",
+      "_timestamp": "2026-04-06T11:17:14"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Recommending a penitentiary involves case review, risk assessment, and policy matching, typically conducted over minutes to hours rather than requiring immediate response.",
+      "adequacy_evidence": "Current AI systems can perform detailed analysis within this time window without needing to truncate reasoning, so latency does not meaningfully degrade output quality.",
+      "_timestamp": "2026-04-06T11:17:16"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

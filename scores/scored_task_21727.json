@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "15-1299.02",
+  "task_id": 21727,
+  "task_statement": "Collect, compile, or integrate Geographic Information Systems (GIS) data, such as remote sensing or cartographic data for inclusion in map manuscripts.",
+  "occupation_title": "Geographic Information Systems Technologists and Technicians",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 75,
+    "reasoning": "Compiling and integrating GIS datasets (e.g., remote sensing imagery or cartographic layers) is typically done using GIS software and online data sources, but some instances of 'collecting' GIS data involve fieldwork with GPS or other surveying equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple data types (e.g., satellite imagery, vector layers, projections) and sources, creating moderate variability in formats and preprocessing workflows.",
+      "adequacy_evidence": "There is extensive publicly available GIS data, documentation, and worked examples (e.g., open satellite datasets, GIS tutorials, and software workflows), providing strong coverage for training and simulation.",
+      "_timestamp": "2026-04-05T23:49:31"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While many GIS data integration steps follow documented procedures (e.g., projections, formats), practitioners rely on experience to judge data quality, resolve inconsistencies across sources, and handle sensor or cartographic idiosyncrasies.",
+      "adequacy_evidence": "Current agents can execute standard transformations and flag issues, but they show gaps in nuanced judgment about data reliability, projection edge cases, and context-specific integration decisions.",
+      "_timestamp": "2026-04-05T23:49:32"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "The task involves multi-step workflows (data sourcing, cleaning, projection alignment, integration into map layers), where intermediate outputs affect later steps but are often modular and tool-supported rather than tightly coupled end-to-end.",
+      "adequacy_evidence": "AI agents can follow structured GIS pipelines with reasonable consistency, but over longer sequences may exhibit some drift (e.g., inconsistent projections or metadata handling) requiring oversight.",
+      "_timestamp": "2026-04-05T23:49:33"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "While data types and general goals are usually specified (e.g., include certain layers or sources), important choices like data resolution, projection, cleaning standards, and relevance often depend on project context and implicit cartographic conventions.",
+      "adequacy_evidence": "Current agents can follow explicit instructions and infer some standards, but they often miss context-specific expectations (e.g., appropriate generalization or source prioritization), requiring human clarification and iteration.",
+      "_timestamp": "2026-04-05T23:49:33"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task requires handling multiple heterogeneous GIS datasets (e.g., raster, vector, projections, metadata) and maintaining consistency across layers, formats, and transformations within a single workflow, where missing details like coordinate systems can cause major errors.",
+      "adequacy_evidence": "Current agents with tool support can manage multi-source data pipelines, but they often lose or mis-handle critical contextual details (e.g., CRS alignment, metadata fidelity) during complex integration steps.",
+      "_timestamp": "2026-04-05T23:49:33"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 2,
+      "B": 1,
+      "requirement_evidence": "The task fundamentally involves interpreting and integrating spatial data such as satellite imagery, raster layers, and cartographic elements, which require visual and geospatial reasoning beyond text.",
+      "adequacy_evidence": "Current AI agents can process geospatial and image data with tools, but they remain inconsistent on fine-grained spatial alignment, projection handling, and complex map-layer integration tasks.",
+      "_timestamp": "2026-04-05T23:49:34"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "GIS data collection and integration tasks are typically batch-oriented workflows where minutes to hours of processing time are acceptable, with no need for real-time responsiveness.",
+      "adequacy_evidence": "Current AI agents can perform data parsing, transformation, and integration within acceptable timeframes without meaningful degradation from latency constraints.",
+      "_timestamp": "2026-04-05T23:49:34"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from collecting, compiling, or integrating GIS data. While data licensing, privacy, or security rules may govern specific datasets, they do not restrict AI as a performer of the task itself.",
+      "_timestamp": "2026-04-05T23:49:35"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is a back-end technical process of collecting and integrating GIS data, typically consumed internally or as part of a larger workflow without direct stakeholder interaction tied to performer identity.",
+      "adequacy_evidence": "Since stakeholders generally do not engage directly with the performer and care about data quality rather than who produced it, AI involvement would be readily accepted or unnoticed.",
+      "_timestamp": "2026-04-05T23:49:36"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "GIS data compilation often occurs within ongoing projects where prior datasets, metadata standards, and integration decisions must be reused across sessions, but this context is typically stored explicitly in files and databases rather than relying on memory alone.",
+      "adequacy_evidence": "Current AI agents can leverage external storage (GIS databases, file systems, metadata repositories) and retrieval tools to persist and access cross-session context effectively, with little inherent limitation in maintaining needed state.",
+      "_timestamp": "2026-04-05T23:49:36"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "GIS data integration errors (e.g., projection mismatches, misaligned layers, incorrect joins) typically require domain knowledge and inspection using GIS tools, but established validation workflows and visual checks make many issues detectable with effort.",
+      "adequacy_evidence": "Current AI agents can mishandle coordinate systems, metadata, and layer integration, so outputs require consistent human review in GIS software, though many errors can be caught with standard validation procedures.",
+      "_timestamp": "2026-04-05T23:49:36"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Errors in GIS data integration can lead to inaccurate maps and analyses, which have meaningful downstream impacts (e.g., planning or navigation), but most are not catastrophic and can be mitigated if caught later.",
+      "adequacy_evidence": "Even after standard validation (e.g., topology checks, visual inspection), AI systems may still introduce subtle spatial or metadata inconsistencies that are not always obvious, leaving some non-trivial residual risk.",
+      "_timestamp": "2026-04-05T23:49:36"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

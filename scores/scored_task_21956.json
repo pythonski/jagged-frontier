@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "17-3012.00",
+  "task_id": 21956,
+  "task_statement": "Study work order requests to determine type of service, such as lighting or power, demanded by installation.",
+  "occupation_title": "Electrical and Electronics Drafters",
+  "classification": {
+    "category": "fully_digital",
+    "digital_pct": 98,
+    "reasoning": "The task involves reviewing work order requests to identify service requirements, which is typically done by reading digital documents or project management systems on a computer and does not require physical presence or equipment."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Work order requests vary across projects, clients, and installation contexts, but generally follow semi-structured formats with recurring terminology and a bounded set of service categories (e.g., lighting vs. power).",
+      "adequacy_evidence": "There is ample accessible data (e.g., sample work orders, engineering documentation) and it is straightforward to generate synthetic examples with labeled reasoning, making coverage of relevant variations feasible for current AI systems.",
+      "_timestamp": "2026-04-05T23:07:55"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Work order requests can include varied terminology and implicit cues that require some experience to interpret correctly, especially when distinguishing between overlapping service categories or incomplete descriptions.",
+      "adequacy_evidence": "Current LLM-based agents with domain prompting and examples can reliably interpret and classify such requests, handling terminology variation and minor ambiguity with high accuracy.",
+      "_timestamp": "2026-04-05T23:07:55"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Work orders often contain semi-structured or abbreviated descriptions requiring interpretation of context (e.g., distinguishing lighting vs. power needs from brief notes), but they are usually grounded in standardized terminology and formats.",
+      "adequacy_evidence": "Current AI agents can generally extract intent from structured or moderately messy work orders, but they can miss implicit cues or organization-specific shorthand, requiring occasional human clarification.",
+      "_timestamp": "2026-04-05T23:07:55"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reading a work order and identifying the requested service type, which is a short, self-contained classification process with minimal multi-step dependency.",
+      "adequacy_evidence": "LLM-based agents can reliably process and classify such inputs in a single pass without degradation, as the sequence length and interdependence are minimal.",
+      "_timestamp": "2026-04-05T23:07:56"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Work order requests are often primarily textual but may include diagrams, symbols, or annotated plans that require interpreting visual or schematic information to determine service type.",
+      "adequacy_evidence": "Current agents can handle textual descriptions well and interpret simple diagrams, but performance is less reliable on complex or domain-specific schematics and mixed-format documents.",
+      "_timestamp": "2026-04-05T23:07:57"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reading and interpreting work order requests, potentially integrating details like location, specifications, and service descriptions, but the information volume is typically bounded and document-based.",
+      "adequacy_evidence": "Current AI agents reliably handle document parsing, information extraction, and short-context synthesis, with minimal issues in retaining and using relevant details within a single work order.",
+      "_timestamp": "2026-04-05T23:07:58"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Determining the requested service type can be verified by cross-checking the work order text, specifications, and standard service categories, but requires domain familiarity and careful reading to catch misinterpretations.",
+      "adequacy_evidence": "Current AI can parse and classify work orders reasonably well, but ambiguity and nuanced phrasing mean human review is still needed to catch misclassifications and ensure correct interpretation.",
+      "_timestamp": "2026-04-05T23:07:58"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Determining the type of service from a work order is typically a self-contained task based on the information in the current request, with little need for historical context across prior instances.",
+      "adequacy_evidence": "Since the task does not rely on cross-session memory, current AI systems' memory limitations do not meaningfully impact performance.",
+      "_timestamp": "2026-04-05T23:07:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Misinterpreting a work order (e.g., lighting vs. power) can lead to incorrect drafting specifications, causing rework or minor project delays, but errors are typically caught in subsequent design or review stages.",
+      "adequacy_evidence": "Current AI systems are strong at classifying and interpreting structured or semi-structured requests, and after standard review processes, the remaining risk of misclassification is low and generally acceptable.",
+      "_timestamp": "2026-04-05T23:07:58"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Reviewing work order requests to classify service type is typically an asynchronous office task with no strict real-time demands; minutes of latency are acceptable within drafting workflows.",
+      "adequacy_evidence": "Frontier AI systems can easily process and interpret such documents within seconds, well under the available time budget, with no need to sacrifice reasoning quality for speed.",
+      "_timestamp": "2026-04-05T23:07:58"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task involves internally reviewing work order requests to determine service type, with no direct interaction with external stakeholders or reliance on performer identity.",
+      "adequacy_evidence": "Since there are no meaningful stakeholder acceptance considerations, AI performing this task would not face resistance related to identity or role.",
+      "_timestamp": "2026-04-05T23:07:59"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit laws or licensing requirements prohibiting AI from reviewing work orders to classify service types in drafting contexts. This task is an internal analytical activity that does not legally require a human decision-maker or licensed professional.",
+      "_timestamp": "2026-04-05T23:08:00"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "onet_soc_code": "13-2082.00",
+  "task_id": 7366,
+  "task_statement": "Check data input or verify totals on forms prepared by others to detect errors in arithmetic, data entry, or procedures.",
+  "occupation_title": "Tax Preparers",
+  "classification": {
+    "category": "predominantly_digital",
+    "digital_pct": 85,
+    "reasoning": "Reviewing tax forms and verifying totals is typically done using tax software or digital documents on a computer. However, some instances still involve checking printed forms or paper records prepared by others, requiring physical handling."
+  },
+  "scores": {
+    "1": {
+      "dimension_name": "Distributional Coverage",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task spans multiple tax form types, error patterns, and data entry scenarios, but these are structured, rule-governed, and relatively well-bounded rather than highly open-ended.",
+      "adequacy_evidence": "Extensive real and synthetic data exist for tax forms, arithmetic checks, and validation workflows, with clear procedural signals and rules enabling strong coverage through current training pipelines.",
+      "_timestamp": "2026-04-06T11:15:53"
+    },
+    "2": {
+      "dimension_name": "Tacit Knowledge",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is largely governed by explicit rules: recomputing totals, cross-checking fields, and verifying adherence to standardized tax procedures, leaving little need for experience-based judgment beyond following documented checks.",
+      "adequacy_evidence": "Current AI agents can reliably perform arithmetic validation, consistency checks, and rule-based audits with high accuracy when given structured inputs and procedures, leaving minimal gap in tacit knowledge.",
+      "_timestamp": "2026-04-06T11:15:54"
+    },
+    "4": {
+      "dimension_name": "Sequential Coherence",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task involves reviewing multiple fields and recomputing totals across a form, requiring consistent attention across several steps, but these checks are largely modular and not tightly interdependent.",
+      "adequacy_evidence": "AI systems with tool use (e.g., code execution or spreadsheet parsing) can reliably perform multi-step arithmetic checks without noticeable degradation over the short sequences involved.",
+      "_timestamp": "2026-04-06T11:15:55"
+    },
+    "5": {
+      "dimension_name": "Working Memory",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task requires tracking multiple fields, cross-referencing figures, and ensuring consistency across a form, but the total information volume is structured and bounded within individual documents.",
+      "adequacy_evidence": "Current agents with tool use (e.g., spreadsheets, calculators, structured parsing) can reliably manage and cross-check these bounded data contexts without significant loss or drift.",
+      "_timestamp": "2026-04-06T11:15:55"
+    },
+    "6": {
+      "dimension_name": "Long-Term Memory",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying arithmetic and data entry on tax forms is typically a self-contained task based on the current document, with little need for prior case history or cross-session context.",
+      "adequacy_evidence": "Since the task does not rely on persistent cross-session memory, current AI systems are fully adequate with respect to long-term memory requirements.",
+      "_timestamp": "2026-04-06T11:15:55"
+    },
+    "3": {
+      "dimension_name": "Specification Ambiguity",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "The task has largely explicit goals (identify arithmetic, data entry, or procedural errors), but some context-dependent judgment is needed to interpret tax rules and what qualifies as an error in specific cases.",
+      "adequacy_evidence": "Well-scaffolded AI agents can reliably apply rules, cross-check totals, and flag inconsistencies, with minimal difficulty inferring the intended objectives in most cases.",
+      "_timestamp": "2026-04-06T11:15:56"
+    },
+    "7": {
+      "dimension_name": "Multimodal Requirement",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task primarily involves reviewing numeric and textual data on forms (e.g., totals, entries, procedures), which are fundamentally text/tabular rather than requiring visual, audio, or spatial reasoning.",
+      "adequacy_evidence": "Current AI systems can reliably process text and structured data, including via OCR for scanned forms, so there is no meaningful multimodal gap for this task.",
+      "_timestamp": "2026-04-06T11:15:56"
+    },
+    "8": {
+      "dimension_name": "Inference Speed",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "Verifying totals and checking data on tax forms is typically a back-office task with flexible timing; minutes of processing time are acceptable and there is no strict real-time interaction requirement.",
+      "adequacy_evidence": "Current AI agents can perform arithmetic checks and consistency validation quickly and accurately within the available time budget, with no meaningful degradation from speed constraints.",
+      "_timestamp": "2026-04-06T11:15:56"
+    },
+    "11": {
+      "dimension_name": "Counterpart Acceptance",
+      "R": 0,
+      "B": 0,
+      "requirement_evidence": "The task is an internal quality-control activity focused on error detection in forms, with outputs typically consumed within a workflow rather than requiring stakeholder engagement or trust in the performer\u2019s identity.",
+      "adequacy_evidence": "Since there are no meaningful external stakeholders for this task, acceptance of AI is not a barrier; organizations already commonly use automated checks for arithmetic and data validation.",
+      "_timestamp": "2026-04-06T11:15:58"
+    },
+    "10": {
+      "dimension_name": "Reliability Threshold",
+      "R": 1,
+      "B": 0,
+      "requirement_evidence": "Residual errors in tax form verification can lead to penalties, delays, or amended filings, but are typically correctable and rarely catastrophic if caught later.",
+      "adequacy_evidence": "Arithmetic and consistency checks are highly automatable and easily double-checked, so after standard review processes, AI systems leave little unacceptable residual risk.",
+      "_timestamp": "2026-04-06T11:15:58"
+    },
+    "9": {
+      "dimension_name": "Output Verifiability",
+      "R": 1,
+      "B": 1,
+      "requirement_evidence": "Most errors (arithmetic, data entry) can be detected through systematic recalculation, rule-based checks, and cross-referencing, though some procedural mistakes require domain knowledge and careful review.",
+      "adequacy_evidence": "AI systems can reliably perform arithmetic and consistency checks, but may still miss nuanced procedural or context-specific tax errors, requiring moderate human verification effort.",
+      "_timestamp": "2026-04-06T11:15:58"
+    },
+    "12": {
+      "dimension_name": "Regulatory & Legal Constraints",
+      "R": 0,
+      "reasoning": "There are no explicit U.S. laws or regulations prohibiting AI from checking data entry or verifying arithmetic on tax forms. While licensed preparers must sign returns and are responsible for accuracy, the use of software or AI tools for error checking is permitted and already common in practice.",
+      "_timestamp": "2026-04-06T11:15:58"
+    }
+  },
+  "_run_meta": {
+    "model": "openai/gpt-5.3-chat",
+    "temperature": 0.2
+  }
+}
