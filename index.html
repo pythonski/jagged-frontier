@@ -238,6 +238,27 @@
       padding-left: 24px;
     }
 
+    .sidebar-btn {
+      display: block;
+      margin: 16px 12px 0;
+      padding: 10px 14px;
+      background: #2a6496;
+      color: #fff !important;
+      border: none;
+      border-left: none !important;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .sidebar-btn:hover {
+      background: #1d4e78;
+      border-bottom-color: transparent;
+    }
+
     @media (max-width: 1300px) {
       .sidebar-toc {
         display: none;
@@ -263,7 +284,7 @@
     <a href="#sec-specification-ambiguity" class="is-h3">Specification Ambiguity</a>
     <a href="#sec-stakeholder-acceptance" class="is-h3">Stakeholder Acceptance</a>
     <a href="#sec-regulatory" class="is-h3">Regulatory &amp; Legal</a>
-    <a href="dashboard.html" class="is-h2" style="margin-top:16px; color:#2a6496;">Dashboard &rarr;</a>
+    <a href="dashboard.html" class="sidebar-btn">Dashboard &rarr;</a>
   </nav>
 
   <div class="container">
@@ -519,12 +540,33 @@
     window.addEventListener('scroll', updateScrollspy, { passive: true });
     updateScrollspy();
 
-    // Smooth scroll for TOC links
+    // Smooth scroll for TOC links + open dimension sections
     tocLinks.forEach(a => {
+      const href = a.getAttribute('href');
+      // Skip external links (like dashboard.html)
+      if (!href.startsWith('#')) return;
+
       a.addEventListener('click', e => {
         e.preventDefault();
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const target = document.querySelector(href);
+        if (!target) return;
+
+        // If it's a dimension section, open it (close others first)
+        if (target.classList.contains('dimension-section')) {
+          document.querySelectorAll('.dimension-section.open').forEach(s => s.classList.remove('open'));
+          document.querySelectorAll('.hotspot.active').forEach(b => b.classList.remove('active'));
+          target.classList.add('open');
+
+          // Also highlight the corresponding hotspot
+          const hsData = hotspots.find(h => h.id === target.id);
+          if (hsData) {
+            const btns = document.querySelectorAll('.hotspot');
+            const idx = hotspots.indexOf(hsData);
+            if (btns[idx]) btns[idx].classList.add('active');
+          }
+        }
+
+        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
       });
     });
   </script>
