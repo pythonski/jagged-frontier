@@ -156,6 +156,17 @@
 
     .dimension-section {
       border-left: 3px solid #3a7cc0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      padding: 0 0 0 20px;
+      margin: 0;
+      transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+    }
+
+    .dimension-section.open {
+      max-height: 8000px;
+      opacity: 1;
       padding: 16px 0 16px 20px;
       margin: 1em 0;
     }
@@ -469,9 +480,17 @@
       const section = document.getElementById(sectionId);
       if (!section) return;
 
+      const isOpen = section.classList.contains('open');
+
+      // Close all sections and deactivate all hotspots
+      document.querySelectorAll('.dimension-section.open').forEach(s => s.classList.remove('open'));
       document.querySelectorAll('.hotspot.active').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // If it wasn't open, open it (no scroll)
+      if (!isOpen) {
+        section.classList.add('open');
+        btn.classList.add('active');
+      }
     }
 
     img.addEventListener('load', createHotspots);
