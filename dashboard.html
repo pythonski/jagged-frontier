@@ -51,6 +51,21 @@
     .panel.active { display: block; }
 
     .dim-description { font-style: italic; color: #666; margin-bottom: 1em; font-size: 0.95em; }
+
+    /* Task explorer */
+    .selector-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+    .selector-row select { font-family: inherit; font-size: 15px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px; background: #fff; min-width: 220px; max-width: 100%; }
+    .selector-row select:focus { outline: none; border-color: #2a6496; }
+    .task-detail { margin-top: 16px; }
+    .task-statement { font-style: italic; color: #555; margin-bottom: 16px; font-size: 1.05em; line-height: 1.5; }
+    .rb-table { width: 100%; border-collapse: collapse; margin: 12px 0 24px; }
+    .rb-table th, .rb-table td { padding: 8px 12px; border-bottom: 1px solid #eee; font-size: 15px; }
+    .rb-table th { font-weight: 700; color: #555; font-size: 13px; text-transform: uppercase; }
+    .rb-table td.num { text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .rb-table .b0 { color: #5cb85c; }
+    .rb-table .b1 { color: #f0ad4e; }
+    .rb-table .b2 { color: #d9534f; }
+    .rb-table .r0 { color: #bbb; }
   </style>
 </head>
 <body>
@@ -58,6 +73,7 @@
     <a href="index.html" class="back-link">&larr; Back to article</a>
     <h2>Dashboard</h2>
     <a href="#" data-panel="overall" class="active">Overall</a>
+    <a href="#" data-panel="explorer">Task Explorer</a>
     <div class="section-label">Dimensions</div>
   </nav>
 
@@ -80,6 +96,35 @@
 
       <h3>Exposure by Occupation Group</h3>
       <div class="chart-container wide"><canvas id="chart-exposure-soc"></canvas></div>
+    </div>
+
+    <div class="panel" id="panel-explorer">
+      <h1>Task Explorer</h1>
+      <p>Select a job area, then an occupation, then a specific task to view its R/B scores across all dimensions.</p>
+
+      <div class="selector-row">
+        <select id="sel-soc">
+          <option value="">1. Select job area...</option>
+        </select>
+        <select id="sel-occ" disabled>
+          <option value="">2. Select occupation...</option>
+        </select>
+        <select id="sel-task" disabled>
+          <option value="">3. Select task...</option>
+        </select>
+      </div>
+
+      <div class="task-detail" id="task-detail" style="display:none;">
+        <div class="card-row" id="task-cards"></div>
+        <div class="task-statement" id="task-statement"></div>
+        <h3>Dimension Scores</h3>
+        <table class="rb-table">
+          <thead><tr><th>Dimension</th><th class="num">R</th><th class="num">B</th><th>Assessment</th></tr></thead>
+          <tbody id="task-rb-body"></tbody>
+        </table>
+        <h3>Bottleneck Profile</h3>
+        <div class="chart-container"><canvas id="chart-task-radar"></canvas></div>
+      </div>
     </div>
   </div>
 
@@ -357,6 +402,135 @@
     }
 
     // ── Load and go ──
+    // ── Task Explorer ──
+    let taskRadarChart = null;
+
+    function setupExplorer() {
+      const selSoc = document.getElementById('sel-soc');
+      const selOcc = document.getElementById('sel-occ');
+      const selTask = document.getElementById('sel-task');
+
+      // Build SOC major group options
+      const socSet = new Set();
+      DATA.forEach(r => socSet.add(r.onet_soc_code.substring(0, 2)));
+      const socKeys = [...socSet].sort();
+      socKeys.forEach(k => {
+        const opt = document.createElement('option');
+        opt.value = k;
+        opt.textContent = SOC_LABELS[k] || k;
+        selSoc.appendChild(opt);
+      });
+
+      selSoc.addEventListener('change', () => {
+        const mg = selSoc.value;
+        selOcc.innerHTML = '<option value="">2. Select occupation...</option>';
+        selTask.innerHTML = '<option value="">3. Select task...</option>';
+        selTask.disabled = true;
+        document.getElementById('task-detail').style.display = 'none';
+
+        if (!mg) { selOcc.disabled = true; return; }
+        selOcc.disabled = false;
+
+        // Unique occupations in this group
+        const occs = new Map();
+        DATA.forEach(r => {
+          if (r.onet_soc_code.substring(0, 2) === mg) {
+            occs.set(r.onet_soc_code, r.occupation_title);
+          }
+        });
+        [...occs.entries()].sort((a, b) => a[1].localeCompare(b[1])).forEach(([code, title]) => {
+          const opt = document.createElement('option');
+          opt.value = code;
+          opt.textContent = title;
+          selOcc.appendChild(opt);
+        });
+      });
+
+      selOcc.addEventListener('change', () => {
+        const occCode = selOcc.value;
+        selTask.innerHTML = '<option value="">3. Select task...</option>';
+        document.getElementById('task-detail').style.display = 'none';
+
+        if (!occCode) { selTask.disabled = true; return; }
+        selTask.disabled = false;
+
+        DATA.forEach((r, i) => {
+          if (r.onet_soc_code === occCode) {
+            const opt = document.createElement('option');
+            opt.value = i;
+            opt.textContent = r.task_statement.substring(0, 100) + (r.task_statement.length > 100 ? '...' : '');
+            selTask.appendChild(opt);
+          }
+        });
+      });
+
+      selTask.addEventListener('change', () => {
+        const idx = selTask.value;
+        if (idx === '') { document.getElementById('task-detail').style.display = 'none'; return; }
+        renderTaskDetail(DATA[parseInt(idx)]);
+      });
+    }
+
+    function renderTaskDetail(row) {
+      document.getElementById('task-detail').style.display = 'block';
+
+      // Task statement
+      document.getElementById('task-statement').textContent = '"' + row.task_statement + '"';
+
+      // Compute exposure
+      const exposure = getExposure(row);
+      const autoEps = geomExposureEps(row);
+      const severeCount = DIMS.filter(d => getR(row, d) > 0 && getB(row, d) === 2).length;
+      const relevantCount = DIMS.filter(d => getR(row, d) > 0).length;
+
+      document.getElementById('task-cards').innerHTML = `
+        <div class="card"><div class="label">Occupation</div><div class="value" style="font-size:1.1em;">${row.occupation_title}</div></div>
+        <div class="card"><div class="label">Exposure</div><div class="value">${isNaN(exposure) ? 'N/A' : exposure.toFixed(3)}</div></div>
+        <div class="card"><div class="label">Automability (ε)</div><div class="value">${autoEps.toFixed(3)}</div></div>
+        <div class="card"><div class="label">Severe Bottlenecks</div><div class="value">${severeCount}</div><div class="sub">of ${relevantCount} relevant dims</div></div>
+      `;
+
+      // R/B table
+      const bClass = b => b === 0 ? 'b0' : b === 1 ? 'b1' : 'b2';
+      const rClass = r => r === 0 ? 'r0' : '';
+      const assessLabel = (r, b) => {
+        if (r === 0) return '<span style="color:#bbb;">Not relevant</span>';
+        if (b === 0) return '<span style="color:#5cb85c;">No bottleneck</span>';
+        if (b === 1) return '<span style="color:#f0ad4e;">Moderate bottleneck</span>';
+        return '<span style="color:#d9534f;">Severe bottleneck</span>';
+      };
+
+      document.getElementById('task-rb-body').innerHTML = DIMS.map(d => {
+        const r = getR(row, d);
+        const b = getB(row, d);
+        return `<tr>
+          <td>${d.key}</td>
+          <td class="num ${rClass(r)}">${r}</td>
+          <td class="num ${bClass(b)}">${b}</td>
+          <td>${assessLabel(r, b)}</td>
+        </tr>`;
+      }).join('');
+
+      // Radar chart
+      if (taskRadarChart) taskRadarChart.destroy();
+      const rVals = DIMS.map(d => getR(row, d));
+      const bVals = DIMS.map(d => getB(row, d));
+      taskRadarChart = new Chart(document.getElementById('chart-task-radar'), {
+        type: 'radar',
+        data: {
+          labels: DIMS.map(d => d.short),
+          datasets: [
+            { label: 'Requirement (R)', data: rVals, backgroundColor: 'rgba(42,100,150,0.15)', borderColor: 'rgba(42,100,150,0.8)', borderWidth: 2, pointRadius: 3 },
+            { label: 'Bottleneck (B)', data: bVals, backgroundColor: 'rgba(217,83,79,0.15)', borderColor: 'rgba(217,83,79,0.8)', borderWidth: 2, pointRadius: 3 },
+          ]
+        },
+        options: {
+          scales: { r: { min: 0, max: 2, ticks: { stepSize: 1 } } },
+          plugins: { legend: { position: 'bottom' } }
+        }
+      });
+    }
+
     Papa.parse('scores.csv', {
       download: true,
       header: true,
@@ -367,6 +541,7 @@
         setupNav();
         renderOverall();
         DIMS.forEach(renderDimPanel);
+        setupExplorer();
       }
     });
   </script>
