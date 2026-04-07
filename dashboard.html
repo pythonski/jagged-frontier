@@ -194,18 +194,40 @@
     function renderOverall() {
       const exposures = DATA.map(getExposure).filter(e => !isNaN(e));
       const n = DATA.length;
-      const meanExp = mean(exposures);
       const medianExp = median(exposures);
-      const zeroCount = exposures.filter(e => e === 0).length;
-      const highCount = exposures.filter(e => e > 0.7).length;
+
+      // Epsilon-safe geom automability per task
+      const automabilities = DATA.map(geomExposureEps);
+      const medianAuto = median(automabilities);
+
+      // % with no severe (B=2) bottleneck on any required dimension
+      const noSevereCount = DATA.filter(row => {
+        return !DIMS.some(d => getR(row, d) > 0 && getB(row, d) === 2);
+      }).length;
+      const noSeverePct = (noSevereCount / n * 100);
+
+      // % with no bottleneck at all (all B=0 where R>0)
+      const noBottleneckCount = DATA.filter(row => {
+        return !DIMS.some(d => getR(row, d) > 0 && getB(row, d) > 0);
+      }).length;
+      const noBottleneckPct = (noBottleneckCount / n * 100);
+
+      // Mean number of relevant dimensions (R>0) per task
+      const relevantDims = DATA.map(row => DIMS.filter(d => getR(row, d) > 0).length);
+      const meanRelevant = mean(relevantDims);
+
+      // % of tasks with high relevance breadth (R>0 on 8+ dims)
+      const highRelevanceCount = relevantDims.filter(r => r >= 8).length;
+      const highRelevancePct = (highRelevanceCount / n * 100);
 
       // Headline cards
       document.getElementById('headline-cards').innerHTML = `
         <div class="card"><div class="label">Tasks Scored</div><div class="value">${n.toLocaleString()}</div></div>
-        <div class="card"><div class="label">Mean Exposure</div><div class="value">${meanExp.toFixed(3)}</div><div class="sub">weighted geom. mean</div></div>
-        <div class="card"><div class="label">Median Exposure</div><div class="value">${medianExp.toFixed(3)}</div></div>
-        <div class="card"><div class="label">Fully Blocked</div><div class="value">${zeroCount}</div><div class="sub">exposure = 0</div></div>
-        <div class="card"><div class="label">Highly Exposed</div><div class="value">${highCount}</div><div class="sub">exposure &gt; 0.7</div></div>
+        <div class="card"><div class="label">Median Automability</div><div class="value">${medianAuto.toFixed(3)}</div><div class="sub">geom. mean, ε-safe</div></div>
+        <div class="card"><div class="label">No Severe Bottleneck</div><div class="value">${noSeverePct.toFixed(1)}%</div><div class="sub">no B=2 on any required dim</div></div>
+        <div class="card"><div class="label">Fully Unblocked</div><div class="value">${noBottleneckPct.toFixed(1)}%</div><div class="sub">all B=0 where R&gt;0</div></div>
+        <div class="card"><div class="label">Avg. Relevant Dims</div><div class="value">${meanRelevant.toFixed(1)}</div><div class="sub">dims with R&gt;0 per task</div></div>
+        <div class="card"><div class="label">Broad Relevance</div><div class="value">${highRelevancePct.toFixed(1)}%</div><div class="sub">R&gt;0 on 8+ dimensions</div></div>
       `;
 
       // Exposure histogram
