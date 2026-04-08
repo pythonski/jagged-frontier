@@ -87,7 +87,9 @@
     /* Charts */
     .chart-container { position: relative; margin: 20px 0 30px; max-width: 800px; }
     .chart-container.wide { max-width: 100%; }
+    .chart-container.narrow { max-width: 420px; }
     .chart-container canvas { max-height: 400px; }
+    .chart-container.narrow canvas { max-height: 260px; }
 
     /* Table */
     table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 12px 0 24px; }
@@ -351,9 +353,9 @@
           <h1>${d.key}</h1>
           <div class="card-row" id="cards-dim-${d.n}"></div>
           <h3>B Score Distribution</h3>
-          <div class="chart-container"><canvas id="chart-b-dist-${d.n}"></canvas></div>
+          <div class="chart-container narrow"><canvas id="chart-b-dist-${d.n}"></canvas></div>
           <h3>R Score Distribution</h3>
-          <div class="chart-container"><canvas id="chart-r-dist-${d.n}"></canvas></div>
+          <div class="chart-container narrow"><canvas id="chart-r-dist-${d.n}"></canvas></div>
           <h3>B by Occupation Group</h3>
           <div class="chart-container wide"><canvas id="chart-b-soc-${d.n}"></canvas></div>
           <h3>Top 10 Most Bottlenecked Tasks</h3>
@@ -574,7 +576,7 @@
       bs.forEach(b => { if (b >= 0 && b <= 2) bCounts[b]++; });
       new Chart(document.getElementById(`chart-b-dist-${d.n}`), {
         type: 'bar',
-        data: { labels: ['0 (none)', '1 (moderate)', '2 (severe)'], datasets: [{ data: bCounts, backgroundColor: ['#6bbd6b', '#f0ad4e', '#d9534f'] }] },
+        data: { labels: ['0 (none)', '1 (moderate)', '2 (severe)'], datasets: [{ data: bCounts, backgroundColor: ['#6bbd6b', '#f0ad4e', '#d9534f'], maxBarThickness: 70 }] },
         options: { plugins: { legend: { display: false } }, scales: { y: { title: { display: true, text: 'Tasks' } } } }
       });
 
@@ -583,7 +585,7 @@
       rs.forEach(r => { if (r >= 0 && r <= 2) rCounts[r]++; });
       new Chart(document.getElementById(`chart-r-dist-${d.n}`), {
         type: 'bar',
-        data: { labels: ['0 (not required)', '1 (moderate)', '2 (high)'], datasets: [{ data: rCounts, backgroundColor: ['#aaa', '#7cb5d6', '#2a6496'] }] },
+        data: { labels: ['0 (not required)', '1 (moderate)', '2 (high)'], datasets: [{ data: rCounts, backgroundColor: ['#aaa', '#7cb5d6', '#2a6496'], maxBarThickness: 70 }] },
         options: { plugins: { legend: { display: false } }, scales: { y: { title: { display: true, text: 'Tasks' } } } }
       });
 
