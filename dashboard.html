@@ -134,6 +134,55 @@
     .lambda-row .lambda-val { min-width: 32px; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: #2a6496; }
     .recalc-btn { font-family: inherit; font-size: 15px; padding: 10px 28px; background: #2a6496; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; margin-top: 8px; transition: background 0.15s; }
     .recalc-btn:hover { background: #1d4e78; }
+
+    /* Phone screens */
+    @media (max-width: 600px) {
+      body { font-size: 17px; }
+      .main { padding: 80px 12px 30px; }
+      h1 { font-size: 1.8em; margin-bottom: 0.6em; }
+      h3 { font-size: 1.2em; }
+
+      /* Headline cards stack two-up max */
+      .card-row { gap: 10px; }
+      .card { min-width: calc(50% - 5px); padding: 12px 14px; }
+      .card .label { font-size: 12px; }
+      .card .value { font-size: 1.5em; }
+
+      /* Weight panel */
+      .weight-panel { padding: 14px 14px; }
+      .lambda-grid { grid-template-columns: 1fr; gap: 4px; }
+      .lambda-row label { min-width: 0; flex: 1.2; font-size: 13px; }
+
+      /* Task explorer selectors fill row */
+      .selector-row { gap: 8px; }
+      .selector-row select { min-width: 0; width: 100%; font-size: 14px; }
+
+      /* Dimension scores table — drop evidence column off-row, stack vertically */
+      .rb-table thead { display: none; }
+      .rb-table, .rb-table tbody, .rb-table tr, .rb-table td { display: block; width: 100%; }
+      .rb-table tr {
+        border: 1px solid #eee; border-radius: 6px;
+        margin-bottom: 10px; padding: 10px 12px;
+      }
+      .rb-table td { border: none; padding: 2px 0; }
+      .rb-table td:first-child { font-weight: 700; font-size: 15px; color: #222; }
+      .rb-table td.num {
+        display: inline-block; width: auto;
+        min-width: 28px; text-align: left; padding-right: 10px;
+      }
+      .rb-table td.num::before {
+        content: attr(data-rb) ": ";
+        font-weight: 400; color: #888; font-size: 12px; text-transform: uppercase;
+      }
+      .rb-table td.evidence { font-size: 12px; padding-top: 6px; }
+
+      /* Charts */
+      .chart-container { margin: 12px 0 22px; }
+      .chart-container canvas { max-height: 320px; }
+
+      /* Sidebar narrower on phones */
+      .sidebar { width: min(260px, 90vw); }
+    }
   </style>
 </head>
 <body>
@@ -663,8 +712,8 @@
         const b = getB(row, d);
         return `<tr>
           <td>${d.key}</td>
-          <td class="num ${rClass(r)}">${r}</td>
-          <td class="num ${bClass(b)}">${b}</td>
+          <td class="num ${rClass(r)}" data-rb="R">${r}</td>
+          <td class="num ${bClass(b)}" data-rb="B">${b}</td>
           <td>${assessLabel(r, b)}</td>
           <td class="evidence" id="ev-${d.n}"><span class="evidence-loading">loading...</span></td>
         </tr>`;
