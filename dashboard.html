@@ -14,7 +14,7 @@
     /* Sidebar */
     .sidebar { width: 260px; min-height: 100vh; background: #f5f7fa; border-right: 1px solid #e0e0e0; padding: 20px 0; position: fixed; top: 0; left: 0; overflow-y: auto; overflow-x: hidden; z-index: 100; transition: transform 0.25s ease; }
     .sidebar h2 { font-size: 1.1em; padding: 0 16px 12px; color: #333; border-bottom: 1px solid #ddd; margin-bottom: 8px; white-space: nowrap; }
-    .sidebar a { display: block; padding: 8px 16px; color: #666; text-decoration: none; font-size: 15px; border-left: 3px solid transparent; transition: all 0.15s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .sidebar a { display: block; padding: 8px 16px; color: #666; text-decoration: none; font-size: 15px; border-left: 3px solid transparent; transition: all 0.15s; line-height: 1.3; }
     .sidebar a:hover { color: #333; background: #eef1f5; }
     .sidebar a.active { color: #2a6496; border-left-color: #2a6496; font-weight: 700; background: #e8eef5; }
     .sidebar .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #999; padding: 14px 16px 4px; }
@@ -105,7 +105,7 @@
   <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle menu">&#9776;</button>
   <div class="sidebar-overlay" id="sidebar-overlay"></div>
   <nav class="sidebar" id="sidebar">
-    <a href="index.html" class="nav-btn">&larr; Back to Article</a>
+    <a href="index.html" class="nav-btn">Back to Article</a>
     <h2>Dashboard</h2>
     <a href="#" data-panel="overall" class="active">Overall</a>
     <a href="#" data-panel="explorer">Task Explorer</a>
@@ -257,11 +257,11 @@
       const main = document.getElementById('main');
 
       DIMS.forEach(d => {
-        // Sidebar link
+        // Sidebar link (full dimension name)
         const a = document.createElement('a');
         a.href = '#';
         a.dataset.panel = `dim-${d.n}`;
-        a.textContent = d.short;
+        a.textContent = d.key;
         sidebar.appendChild(a);
 
         // Panel
