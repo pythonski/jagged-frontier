@@ -594,20 +594,20 @@
           ctx.font = '600 12px "EB Garamond", Garamond, serif';
           ctx.textBaseline = 'middle';
 
-          const PADDING = 3;
+          const PADDING = 4;
           const DOT_R = 8;
-          // 8 candidate positions per label, ordered by preference (right, then alternatives).
-          // Each entry: [textAlign, dx, dy] applied to the dot center.
-          const CANDIDATES = [
-            ['left',  10,   0],   // right
-            ['right', -10,  0],   // left
-            ['center', 0, -14],   // above
-            ['center', 0,  14],   // below
-            ['left',  10, -12],   // upper-right
-            ['left',  10,  12],   // lower-right
-            ['right', -10, -12],  // upper-left
-            ['right', -10,  12],  // lower-left
-          ];
+          // Generate candidate positions: sliding vertical offsets at each horizontal anchor.
+          // Larger jumps come later so that nearby labels are tried first.
+          const CANDIDATES = [];
+          // Right of dot, sliding vertically
+          for (const dy of [0, -18, 18, -36, 36, -54, 54]) CANDIDATES.push(['left', 11, dy]);
+          // Left of dot, sliding vertically
+          for (const dy of [0, -18, 18, -36, 36]) CANDIDATES.push(['right', -11, dy]);
+          // Above and below the dot, sliding horizontally
+          for (const dx of [0, -28, 28, -56, 56]) {
+            CANDIDATES.push(['center', dx, -20]);
+            CANDIDATES.push(['center', dx, 20]);
+          }
 
           // Build label metadata
           const labels = ds.data.map((pt, i) => {
