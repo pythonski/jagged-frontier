@@ -144,8 +144,7 @@
       <details class="weight-panel" id="weight-panel">
         <summary>Dimension weights</summary>
         <p style="font-size:14px; color:#666; margin:8px 0 4px;">
-          Adjust λ<sub>d</sub> to change each dimension's influence on the aggregate score.
-          The normalised weight is w̃<sub>td</sub> = λ<sub>d</sub> R<sub>td</sub> / Σ λ<sub>j</sub> R<sub>tj</sub>.
+          Adjust weights to change each dimension's influence on the overall score.
         </p>
         <div class="preset-row" id="preset-row"></div>
         <div class="lambda-grid" id="lambda-grid"></div>
@@ -229,11 +228,9 @@
     DIMS.forEach(d => LAMBDAS[d.n] = 1.0);
 
     const PRESETS = [
-      { name: 'Equal',               desc: 'All λ = 1',                         w: () => { DIMS.forEach(d => LAMBDAS[d.n] = 1); } },
+      { name: 'Equal',               desc: 'All weights = 1',                   w: () => { DIMS.forEach(d => LAMBDAS[d.n] = 1); } },
       { name: 'Downweight social',   desc: 'Acceptance & Regulatory at 0.25',   w: () => { DIMS.forEach(d => LAMBDAS[d.n] = 1); LAMBDAS[11] = 0.25; LAMBDAS[12] = 0.25; } },
       { name: 'Technical only',      desc: 'Zero out Reliability, Acceptance, Regulatory', w: () => { DIMS.forEach(d => LAMBDAS[d.n] = 1); LAMBDAS[10] = 0; LAMBDAS[11] = 0; LAMBDAS[12] = 0; } },
-      { name: 'Capability only',     desc: 'Dims 1–8 only (pure AI gaps)',      w: () => { DIMS.forEach(d => LAMBDAS[d.n] = d.n <= 8 ? 1 : 0); } },
-      { name: 'Emphasise tacit',     desc: 'Double weight on Tacit Knowledge & Spec. Ambiguity', w: () => { DIMS.forEach(d => LAMBDAS[d.n] = 1); LAMBDAS[2] = 2; LAMBDAS[3] = 2; } },
     ];
 
     // ── Parse helpers ──
@@ -355,7 +352,7 @@
         const row = document.createElement('div');
         row.className = 'lambda-row';
         row.innerHTML = `
-          <label>λ<sub>${d.n}</sub> ${d.short}</label>
+          <label>${d.key}</label>
           <input type="range" min="0" max="2" step="0.25" value="1" id="slider-${d.n}">
           <span class="lambda-val" id="lval-${d.n}">1.00</span>
         `;
@@ -421,11 +418,11 @@
 
       // Headline cards
       document.getElementById('headline-cards').innerHTML = `
-        <div class="card"><div class="label">Tasks Scored</div><div class="value">${n.toLocaleString()}</div><div class="sub">${nActive} of 11 dims active</div></div>
-        <div class="card"><div class="label">Median Automability</div><div class="value">${medianAuto.toFixed(3)}</div><div class="sub">λ-weighted geom. mean, ε-safe</div></div>
-        <div class="card"><div class="label">No Severe Bottleneck</div><div class="value">${noSeverePct.toFixed(1)}%</div><div class="sub">no B=2 on any active dim</div></div>
-        <div class="card"><div class="label">Fully Unblocked</div><div class="value">${noBottleneckPct.toFixed(1)}%</div><div class="sub">all B=0 where R&gt;0</div></div>
-        <div class="card"><div class="label">Avg. Active Dims</div><div class="value">${meanRelevant.toFixed(1)}</div><div class="sub">dims with λ&gt;0 and R&gt;0</div></div>
+        <div class="card"><div class="label">Tasks Scored</div><div class="value">${n.toLocaleString()}</div></div>
+        <div class="card"><div class="label">Median Automability</div><div class="value">${medianAuto.toFixed(3)}</div></div>
+        <div class="card"><div class="label">No Severe Bottleneck</div><div class="value">${noSeverePct.toFixed(1)}%</div></div>
+        <div class="card"><div class="label">Fully Unblocked</div><div class="value">${noBottleneckPct.toFixed(1)}%</div></div>
+        <div class="card"><div class="label">Avg. Active Dims</div><div class="value">${meanRelevant.toFixed(1)}</div></div>
       `;
 
       // Automability histogram (epsilon-safe)
@@ -439,10 +436,10 @@
       });
 
       // Mean B by dimension (only active)
-      const meanBs = activeDims.map(d => ({ short: d.short, val: mean(DATA.map(r => getB(r, d))), lam: LAMBDAS[d.n] })).sort((a, b) => b.val - a.val);
+      const meanBs = activeDims.map(d => ({ short: d.short, val: mean(DATA.map(r => getB(r, d))) })).sort((a, b) => b.val - a.val);
       makeOrReplace('chart-mean-b', {
         type: 'bar',
-        data: { labels: meanBs.map(x => `${x.short} (λ=${x.lam})`), datasets: [{ data: meanBs.map(x => x.val), backgroundColor: 'rgba(42,100,150,0.7)' }] },
+        data: { labels: meanBs.map(x => x.short), datasets: [{ data: meanBs.map(x => x.val), backgroundColor: 'rgba(42,100,150,0.7)' }] },
         options: { indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { min: 0, max: 2, title: { display: true, text: 'Mean B (0-2)' } } } }
       });
 
