@@ -433,10 +433,12 @@
     <p>We aggregate the per-dimension scores into a single task-level number using an $\varepsilon$-safe weighted geometric mean, where relevance acts as the weight on each severity term:</p>
 
     <div class="equation-block">
-      $$ s_t^{\,\mathrm{geom},\varepsilon} \;=\; \prod_{d=1}^{D}\!\left(\varepsilon + 1 - \frac{B_{td}}{2}\right)^{\!\tilde{w}_{td}}, \qquad \tilde{w}_{td} \;=\; \frac{R_{td}}{\sum_{j=1}^{D} R_{tj}}, \qquad \varepsilon = 0.01. $$
+      $$ s_t^{\,\mathrm{geom},\varepsilon} \;=\; \prod_{d=1}^{D}\!\left(\varepsilon + 1 - \frac{B_{td}}{2}\right)^{\!\tilde{w}_{td}}, \qquad \tilde{w}_{td} \;=\; \frac{\lambda_d\, R_{td}}{\sum_{j=1}^{D}\, \lambda_j\, R_{tj}}, \qquad \varepsilon = 0.01. $$
     </div>
 
-    <p>This form respects the multiplicative logic of bottlenecks: a single severe gap on a highly relevant dimension can pull the aggregate score down sharply, even when every other dimension looks unconstrained. The $\varepsilon$ term simply prevents the product from collapsing to exactly zero when $B_{td}=2$, which would otherwise dominate the score regardless of any other adequacy elsewhere.</p>
+    <p>The $\lambda_d$ are task-independent dimension weights — global multipliers that let us emphasise or downweight particular bottlenecks across the whole task universe (for example, treating regulatory constraints as less binding than capability gaps). By default we set $\lambda_d = 1$ for all $d$, so that aggregation is driven entirely by per-task relevance $R_{td}$; the <a href="dashboard.html">interactive dashboard</a> exposes these weights as sliders so any reader can re-run the aggregation under their own assumptions.</p>
+
+    <p>This form respects the multiplicative logic of bottlenecks: a single severe gap on a highly relevant dimension can pull the aggregate score down sharply, even when every other dimension looks unconstrained. The $\varepsilon$ term simply prevents the product from collapsing to exactly zero when $B_{td}=2$, which would otherwise dominate the score regardless of any adequacy elsewhere.</p>
 
     <!-- Interactive bottleneck image -->
     <div class="interactive-figure">
