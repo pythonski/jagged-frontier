@@ -12,17 +12,31 @@
     body { font-family: 'EB Garamond', Garamond, serif; font-size: 17px; color: #1a1a1a; background: #fff; display: flex; min-height: 100vh; }
 
     /* Sidebar */
-    .sidebar { width: 260px; min-height: 100vh; background: #f5f7fa; border-right: 1px solid #e0e0e0; padding: 20px 0; position: fixed; top: 0; left: 0; overflow-y: auto; }
-    .sidebar h2 { font-size: 1.1em; padding: 0 16px 12px; color: #333; border-bottom: 1px solid #ddd; margin-bottom: 8px; }
-    .sidebar a { display: block; padding: 8px 16px; color: #666; text-decoration: none; font-size: 15px; border-left: 3px solid transparent; transition: all 0.15s; }
+    .sidebar { width: 260px; min-height: 100vh; background: #f5f7fa; border-right: 1px solid #e0e0e0; padding: 20px 0; position: fixed; top: 0; left: 0; overflow-y: auto; overflow-x: hidden; z-index: 100; transition: transform 0.25s ease; }
+    .sidebar h2 { font-size: 1.1em; padding: 0 16px 12px; color: #333; border-bottom: 1px solid #ddd; margin-bottom: 8px; white-space: nowrap; }
+    .sidebar a { display: block; padding: 8px 16px; color: #666; text-decoration: none; font-size: 15px; border-left: 3px solid transparent; transition: all 0.15s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .sidebar a:hover { color: #333; background: #eef1f5; }
     .sidebar a.active { color: #2a6496; border-left-color: #2a6496; font-weight: 700; background: #e8eef5; }
     .sidebar .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #999; padding: 14px 16px 4px; }
     .nav-btn { display: block; margin: 0 12px 12px; padding: 10px 14px; background: #2a6496; color: #fff !important; border: none; border-radius: 6px; font-size: 14px; font-weight: 600; text-align: center; text-decoration: none; transition: background 0.15s; border-left: none !important; }
     .nav-btn:hover { background: #1d4e78; }
 
+    /* Hamburger toggle (hidden on wide screens) */
+    .sidebar-toggle { display: none; position: fixed; top: 12px; left: 12px; z-index: 200; background: #2a6496; color: #fff; border: none; border-radius: 6px; width: 40px; height: 40px; font-size: 22px; cursor: pointer; line-height: 40px; text-align: center; }
+    .sidebar-toggle:hover { background: #1d4e78; }
+    .sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 90; }
+
     /* Main */
     .main { margin-left: 260px; flex: 1; padding: 30px 40px 60px; max-width: 1100px; }
+
+    /* Responsive: collapse sidebar when viewport is narrow (zoom or small screen) */
+    @media (max-width: 720px) {
+      .sidebar { transform: translateX(-100%); }
+      .sidebar.open { transform: translateX(0); }
+      .sidebar-toggle { display: block; }
+      .sidebar-overlay.open { display: block; }
+      .main { margin-left: 0; padding: 60px 16px 40px; }
+    }
     h1 { font-size: 2em; margin-bottom: 0.3em; }
     h1 small { font-size: 0.5em; color: #888; font-weight: 400; }
     h3 { font-size: 1.4em; margin: 1.2em 0 0.5em; color: #222; }
@@ -88,6 +102,8 @@
   </style>
 </head>
 <body>
+  <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle menu">&#9776;</button>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
   <nav class="sidebar" id="sidebar">
     <a href="index.html" class="nav-btn">&larr; Back to Article</a>
     <h2>Dashboard</h2>
@@ -271,6 +287,13 @@
 
     // ── Navigation ──
     function setupNav() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebar-overlay');
+      const toggle = document.getElementById('sidebar-toggle');
+      const closeSidebar = () => { sidebar.classList.remove('open'); overlay.classList.remove('open'); };
+      toggle.addEventListener('click', () => { sidebar.classList.toggle('open'); overlay.classList.toggle('open'); });
+      overlay.addEventListener('click', closeSidebar);
+
       document.querySelectorAll('.sidebar a[data-panel]').forEach(a => {
         a.addEventListener('click', e => {
           e.preventDefault();
@@ -278,6 +301,8 @@
           a.classList.add('active');
           document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
           document.getElementById('panel-' + a.dataset.panel).classList.add('active');
+          closeSidebar(); // auto-close on mobile after selection
+          window.scrollTo(0, 0);
         });
       });
     }
