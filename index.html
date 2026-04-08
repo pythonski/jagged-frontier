@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mapping the Jagged Frontier (Part I: Theory)</title>
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']], processEscapes: true },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -96,6 +103,39 @@
       margin-top: 0.6em;
       font-style: italic;
       text-align: center;
+    }
+
+    .scoring-scale {
+      margin: 1.4em auto;
+      border-collapse: collapse;
+      font-size: 0.95em;
+    }
+    .scoring-scale th {
+      font-weight: 700;
+      padding: 6px 22px 8px;
+      border-bottom: 2px solid #333;
+      text-align: center;
+    }
+    .scoring-scale td {
+      padding: 4px 22px;
+    }
+    .scoring-scale td.num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      color: #555;
+      padding-right: 6px;
+    }
+    .scoring-scale tr:last-child td {
+      border-bottom: 1px solid #333;
+      padding-bottom: 6px;
+    }
+    .scoring-scale tr:first-child td {
+      padding-top: 6px;
+    }
+    .equation-block {
+      text-align: center;
+      margin: 1.2em 0;
+      overflow-x: auto;
     }
 
     .drop-cap::first-letter {
@@ -370,11 +410,33 @@
 
     <h2 id="sec-bottleneck-approach">A bottleneck-based approach</h2>
     
-    <p>We begin by running a filter on all O*NET tasks for digitability, i.e. we ask whether a modern AI agent with proper tools and harness can in principle perform the task, or with minimal adaptation of platforms and workflows (for instance, favouring online rather than in-presence meetings). This is related to previous efforts (cite teleworkability, barnett's classification). We classify tasks following Barnett using an LLM as judge, according to digital/predominantly digital/predominantly non-digital, non-digital. In the following, whenver we say "task" we are referring to the latter two of these categories. To validate we use teleworkability. </p>
-    
-    <p>Next, we run our judges (GPT-5.3, Sonnet 4.6, and Gemini Flash 3.1) on each of these tasks, for every identified dimensions. This is a summary (bullet list of them + very brief description). Figure below is more comprehensive chart, and it is clickable! Click on any of the blue boxes to expand the corresponding in-detail description.</p>
-    
-    <p>Each category is scored along two dimensions: relevance (how important it is as a bottleneck for the task) and severity (how large the gap between current AI agents and where they need to be is). </p>
+    <p>We begin by filtering O*NET tasks for <em>digitability</em>: whether a modern AI agent — equipped with appropriate tools and harness — could in principle perform the task, allowing for minimal adaptation of platforms and workflows (e.g.&nbsp;favouring online over in-person meetings). This builds on prior work on <a href="https://www.brookings.edu/articles/whats-new-about-being-able-to-work-from-home/">teleworkability</a> and <a href="#">Barnett's task classification</a>. Following Barnett, we use an LLM-as-judge to sort tasks into four buckets — digital, predominantly digital, predominantly non-digital, non-digital — and validate the classification against existing teleworkability scores. From this point on, "task" refers to anything in the first two categories.</p>
+
+    <p>Next, we run our judge models (GPT-5.3, Claude Sonnet 4.6, and Gemini 3.1 Flash) on every digital task, scoring each along the bottleneck dimensions described below. The figure that follows is interactive — click any blue box to expand its detailed description.</p>
+
+    <p>Each dimension is scored on two axes: <strong>relevance</strong> ($R_{td}$, how important the dimension is as a bottleneck for the task) and <strong>severity</strong> ($B_{td}$, how large the gap is between current AI capability and what the task requires). Both use a discrete 0–2 scale:</p>
+
+    <table class="scoring-scale">
+      <thead>
+        <tr>
+          <th colspan="2">Relevance&nbsp;$R_{td}$</th>
+          <th colspan="2">Severity&nbsp;$B_{td}$</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="num">0</td><td>Low</td><td class="num">0</td><td>Absent</td></tr>
+        <tr><td class="num">1</td><td>Medium</td><td class="num">1</td><td>Moderate</td></tr>
+        <tr><td class="num">2</td><td>High</td><td class="num">2</td><td>Severe</td></tr>
+      </tbody>
+    </table>
+
+    <p>We aggregate the per-dimension scores into a single task-level number using an $\varepsilon$-safe weighted geometric mean, where relevance acts as the weight on each severity term:</p>
+
+    <div class="equation-block">
+      $$ s_t^{\,\mathrm{geom},\varepsilon} \;=\; \prod_{d=1}^{D}\!\left(\varepsilon + 1 - \frac{B_{td}}{2}\right)^{\!\tilde{w}_{td}}, \qquad \tilde{w}_{td} \;=\; \frac{R_{td}}{\sum_{j=1}^{D} R_{tj}}, \qquad \varepsilon = 0.01. $$
+    </div>
+
+    <p>This form respects the multiplicative logic of bottlenecks: a single severe gap on a highly relevant dimension can pull the aggregate score down sharply, even when every other dimension looks unconstrained. The $\varepsilon$ term simply prevents the product from collapsing to exactly zero when $B_{td}=2$, which would otherwise dominate the score regardless of any other adequacy elsewhere.</p>
 
     <!-- Interactive bottleneck image -->
     <div class="interactive-figure">
