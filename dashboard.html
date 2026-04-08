@@ -44,8 +44,13 @@
     a.nav-btn:hover { background: #1d4e78; }
     @media (max-width: 1300px) { a.nav-btn { width: auto; } }
 
-    /* Hamburger toggle (narrow viewports) */
-    .sidebar-toggle { display: none; position: fixed; top: 12px; left: 12px; z-index: 200; background: #2a6496; color: #fff; border: none; border-radius: 6px; width: 40px; height: 40px; font-size: 22px; cursor: pointer; line-height: 40px; text-align: center; }
+    /* Hamburger toggle (narrow viewports) — pinned top-right to never collide with back button */
+    .sidebar-toggle {
+      display: none; position: fixed; top: 20px; right: 12px; z-index: 200;
+      background: #2a6496; color: #fff; border: none; border-radius: 6px;
+      width: 40px; height: 40px; font-size: 22px; cursor: pointer;
+      line-height: 40px; text-align: center; padding: 0;
+    }
     .sidebar-toggle:hover { background: #1d4e78; }
     .sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 90; }
 
@@ -56,16 +61,20 @@
     h3 { font-size: 1.4em; margin: 1.2em 0 0.5em; color: #222; }
     p { margin-bottom: 1em; line-height: 1.5; }
 
-    /* Hide sidebar TOC on narrower viewports, matching index behaviour.
-       Back-to-article button stays visible (it's positioned independently). */
+    /* Hide sidebar TOC on narrower viewports (matches index .sidebar-toc breakpoint).
+       Back-to-article button + hamburger stay visible at the top. */
     @media (max-width: 1300px) {
-      .sidebar { transform: translateX(-120%) translateY(-50%); }
-      .sidebar.open { transform: translateX(0) translateY(-50%); background: #fff; padding: 16px 8px 16px 0; box-shadow: 2px 0 12px rgba(0,0,0,0.08); border-radius: 0 8px 8px 0; }
-      .sidebar-toggle { display: block; top: 20px; left: 260px; }
+      .sidebar {
+        top: 0; left: 0; width: min(280px, 85vw); max-height: 100vh;
+        transform: translateX(-105%); padding: 80px 8px 16px 0;
+        background: #fff; box-shadow: 2px 0 12px rgba(0,0,0,0.08);
+        border-radius: 0 8px 8px 0;
+      }
+      .sidebar.open { transform: translateX(0); }
+      .sidebar-toggle { display: block; }
       .sidebar-overlay.open { display: block; }
-    }
-    @media (max-width: 720px) {
-      .sidebar-toggle { left: 12px; top: 68px; }
+      /* Push the main content below the fixed top buttons so h1 doesn't get covered. */
+      .main { padding-top: 80px; }
     }
 
     /* Cards */
