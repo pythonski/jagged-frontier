@@ -105,6 +105,24 @@
       text-align: center;
     }
 
+    .dim-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.4em 0 1.4em;
+    }
+    .dim-list li {
+      padding: 6px 0 6px 1.2em;
+      text-indent: -1.2em;
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+    .dim-list li::before {
+      content: "▸ ";
+      color: #2a6496;
+      font-weight: 700;
+    }
+    .dim-list strong { color: #111; }
+
     .scoring-scale {
       margin: 1.4em auto;
       border-collapse: collapse;
@@ -412,7 +430,24 @@
     
     <p>We begin by filtering O*NET tasks for <em>digitability</em>: whether a modern AI agent — equipped with appropriate tools and harness — could in principle perform the task, allowing for minimal adaptation of platforms and workflows (e.g.&nbsp;favouring online over in-person meetings). This builds on prior work on <a href="https://www.nber.org/papers/w26948">teleworkability</a> and <a href="#">Barnett's task classification</a>. Following Barnett, we use an LLM-as-judge to sort tasks into four buckets — digital, predominantly digital, predominantly non-digital, non-digital — and validate the classification against existing teleworkability scores. From this point on, "task" refers to anything in the first two categories.</p>
 
-    <p>Next, we run our judge models (GPT-5.3, Claude Sonnet 4.6, and Gemini 3.1 Flash) on every digital task, scoring each along the bottleneck dimensions described below. The figure that follows is interactive — click any blue box to expand its detailed description.</p>
+    <p>Next, we run our judge models (GPT-5.3, Claude Sonnet 4.6, and Gemini 3.1 Flash) on every digital task, scoring each along twelve bottleneck dimensions:</p>
+
+    <ul class="dim-list">
+      <li><strong>Distributional Coverage</strong> — whether the task involves rare, private, or weakly represented instances that fall outside the distribution LLM pipelines were trained on.</li>
+      <li><strong>Tacit Knowledge</strong> — the situational judgement and experiential calibration competent humans rely on but that can't be cleanly captured in rules or examples.</li>
+      <li><strong>Specification Ambiguity</strong> — how much of the task's success criteria is implicit, context-dependent, or only revealed in retrospect, rather than something that can be written down up front.</li>
+      <li><strong>Sequential Coherence</strong> — the planning horizon and multi-step reliability the task demands, where compounding errors and goal drift become limiting factors.</li>
+      <li><strong>Working Memory</strong> — the volume and heterogeneity of information that must be held in mind and integrated within a single task episode.</li>
+      <li><strong>Long-Term Memory</strong> — dependence on accumulated context across episodes (client history, project state, prior decisions) that current agent memory systems struggle to retain.</li>
+      <li><strong>Multimodal Demand</strong> — reliance on perception, generation, or reasoning over non-text modalities such as images, audio, video, or spatial layouts.</li>
+      <li><strong>Inference Speed</strong> — latency or throughput requirements that current LLM inference can't meet without unacceptable quality degradation.</li>
+      <li><strong>Output Verifiability</strong> — the joint problem of how hard outputs are to check for errors and how often agents actually produce them.</li>
+      <li><strong>Reliability Threshold</strong> — the accuracy and consistency the task's consequence profile demands, particularly where errors are severe or irreversible.</li>
+      <li><strong>Counterpart Acceptance</strong> — resistance from the people on the other side of the task (clients, patients, colleagues) who would change their behaviour upon learning the performer is an AI.</li>
+      <li><strong>Regulatory &amp; Legal Constraints</strong> — the licensing, liability, and institutional permissions an AI agent would need in order to legally perform the task.</li>
+    </ul>
+
+    <p>The figure that follows is interactive — click any blue box to expand its detailed description.</p>
 
     <p>Each dimension is scored on two axes: <strong>relevance</strong> ($R_{td}$, how important the dimension is as a bottleneck for the task) and <strong>severity</strong> ($B_{td}$, how large the gap is between current AI capability and what the task requires). Both use a discrete 0–2 scale:</p>
 
