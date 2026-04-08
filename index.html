@@ -57,6 +57,7 @@
       margin-top: 2em;
       margin-bottom: 0.6em;
       color: #222;
+      scroll-margin-top: 24px;
     }
 
     p {
@@ -214,19 +215,14 @@
 
     .dimension-section {
       border-left: 3px solid #3a7cc0;
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      padding: 0 0 0 20px;
-      margin: 0;
-      transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+      padding: 16px 0 16px 20px;
+      margin: 1.5em 0;
+      scroll-margin-top: 24px;
+      transition: background-color 0.6s ease;
     }
 
-    .dimension-section.open {
-      max-height: 8000px;
-      opacity: 1;
-      padding: 16px 0 16px 20px;
-      margin: 1em 0;
+    .dimension-section.flash {
+      background-color: rgba(58, 124, 192, 0.08);
     }
 
     .dimension-section h3 {
@@ -357,6 +353,9 @@
       .container {
         padding-top: 80px;
       }
+      .dimension-section, h2[id], h3[id] {
+        scroll-margin-top: 80px;
+      }
     }
 
     /* Phone screens */
@@ -463,7 +462,7 @@
       <li><strong>Regulatory &amp; Legal Constraints</strong> — the licensing, liability, and institutional permissions an AI agent would need in order to legally perform the task.</li>
     </ul>
 
-    <p>The figure that follows is interactive — click any blue box to expand its detailed description.</p>
+    <p>The figure that follows is interactive — click any blue box to jump straight to its detailed description below.</p>
 
     <p>Each dimension is scored on two axes: <strong>relevance</strong> ($R_{td}$, how important the dimension is as a bottleneck for the task) and <strong>severity</strong> ($B_{td}$, how large the gap is between current AI capability and what the task requires). Both use a discrete 0–2 scale:</p>
 
@@ -497,7 +496,7 @@
         <img src="bottlenecks.png" alt="Bottleneck dimensions rubric" id="bottleneckImg">
         <!-- Hotspots will be positioned via JS after image loads -->
       </div>
-      <p class="click-hint">Click a blue box to expand its section below.</p>
+      <p class="click-hint">Click a blue box to jump to its section below.</p>
     </div>
 
     <!-- Expandable sections -->
@@ -647,26 +646,18 @@
         btn.style.top = h.y + '%';
         btn.style.width = h.w + '%';
         btn.style.height = h.h + '%';
-        btn.addEventListener('click', () => toggleSection(h.id, btn));
+        btn.addEventListener('click', () => scrollToSection(h.id));
         wrapper.appendChild(btn);
       });
     }
 
-    function toggleSection(sectionId, btn) {
+    function scrollToSection(sectionId) {
       const section = document.getElementById(sectionId);
       if (!section) return;
-
-      const isOpen = section.classList.contains('open');
-
-      // Close all sections and deactivate all hotspots
-      document.querySelectorAll('.dimension-section.open').forEach(s => s.classList.remove('open'));
-      document.querySelectorAll('.hotspot.active').forEach(b => b.classList.remove('active'));
-
-      // If it wasn't open, open it (no scroll)
-      if (!isOpen) {
-        section.classList.add('open');
-        btn.classList.add('active');
-      }
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Brief highlight so the user sees which section they landed on
+      section.classList.add('flash');
+      setTimeout(() => section.classList.remove('flash'), 1200);
     }
 
     img.addEventListener('load', createHotspots);
@@ -694,7 +685,7 @@
     window.addEventListener('scroll', updateScrollspy, { passive: true });
     updateScrollspy();
 
-    // Smooth scroll for TOC links + open dimension sections
+    // Smooth scroll for TOC links
     tocLinks.forEach(a => {
       const href = a.getAttribute('href');
       // Skip external links (like dashboard.html)
@@ -704,23 +695,11 @@
         e.preventDefault();
         const target = document.querySelector(href);
         if (!target) return;
-
-        // If it's a dimension section, open it (close others first)
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         if (target.classList.contains('dimension-section')) {
-          document.querySelectorAll('.dimension-section.open').forEach(s => s.classList.remove('open'));
-          document.querySelectorAll('.hotspot.active').forEach(b => b.classList.remove('active'));
-          target.classList.add('open');
-
-          // Also highlight the corresponding hotspot
-          const hsData = hotspots.find(h => h.id === target.id);
-          if (hsData) {
-            const btns = document.querySelectorAll('.hotspot');
-            const idx = hotspots.indexOf(hsData);
-            if (btns[idx]) btns[idx].classList.add('active');
-          }
+          target.classList.add('flash');
+          setTimeout(() => target.classList.remove('flash'), 1200);
         }
-
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
       });
     });
   </script>
