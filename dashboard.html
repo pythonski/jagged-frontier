@@ -21,7 +21,7 @@
     }
     .sidebar::-webkit-scrollbar { display: none; }
     .sidebar h2 { display: none; }
-    .sidebar .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #999; padding: 14px 0 4px 12px; }
+    .sidebar .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #2a6496; font-weight: 700; padding: 14px 0 4px 12px; }
     .sidebar a {
       display: block; padding: 6px 0 6px 12px;
       font-size: 15px; line-height: 1.4;
@@ -58,7 +58,7 @@
     .main { max-width: 960px; margin: 0 auto; padding: 20px 14px 30px; }
 
     h1 { font-size: 2.4em; font-weight: 700; line-height: 1.2; margin-bottom: 1em; color: #111; }
-    h3 { font-size: 1.4em; margin: 1.2em 0 0.5em; color: #222; }
+    h3 { font-size: 1.4em; margin: 1.6em 0 0.6em; color: #2a6496; padding-left: 12px; border-left: 4px solid #7cb5d6; line-height: 1.2; }
     p { margin-bottom: 1em; line-height: 1.5; }
 
     /* Hide sidebar TOC on narrower viewports (matches index .sidebar-toc breakpoint).
@@ -79,9 +79,17 @@
 
     /* Cards */
     .card-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
-    .card { background: #f8f9fb; border: 1px solid #e4e8ec; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 160px; }
-    .card .label { font-size: 15px; text-transform: uppercase; letter-spacing: 0.05em; color: #333; margin-bottom: 6px; font-weight: 700; }
-    .card .value { font-size: 2em; font-weight: 700; color: #2a6496; }
+    .card {
+      background: linear-gradient(180deg, #fafbfd 0%, #f1f5fa 100%);
+      border: 1px solid #d8e2ec; border-top: 3px solid #2a6496;
+      border-radius: 6px; padding: 18px 20px 16px;
+      flex: 1; min-width: 160px;
+      box-shadow: 0 1px 3px rgba(42, 100, 150, 0.05);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .card:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(42, 100, 150, 0.1); }
+    .card .label { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #5a7390; margin-bottom: 6px; font-weight: 700; }
+    .card .value { font-size: 2em; font-weight: 700; color: #2a6496; line-height: 1.1; }
     .card .sub { display: none; }
 
     /* Charts */
@@ -93,8 +101,12 @@
 
     /* Table */
     table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 12px 0 24px; }
-    th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid #eee; }
-    th { font-weight: 700; color: #555; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+    th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid #e8eef5; }
+    th { font-weight: 700; color: #fff; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; background: #2a6496; border-bottom: 1px solid #2a6496; }
+    th:first-child { border-top-left-radius: 6px; }
+    th:last-child { border-top-right-radius: 6px; }
+    tbody tr:nth-child(even) { background: #f6f9fc; }
+    tbody tr:hover { background: #e8eef5; }
     td.num { text-align: right; font-variant-numeric: tabular-nums; }
 
     /* Tab panels */
@@ -105,14 +117,27 @@
 
     /* Task explorer */
     .selector-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
-    .selector-row select { font-family: inherit; font-size: 15px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px; background: #fff; min-width: 220px; max-width: 100%; }
-    .selector-row select:focus { outline: none; border-color: #2a6496; }
+    .selector-row select {
+      font-family: inherit; font-size: 15px; padding: 9px 14px;
+      border: 1px solid #c6d3e0; border-radius: 6px; background: #fff;
+      min-width: 220px; max-width: 100%; color: #2a6496; font-weight: 600;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .selector-row select:hover { border-color: #7cb5d6; }
+    .selector-row select:focus { outline: none; border-color: #2a6496; box-shadow: 0 0 0 3px rgba(42, 100, 150, 0.15); }
     .task-detail { margin-top: 16px; }
-    .task-statement { font-style: italic; color: #555; margin-bottom: 16px; font-size: 1.05em; line-height: 1.5; }
+    .task-statement {
+      font-style: italic; color: #2a6496; margin-bottom: 20px;
+      font-size: 1.1em; line-height: 1.55;
+      padding: 12px 18px; border-left: 4px solid #7cb5d6;
+      background: #f6f9fc; border-radius: 0 6px 6px 0;
+    }
     .rb-table { width: 100%; border-collapse: collapse; margin: 12px 0 24px; }
-    .rb-table th, .rb-table td { padding: 8px 12px; border-bottom: 1px solid #eee; font-size: 15px; }
-    .rb-table th { font-weight: 700; color: #555; font-size: 13px; text-transform: uppercase; }
-    .rb-table td.num { text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .rb-table th, .rb-table td { padding: 8px 12px; border-bottom: 1px solid #e8eef5; font-size: 15px; }
+    .rb-table th { font-weight: 700; color: #fff; font-size: 12px; text-transform: uppercase; background: #2a6496; }
+    .rb-table tbody tr:nth-child(even) { background: #f6f9fc; }
+    .rb-table tbody tr:hover { background: #eaf0f7; }
+    .rb-table td.num { text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; font-size: 16px; }
     .rb-table .b0 { color: #aaa; }
     .rb-table .b1 { color: #7cb5d6; }
     .rb-table .b2 { color: #2a6496; }
@@ -124,20 +149,42 @@
     .evidence-loading { color: #999; font-style: italic; font-size: 14px; margin: 8px 0; }
 
     /* Weight controls */
-    .weight-panel { background: #f5f7fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px 24px; margin: 16px 0 24px; }
+    .weight-panel {
+      background: linear-gradient(180deg, #fafbfd 0%, #f1f5fa 100%);
+      border: 1px solid #d8e2ec; border-left: 4px solid #2a6496;
+      border-radius: 6px; padding: 20px 24px; margin: 16px 0 24px;
+      box-shadow: 0 1px 3px rgba(42, 100, 150, 0.05);
+    }
     .weight-panel summary { cursor: pointer; font-weight: 700; font-size: 1.05em; color: #2a6496; user-select: none; }
     .weight-panel summary:hover { color: #1d4e78; }
-    .preset-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
-    .preset-btn { font-family: inherit; font-size: 13px; padding: 6px 14px; border: 1px solid #ccc; border-radius: 5px; background: #fff; cursor: pointer; transition: all 0.15s; }
-    .preset-btn:hover { background: #e8eef5; border-color: #2a6496; }
-    .preset-btn.active { background: #2a6496; color: #fff; border-color: #2a6496; }
-    .lambda-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; margin: 12px 0; }
-    .lambda-row { display: flex; align-items: center; gap: 8px; font-size: 14px; }
-    .lambda-row label { min-width: 130px; color: #555; }
+    .preset-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; }
+    .preset-btn {
+      font-family: inherit; font-size: 13px; padding: 7px 16px;
+      border: 1.5px solid #c6d3e0; border-radius: 20px; background: #fff;
+      color: #5a7390; cursor: pointer; font-weight: 600;
+      transition: all 0.15s;
+    }
+    .preset-btn:hover { background: #eaf0f7; border-color: #7cb5d6; color: #2a6496; }
+    .preset-btn.active { background: #2a6496; color: #fff; border-color: #2a6496; box-shadow: 0 2px 6px rgba(42, 100, 150, 0.2); }
+    .lambda-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin: 14px 0; }
+    .lambda-row { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+    .lambda-row label { min-width: 140px; color: #5a7390; font-weight: 600; }
     .lambda-row input[type=range] { flex: 1; min-width: 80px; accent-color: #2a6496; }
-    .lambda-row .lambda-val { min-width: 32px; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: #2a6496; }
-    .recalc-btn { font-family: inherit; font-size: 15px; padding: 10px 28px; background: #2a6496; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; margin-top: 8px; transition: background 0.15s; }
-    .recalc-btn:hover { background: #1d4e78; }
+    .lambda-row .lambda-val {
+      min-width: 38px; text-align: center;
+      font-variant-numeric: tabular-nums; font-weight: 700;
+      color: #fff; background: #2a6496; padding: 2px 6px; border-radius: 4px;
+      font-size: 12px;
+    }
+    .recalc-btn {
+      font-family: inherit; font-size: 15px; padding: 11px 32px;
+      background: linear-gradient(180deg, #2a6496 0%, #235482 100%);
+      color: #fff; border: none; border-radius: 6px; cursor: pointer;
+      font-weight: 600; margin-top: 10px;
+      box-shadow: 0 2px 6px rgba(42, 100, 150, 0.25);
+      transition: all 0.15s;
+    }
+    .recalc-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(42, 100, 150, 0.3); }
 
     /* Phone screens */
     @media (max-width: 600px) {
@@ -489,21 +536,36 @@
         <div class="card"><div class="label">Avg. Active Dims</div><div class="value">${meanRelevant.toFixed(1)}</div></div>
       `;
 
-      // Automability histogram (epsilon-safe)
+      // Automability histogram (epsilon-safe) — gradient bars from light to dark blue along the x-axis
       const bins = 20;
       const counts = new Array(bins).fill(0);
       automabilities.forEach(e => { const i = Math.min(Math.floor(e * bins), bins - 1); counts[i]++; });
+      // Lerp #aaa-ish (low automability) → #2a6496 (high automability)
+      const histColors = counts.map((_, i) => {
+        const t = i / (bins - 1);
+        const r = Math.round(170 + (42 - 170) * t);
+        const g = Math.round(170 + (100 - 170) * t);
+        const b = Math.round(170 + (150 - 170) * t);
+        return `rgba(${r},${g},${b},0.85)`;
+      });
       makeOrReplace('chart-exposure-hist', {
         type: 'bar',
-        data: { labels: counts.map((_, i) => (i/bins).toFixed(2)), datasets: [{ data: counts, backgroundColor: 'rgba(42,100,150,0.6)', borderColor: 'rgba(42,100,150,1)', borderWidth: 1 }] },
+        data: { labels: counts.map((_, i) => (i/bins).toFixed(2)), datasets: [{ data: counts, backgroundColor: histColors, borderColor: 'rgba(42,100,150,0.4)', borderWidth: 1 }] },
         options: { plugins: { legend: { display: false } }, scales: { x: { title: { display: true, text: 'Automability (ε-safe)' } }, y: { title: { display: true, text: 'Tasks' } } } }
       });
 
-      // Mean B by dimension (only active)
+      // Mean B by dimension (only active) — bar color scaled by severity
       const meanBs = activeDims.map(d => ({ short: d.short, val: mean(DATA.map(r => getB(r, d))) })).sort((a, b) => b.val - a.val);
+      const mbColors = meanBs.map(x => {
+        const t = x.val / 2; // 0..1
+        const r = Math.round(170 + (42 - 170) * t);
+        const g = Math.round(170 + (100 - 170) * t);
+        const b = Math.round(170 + (150 - 170) * t);
+        return `rgba(${r},${g},${b},0.9)`;
+      });
       makeOrReplace('chart-mean-b', {
         type: 'bar',
-        data: { labels: meanBs.map(x => x.short), datasets: [{ data: meanBs.map(x => x.val), backgroundColor: 'rgba(42,100,150,0.7)' }] },
+        data: { labels: meanBs.map(x => x.short), datasets: [{ data: meanBs.map(x => x.val), backgroundColor: mbColors, borderColor: '#2a6496', borderWidth: 1 }] },
         options: { indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { min: 0, max: 2, title: { display: true, text: 'Mean B (0-2)' } } } }
       });
 
@@ -511,7 +573,7 @@
       const scatterData = activeDims.map(d => ({ x: mean(DATA.map(r => getR(r, d))), y: mean(DATA.map(r => getB(r, d))), label: d.short }));
       makeOrReplace('chart-r-vs-b', {
         type: 'scatter',
-        data: { datasets: [{ data: scatterData, backgroundColor: 'rgba(42,100,150,0.8)', pointRadius: 7 }] },
+        data: { datasets: [{ data: scatterData, backgroundColor: 'rgba(42,100,150,0.8)', borderColor: '#2a6496', borderWidth: 2, pointRadius: 8, pointHoverRadius: 10 }] },
         options: {
           plugins: {
             legend: { display: false },
@@ -591,7 +653,7 @@
         options: { plugins: { legend: { display: false } }, scales: { y: { title: { display: true, text: 'Tasks' } } } }
       });
 
-      // B by SOC
+      // B by SOC — color each bar by its B intensity
       const socB = {};
       DATA.forEach(r => {
         const mg = r.onet_soc_code.substring(0, 2);
@@ -599,9 +661,17 @@
         socB[mg].push(getB(r, d));
       });
       const sKeys = Object.keys(socB).sort();
+      const sVals = sKeys.map(k => mean(socB[k]));
+      const sColors = sVals.map(v => {
+        const t = Math.min(v / 2, 1);
+        const r = Math.round(170 + (42 - 170) * t);
+        const g = Math.round(170 + (100 - 170) * t);
+        const b = Math.round(170 + (150 - 170) * t);
+        return `rgba(${r},${g},${b},0.9)`;
+      });
       new Chart(document.getElementById(`chart-b-soc-${d.n}`), {
         type: 'bar',
-        data: { labels: sKeys.map(k => SOC_LABELS[k] || k), datasets: [{ data: sKeys.map(k => mean(socB[k])), backgroundColor: 'rgba(42,100,150,0.6)' }] },
+        data: { labels: sKeys.map(k => SOC_LABELS[k] || k), datasets: [{ data: sVals, backgroundColor: sColors, borderColor: '#2a6496', borderWidth: 1 }] },
         options: { indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { min: 0, max: 2, title: { display: true, text: 'Mean B' } } } }
       });
 
