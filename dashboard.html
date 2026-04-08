@@ -583,21 +583,102 @@
         options: { indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { min: 0, max: 2, title: { display: true, text: 'Mean B (0-2)' } } } }
       });
 
-      // R vs B scatter (only active) with persistent point labels
+      // R vs B scatter (only active) with persistent, collision-avoiding point labels
       const scatterData = activeDims.map(d => ({ x: mean(DATA.map(r => getR(r, d))), y: mean(DATA.map(r => getB(r, d))), label: d.short }));
       const scatterLabelPlugin = {
         id: 'scatterLabels',
         afterDatasetsDraw(chart) {
-          const { ctx } = chart;
+          const { ctx, chartArea } = chart;
           const ds = chart.getDatasetMeta(0);
           ctx.save();
           ctx.font = '600 12px "EB Garamond", Garamond, serif';
-          ctx.fillStyle = '#2a6496';
-          ctx.textAlign = 'left';
           ctx.textBaseline = 'middle';
-          ds.data.forEach((pt, i) => {
-            ctx.fillText(' ' + scatterData[i].label, pt.x + 8, pt.y);
+
+          const PADDING = 3;
+          const DOT_R = 8;
+          // 8 candidate positions per label, ordered by preference (right, then alternatives).
+          // Each entry: [textAlign, dx, dy] applied to the dot center.
+          const CANDIDATES = [
+            ['left',  10,   0],   // right
+            ['right', -10,  0],   // left
+            ['center', 0, -14],   // above
+            ['center', 0,  14],   // below
+            ['left',  10, -12],   // upper-right
+            ['left',  10,  12],   // lower-right
+            ['right', -10, -12],  // upper-left
+            ['right', -10,  12],  // lower-left
+          ];
+
+          // Build label metadata
+          const labels = ds.data.map((pt, i) => {
+            const text = scatterData[i].label;
+            return { text, dotX: pt.x, dotY: pt.y, w: ctx.measureText(text).width, h: 14 };
           });
+
+          // Process in order so frequent corners get first pick (sort by y for stability)
+          const order = labels.map((_, i) => i).sort((a, b) => labels[a].dotY - labels[b].dotY);
+
+          const placed = []; // bounding boxes already drawn
+
+          function rectsOverlap(a, b) {
+            return !(a.x + a.w + PADDING < b.x || b.x + b.w + PADDING < a.x ||
+                     a.y + a.h + PADDING < b.y || b.y + b.h + PADDING < a.y);
+          }
+
+          for (const i of order) {
+            const lbl = labels[i];
+            let chosen = null;
+
+            for (const [align, dx, dy] of CANDIDATES) {
+              let bx;
+              if (align === 'left') bx = lbl.dotX + dx;
+              else if (align === 'right') bx = lbl.dotX + dx - lbl.w;
+              else bx = lbl.dotX + dx - lbl.w / 2;
+              const by = lbl.dotY + dy - lbl.h / 2;
+              const box = { x: bx, y: by, w: lbl.w, h: lbl.h };
+
+              // Stay inside chart area
+              if (box.x < chartArea.left || box.x + box.w > chartArea.right) continue;
+              if (box.y < chartArea.top || box.y + box.h > chartArea.bottom) continue;
+
+              // No overlap with existing labels
+              if (placed.some(p => rectsOverlap(box, p))) continue;
+
+              chosen = { align, dx, dy, box };
+              break;
+            }
+
+            // Fallback: take the first candidate even if it collides (rare with 11 labels)
+            if (!chosen) {
+              const [align, dx, dy] = CANDIDATES[0];
+              const bx = lbl.dotX + dx;
+              const by = lbl.dotY + dy - lbl.h / 2;
+              chosen = { align, dx, dy, box: { x: bx, y: by, w: lbl.w, h: lbl.h } };
+            }
+
+            // Draw a thin leader line if the label is not at the default right position
+            if (chosen.dy !== 0 || chosen.align !== 'left') {
+              const cx = chosen.box.x + chosen.box.w / 2;
+              const cy = chosen.box.y + chosen.box.h / 2;
+              const dx = cx - lbl.dotX, dy = cy - lbl.dotY;
+              const dist = Math.hypot(dx, dy);
+              if (dist > DOT_R + 2) {
+                const ux = dx / dist, uy = dy / dist;
+                ctx.strokeStyle = 'rgba(42,100,150,0.35)';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(lbl.dotX + ux * DOT_R, lbl.dotY + uy * DOT_R);
+                // Stop a bit before the label so it doesn't overstrike text
+                ctx.lineTo(cx - ux * (lbl.w / 2 + 1), cy - uy * (lbl.h / 2 + 1));
+                ctx.stroke();
+              }
+            }
+
+            ctx.fillStyle = '#2a6496';
+            ctx.textAlign = chosen.align;
+            ctx.fillText(lbl.text, lbl.dotX + chosen.dx, lbl.dotY + chosen.dy);
+            placed.push(chosen.box);
+          }
           ctx.restore();
         }
       };
@@ -605,7 +686,7 @@
         type: 'scatter',
         data: { datasets: [{ data: scatterData, backgroundColor: 'rgba(42,100,150,0.85)', borderColor: '#2a6496', borderWidth: 2, pointRadius: 7, pointHoverRadius: 10 }] },
         options: {
-          layout: { padding: { right: 130 } },
+          layout: { padding: { right: 130, top: 18, bottom: 18, left: 8 } },
           plugins: {
             legend: { display: false },
             tooltip: { callbacks: { label: ctx => `${scatterData[ctx.dataIndex].label}: R=${ctx.parsed.x.toFixed(2)}, B=${ctx.parsed.y.toFixed(2)}` } }
