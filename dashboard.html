@@ -113,10 +113,12 @@
     .rb-table th, .rb-table td { padding: 8px 12px; border-bottom: 1px solid #eee; font-size: 15px; }
     .rb-table th { font-weight: 700; color: #555; font-size: 13px; text-transform: uppercase; }
     .rb-table td.num { text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
-    .rb-table .b0 { color: #5cb85c; }
-    .rb-table .b1 { color: #f0ad4e; }
-    .rb-table .b2 { color: #d9534f; }
-    .rb-table .r0 { color: #bbb; }
+    .rb-table .b0 { color: #aaa; }
+    .rb-table .b1 { color: #7cb5d6; }
+    .rb-table .b2 { color: #2a6496; }
+    .rb-table .r0 { color: #aaa; }
+    .rb-table .r1 { color: #7cb5d6; }
+    .rb-table .r2 { color: #2a6496; }
     .rb-table td.evidence { font-size: 13px; color: #555; font-style: italic; font-weight: 400; line-height: 1.4; }
     .rb-table .ev-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: #999; font-style: normal; }
     .evidence-loading { color: #999; font-style: italic; font-size: 14px; margin: 8px 0; }
@@ -564,11 +566,11 @@
 
       // Cards
       document.getElementById(`cards-dim-${d.n}`).innerHTML = `
-        <div class="card"><div class="label">Mean R</div><div class="value">${meanR.toFixed(2)}</div></div>
-        <div class="card"><div class="label">Mean B</div><div class="value">${meanB.toFixed(2)}</div></div>
-        <div class="card"><div class="label">Geom. Automability (ε)</div><div class="value">${geomAuto.toFixed(3)}</div></div>
-        <div class="card"><div class="label">B=0 (no bottleneck)</div><div class="value">${bs.filter(b => b===0).length}</div></div>
-        <div class="card"><div class="label">B=2 (severe)</div><div class="value">${bs.filter(b => b===2).length}</div></div>
+        <div class="card"><div class="label">Mean Relevance</div><div class="value">${meanR.toFixed(2)}</div></div>
+        <div class="card"><div class="label">Mean Severity</div><div class="value">${meanB.toFixed(2)}</div></div>
+        <div class="card"><div class="label">Automability</div><div class="value">${geomAuto.toFixed(3)}</div></div>
+        <div class="card"><div class="label">No bottleneck</div><div class="value">${bs.filter(b => b===0).length}</div></div>
+        <div class="card"><div class="label">Strong bottlenecks</div><div class="value">${bs.filter(b => b===2).length}</div></div>
       `;
 
       // B distribution
@@ -576,7 +578,7 @@
       bs.forEach(b => { if (b >= 0 && b <= 2) bCounts[b]++; });
       new Chart(document.getElementById(`chart-b-dist-${d.n}`), {
         type: 'bar',
-        data: { labels: ['0 (none)', '1 (moderate)', '2 (severe)'], datasets: [{ data: bCounts, backgroundColor: ['#6bbd6b', '#f0ad4e', '#d9534f'], maxBarThickness: 70 }] },
+        data: { labels: ['0 (none)', '1 (moderate)', '2 (severe)'], datasets: [{ data: bCounts, backgroundColor: ['#aaa', '#7cb5d6', '#2a6496'], maxBarThickness: 70 }] },
         options: { plugins: { legend: { display: false } }, scales: { y: { title: { display: true, text: 'Tasks' } } } }
       });
 
@@ -701,12 +703,12 @@
 
       // R/B table
       const bClass = b => b === 0 ? 'b0' : b === 1 ? 'b1' : 'b2';
-      const rClass = r => r === 0 ? 'r0' : '';
+      const rClass = r => r === 0 ? 'r0' : r === 1 ? 'r1' : 'r2';
       const assessLabel = (r, b) => {
-        if (r === 0) return '<span style="color:#bbb;">Not relevant</span>';
-        if (b === 0) return '<span style="color:#5cb85c;">No bottleneck</span>';
-        if (b === 1) return '<span style="color:#f0ad4e;">Moderate bottleneck</span>';
-        return '<span style="color:#d9534f;">Severe bottleneck</span>';
+        if (r === 0) return '<span style="color:#aaa;">Not relevant</span>';
+        if (b === 0) return '<span style="color:#aaa;">No bottleneck</span>';
+        if (b === 1) return '<span style="color:#7cb5d6;">Moderate bottleneck</span>';
+        return '<span style="color:#2a6496;">Severe bottleneck</span>';
       };
 
       document.getElementById('task-rb-body').innerHTML = DIMS.map(d => {
