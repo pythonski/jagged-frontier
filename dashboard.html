@@ -6,6 +6,7 @@
   <title>Bottleneck Rubric Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@sgratzl/chartjs-chart-boxplot@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -108,6 +109,7 @@
     .chart-container.narrow { max-width: 420px; }
     .chart-container canvas { max-height: 400px; }
     .chart-container.narrow canvas { max-height: 260px; }
+    .chart-container[style*="height"] canvas { max-height: none !important; }
 
     /* Table */
     table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 12px 0 24px; }
@@ -279,11 +281,12 @@
       <h3>Mean Bottleneck (B) by Dimension</h3>
       <div class="chart-container"><canvas id="chart-mean-b"></canvas></div>
 
-      <h3>Mean Requirement (R) vs Bottleneck (B)</h3>
+      <h3>Mean Relevance vs Mean Severity per Dimension</h3>
       <div class="chart-container"><canvas id="chart-r-vs-b"></canvas></div>
 
       <h3>Automability by Occupation Group</h3>
-      <div class="chart-container wide"><canvas id="chart-exposure-soc"></canvas></div>
+      <p style="font-size:13px; color:#666; margin:0 0 8px;">Box-and-whisker of task automability per SOC major group. Box opacity scales with the share of digital tasks in the group.</p>
+      <div class="chart-container wide" style="height: 600px; max-height: 600px;"><canvas id="chart-exposure-soc"></canvas></div>
     </div>
 
     <div class="panel" id="panel-explorer">
@@ -580,47 +583,97 @@
         options: { indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { min: 0, max: 2, title: { display: true, text: 'Mean B (0-2)' } } } }
       });
 
-      // R vs B scatter (only active)
+      // R vs B scatter (only active) with persistent point labels
       const scatterData = activeDims.map(d => ({ x: mean(DATA.map(r => getR(r, d))), y: mean(DATA.map(r => getB(r, d))), label: d.short }));
+      const scatterLabelPlugin = {
+        id: 'scatterLabels',
+        afterDatasetsDraw(chart) {
+          const { ctx } = chart;
+          const ds = chart.getDatasetMeta(0);
+          ctx.save();
+          ctx.font = '600 12px "EB Garamond", Garamond, serif';
+          ctx.fillStyle = '#2a6496';
+          ctx.textAlign = 'left';
+          ctx.textBaseline = 'middle';
+          ds.data.forEach((pt, i) => {
+            ctx.fillText(' ' + scatterData[i].label, pt.x + 8, pt.y);
+          });
+          ctx.restore();
+        }
+      };
       makeOrReplace('chart-r-vs-b', {
         type: 'scatter',
-        data: { datasets: [{ data: scatterData, backgroundColor: 'rgba(42,100,150,0.8)', borderColor: '#2a6496', borderWidth: 2, pointRadius: 8, pointHoverRadius: 10 }] },
+        data: { datasets: [{ data: scatterData, backgroundColor: 'rgba(42,100,150,0.85)', borderColor: '#2a6496', borderWidth: 2, pointRadius: 7, pointHoverRadius: 10 }] },
         options: {
+          layout: { padding: { right: 130 } },
           plugins: {
             legend: { display: false },
             tooltip: { callbacks: { label: ctx => `${scatterData[ctx.dataIndex].label}: R=${ctx.parsed.x.toFixed(2)}, B=${ctx.parsed.y.toFixed(2)}` } }
           },
-          scales: { x: { min: 0, max: 2, title: { display: true, text: 'Mean R' } }, y: { min: 0, max: 2, title: { display: true, text: 'Mean B' } } }
-        }
+          scales: { x: { min: 0, max: 2, title: { display: true, text: 'Mean Relevance' } }, y: { min: 0, max: 2, title: { display: true, text: 'Mean Severity' } } }
+        },
+        plugins: [scatterLabelPlugin]
       });
 
-      // Automability by SOC
+      // Automability by SOC — true boxplot, opacity scaled by digital fraction
       const socGroups = {};
       DATA.forEach((r, i) => {
         const mg = r.onet_soc_code.substring(0, 2);
         if (!socGroups[mg]) socGroups[mg] = [];
         socGroups[mg].push(automabilities[i]);
       });
-      const socKeys = Object.keys(socGroups).sort();
-      const socLabels = socKeys.map(k => SOC_LABELS[k] || k);
-      const socMedians = socKeys.map(k => median(socGroups[k]));
-      const socQ1 = socKeys.map(k => quantile(socGroups[k], 0.25));
-      const socQ3 = socKeys.map(k => quantile(socGroups[k], 0.75));
+      // Order groups by their median automability so the chart reads top-to-bottom
+      const socKeys = Object.keys(socGroups).sort((a, b) => median(socGroups[a]) - median(socGroups[b]));
+      const socLabels = socKeys.map(k => {
+        const f = DIGITAL_FRAC[k];
+        const fracStr = (f != null) ? `  (${(f * 100).toFixed(0)}% digital)` : '';
+        return `${SOC_LABELS[k] || k}${fracStr}`;
+      });
+      const socData = socKeys.map(k => socGroups[k]);
+      // Per-box colors with alpha scaled by digital fraction
+      const socColors = socKeys.map(k => {
+        const f = DIGITAL_FRAC[k] != null ? DIGITAL_FRAC[k] : 0.5;
+        const alpha = 0.2 + 0.75 * f;  // 0.2 to 0.95
+        return `rgba(42,100,150,${alpha.toFixed(3)})`;
+      });
+      const socBorders = socKeys.map(() => '#2a6496');
 
       makeOrReplace('chart-exposure-soc', {
-        type: 'bar',
+        type: 'boxplot',
         data: {
           labels: socLabels,
-          datasets: [
-            { label: 'Q1', data: socQ1, backgroundColor: 'rgba(42,100,150,0.2)' },
-            { label: 'Median', data: socMedians.map((m, i) => m - socQ1[i]), backgroundColor: 'rgba(42,100,150,0.5)' },
-            { label: 'Q3', data: socQ3.map((q, i) => q - socMedians[i]), backgroundColor: 'rgba(42,100,150,0.2)' },
-          ]
+          datasets: [{
+            label: 'Automability',
+            data: socData,
+            backgroundColor: socColors,
+            borderColor: socBorders,
+            borderWidth: 1.5,
+            outlierRadius: 2,
+            outlierBackgroundColor: 'rgba(42,100,150,0.4)',
+            itemRadius: 0,
+            medianColor: '#1a3d5c',
+          }]
         },
         options: {
           indexAxis: 'y',
-          plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => { const k = socKeys[ctx.dataIndex]; return `Median: ${median(socGroups[k]).toFixed(3)}`; } } } },
-          scales: { x: { stacked: true, min: 0, max: 1, title: { display: true, text: 'Automability (ε-safe)' } }, y: { stacked: true } }
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: ctx => {
+                  const stats = ctx.parsed;
+                  if (!stats) return '';
+                  return `Q1=${stats.q1?.toFixed(2)}  med=${stats.median?.toFixed(2)}  Q3=${stats.q3?.toFixed(2)}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: { min: 0, max: 1, title: { display: true, text: 'Automability (ε-safe)' } },
+            y: { ticks: { font: { size: 12 } } }
+          }
         }
       });
     }
@@ -851,20 +904,27 @@
       });
     }
 
-    Papa.parse('scores.csv', {
-      download: true,
-      header: true,
-      skipEmptyLines: true,
-      complete: function(results) {
-        DATA = results.data;
-        buildDimPanels();
-        buildWeightUI();
-        setupNav();
-        renderOverall();
-        DIMS.forEach(renderDimPanel);
-        setupExplorer();
-      }
-    });
+    let DIGITAL_FRAC = {};
+    fetch('digital_fraction_by_soc.json')
+      .then(r => r.ok ? r.json() : {})
+      .then(j => { DIGITAL_FRAC = j; })
+      .catch(() => {})
+      .finally(() => {
+        Papa.parse('scores.csv', {
+          download: true,
+          header: true,
+          skipEmptyLines: true,
+          complete: function(results) {
+            DATA = results.data;
+            buildDimPanels();
+            buildWeightUI();
+            setupNav();
+            renderOverall();
+            DIMS.forEach(renderDimPanel);
+            setupExplorer();
+          }
+        });
+      });
   </script>
 </body>
 </html>
