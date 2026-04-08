@@ -38,9 +38,11 @@
       padding: 10px 14px; background: #2a6496; color: #fff !important;
       border: none; border-radius: 6px; font-size: 14px; font-weight: 600;
       text-align: center; text-decoration: none; transition: background 0.15s;
-      z-index: 200; width: 236px; box-sizing: border-box;
+      z-index: 200; width: 236px; max-width: calc(100vw - 24px); box-sizing: border-box;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
     a.nav-btn:hover { background: #1d4e78; }
+    @media (max-width: 1300px) { a.nav-btn { width: auto; } }
 
     /* Hamburger toggle (narrow viewports) */
     .sidebar-toggle { display: none; position: fixed; top: 12px; left: 12px; z-index: 200; background: #2a6496; color: #fff; border: none; border-radius: 6px; width: 40px; height: 40px; font-size: 22px; cursor: pointer; line-height: 40px; text-align: center; }

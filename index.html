@@ -254,7 +254,11 @@
       transition: background 0.15s;
       z-index: 200;
       width: 236px;
+      max-width: calc(100vw - 24px);
       box-sizing: border-box;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .top-dashboard-btn:hover {
@@ -353,7 +357,7 @@
 
     <h2 id="sec-task-ahead">The Task Ahead</h2>
 
-    <p>The most useful decomposition comes from task-based models, which have been the workhorse of labour economics since <a href="https://economics.mit.edu/sites/default/files/publications/the-skill-content-of-recent-technological-change.pdf">Autor, Levy, and Murnane</a>, with important extensions by <a href="https://www.nber.org/papers/w24196">Acemoglu and Restrepo</a>. The core idea is that a job is not a single thing that either gets automated or doesn&rsquo;t, but is in fact a bundle of tasks, each with a distinct role and characteristics, and therefore largely complementary to each other in the production process. A radiologist reads scans, consults with patients, writes reports, supervises technicians, and stays current with the literature. Automation might handle some of these tasks well, others partially, and others not at all. The impact on the occupation as a whole depends on the mix: which tasks are automatable, how central they are to the role, and how workflows get restructured around the remaining human tasks. There's a good argument that a task-level analysis is more appropriate than an occupation-level one, as several confounders emerge when determining overall impact (bundles change due to complementarity and task substitution, O-ring effects can dominate, and handoff frictions and learning spillovers must sometimes be take into account, complicating the analysis greatly).</p>
+    <p>The most useful decomposition comes from task-based models, which have been the workhorse of labour economics since <a href="https://economics.mit.edu/sites/default/files/publications/the-skill-content-of-recent-technological-change.pdf">Autor, Levy, and Murnane</a>, with important extensions by <a href="https://www.nber.org/papers/w24196">Acemoglu and Restrepo</a>. The core idea is that a job is not a single entity that either gets automated or doesn&rsquo;t, but is in fact a bundle of <em>tasks</em>, each playing a distinct role and therefore largely complementary to each other in the production process. A radiologist reads scans, consults with patients, writes reports, supervises technicians, and stays current with the literature; automation might handle some of these tasks well, others partially, and others not at all. There's a good argument that a task-level analysis is more appropriate to describe AI exposure than an occupation-level one, as several confounders emerge when determining overall impact on a profession. when one task is automated, the marginal value of adjacent human tasks can rise or fall in hard-to-predict ways. Substitution reshuffles responsibilities, sometimes concentrating human effort on higher-judgment work, sometimes fragmenting it into supervisory busywork. O-ring dynamics can dominate, meaning that overall output quality is governed by the weakest link in the task chain regardless of how well the automated components perform. Handoff frictions between human and machine steps introduce coordination costs that didn't previously exist. Finally, learning spillovers across tasks mean that automating one can quietly erode competence on another—a radiologist who stops reading routine scans may lose exactly the pattern recognition that informs her clinical judgment on the difficult cases.</p>
 
     <figure>
       <img src="production.png" alt="Task-based model illustration by Nano Banana" style="max-width:100%;">
@@ -365,6 +369,12 @@
     <p>More fundamentally, the rubric asks a binary question&mdash;is this task exposed or not?&mdash;without pausing to ask <em>why</em>. Two tasks can both be classified as &ldquo;exposed&rdquo; for different reasons, and those reasons have different implications for how quickly and completely automation will actually proceed. This is the gap that our research tries to fill. Rather than asking &ldquo;is this task exposed?&rdquo;, we ask <em>along which dimensions</em>, and we decompose exposure into a set of empirically motivated axes that capture the distinct reasons a task might resist automation.</p>
 
     <h2 id="sec-bottleneck-approach">A bottleneck-based approach</h2>
+    
+    <p>We begin by running a filter on all O*NET tasks for digitability, i.e. we ask whether a modern AI agent with proper tools and harness can in principle perform the task, or with minimal adaptation of platforms and workflows (for instance, favouring online rather than in-presence meetings). This is related to previous efforts (cite teleworkability, barnett's classification). We classify tasks following Barnett using an LLM as judge, according to digital/predominantly digital/predominantly non-digital, non-digital. In the following, whenver we say "task" we are referring to the latter two of these categories. To validate we use teleworkability. </p>
+    
+    <p>Next, we run our judges (GPT-5.3, Sonnet 4.6, and Gemini Flash 3.1) on each of these tasks, for every identified dimensions. This is a summary (bullet list of them + very brief description). Figure below is more comprehensive chart, and it is clickable! Click on any of the blue boxes to expand the corresponding in-detail description.</p>
+    
+    <p>Each category is scored along two dimensions: relevance (how important it is as a bottleneck for the task) and severity (how large the gap between current AI agents and where they need to be is). </p>
 
     <!-- Interactive bottleneck image -->
     <div class="interactive-figure">
